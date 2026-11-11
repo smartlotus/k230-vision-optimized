@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "coordinator": "coordinator",
+  "main_branch": "main",
+  "sync": {
+    "auto": true,
+    "authorization": "User explicitly requested a new GitHub repository for optimized K230 code on 2026-11-11; AGENTS.md authorizes private checkpoint backups",
+    "remote": "origin",
+    "create_private": true,
+    "repo": "smartlotus/k230-vision-optimized"
+  }
+}

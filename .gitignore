@@ -1,0 +1,9 @@
+
+# ops-pipeline local exclusions
+.ops/local/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+__pycache__/
