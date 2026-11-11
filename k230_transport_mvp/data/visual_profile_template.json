@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "source": "TEMPLATE_NO_MEASUREMENTS",
+    "camera_mount_fixed": false,
+    "distance_cm": null,
+    "note": "Empty TOP profile deliberately rejects detection; sample the real top face before filling it."
+  },
+  "TOP_CONFIG": {}
+}

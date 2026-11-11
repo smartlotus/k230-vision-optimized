@@ -1,0 +1,86 @@
+{
+  "scope": "CPython synthetic tracking only; excludes native find_blobs, cameras and display; not board FPS",
+  "measurements": [
+    {
+      "candidates": 3,
+      "iterations_per_repeat": 1500,
+      "equal_output": true,
+      "legacy": {
+        "seconds": [
+          0.01729940000222996,
+          0.017350699985399842,
+          0.01711420001811348,
+          0.016941700014285743,
+          0.016862700023921207
+        ],
+        "median_seconds": 0.01711420001811348,
+        "peak_python_bytes": 4480
+      },
+      "optimized": {
+        "seconds": [
+          0.009012399998027831,
+          0.008777400013059378,
+          0.008872700011124834,
+          0.008897699997760355,
+          0.008852200000546873
+        ],
+        "median_seconds": 0.008872700011124834,
+        "peak_python_bytes": 4496
+      }
+    },
+    {
+      "candidates": 6,
+      "iterations_per_repeat": 1500,
+      "equal_output": true,
+      "legacy": {
+        "seconds": [
+          0.03468889999203384,
+          0.03481499999179505,
+          0.03403890001936816,
+          0.03402380002080463,
+          0.03365629998734221
+        ],
+        "median_seconds": 0.03403890001936816,
+        "peak_python_bytes": 8472
+      },
+      "optimized": {
+        "seconds": [
+          0.01834829998551868,
+          0.017881900013890117,
+          0.016953699989244342,
+          0.016914299980271608,
+          0.016838100011227652
+        ],
+        "median_seconds": 0.016953699989244342,
+        "peak_python_bytes": 8736
+      }
+    },
+    {
+      "candidates": 12,
+      "iterations_per_repeat": 1500,
+      "equal_output": true,
+      "legacy": {
+        "seconds": [
+          0.07535610001650639,
+          0.07541089999722317,
+          0.07568280000123195,
+          0.07989880000241101,
+          0.07936160001554526
+        ],
+        "median_seconds": 0.07568280000123195,
+        "peak_python_bytes": 15544
+      },
+      "optimized": {
+        "seconds": [
+          0.03862279999884777,
+          0.03737799997907132,
+          0.038402500009397045,
+          0.039370000013150275,
+          0.040325700014363974
+        ],
+        "median_seconds": 0.03862279999884777,
+        "peak_python_bytes": 16192
+      }
+    }
+  ]
+}

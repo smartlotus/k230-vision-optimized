@@ -1,0 +1,17 @@
+{
+  "source_kind": "USER_SUPPLIED_NOMINAL_DRAWING",
+  "source_file": "mmexport1793457770940.jpg",
+  "sha256": "1491afa485eca3aaa8bde5393e49054c6fb5f0374c14924d0a8d06b55f6106cc",
+  "nominal_dimensions": {
+    "upper_diameter": 30,
+    "lower_diameter": 50,
+    "overall_height": 60,
+    "upper_straight_height": 8,
+    "lower_straight_height": 8
+  },
+  "unit": "mm",
+  "unit_basis": "Matching ai01.md nominal first-round material dimensions; image itself has no explicit unit label",
+  "actual_material_measured": false,
+  "calibration_valid": false,
+  "applied_to_live_config": false
+}

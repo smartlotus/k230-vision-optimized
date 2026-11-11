@@ -1,0 +1,10 @@
+{
+  "baseline": "5f1622d5622d89820f2a7d0c3db596c8ecdfb6c2",
+  "old_files_checked": 1093,
+  "changed_old_files": [],
+  "board_operations": 0,
+  "scope": "Derived summary of upstream preservation report; full historical file inventory retained upstream",
+  "upstream_path": "k230_transport_mvp/evidence/k230-buffer/preservation.json",
+  "upstream_commit": "0c3b8499e2877bc05df786921e199ab0533685d2",
+  "upstream_report_sha256": "be4442abf915df4fef744819c0a4b9bbe9db55e32bd65f1dab6d430ba313b8b0"
+}

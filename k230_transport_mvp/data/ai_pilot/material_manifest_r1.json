@@ -1,0 +1,389 @@
+{
+  "schema_version": 1,
+  "task": "final_material_visible_top_pilot",
+  "classes": [
+    "visible_top"
+  ],
+  "paper_training_enabled": false,
+  "object_set_final_confirmed_by_operator": true,
+  "images": [
+    {
+      "image_id": "3fa8c9e24f4115fde870ea4dabc544383ab311b1d6e78cde93804299feb4a61c",
+      "native_sha256": "3fa8c9e24f4115fde870ea4dabc544383ab311b1d6e78cde93804299feb4a61c",
+      "rgb_pixel_sha256": "8f6374b50e78a12afe49a33b3c2ebb7a864ae00d65c34d8db73d6fb60fe46e06",
+      "camera_id": 2,
+      "source_wh": [
+        640,
+        360
+      ],
+      "captures": [
+        {
+          "files": {
+            "jpeg": {
+              "path": "evidence/board/three-object-multicolor-20261109/yellow-native.jpg",
+              "sha256": "11c436ec6440b56ee939fbd27fc3f38b1213ddc90dab484c26f1a0b0595db35b"
+            },
+            "rgb565": {
+              "path": "evidence/board/three-object-multicolor-20261109/yellow-native.rgb565",
+              "sha256": "3fa8c9e24f4115fde870ea4dabc544383ab311b1d6e78cde93804299feb4a61c"
+            },
+            "metadata": {
+              "path": "evidence/board/three-object-multicolor-20261109/yellow-native-lab.json",
+              "sha256": "d814952f330f328f63bc230472d4c69f331121bcd62df7ef36c8276318eb5566"
+            }
+          },
+          "frame_id": 236,
+          "timestamp_ms": 7472388,
+          "metadata_has_lab_grid": true
+        }
+      ],
+      "scene_group_id": null,
+      "scene_group_confirmed": false,
+      "split": null,
+      "conditions": {
+        "camera_height_cm": null,
+        "object_height_cm": null,
+        "lighting": null
+      },
+      "review": {
+        "status": "UNREVIEWED",
+        "reviewer": null,
+        "all_visible_tops_checked": false,
+        "uncertain": false,
+        "source_native_sha256": "3fa8c9e24f4115fde870ea4dabc544383ab311b1d6e78cde93804299feb4a61c",
+        "objects": null
+      }
+    },
+    {
+      "image_id": "48b365d9c5ff60085a0f835f974986f91321e91a752b5593bca9a2d57f662b35",
+      "native_sha256": "48b365d9c5ff60085a0f835f974986f91321e91a752b5593bca9a2d57f662b35",
+      "rgb_pixel_sha256": "d90e78d211516acf79b5a2b98d7f90ee8d482db0dfcb173be94388139d827a13",
+      "camera_id": 2,
+      "source_wh": [
+        640,
+        360
+      ],
+      "captures": [
+        {
+          "files": {
+            "jpeg": {
+              "path": "evidence/board/ring-alignment-20261109-d/frame3418.jpg",
+              "sha256": "92eba9ac12e12502ed841c2be450693cd87c3ab11e993717b7adfb6f092e9a79"
+            },
+            "rgb565": {
+              "path": "evidence/board/ring-alignment-20261109-d/frame3418.rgb565",
+              "sha256": "48b365d9c5ff60085a0f835f974986f91321e91a752b5593bca9a2d57f662b35"
+            },
+            "metadata": {
+              "path": "evidence/board/ring-alignment-20261109-d/frame3418-native-lab.json",
+              "sha256": "2510ad7ca735e0e174ae40d6a4d22cfea95f6768933d69a71ed27b60cfdc7e62"
+            }
+          },
+          "frame_id": 3418,
+          "timestamp_ms": 994485,
+          "metadata_has_lab_grid": true
+        }
+      ],
+      "scene_group_id": null,
+      "scene_group_confirmed": false,
+      "split": null,
+      "conditions": {
+        "camera_height_cm": null,
+        "object_height_cm": null,
+        "lighting": null
+      },
+      "review": {
+        "status": "UNREVIEWED",
+        "reviewer": null,
+        "all_visible_tops_checked": false,
+        "uncertain": false,
+        "source_native_sha256": "48b365d9c5ff60085a0f835f974986f91321e91a752b5593bca9a2d57f662b35",
+        "objects": null
+      }
+    },
+    {
+      "image_id": "86d28d9912c476108454dad00cfaefb1bc4926d295188153fa58d8d034ed88dd",
+      "native_sha256": "86d28d9912c476108454dad00cfaefb1bc4926d295188153fa58d8d034ed88dd",
+      "rgb_pixel_sha256": "d07b88ad4e3173d16bee5aed5821eda568dc668753cabc0e6f0f0c3a207458b3",
+      "camera_id": 2,
+      "source_wh": [
+        640,
+        360
+      ],
+      "captures": [
+        {
+          "files": {
+            "jpeg": {
+              "path": "evidence/board/ring-rough-20261108/native-frame100.jpg",
+              "sha256": "a8b8dc7aadb7d30ca6bd1fe04f23cf9463cb2ba0659214b1a6fbbe1e420e791e"
+            },
+            "rgb565": {
+              "path": "evidence/board/ring-rough-20261108/native-frame100.rgb565",
+              "sha256": "86d28d9912c476108454dad00cfaefb1bc4926d295188153fa58d8d034ed88dd"
+            },
+            "metadata": {
+              "path": "evidence/board/ring-rough-20261108/native-frame100.json",
+              "sha256": "8ebe982f84cd4a729246deb65b6e62793a0725c36becb5b7802bc3f4db031bdf"
+            }
+          },
+          "frame_id": 100,
+          "timestamp_ms": 700448,
+          "metadata_has_lab_grid": false
+        }
+      ],
+      "scene_group_id": null,
+      "scene_group_confirmed": false,
+      "split": null,
+      "conditions": {
+        "camera_height_cm": null,
+        "object_height_cm": null,
+        "lighting": null
+      },
+      "review": {
+        "status": "UNREVIEWED",
+        "reviewer": null,
+        "all_visible_tops_checked": false,
+        "uncertain": false,
+        "source_native_sha256": "86d28d9912c476108454dad00cfaefb1bc4926d295188153fa58d8d034ed88dd",
+        "objects": null
+      }
+    },
+    {
+      "image_id": "a017ed6207bd3bddf2fd93526adf11a75a565f8a02097e5672a94607738a03f1",
+      "native_sha256": "a017ed6207bd3bddf2fd93526adf11a75a565f8a02097e5672a94607738a03f1",
+      "rgb_pixel_sha256": "6b96257a1518247b2bab07d4c29df5ea3d630d50aa138662b89413c571c11adc",
+      "camera_id": 2,
+      "source_wh": [
+        640,
+        360
+      ],
+      "captures": [
+        {
+          "files": {
+            "jpeg": {
+              "path": "data/ai_pilot/material-source-20261109-f/capture18.jpg",
+              "sha256": "683a827a5bf37f494d789357b4d161d6aa8f9c0f7daa2435517c0dbce19323bc"
+            },
+            "rgb565": {
+              "path": "data/ai_pilot/material-source-20261109-f/capture18.rgb565",
+              "sha256": "a017ed6207bd3bddf2fd93526adf11a75a565f8a02097e5672a94607738a03f1"
+            },
+            "metadata": {
+              "path": "data/ai_pilot/material-source-20261109-f/capture18-lab.json",
+              "sha256": "9e735678da5e8ad147d2926d09caa7f2668189c83ae09fb1cfb85139587f1fcf"
+            }
+          },
+          "frame_id": 2908,
+          "timestamp_ms": 16786566,
+          "metadata_has_lab_grid": true
+        }
+      ],
+      "scene_group_id": null,
+      "scene_group_confirmed": false,
+      "split": null,
+      "conditions": {
+        "camera_height_cm": null,
+        "object_height_cm": null,
+        "lighting": null
+      },
+      "review": {
+        "status": "UNREVIEWED",
+        "reviewer": null,
+        "all_visible_tops_checked": false,
+        "uncertain": false,
+        "source_native_sha256": "a017ed6207bd3bddf2fd93526adf11a75a565f8a02097e5672a94607738a03f1",
+        "objects": null
+      }
+    },
+    {
+      "image_id": "a0b98a1dba6046dec36a1a4b4e2d845d5aad4be97839fb7d438c74efc06bf674",
+      "native_sha256": "a0b98a1dba6046dec36a1a4b4e2d845d5aad4be97839fb7d438c74efc06bf674",
+      "rgb_pixel_sha256": "f9df8a1592802772acc0feac17ad5df49d58265eff049a8abdc6422163e0ff9a",
+      "camera_id": 2,
+      "source_wh": [
+        640,
+        360
+      ],
+      "captures": [
+        {
+          "files": {
+            "jpeg": {
+              "path": "evidence/board/ygb-new-view-20261109-e/ygb-new-scene.jpg",
+              "sha256": "d2e3ad12778a4ef602a07593d3262380c71009bae0d5e4776ae3dad83b7ba8b8"
+            },
+            "rgb565": {
+              "path": "evidence/board/ygb-new-view-20261109-e/ygb-new-scene.rgb565",
+              "sha256": "a0b98a1dba6046dec36a1a4b4e2d845d5aad4be97839fb7d438c74efc06bf674"
+            },
+            "metadata": {
+              "path": "evidence/board/ygb-new-view-20261109-e/ygb-new-scene-lab.json",
+              "sha256": "f396e5cee0bffbaeba586461e425facac62ab63e824e2030fb0f32fd5129d6ed"
+            }
+          },
+          "frame_id": 3375,
+          "timestamp_ms": 14795172,
+          "metadata_has_lab_grid": true
+        }
+      ],
+      "scene_group_id": null,
+      "scene_group_confirmed": false,
+      "split": null,
+      "conditions": {
+        "camera_height_cm": null,
+        "object_height_cm": null,
+        "lighting": null
+      },
+      "review": {
+        "status": "UNREVIEWED",
+        "reviewer": null,
+        "all_visible_tops_checked": false,
+        "uncertain": false,
+        "source_native_sha256": "a0b98a1dba6046dec36a1a4b4e2d845d5aad4be97839fb7d438c74efc06bf674",
+        "objects": null
+      }
+    },
+    {
+      "image_id": "cfa68398650971a91353d320bed5516cb0ba704e55ee565d456abbb76ba19ab2",
+      "native_sha256": "cfa68398650971a91353d320bed5516cb0ba704e55ee565d456abbb76ba19ab2",
+      "rgb_pixel_sha256": "b2ea4c1a161dc99fc5f71feb388010e7e3c5ce59e68b6cd68cbc9e7deb346af9",
+      "camera_id": 2,
+      "source_wh": [
+        640,
+        360
+      ],
+      "captures": [
+        {
+          "files": {
+            "jpeg": {
+              "path": "evidence/board/three-object-multicolor-20261109/multi-native.jpg",
+              "sha256": "7309a3a480139e66c1fd31c0eb776e27eb8ae11cdad7bcc05d7086eb9ea9145f"
+            },
+            "rgb565": {
+              "path": "evidence/board/three-object-multicolor-20261109/multi-native.rgb565",
+              "sha256": "cfa68398650971a91353d320bed5516cb0ba704e55ee565d456abbb76ba19ab2"
+            },
+            "metadata": {
+              "path": "evidence/board/three-object-multicolor-20261109/multi-native-lab.json",
+              "sha256": "95b7af7c8208556c8aafc9236c0b7ff0ce37819266bb2a02011365a7d8b27556"
+            }
+          },
+          "frame_id": 308,
+          "timestamp_ms": 8080030,
+          "metadata_has_lab_grid": true
+        }
+      ],
+      "scene_group_id": null,
+      "scene_group_confirmed": false,
+      "split": null,
+      "conditions": {
+        "camera_height_cm": null,
+        "object_height_cm": null,
+        "lighting": null
+      },
+      "review": {
+        "status": "UNREVIEWED",
+        "reviewer": null,
+        "all_visible_tops_checked": false,
+        "uncertain": false,
+        "source_native_sha256": "cfa68398650971a91353d320bed5516cb0ba704e55ee565d456abbb76ba19ab2",
+        "objects": null
+      }
+    },
+    {
+      "image_id": "dbdff4b593fc6b599104583851bb164abfd04c3553c436f1026b0a2fd303503f",
+      "native_sha256": "dbdff4b593fc6b599104583851bb164abfd04c3553c436f1026b0a2fd303503f",
+      "rgb_pixel_sha256": "75a74ec062fb0cda236b2f07405fcc5cdc8871f219dccb1e50049495d604d3c5",
+      "camera_id": 2,
+      "source_wh": [
+        640,
+        360
+      ],
+      "captures": [
+        {
+          "files": {
+            "jpeg": {
+              "path": "evidence/board/kpu-green-black-20261109-e/green-black-native.jpg",
+              "sha256": "43a546fe1af48d3efce86f99cf5e9daaa32cef0b32f3adc889e019d0ad405549"
+            },
+            "rgb565": {
+              "path": "evidence/board/kpu-green-black-20261109-e/green-black-native.rgb565",
+              "sha256": "dbdff4b593fc6b599104583851bb164abfd04c3553c436f1026b0a2fd303503f"
+            },
+            "metadata": {
+              "path": "evidence/board/kpu-green-black-20261109-e/green-black-native-lab.json",
+              "sha256": "8831c0b71c9c6b05b0f2a297edb83634d2e06d7de4f04dcfe61118e9257fcc2b"
+            }
+          },
+          "frame_id": 2145,
+          "timestamp_ms": 12711627,
+          "metadata_has_lab_grid": true
+        }
+      ],
+      "scene_group_id": null,
+      "scene_group_confirmed": false,
+      "split": null,
+      "conditions": {
+        "camera_height_cm": null,
+        "object_height_cm": null,
+        "lighting": null
+      },
+      "review": {
+        "status": "UNREVIEWED",
+        "reviewer": null,
+        "all_visible_tops_checked": false,
+        "uncertain": false,
+        "source_native_sha256": "dbdff4b593fc6b599104583851bb164abfd04c3553c436f1026b0a2fd303503f",
+        "objects": null
+      }
+    },
+    {
+      "image_id": "e876e7e413d81d9fd583363d6fbc47d4f6f463d15f0258eba12193959ed0d0b3",
+      "native_sha256": "e876e7e413d81d9fd583363d6fbc47d4f6f463d15f0258eba12193959ed0d0b3",
+      "rgb_pixel_sha256": "02ca66b0f6924f5f635f87e358c32797ec9ab85f9dd624d3460564be43d04ea4",
+      "camera_id": 2,
+      "source_wh": [
+        640,
+        360
+      ],
+      "captures": [
+        {
+          "files": {
+            "jpeg": {
+              "path": "evidence/board/kpu-green-black-20261109-e/ygb-after-fallback.jpg",
+              "sha256": "2c79ef043b0c81259578051a48e91f2ac5a0b6d574ffc409c7d9b8757b5db8a3"
+            },
+            "rgb565": {
+              "path": "evidence/board/kpu-green-black-20261109-e/ygb-after-fallback.rgb565",
+              "sha256": "e876e7e413d81d9fd583363d6fbc47d4f6f463d15f0258eba12193959ed0d0b3"
+            },
+            "metadata": {
+              "path": "evidence/board/kpu-green-black-20261109-e/ygb-after-fallback-lab.json",
+              "sha256": "60ca6495fe132a0d80fe2b249461ef305686211f5bec1b16cc99d05ca9d3aff8"
+            }
+          },
+          "frame_id": 454,
+          "timestamp_ms": 13306755,
+          "metadata_has_lab_grid": true
+        }
+      ],
+      "scene_group_id": null,
+      "scene_group_confirmed": false,
+      "split": null,
+      "conditions": {
+        "camera_height_cm": null,
+        "object_height_cm": null,
+        "lighting": null
+      },
+      "review": {
+        "status": "UNREVIEWED",
+        "reviewer": null,
+        "all_visible_tops_checked": false,
+        "uncertain": false,
+        "source_native_sha256": "e876e7e413d81d9fd583363d6fbc47d4f6f463d15f0258eba12193959ed0d0b3",
+        "objects": null
+      }
+    }
+  ],
+  "input_source_entries": 8,
+  "unique_native_images": 8
+}

@@ -1,0 +1,403 @@
+{
+  "finished": true,
+  "heap_free_bytes": 3944096,
+  "control_transport": "IN_PROCESS_TEST_NOT_ELECTRICAL_UART",
+  "errors": [],
+  "source": "REAL_CSI2_FRAMES_AND_SYNTHETIC_CONTROL_BYTES",
+  "phases": [
+    {
+      "rejected_control_frames": 2,
+      "closed": true,
+      "phase": "CONTROL_STOP",
+      "metrics": {
+        "iterations": 9,
+        "camera_cleanup_errors": [],
+        "frames": 7,
+        "uart_unsent_bytes_on_close": 0,
+        "heap_free_bytes": 3724672,
+        "motors_enabled": false,
+        "reason": "CONTROL_STOP",
+        "elapsed_ms": 997,
+        "uart_queued_observations": 7,
+        "mean_processing_ms": 34.14286,
+        "event": "STOP"
+      },
+      "observations": [
+        {
+          "target_pose_valid": false,
+          "target_id": null,
+          "status": "NOT_FOUND",
+          "u_px": null,
+          "stable": false,
+          "station": "QR",
+          "stale_after_ms": 250,
+          "y_mm": null,
+          "raw_payload": null,
+          "camera_id": 2,
+          "coord_frame": "NONE",
+          "image_profile": {
+            "height": 480,
+            "hmirror": false,
+            "vflip": false,
+            "rotation": 0,
+            "pose_id": null,
+            "crop": false,
+            "width": 640
+          },
+          "reason": "QR_INVALID_OR_ABSENT",
+          "angle_deg": null,
+          "timestamp_ms": 466823,
+          "kind": "QR",
+          "v_px": null,
+          "x_mm": null,
+          "frame_id": 1,
+          "is_simulated": false,
+          "score_hint": 0,
+          "calibration_id": null
+        },
+        {
+          "target_pose_valid": false,
+          "target_id": null,
+          "status": "NOT_FOUND",
+          "u_px": null,
+          "stable": false,
+          "station": "QR",
+          "stale_after_ms": 250,
+          "y_mm": null,
+          "raw_payload": null,
+          "camera_id": 2,
+          "coord_frame": "NONE",
+          "image_profile": {
+            "height": 480,
+            "hmirror": false,
+            "vflip": false,
+            "rotation": 0,
+            "pose_id": null,
+            "crop": false,
+            "width": 640
+          },
+          "reason": "QR_INVALID_OR_ABSENT",
+          "angle_deg": null,
+          "timestamp_ms": 466858,
+          "kind": "QR",
+          "v_px": null,
+          "x_mm": null,
+          "frame_id": 2,
+          "is_simulated": false,
+          "score_hint": 0,
+          "calibration_id": null
+        },
+        {
+          "target_pose_valid": false,
+          "target_id": null,
+          "status": "NOT_FOUND",
+          "u_px": null,
+          "stable": false,
+          "station": "QR",
+          "stale_after_ms": 250,
+          "y_mm": null,
+          "raw_payload": null,
+          "camera_id": 2,
+          "coord_frame": "NONE",
+          "image_profile": {
+            "height": 480,
+            "hmirror": false,
+            "vflip": false,
+            "rotation": 0,
+            "pose_id": null,
+            "crop": false,
+            "width": 640
+          },
+          "reason": "QR_INVALID_OR_ABSENT",
+          "angle_deg": null,
+          "timestamp_ms": 466893,
+          "kind": "QR",
+          "v_px": null,
+          "x_mm": null,
+          "frame_id": 3,
+          "is_simulated": false,
+          "score_hint": 0,
+          "calibration_id": null
+        },
+        {
+          "target_pose_valid": false,
+          "target_id": 1,
+          "status": "UNCALIBRATED",
+          "u_px": null,
+          "stable": false,
+          "station": "RAW",
+          "stale_after_ms": 250,
+          "y_mm": null,
+          "raw_payload": null,
+          "camera_id": 2,
+          "coord_frame": "NONE",
+          "image_profile": {
+            "height": 480,
+            "hmirror": false,
+            "vflip": false,
+            "rotation": 0,
+            "pose_id": null,
+            "crop": false,
+            "width": 640
+          },
+          "reason": "COLOR_PARAMETERS_REQUIRED",
+          "angle_deg": null,
+          "timestamp_ms": 466928,
+          "kind": "COLOR",
+          "v_px": null,
+          "x_mm": null,
+          "frame_id": 4,
+          "is_simulated": false,
+          "score_hint": 0,
+          "calibration_id": null
+        },
+        {
+          "target_pose_valid": false,
+          "target_id": null,
+          "status": "UNCALIBRATED",
+          "u_px": null,
+          "stable": false,
+          "station": "PROCESS",
+          "stale_after_ms": 250,
+          "y_mm": null,
+          "raw_payload": null,
+          "camera_id": 2,
+          "coord_frame": "NONE",
+          "image_profile": {
+            "height": 480,
+            "hmirror": false,
+            "vflip": false,
+            "rotation": 0,
+            "pose_id": null,
+            "crop": false,
+            "width": 640
+          },
+          "reason": "RING_PARAMETERS_REQUIRED",
+          "angle_deg": null,
+          "timestamp_ms": 466963,
+          "kind": "RING",
+          "v_px": null,
+          "x_mm": null,
+          "frame_id": 5,
+          "is_simulated": false,
+          "score_hint": 0,
+          "calibration_id": null
+        },
+        {
+          "target_pose_valid": false,
+          "target_id": null,
+          "status": "UNCALIBRATED",
+          "u_px": null,
+          "stable": false,
+          "station": null,
+          "stale_after_ms": 250,
+          "y_mm": null,
+          "raw_payload": null,
+          "camera_id": 2,
+          "coord_frame": "NONE",
+          "image_profile": {
+            "height": 480,
+            "hmirror": false,
+            "vflip": false,
+            "rotation": 0,
+            "pose_id": null,
+            "crop": false,
+            "width": 640
+          },
+          "reason": "LANE_PARAMETERS_REQUIRED",
+          "angle_deg": null,
+          "timestamp_ms": 466998,
+          "kind": "LANE",
+          "v_px": null,
+          "x_mm": null,
+          "frame_id": 6,
+          "is_simulated": false,
+          "score_hint": 0,
+          "calibration_id": null
+        },
+        {
+          "target_pose_valid": false,
+          "target_id": 1,
+          "status": "UNCALIBRATED",
+          "u_px": null,
+          "stable": false,
+          "station": "BUFFER",
+          "stale_after_ms": 250,
+          "y_mm": null,
+          "raw_payload": null,
+          "camera_id": 2,
+          "coord_frame": "NONE",
+          "image_profile": {
+            "height": 480,
+            "hmirror": false,
+            "vflip": false,
+            "rotation": 0,
+            "pose_id": null,
+            "crop": false,
+            "width": 640
+          },
+          "reason": "TOP_PARAMETERS_REQUIRED",
+          "angle_deg": null,
+          "timestamp_ms": 467033,
+          "kind": "TOP",
+          "v_px": null,
+          "x_mm": null,
+          "frame_id": 7,
+          "is_simulated": false,
+          "score_hint": 0,
+          "calibration_id": null
+        }
+      ],
+      "decoded_frames": 23,
+      "encoded_frames": 23,
+      "acks": [
+        {
+          "type": "A",
+          "seq": 0,
+          "command_seq": 1,
+          "reason": "MODE_SET",
+          "status": "ACK"
+        },
+        {
+          "type": "A",
+          "seq": 1,
+          "command_seq": 0,
+          "reason": "IN_PROCESS_HEARTBEAT",
+          "status": "PONG"
+        },
+        {
+          "type": "A",
+          "seq": 3,
+          "command_seq": 2,
+          "reason": "OBSERVATION_ONLY",
+          "status": "PONG"
+        },
+        {
+          "type": "A",
+          "seq": 4,
+          "command_seq": 0,
+          "reason": "IN_PROCESS_HEARTBEAT",
+          "status": "PONG"
+        },
+        {
+          "type": "A",
+          "seq": 6,
+          "command_seq": 0,
+          "reason": "IN_PROCESS_HEARTBEAT",
+          "status": "PONG"
+        },
+        {
+          "type": "A",
+          "seq": 8,
+          "command_seq": 3,
+          "reason": "MODE_SET",
+          "status": "ACK"
+        },
+        {
+          "type": "A",
+          "seq": 9,
+          "command_seq": 0,
+          "reason": "IN_PROCESS_HEARTBEAT",
+          "status": "PONG"
+        },
+        {
+          "type": "A",
+          "seq": 11,
+          "command_seq": 4,
+          "reason": "MODE_SET",
+          "status": "ACK"
+        },
+        {
+          "type": "A",
+          "seq": 12,
+          "command_seq": 0,
+          "reason": "IN_PROCESS_HEARTBEAT",
+          "status": "PONG"
+        },
+        {
+          "type": "A",
+          "seq": 14,
+          "command_seq": 5,
+          "reason": "MODE_SET",
+          "status": "ACK"
+        },
+        {
+          "type": "A",
+          "seq": 15,
+          "command_seq": 0,
+          "reason": "IN_PROCESS_HEARTBEAT",
+          "status": "PONG"
+        },
+        {
+          "type": "A",
+          "seq": 17,
+          "command_seq": 6,
+          "reason": "MODE_SET",
+          "status": "ACK"
+        },
+        {
+          "type": "A",
+          "seq": 18,
+          "command_seq": 0,
+          "reason": "IN_PROCESS_HEARTBEAT",
+          "status": "PONG"
+        },
+        {
+          "type": "A",
+          "seq": 20,
+          "command_seq": 7,
+          "reason": "MODE_SET",
+          "status": "ACK"
+        },
+        {
+          "type": "A",
+          "seq": 21,
+          "command_seq": 0,
+          "reason": "IN_PROCESS_HEARTBEAT",
+          "status": "PONG"
+        },
+        {
+          "type": "A",
+          "seq": 22,
+          "command_seq": 8,
+          "reason": "OBSERVATION_SERVICE_STOPPED",
+          "status": "STOPPED"
+        }
+      ]
+    },
+    {
+      "phase": "RESTART_SAME_PROCESS",
+      "metrics": {
+        "iterations": 4,
+        "camera_cleanup_errors": [],
+        "frames": 4,
+        "uart_unsent_bytes_on_close": 0,
+        "heap_free_bytes": 3864000,
+        "motors_enabled": false,
+        "reason": "ITERATION_LIMIT",
+        "elapsed_ms": 861,
+        "uart_queued_observations": 0,
+        "mean_processing_ms": 49.5,
+        "event": "STOP"
+      }
+    }
+  ],
+  "capture_cleanup_errors": [],
+  "test": "RECONNECT_REAL_CAMERA_WITH_IN_PROCESS_CONTROL",
+  "motors_enabled": false,
+  "capture_file": {
+    "path": "/sdcard/transport_mvp/reconnect-live.jpg",
+    "image_profile": {
+      "height": 480,
+      "hmirror": false,
+      "vflip": false,
+      "rotation": 0,
+      "pose_id": null,
+      "crop": false,
+      "width": 640
+    },
+    "camera_id": 2,
+    "frame_id": 4
+  },
+  "physical_uart_enabled": false
+}

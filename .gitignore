@@ -7,3 +7,9 @@
 *.pem
 *.key
 __pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+dist/
+k230_transport_mvp/evidence/local/

@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+dist/*
+!dist/transport_mvp.zip
+*.pyc
+# Camera frames may show people; keep locally and record hashes in the receipt.
+evidence/board/csi2-live.jpg
+evidence/board/prior-preview-stale.jpg
+evidence/board/*-live.jpg
+evidence/board/block-frozen-lab.json
+evidence/board/*-lab-grid.json
+evidence/board/live-20261103/*.jpg
+evidence/board/live-20261103/*.png

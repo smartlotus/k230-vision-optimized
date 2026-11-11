@@ -1,0 +1,7 @@
+{
+  "source_commit": "0c3b8499e2877bc05df786921e199ab0533685d2",
+  "manifest_sha256": "2fbb2ced2d47086cacffcc5d9a7c534dae13a7b956c9c7eb488b5cd47c2a4f50",
+  "files_checked": 332,
+  "mismatches": [],
+  "scope": "Imported byte identities only; not hardware acceptance"
+}

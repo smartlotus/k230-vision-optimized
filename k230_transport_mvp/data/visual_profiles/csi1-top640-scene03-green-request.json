@@ -1,0 +1,13 @@
+{
+  "attempt": "20261103-scene03-01",
+  "scene_id": "scene03",
+  "profile": "csi1-top640-scene03-baseline",
+  "profile_file": "top640_scene03_baseline.json",
+  "face_region": [
+    51,
+    115,
+    30,
+    30
+  ],
+  "operator_ready": true
+}

@@ -1,0 +1,5 @@
+"""Current user-assigned roles. Physical CSI0 remains quarantined."""
+OBJECT_CAMERA_ID=2
+FRONT_CAMERA_ID=1
+MODE_CAMERA={'COLOR':OBJECT_CAMERA_ID,'RING':OBJECT_CAMERA_ID,'TOP':OBJECT_CAMERA_ID,
+             'QR':FRONT_CAMERA_ID,'LANE':FRONT_CAMERA_ID}

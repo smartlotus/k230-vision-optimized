@@ -1,0 +1,3 @@
+* text=auto eol=lf
+# Imported files are SHA-bound byte snapshots, including frozen native data.
+k230_transport_mvp/** -text

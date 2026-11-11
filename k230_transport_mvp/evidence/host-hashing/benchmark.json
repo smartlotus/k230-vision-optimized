@@ -1,0 +1,44 @@
+{
+  "scope": "Synthetic host file hashing; Python traced allocation only, not process RSS or board FPS",
+  "measurements": [
+    {
+      "file_mib": 1,
+      "whole_file": {
+        "sha256": "fbbab289f7f94b25736c58be46a994c441fd02552cc6022352e3d86d2fab7c83",
+        "peak_python_bytes": 1057242,
+        "seconds": 0.0010888999968301505
+      },
+      "streaming": {
+        "sha256": "fbbab289f7f94b25736c58be46a994c441fd02552cc6022352e3d86d2fab7c83",
+        "peak_python_bytes": 75157,
+        "seconds": 0.0009669999999459833
+      }
+    },
+    {
+      "file_mib": 16,
+      "whole_file": {
+        "sha256": "341aacac661ccb210720bedaa9ead5d668fe5ea41a73532fc147c71e34040df1",
+        "peak_python_bytes": 16785882,
+        "seconds": 0.018628599995281547
+      },
+      "streaming": {
+        "sha256": "341aacac661ccb210720bedaa9ead5d668fe5ea41a73532fc147c71e34040df1",
+        "peak_python_bytes": 75157,
+        "seconds": 0.012416900019161403
+      }
+    },
+    {
+      "file_mib": 64,
+      "whole_file": {
+        "sha256": "281e519df3077b557c6b03f5da83c4e8d397219259615dd7c3308f89cae8f2a6",
+        "peak_python_bytes": 67117530,
+        "seconds": 0.05614090000744909
+      },
+      "streaming": {
+        "sha256": "281e519df3077b557c6b03f5da83c4e8d397219259615dd7c3308f89cae8f2a6",
+        "peak_python_bytes": 75157,
+        "seconds": 0.04256760000134818
+      }
+    }
+  ]
+}

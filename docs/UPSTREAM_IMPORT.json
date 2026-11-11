@@ -1,0 +1,1681 @@
+{
+  "source_repository": "https://github.com/smartlotus/k230worker-6ebd4c18",
+  "source_branch": "ops/k230-fps",
+  "source_commit": "0c3b8499e2877bc05df786921e199ab0533685d2",
+  "copied_files": [
+    {
+      "path": "k230_transport_mvp/.gitattributes",
+      "sha256": "3d019907056fba6d6b3d8b66fb4f67bef3c58b438f247f1b60dae930f821cbe5",
+      "bytes": 149
+    },
+    {
+      "path": "k230_transport_mvp/.gitignore",
+      "sha256": "564e9c4109d8afacf5c355a1bd9a882752d358edc4cf29c27a8d0e3e24839338",
+      "bytes": 390
+    },
+    {
+      "path": "k230_transport_mvp/HOST_OPTIMIZATION.md",
+      "sha256": "95f209c4d2d0c4a0cb9555fd3124678af36f59006bc2fd58403c8e3e01730c45",
+      "bytes": 2498
+    },
+    {
+      "path": "k230_transport_mvp/K230_FPS_OPTIMIZED.md",
+      "sha256": "a1e63e0f5549b1f0d48d7dfb841eafa6b0e03718afd01da2c3555b4bb9a4137e",
+      "bytes": 4601
+    },
+    {
+      "path": "k230_transport_mvp/K230_OPTIMIZED.md",
+      "sha256": "7df9e399cc6bc675b9b5efec7ccb81367d7829d45a4702aa3d871de835551165",
+      "bytes": 3205
+    },
+    {
+      "path": "k230_transport_mvp/K230_VISION_OPTIMIZED.md",
+      "sha256": "fe6aa46ff5262a21ea7da8b409c4d970fee98fcd93a53d2b1d660c59216e7767",
+      "bytes": 3201
+    },
+    {
+      "path": "k230_transport_mvp/contracts/protocol_samples.txt",
+      "sha256": "5f21e09ba88a685333c7eeecfe2a229a56f2c05d499b726209f5929219e3151a",
+      "bytes": 3495
+    },
+    {
+      "path": "k230_transport_mvp/contracts/schema.md",
+      "sha256": "348690495c5f5ee83aba22749b93263a13644c2c21ee89ac320606bba60df488",
+      "bytes": 5380
+    },
+    {
+      "path": "k230_transport_mvp/core/__init__.py",
+      "sha256": "5533fcbd179607900b6e03a776cc0fe9e0d7dfd1007179d4b8346113c212d86e",
+      "bytes": 55
+    },
+    {
+      "path": "k230_transport_mvp/core/mission_state.py",
+      "sha256": "d2ef2d1ce532621a09dde5db9bad381f19c48a913725b630f129981d23f4a0fc",
+      "bytes": 10839
+    },
+    {
+      "path": "k230_transport_mvp/core/stats.py",
+      "sha256": "9907c4a618b6c7e58d98821a4cf52e35a9f1ba6fd775c5b4b8e3734f23e929a3",
+      "bytes": 347
+    },
+    {
+      "path": "k230_transport_mvp/core/task_parser.py",
+      "sha256": "43fc285963a5b28a0332f0fd5deaab3331e810ec94f7651dd921106d3479d303",
+      "bytes": 1461
+    },
+    {
+      "path": "k230_transport_mvp/core/task_planner.py",
+      "sha256": "19974e4107b87b3b93efb0b14ff18b4b480251b2550e8baf8bf883a01b90b631",
+      "bytes": 2313
+    },
+    {
+      "path": "k230_transport_mvp/core/types.py",
+      "sha256": "5d51cddf0069e1d38efb5e1867c63c1e1a62203fa8f764aa496ab762be22a3cb",
+      "bytes": 1617
+    },
+    {
+      "path": "k230_transport_mvp/core/workflow_session.py",
+      "sha256": "5eb8d20d3dd8176c24630bbf7c876c4c93707578a2499a9e045f960ddd8e11d3",
+      "bytes": 25790
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material-series-20261109-g/capture-01-lab.json",
+      "sha256": "407cb7b9e0e9aef51c63918a1db415fcc7a35fb24e639c8bed8ff0c4f39b521b",
+      "bytes": 194516
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material-series-20261109-g/capture-01.jpg",
+      "sha256": "31d2422e89c83992c56c3247bcd69d9e1fe56af3686b5d88cc618dbafe1a087a",
+      "bytes": 79278
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material-series-20261109-g/capture-01.rgb565",
+      "sha256": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "bytes": 460800
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material-series-20261109-g/capture-02-lab.json",
+      "sha256": "c9358d37da8f77941ad83665f0bc5109683703e18431901233a8aeb875c89f3d",
+      "bytes": 194259
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material-series-20261109-g/capture-02.jpg",
+      "sha256": "72eb214ea80b8c92f955be30a0f7bf24b7420dbd56ee7880851f3fe276a27aab",
+      "bytes": 79329
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material-series-20261109-g/capture-02.rgb565",
+      "sha256": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "bytes": 460800
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material-series-20261109-g/capture-03-lab.json",
+      "sha256": "5e220e246693647c391cbdca62dc93663407428121ded75fcc78a4d7f354b1b4",
+      "bytes": 194251
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material-series-20261109-g/capture-03.jpg",
+      "sha256": "bf337aa1f1d5b321196cac75906ad3750015c244c79c78d64e42f976bc4b79e9",
+      "bytes": 79136
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material-series-20261109-g/capture-03.rgb565",
+      "sha256": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "bytes": 460800
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material-series-20261109-g/capture-04-lab.json",
+      "sha256": "cd634faee49addd2ac28273611edfe2a785ff24bf68ad8742c769c69bc275076",
+      "bytes": 194435
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material-series-20261109-g/capture-04.jpg",
+      "sha256": "b915480aeb7cd529cdf51341d0564ae898453933a7fcaaed9c23797183cd9175",
+      "bytes": 80073
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material-series-20261109-g/capture-04.rgb565",
+      "sha256": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "bytes": 460800
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material-series-20261109-g/capture-receipt.json",
+      "sha256": "a57d4d4c704167e1addca797c96b4fe5870d2baf3b9228e544e279cbcee58043",
+      "bytes": 5047
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material-source-20261109-f/capture18-lab.json",
+      "sha256": "9e735678da5e8ad147d2926d09caa7f2668189c83ae09fb1cfb85139587f1fcf",
+      "bytes": 194236
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material-source-20261109-f/capture18.jpg",
+      "sha256": "683a827a5bf37f494d789357b4d161d6aa8f9c0f7daa2435517c0dbce19323bc",
+      "bytes": 76787
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material-source-20261109-f/capture18.rgb565",
+      "sha256": "a017ed6207bd3bddf2fd93526adf11a75a565f8a02097e5672a94607738a03f1",
+      "bytes": 460800
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material_annotation_drafts_r1.json",
+      "sha256": "ab23b923767bf7f5f3b625f12123f092c84f078858462a98af359a695b029e52",
+      "bytes": 10173
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material_manifest_r1.json",
+      "sha256": "c3969f1279ee61cf163fca797cedd747ebaf4e2d4c8f4a3f072c4dcbd6851ded",
+      "bytes": 14197
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material_manifest_r2.json",
+      "sha256": "2df7ad41ee74cd3cac5c3fee32f0413fb1b58c5fd46fb22ec83b79b5b6e69888",
+      "bytes": 21107
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material_manifest_r3.json",
+      "sha256": "e5bf9ff5aa45b23d414aba7e10602d6de431e662cb3692f0a30ed6bc8210964c",
+      "bytes": 21691
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material_manifest_reviewed_r4_20261110.json",
+      "sha256": "6d21a2e9d0a251c1161ee3b63345909d64ad1f8cda6d3f9be0e0c0454843e198",
+      "bytes": 46861
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material_sources.json",
+      "sha256": "6522f870db3c4abf04ce31873b25d19e6dedc87ad1ffd8b02859f18470519fe7",
+      "bytes": 2206
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material_sources_r2.json",
+      "sha256": "cf0aa5bb7dd8db5531adf9f2cc88855598c536c14435f59f64a0af9f279f8a7a",
+      "bytes": 3676
+    },
+    {
+      "path": "k230_transport_mvp/data/ai_pilot/material_sources_r3.json",
+      "sha256": "274164b04b73bd88e101d72643fbbe84ff3271aee4ec8c3c161126094adaac3e",
+      "bytes": 3940
+    },
+    {
+      "path": "k230_transport_mvp/data/board_fixtures/README.md",
+      "sha256": "1dcf2b8da38e909040217f772367b893a78a828cc52010ee44ec10c998901f05",
+      "bytes": 151
+    },
+    {
+      "path": "k230_transport_mvp/data/board_fixtures/phone-padded.jpg",
+      "sha256": "81afe3334dfc1af4634f73106191dd336da487d434a35a863b44ae9d310d77b0",
+      "bytes": 48994
+    },
+    {
+      "path": "k230_transport_mvp/data/board_fixtures/synthetic-lane.jpg",
+      "sha256": "5ed6525f1571504d73e9efe8d19c9dc90e56e96e749e46191e1721bd88428209",
+      "bytes": 4067
+    },
+    {
+      "path": "k230_transport_mvp/data/board_fixtures/synthetic-ring-layout.json",
+      "sha256": "087843e9ad6e395c50e797dd1ae42dc4cd267fc07716d7ace6e8e14a0958b24a",
+      "bytes": 510
+    },
+    {
+      "path": "k230_transport_mvp/data/board_fixtures/synthetic-rings.jpg",
+      "sha256": "5e579538b954af9c7527c90118720b42eac81e7a974980b6fe09a78b1da7f9fb",
+      "bytes": 21773
+    },
+    {
+      "path": "k230_transport_mvp/data/board_fixtures/synthetic-top-faces.png",
+      "sha256": "876d3fa177317cdf09d1c1118112756327a902285446eb474f9f5c87540aaf55",
+      "bytes": 3229
+    },
+    {
+      "path": "k230_transport_mvp/data/board_fixtures/synthetic-top-layout.json",
+      "sha256": "ea1c6bfa1c7ae802fd60b45e095369bd424bebeee35786eb222a30068a6580e1",
+      "bytes": 464
+    },
+    {
+      "path": "k230_transport_mvp/data/board_fixtures/thresholds.json",
+      "sha256": "bf741849b715fe7378f2e3ec6fca5fa7ce6ad9e3d74c4fd97a6e9d3fbfd82c05",
+      "bytes": 351
+    },
+    {
+      "path": "k230_transport_mvp/data/calibrations/block-distance-frozen-rois.json",
+      "sha256": "26befc53076f001c010cd121e046f75be25e398c0ce083a1618d5cff2fd42c20",
+      "bytes": 289
+    },
+    {
+      "path": "k230_transport_mvp/data/calibrations/block-six-bench-labels.json",
+      "sha256": "d92c9d9cb20bacc2e88bc2ecba7e4fc1941f02749f1c97e82f13f5afbb19f2b0",
+      "bytes": 649
+    },
+    {
+      "path": "k230_transport_mvp/data/calibrations/template.json",
+      "sha256": "a209967390d85bd7d0522d867915dd3839ac22a1d62334d6f3fef520ec83c5db",
+      "bytes": 693
+    },
+    {
+      "path": "k230_transport_mvp/data/photo_samples.json",
+      "sha256": "cb9a46fd29c6c239be0456ff0c864906b01f51d2724a50b16b8f2282f3ad9922",
+      "bytes": 807
+    },
+    {
+      "path": "k230_transport_mvp/data/real_samples/IMG_20261031_210411.jpg",
+      "sha256": "34ac732536c8b9617a7e7c313cc391d2da1281d1e0f019344840f1f879f1b6eb",
+      "bytes": 1036602
+    },
+    {
+      "path": "k230_transport_mvp/data/real_samples/IMG_20261031_210419.jpg",
+      "sha256": "b2b9a12e461ffec75e0d13f62eaec1d5030d3523de060f8b34d3707006da06a6",
+      "bytes": 1122022
+    },
+    {
+      "path": "k230_transport_mvp/data/real_samples/IMG_20261031_210432.jpg",
+      "sha256": "8545a5ff2b05606e90c8afa7a2cd1f8a0cc84b6792be494ae2389d782f228c28",
+      "bytes": 1418217
+    },
+    {
+      "path": "k230_transport_mvp/data/reference/material_geometry_reference.json",
+      "sha256": "80e30973013b8fde2a32a4cf9c802a61e42cc90db288e2883c57792d79266d1a",
+      "bytes": 601
+    },
+    {
+      "path": "k230_transport_mvp/data/reference/mmexport1793457770940.jpg",
+      "sha256": "1491afa485eca3aaa8bde5393e49054c6fb5f0374c14924d0a8d06b55f6106cc",
+      "bytes": 52409
+    },
+    {
+      "path": "k230_transport_mvp/data/spec/ai01.md",
+      "sha256": "bb10e726bf1da1b7f5b17c14458e6e7d28233534589e9771df80c1eb8edcdf69",
+      "bytes": 36806
+    },
+    {
+      "path": "k230_transport_mvp/data/spec/human.md",
+      "sha256": "89f9f05c0f5034b59f72a751f6db6fbcc60cc9f7f3df87c42caa7cddb25dbd8b",
+      "bytes": 34318
+    },
+    {
+      "path": "k230_transport_mvp/data/spec/source-manifest.json",
+      "sha256": "9517e81a442c6f6349fabcde030f2fad47fb23ca90b99dd54ac318e08db92ca0",
+      "bytes": 411
+    },
+    {
+      "path": "k230_transport_mvp/data/task_qr.json",
+      "sha256": "042e829997d2ea022ed235f0c103e7883a3d13b20c35d728e3394f7c7a75cb68",
+      "bytes": 233
+    },
+    {
+      "path": "k230_transport_mvp/data/task_qr.png",
+      "sha256": "848c8b67108a12912636927db3e7bf3ea9ef17fe7e5f138cad141c97f26ad5e8",
+      "bytes": 4748
+    },
+    {
+      "path": "k230_transport_mvp/data/task_qr_fixture.jpg",
+      "sha256": "89e01bf2c1c5035fd9cee379eade0094a7d8bfff6bf681d956347b9a3e62a16b",
+      "bytes": 11468
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profile_template.json",
+      "sha256": "d54d676f67a83e0c93270038db0061c58b08514bf1718960c9368e1310faf9ac",
+      "bytes": 287
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/closeout-20261108-ram-state.json",
+      "sha256": "f0b2bbeacf57e3cf84dfd0d982ca580546e9d11689b99e1079058e6b0aa94b72",
+      "bytes": 19733
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/closeout-20261109-offline-state.json",
+      "sha256": "029d1b8e51d9c8a3d8d19efc376e9aef413fc02f7d8570ce88e04b58bb708d1f",
+      "bytes": 22414
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/csi1-top640-angle01-candidate.json",
+      "sha256": "a043c8716cbe60d4515707380e5273231767150ccc4b2cc529371e89959b9c38",
+      "bytes": 9150
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/csi1-top640-angle02-candidate.json",
+      "sha256": "84b37e48414b87c0d071f710b96f9a3a91870263cb05404af76a07d2c062b85c",
+      "bytes": 9156
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/csi1-top640-scene03-baseline.json",
+      "sha256": "cddd58196649c1357ca2fbe03ce4c42def41d46063e6f33ffa48ed42761640ee",
+      "bytes": 9156
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/csi1-top640-scene03-green-candidate.json",
+      "sha256": "fad63e8db48ce3b8833a52ffca2cee8f9c15b8a45ed0e31746f992de9fbc5654",
+      "bytes": 9168
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/csi1-top640-scene03-green-fresh-request.json",
+      "sha256": "e402ea8fbf6b80c2c35e6a84df7a81f72878cef009c4722d79ac4ca18f6228e5",
+      "bytes": 351
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/csi1-top640-scene03-green-request.json",
+      "sha256": "7e1d30bc0e16babaf18f6c4a5ea67a348c71ab3a1679de927ded0b4daa1a0ee0",
+      "bytes": 252
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/csi1-topbench01-candidate.json",
+      "sha256": "cc27cefb0bae47c36138cb1a8486dc3883591408b653099eebd19988f38077e4",
+      "bytes": 1771
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/csi1-topbench02-candidate.json",
+      "sha256": "25bbfea5858e44a98e03a404e6be9f14d5902200835c032af8497ef1a04052b6",
+      "bytes": 1046
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/csi1-topbench03-candidate.json",
+      "sha256": "4643d0f2d4d4a2b4c5ba7a54a3d693611be97d7b9cd501b37bbff50d5f91c681",
+      "bytes": 2077
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/csi1-topbench03-current-scene.json",
+      "sha256": "7ad720688698a3b4960ef519b6c7e43df8520f646a281b1d3c515843e9ec1f7b",
+      "bytes": 2300
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/csi1-topbench04-black-circle-candidate.json",
+      "sha256": "097acf62e4206dc6d12f560b8f57122d29c0e57e197d59db927570faaad6cd19",
+      "bytes": 2751
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/csi1-topbench05-black-boundary-candidate.json",
+      "sha256": "8134a4a106a065a988d2c9ada55249548696ce0e7d41d00179b5d6dc611554fd",
+      "bytes": 2922
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/csi1-topbench06-black-boundary-candidate.json",
+      "sha256": "3b99db27a708a464239d9fbe66e9049e095ac42b11f0587f492dee96b8c102f8",
+      "bytes": 3067
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/ellipse-overlay-r12.json",
+      "sha256": "2a97e82a419ef5f87489269eb2faecfb258d3579a725f12aefbfc6d9248f4bd7",
+      "bytes": 4960
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/ellipse-perf-r2-current-scene.json",
+      "sha256": "4df58db9e1b8c5090269c52672e94e58337835565ed060aadf2c0699a3a56916",
+      "bytes": 9165
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/ring-diagnostic-current-ram-state.json",
+      "sha256": "1f919dbd5dcb8b7f5adf7eb71730b4b142c2650293a272128fa7ab3c9f4f5e40",
+      "bytes": 19775
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/ring-multi-current-ram-state.json",
+      "sha256": "22d29145352b8ef2c13d0bb7852bdac08ae1c81cb0590823ae73c038f62184e5",
+      "bytes": 22322
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/ring-multi-diagnostic-r22-draft.json",
+      "sha256": "be8c1e02843a074cc8dea1387c7849ee623f852a8dbac48996a5b513e7fc1fbb",
+      "bytes": 9170
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/ring-multi-diagnostic-r23-draft.json",
+      "sha256": "a1e8d5ca7d6da89bb632f891b1759ee3d0c00d917f99369ba6b8de4eff86c2cf",
+      "bytes": 9170
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/ring-multi-diagnostic-r24-draft.json",
+      "sha256": "2badd0d78cbcf39de7042db39516fb4e22717d76840fac9b5c152423b896ba64",
+      "bytes": 9170
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/ring-multi-diagnostic-r25-draft.json",
+      "sha256": "fc65e22b67e1c35f223c36e3b910175975607d4fe391d99db176c537b5ca7844",
+      "bytes": 9168
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/ring-preview-r15-draft.json",
+      "sha256": "e7067585e7f3ce4f38c4d5ff556c6785894259ba5a00c7505bc750ec1c9f4379",
+      "bytes": 9148
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/ring-red-diagnostic-r19-draft.json",
+      "sha256": "27f7e6ef580a9dc7709637bd58db30702ff9f2b2e82c7299122d572ccef8cb23",
+      "bytes": 9169
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/ring-red-diagnostic-r20-draft.json",
+      "sha256": "c2c4141f22ac2299062add629e5973f78bee3bf2de1947a5a809f35bf10c1c13",
+      "bytes": 9168
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/ring-rough-r16-draft.json",
+      "sha256": "47f95031f26b1782474571c587aef64f7ec25c6090431254f599431cc5e00444",
+      "bytes": 9161
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/ring-rough-r17-draft.json",
+      "sha256": "fcc8f5c391b60463f61b9fcff03afb9b8b942b83de74976b9d647252faf59e5c",
+      "bytes": 9161
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/ring-rough-r18-draft.json",
+      "sha256": "0dc267b9a28bd45e9d631585c9c59daee212e62b26dcffe6fdedb1ed0bbc6446",
+      "bytes": 9160
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/ring-yellow-diagnostic-r21-draft.json",
+      "sha256": "4a56f2849b81cc97596d6cd7017b0e502a994c13b8c3150c952bf74b11ab449a",
+      "bytes": 9171
+    },
+    {
+      "path": "k230_transport_mvp/data/visual_profiles/ring-ygb-current-ram-state.json",
+      "sha256": "f6f4eaa7c0e5c24683d93ccabb3a676764db9c640b0c7427be33cf664fed1539",
+      "bytes": 22320
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/deployment-reconnect.json",
+      "sha256": "9e0a1e4625488370b5edb414a634935b0d6af140780213879eb75cc9ab728c0f",
+      "bytes": 4973
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/kpu-green-black-20261109-e/green-black-native-lab.json",
+      "sha256": "8831c0b71c9c6b05b0f2a297edb83634d2e06d7de4f04dcfe61118e9257fcc2b",
+      "bytes": 193637
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/kpu-green-black-20261109-e/green-black-native.jpg",
+      "sha256": "43a546fe1af48d3efce86f99cf5e9daaa32cef0b32f3adc889e019d0ad405549",
+      "bytes": 75152
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/kpu-green-black-20261109-e/green-black-native.rgb565",
+      "sha256": "dbdff4b593fc6b599104583851bb164abfd04c3553c436f1026b0a2fd303503f",
+      "bytes": 460800
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/kpu-green-black-20261109-e/ygb-after-fallback-lab.json",
+      "sha256": "60ca6495fe132a0d80fe2b249461ef305686211f5bec1b16cc99d05ca9d3aff8",
+      "bytes": 193558
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/kpu-green-black-20261109-e/ygb-after-fallback.jpg",
+      "sha256": "2c79ef043b0c81259578051a48e91f2ac5a0b6d574ffc409c7d9b8757b5db8a3",
+      "bytes": 77287
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/kpu-green-black-20261109-e/ygb-after-fallback.rgb565",
+      "sha256": "e876e7e413d81d9fd583363d6fbc47d4f6f463d15f0258eba12193959ed0d0b3",
+      "bytes": 460800
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/lifecycle-reconnect.json",
+      "sha256": "afe59e3ca63078b9e9322d1ea6027d22c7d38571e93f120d609938083fb2fd33",
+      "bytes": 10828
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/native-fixtures-attempt02.json",
+      "sha256": "7d66869d2fca569e3d56b9585bb2474fc34bbaad1984d15b32decb263fedc846",
+      "bytes": 42081
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/native-fixtures-reconnect.json",
+      "sha256": "b642abd8dafc23277e6a0e99021e3b0c384516d494061cc336bed31fa5183df9",
+      "bytes": 11329
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/ring-alignment-20261109-d/frame3418-native-lab.json",
+      "sha256": "2510ad7ca735e0e174ae40d6a4d22cfea95f6768933d69a71ed27b60cfdc7e62",
+      "bytes": 190886
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/ring-alignment-20261109-d/frame3418.jpg",
+      "sha256": "92eba9ac12e12502ed841c2be450693cd87c3ab11e993717b7adfb6f092e9a79",
+      "bytes": 65708
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/ring-alignment-20261109-d/frame3418.rgb565",
+      "sha256": "48b365d9c5ff60085a0f835f974986f91321e91a752b5593bca9a2d57f662b35",
+      "bytes": 460800
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/ring-rough-20261108/native-frame100.jpg",
+      "sha256": "a8b8dc7aadb7d30ca6bd1fe04f23cf9463cb2ba0659214b1a6fbbe1e420e791e",
+      "bytes": 65315
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/ring-rough-20261108/native-frame100.json",
+      "sha256": "8ebe982f84cd4a729246deb65b6e62793a0725c36becb5b7802bc3f4db031bdf",
+      "bytes": 577
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/ring-rough-20261108/native-frame100.rgb565",
+      "sha256": "86d28d9912c476108454dad00cfaefb1bc4926d295188153fa58d8d034ed88dd",
+      "bytes": 460800
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/three-object-multicolor-20261109/multi-native-lab.json",
+      "sha256": "95b7af7c8208556c8aafc9236c0b7ff0ce37819266bb2a02011365a7d8b27556",
+      "bytes": 193795
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/three-object-multicolor-20261109/multi-native.jpg",
+      "sha256": "7309a3a480139e66c1fd31c0eb776e27eb8ae11cdad7bcc05d7086eb9ea9145f",
+      "bytes": 75045
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/three-object-multicolor-20261109/multi-native.rgb565",
+      "sha256": "cfa68398650971a91353d320bed5516cb0ba704e55ee565d456abbb76ba19ab2",
+      "bytes": 460800
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/three-object-multicolor-20261109/yellow-native-lab.json",
+      "sha256": "d814952f330f328f63bc230472d4c69f331121bcd62df7ef36c8276318eb5566",
+      "bytes": 193781
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/three-object-multicolor-20261109/yellow-native.jpg",
+      "sha256": "11c436ec6440b56ee939fbd27fc3f38b1213ddc90dab484c26f1a0b0595db35b",
+      "bytes": 77800
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/three-object-multicolor-20261109/yellow-native.rgb565",
+      "sha256": "3fa8c9e24f4115fde870ea4dabc544383ab311b1d6e78cde93804299feb4a61c",
+      "bytes": 460800
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/ygb-new-view-20261109-e/ygb-new-scene-lab.json",
+      "sha256": "f396e5cee0bffbaeba586461e425facac62ab63e824e2030fb0f32fd5129d6ed",
+      "bytes": 196199
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/ygb-new-view-20261109-e/ygb-new-scene.jpg",
+      "sha256": "d2e3ad12778a4ef602a07593d3262380c71009bae0d5e4776ae3dad83b7ba8b8",
+      "bytes": 82033
+    },
+    {
+      "path": "k230_transport_mvp/evidence/board/ygb-new-view-20261109-e/ygb-new-scene.rgb565",
+      "sha256": "a0b98a1dba6046dec36a1a4b4e2d845d5aad4be97839fb7d438c74efc06bf674",
+      "bytes": 460800
+    },
+    {
+      "path": "k230_transport_mvp/evidence/host-hashing/benchmark.json",
+      "sha256": "293d816cbb77f11b0cc3e1f72c81eb7c711a194f91b8f17055f40bb7594459b6",
+      "bytes": 1438
+    },
+    {
+      "path": "k230_transport_mvp/evidence/host-hashing/tests.json",
+      "sha256": "11fea384800f87ce3398580e45a9a75cb9eb3a1707cd011a2b21f19e95a29d99",
+      "bytes": 19302
+    },
+    {
+      "path": "k230_transport_mvp/evidence/host-hashing/tests.log",
+      "sha256": "f81f84bf076bb8c0f1a64794632f67939e991fca7732c3f4ca9a75941e369ab1",
+      "bytes": 71592
+    },
+    {
+      "path": "k230_transport_mvp/evidence/k230-buffer/benchmark.json",
+      "sha256": "be2bcde5cf6df1b34de7da8ada2e53b586e1b12efc952cccb33c0300e302215e",
+      "bytes": 434
+    },
+    {
+      "path": "k230_transport_mvp/evidence/k230-buffer/tests.json",
+      "sha256": "f0103044904af92454c92fc0cc43e0d4d6dcce4904ef067ae04bd343b0ee7032",
+      "bytes": 19723
+    },
+    {
+      "path": "k230_transport_mvp/evidence/k230-buffer/tests.log",
+      "sha256": "e5cc6334612bf144776c604256b02ca1701276f554aa4c6c45282b35660976bc",
+      "bytes": 73052
+    },
+    {
+      "path": "k230_transport_mvp/evidence/k230-fps/benchmark.json",
+      "sha256": "27220486599fd1e0b8a81ca17236ac85b0e003c5458e7a1bbd7823b952ebe7d5",
+      "bytes": 8363
+    },
+    {
+      "path": "k230_transport_mvp/evidence/k230-fps/historical-budget.json",
+      "sha256": "f5746b8dc067de827c27090ac854fc145e77934393a430c99dc1cf221edfd334",
+      "bytes": 6983
+    },
+    {
+      "path": "k230_transport_mvp/evidence/k230-fps/tests.json",
+      "sha256": "d6e790346ef81a4c7b6056ac3a987b89946f671f2fb847297ee0c97f69ea39e0",
+      "bytes": 20698
+    },
+    {
+      "path": "k230_transport_mvp/evidence/k230-fps/tests.log",
+      "sha256": "4562c7357594128f5575c7b9d2f167daafbdb6fc2f2605e823f5ca0f70a536f8",
+      "bytes": 78467
+    },
+    {
+      "path": "k230_transport_mvp/evidence/k230-vision/benchmark.json",
+      "sha256": "3418e9ba4c0e8bb8a774ca074c448b6046904a69027625e04544af536832a6fc",
+      "bytes": 2316
+    },
+    {
+      "path": "k230_transport_mvp/evidence/k230-vision/tests.json",
+      "sha256": "5195db0a9e63aec067615f6aadbd9fbfb3e9d15c44de6374e06f557d110a83d2",
+      "bytes": 20266
+    },
+    {
+      "path": "k230_transport_mvp/evidence/k230-vision/tests.log",
+      "sha256": "da2bafbbef9775e632e6fe249ed499664facff9e682458981fb07f0f87fc8d48",
+      "bytes": 77189
+    },
+    {
+      "path": "k230_transport_mvp/k230/__init__.py",
+      "sha256": "029f15f87852624a1b839814f97df73bf8d107b2f14c65259ed671d97ec3126b",
+      "bytes": 82
+    },
+    {
+      "path": "k230_transport_mvp/k230/block_profile.py",
+      "sha256": "0657236cf7d05dac2c82caf22513256d8733c699a88c9bc47a56fee04ba56c99",
+      "bytes": 4216
+    },
+    {
+      "path": "k230_transport_mvp/k230/camera_manager.py",
+      "sha256": "71f669b78371cbc9fadb25c516a0ba0cdf3f0282ce9d152cd321b10f9b1d425d",
+      "bytes": 7470
+    },
+    {
+      "path": "k230_transport_mvp/k230/camera_roles.py",
+      "sha256": "715627d248be0f64a5ccd3f6087d1aa74cffa0aff827746df9874fa7106d579a",
+      "bytes": 256
+    },
+    {
+      "path": "k230_transport_mvp/k230/capture_health.py",
+      "sha256": "09c00cb2d360413804b3f18a4566ebb2d4f2e0878ef399196420c636430d628c",
+      "bytes": 1346
+    },
+    {
+      "path": "k230_transport_mvp/k230/capture_io.py",
+      "sha256": "720135b0f09bff87a44ced6088f2949db31dacdd5c07a0c33515ff22393903b6",
+      "bytes": 3548
+    },
+    {
+      "path": "k230_transport_mvp/k230/config.py",
+      "sha256": "10c5ddab62cc22217d2a6b94d9204776a5fa3580f56270a544f02a8b9136ccef",
+      "bytes": 2685
+    },
+    {
+      "path": "k230_transport_mvp/k230/exposure_control.py",
+      "sha256": "1bc2b220a1fd502ffb04d704759a48c48d83b0f68960f57b05557be0f48d07dc",
+      "bytes": 1091
+    },
+    {
+      "path": "k230_transport_mvp/k230/main.py",
+      "sha256": "8591af18506d1427ac7504066908ec55a90480e82404fbde7786dfa10aed5e31",
+      "bytes": 6481
+    },
+    {
+      "path": "k230_transport_mvp/k230/main_optimized.py",
+      "sha256": "f1ec3fb8aa81c127c0dd88e46543b500550102d3f3847ac130cfb5cea83d4f74",
+      "bytes": 1007
+    },
+    {
+      "path": "k230_transport_mvp/k230/main_vision_optimized.py",
+      "sha256": "0c4be9e584fcb831354d8ab84cf52c45b40ebf1107fec43f8f5d3233aff56b78",
+      "bytes": 931
+    },
+    {
+      "path": "k230_transport_mvp/k230/preview_metrics.py",
+      "sha256": "0cc0fe23ea13840c2f4ecb5dd0c0baa2abe5b6bb62b1e41ba0ef496663bff3c7",
+      "bytes": 2180
+    },
+    {
+      "path": "k230_transport_mvp/k230/tuning/__init__.py",
+      "sha256": "38f19f78ca0f1b428c9ac217342a2ae30fe321b30e1ac60f21fc105d05df396c",
+      "bytes": 65
+    },
+    {
+      "path": "k230_transport_mvp/k230/tuning/geometry.py",
+      "sha256": "a0cbdb22f3c78dcc0cd450ebe7935615aa75a473937262dd4c6f45ec9a95fc8c",
+      "bytes": 2144
+    },
+    {
+      "path": "k230_transport_mvp/k230/tuning/integration.py",
+      "sha256": "4ea278502c398b35d0fd04e6c5983bf1f78b48e3e2529f7d02ce50899d5271f4",
+      "bytes": 782
+    },
+    {
+      "path": "k230_transport_mvp/k230/tuning/live.py",
+      "sha256": "52a59b0646a02db37d655dea3bad2b81457aa5d3c517a0c47e266ecce71bb562",
+      "bytes": 48387
+    },
+    {
+      "path": "k230_transport_mvp/k230/tuning/live_optimized.py",
+      "sha256": "492ceac0321035d78415c2b35860f62edda3d887cbc9c0ad8790496fe75e1487",
+      "bytes": 51028
+    },
+    {
+      "path": "k230_transport_mvp/k230/tuning/material.py",
+      "sha256": "02264673b6ad732f9d03e4aa088f55debda1f07f0ccd56cedb4027da94d4edef",
+      "bytes": 10807
+    },
+    {
+      "path": "k230_transport_mvp/k230/tuning/model.py",
+      "sha256": "7862eea223dd2b990e16df5c5db1273f18a71783f944beb5b24aee55d4a6fd8a",
+      "bytes": 5553
+    },
+    {
+      "path": "k230_transport_mvp/k230/tuning/panel.py",
+      "sha256": "ad4c498dfbf70bfd6b9a8f9ec3130010f36da79d92a87960c906d5a2c028c41b",
+      "bytes": 20874
+    },
+    {
+      "path": "k230_transport_mvp/k230/tuning/resources.py",
+      "sha256": "59518a1eef58213419653413ca485c5cae5e2c70e38090c7943bdcedfc68f9f4",
+      "bytes": 1407
+    },
+    {
+      "path": "k230_transport_mvp/k230/tuning/runtime.py",
+      "sha256": "a928c8e8790e4bc1d3d2e8cd61fc7bd48cfc05a7202891ce50033022edc78cf7",
+      "bytes": 9483
+    },
+    {
+      "path": "k230_transport_mvp/k230/tuning/sampling.py",
+      "sha256": "9f71891095caf851c2c263bcbb4026a6dcdb1a3393be79305f2d8e7c443943a9",
+      "bytes": 2391
+    },
+    {
+      "path": "k230_transport_mvp/k230/tuning/schema.py",
+      "sha256": "88ac8e6604b56fb20016a92097eadde6197e7237cf2c02a800bc9bc6187df38e",
+      "bytes": 11917
+    },
+    {
+      "path": "k230_transport_mvp/k230/tuning/store.py",
+      "sha256": "eec0b8af4007e450cf3d9caec82d24f78493b22feb529caac440d6d85c2046b6",
+      "bytes": 5086
+    },
+    {
+      "path": "k230_transport_mvp/k230/uart_adapter.py",
+      "sha256": "e21c491d895b8fa14d10f61afc03b3193f9579ee2e005bd7827754fdb9552e8e",
+      "bytes": 6386
+    },
+    {
+      "path": "k230_transport_mvp/k230/uart_adapter_optimized.py",
+      "sha256": "e393a2dd7e614c63a7ed29f26f17f38c95160b9394554ebeeeb0c69f78026317",
+      "bytes": 3294
+    },
+    {
+      "path": "k230_transport_mvp/k230/vision_adapter.py",
+      "sha256": "dcc525a73dd875b66e4e5b8d1c1d409e1f64bc278118a3d82c40187f726b1b63",
+      "bytes": 17918
+    },
+    {
+      "path": "k230_transport_mvp/k230/vision_adapter_optimized.py",
+      "sha256": "7d5dbf4613563c2be969555fbd722917940eda35f2888fc7b5363758265c54bd",
+      "bytes": 1186
+    },
+    {
+      "path": "k230_transport_mvp/k230/visual_inspector.py",
+      "sha256": "179bc146eadaea756afbd979ddf8d214c41a74e3765b310c6116951be5e33d93",
+      "bytes": 6800
+    },
+    {
+      "path": "k230_transport_mvp/ports/__init__.py",
+      "sha256": "069ab34a7cdf417a60f8c88a9a72ec4023f010e7e69bc5caff0bf6160e63cc32",
+      "bytes": 72
+    },
+    {
+      "path": "k230_transport_mvp/ports/display_port.py",
+      "sha256": "b67422b261966feb5f137d0dfbd13d319eb80f69735f3adf7c9e179c2e1db9ba",
+      "bytes": 921
+    },
+    {
+      "path": "k230_transport_mvp/ports/event_logger.py",
+      "sha256": "16f56c6fffd02671567c9d36cf0ae1430fd771021272c0c3940c41749c86d91c",
+      "bytes": 1428
+    },
+    {
+      "path": "k230_transport_mvp/ports/motion_port.py",
+      "sha256": "f09daf2cf0d948a76a61f246d9756dc0635ed00ab786b98121b61d00b1fc95a7",
+      "bytes": 15402
+    },
+    {
+      "path": "k230_transport_mvp/ports/protocol.py",
+      "sha256": "000a64cdcae0fbf8c524feeecddfa7ddc93032e4e1a4b1364999a0c665b6b008",
+      "bytes": 17628
+    },
+    {
+      "path": "k230_transport_mvp/requirements-dev.txt",
+      "sha256": "5c62abf96378f4697072df30a7cc38ba7580219651dcf77ebd4c7f2c56f5dfc5",
+      "bytes": 152
+    },
+    {
+      "path": "k230_transport_mvp/run_block_preview.py",
+      "sha256": "616fc472cfe06c0efba8aef68b4fb5ab91f206a4b2344df2b152f12252219959",
+      "bytes": 32838
+    },
+    {
+      "path": "k230_transport_mvp/run_block_service.py",
+      "sha256": "f6a2814a07cd89e5da46c4cd840e73880ebd475072f1bf70a29d8ca17bb2412a",
+      "bytes": 426
+    },
+    {
+      "path": "k230_transport_mvp/run_block_service_optimized.py",
+      "sha256": "40db145e99a245378830b69f23de24b68347c452b4501d6d8b4e57bdcc30ca10",
+      "bytes": 680
+    },
+    {
+      "path": "k230_transport_mvp/run_board.py",
+      "sha256": "65329d8e75bbaf110ea006dcd922be54a8af63c49ece24165827367a3ee3783b",
+      "bytes": 370
+    },
+    {
+      "path": "k230_transport_mvp/run_live_workbench.py",
+      "sha256": "6ddccdb0cbf9422ed6bcbb2a933068066bea0008a61314cc79b5740a4b478dc0",
+      "bytes": 376
+    },
+    {
+      "path": "k230_transport_mvp/run_live_workbench_optimized.py",
+      "sha256": "b5398ee0d369735cfcd8d77ffd317d13548d8280031f9bc8f8612ac54081fceb",
+      "bytes": 573
+    },
+    {
+      "path": "k230_transport_mvp/run_multicam_preview.py",
+      "sha256": "16aed4ba1309c86ead9e70b8049727fec565a23af46df2700857546d0023d16f",
+      "bytes": 6638
+    },
+    {
+      "path": "k230_transport_mvp/run_tuned_service.py",
+      "sha256": "7975b29c749d4b47eaded2aa09bd933aec4a83e0748d1604c12760dac0087a21",
+      "bytes": 408
+    },
+    {
+      "path": "k230_transport_mvp/run_tuning_panel.py",
+      "sha256": "80d89f05f710c28595dea8e24c286d903534696bbf17d31b1798bcb2e24ef580",
+      "bytes": 332
+    },
+    {
+      "path": "k230_transport_mvp/run_vision_preview.py",
+      "sha256": "b8a377db105cbaf4608dbd9806b60fd945707c9648b37abdf4659331fe6bcc17",
+      "bytes": 969
+    },
+    {
+      "path": "k230_transport_mvp/run_vision_service_optimized.py",
+      "sha256": "643558ec6bdeca474210516447e6b4b14e5954f5f0e5b2232b3d62f3f36983bb",
+      "bytes": 604
+    },
+    {
+      "path": "k230_transport_mvp/sim/__init__.py",
+      "sha256": "364b63a5c1734bec9f3d755b2fc22355f98230d1a7530e2d7a77c7a203ff45ad",
+      "bytes": 77
+    },
+    {
+      "path": "k230_transport_mvp/sim/camera_sim.py",
+      "sha256": "0b29d17d108a3cd76b0a491fdb34698b211990a1181978c224652eb24dfe7353",
+      "bytes": 2342
+    },
+    {
+      "path": "k230_transport_mvp/sim/field_sim.py",
+      "sha256": "dd4863b2793337a1dd59219b91dc20d5cc149973bd6ed14cf8e744deea852418",
+      "bytes": 7731
+    },
+    {
+      "path": "k230_transport_mvp/sim/motion_sim.py",
+      "sha256": "8ee2804b4558daa478d066cd6808cf183d5008fc0c056b4fd3f03e749c86ebf4",
+      "bytes": 2955
+    },
+    {
+      "path": "k230_transport_mvp/sim/run_mission.py",
+      "sha256": "828e91999cd34029462843aa8f3f4b3f503b756ce27cc7ead42529e6d3fe1490",
+      "bytes": 3049
+    },
+    {
+      "path": "k230_transport_mvp/sim/run_workflow.py",
+      "sha256": "e29b3b437e10d9ade06d85756bf95a235fc768bdf9f3b325628932124b714813",
+      "bytes": 5327
+    },
+    {
+      "path": "k230_transport_mvp/stm32/.gitignore",
+      "sha256": "8305c97a608cb93b9ec82229501494fa257f9ff4df6792741d1a9b2944003f35",
+      "bytes": 15
+    },
+    {
+      "path": "k230_transport_mvp/stm32/README.md",
+      "sha256": "2db64f2e2d6d06e72944942923c973368821018380363b1a85798673f861f931",
+      "bytes": 4936
+    },
+    {
+      "path": "k230_transport_mvp/stm32/host_material.c",
+      "sha256": "6fecfeffcec01e4b91f9c4331ee68da58e92e82c57078e6a633e89951791de7f",
+      "bytes": 3045
+    },
+    {
+      "path": "k230_transport_mvp/stm32/host_vectors.c",
+      "sha256": "b9da4ba0fcbf29f438779f8db1e57f9b1fc7f7263d129a415d8bd7ba45b280e7",
+      "bytes": 1463
+    },
+    {
+      "path": "k230_transport_mvp/stm32/material_receiver.c",
+      "sha256": "8beb0e1fd7ad7ec546e43974c7c9c31389fc5d6999e284b033598702c2147d04",
+      "bytes": 6236
+    },
+    {
+      "path": "k230_transport_mvp/stm32/material_receiver.h",
+      "sha256": "98a1e8ed69908ba66b667de14d846f484f5cc64a85988c739926f3f9d83c2d06",
+      "bytes": 2460
+    },
+    {
+      "path": "k230_transport_mvp/stm32/protocol.c",
+      "sha256": "64f6554e33d70c0a01ae495b432c89a6df129ce1b198c76b5b78d7cfaaae44af",
+      "bytes": 9509
+    },
+    {
+      "path": "k230_transport_mvp/stm32/protocol.h",
+      "sha256": "efc444ea227b92db985257f8206f316b3ab127b80271a92481050dc1f29a243d",
+      "bytes": 1023
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_alignment.py",
+      "sha256": "01801275b640703a3ea888ce8769185ec674e72e64713e4e14f7df2d233982bc",
+      "bytes": 2923
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_block_detector.py",
+      "sha256": "6c4c2bb87175d374ffa6c4844178c1852369080421ec61090ea49be5544ef0d4",
+      "bytes": 6631
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_block_evaluation.py",
+      "sha256": "a964294a57223a33536a6ae8a32d6ef5339c7d0cd388c8a07b79ac540c2e8e9b",
+      "bytes": 1518
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_block_metrics.py",
+      "sha256": "6037963edc9ea4efddb6ac10b51e8724824de13f77fe0258d463964cdafb8fd2",
+      "bytes": 3094
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_block_optimized.py",
+      "sha256": "39d331c46c6fe08ca5a9af0dc020bfc4f51125c180e1396cceb397506600081b",
+      "bytes": 5019
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_block_service.py",
+      "sha256": "c41686c0904c7b16930f129bc11babba718a314c0ebb3fc35fc6e4e86d098f94",
+      "bytes": 3472
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_camera_manager.py",
+      "sha256": "35d31f76b0d88c4457f8c3ed5b52602cb0055196e6224fc372ccc774acaea548",
+      "bytes": 8755
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_camera_roles.py",
+      "sha256": "ce112a3197d77023536a8b1e0b1a605c459a619d5ab46104f9dd98291b09c0a0",
+      "bytes": 2664
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_capture_health.py",
+      "sha256": "33afee967249d1e9005e3a763ad3a913ddd33994081764daddd8fcaa25691482",
+      "bytes": 1356
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_capture_io.py",
+      "sha256": "6abe3afffa239f86ff3cf362aebce9e13d9e46258f3e80fa0e38e623e5e58887",
+      "bytes": 3258
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_ellipse.py",
+      "sha256": "84443968edef8321a0867c1db8f65253fcb61070057aa63a43e03908839e35b7",
+      "bytes": 6270
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_ellipse_edges.py",
+      "sha256": "0b33543acf1ed74c3eed8776b71bfb27439c35018eff709ba3868b0ba420382d",
+      "bytes": 4258
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_ellipse_native.py",
+      "sha256": "4c9d1f7c2213128c604090336ab2421a8d5636fdf8513ab791a30a701de5dad7",
+      "bytes": 6569
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_exposure_control.py",
+      "sha256": "57404d9c06b03ed7d62d4e3ddb3bc631480b0ed8409a271a72bcc1f69c06e6f1",
+      "bytes": 1338
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_file_integrity.py",
+      "sha256": "f5f8d049abccf21aba5aa6af34dfc4c2d704198bcf24d188ef094e506d170e81",
+      "bytes": 2086
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_kpu_probe_cleanup.py",
+      "sha256": "03a2738db8c9d9728107afaec952a6a28f7343b1d6087b30a4ee4c90defea98a",
+      "bytes": 1750
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_lane_evaluation.py",
+      "sha256": "a5d04c818d6891cee6b0aa20da81fffa4286ac5d0aaa8b3851782a90fc310020",
+      "bytes": 1143
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_live_optimized.py",
+      "sha256": "e3553c9fd259856f2cea711b549c3e37b85147984a14bebf75c4d3dfc970a296",
+      "bytes": 9916
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_live_tuning.py",
+      "sha256": "d06e61f4d2bcc70247c8f13a23b55552da87bbcd4fb89b4632b0efc37a053de3",
+      "bytes": 27568
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_manual_capture_unknown.py",
+      "sha256": "1f61a86e747c509d8c5f49b30905e7934a812d103984fd91dd8231b66d422eb2",
+      "bytes": 2257
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_material_annotation_bundle.py",
+      "sha256": "9eb0d6575e488004c4b12d5a0720b7c0611d0375f699f943974a93f4c2a42122",
+      "bytes": 7197
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_material_model_contract.py",
+      "sha256": "f6999c0a643df8d9455fe13db62d1612e8c0afbab65c0e01c53c8d277a1638c4",
+      "bytes": 14344
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_material_preparation.py",
+      "sha256": "1de1d99d96f009e0c1850ae78696ab84c0c4b421484bb40503e44dc5495b3028",
+      "bytes": 10639
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_material_producer.py",
+      "sha256": "9a59111a34204068dd4718f7e98b82194078948a44b2f25264e71b798c0e94ea",
+      "bytes": 15195
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_material_protocol.py",
+      "sha256": "6348241d6bbf8c071da5374d9a56722ca2d75dd12f018d96d40aee0e61642273",
+      "bytes": 16918
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_material_surface_schema.py",
+      "sha256": "b4178478c5494189b7dd57153ee1b745aef7aba974cca943c45611fbf70d262e",
+      "bytes": 9363
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_material_training.py",
+      "sha256": "fd16003ed61753f2f2b2bb91556d21fb23d47733a7061dea58991eb5ab212431",
+      "bytes": 17646
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_mission_sim.py",
+      "sha256": "ae5cc05c5561388d950aaa2d570a3457fde6ca9e09d827e9a1569b491912e4f1",
+      "bytes": 14268
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_multicam_preview.py",
+      "sha256": "dd97d7f4dd85968f5b30c919919329cc4b0961b75f67b23d9db60bfe165805c3",
+      "bytes": 3891
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_placement_demo.py",
+      "sha256": "a3e52cf5c0c6be7fa6c41a742f5ceb7b30a3afdbc431bc89e29a6072fd65f86b",
+      "bytes": 4436
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_placement_geometry.py",
+      "sha256": "4e940d03d753aab4ef82f32da62faf9777af51788a8b51f0b19613788b61ea49",
+      "bytes": 3471
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_placement_score.py",
+      "sha256": "d184192a09d306cddf860a86f2f548d94208e2989c8da093521d4274543514e6",
+      "bytes": 3332
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_preview_metrics.py",
+      "sha256": "1fb2f2373a09f38d3d6ab4f043bd5aec7df0f7f8080c8780ced9483597e50c07",
+      "bytes": 1887
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_protocol.py",
+      "sha256": "060d64c2acc44e4747d351c51319554fd82b71d58e63fc2c2cdbfbe1a5ee0d35",
+      "bytes": 11673
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_reconnect_report.py",
+      "sha256": "f4beb1470679da864c4cfa96ec97a58fa181cdaead6abcd69d462f0e6b8af3d7",
+      "bytes": 2666
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_ring_native.py",
+      "sha256": "a9574e35399411defa0d0b8d5ba398e1a25b5e9f7523280688226cfb587048f0",
+      "bytes": 7287
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_ring_replay.py",
+      "sha256": "01049fa11f49d696bd2a81e89bf1323d42f57dc231b5d5fd53b8b7c77c79a0ad",
+      "bytes": 3830
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_rough_alignment_replay.py",
+      "sha256": "6eea04975e39adf6ae7460cfff55f24f967432cdbfe3776d9583bb745be1aed3",
+      "bytes": 2465
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_runtime.py",
+      "sha256": "02c20ff4af5ef8dbcc637636c7946c8c664d51a4febac95759495c3264613b0d",
+      "bytes": 3629
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_runtime_wire.py",
+      "sha256": "0441777141fa58ff25a771836c861934bb92c008aa6148db0532433187f33ad1",
+      "bytes": 2877
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_safety.py",
+      "sha256": "87c53b02f489900495b8139eed7ba60ba286bc6a0cfeab05668ff653b1c6af99",
+      "bytes": 12495
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_scene_gate.py",
+      "sha256": "2ccff47c74852e0282288e18c05a0e88e91641565b91a04d9d8fc64e761cd636",
+      "bytes": 1897
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_task_parser.py",
+      "sha256": "0d57df6d82f1092654701e5acfb1a0749a2047386c4229ab226213907548f13b",
+      "bytes": 2716
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_task_planner.py",
+      "sha256": "0a147cbb65da9ef23827ae9f69f84ddcd00eff95967abf6bca3a370d7da6c9db",
+      "bytes": 3110
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_task_preview.py",
+      "sha256": "70dbb5ac492b635e9bf476ba13a78441f0a99c88d07542c5d52eab1b8fb35044",
+      "bytes": 3114
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_tools.py",
+      "sha256": "4415113f2322a1291289b305efab254d55a80750aec241a49481fbf915ee1e01",
+      "bytes": 2171
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_top_geometry.py",
+      "sha256": "8fe59654530be63a4c1e10109c042658d97806fd6e4fb9ec730f643d96f027ae",
+      "bytes": 8301
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_tuning_compare.py",
+      "sha256": "7cbee1916f774157f3d9f3f711947a7fe4a0e44a0ebea4abab410be7baa69b18",
+      "bytes": 3206
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_tuning_sampling.py",
+      "sha256": "8b15038627951c9a41529cc8bff9c6f69a0b29528779c8d67c586ef7d225697c",
+      "bytes": 1938
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_tuning_system.py",
+      "sha256": "25e3f26485dcf10c45966deea52b1cea1b560b313447c705d25954f1a9780b89",
+      "bytes": 14313
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_uart_optimized.py",
+      "sha256": "d3c567da200fc0c21a6f9cd6886a690220b3711327589f8c10a259263d5aba76",
+      "bytes": 7587
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_vision.py",
+      "sha256": "4e2992df5111eeee209dea2bf1d66e52bb7d9d46cea42f0d5953f35addb1e954",
+      "bytes": 17781
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_visual_inspector.py",
+      "sha256": "e057b62cff518f3b180114f6c34067762a1ebadcd88f699c9e12989aceda5f70",
+      "bytes": 6786
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_workflow_session.py",
+      "sha256": "c3c05c603dba0629752beb32de79076e8b15dd38c51d964be24c10a9100b0734",
+      "bytes": 9193
+    },
+    {
+      "path": "k230_transport_mvp/tests/test_yolo_candidates.py",
+      "sha256": "625b9decd2cabef388f72c82d79fec31a204edc95d9c9367dbf610479734259d",
+      "bytes": 5568
+    },
+    {
+      "path": "k230_transport_mvp/tools/__init__.py",
+      "sha256": "d275fb46d168f99a78584edaccbeb36135b124917f2563cc404121b14cc7f914",
+      "bytes": 64
+    },
+    {
+      "path": "k230_transport_mvp/tools/benchmark_block_optimized.py",
+      "sha256": "283bd79f2659c405451dd2c9b3655dcef8dac8fbe0c880bd330407eb055b467c",
+      "bytes": 2576
+    },
+    {
+      "path": "k230_transport_mvp/tools/benchmark_live_optimized.py",
+      "sha256": "b33287f6092a3013fd2cfadd31e08d01e0dfac60bce1aa38bbef92440a153219",
+      "bytes": 4168
+    },
+    {
+      "path": "k230_transport_mvp/tools/benchmark_uart_optimized.py",
+      "sha256": "f7168b66672cf46923e6057833d792b5a99c26c081fc7fbbaea6e6853dd1f60b",
+      "bytes": 1720
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_block_sample.py",
+      "sha256": "aee874de7b3853aefb0f1d4af91d27b0de2d400923fd06d5747e437a6cc2d282",
+      "bytes": 1393
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_block_service_check.py",
+      "sha256": "3ae676656db4cf84053b4dcddedae358cb283fa99ea151dae189411a3451c8b0",
+      "bytes": 2135
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_block_stability_check.py",
+      "sha256": "56d80212ed473b1d178e6e97e8ce6dd200772241e40394cbe1c329326b4ed6af",
+      "bytes": 6379
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_camera_role_probe.py",
+      "sha256": "715d2b85f0d871af8b9b0fdadc7d4f502f667057c4e2625972def5ccfc475051",
+      "bytes": 2448
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_capture_fault_check.py",
+      "sha256": "1389ada71dbbb22bf2d70e28e329829bc54707015bf6e0a9aa3089ba1d57db8d",
+      "bytes": 3799
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_capture_soak.py",
+      "sha256": "159c90e1b37cc83ee2a8b268e2b56a8aa0ce6d4324b3bedc60d3d6b48395b277",
+      "bytes": 2481
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_fixture_smoke.py",
+      "sha256": "788451d9eec8f651fc12f3d4705a986f2f760c6878868c59ce94b6265e5ee038",
+      "bytes": 3497
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_multicam_qualify.py",
+      "sha256": "f6377a249431325b8bb445bec4027ebc9f924cebce3023f1858aabb65b9f2763",
+      "bytes": 4029
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_preview_fps_check.py",
+      "sha256": "2c7296d66310f82f9680a186607c0026927d16a4159089c17c0204558ffb2cc1",
+      "bytes": 1918
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_reconnect_check.py",
+      "sha256": "60e737825450c732365a95db63d1042c556e5b9fcc53f0539bed17617ce3a870",
+      "bytes": 5189
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_smoke.py",
+      "sha256": "bb8ab65d31566000ba1973acf993849ca21e82d43c353d760d5c7e44429a3e10",
+      "bytes": 2768
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_top_fixture_check.py",
+      "sha256": "6c5232807aab2fdb313d638ce93c488e23df60419965861af854acec580aa1c6",
+      "bytes": 3326
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_top_hand_check.py",
+      "sha256": "b9bd14832efb3e34595de49b661c53e9b260fe96a7c8534db53532df7198d5f8",
+      "bytes": 3460
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_top_live_check.py",
+      "sha256": "c2f9818ee3523b4fbe6c3b4f5f36001f3549c7359f12492bd794e60c698b012c",
+      "bytes": 3424
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_top_sample.py",
+      "sha256": "e6cdf27118d02c6bc9df0ad570881440e71e93fb50dc71ffe77439437445ce4d",
+      "bytes": 2232
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_tuning_black_compare.py",
+      "sha256": "460b2705a0de2486b04b6793045c16c8867e8fbc761661b771bf333df0e598be",
+      "bytes": 3683
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_tuning_green_compare.py",
+      "sha256": "77b9aebae06161ecea2268489612e43950bdd4464b167163684feca49218d4aa",
+      "bytes": 8281
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_tuning_scene_check.py",
+      "sha256": "e274693a851c2e836cb3144ca403ebd5e517e4e5f3ad777a9470314c356e004c",
+      "bytes": 9087
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_tuning_top640_angle02_check.py",
+      "sha256": "33bd5e6df78c78854f40f943aa5928b1277861811889a411ff59fd5b3315f047",
+      "bytes": 5970
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_tuning_top640_check.py",
+      "sha256": "7c8cda1cd20de2799124c45c35b5daacdc0c57f6bb18b250526596a73eace7b3",
+      "bytes": 5760
+    },
+    {
+      "path": "k230_transport_mvp/tools/board_visual_workbench_check.py",
+      "sha256": "47c327b31b7dfe13ff92ecd0860f75d6d59d1586109935cad1f95ef71a83dd55",
+      "bytes": 3084
+    },
+    {
+      "path": "k230_transport_mvp/tools/build_board_package.py",
+      "sha256": "39492e868c5f364f040ebd08b84c16a2c38b9e7f79f9107aa539b795112e49a7",
+      "bytes": 1776
+    },
+    {
+      "path": "k230_transport_mvp/tools/build_material_review.py",
+      "sha256": "a2ffc7a399342bf21aa2ecd29d5596f41f679779521c5b8e741e9f490192d3ae",
+      "bytes": 2658
+    },
+    {
+      "path": "k230_transport_mvp/tools/calibrate_homography.py",
+      "sha256": "f4bd9078623123bb2e0da7cc5f68b893fe2ea34a2aed13915e67b04342e42150",
+      "bytes": 6350
+    },
+    {
+      "path": "k230_transport_mvp/tools/compile_material_kmodel.py",
+      "sha256": "fc859b6512bcc0cea352d96f53e9fa100d8225490b1cb23c790e9bb55c45c1ad",
+      "bytes": 7141
+    },
+    {
+      "path": "k230_transport_mvp/tools/evaluate_block_labels.py",
+      "sha256": "849cf00e9fae5cc6ae0a0a34f08d33c958a9269f14bdc07243c5f37047ef862a",
+      "bytes": 2694
+    },
+    {
+      "path": "k230_transport_mvp/tools/evaluate_lane_sequences.py",
+      "sha256": "971f7df3f5266baeddfb0b3b91626714cdccbbdcbc46fa39b1391aa7a15eef41",
+      "bytes": 4849
+    },
+    {
+      "path": "k230_transport_mvp/tools/evaluate_rough_ring_alignment.py",
+      "sha256": "1e15e3e73a01281578e934dead632fd7be33dc174cc753f15939b08ec39f36b1",
+      "bytes": 7429
+    },
+    {
+      "path": "k230_transport_mvp/tools/export_material_comm_evidence.py",
+      "sha256": "84f11adee9b1c3c5f8641c32c196b66b3cb79508a0168ce0e3ff4eee515140c1",
+      "bytes": 5068
+    },
+    {
+      "path": "k230_transport_mvp/tools/export_material_producer_evidence.py",
+      "sha256": "1cddeb785f2ccb2efd643fef94f38ad93afca294a2c95747d8b1ae58edee7aaa",
+      "bytes": 6312
+    },
+    {
+      "path": "k230_transport_mvp/tools/export_test_report.py",
+      "sha256": "46212725e6187e367a5814676fbba73d8b0d9e806b2225fda3b97e9dbde8e6a6",
+      "bytes": 1862
+    },
+    {
+      "path": "k230_transport_mvp/tools/export_trained_material_onnx.py",
+      "sha256": "6f58a7ba7cb1367128b00e06d78625e3cf0be414e1486f42dfed43d856d07d73",
+      "bytes": 6635
+    },
+    {
+      "path": "k230_transport_mvp/tools/file_integrity.py",
+      "sha256": "9e2321c9aba5f6d5ac8647f88b9ae8079bfeffd89f4cd0d47f264e81c2775ebf",
+      "bytes": 555
+    },
+    {
+      "path": "k230_transport_mvp/tools/generate_board_fixtures.py",
+      "sha256": "0a7cd042f682305dcb80ef6c1cd95e482e4fd4c5f9b39bd8f02db2a59dbf3af7",
+      "bytes": 1839
+    },
+    {
+      "path": "k230_transport_mvp/tools/generate_qr.py",
+      "sha256": "74fc88ac328639a29593fb008dcb29dbdcf42983ec373087b5fe3c1aaa4f3edd",
+      "bytes": 1500
+    },
+    {
+      "path": "k230_transport_mvp/tools/inspect_thresholds.py",
+      "sha256": "51b64e7bc71cf35b7829001703068704fed21374512251634037eafb0343a833",
+      "bytes": 5435
+    },
+    {
+      "path": "k230_transport_mvp/tools/kpu_bounded_probe.py",
+      "sha256": "9a5d951aabccd9edb2b2d735451c8d7f62dc2f058d5cbdeb136e567b7b2e70fb",
+      "bytes": 3735
+    },
+    {
+      "path": "k230_transport_mvp/tools/launch_material_labeling.py",
+      "sha256": "3961e8db676da6616942ac18e91de171736f95d2c4a6cd0b2d7b2ca02d41bca6",
+      "bytes": 4053
+    },
+    {
+      "path": "k230_transport_mvp/tools/live_agent_packet.py",
+      "sha256": "b155c07d3995bad71aa6ca49a5fa1275ce3a4daea787cddcfd62006e94b9c8c0",
+      "bytes": 1392
+    },
+    {
+      "path": "k230_transport_mvp/tools/manual_material_capture.py",
+      "sha256": "399c5bc66b5d7090c9165a89f3dfd0c7d2ee0bacda010048af456cf5b98b1536",
+      "bytes": 7920
+    },
+    {
+      "path": "k230_transport_mvp/tools/material_annotation_bundle.py",
+      "sha256": "23bb89792617d033e92d7ab16fbef131b78e5b8d11ec52e5924420a249f0aba8",
+      "bytes": 16613
+    },
+    {
+      "path": "k230_transport_mvp/tools/material_annotation_schema.py",
+      "sha256": "b6ab0bfbce85b31006432725f84adbfbeda528fef494e4519a3938c4b9c889e8",
+      "bytes": 861
+    },
+    {
+      "path": "k230_transport_mvp/tools/material_dataset.py",
+      "sha256": "e26be7996dce3ed89ba61943ccda09963a6c31b57b5da286143a3661c7de088e",
+      "bytes": 15428
+    },
+    {
+      "path": "k230_transport_mvp/tools/material_model_contract.py",
+      "sha256": "4964e6cde9cd0742792d2be55365f91d576a19b6dfc276cafb714f9026547167",
+      "bytes": 9095
+    },
+    {
+      "path": "k230_transport_mvp/tools/material_preprocess.py",
+      "sha256": "1bd392e7c136fc617dcaf58f1832c36dbb1f6b24b5a2aa9d3b75ba90ed6cbc99",
+      "bytes": 1444
+    },
+    {
+      "path": "k230_transport_mvp/tools/material_review.html",
+      "sha256": "e8617d6c2f9dc1d4a58f6223ab24758b22df942422b056882d83637ff968617c",
+      "bytes": 13683
+    },
+    {
+      "path": "k230_transport_mvp/tools/paper_replay_probe.py",
+      "sha256": "3a988ca4d8ca19544f22047f806dbb3304cfe85360824680c582345bd7e9d42f",
+      "bytes": 2188
+    },
+    {
+      "path": "k230_transport_mvp/tools/probe_material_onnx.py",
+      "sha256": "50c92dba84f2728d3fa2e61a92951d2d093cfa61be18bd70acd7eda9ec78acc3",
+      "bytes": 5937
+    },
+    {
+      "path": "k230_transport_mvp/tools/probe_nncase_normalization.py",
+      "sha256": "6c85ab31475e638692d638a8739a47632950c98712d7bbcd37eb46e660a237e6",
+      "bytes": 5720
+    },
+    {
+      "path": "k230_transport_mvp/tools/replay_ring_candidates.py",
+      "sha256": "4bcda4d0ea7a4eadf91c9bba4e38777ebdc66b77eb2252775fbb084e9ee0b585",
+      "bytes": 2966
+    },
+    {
+      "path": "k230_transport_mvp/tools/sample_block_lab.py",
+      "sha256": "306612de116c9352b773c47cb357af7dc193ee0484a84da1b3f240a79f4f65c4",
+      "bytes": 1785
+    },
+    {
+      "path": "k230_transport_mvp/tools/summarize_live_resources.py",
+      "sha256": "942e8eb6e953a7851dc2a015dfcf731df7124cb9165a248308b153371b0e0cf7",
+      "bytes": 5847
+    },
+    {
+      "path": "k230_transport_mvp/tools/train_material_pilot.py",
+      "sha256": "c79def4b40ad60961728ed5019ac3af38331cf51e1e38055662dc01aa0a8ca88",
+      "bytes": 17921
+    },
+    {
+      "path": "k230_transport_mvp/tools/validate_delivery.py",
+      "sha256": "e16504df953b178502f8f72b27f6ef6935d7a81e033690f62e835d3236d221fa",
+      "bytes": 21331
+    },
+    {
+      "path": "k230_transport_mvp/tools/validate_reconnect_report.py",
+      "sha256": "01b9a5d39f7c7cfe7e77348569ca0273c7b475bceb8ee5736e15f40daa7b04c2",
+      "bytes": 5026
+    },
+    {
+      "path": "k230_transport_mvp/tools/yolo_contract_probe.py",
+      "sha256": "0112b06e0fdf0fbb1419cb7bd4956baf83e4e891b3e9d783dd15fa4adb2f2706",
+      "bytes": 3529
+    },
+    {
+      "path": "k230_transport_mvp/vision/__init__.py",
+      "sha256": "da29e53ac65e45322fac959b3946702ddb6c68acb022ab76630ce0920d476483",
+      "bytes": 85
+    },
+    {
+      "path": "k230_transport_mvp/vision/alignment.py",
+      "sha256": "7a6e8df6c488aa3169f5a1a105f0cd71a624414f6b72dce9fcaa11778940e0ad",
+      "bytes": 3644
+    },
+    {
+      "path": "k230_transport_mvp/vision/block_detector.py",
+      "sha256": "bc758145f2729eab4f21f69bdc6c1ffddb1e0a8517dd8e7742e9a7c1faab820a",
+      "bytes": 5412
+    },
+    {
+      "path": "k230_transport_mvp/vision/block_detector_optimized.py",
+      "sha256": "e29054e96b9b465bb4438a54074dc2d898b338c42a095e6b5ee67a1a58d8c471",
+      "bytes": 2957
+    },
+    {
+      "path": "k230_transport_mvp/vision/color.py",
+      "sha256": "bdfb4b3d66776de5c35dca2a44b4d7e7b597a5533268dc10d05ef65b1ffb4cbf",
+      "bytes": 1373
+    },
+    {
+      "path": "k230_transport_mvp/vision/common.py",
+      "sha256": "9944e8fbd50cff44321ca72a4c43940b023e6c5211c3fed6df2e21085e3d4312",
+      "bytes": 1676
+    },
+    {
+      "path": "k230_transport_mvp/vision/ellipse.py",
+      "sha256": "7afd9b74777d7a7db690a1de41ef28cc5bcb615924735780b14e411e00a56f5e",
+      "bytes": 4845
+    },
+    {
+      "path": "k230_transport_mvp/vision/ellipse_edges.py",
+      "sha256": "d0454be8c06ddc10848c1308e0b94cec6d2c50417e6ae9256310ae5c1056b0de",
+      "bytes": 6218
+    },
+    {
+      "path": "k230_transport_mvp/vision/ellipse_native.py",
+      "sha256": "8292ba7e7e450c94acaba11736fa54e75f01a6313f6a35899c942e63bf98d538",
+      "bytes": 8597
+    },
+    {
+      "path": "k230_transport_mvp/vision/ellipse_native_optimized.py",
+      "sha256": "6327cba6bd4f8ed8976036dd21fd8d3e191cf92b8036c9a34a66048aa556aefe",
+      "bytes": 9559
+    },
+    {
+      "path": "k230_transport_mvp/vision/ellipse_segmentation.py",
+      "sha256": "c4684a2498f1082f0d8fd0471ca65da1af494b3117a6f60d76c6ce3e66b57cdc",
+      "bytes": 6764
+    },
+    {
+      "path": "k230_transport_mvp/vision/lane.py",
+      "sha256": "d2f24399f9f8ca41dbcf680befcf6c8f255417068ad571081d085b1f72f091e9",
+      "bytes": 1319
+    },
+    {
+      "path": "k230_transport_mvp/vision/mapping.py",
+      "sha256": "d96b2cc3d43f8e3302ca624d0025149a5ffb0cb4fe02b4f62c91c167dd4e6676",
+      "bytes": 2881
+    },
+    {
+      "path": "k230_transport_mvp/vision/material_tracker.py",
+      "sha256": "d690cb44a0e972b28c052e07019361756737b8c8cd34e66d8e3c6db596622633",
+      "bytes": 3852
+    },
+    {
+      "path": "k230_transport_mvp/vision/placement_demo.py",
+      "sha256": "e14af8d8b7a659c61721912b7237d90b88d6bd87c6af6176f7c7b9efb837997b",
+      "bytes": 5290
+    },
+    {
+      "path": "k230_transport_mvp/vision/placement_geometry.py",
+      "sha256": "9f896a3daab31797df86c21fa7238cc1f8a5cb93b6b3259b4dc46f4d3748e167",
+      "bytes": 2719
+    },
+    {
+      "path": "k230_transport_mvp/vision/placement_score.py",
+      "sha256": "f56cb83a6e79418ad3897a3904c800d25256b0dfa8b24801b841d0394d5e5ee5",
+      "bytes": 4829
+    },
+    {
+      "path": "k230_transport_mvp/vision/qr.py",
+      "sha256": "e4aa46be4d7b1e2c4a2a3b5ecd8653b7144538e6fe3ab61588983f615fc9c540",
+      "bytes": 2953
+    },
+    {
+      "path": "k230_transport_mvp/vision/ring.py",
+      "sha256": "04cb8bfde9fd94831ce62a08b83bd8eee1e1f747009f598336a347c5aecfa6e2",
+      "bytes": 4347
+    },
+    {
+      "path": "k230_transport_mvp/vision/ring_native.py",
+      "sha256": "28e57001b06baa64972491ddda343dc0a3785f0b1b440f51c36e0cabac35dd80",
+      "bytes": 9027
+    },
+    {
+      "path": "k230_transport_mvp/vision/task_preview.py",
+      "sha256": "78bd8261237939e9e027d6cf7843928b8b579f478f27e355666a6fa55faedd23",
+      "bytes": 3784
+    },
+    {
+      "path": "k230_transport_mvp/vision/top.py",
+      "sha256": "e594fd02349c246728affab6b40c31e50fd69729b0c6b50fd96ca4488b745164",
+      "bytes": 5544
+    },
+    {
+      "path": "k230_transport_mvp/vision/tracker.py",
+      "sha256": "b3fc712fc5e111ca1c97f6f75e03bd46be810904925e6e2c333be17fc5887aae",
+      "bytes": 2907
+    },
+    {
+      "path": "k230_transport_mvp/vision/yolo_candidates.py",
+      "sha256": "e6afa031052d86da67275c5bcf6e31bf82ea195d0d9ae7de6362059d0347b347",
+      "bytes": 6980
+    }
+  ],
+  "copied_file_count": 332,
+  "copied_bytes": 14449548,
+  "derived_preservation_summaries": [
+    "k230_transport_mvp/evidence/k230-buffer/preservation.json",
+    "k230_transport_mvp/evidence/k230-fps/preservation.json",
+    "k230_transport_mvp/evidence/k230-vision/preservation.json"
+  ],
+  "excluded": [
+    "Old Git history and OPS runtime/task registry",
+    "VS Code workbench source and packaged VSIX",
+    "Historical training runs/weights and untracked operator work",
+    "Unrelated historical evidence; required test fixtures retained"
+  ],
+  "native_25fps_verified": false
+}

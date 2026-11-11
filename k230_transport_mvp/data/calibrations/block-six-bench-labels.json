@@ -1,0 +1,13 @@
+{
+  "scope": "One manually inspected later frame from the same stationary six-color side-view scene; not a general accuracy benchmark",
+  "label_source": "Agent visual inspection of block-six-eval-90-live.jpg, native 320x240 JPEG captured after threshold sampling; coarse visible-object boxes",
+  "iou_threshold": 0.5,
+  "frames": [{"frame_id": 90,"objects": [
+    {"target_id": 1,"bbox": [24,45,43,86]},
+    {"target_id": 6,"bbox": [70,46,48,81]},
+    {"target_id": 5,"bbox": [116,47,51,80]},
+    {"target_id": 2,"bbox": [168,46,44,81]},
+    {"target_id": 3,"bbox": [215,46,46,81]},
+    {"target_id": 4,"bbox": [261,46,52,83]}
+  ]}]
+}

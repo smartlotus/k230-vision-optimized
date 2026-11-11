@@ -1,0 +1,386 @@
+{
+  "schema_version": 1,
+  "task": "final_material_visible_top_pilot",
+  "status": "DRAFT_ASSISTED",
+  "human_approved": false,
+  "confirmed_gt_images": 0,
+  "coordinate_precision": "ASSISTED_APPROXIMATE_SOURCE_PIXELS",
+  "provenance": "Read-only subagent viewed all8original JPEGs and proposed visible-top boxes. No operator approval.",
+  "not_a_reviewed_training_manifest": true,
+  "images": [
+    {
+      "image_id": "3fa8c9e24f4115fde870ea4dabc544383ab311b1d6e78cde93804299feb4a61c",
+      "source_native_sha256": "3fa8c9e24f4115fde870ea4dabc544383ab311b1d6e78cde93804299feb4a61c",
+      "status": "DRAFT_ASSISTED",
+      "human_approved": false,
+      "needs_human_review": true,
+      "objects": [
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            333,
+            58,
+            59,
+            58
+          ],
+          "color_id": 2,
+          "uncertain": false,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        },
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            382,
+            151,
+            58,
+            59
+          ],
+          "color_id": 4,
+          "uncertain": false,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        },
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            445,
+            228,
+            59,
+            59
+          ],
+          "color_id": 3,
+          "uncertain": false,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        },
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            508,
+            311,
+            57,
+            49
+          ],
+          "color_id": 5,
+          "uncertain": true,
+          "truncated": true,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        }
+      ],
+      "outside_regular_three_object_pool": true
+    },
+    {
+      "image_id": "48b365d9c5ff60085a0f835f974986f91321e91a752b5593bca9a2d57f662b35",
+      "source_native_sha256": "48b365d9c5ff60085a0f835f974986f91321e91a752b5593bca9a2d57f662b35",
+      "status": "DRAFT_ASSISTED",
+      "human_approved": false,
+      "needs_human_review": true,
+      "objects": [
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            258,
+            77,
+            63,
+            60
+          ],
+          "color_id": 1,
+          "uncertain": false,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        }
+      ],
+      "outside_regular_three_object_pool": false
+    },
+    {
+      "image_id": "86d28d9912c476108454dad00cfaefb1bc4926d295188153fa58d8d034ed88dd",
+      "source_native_sha256": "86d28d9912c476108454dad00cfaefb1bc4926d295188153fa58d8d034ed88dd",
+      "status": "DRAFT_ASSISTED",
+      "human_approved": false,
+      "needs_human_review": true,
+      "objects": [
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            269,
+            101,
+            60,
+            60
+          ],
+          "color_id": 1,
+          "uncertain": false,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        }
+      ],
+      "outside_regular_three_object_pool": false
+    },
+    {
+      "image_id": "a017ed6207bd3bddf2fd93526adf11a75a565f8a02097e5672a94607738a03f1",
+      "source_native_sha256": "a017ed6207bd3bddf2fd93526adf11a75a565f8a02097e5672a94607738a03f1",
+      "status": "DRAFT_ASSISTED",
+      "human_approved": false,
+      "needs_human_review": true,
+      "objects": [
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            388,
+            91,
+            50,
+            53
+          ],
+          "color_id": 2,
+          "uncertain": false,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        },
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            437,
+            170,
+            51,
+            50
+          ],
+          "color_id": 4,
+          "uncertain": false,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        },
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            500,
+            261,
+            48,
+            51
+          ],
+          "color_id": 5,
+          "uncertain": true,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        }
+      ],
+      "outside_regular_three_object_pool": false
+    },
+    {
+      "image_id": "a0b98a1dba6046dec36a1a4b4e2d845d5aad4be97839fb7d438c74efc06bf674",
+      "source_native_sha256": "a0b98a1dba6046dec36a1a4b4e2d845d5aad4be97839fb7d438c74efc06bf674",
+      "status": "DRAFT_ASSISTED",
+      "human_approved": false,
+      "needs_human_review": true,
+      "objects": [
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            314,
+            31,
+            50,
+            54
+          ],
+          "color_id": 2,
+          "uncertain": false,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        },
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            367,
+            112,
+            49,
+            49
+          ],
+          "color_id": 4,
+          "uncertain": false,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        },
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            431,
+            202,
+            46,
+            49
+          ],
+          "color_id": 5,
+          "uncertain": true,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        }
+      ],
+      "outside_regular_three_object_pool": false
+    },
+    {
+      "image_id": "cfa68398650971a91353d320bed5516cb0ba704e55ee565d456abbb76ba19ab2",
+      "source_native_sha256": "cfa68398650971a91353d320bed5516cb0ba704e55ee565d456abbb76ba19ab2",
+      "status": "DRAFT_ASSISTED",
+      "human_approved": false,
+      "needs_human_review": true,
+      "objects": [
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            333,
+            59,
+            60,
+            59
+          ],
+          "color_id": 2,
+          "uncertain": false,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        },
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            397,
+            164,
+            60,
+            60
+          ],
+          "color_id": 6,
+          "uncertain": false,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        },
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            490,
+            288,
+            60,
+            59
+          ],
+          "color_id": 3,
+          "uncertain": false,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        }
+      ],
+      "outside_regular_three_object_pool": false
+    },
+    {
+      "image_id": "dbdff4b593fc6b599104583851bb164abfd04c3553c436f1026b0a2fd303503f",
+      "source_native_sha256": "dbdff4b593fc6b599104583851bb164abfd04c3553c436f1026b0a2fd303503f",
+      "status": "DRAFT_ASSISTED",
+      "human_approved": false,
+      "needs_human_review": true,
+      "objects": [
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            333,
+            59,
+            60,
+            59
+          ],
+          "color_id": 2,
+          "uncertain": false,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        },
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            394,
+            150,
+            59,
+            60
+          ],
+          "color_id": 4,
+          "uncertain": false,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        },
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            500,
+            292,
+            58,
+            59
+          ],
+          "color_id": 5,
+          "uncertain": true,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        }
+      ],
+      "outside_regular_three_object_pool": false
+    },
+    {
+      "image_id": "e876e7e413d81d9fd583363d6fbc47d4f6f463d15f0258eba12193959ed0d0b3",
+      "source_native_sha256": "e876e7e413d81d9fd583363d6fbc47d4f6f463d15f0258eba12193959ed0d0b3",
+      "status": "DRAFT_ASSISTED",
+      "human_approved": false,
+      "needs_human_review": true,
+      "objects": [
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            329,
+            50,
+            60,
+            59
+          ],
+          "color_id": 2,
+          "uncertain": false,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        },
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            386,
+            142,
+            60,
+            59
+          ],
+          "color_id": 4,
+          "uncertain": false,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        },
+        {
+          "class_id": 0,
+          "bbox_xywh": [
+            488,
+            282,
+            57,
+            59
+          ],
+          "color_id": 5,
+          "uncertain": true,
+          "truncated": false,
+          "human_approved": false,
+          "status": "DRAFT_ASSISTED"
+        }
+      ],
+      "outside_regular_three_object_pool": false
+    }
+  ]
+}

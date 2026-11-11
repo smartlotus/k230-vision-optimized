@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "import-snapshot",
+  "title": "Import optimized K230 sources and publish independent private repository",
+  "paths": [
+    "k230_transport_mvp",
+    "docs",
+    "scripts",
+    "README.md",
+    "AGENTS.md",
+    "requirements-host.txt",
+    "requirements-research.txt",
+    ".gitignore",
+    ".gitattributes"
+  ],
+  "lane": "serial",
+  "resources": [],
+  "depends": [],
+  "acceptance": [
+    "Imported source hashes match; host regression runs in independent root; portable handoff; private remote main readback verified"
+  ],
+  "branch": "ops/import-snapshot",
+  "state": "ready",
+  "claimed": true,
+  "agent": "codex",
+  "session": "import-snapshot-20261111",
+  "revision": 3,
+  "handoff": ".ops/handoffs/import-snapshot/20261111T183341-fcf2106c.json",
+  "updated_at": "2026-11-11T18:34:25+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "Host synthetic drain allocation; excludes initial queue storage; not K230 FPS or RSS",
+  "ring_capacity_bytes": 3072,
+  "measurements": [
+    {
+      "implementation": "k230.uart_adapter",
+      "accepted_bytes": 3072,
+      "peak_drain_python_bytes": 6528
+    },
+    {
+      "implementation": "k230.uart_adapter_optimized",
+      "accepted_bytes": 3072,
+      "peak_drain_python_bytes": 633
+    }
+  ]
+}

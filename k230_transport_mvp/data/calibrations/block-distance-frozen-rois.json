@@ -1,0 +1,4 @@
+{
+  "scope":"Manual ROI selection after freezing and inspecting block-frozen-live.jpg; red occluded and excluded; not generalization acceptance",
+  "rois":{"6":[54,66,9,27],"5":[89,69,10,30],"2":[129,69,9,30],"3":[178,69,14,45],"4":[270,90,20,45],"background_ceiling":[190,8,12,14]}
+}

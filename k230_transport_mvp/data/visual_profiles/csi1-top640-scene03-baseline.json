@@ -1,0 +1,456 @@
+{
+  "metadata": {
+    "source": "MANUAL_UNVERIFIED",
+    "color_verified": false,
+    "geometry_verified": false
+  },
+  "revision": 3,
+  "locked": false,
+  "stability": {
+    "motion_px": 4,
+    "gap_ms": 300,
+    "frames": 3
+  },
+  "profile_id": "csi1-top640-scene03-baseline",
+  "qr": {
+    "confirmations": 3,
+    "gap_ms": 500,
+    "timeout_ms": 5000
+  },
+  "camera": {
+    "fps": 30,
+    "exposure_us": 10000,
+    "auto_exposure": true,
+    "auto_white_balance": true
+  },
+  "binding": {
+    "vflip": false,
+    "crop": false,
+    "pose_id": null,
+    "rotation": 0,
+    "input_width": 1920,
+    "height": 360,
+    "hmirror": false,
+    "pixel_format": "RGB565",
+    "width": 640,
+    "input_height": 1080
+  },
+  "contexts": {
+    "RING_BUFFER": {
+      "center_tolerance": 8,
+      "max_aspect": 1.5,
+      "circle_threshold": 2000,
+      "lane_max_width": 400,
+      "min_pixels": 100,
+      "roi": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "thresholds": {
+        "3": null,
+        "6": null,
+        "1": null,
+        "4": null,
+        "5": null,
+        "2": null
+      },
+      "min_aspect": 0.25,
+      "r_min": 6,
+      "scan_rows": 3,
+      "gray_max": 180,
+      "r_max": 70,
+      "max_area": 60000,
+      "gray_min": 60,
+      "sample_step": 2,
+      "min_area": 120,
+      "ring_id_reviewed": false,
+      "r_step": 2,
+      "center_spread": 20,
+      "edge_margin": 2,
+      "id_rois": {
+        "1": null,
+        "3": null,
+        "2": null
+      },
+      "reference": [
+        320,
+        180
+      ],
+      "lane_min_width": 30,
+      "sampling_status": "UNSET",
+      "min_density": 0.5
+    },
+    "TOP_BUFFER": {
+      "center_tolerance": 8,
+      "max_aspect": 1.4,
+      "circle_threshold": 2000,
+      "lane_max_width": 400,
+      "min_pixels": 100,
+      "roi": [
+        25,
+        35,
+        470,
+        210
+      ],
+      "thresholds": {
+        "3": [
+          20,
+          33,
+          22,
+          45,
+          -74,
+          -51
+        ],
+        "6": [
+          51,
+          64,
+          -20,
+          2,
+          -44,
+          -21
+        ],
+        "1": [
+          37,
+          49,
+          42,
+          60,
+          21,
+          40
+        ],
+        "4": [
+          44,
+          57,
+          -51,
+          -33,
+          19,
+          38
+        ],
+        "5": [
+          17,
+          23,
+          -11,
+          6,
+          -14,
+          12
+        ],
+        "2": [
+          77,
+          89,
+          -24,
+          -4,
+          64,
+          82
+        ]
+      },
+      "min_aspect": 0.7,
+      "r_min": 6,
+      "scan_rows": 3,
+      "gray_max": 180,
+      "r_max": 70,
+      "max_area": 6000,
+      "gray_min": 60,
+      "sample_step": 2,
+      "min_area": 700,
+      "ring_id_reviewed": false,
+      "r_step": 2,
+      "center_spread": 20,
+      "edge_margin": 2,
+      "id_rois": {
+        "1": null,
+        "3": null,
+        "2": null
+      },
+      "reference": [
+        260,
+        140
+      ],
+      "lane_min_width": 30,
+      "sampling_status": "MANUAL_UNVERIFIED",
+      "min_density": 0.6
+    },
+    "QR_FRONT": {
+      "center_tolerance": 8,
+      "max_aspect": 1.5,
+      "circle_threshold": 2000,
+      "lane_max_width": 400,
+      "min_pixels": 100,
+      "roi": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "thresholds": {
+        "3": null,
+        "6": null,
+        "1": null,
+        "4": null,
+        "5": null,
+        "2": null
+      },
+      "min_aspect": 0.25,
+      "r_min": 6,
+      "scan_rows": 3,
+      "gray_max": 180,
+      "r_max": 70,
+      "max_area": 60000,
+      "gray_min": 60,
+      "sample_step": 2,
+      "min_area": 120,
+      "ring_id_reviewed": false,
+      "r_step": 2,
+      "center_spread": 20,
+      "edge_margin": 2,
+      "id_rois": {
+        "1": null,
+        "3": null,
+        "2": null
+      },
+      "reference": [
+        320,
+        180
+      ],
+      "lane_min_width": 30,
+      "sampling_status": "UNSET",
+      "min_density": 0.5
+    },
+    "RING_PROCESS": {
+      "center_tolerance": 8,
+      "max_aspect": 1.5,
+      "circle_threshold": 2000,
+      "lane_max_width": 400,
+      "min_pixels": 100,
+      "roi": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "thresholds": {
+        "3": null,
+        "6": null,
+        "1": null,
+        "4": null,
+        "5": null,
+        "2": null
+      },
+      "min_aspect": 0.25,
+      "r_min": 6,
+      "scan_rows": 3,
+      "gray_max": 180,
+      "r_max": 70,
+      "max_area": 60000,
+      "gray_min": 60,
+      "sample_step": 2,
+      "min_area": 120,
+      "ring_id_reviewed": false,
+      "r_step": 2,
+      "center_spread": 20,
+      "edge_margin": 2,
+      "id_rois": {
+        "1": null,
+        "3": null,
+        "2": null
+      },
+      "reference": [
+        320,
+        180
+      ],
+      "lane_min_width": 30,
+      "sampling_status": "UNSET",
+      "min_density": 0.5
+    },
+    "COLOR_PROCESS": {
+      "center_tolerance": 8,
+      "max_aspect": 1.5,
+      "circle_threshold": 2000,
+      "lane_max_width": 400,
+      "min_pixels": 100,
+      "roi": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "thresholds": {
+        "3": null,
+        "6": null,
+        "1": null,
+        "4": null,
+        "5": null,
+        "2": null
+      },
+      "min_aspect": 0.25,
+      "r_min": 6,
+      "scan_rows": 3,
+      "gray_max": 180,
+      "r_max": 70,
+      "max_area": 60000,
+      "gray_min": 60,
+      "sample_step": 2,
+      "min_area": 120,
+      "ring_id_reviewed": false,
+      "r_step": 2,
+      "center_spread": 20,
+      "edge_margin": 2,
+      "id_rois": {
+        "1": null,
+        "3": null,
+        "2": null
+      },
+      "reference": [
+        320,
+        180
+      ],
+      "lane_min_width": 30,
+      "sampling_status": "UNSET",
+      "min_density": 0.5
+    },
+    "COLOR_RAW": {
+      "center_tolerance": 8,
+      "max_aspect": 1.5,
+      "circle_threshold": 2000,
+      "lane_max_width": 400,
+      "min_pixels": 100,
+      "roi": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "thresholds": {
+        "3": null,
+        "6": null,
+        "1": null,
+        "4": null,
+        "5": null,
+        "2": null
+      },
+      "min_aspect": 0.25,
+      "r_min": 6,
+      "scan_rows": 3,
+      "gray_max": 180,
+      "r_max": 70,
+      "max_area": 60000,
+      "gray_min": 60,
+      "sample_step": 2,
+      "min_area": 120,
+      "ring_id_reviewed": false,
+      "r_step": 2,
+      "center_spread": 20,
+      "edge_margin": 2,
+      "id_rois": {
+        "1": null,
+        "3": null,
+        "2": null
+      },
+      "reference": [
+        320,
+        180
+      ],
+      "lane_min_width": 30,
+      "sampling_status": "UNSET",
+      "min_density": 0.5
+    },
+    "LANE_FRONT": {
+      "center_tolerance": 8,
+      "max_aspect": 1.5,
+      "circle_threshold": 2000,
+      "lane_max_width": 400,
+      "min_pixels": 100,
+      "roi": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "thresholds": {
+        "3": null,
+        "6": null,
+        "1": null,
+        "4": null,
+        "5": null,
+        "2": null
+      },
+      "min_aspect": 0.25,
+      "r_min": 6,
+      "scan_rows": 3,
+      "gray_max": 180,
+      "r_max": 70,
+      "max_area": 60000,
+      "gray_min": 60,
+      "sample_step": 2,
+      "min_area": 120,
+      "ring_id_reviewed": false,
+      "r_step": 2,
+      "center_spread": 20,
+      "edge_margin": 2,
+      "id_rois": {
+        "1": null,
+        "3": null,
+        "2": null
+      },
+      "reference": [
+        320,
+        180
+      ],
+      "lane_min_width": 30,
+      "sampling_status": "UNSET",
+      "min_density": 0.5
+    },
+    "COLOR_BUFFER": {
+      "center_tolerance": 8,
+      "max_aspect": 1.5,
+      "circle_threshold": 2000,
+      "lane_max_width": 400,
+      "min_pixels": 100,
+      "roi": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "thresholds": {
+        "3": null,
+        "6": null,
+        "1": null,
+        "4": null,
+        "5": null,
+        "2": null
+      },
+      "min_aspect": 0.25,
+      "r_min": 6,
+      "scan_rows": 3,
+      "gray_max": 180,
+      "r_max": 70,
+      "max_area": 60000,
+      "gray_min": 60,
+      "sample_step": 2,
+      "min_area": 120,
+      "ring_id_reviewed": false,
+      "r_step": 2,
+      "center_spread": 20,
+      "edge_margin": 2,
+      "id_rois": {
+        "1": null,
+        "3": null,
+        "2": null
+      },
+      "reference": [
+        320,
+        180
+      ],
+      "lane_min_width": 30,
+      "sampling_status": "UNSET",
+      "min_density": 0.5
+    }
+  },
+  "schema_version": 1,
+  "display": {
+    "pan_y": 0,
+    "pan_x": 0,
+    "mode": "NATIVE"
+  }
+}

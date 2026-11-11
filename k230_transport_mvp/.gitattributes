@@ -1,0 +1,3 @@
+# Preserve the exact native patch bytes verified in the deployment receipts.
+k230/tuning/live.py text eol=lf
+vision/ellipse_native.py text eol=lf

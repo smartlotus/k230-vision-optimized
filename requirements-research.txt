@@ -1,0 +1,8 @@
+-r requirements-host.txt
+onnx==1.17.0
+torch==2.10.0
+torchvision==0.25.0
+ultralytics==8.3.235
+# Optional conversion tools, install only when running compiler probes:
+# nncase==2.11.0
+# nncase-kpu==2.11.0

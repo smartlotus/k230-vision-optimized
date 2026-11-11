@@ -1,0 +1,23 @@
+{
+  "source": "REAL_CAMERA_NATIVE_LAB",
+  "frame_id": 100,
+  "camera_id": 2,
+  "width": 640,
+  "height": 360,
+  "image_profile": {
+    "vflip": false,
+    "rotation": 0,
+    "height": 360,
+    "width": 640,
+    "crop": false,
+    "hmirror": false,
+    "pose_id": null
+  },
+  "mode": "RING",
+  "station": "PROCESS",
+  "profile_revision": 15,
+  "timestamp_ms": 700448,
+  "is_simulated": false,
+  "native_bytes": 460800,
+  "operator_scene": "Two hand-drawn concentric targets; one covered by red material. Provisional rough layout; not official artwork."
+}

@@ -1,0 +1,20 @@
+{
+  "attempt": "20261103-scene03-green-fresh01",
+  "scene_id": "scene03",
+  "profile_file": "top640_scene03_green_candidate.json",
+  "profile_id": "csi1-top640-scene03-baseline-L41_A30_B17",
+  "colors": [
+    4
+  ],
+  "centers": {
+    "4": [
+      66,
+      130
+    ],
+    "6": [
+      254,
+      99
+    ]
+  },
+  "reference_id": 6
+}

@@ -1,0 +1,11 @@
+{
+  "is_simulated": true,
+  "source": "Known drawing coordinates in tools/generate_board_fixtures.py, not physical measurements",
+  "image": "synthetic-rings.jpg",
+  "image_size": [640, 320],
+  "center_gates": {
+    "1": {"center": [120, 160], "radius_px": 24, "min_distance_gap_px": 1, "min_support": 1},
+    "2": {"center": [320, 160], "radius_px": 24, "min_distance_gap_px": 1, "min_support": 1},
+    "3": {"center": [520, 160], "radius_px": 24, "min_distance_gap_px": 1, "min_support": 1}
+  }
+}

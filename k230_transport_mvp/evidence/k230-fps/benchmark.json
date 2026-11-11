@@ -1,0 +1,282 @@
+{
+  "scope": "Synthetic host grayscale image stand-in, excludes sensor/native LAB/display/JPEG; not K230 FPS",
+  "measurements": [
+    {
+      "variant": "legacy",
+      "iterations": 250,
+      "median_50_calls_seconds": 0.0249206000007689,
+      "samples": [
+        0.02516809999360703,
+        0.02492660001735203,
+        0.0243027999822516,
+        0.0249206000007689,
+        0.024786299996776506
+      ],
+      "operations": {
+        "copies": 1000,
+        "copied_pixels": 119662500,
+        "draw_calls": 12750
+      },
+      "geometry": {
+        "accepted": [
+          {
+            "accepted": true,
+            "reason": "GEOMETRY_ONLY",
+            "center": [
+              140.01110076904297,
+              110.00565719604492
+            ],
+            "semiaxes": [
+              40.07769775390625,
+              30.065088272094727
+            ],
+            "angle_rad": 3.1415911888511934,
+            "points": 200,
+            "backend": "NATIVE_CV2_FIT_ELLIPSE",
+            "rms_px": 0.24723996891591804,
+            "max_error_px": 0.5437811147790873,
+            "contour_points": 200,
+            "interior_fill": 0.9996224612221278,
+            "sectors": 12
+          }
+        ],
+        "components": [
+          {
+            "bbox": [
+              100,
+              80,
+              81,
+              61
+            ],
+            "contour_area": 3784.0,
+            "fit": {
+              "accepted": true,
+              "reason": "GEOMETRY_ONLY",
+              "center": [
+                140.01110076904297,
+                110.00565719604492
+              ],
+              "semiaxes": [
+                40.07769775390625,
+                30.065088272094727
+              ],
+              "angle_rad": 3.1415911888511934,
+              "points": 200,
+              "backend": "NATIVE_CV2_FIT_ELLIPSE",
+              "rms_px": 0.24723996891591804,
+              "max_error_px": 0.5437811147790873,
+              "contour_points": 200,
+              "interior_fill": 0.9996224612221278,
+              "sectors": 12
+            }
+          }
+        ],
+        "reason": "GEOMETRY_ONLY",
+        "fresh": true,
+        "quick_blob_count": 1,
+        "ring_candidates": [],
+        "ring_groups": [],
+        "alignment_pair": null,
+        "material_fits": [],
+        "material_color_candidates": [],
+        "material_components": [],
+        "material_by_color": [],
+        "material_limit_exceeded": false,
+        "raw_material_fit_count": 0,
+        "material_complete": false,
+        "material_scan_reason": "MATERIAL_SCAN_NOT_RUN",
+        "material_scan_colors": [],
+        "material_algorithm_revision": 0
+      }
+    },
+    {
+      "variant": "optimized_render",
+      "iterations": 250,
+      "median_50_calls_seconds": 0.02492820000043139,
+      "samples": [
+        0.02578160000848584,
+        0.02506280000670813,
+        0.02492820000043139,
+        0.024194099998567253,
+        0.02413530001649633
+      ],
+      "operations": {
+        "copies": 1000,
+        "copied_pixels": 119662500,
+        "draw_calls": 12500
+      },
+      "geometry": {
+        "accepted": [
+          {
+            "accepted": true,
+            "reason": "GEOMETRY_ONLY",
+            "center": [
+              140.01110076904297,
+              110.00565719604492
+            ],
+            "semiaxes": [
+              40.07769775390625,
+              30.065088272094727
+            ],
+            "angle_rad": 3.1415911888511934,
+            "points": 200,
+            "backend": "NATIVE_CV2_FIT_ELLIPSE",
+            "rms_px": 0.24723996891591804,
+            "max_error_px": 0.5437811147790873,
+            "contour_points": 200,
+            "interior_fill": 0.9996224612221278,
+            "sectors": 12
+          }
+        ],
+        "components": [
+          {
+            "bbox": [
+              100,
+              80,
+              81,
+              61
+            ],
+            "contour_area": 3784.0,
+            "fit": {
+              "accepted": true,
+              "reason": "GEOMETRY_ONLY",
+              "center": [
+                140.01110076904297,
+                110.00565719604492
+              ],
+              "semiaxes": [
+                40.07769775390625,
+                30.065088272094727
+              ],
+              "angle_rad": 3.1415911888511934,
+              "points": 200,
+              "backend": "NATIVE_CV2_FIT_ELLIPSE",
+              "rms_px": 0.24723996891591804,
+              "max_error_px": 0.5437811147790873,
+              "contour_points": 200,
+              "interior_fill": 0.9996224612221278,
+              "sectors": 12
+            }
+          }
+        ],
+        "reason": "GEOMETRY_ONLY",
+        "fresh": true,
+        "quick_blob_count": 1,
+        "ring_candidates": [],
+        "ring_groups": [],
+        "alignment_pair": null,
+        "material_fits": [],
+        "material_color_candidates": [],
+        "material_components": [],
+        "material_by_color": [],
+        "material_limit_exceeded": false,
+        "raw_material_fit_count": 0,
+        "material_complete": false,
+        "material_scan_reason": "MATERIAL_SCAN_NOT_RUN",
+        "material_scan_colors": [],
+        "material_algorithm_revision": 0
+      }
+    },
+    {
+      "variant": "optimized_recognition_only",
+      "iterations": 250,
+      "median_50_calls_seconds": 0.01536429999396205,
+      "samples": [
+        0.015719000017270446,
+        0.015381900011561811,
+        0.015362000005552545,
+        0.015352099988376722,
+        0.01536429999396205
+      ],
+      "operations": {
+        "copies": 250,
+        "copied_pixels": 2231250,
+        "draw_calls": 0
+      },
+      "geometry": {
+        "accepted": [
+          {
+            "accepted": true,
+            "reason": "GEOMETRY_ONLY",
+            "center": [
+              140.01110076904297,
+              110.00565719604492
+            ],
+            "semiaxes": [
+              40.07769775390625,
+              30.065088272094727
+            ],
+            "angle_rad": 3.1415911888511934,
+            "points": 200,
+            "backend": "NATIVE_CV2_FIT_ELLIPSE",
+            "rms_px": 0.24723996891591804,
+            "max_error_px": 0.5437811147790873,
+            "contour_points": 200,
+            "interior_fill": 0.9996224612221278,
+            "sectors": 12
+          }
+        ],
+        "components": [
+          {
+            "bbox": [
+              100,
+              80,
+              81,
+              61
+            ],
+            "contour_area": 3784.0,
+            "fit": {
+              "accepted": true,
+              "reason": "GEOMETRY_ONLY",
+              "center": [
+                140.01110076904297,
+                110.00565719604492
+              ],
+              "semiaxes": [
+                40.07769775390625,
+                30.065088272094727
+              ],
+              "angle_rad": 3.1415911888511934,
+              "points": 200,
+              "backend": "NATIVE_CV2_FIT_ELLIPSE",
+              "rms_px": 0.24723996891591804,
+              "max_error_px": 0.5437811147790873,
+              "contour_points": 200,
+              "interior_fill": 0.9996224612221278,
+              "sectors": 12
+            }
+          }
+        ],
+        "reason": "GEOMETRY_ONLY",
+        "fresh": true,
+        "quick_blob_count": 1,
+        "ring_candidates": [],
+        "ring_groups": [],
+        "alignment_pair": null,
+        "material_fits": [],
+        "material_color_candidates": [],
+        "material_components": [],
+        "material_by_color": [],
+        "material_limit_exceeded": false,
+        "raw_material_fit_count": 0,
+        "material_complete": false,
+        "material_scan_reason": "MATERIAL_SCAN_NOT_RUN",
+        "material_scan_colors": [],
+        "material_algorithm_revision": 0
+      }
+    }
+  ],
+  "geometry_equal": true,
+  "contour_allocations": [
+    {
+      "variant": "vision.ellipse_native",
+      "points": 4096,
+      "peak_python_bytes": 440224
+    },
+    {
+      "variant": "vision.ellipse_native_optimized",
+      "points": 4096,
+      "peak_python_bytes": 2208
+    }
+  ]
+}

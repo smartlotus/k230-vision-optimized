@@ -1,0 +1,8 @@
+{
+  "status": "PC_QR_ROUNDTRIP_PASS",
+  "payload": "156+123+516+231",
+  "width_px": 396,
+  "printed_size_mm": null,
+  "board_test": "HW_PENDING",
+  "sha256": "848c8b67108a12912636927db3e7bf3ea9ef17fe7e5f138cad141c97f26ad5e8"
+}

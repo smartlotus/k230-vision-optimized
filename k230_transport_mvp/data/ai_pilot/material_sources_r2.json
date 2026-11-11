@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "object_set_final_confirmed_by_operator": true,
+  "confirmation_source": "Operator2026-11-09: six-color material set is final; all other field/lighting/hand-drawn targets are temporary.",
+  "sources": [
+    {
+      "jpeg_path": "evidence/board/ring-rough-20261108/native-frame100.jpg",
+      "rgb565_path": "evidence/board/ring-rough-20261108/native-frame100.rgb565",
+      "metadata_path": "evidence/board/ring-rough-20261108/native-frame100.json"
+    },
+    {
+      "jpeg_path": "evidence/board/ring-alignment-20261109-d/frame3418.jpg",
+      "rgb565_path": "evidence/board/ring-alignment-20261109-d/frame3418.rgb565",
+      "metadata_path": "evidence/board/ring-alignment-20261109-d/frame3418-native-lab.json"
+    },
+    {
+      "jpeg_path": "evidence/board/three-object-multicolor-20261109/yellow-native.jpg",
+      "rgb565_path": "evidence/board/three-object-multicolor-20261109/yellow-native.rgb565",
+      "metadata_path": "evidence/board/three-object-multicolor-20261109/yellow-native-lab.json"
+    },
+    {
+      "jpeg_path": "evidence/board/three-object-multicolor-20261109/multi-native.jpg",
+      "rgb565_path": "evidence/board/three-object-multicolor-20261109/multi-native.rgb565",
+      "metadata_path": "evidence/board/three-object-multicolor-20261109/multi-native-lab.json"
+    },
+    {
+      "jpeg_path": "evidence/board/kpu-green-black-20261109-e/green-black-native.jpg",
+      "rgb565_path": "evidence/board/kpu-green-black-20261109-e/green-black-native.rgb565",
+      "metadata_path": "evidence/board/kpu-green-black-20261109-e/green-black-native-lab.json"
+    },
+    {
+      "jpeg_path": "evidence/board/kpu-green-black-20261109-e/ygb-after-fallback.jpg",
+      "rgb565_path": "evidence/board/kpu-green-black-20261109-e/ygb-after-fallback.rgb565",
+      "metadata_path": "evidence/board/kpu-green-black-20261109-e/ygb-after-fallback-lab.json"
+    },
+    {
+      "jpeg_path": "evidence/board/ygb-new-view-20261109-e/ygb-new-scene.jpg",
+      "rgb565_path": "evidence/board/ygb-new-view-20261109-e/ygb-new-scene.rgb565",
+      "metadata_path": "evidence/board/ygb-new-view-20261109-e/ygb-new-scene-lab.json"
+    },
+    {
+      "jpeg_path": "data/ai_pilot/material-source-20261109-f/capture18.jpg",
+      "rgb565_path": "data/ai_pilot/material-source-20261109-f/capture18.rgb565",
+      "metadata_path": "data/ai_pilot/material-source-20261109-f/capture18-lab.json"
+    },
+    {
+      "jpeg_path": "data/ai_pilot/material-series-20261109-g/capture-01.jpg",
+      "rgb565_path": "data/ai_pilot/material-series-20261109-g/capture-01.rgb565",
+      "metadata_path": "data/ai_pilot/material-series-20261109-g/capture-01-lab.json"
+    },
+    {
+      "jpeg_path": "data/ai_pilot/material-series-20261109-g/capture-02.jpg",
+      "rgb565_path": "data/ai_pilot/material-series-20261109-g/capture-02.rgb565",
+      "metadata_path": "data/ai_pilot/material-series-20261109-g/capture-02-lab.json"
+    },
+    {
+      "jpeg_path": "data/ai_pilot/material-series-20261109-g/capture-03.jpg",
+      "rgb565_path": "data/ai_pilot/material-series-20261109-g/capture-03.rgb565",
+      "metadata_path": "data/ai_pilot/material-series-20261109-g/capture-03-lab.json"
+    },
+    {
+      "jpeg_path": "data/ai_pilot/material-series-20261109-g/capture-04.jpg",
+      "rgb565_path": "data/ai_pilot/material-series-20261109-g/capture-04.rgb565",
+      "metadata_path": "data/ai_pilot/material-series-20261109-g/capture-04-lab.json"
+    }
+  ],
+  "capture_series_note": "4newframes fromoneboundedseries;physicalscene/group remains unconfirmed. Never split this series across training/test."
+}

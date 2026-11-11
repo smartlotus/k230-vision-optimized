@@ -1,0 +1,12 @@
+{
+  "calibration_id": "MEASUREMENT_REQUIRED",
+  "camera_id": null,
+  "station": null,
+  "plane": null,
+  "pose_id": null,
+  "is_simulated": false,
+  "image_profile": {"width": 640, "height": 480, "crop": false, "hmirror": false, "vflip": false, "rotation": 0, "pose_id": null},
+  "training": [{"px": [null, null], "mm": [null, null]}],
+  "validation": [{"px": [null, null], "mm": [null, null]}],
+  "instructions": "Collect 6-12 non-collinear training points and at least 2 distinct held-out validation points at the actual target plane; copy more entries. Nulls intentionally refuse export. A separate record is needed per camera, image geometry, docking pose and target plane."
+}

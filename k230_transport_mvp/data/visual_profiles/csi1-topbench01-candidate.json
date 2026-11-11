@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "source": "REAL_CSI1_NATIVE_LAB_FROZEN_FRAME",
+    "status": "CANDIDATE_PENDING_NATIVE_NEW_FRAME_CHECK",
+    "camera_id": 1,
+    "source_frame_id": 1,
+    "grid_sha256": "c4bf034b3765f8f355e5b0db62f3f430c24946b7fcd367f9766317c229f22102",
+    "scope": "One fixed bench view, unknown distance/mount; no H or general accuracy"
+  },
+  "TOP_CONFIG": {
+    "BUFFER": {
+      "camera_id": 1,
+      "image_profile": {
+        "height": 240,
+        "hmirror": false,
+        "vflip": false,
+        "rotation": 0,
+        "pose_id": null,
+        "crop": false,
+        "width": 320
+      },
+      "thresholds": {
+        "1": [
+          36,
+          49,
+          43,
+          61,
+          30,
+          47
+        ],
+        "2": [
+          73,
+          88,
+          -26,
+          -6,
+          61,
+          79
+        ],
+        "3": [
+          22,
+          32,
+          23,
+          41,
+          -70,
+          -51
+        ],
+        "4": [
+          43,
+          60,
+          -52,
+          -32,
+          17,
+          38
+        ],
+        "5": [
+          17,
+          29,
+          -13,
+          9,
+          -13,
+          7
+        ],
+        "6": [
+          51,
+          67,
+          -21,
+          3,
+          -45,
+          -20
+        ]
+      },
+      "roi": [
+        1,
+        1,
+        318,
+        238
+      ],
+      "reference": [
+        160,
+        120
+      ],
+      "min_area": 120,
+      "max_area": 1600,
+      "surface_shape": {
+        "min_axis_ratio": 0.65,
+        "max_axis_ratio": 1.4,
+        "min_density": 0.55
+      },
+      "profile_id": "csi1-topbench01-candidate"
+    }
+  }
+}

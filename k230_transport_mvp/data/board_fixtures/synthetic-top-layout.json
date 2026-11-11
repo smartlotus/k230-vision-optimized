@@ -1,0 +1,32 @@
+{
+  "is_simulated": true,
+  "source": "GENERATED_ALGORITHM_FIXTURE_NOT_CAMERA",
+  "centers": {
+    "1": [
+      50,
+      60
+    ],
+    "2": [
+      160,
+      60
+    ],
+    "3": [
+      270,
+      60
+    ],
+    "4": [
+      50,
+      180
+    ],
+    "5": [
+      160,
+      180
+    ],
+    "6": [
+      270,
+      180
+    ]
+  },
+  "radius_px": 24,
+  "image_sha256": "876d3fa177317cdf09d1c1118112756327a902285446eb474f9f5c87540aaf55"
+}

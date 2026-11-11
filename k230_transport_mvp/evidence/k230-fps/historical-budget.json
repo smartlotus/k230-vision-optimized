@@ -1,0 +1,269 @@
+{
+  "scope": "Historical 2026-11-10 board observations; not current run",
+  "source": "k230_transport_mvp/evidence/research/material-training-entry-20261110-l/preview-runtime.json",
+  "sha256": "ea78ecbb2e3ab1bbfe990db15f3b23a7e36e448a1392b128b9e0e2980fd08117",
+  "target_ms": 40,
+  "first_three_windows": [
+    {
+      "capture_fps": 2.638522,
+      "stages": {
+        "view": {
+          "max_ms": 385,
+          "mean_ms": 333.3333
+        },
+        "gc": {
+          "max_ms": 5,
+          "mean_ms": 2.666667
+        },
+        "capture": {
+          "max_ms": 1,
+          "mean_ms": 1.0
+        },
+        "compress": {
+          "max_ms": 27,
+          "mean_ms": 23.0
+        },
+        "mailbox": {
+          "mean_ms": 12.0
+        },
+        "draw": {
+          "max_ms": 6,
+          "mean_ms": 4.666667
+        },
+        "process": {
+          "max_ms": 3,
+          "mean_ms": 1.333333
+        }
+      },
+      "material_detected_frames": 3,
+      "recognition_fps": 2.638522,
+      "preview_frames": 3,
+      "recognition_frames": 3,
+      "preview_fps": 2.638522,
+      "instance_frames": {
+        "0": 3
+      },
+      "instance_frames_semantics": "INDEPENDENT_PAPER_TARGET_COUNT",
+      "ring_proposal_frames": 0,
+      "alignment_raw_frames": 0,
+      "accepted_frames_semantics": "REVIEWED_RING_IDENTITY_PX_ONLY",
+      "material_by_color": {
+        "2": {
+          "top_instances": 3,
+          "candidate_frames": 3,
+          "candidate_instances": 3,
+          "top_frames": 3
+        },
+        "5": {
+          "top_instances": 3,
+          "candidate_frames": 3,
+          "candidate_instances": 34,
+          "top_frames": 3
+        },
+        "1": {
+          "top_instances": 0,
+          "candidate_frames": 0,
+          "candidate_instances": 0,
+          "top_frames": 0
+        },
+        "6": {
+          "top_instances": 0,
+          "candidate_frames": 0,
+          "candidate_instances": 0,
+          "top_frames": 0
+        },
+        "3": {
+          "top_instances": 0,
+          "candidate_frames": 0,
+          "candidate_instances": 0,
+          "top_frames": 0
+        },
+        "4": {
+          "top_instances": 0,
+          "candidate_frames": 3,
+          "candidate_instances": 3,
+          "top_frames": 0
+        }
+      },
+      "accepted_frames": 0,
+      "elapsed_ms": 1137,
+      "frames": 3,
+      "alignment_measured_frames": 0,
+      "material_color_candidate_frames": 3
+    },
+    {
+      "capture_fps": 2.643172,
+      "stages": {
+        "view": {
+          "max_ms": 349,
+          "mean_ms": 288.6667
+        },
+        "gc": {
+          "max_ms": 67,
+          "mean_ms": 32.0
+        },
+        "capture": {
+          "max_ms": 1,
+          "mean_ms": 1.0
+        },
+        "compress": {
+          "max_ms": 25,
+          "mean_ms": 23.33333
+        },
+        "mailbox": {
+          "mean_ms": 26.33333
+        },
+        "draw": {
+          "max_ms": 6,
+          "mean_ms": 5.0
+        },
+        "process": {
+          "max_ms": 1,
+          "mean_ms": 0.6666667
+        }
+      },
+      "material_detected_frames": 3,
+      "recognition_fps": 2.643172,
+      "preview_frames": 3,
+      "recognition_frames": 3,
+      "preview_fps": 2.643172,
+      "instance_frames": {
+        "0": 3
+      },
+      "instance_frames_semantics": "INDEPENDENT_PAPER_TARGET_COUNT",
+      "ring_proposal_frames": 0,
+      "alignment_raw_frames": 0,
+      "accepted_frames_semantics": "REVIEWED_RING_IDENTITY_PX_ONLY",
+      "material_by_color": {
+        "2": {
+          "top_instances": 3,
+          "candidate_frames": 3,
+          "candidate_instances": 3,
+          "top_frames": 3
+        },
+        "5": {
+          "top_instances": 3,
+          "candidate_frames": 3,
+          "candidate_instances": 35,
+          "top_frames": 3
+        },
+        "1": {
+          "top_instances": 0,
+          "candidate_frames": 0,
+          "candidate_instances": 0,
+          "top_frames": 0
+        },
+        "6": {
+          "top_instances": 0,
+          "candidate_frames": 0,
+          "candidate_instances": 0,
+          "top_frames": 0
+        },
+        "3": {
+          "top_instances": 0,
+          "candidate_frames": 0,
+          "candidate_instances": 0,
+          "top_frames": 0
+        },
+        "4": {
+          "top_instances": 0,
+          "candidate_frames": 3,
+          "candidate_instances": 3,
+          "top_frames": 0
+        }
+      },
+      "accepted_frames": 0,
+      "elapsed_ms": 1135,
+      "frames": 3,
+      "alignment_measured_frames": 0,
+      "material_color_candidate_frames": 3
+    },
+    {
+      "capture_fps": 2.529511,
+      "stages": {
+        "view": {
+          "max_ms": 363,
+          "mean_ms": 321.0
+        },
+        "gc": {
+          "max_ms": 5,
+          "mean_ms": 3.0
+        },
+        "capture": {
+          "max_ms": 1,
+          "mean_ms": 1.0
+        },
+        "compress": {
+          "max_ms": 26,
+          "mean_ms": 23.33333
+        },
+        "mailbox": {
+          "mean_ms": 19.0
+        },
+        "draw": {
+          "max_ms": 68,
+          "mean_ms": 25.66667
+        },
+        "process": {
+          "max_ms": 1,
+          "mean_ms": 1.0
+        }
+      },
+      "material_detected_frames": 3,
+      "recognition_fps": 2.529511,
+      "preview_frames": 3,
+      "recognition_frames": 3,
+      "preview_fps": 2.529511,
+      "instance_frames": {
+        "0": 3
+      },
+      "instance_frames_semantics": "INDEPENDENT_PAPER_TARGET_COUNT",
+      "ring_proposal_frames": 0,
+      "alignment_raw_frames": 0,
+      "accepted_frames_semantics": "REVIEWED_RING_IDENTITY_PX_ONLY",
+      "material_by_color": {
+        "2": {
+          "top_instances": 3,
+          "candidate_frames": 3,
+          "candidate_instances": 3,
+          "top_frames": 3
+        },
+        "5": {
+          "top_instances": 3,
+          "candidate_frames": 3,
+          "candidate_instances": 36,
+          "top_frames": 3
+        },
+        "1": {
+          "top_instances": 0,
+          "candidate_frames": 0,
+          "candidate_instances": 0,
+          "top_frames": 0
+        },
+        "6": {
+          "top_instances": 0,
+          "candidate_frames": 0,
+          "candidate_instances": 0,
+          "top_frames": 0
+        },
+        "3": {
+          "top_instances": 0,
+          "candidate_frames": 0,
+          "candidate_instances": 0,
+          "top_frames": 0
+        },
+        "4": {
+          "top_instances": 0,
+          "candidate_frames": 3,
+          "candidate_instances": 3,
+          "top_frames": 0
+        }
+      },
+      "accepted_frames": 0,
+      "elapsed_ms": 1186,
+      "frames": 3,
+      "alignment_measured_frames": 0,
+      "material_color_candidate_frames": 3
+    }
+  ]
+}

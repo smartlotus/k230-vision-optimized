@@ -1,0 +1,11 @@
+{
+  "source": "User-supplied phone photos in original workspace things/",
+  "annotation_method": "Coarse central color patches selected after visual inspection; normalized coordinates, not segmentation ground truth",
+  "missing_colors": [5],
+  "colors": {"1": "RED", "2": "YELLOW", "3": "BLUE", "4": "GREEN", "6": "LIGHT_BLUE"},
+  "samples": [
+    {"file": "IMG_20261031_210411.jpg", "patches": {"3": [0.08, 0.30], "6": [0.27, 0.33], "4": [0.49, 0.32], "2": [0.68, 0.30], "1": [0.88, 0.38]}},
+    {"file": "IMG_20261031_210419.jpg", "patches": {"3": [0.08, 0.30], "6": [0.27, 0.33], "4": [0.49, 0.32], "2": [0.68, 0.30], "1": [0.88, 0.38]}},
+    {"file": "IMG_20261031_210432.jpg", "patches": {"3": [0.10, 0.60], "6": [0.30, 0.60], "4": [0.49, 0.60], "2": [0.69, 0.60], "1": [0.91, 0.60]}}
+  ]
+}
