@@ -1,0 +1,25 @@
+{
+  "verified_remote_commit": "05cac57cec9dfa6f1e9020cb0bd8e1642fcbd0a3",
+  "repository": "https://github.com/smartlotus/k230-vision-optimized",
+  "is_private": true,
+  "default_branch": "main",
+  "remote_clone_completed": true,
+  "imported_files_verified": 332,
+  "imported_file_mismatches": [],
+  "host_test_sources_reverified": 197,
+  "host_test_source_mismatches": [],
+  "host_tests": {
+    "run": 469,
+    "skipped": 0,
+    "evidence": "docs/validation/summary.json",
+    "reexecuted_during_readback": false
+  },
+  "manifest_text_normalization": {
+    "precommit_crlf_sha256": "2fbb2ced2d47086cacffcc5d9a7c534dae13a7b956c9c7eb488b5cd47c2a4f50",
+    "committed_lf_sha256": "7489b6146d6104b069da75b87f44b7f47223e6eb3c321769f3908f090e9fb8b2",
+    "only_crlf_to_lf_verified": true
+  },
+  "ops_task_state": "integrated",
+  "board_operations": 0,
+  "native_25fps_verified": false
+}
