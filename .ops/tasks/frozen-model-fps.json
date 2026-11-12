@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "frozen-model-fps",
+  "title": "Benchmark original trained pilot on frozen real images and compare native KPU throughput",
+  "paths": [
+    "k230_transport_mvp/tools/frozen_model_fps.py",
+    "k230_transport_mvp/tools/prepare_frozen_model_fps.py",
+    "k230_transport_mvp/tests/test_frozen_model_fps.py",
+    "docs/validation/frozen-model-fps-20261112"
+  ],
+  "lane": "serial",
+  "resources": [
+    "COM3"
+  ],
+  "depends": [],
+  "acceptance": [
+    "Existing checkpoint and ONNX SHA proven; no retraining; train-only quantization calibration; frozen-image board inference measured with separated pipeline costs; no production save/UART/motion"
+  ],
+  "branch": "ops/frozen-model-fps",
+  "state": "blocked",
+  "claimed": true,
+  "agent": "codex",
+  "session": "frozen-model-fps-20261112-a",
+  "revision": 3,
+  "handoff": ".ops/handoffs/frozen-model-fps/20261112T141309-c274c9f5.json",
+  "updated_at": "2026-11-12T14:13:11+00:00"
+}

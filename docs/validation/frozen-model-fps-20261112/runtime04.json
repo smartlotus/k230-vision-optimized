@@ -1,0 +1,10 @@
+{
+  "source_sha256": "4224c5bec6b2670ffffe820d0971401548b9f9795fae06c31730cf6cdb37037a",
+  "runner_sha256": "1bd547cae143bd42327376cdba1ddf0fdd218fcb3a8001972fe76b1c1e1111bc",
+  "variant": "prepared-model-inputs",
+  "iterations_per_image": 20,
+  "images": 4,
+  "start_response": {
+    "status": "ok"
+  }
+}

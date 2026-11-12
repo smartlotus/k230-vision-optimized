@@ -1,0 +1,8 @@
+{
+  "source_sha256": "ac9b93ac8dc483571290169d2d8aeb65bf6de8a4bc97e7245d377afa448a4aff",
+  "runner_sha256": "472af0a399c23ca6e2fbd090f402ec44351d9ebde0c1469eea8b5a44e69685b5",
+  "iterations_per_image": 10,
+  "start_response": {
+    "status": "ok"
+  }
+}

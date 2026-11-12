@@ -1,0 +1,12 @@
+
+MPY: soft reboot
+CanMV v1.8-36-gae2f20d(based on Micropython e00a144) on 2026-08-16; k230_canmv_lckfb with K230
+Type "help()" for more information.
+>>> 
+>>> 
+FROZEN_MODEL_START:{"original_optimizer_updates": 4, "model_sha256": "59fd397f4e60488d98f208bdd2283f847800fda701326b6e0d4f520895f95106", "scope": "FROZEN_REAL_TRAIN_IMAGES_BOARD_THROUGHPUT"}
+FROZEN_CPU_IMAGE:{"image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3", "paper_targets": 0, "scene_complete": true, "timing": {"p95_ms": 277.707, "iterations": 2, "min_ms": 233.322, "fps": 3.913672, "max_ms": 277.707, "mean_ms": 255.5145}, "materials": 3}
+FROZEN_CPU_IMAGE:{"image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494", "paper_targets": 0, "scene_complete": true, "timing": {"p95_ms": 219.504, "iterations": 2, "min_ms": 217.12, "fps": 4.5806, "max_ms": 219.504, "mean_ms": 218.312}, "materials": 3}
+FROZEN_CPU_IMAGE:{"image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17", "paper_targets": 0, "scene_complete": true, "timing": {"p95_ms": 215.493, "iterations": 2, "min_ms": 215.075, "fps": 4.645027, "max_ms": 215.493, "mean_ms": 215.284}, "materials": 3}
+FROZEN_CPU_IMAGE:{"image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d", "paper_targets": 0, "scene_complete": true, "timing": {"p95_ms": 212.468, "iterations": 2, "min_ms": 211.445, "fps": 4.717949, "max_ms": 212.468, "mean_ms": 211.9565}, "materials": 3}
+

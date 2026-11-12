@@ -1,0 +1,187 @@
+{
+  "onnx_sha256": "df9c639010e342ff54d5189678c096b9f10e7d3337734b5ad4b081e3bf0e3fdb",
+  "training_provenance": {
+    "material_training_receipt_sha256": "66dcf42cf908387d765422684c083001b7144eaafef730094058348c8820bfbc",
+    "material_dataset_manifest_sha256": "045dcff3aebda265d79159823213af58826445e36832a582b269ba78fff10f7b",
+    "material_trained_checkpoint_sha256": "6de5c9b6a6b5e11bda653667721b07a04c3cfcda4a005c5cca6eb614b213f363",
+    "export_receipt_sha256": "3841c8016af749483a8362711e56e2fd092870fa92d29e053e183c762a2dcc62",
+    "real_optimizer_updates": 4
+  },
+  "images": [
+    {
+      "image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "split": "train",
+      "source": "data/ai_pilot/material-series-20261109-g/capture-03.rgb565",
+      "native_file": "frame0.rgb565",
+      "native_sha256": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "input_file": "input0.bin",
+      "input_sha256": "5f80c0cd1c515d86b79c082aeb0bc044541ba1fd596f40e1bec2d8d129a62761",
+      "input_contract": {
+        "source_wh": [
+          640,
+          360
+        ],
+        "model_wh": [
+          224,
+          224
+        ],
+        "resized_wh": [
+          224,
+          126
+        ],
+        "pad_tblr": [
+          49,
+          49,
+          0,
+          0
+        ],
+        "pad_rgb": [
+          114,
+          114,
+          114
+        ],
+        "gain": 0.35,
+        "input_dtype": "uint8",
+        "input_layout": "NCHW",
+        "color_order": "RGB",
+        "normalization": "EXACTLY_ONCE_IN_COMPILED_MODEL_TO_FLOAT_0_1",
+        "positions": 1029
+      },
+      "rgb_file": "frame0.rgb888p",
+      "rgb_sha256": "50be5c5dc12b9e332072c371987e18dcb4c9fca86f595458816b20934465118e"
+    },
+    {
+      "image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "split": "train",
+      "source": "data/ai_pilot/material-series-20261109-g/capture-01.rgb565",
+      "native_file": "frame1.rgb565",
+      "native_sha256": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "input_file": "input1.bin",
+      "input_sha256": "46f1e078d055c0dfa534548c623d7dae3a98bf13a3efc7a1092a5b54d73dca27",
+      "input_contract": {
+        "source_wh": [
+          640,
+          360
+        ],
+        "model_wh": [
+          224,
+          224
+        ],
+        "resized_wh": [
+          224,
+          126
+        ],
+        "pad_tblr": [
+          49,
+          49,
+          0,
+          0
+        ],
+        "pad_rgb": [
+          114,
+          114,
+          114
+        ],
+        "gain": 0.35,
+        "input_dtype": "uint8",
+        "input_layout": "NCHW",
+        "color_order": "RGB",
+        "normalization": "EXACTLY_ONCE_IN_COMPILED_MODEL_TO_FLOAT_0_1",
+        "positions": 1029
+      },
+      "rgb_file": "frame1.rgb888p",
+      "rgb_sha256": "8626b0633a31837a0aeb0184b0b7a0a2c82426df30017bd3dd450a65e8cdcfaf"
+    },
+    {
+      "image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "split": "train",
+      "source": "data/ai_pilot/material-series-20261109-g/capture-04.rgb565",
+      "native_file": "frame2.rgb565",
+      "native_sha256": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "input_file": "input2.bin",
+      "input_sha256": "e362d72ac690513e5533f21673a1bab4a65c9fb9d300035f7cf657f8fbcaa5f9",
+      "input_contract": {
+        "source_wh": [
+          640,
+          360
+        ],
+        "model_wh": [
+          224,
+          224
+        ],
+        "resized_wh": [
+          224,
+          126
+        ],
+        "pad_tblr": [
+          49,
+          49,
+          0,
+          0
+        ],
+        "pad_rgb": [
+          114,
+          114,
+          114
+        ],
+        "gain": 0.35,
+        "input_dtype": "uint8",
+        "input_layout": "NCHW",
+        "color_order": "RGB",
+        "normalization": "EXACTLY_ONCE_IN_COMPILED_MODEL_TO_FLOAT_0_1",
+        "positions": 1029
+      },
+      "rgb_file": "frame2.rgb888p",
+      "rgb_sha256": "4ed2b553e14fbc8add09cb1c54ad2229351ac3277f637bac015c104ca7f75cc3"
+    },
+    {
+      "image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "split": "train",
+      "source": "data/ai_pilot/material-series-20261109-g/capture-02.rgb565",
+      "native_file": "frame3.rgb565",
+      "native_sha256": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "input_file": "input3.bin",
+      "input_sha256": "18ee2fa413548dbadbacf797e5022a61ea1d0b6160979393488d6c115aeb08ce",
+      "input_contract": {
+        "source_wh": [
+          640,
+          360
+        ],
+        "model_wh": [
+          224,
+          224
+        ],
+        "resized_wh": [
+          224,
+          126
+        ],
+        "pad_tblr": [
+          49,
+          49,
+          0,
+          0
+        ],
+        "pad_rgb": [
+          114,
+          114,
+          114
+        ],
+        "gain": 0.35,
+        "input_dtype": "uint8",
+        "input_layout": "NCHW",
+        "color_order": "RGB",
+        "normalization": "EXACTLY_ONCE_IN_COMPILED_MODEL_TO_FLOAT_0_1",
+        "positions": 1029
+      },
+      "rgb_file": "frame3.rgb888p",
+      "rgb_sha256": "61d26c8f876041ad2cfa4dcd3c3e59a14bd774ca3862cfa5a36359b6e3036f36"
+    }
+  ],
+  "calibration_train_images": 4,
+  "held_out_test_consumed": false,
+  "retrained": false,
+  "task_accuracy_verified": false,
+  "scope": "FROZEN_REAL_TRAIN_IMAGES_SPEED_ONLY",
+  "kmodel_sha256": "59fd397f4e60488d98f208bdd2283f847800fda701326b6e0d4f520895f95106",
+  "kmodel_file": "material.kmodel"
+}

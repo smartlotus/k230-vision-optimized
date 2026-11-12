@@ -1,0 +1,69 @@
+{
+  "scope": "Existing four-update material pilot on four frozen real train images",
+  "checkpoint_sha256": "6de5c9b6a6b5e11bda653667721b07a04c3cfcda4a005c5cca6eb614b213f363",
+  "onnx_sha256": "df9c639010e342ff54d5189678c096b9f10e7d3337734b5ad4b081e3bf0e3fdb",
+  "kmodel_sha256": "59fd397f4e60488d98f208bdd2283f847800fda701326b6e0d4f520895f95106",
+  "original_optimizer_updates": 4,
+  "new_optimizer_updates": 0,
+  "kpu_only": {
+    "images": 4,
+    "iterations_per_image": 20,
+    "mean_fps_by_image": [
+      95.25804,
+      95.43214,
+      95.34479,
+      95.65488
+    ],
+    "mean_ms_by_image": [
+      10.4978,
+      10.47865,
+      10.48825,
+      10.45425
+    ],
+    "overall_mean_fps": 95.4222374367679,
+    "output_copy_ms": "0.024-0.041",
+    "camera_included": false,
+    "ai2d_included": false,
+    "postprocess_included": false,
+    "display_included": false,
+    "accuracy_verified": false,
+    "measured_iterations": 80,
+    "overall_mean_ms": 10.479737499999995
+  },
+  "cpu_full_geometry_reference": {
+    "image_fps_range": "3.91-4.72",
+    "three_materials_detected_each": true,
+    "paper_targets": 0,
+    "accuracy_verified": false,
+    "measured_iterations_per_image": 2
+  },
+  "ai2d_full_chain": {
+    "status": "UNMEASURED_AFTER_REPEATED_COMMUNICATION_FAILURES",
+    "stage": "Attempts ended after input-read or model-load markers before complete inference/postprocess receipts.",
+    "retry": false,
+    "root_cause": "UNKNOWN; earlier destination-readback explanation was not established by isolation",
+    "no_automatic_replay": true
+  },
+  "board": {
+    "port": "COM3",
+    "firmware": "v1.8-36",
+    "uart_enabled": false,
+    "motors_enabled": false,
+    "production_profiles_saved": false
+  },
+  "comparison_is_same_output_task": false,
+  "comparison_note": "CPU path measures ellipse geometry plus paper; model predicts visible-top bbox proposals only.",
+  "final_board_state": {
+    "connected_cached": true,
+    "ready": false,
+    "current_running_script": "UNKNOWN",
+    "latest_successful_kpu_trial_finished": true,
+    "no_more_launches_performed_after_final_unready_state": true
+  },
+  "original_model_identity_verified": true,
+  "test_sources_sha256": {
+    "k230_transport_mvp/tools/frozen_model_fps.py": "ac9b93ac8dc483571290169d2d8aeb65bf6de8a4bc97e7245d377afa448a4aff",
+    "k230_transport_mvp/tools/prepare_frozen_model_fps.py": "0984d4f16021738842bb0b7b2f212f35151c225ae67de3e004fff39ca2323217",
+    "k230_transport_mvp/tests/test_frozen_model_fps.py": "2294e4382b5675d752f9c8c88c87fe0bb8f7890a84f27ac0fee8a46aa856e86a"
+  }
+}

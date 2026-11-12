@@ -1,0 +1,224 @@
+{
+  "root": "/sdcard/kmfps1112",
+  "status": "VERIFIED_FROZEN_BUNDLE",
+  "parts": [
+    {
+      "path": "/sdcard/kmfps1112/material.kmodel.p0",
+      "sha256": "57b21ddf5e7c261c91be243afdaba21d83604e3eecbecf8207c43f2a585c749d",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/material.kmodel.p1",
+      "sha256": "4d49d1377bf0eeca38c5b56736601dbf5518f3919a279f7da383647855fc092f",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/material.kmodel.p2",
+      "sha256": "2194b09826dd5a19fd97c624c482224f4407c795b1f68873c78dd83fc5d3c65d",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/material.kmodel.p3",
+      "sha256": "064e59913235e2d387887fb856f1999f51a239192e6a09f39cdda72ff9501c99",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/material.kmodel.p4",
+      "sha256": "04139081b057c3c9c0e9dfdbeaa202c4fc64e145ec24fda3b87d2298608724b4",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/material.kmodel.p5",
+      "sha256": "31aee15771c79d7b8e422391c749e0e7dda436dcf7d59b504fe89da60813b2ef",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/material.kmodel.p6",
+      "sha256": "6a0c20fed57e0be40aee8d73c1bd06e381c8db5cde42b82f6362eea99c413179",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/material.kmodel.p7",
+      "sha256": "02615865602bd37695ec99c189115a6a30007b0d444d9f80f8522e9c19daf163",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/material.kmodel.p8",
+      "sha256": "38f49185bda4a50ad33676dc8eb1059fd822550b2d53cbf790ff61e9653ddea2",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/material.kmodel.p9",
+      "sha256": "7b66fbf9237e8d5d793c198dec64a5a436bb64a33f92967e6a72211ec8f3abb4",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/material.kmodel.p10",
+      "sha256": "1c7f29f3d6089fe04d4f425c7f177736562fa62a5ff7787e408011d8807ce6ec",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/material.kmodel.p11",
+      "sha256": "d2f4fff123b0e97c04382bc0f4d8ada55da96e328e416ddf3e02e6744b0c04cf",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/material.kmodel.p12",
+      "sha256": "5d0679eaf19ee76c2ccaaa4e238578064c866cdca207a4d15c18ae80a1f8ffa4",
+      "bytes": 138904
+    },
+    {
+      "path": "/sdcard/kmfps1112/identity.json.p0",
+      "sha256": "72a6d9eada206259c832541f3086bc98f73d5a528ea95992779071095aac0a17",
+      "bytes": 5786
+    },
+    {
+      "path": "/sdcard/kmfps1112/frozen_model_fps.py.p0",
+      "sha256": "81d61950f63e3ab034ee363f15db2030c2807c120f08dd1e7a271f6f7646a0e3",
+      "bytes": 8087
+    },
+    {
+      "path": "/sdcard/kmfps1112/protected-state.json.p0",
+      "sha256": "09d9dd49631edc78c100582496351630aac638f4ff585cdea50574fac065cc99",
+      "bytes": 19451
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame0.rgb565.p0",
+      "sha256": "54ced77d5eaa679f08cc544e2b748b42f794654466bdb9bc18e0349036ea155a",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame0.rgb565.p1",
+      "sha256": "de4aad1988151874843569f5be684325aed576199eee9a1bb72998209043b5c2",
+      "bytes": 198656
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame0.rgb888p.p0",
+      "sha256": "323d40abdf321ffac03af6955054da23b3c0ffc4c49f649053efda14b32d4087",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame0.rgb888p.p1",
+      "sha256": "513a214bf906279992f80efdba26ea9c15292ea407911073ba048291bb325e8e",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame0.rgb888p.p2",
+      "sha256": "20d523298da6db728432508689cfc733857a2b5282a0b08b8afb6d34fb3f46f3",
+      "bytes": 166912
+    },
+    {
+      "path": "/sdcard/kmfps1112/input0.bin.p0",
+      "sha256": "5f80c0cd1c515d86b79c082aeb0bc044541ba1fd596f40e1bec2d8d129a62761",
+      "bytes": 150528
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame1.rgb565.p0",
+      "sha256": "7547205b90d5a49d499bb5e8daa6b502798b31d04942b7506cc8b05551a63383",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame1.rgb565.p1",
+      "sha256": "073df39bdc28ad021b45556e221cd786145b5f2af240568f9da8f347ca5cc6d9",
+      "bytes": 198656
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame1.rgb888p.p0",
+      "sha256": "450f2482ae9e76b1ef39476a5d24aa6e42ada4ef608d140b54a82fd3cb189f99",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame1.rgb888p.p1",
+      "sha256": "0ed2d088be007b3b151a51adc4411e32b90bf8a156af8c725905511ff5f448b2",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame1.rgb888p.p2",
+      "sha256": "9662e2b052f73222467b0814d8009652cf9f72f8a9252641d9dc33d40b3bfa46",
+      "bytes": 166912
+    },
+    {
+      "path": "/sdcard/kmfps1112/input1.bin.p0",
+      "sha256": "46f1e078d055c0dfa534548c623d7dae3a98bf13a3efc7a1092a5b54d73dca27",
+      "bytes": 150528
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame2.rgb565.p0",
+      "sha256": "265e83c87e1e7453b6d79085f35fa086bab9f759a237f624070420508c194a0e",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame2.rgb565.p1",
+      "sha256": "1c1a8207567d43c12da7c12296a6589054fe7d63f970b11539501454fc37d2f3",
+      "bytes": 198656
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame2.rgb888p.p0",
+      "sha256": "dce90942c855451365c06f92e41a25bcfc66c2eb6c3fdf25aa7c21b4429f4b11",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame2.rgb888p.p1",
+      "sha256": "f1204bbd626b18a2a2ffaef425dc4ebdf3ddad42621072b71883c7f17f3b4caa",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame2.rgb888p.p2",
+      "sha256": "31ed25a49cdf93f0ecc86702af06a45676f27b51f7c65e728149aade07dbd1f2",
+      "bytes": 166912
+    },
+    {
+      "path": "/sdcard/kmfps1112/input2.bin.p0",
+      "sha256": "e362d72ac690513e5533f21673a1bab4a65c9fb9d300035f7cf657f8fbcaa5f9",
+      "bytes": 150528
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame3.rgb565.p0",
+      "sha256": "24aa743b51c5ea73c1ac137dc9b04057679144df35a8952641339e4dd6092799",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame3.rgb565.p1",
+      "sha256": "40f889fcddaaaf92254f38859dd64f1c991b1350754e0c35b511b03ce61cb299",
+      "bytes": 198656
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame3.rgb888p.p0",
+      "sha256": "b55d83a3b7f5b2520865bfcf9e0002e9e7f3f6d62e4044da692f10ceef88b361",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame3.rgb888p.p1",
+      "sha256": "25bf3da1bd8df143d6d577e6d97cd354d93c40b764bd1a754ea9e86f6ee200fa",
+      "bytes": 262144
+    },
+    {
+      "path": "/sdcard/kmfps1112/frame3.rgb888p.p2",
+      "sha256": "32bf2f8211973c15549404c6d2688fa0f2d3b8161e31e82ef3401ee491e9af5d",
+      "bytes": 166912
+    },
+    {
+      "path": "/sdcard/kmfps1112/input3.bin.p0",
+      "sha256": "18ee2fa413548dbadbacf797e5022a61ea1d0b6160979393488d6c115aeb08ce",
+      "bytes": 150528
+    }
+  ],
+  "files": {
+    "/sdcard/kmfps1112/frame2.rgb888p": "4ed2b553e14fbc8add09cb1c54ad2229351ac3277f637bac015c104ca7f75cc3",
+    "/sdcard/kmfps1112/protected-state.json": "09d9dd49631edc78c100582496351630aac638f4ff585cdea50574fac065cc99",
+    "/sdcard/kmfps1112/frame2.rgb565": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+    "/sdcard/kmfps1112/frame3.rgb888p": "61d26c8f876041ad2cfa4dcd3c3e59a14bd774ca3862cfa5a36359b6e3036f36",
+    "/sdcard/kmfps1112/input3.bin": "18ee2fa413548dbadbacf797e5022a61ea1d0b6160979393488d6c115aeb08ce",
+    "/sdcard/kmfps1112/input1.bin": "46f1e078d055c0dfa534548c623d7dae3a98bf13a3efc7a1092a5b54d73dca27",
+    "/sdcard/kmfps1112/frame1.rgb888p": "8626b0633a31837a0aeb0184b0b7a0a2c82426df30017bd3dd450a65e8cdcfaf",
+    "/sdcard/kmfps1112/material.kmodel": "59fd397f4e60488d98f208bdd2283f847800fda701326b6e0d4f520895f95106",
+    "/sdcard/kmfps1112/input0.bin": "5f80c0cd1c515d86b79c082aeb0bc044541ba1fd596f40e1bec2d8d129a62761",
+    "/sdcard/kmfps1112/frame3.rgb565": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+    "/sdcard/kmfps1112/input2.bin": "e362d72ac690513e5533f21673a1bab4a65c9fb9d300035f7cf657f8fbcaa5f9",
+    "/sdcard/kmfps1112/frame1.rgb565": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+    "/sdcard/kmfps1112/frame0.rgb565": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+    "/sdcard/kmfps1112/identity.json": "72a6d9eada206259c832541f3086bc98f73d5a528ea95992779071095aac0a17",
+    "/sdcard/kmfps1112/frame0.rgb888p": "50be5c5dc12b9e332072c371987e18dcb4c9fca86f595458816b20934465118e",
+    "/sdcard/kmfps1112/frozen_model_fps.py": "81d61950f63e3ab034ee363f15db2030c2807c120f08dd1e7a271f6f7646a0e3"
+  }
+}

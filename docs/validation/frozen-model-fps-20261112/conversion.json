@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "status": "COMPILED_NOT_TASK_ACCEPTED",
+  "dataset_manifest_sha256": "045dcff3aebda265d79159823213af58826445e36832a582b269ba78fff10f7b",
+  "model": {
+    "model_sha256": "df9c639010e342ff54d5189678c096b9f10e7d3337734b5ad4b081e3bf0e3fdb",
+    "bytes": 12091147,
+    "artifact_kind": "TRAINED_MATERIAL_VISIBLE_TOP",
+    "input_name": "images",
+    "output_name": "output0",
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "output_shape": [
+      1,
+      5,
+      1029
+    ],
+    "opset": 12,
+    "input_contract": {
+      "source_wh": [
+        640,
+        360
+      ],
+      "model_wh": [
+        224,
+        224
+      ],
+      "resized_wh": [
+        224,
+        126
+      ],
+      "pad_tblr": [
+        49,
+        49,
+        0,
+        0
+      ],
+      "pad_rgb": [
+        114,
+        114,
+        114
+      ],
+      "gain": 0.35,
+      "input_dtype": "uint8",
+      "input_layout": "NCHW",
+      "color_order": "RGB",
+      "normalization": "EXACTLY_ONCE_IN_COMPILED_MODEL_TO_FLOAT_0_1",
+      "positions": 1029
+    },
+    "metadata": {
+      "material_artifact_kind": "TRAINED_MATERIAL_VISIBLE_TOP",
+      "material_classes": "[\"visible_top\"]",
+      "material_output_encoding": "DECODED_CXCYWH_AND_SIGMOID",
+      "material_onnx_normalization": "EXTERNAL_FLOAT32_DIV255_ONCE",
+      "material_input_contract": "{\"color_order\":\"RGB\",\"gain\":0.35,\"input_dtype\":\"uint8\",\"input_layout\":\"NCHW\",\"model_wh\":[224,224],\"normalization\":\"EXACTLY_ONCE_IN_COMPILED_MODEL_TO_FLOAT_0_1\",\"pad_rgb\":[114,114,114],\"pad_tblr\":[49,49,0,0],\"positions\":1029,\"resized_wh\":[224,126],\"source_wh\":[640,360]}",
+      "material_training_receipt_sha256": "66dcf42cf908387d765422684c083001b7144eaafef730094058348c8820bfbc",
+      "material_dataset_manifest_sha256": "045dcff3aebda265d79159823213af58826445e36832a582b269ba78fff10f7b",
+      "material_trained_checkpoint_sha256": "6de5c9b6a6b5e11bda653667721b07a04c3cfcda4a005c5cca6eb614b213f363"
+    },
+    "node_count": 259,
+    "task_accuracy_verified": false,
+    "native_ai2d_equivalence_verified": false
+  },
+  "compiler_options": {
+    "target": "k230",
+    "preprocess": true,
+    "swapRB": false,
+    "input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "input_type": "uint8",
+    "input_range": [
+      0,
+      1
+    ],
+    "mean": [
+      0,
+      0,
+      0
+    ],
+    "std": [
+      1,
+      1,
+      1
+    ],
+    "input_layout": "NCHW",
+    "output_layout": "",
+    "dump_asm": false,
+    "dump_ir": false,
+    "shape_bucket_enable": false
+  },
+  "required_nncase": "2.11.0",
+  "required_nncase_kpu": "2.11.0",
+  "samples_count": 4,
+  "calibration_manifest_sha256": "ec68271d6391d5792607184211e69ac001f9480141cd15aa6b027bec96126a72",
+  "calibration_image_ids": [
+    "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+    "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+    "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+    "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d"
+  ],
+  "calibration_tensor_sha256": [
+    "5f80c0cd1c515d86b79c082aeb0bc044541ba1fd596f40e1bec2d8d129a62761",
+    "46f1e078d055c0dfa534548c623d7dae3a98bf13a3efc7a1092a5b54d73dca27",
+    "e362d72ac690513e5533f21673a1bab4a65c9fb9d300035f7cf657f8fbcaa5f9",
+    "18ee2fa413548dbadbacf797e5022a61ea1d0b6160979393488d6c115aeb08ce"
+  ],
+  "quantization": {
+    "calibrate_method": "NoClip",
+    "quant_type": "uint8",
+    "w_quant_type": "uint8"
+  },
+  "compiler_executed": true,
+  "task_accuracy_verified": false,
+  "native_ai2d_equivalence_verified": false,
+  "training_provenance": {
+    "material_training_receipt_sha256": "66dcf42cf908387d765422684c083001b7144eaafef730094058348c8820bfbc",
+    "material_dataset_manifest_sha256": "045dcff3aebda265d79159823213af58826445e36832a582b269ba78fff10f7b",
+    "material_trained_checkpoint_sha256": "6de5c9b6a6b5e11bda653667721b07a04c3cfcda4a005c5cca6eb614b213f363",
+    "export_receipt_sha256": "3841c8016af749483a8362711e56e2fd092870fa92d29e053e183c762a2dcc62",
+    "real_optimizer_updates": 4
+  },
+  "versions": {
+    "nncase": "2.11.0",
+    "nncase-kpu": "2.11.0"
+  },
+  "started_at": "2026-11-12T12:53:26.253388+00:00",
+  "stage": "GENERATED_AND_INPUTS_RECHECKED",
+  "compiler_compile_called": true,
+  "compile_completed": true,
+  "kmodel_bytes": 3284632,
+  "kmodel_sha256": "59fd397f4e60488d98f208bdd2283f847800fda701326b6e0d4f520895f95106",
+  "finished_at": "2026-11-12T12:53:53.859301+00:00"
+}

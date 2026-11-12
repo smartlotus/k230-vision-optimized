@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "task": "frozen-model-fps",
+  "created_at": "2026-11-12T14:13:09+00:00",
+  "agent": "codex",
+  "session": "frozen-model-fps-20261112-a",
+  "branch": "ops/frozen-model-fps",
+  "head": "6568b0041062b47da4f657ee7de39d7ac1a827a0",
+  "state": "blocked",
+  "files": {
+    "docs/validation/frozen-model-fps-20261112/README.md": "ab3fe0c178f17a69ee33a6c2c5f4097c295e89fd3b65a3376e45388f6628431e",
+    "docs/validation/frozen-model-fps-20261112/attempt01-partial.log": "c3d12a9940d009b4fae82775fbfc759ed2ae9b0f32f842f14315cffda2d99b35",
+    "docs/validation/frozen-model-fps-20261112/attempt02-partial.log": "03f1ee4efe5c129abff9d4fb043f05c0fcde2bea9a4fb112b87776255c556545",
+    "docs/validation/frozen-model-fps-20261112/attempt03-partial.log": "03f1ee4efe5c129abff9d4fb043f05c0fcde2bea9a4fb112b87776255c556545",
+    "docs/validation/frozen-model-fps-20261112/conversion.json": "78be4c322109f48c4843c1b8a42035f59de432daa5db1b887a90a2d73e6360e4",
+    "docs/validation/frozen-model-fps-20261112/deployment.json": "839c5d2101cf57d089e4d227581876930540ed41ab34d4fdec1f1763376721f1",
+    "docs/validation/frozen-model-fps-20261112/direct-ai2d-runner.py": "8b37170c49a778c7d77de951ec08e76fae55ce86f2972148ddb43357035172bb",
+    "docs/validation/frozen-model-fps-20261112/direct-ai2d.log": "58a6fd84c5b8fa65c6b07189f0614f5241b8a3afb4a6c9c3e1c47896d6f24ba8",
+    "docs/validation/frozen-model-fps-20261112/host-tests.json": "acaeb54355f9c342ecb1ce565694128d1ccf85cb381b4604ef0616036b7b8f5a",
+    "docs/validation/frozen-model-fps-20261112/host-tests.log": "7b99ceb0f147581764533d1fbc09017b83b0e6ebe679cbce03d525989467b1db",
+    "docs/validation/frozen-model-fps-20261112/host-verify-console.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/validation/frozen-model-fps-20261112/identity.json": "72a6d9eada206259c832541f3086bc98f73d5a528ea95992779071095aac0a17",
+    "docs/validation/frozen-model-fps-20261112/kpu-four-images-runner.py": "c13c943358a5581d728b186f801fb0c1bf8a322ed9cbcae0fc983169392f4674",
+    "docs/validation/frozen-model-fps-20261112/kpu-four-images.log": "f32152fa063c9f48e6d547f8ca11112a85c4c75d35c656851740ac3634634a83",
+    "docs/validation/frozen-model-fps-20261112/material.kmodel": "59fd397f4e60488d98f208bdd2283f847800fda701326b6e0d4f520895f95106",
+    "docs/validation/frozen-model-fps-20261112/minimal-post-runner.py": "a3bc9c6cb34accaee4eb89e83c29c75f745b1eac62339fb170852fbbd1145091",
+    "docs/validation/frozen-model-fps-20261112/mmz-ai2d-runner.py": "0f0f1f1063f11265d26bd9d092b5e3939bfe03a441623cd8332ffa4b459bef2f",
+    "docs/validation/frozen-model-fps-20261112/mmz-ai2d.log": "8816942ee2dbafb420b4828b084712c55abc0cdd23397425437b4992d0acfeed",
+    "docs/validation/frozen-model-fps-20261112/module02.json": "a51ac3c128e825d17e0c39fd98448804e555a56b78db45eb478d8a0c8cec67ac",
+    "docs/validation/frozen-model-fps-20261112/module03.json": "9e06e5095d53818b3f5bda3717fee14b3e6e878a4a8b1b909cad9aad4313a56b",
+    "docs/validation/frozen-model-fps-20261112/prepared-postprocess-partial.log": "2aa2198539607b2a0f470037c1285b9bba774a1e0684c5d89d2bd38d43108b57",
+    "docs/validation/frozen-model-fps-20261112/prepared-postprocess-start.json": "08aaa08b1e7b9b5c75363255fb468dc9afcce911974eef64393f34426f23ad5c",
+    "docs/validation/frozen-model-fps-20261112/pure-kpu-runner.py": "085cbbeebccbf6a3239be27856f554468243f1d04e5c7953693f9216c6077eab",
+    "docs/validation/frozen-model-fps-20261112/pure-kpu.log": "925b425a7138061b760b965d8fbc167ceea97b96c6a3572d9ee6e81217de0db1",
+    "docs/validation/frozen-model-fps-20261112/runner01.py": "6370ae5e7422f029d52874de877be63e294b8e7c954374454e274b6a53614dc4",
+    "docs/validation/frozen-model-fps-20261112/runtime04.json": "05e77f6c39e6300b1e6b435812eb1b53bf76bbecfad2184f28b204653bdc15fe",
+    "docs/validation/frozen-model-fps-20261112/simulator.json": "3b37a181b8fb590dbd52708312289433a720969afd2b1ed3f79b88ccbb65eb4b",
+    "docs/validation/frozen-model-fps-20261112/summary.json": "65cb2f33a65798ca51d28459ce40b0a8d88efaa8bac4286c3e429a0443951769",
+    "k230_transport_mvp/tests/test_frozen_model_fps.py": "2294e4382b5675d752f9c8c88c87fe0bb8f7890a84f27ac0fee8a46aa856e86a",
+    "k230_transport_mvp/tools/frozen_model_fps.py": "ac9b93ac8dc483571290169d2d8aeb65bf6de8a4bc97e7245d377afa448a4aff",
+    "k230_transport_mvp/tools/prepare_frozen_model_fps.py": "0984d4f16021738842bb0b7b2f212f35151c225ae67de3e004fff39ca2323217"
+  },
+  "git_blob_oids": {
+    "docs/validation/frozen-model-fps-20261112/README.md": "d296de1dfbadaaaf6cf850a4ebe384f2b569d7b4",
+    "docs/validation/frozen-model-fps-20261112/attempt01-partial.log": "0006ed3df7f6665a9470e486cd9ba9d7f9be1b02",
+    "docs/validation/frozen-model-fps-20261112/attempt02-partial.log": "cfcd819bcdffb86268158d02dde4d808b5ac1c1a",
+    "docs/validation/frozen-model-fps-20261112/attempt03-partial.log": "cfcd819bcdffb86268158d02dde4d808b5ac1c1a",
+    "docs/validation/frozen-model-fps-20261112/conversion.json": "47fc7d83ea805d7d8db4847d508cebe03c97c02c",
+    "docs/validation/frozen-model-fps-20261112/deployment.json": "c08ab0cb551ad849f6b41929477742f40f77837a",
+    "docs/validation/frozen-model-fps-20261112/direct-ai2d-runner.py": "6184cb68421606bca136c5fa298bbc02b5c5e122",
+    "docs/validation/frozen-model-fps-20261112/direct-ai2d.log": "05af0ba618c6e41d53fd84ad3cd165a5bdbe4c57",
+    "docs/validation/frozen-model-fps-20261112/host-tests.json": "7d316bf4ba64cba7550349f8cc279768c2a12114",
+    "docs/validation/frozen-model-fps-20261112/host-tests.log": "0a4f2737e2ee6fa6fff2792e4a77ceb54bc0dea0",
+    "docs/validation/frozen-model-fps-20261112/host-verify-console.log": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "docs/validation/frozen-model-fps-20261112/identity.json": "3e4731f09b41d8d2fdef77c5e369164ded3d7a74",
+    "docs/validation/frozen-model-fps-20261112/kpu-four-images-runner.py": "10057f9177b231871e66048d5e4761de29931ec9",
+    "docs/validation/frozen-model-fps-20261112/kpu-four-images.log": "0fbf66f1661fb6ab77026cb382826ed73142e9be",
+    "docs/validation/frozen-model-fps-20261112/material.kmodel": "7babce0aa0e52e7025370842adeaec944ab85b46",
+    "docs/validation/frozen-model-fps-20261112/minimal-post-runner.py": "afdf9ae5f4165672fe4fd5176321ff0ce7b3b740",
+    "docs/validation/frozen-model-fps-20261112/mmz-ai2d-runner.py": "ab69a2ecf1fb2fc9250b3514a32eadccd82f375e",
+    "docs/validation/frozen-model-fps-20261112/mmz-ai2d.log": "6f85eec1b493c3bf5b2d33db6970d0c35e3099cd",
+    "docs/validation/frozen-model-fps-20261112/module02.json": "e12e238e4c3600fb734dc533449028302d518def",
+    "docs/validation/frozen-model-fps-20261112/module03.json": "1669dabdbe5d47dbd75d1c15954ff8f13f62e922",
+    "docs/validation/frozen-model-fps-20261112/prepared-postprocess-partial.log": "eb5357290e4b60f3be8a26f86b916e55a3c2e53b",
+    "docs/validation/frozen-model-fps-20261112/prepared-postprocess-start.json": "99fbfbc9c51fc3c4b1dc4066c01f8484d5b86a1d",
+    "docs/validation/frozen-model-fps-20261112/pure-kpu-runner.py": "8717d0404d4f92e56da8fd429260899ef8c22b2e",
+    "docs/validation/frozen-model-fps-20261112/pure-kpu.log": "eca514e34999e6a348a922fc7dd0e9636551f2ef",
+    "docs/validation/frozen-model-fps-20261112/runner01.py": "ba4e925f222e516710990c66f9b273eb9b6dca9d",
+    "docs/validation/frozen-model-fps-20261112/runtime04.json": "62fd58ead0316802af92119df090fe05946668e0",
+    "docs/validation/frozen-model-fps-20261112/simulator.json": "8d37bd529ec89da60b07f05b773ff39a6c8d4696",
+    "docs/validation/frozen-model-fps-20261112/summary.json": "c1179c27ab183078ea26bad456c81e4914625a60",
+    "k230_transport_mvp/tests/test_frozen_model_fps.py": "b1dde383e306a04d71d8ec58b2827b70dbff3f9f",
+    "k230_transport_mvp/tools/frozen_model_fps.py": "d87e85929d0d02bfac7c5e4350b0eaab12636592",
+    "k230_transport_mvp/tools/prepare_frozen_model_fps.py": "e95a11840ba28d9a1b1572f86175fe547c317e4a"
+  },
+  "scope_git_blob_oids": {
+    "docs/validation/frozen-model-fps-20261112/README.md": "d296de1dfbadaaaf6cf850a4ebe384f2b569d7b4",
+    "docs/validation/frozen-model-fps-20261112/attempt01-partial.log": "0006ed3df7f6665a9470e486cd9ba9d7f9be1b02",
+    "docs/validation/frozen-model-fps-20261112/attempt02-partial.log": "cfcd819bcdffb86268158d02dde4d808b5ac1c1a",
+    "docs/validation/frozen-model-fps-20261112/attempt03-partial.log": "cfcd819bcdffb86268158d02dde4d808b5ac1c1a",
+    "docs/validation/frozen-model-fps-20261112/conversion.json": "47fc7d83ea805d7d8db4847d508cebe03c97c02c",
+    "docs/validation/frozen-model-fps-20261112/deployment.json": "c08ab0cb551ad849f6b41929477742f40f77837a",
+    "docs/validation/frozen-model-fps-20261112/direct-ai2d-runner.py": "6184cb68421606bca136c5fa298bbc02b5c5e122",
+    "docs/validation/frozen-model-fps-20261112/direct-ai2d.log": "05af0ba618c6e41d53fd84ad3cd165a5bdbe4c57",
+    "docs/validation/frozen-model-fps-20261112/host-tests.json": "7d316bf4ba64cba7550349f8cc279768c2a12114",
+    "docs/validation/frozen-model-fps-20261112/host-tests.log": "0a4f2737e2ee6fa6fff2792e4a77ceb54bc0dea0",
+    "docs/validation/frozen-model-fps-20261112/host-verify-console.log": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "docs/validation/frozen-model-fps-20261112/identity.json": "3e4731f09b41d8d2fdef77c5e369164ded3d7a74",
+    "docs/validation/frozen-model-fps-20261112/kpu-four-images-runner.py": "10057f9177b231871e66048d5e4761de29931ec9",
+    "docs/validation/frozen-model-fps-20261112/kpu-four-images.log": "0fbf66f1661fb6ab77026cb382826ed73142e9be",
+    "docs/validation/frozen-model-fps-20261112/material.kmodel": "7babce0aa0e52e7025370842adeaec944ab85b46",
+    "docs/validation/frozen-model-fps-20261112/minimal-post-runner.py": "afdf9ae5f4165672fe4fd5176321ff0ce7b3b740",
+    "docs/validation/frozen-model-fps-20261112/mmz-ai2d-runner.py": "ab69a2ecf1fb2fc9250b3514a32eadccd82f375e",
+    "docs/validation/frozen-model-fps-20261112/mmz-ai2d.log": "6f85eec1b493c3bf5b2d33db6970d0c35e3099cd",
+    "docs/validation/frozen-model-fps-20261112/module02.json": "e12e238e4c3600fb734dc533449028302d518def",
+    "docs/validation/frozen-model-fps-20261112/module03.json": "1669dabdbe5d47dbd75d1c15954ff8f13f62e922",
+    "docs/validation/frozen-model-fps-20261112/prepared-postprocess-partial.log": "eb5357290e4b60f3be8a26f86b916e55a3c2e53b",
+    "docs/validation/frozen-model-fps-20261112/prepared-postprocess-start.json": "99fbfbc9c51fc3c4b1dc4066c01f8484d5b86a1d",
+    "docs/validation/frozen-model-fps-20261112/pure-kpu-runner.py": "8717d0404d4f92e56da8fd429260899ef8c22b2e",
+    "docs/validation/frozen-model-fps-20261112/pure-kpu.log": "eca514e34999e6a348a922fc7dd0e9636551f2ef",
+    "docs/validation/frozen-model-fps-20261112/runner01.py": "ba4e925f222e516710990c66f9b273eb9b6dca9d",
+    "docs/validation/frozen-model-fps-20261112/runtime04.json": "62fd58ead0316802af92119df090fe05946668e0",
+    "docs/validation/frozen-model-fps-20261112/simulator.json": "8d37bd529ec89da60b07f05b773ff39a6c8d4696",
+    "docs/validation/frozen-model-fps-20261112/summary.json": "c1179c27ab183078ea26bad456c81e4914625a60",
+    "k230_transport_mvp/tests/test_frozen_model_fps.py": "b1dde383e306a04d71d8ec58b2827b70dbff3f9f",
+    "k230_transport_mvp/tools/frozen_model_fps.py": "d87e85929d0d02bfac7c5e4350b0eaab12636592",
+    "k230_transport_mvp/tools/prepare_frozen_model_fps.py": "e95a11840ba28d9a1b1572f86175fe547c317e4a"
+  },
+  "scope_fingerprints": {
+    "docs/validation/frozen-model-fps-20261112/README.md": "ab3fe0c178f17a69ee33a6c2c5f4097c295e89fd3b65a3376e45388f6628431e",
+    "docs/validation/frozen-model-fps-20261112/attempt01-partial.log": "c3d12a9940d009b4fae82775fbfc759ed2ae9b0f32f842f14315cffda2d99b35",
+    "docs/validation/frozen-model-fps-20261112/attempt02-partial.log": "03f1ee4efe5c129abff9d4fb043f05c0fcde2bea9a4fb112b87776255c556545",
+    "docs/validation/frozen-model-fps-20261112/attempt03-partial.log": "03f1ee4efe5c129abff9d4fb043f05c0fcde2bea9a4fb112b87776255c556545",
+    "docs/validation/frozen-model-fps-20261112/conversion.json": "78be4c322109f48c4843c1b8a42035f59de432daa5db1b887a90a2d73e6360e4",
+    "docs/validation/frozen-model-fps-20261112/deployment.json": "839c5d2101cf57d089e4d227581876930540ed41ab34d4fdec1f1763376721f1",
+    "docs/validation/frozen-model-fps-20261112/direct-ai2d-runner.py": "8b37170c49a778c7d77de951ec08e76fae55ce86f2972148ddb43357035172bb",
+    "docs/validation/frozen-model-fps-20261112/direct-ai2d.log": "58a6fd84c5b8fa65c6b07189f0614f5241b8a3afb4a6c9c3e1c47896d6f24ba8",
+    "docs/validation/frozen-model-fps-20261112/host-tests.json": "acaeb54355f9c342ecb1ce565694128d1ccf85cb381b4604ef0616036b7b8f5a",
+    "docs/validation/frozen-model-fps-20261112/host-tests.log": "7b99ceb0f147581764533d1fbc09017b83b0e6ebe679cbce03d525989467b1db",
+    "docs/validation/frozen-model-fps-20261112/host-verify-console.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/validation/frozen-model-fps-20261112/identity.json": "72a6d9eada206259c832541f3086bc98f73d5a528ea95992779071095aac0a17",
+    "docs/validation/frozen-model-fps-20261112/kpu-four-images-runner.py": "c13c943358a5581d728b186f801fb0c1bf8a322ed9cbcae0fc983169392f4674",
+    "docs/validation/frozen-model-fps-20261112/kpu-four-images.log": "f32152fa063c9f48e6d547f8ca11112a85c4c75d35c656851740ac3634634a83",
+    "docs/validation/frozen-model-fps-20261112/material.kmodel": "59fd397f4e60488d98f208bdd2283f847800fda701326b6e0d4f520895f95106",
+    "docs/validation/frozen-model-fps-20261112/minimal-post-runner.py": "a3bc9c6cb34accaee4eb89e83c29c75f745b1eac62339fb170852fbbd1145091",
+    "docs/validation/frozen-model-fps-20261112/mmz-ai2d-runner.py": "0f0f1f1063f11265d26bd9d092b5e3939bfe03a441623cd8332ffa4b459bef2f",
+    "docs/validation/frozen-model-fps-20261112/mmz-ai2d.log": "8816942ee2dbafb420b4828b084712c55abc0cdd23397425437b4992d0acfeed",
+    "docs/validation/frozen-model-fps-20261112/module02.json": "a51ac3c128e825d17e0c39fd98448804e555a56b78db45eb478d8a0c8cec67ac",
+    "docs/validation/frozen-model-fps-20261112/module03.json": "9e06e5095d53818b3f5bda3717fee14b3e6e878a4a8b1b909cad9aad4313a56b",
+    "docs/validation/frozen-model-fps-20261112/prepared-postprocess-partial.log": "2aa2198539607b2a0f470037c1285b9bba774a1e0684c5d89d2bd38d43108b57",
+    "docs/validation/frozen-model-fps-20261112/prepared-postprocess-start.json": "08aaa08b1e7b9b5c75363255fb468dc9afcce911974eef64393f34426f23ad5c",
+    "docs/validation/frozen-model-fps-20261112/pure-kpu-runner.py": "085cbbeebccbf6a3239be27856f554468243f1d04e5c7953693f9216c6077eab",
+    "docs/validation/frozen-model-fps-20261112/pure-kpu.log": "925b425a7138061b760b965d8fbc167ceea97b96c6a3572d9ee6e81217de0db1",
+    "docs/validation/frozen-model-fps-20261112/runner01.py": "6370ae5e7422f029d52874de877be63e294b8e7c954374454e274b6a53614dc4",
+    "docs/validation/frozen-model-fps-20261112/runtime04.json": "05e77f6c39e6300b1e6b435812eb1b53bf76bbecfad2184f28b204653bdc15fe",
+    "docs/validation/frozen-model-fps-20261112/simulator.json": "3b37a181b8fb590dbd52708312289433a720969afd2b1ed3f79b88ccbb65eb4b",
+    "docs/validation/frozen-model-fps-20261112/summary.json": "65cb2f33a65798ca51d28459ce40b0a8d88efaa8bac4286c3e429a0443951769",
+    "k230_transport_mvp/tests/test_frozen_model_fps.py": "2294e4382b5675d752f9c8c88c87fe0bb8f7890a84f27ac0fee8a46aa856e86a",
+    "k230_transport_mvp/tools/frozen_model_fps.py": "ac9b93ac8dc483571290169d2d8aeb65bf6de8a4bc97e7245d377afa448a4aff",
+    "k230_transport_mvp/tools/prepare_frozen_model_fps.py": "0984d4f16021738842bb0b7b2f212f35151c225ae67de3e004fff39ca2323217"
+  },
+  "report": {
+    "completed": [
+      "Verified original4-update checkpoint and ONNX; no retraining.",
+      "Compiled exact ONNX with nncase2.11 using4 approved train-only calibration images; kmodel59fd397f...,3284632bytes.",
+      "Verified12 frozen native/RGB/model-input files and isolated board bundle.",
+      "Completed4images x20 measured KPU runs after3warmups; overall10.4797375ms/95.422237FPS; output-copy timings retained.",
+      "CPU full ellipse/paper reference completed on same4images; each found3materials,3.91-4.72FPS; workloads differ.",
+      "478 host regressions passed with no skips; model SHA verified; all native failures preserved."
+    ],
+    "remaining": [
+      "Full AI2D/preprocessing/postprocess throughput and live-camera model FPS not obtained.",
+      "Board is not ready after repeated communication loss; no further launch is safe until ready/idle readback."
+    ],
+    "decisions": [
+      "Preserve4-update pilot identity and dataset splits; no new labels or training.",
+      "Keep CPU and KPU workloads/scopes distinct;95FPS is KPU-only.",
+      "Retain unmodified upstream import manifest and source verifier; current native compatibility changes tracked in Git and current test fingerprints.",
+      "Move simulator-generated scratch into ignored .ops/local; no old production SD files were selected for writes."
+    ],
+    "risks": [
+      "Root cause of native communication loss remainsUNKNOWN; destination tensor readback was not established as cause.",
+      "Final memory-pool release and running state cannot be verified while readyFalse.",
+      "Pilot task accuracy remains unaccepted and class coverage sparse; speed test is not accuracy acceptance."
+    ],
+    "next_steps": [
+      "Restore board to ready/idle without rerunning closed trials; use the successful minimal prepared-input runner, add only postprocess, then validate AI2D as an independent stage."
+    ],
+    "verification": [
+      {
+        "command": "Native KPU4-frozen-image runner,20 measured runs per image after3warmups",
+        "exit_code": 0,
+        "summary": "80 completed inferences; weighted95.422237FPS, no preprocessing/camera/post/display included",
+        "evidence": [
+          "docs/validation/frozen-model-fps-20261112/kpu-four-images.log",
+          "docs/validation/frozen-model-fps-20261112/kpu-four-images-runner.py",
+          "docs/validation/frozen-model-fps-20261112/summary.json"
+        ]
+      },
+      {
+        "command": "Existing ONNX provenance verification, train-only PTQ and model conversion",
+        "exit_code": 0,
+        "summary": "Original4-update identity verified; compiled kmodel SHA59fd397f4e60488d98f208bdd2283f847800fda701326b6e0d4f520895f95106",
+        "evidence": [
+          "docs/validation/frozen-model-fps-20261112/identity.json",
+          "docs/validation/frozen-model-fps-20261112/conversion.json",
+          "docs/validation/frozen-model-fps-20261112/deployment.json"
+        ]
+      },
+      {
+        "command": "python -B -X utf8 -m tools.export_test_report --output ../docs/validation/frozen-model-fps-20261112/host-tests.json",
+        "exit_code": 0,
+        "summary": "478 passed without skips; actual current source hashes recorded",
+        "evidence": [
+          "docs/validation/frozen-model-fps-20261112/host-tests.json",
+          "docs/validation/frozen-model-fps-20261112/host-tests.log"
+        ]
+      },
+      {
+        "command": "Native AI2D/model/postprocess staged trials and current CanMV readback",
+        "exit_code": 1,
+        "summary": "Incomplete; no full-chain result, finalreadyFalse. Retain failed stages; do not infer KPU failure or successful cleanup.",
+        "evidence": [
+          "docs/validation/frozen-model-fps-20261112/direct-ai2d.log",
+          "docs/validation/frozen-model-fps-20261112/mmz-ai2d.log",
+          "docs/validation/frozen-model-fps-20261112/prepared-postprocess-partial.log"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "shape": [
+    1,
+    5,
+    1029
+  ],
+  "finite": true,
+  "simulator_seconds": 25.171443699975498,
+  "min": -4.44140625,
+  "max": 326.75,
+  "board_timing": false
+}

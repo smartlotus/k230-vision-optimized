@@ -1,0 +1,16 @@
+
+MPY: soft reboot
+CanMV v1.8-36-gae2f20d(based on Micropython e00a144) on 2026-08-16; k230_canmv_lckfb with K230
+Type "help()" for more information.
+>>> 
+>>> 
+PURE_KPU_LOAD_BEGIN
+PURE_KPU_LOADED
+PURE_KPU_INPUT_SET
+PURE_KPU_FIRST_RUN_BEGIN
+PURE_KPU_FIRST_RUN_END
+PURE_KPU_RESULT:{"fps": 95.24126, "iterations": 20, "copy_ms": [0.042, 0.039, 0.026, 0.042, 0.04, 0.04, 0.039, 0.041, 0.027, 0.044, 0.04, 0.041, 0.039, 0.039, 0.026, 0.039, 0.042, 0.039, 0.04, 0.039], "live_camera_fps": false, "accuracy_verified": false, "run_ms": [10.477, 10.568, 10.484, 10.5, 10.501, 10.478, 10.463, 10.554, 10.471, 10.564, 10.462, 10.606, 10.47, 10.487, 10.434, 10.487, 10.462, 10.481, 10.57, 10.474], "mean_run_ms": 10.49965, "scope": "FROZEN_REAL_IMAGE_EXISTING_PILOT_KPU_ONLY"}
+PURE_KPU_CLOSED
+CanMV v1.8-36-gae2f20d(based on Micropython e00a144) on 2026-08-16; k230_canmv_lckfb with K230
+Type "help()" for more information.
+>>> 

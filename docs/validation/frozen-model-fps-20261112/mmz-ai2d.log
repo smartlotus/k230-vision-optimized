@@ -1,0 +1,12 @@
+
+MPY: soft reboot
+CanMV v1.8-36-gae2f20d(based on Micropython e00a144) on 2026-08-16; k230_canmv_lckfb with K230
+Type "help()" for more information.
+>>> 
+>>> 
+MMZ_STAGE:image_allocate
+MMZ_STAGE:image_readinto
+MMZ_STAGE:image_read_complete:691200
+MMZ_SOURCE_SHAPE:[3, 360, 640]
+MMZ_STAGE:kpu_load
+
