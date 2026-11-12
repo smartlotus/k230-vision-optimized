@@ -23,10 +23,10 @@
   ],
   "branch": "ops/native-fps-20261112",
   "state": "ready",
-  "claimed": true,
+  "claimed": false,
   "agent": "codex",
   "session": "native-fps-20261112-a",
-  "revision": 3,
+  "revision": 4,
   "handoff": ".ops/handoffs/native-fps-20261112/20261112T125018-b22ae2a8.json",
-  "updated_at": "2026-11-12T12:50:21+00:00"
+  "updated_at": "2026-11-12T12:51:04+00:00"
 }
