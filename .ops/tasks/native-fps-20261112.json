@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "native-fps-20261112",
+  "title": "Bounded native optimized-code test with preserved profiles and measured FPS",
+  "paths": [
+    "k230_transport_mvp/k230/tuning/live_optimized.py",
+    "k230_transport_mvp/vision/ellipse_native_optimized.py",
+    "k230_transport_mvp/tools/native_fps_trial.py",
+    "k230_transport_mvp/tools/deploy_native_trial.py",
+    "k230_transport_mvp/tests/test_native_fps_trial.py",
+    "docs/validation/native-fps-20261112",
+    ".ops/PROJECT.md",
+    "AGENTS.md"
+  ],
+  "lane": "serial",
+  "resources": [
+    "COM3"
+  ],
+  "depends": [],
+  "acceptance": [
+    "Source-bound isolated board install; frozen profile readback; bounded native measurements and cleanup; failures retained; no UART/motion or production save"
+  ],
+  "branch": "ops/native-fps-20261112",
+  "state": "ready",
+  "claimed": true,
+  "agent": "codex",
+  "session": "native-fps-20261112-a",
+  "revision": 3,
+  "handoff": ".ops/handoffs/native-fps-20261112/20261112T125018-b22ae2a8.json",
+  "updated_at": "2026-11-12T12:50:21+00:00"
+}

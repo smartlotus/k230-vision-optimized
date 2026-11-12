@@ -1,0 +1,19 @@
+
+MPY: soft reboot
+CanMV v1.8-36-gae2f20d(based on Micropython e00a144) on 2026-08-16; k230_canmv_lckfb with K230
+Type "help()" for more information.
+>>> 
+>>> 
+[CanMV] Running: /sdcard/kopt_20261112/smoke01.py
+NATIVE_TRIAL_START:{"frames_limit": 20, "active_revision": 0, "vector": true, "draft_revision": 25, "variant": "optimized", "duration_limit_ms": 12000, "mode": "TOP", "dirty": true, "preview_every": 3, "resource_before": {"system_pages": {"used_bytes": 27426816, "total_bytes": 460189696, "used_percent": 5.959894, "free_bytes": 432762880}, "cpu_percent": 2, "media_mmz": {"used_bytes": 0, "total_bytes": 535822336, "used_percent": 0.0, "free_bytes": 535822336}, "cpu_source": "os.cpu_usage", "system_heap": {"used_bytes": 3044608, "total_bytes": 67108864, "used_percent": 4.536819, "free_bytes": 64064256}, "kpu_usage_percent": null, "kpu_note": "No neural model/KPU inference in this threshold pipeline", "python_heap": {"used_bytes": 80000, "total_bytes": 4145664, "used_percent": 1.929727, "free_bytes": 4065664}, "scope": "Current CanMV RTOS runtime; not whole dual-core SoC/Linux accounting"}, "trial": "a1111111111111111111111111111111", "uart_enabled": false, "color": 2, "motors_enabled": false, "camera_mapping": {"LANE": 1, "COLOR": 2, "RING": 2, "TOP": 2, "QR": 1}}
+NATIVE_TRIAL_END:{"trial": "a1111111111111111111111111111111", "uart_enabled": false, "resource_after": {"system_pages": {"used_bytes": 27426816, "total_bytes": 460189696, "used_percent": 5.959894, "free_bytes": 432762880}, "cpu_percent": 54, "media_mmz": {"used_bytes": 0, "total_bytes": 535822336, "used_percent": 0.0, "free_bytes": 535822336}, "cpu_source": "os.cpu_usage", "system_heap": {"used_bytes": 3044608, "total_bytes": 67108864, "used_percent": 4.536819, "free_bytes": 64064256}, "kpu_usage_percent": null, "kpu_note": "No neural model/KPU inference in this threshold pipeline", "python_heap": {"used_bytes": 262240, "total_bytes": 4145664, "used_percent": 6.325645, "free_bytes": 3883424}, "scope": "Current CanMV RTOS runtime; not whole dual-core SoC/Linux accounting"}, "motors_enabled": false, "variant": "optimized"}
+Traceback (most recent call last):
+  File "/sdcard/kopt_20261112/smoke01.py", line 4, in <module>
+  File "/sdcard/kopt_20261112/tools/native_fps_trial.py", line 48, in run
+  File "/sdcard/kopt_20261112/k230/tuning/live_optimized.py", line 466, in main
+  File "/sdcard/kopt_20261112/k230/tuning/material.py", line 36, in __init__
+ValueError: Power-of-two tick period required
+[CanMV] Script failed
+CanMV v1.8-36-gae2f20d(based on Micropython e00a144) on 2026-08-16; k230_canmv_lckfb with K230
+Type "help()" for more information.
+>>> 

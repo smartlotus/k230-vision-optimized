@@ -1,0 +1,534 @@
+{
+  "scope": "Current connected CanMV K230-v1.8-36/COM3; bounded FPS-only trials, no ground truth",
+  "claim": "Lightweight TOP no-candidate path reached25.8-26.4FPS with160x90 preview; full ring/six-color path did not",
+  "trials": [
+    {
+      "trial": "smoke02",
+      "session": "a2222222222222222222222222222222",
+      "closed": {
+        "cleanup_errors": [],
+        "native_frames": 30,
+        "errors": 0,
+        "session": "a2222222222222222222222222222222"
+      },
+      "reported_steady_windows": 1,
+      "steady_recognition_fps_weighted": 19.49317738791423,
+      "steady_recognition_fps_min": 19.49318,
+      "steady_recognition_fps_max": 19.49318,
+      "last_runtime_resources": {
+        "system_pages": {
+          "used_bytes": 32952320,
+          "total_bytes": 460189696,
+          "used_percent": 7.160595,
+          "free_bytes": 427237376
+        },
+        "cpu_percent": 47,
+        "media_mmz": {
+          "used_bytes": 53506048,
+          "total_bytes": 535822336,
+          "used_percent": 9.985782,
+          "free_bytes": 482316288
+        },
+        "cpu_source": "os.cpu_usage",
+        "system_heap": {
+          "used_bytes": 7998080,
+          "total_bytes": 67108864,
+          "used_percent": 11.91807,
+          "free_bytes": 59110784
+        },
+        "kpu_usage_percent": null,
+        "kpu_note": "No neural model/KPU inference in this threshold pipeline",
+        "python_heap": {
+          "used_bytes": 955776,
+          "total_bytes": 4145664,
+          "used_percent": 23.05483,
+          "free_bytes": 3189888
+        },
+        "scope": "Current CanMV RTOS runtime; not whole dual-core SoC/Linux accounting"
+      },
+      "resources_after": {
+        "system_pages": {
+          "used_bytes": 28205056,
+          "total_bytes": 460189696,
+          "used_percent": 6.129006,
+          "free_bytes": 431984640
+        },
+        "cpu_percent": 4,
+        "media_mmz": {
+          "used_bytes": 0,
+          "total_bytes": 535822336,
+          "used_percent": 0.0,
+          "free_bytes": 535822336
+        },
+        "cpu_source": "os.cpu_usage",
+        "system_heap": {
+          "used_bytes": 3097728,
+          "total_bytes": 67108864,
+          "used_percent": 4.615974,
+          "free_bytes": 64011136
+        },
+        "kpu_usage_percent": null,
+        "kpu_note": "No neural model/KPU inference in this threshold pipeline",
+        "python_heap": {
+          "used_bytes": 378432,
+          "total_bytes": 4145664,
+          "used_percent": 9.128381,
+          "free_bytes": 3767232
+        },
+        "scope": "Current CanMV RTOS runtime; not whole dual-core SoC/Linux accounting"
+      },
+      "preview_width": 960,
+      "preview_height": 180,
+      "preview_quality": 60,
+      "input_width": 640,
+      "input_height": 360,
+      "geometry_reasons": [
+        "NO_BLOB_GATE"
+      ],
+      "observed_positive_geometry_frames": 0,
+      "source_frame_sampling": "Reported non-overlapping one-second windows; partial final tail excluded from FPS estimate",
+      "valid_as_positive_recognition_accuracy": false
+    },
+    {
+      "trial": "ring01",
+      "session": "b1111111111111111111111111111111",
+      "closed": {
+        "cleanup_errors": [],
+        "native_frames": 40,
+        "errors": 0,
+        "session": "b1111111111111111111111111111111"
+      },
+      "reported_steady_windows": 5,
+      "steady_recognition_fps_weighted": 6.67870036101083,
+      "steady_recognition_fps_min": 4.378284,
+      "steady_recognition_fps_max": 9.852217,
+      "last_runtime_resources": {
+        "system_pages": {
+          "used_bytes": 35397632,
+          "total_bytes": 460189696,
+          "used_percent": 7.691966,
+          "free_bytes": 424792064
+        },
+        "cpu_percent": 99,
+        "media_mmz": {
+          "used_bytes": 61341696,
+          "total_bytes": 535822336,
+          "used_percent": 11.44814,
+          "free_bytes": 474480640
+        },
+        "cpu_source": "os.cpu_usage",
+        "system_heap": {
+          "used_bytes": 8038656,
+          "total_bytes": 67108864,
+          "used_percent": 11.97853,
+          "free_bytes": 59070208
+        },
+        "kpu_usage_percent": null,
+        "kpu_note": "No neural model/KPU inference in this threshold pipeline",
+        "python_heap": {
+          "used_bytes": 621600,
+          "total_bytes": 4145664,
+          "used_percent": 14.99398,
+          "free_bytes": 3524064
+        },
+        "scope": "Current CanMV RTOS runtime; not whole dual-core SoC/Linux accounting"
+      },
+      "resources_after": {
+        "system_pages": {
+          "used_bytes": 31059968,
+          "total_bytes": 460189696,
+          "used_percent": 6.749383,
+          "free_bytes": 429129728
+        },
+        "cpu_percent": 4,
+        "media_mmz": {
+          "used_bytes": 0,
+          "total_bytes": 535822336,
+          "used_percent": 0.0,
+          "free_bytes": 535822336
+        },
+        "cpu_source": "os.cpu_usage",
+        "system_heap": {
+          "used_bytes": 3110400,
+          "total_bytes": 67108864,
+          "used_percent": 4.634857,
+          "free_bytes": 63998464
+        },
+        "kpu_usage_percent": null,
+        "kpu_note": "No neural model/KPU inference in this threshold pipeline",
+        "python_heap": {
+          "used_bytes": 395712,
+          "total_bytes": 4145664,
+          "used_percent": 9.545202,
+          "free_bytes": 3749952
+        },
+        "scope": "Current CanMV RTOS runtime; not whole dual-core SoC/Linux accounting"
+      },
+      "preview_width": 960,
+      "preview_height": 180,
+      "preview_quality": 60,
+      "input_width": 640,
+      "input_height": 360,
+      "geometry_reasons": [
+        "NO_INDEPENDENT_PAPER_TARGET"
+      ],
+      "observed_positive_geometry_frames": 0,
+      "source_frame_sampling": "Reported non-overlapping one-second windows; partial final tail excluded from FPS estimate",
+      "valid_as_positive_recognition_accuracy": false
+    },
+    {
+      "trial": "fps02",
+      "session": "c2222222222222222222222222222222",
+      "closed": {
+        "cleanup_errors": [],
+        "native_frames": 200,
+        "errors": 0,
+        "session": "c2222222222222222222222222222222"
+      },
+      "reported_steady_windows": 7,
+      "steady_recognition_fps_weighted": 20.066426792139495,
+      "steady_recognition_fps_min": 19.94018,
+      "steady_recognition_fps_max": 20.17291,
+      "last_runtime_resources": {
+        "system_pages": {
+          "used_bytes": 33079296,
+          "total_bytes": 460189696,
+          "used_percent": 7.188187,
+          "free_bytes": 427110400
+        },
+        "cpu_percent": 97,
+        "media_mmz": {
+          "used_bytes": 57282560,
+          "total_bytes": 535822336,
+          "used_percent": 10.69059,
+          "free_bytes": 478539776
+        },
+        "cpu_source": "os.cpu_usage",
+        "system_heap": {
+          "used_bytes": 8004736,
+          "total_bytes": 67108864,
+          "used_percent": 11.92799,
+          "free_bytes": 59104128
+        },
+        "kpu_usage_percent": null,
+        "kpu_note": "No neural model/KPU inference in this threshold pipeline",
+        "python_heap": {
+          "used_bytes": 401760,
+          "total_bytes": 4145664,
+          "used_percent": 9.69109,
+          "free_bytes": 3743904
+        },
+        "scope": "Current CanMV RTOS runtime; not whole dual-core SoC/Linux accounting"
+      },
+      "resources_after": {
+        "system_pages": {
+          "used_bytes": 28225536,
+          "total_bytes": 460189696,
+          "used_percent": 6.133457,
+          "free_bytes": 431964160
+        },
+        "cpu_percent": 4,
+        "media_mmz": {
+          "used_bytes": 0,
+          "total_bytes": 535822336,
+          "used_percent": 0.0,
+          "free_bytes": 535822336
+        },
+        "cpu_source": "os.cpu_usage",
+        "system_heap": {
+          "used_bytes": 3097344,
+          "total_bytes": 67108864,
+          "used_percent": 4.615402,
+          "free_bytes": 64011520
+        },
+        "kpu_usage_percent": null,
+        "kpu_note": "No neural model/KPU inference in this threshold pipeline",
+        "python_heap": {
+          "used_bytes": 355872,
+          "total_bytes": 4145664,
+          "used_percent": 8.584198,
+          "free_bytes": 3789792
+        },
+        "scope": "Current CanMV RTOS runtime; not whole dual-core SoC/Linux accounting"
+      },
+      "preview_width": 320,
+      "preview_height": 180,
+      "preview_quality": 60,
+      "input_width": 640,
+      "input_height": 360,
+      "geometry_reasons": [
+        "NO_BLOB_GATE"
+      ],
+      "observed_positive_geometry_frames": 0,
+      "source_frame_sampling": "Reported non-overlapping one-second windows; partial final tail excluded from FPS estimate",
+      "valid_as_positive_recognition_accuracy": false
+    },
+    {
+      "trial": "fps03",
+      "session": "c3333333333333333333333333333333",
+      "closed": {
+        "cleanup_errors": [],
+        "native_frames": 240,
+        "errors": 0,
+        "session": "c3333333333333333333333333333333"
+      },
+      "reported_steady_windows": 9,
+      "steady_recognition_fps_weighted": 21.867483052700635,
+      "steady_recognition_fps_min": 21.58979,
+      "steady_recognition_fps_max": 22.26525,
+      "last_runtime_resources": {
+        "system_pages": {
+          "used_bytes": 33079296,
+          "total_bytes": 460189696,
+          "used_percent": 7.188187,
+          "free_bytes": 427110400
+        },
+        "cpu_percent": 97,
+        "media_mmz": {
+          "used_bytes": 56410112,
+          "total_bytes": 535822336,
+          "used_percent": 10.52776,
+          "free_bytes": 479412224
+        },
+        "cpu_source": "os.cpu_usage",
+        "system_heap": {
+          "used_bytes": 8022208,
+          "total_bytes": 67108864,
+          "used_percent": 11.95402,
+          "free_bytes": 59086656
+        },
+        "kpu_usage_percent": null,
+        "kpu_note": "No neural model/KPU inference in this threshold pipeline",
+        "python_heap": {
+          "used_bytes": 456256,
+          "total_bytes": 4145664,
+          "used_percent": 11.00562,
+          "free_bytes": 3689408
+        },
+        "scope": "Current CanMV RTOS runtime; not whole dual-core SoC/Linux accounting"
+      },
+      "resources_after": {
+        "system_pages": {
+          "used_bytes": 28225536,
+          "total_bytes": 460189696,
+          "used_percent": 6.133457,
+          "free_bytes": 431964160
+        },
+        "cpu_percent": 4,
+        "media_mmz": {
+          "used_bytes": 0,
+          "total_bytes": 535822336,
+          "used_percent": 0.0,
+          "free_bytes": 535822336
+        },
+        "cpu_source": "os.cpu_usage",
+        "system_heap": {
+          "used_bytes": 3102464,
+          "total_bytes": 67108864,
+          "used_percent": 4.623032,
+          "free_bytes": 64006400
+        },
+        "kpu_usage_percent": null,
+        "kpu_note": "No neural model/KPU inference in this threshold pipeline",
+        "python_heap": {
+          "used_bytes": 356096,
+          "total_bytes": 4145664,
+          "used_percent": 8.589602,
+          "free_bytes": 3789568
+        },
+        "scope": "Current CanMV RTOS runtime; not whole dual-core SoC/Linux accounting"
+      },
+      "preview_width": 320,
+      "preview_height": 180,
+      "preview_quality": 40,
+      "input_width": 640,
+      "input_height": 360,
+      "geometry_reasons": [
+        "NO_BLOB_GATE"
+      ],
+      "observed_positive_geometry_frames": 0,
+      "source_frame_sampling": "Reported non-overlapping one-second windows; partial final tail excluded from FPS estimate",
+      "valid_as_positive_recognition_accuracy": false
+    },
+    {
+      "trial": "fps04",
+      "session": "c4444444444444444444444444444444",
+      "closed": {
+        "cleanup_errors": [],
+        "native_frames": 300,
+        "errors": 0,
+        "session": "c4444444444444444444444444444444"
+      },
+      "reported_steady_windows": 12,
+      "steady_recognition_fps_weighted": 23.674475955610358,
+      "steady_recognition_fps_min": 23.39181,
+      "steady_recognition_fps_max": 23.90438,
+      "last_runtime_resources": {
+        "system_pages": {
+          "used_bytes": 33079296,
+          "total_bytes": 460189696,
+          "used_percent": 7.188187,
+          "free_bytes": 427110400
+        },
+        "cpu_percent": 97,
+        "media_mmz": {
+          "used_bytes": 56311808,
+          "total_bytes": 535822336,
+          "used_percent": 10.50942,
+          "free_bytes": 479510528
+        },
+        "cpu_source": "os.cpu_usage",
+        "system_heap": {
+          "used_bytes": 8021888,
+          "total_bytes": 67108864,
+          "used_percent": 11.95354,
+          "free_bytes": 59086976
+        },
+        "kpu_usage_percent": null,
+        "kpu_note": "No neural model/KPU inference in this threshold pipeline",
+        "python_heap": {
+          "used_bytes": 401344,
+          "total_bytes": 4145664,
+          "used_percent": 9.681055,
+          "free_bytes": 3744320
+        },
+        "scope": "Current CanMV RTOS runtime; not whole dual-core SoC/Linux accounting"
+      },
+      "resources_after": {
+        "system_pages": {
+          "used_bytes": 28225536,
+          "total_bytes": 460189696,
+          "used_percent": 6.133457,
+          "free_bytes": 431964160
+        },
+        "cpu_percent": 7,
+        "media_mmz": {
+          "used_bytes": 0,
+          "total_bytes": 535822336,
+          "used_percent": 0.0,
+          "free_bytes": 535822336
+        },
+        "cpu_source": "os.cpu_usage",
+        "system_heap": {
+          "used_bytes": 3106816,
+          "total_bytes": 67108864,
+          "used_percent": 4.629517,
+          "free_bytes": 64002048
+        },
+        "kpu_usage_percent": null,
+        "kpu_note": "No neural model/KPU inference in this threshold pipeline",
+        "python_heap": {
+          "used_bytes": 356320,
+          "total_bytes": 4145664,
+          "used_percent": 8.595004,
+          "free_bytes": 3789344
+        },
+        "scope": "Current CanMV RTOS runtime; not whole dual-core SoC/Linux accounting"
+      },
+      "preview_width": 256,
+      "preview_height": 144,
+      "preview_quality": 40,
+      "input_width": 640,
+      "input_height": 360,
+      "geometry_reasons": [
+        "NO_BLOB_GATE"
+      ],
+      "observed_positive_geometry_frames": 0,
+      "source_frame_sampling": "Reported non-overlapping one-second windows; partial final tail excluded from FPS estimate",
+      "valid_as_positive_recognition_accuracy": false
+    },
+    {
+      "trial": "fps05",
+      "session": "c5555555555555555555555555555555",
+      "closed": {
+        "cleanup_errors": [],
+        "native_frames": 300,
+        "errors": 0,
+        "session": "c5555555555555555555555555555555"
+      },
+      "reported_steady_windows": 9,
+      "steady_recognition_fps_weighted": 26.04336929279721,
+      "steady_recognition_fps_min": 25.81927,
+      "steady_recognition_fps_max": 26.36719,
+      "last_runtime_resources": {
+        "system_pages": {
+          "used_bytes": 33079296,
+          "total_bytes": 460189696,
+          "used_percent": 7.188187,
+          "free_bytes": 427110400
+        },
+        "cpu_percent": 97,
+        "media_mmz": {
+          "used_bytes": 56274944,
+          "total_bytes": 535822336,
+          "used_percent": 10.50254,
+          "free_bytes": 479547392
+        },
+        "cpu_source": "os.cpu_usage",
+        "system_heap": {
+          "used_bytes": 8026816,
+          "total_bytes": 67108864,
+          "used_percent": 11.96089,
+          "free_bytes": 59082048
+        },
+        "kpu_usage_percent": null,
+        "kpu_note": "No neural model/KPU inference in this threshold pipeline",
+        "python_heap": {
+          "used_bytes": 411264,
+          "total_bytes": 4145664,
+          "used_percent": 9.920341,
+          "free_bytes": 3734400
+        },
+        "scope": "Current CanMV RTOS runtime; not whole dual-core SoC/Linux accounting"
+      },
+      "resources_after": {
+        "system_pages": {
+          "used_bytes": 28225536,
+          "total_bytes": 460189696,
+          "used_percent": 6.133457,
+          "free_bytes": 431964160
+        },
+        "cpu_percent": 6,
+        "media_mmz": {
+          "used_bytes": 0,
+          "total_bytes": 535822336,
+          "used_percent": 0.0,
+          "free_bytes": 535822336
+        },
+        "cpu_source": "os.cpu_usage",
+        "system_heap": {
+          "used_bytes": 3111168,
+          "total_bytes": 67108864,
+          "used_percent": 4.636002,
+          "free_bytes": 63997696
+        },
+        "kpu_usage_percent": null,
+        "kpu_note": "No neural model/KPU inference in this threshold pipeline",
+        "python_heap": {
+          "used_bytes": 356384,
+          "total_bytes": 4145664,
+          "used_percent": 8.596548,
+          "free_bytes": 3789280
+        },
+        "scope": "Current CanMV RTOS runtime; not whole dual-core SoC/Linux accounting"
+      },
+      "preview_width": 160,
+      "preview_height": 90,
+      "preview_quality": 40,
+      "input_width": 640,
+      "input_height": 360,
+      "geometry_reasons": [
+        "NO_BLOB_GATE"
+      ],
+      "observed_positive_geometry_frames": 0,
+      "source_frame_sampling": "Reported non-overlapping one-second windows; partial final tail excluded from FPS estimate",
+      "valid_as_positive_recognition_accuracy": false
+    }
+  ],
+  "original_active_revision": 0,
+  "original_draft_revision": 25,
+  "uart_enabled": false,
+  "motors_enabled": false,
+  "startup_failure_preserved": "smoke01.log: native tick period2^62 incompatible with uint32 SourceClock; fixed in optimized variant",
+  "transfer_failure_preserved": "deployment-attempt01-diagnosis.json; protocol path error1035 at70bytes; new short directory verified"
+}

@@ -1,0 +1,9 @@
+{
+  "attempt": "01",
+  "verified_files": 17,
+  "next_file": "k230/main_vision_optimized.py",
+  "write_error_code": 1035,
+  "running_after_failure": false,
+  "failed_path_bytes": 70,
+  "next_action": "Use a shorter new isolated directory; preserve partial attempt01"
+}

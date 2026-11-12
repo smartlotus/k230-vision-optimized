@@ -1,0 +1,109 @@
+{
+  "remote_root": "/sdcard/transport_mvp_optimized_20261112",
+  "files": [
+    {
+      "path": "core/__init__.py",
+      "bytes": 55,
+      "sha256": "5533fcbd179607900b6e03a776cc0fe9e0d7dfd1007179d4b8346113c212d86e",
+      "readback_sha256": "5533fcbd179607900b6e03a776cc0fe9e0d7dfd1007179d4b8346113c212d86e"
+    },
+    {
+      "path": "core/mission_state.py",
+      "bytes": 10839,
+      "sha256": "d2ef2d1ce532621a09dde5db9bad381f19c48a913725b630f129981d23f4a0fc",
+      "readback_sha256": "d2ef2d1ce532621a09dde5db9bad381f19c48a913725b630f129981d23f4a0fc"
+    },
+    {
+      "path": "core/stats.py",
+      "bytes": 347,
+      "sha256": "9907c4a618b6c7e58d98821a4cf52e35a9f1ba6fd775c5b4b8e3734f23e929a3",
+      "readback_sha256": "9907c4a618b6c7e58d98821a4cf52e35a9f1ba6fd775c5b4b8e3734f23e929a3"
+    },
+    {
+      "path": "core/task_parser.py",
+      "bytes": 1461,
+      "sha256": "43fc285963a5b28a0332f0fd5deaab3331e810ec94f7651dd921106d3479d303",
+      "readback_sha256": "43fc285963a5b28a0332f0fd5deaab3331e810ec94f7651dd921106d3479d303"
+    },
+    {
+      "path": "core/task_planner.py",
+      "bytes": 2313,
+      "sha256": "19974e4107b87b3b93efb0b14ff18b4b480251b2550e8baf8bf883a01b90b631",
+      "readback_sha256": "19974e4107b87b3b93efb0b14ff18b4b480251b2550e8baf8bf883a01b90b631"
+    },
+    {
+      "path": "core/types.py",
+      "bytes": 1617,
+      "sha256": "5d51cddf0069e1d38efb5e1867c63c1e1a62203fa8f764aa496ab762be22a3cb",
+      "readback_sha256": "5d51cddf0069e1d38efb5e1867c63c1e1a62203fa8f764aa496ab762be22a3cb"
+    },
+    {
+      "path": "core/workflow_session.py",
+      "bytes": 25790,
+      "sha256": "5eb8d20d3dd8176c24630bbf7c876c4c93707578a2499a9e045f960ddd8e11d3",
+      "readback_sha256": "5eb8d20d3dd8176c24630bbf7c876c4c93707578a2499a9e045f960ddd8e11d3"
+    },
+    {
+      "path": "k230/__init__.py",
+      "bytes": 82,
+      "sha256": "029f15f87852624a1b839814f97df73bf8d107b2f14c65259ed671d97ec3126b",
+      "readback_sha256": "029f15f87852624a1b839814f97df73bf8d107b2f14c65259ed671d97ec3126b"
+    },
+    {
+      "path": "k230/block_profile.py",
+      "bytes": 4216,
+      "sha256": "0657236cf7d05dac2c82caf22513256d8733c699a88c9bc47a56fee04ba56c99",
+      "readback_sha256": "0657236cf7d05dac2c82caf22513256d8733c699a88c9bc47a56fee04ba56c99"
+    },
+    {
+      "path": "k230/camera_manager.py",
+      "bytes": 7470,
+      "sha256": "71f669b78371cbc9fadb25c516a0ba0cdf3f0282ce9d152cd321b10f9b1d425d",
+      "readback_sha256": "71f669b78371cbc9fadb25c516a0ba0cdf3f0282ce9d152cd321b10f9b1d425d"
+    },
+    {
+      "path": "k230/camera_roles.py",
+      "bytes": 256,
+      "sha256": "715627d248be0f64a5ccd3f6087d1aa74cffa0aff827746df9874fa7106d579a",
+      "readback_sha256": "715627d248be0f64a5ccd3f6087d1aa74cffa0aff827746df9874fa7106d579a"
+    },
+    {
+      "path": "k230/capture_health.py",
+      "bytes": 1346,
+      "sha256": "09c00cb2d360413804b3f18a4566ebb2d4f2e0878ef399196420c636430d628c",
+      "readback_sha256": "09c00cb2d360413804b3f18a4566ebb2d4f2e0878ef399196420c636430d628c"
+    },
+    {
+      "path": "k230/capture_io.py",
+      "bytes": 3548,
+      "sha256": "720135b0f09bff87a44ced6088f2949db31dacdd5c07a0c33515ff22393903b6",
+      "readback_sha256": "720135b0f09bff87a44ced6088f2949db31dacdd5c07a0c33515ff22393903b6"
+    },
+    {
+      "path": "k230/config.py",
+      "bytes": 2685,
+      "sha256": "10c5ddab62cc22217d2a6b94d9204776a5fa3580f56270a544f02a8b9136ccef",
+      "readback_sha256": "10c5ddab62cc22217d2a6b94d9204776a5fa3580f56270a544f02a8b9136ccef"
+    },
+    {
+      "path": "k230/exposure_control.py",
+      "bytes": 1091,
+      "sha256": "1bc2b220a1fd502ffb04d704759a48c48d83b0f68960f57b05557be0f48d07dc",
+      "readback_sha256": "1bc2b220a1fd502ffb04d704759a48c48d83b0f68960f57b05557be0f48d07dc"
+    },
+    {
+      "path": "k230/main.py",
+      "bytes": 6481,
+      "sha256": "8591af18506d1427ac7504066908ec55a90480e82404fbde7786dfa10aed5e31",
+      "readback_sha256": "8591af18506d1427ac7504066908ec55a90480e82404fbde7786dfa10aed5e31"
+    },
+    {
+      "path": "k230/main_optimized.py",
+      "bytes": 1007,
+      "sha256": "f1ec3fb8aa81c127c0dd88e46543b500550102d3f3847ac130cfb5cea83d4f74",
+      "readback_sha256": "f1ec3fb8aa81c127c0dd88e46543b500550102d3f3847ac130cfb5cea83d4f74"
+    }
+  ],
+  "status": "INCOMPLETE",
+  "board_running_before": false
+}

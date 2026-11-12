@@ -22,6 +22,12 @@ PREVIEW_EVERY_N_FRAMES=2
 MAX_MATERIALS=3
 
 
+def material_source_clock():
+    """Use low uint32 ticks on ports whose native period exceeds uint32."""
+    period=time.ticks_add(0,-1)+1 if hasattr(time,'ticks_add') else 4294967296
+    return SourceClock(min(period,4294967296))
+
+
 def diagnostic_colors(single=None,multiple=None):
     if multiple is not None and single is not None:raise ValueError('Choose single or multiple diagnostic colors')
     colors=([single] if single is not None else [] if multiple is None else multiple)
@@ -272,7 +278,7 @@ def native_views(frame,profile,mode,station,color,selected=False,diagnostic_mate
             timing[name]=timing.get(name,0)+dt
     total_start=tick()
     c=profile['contexts'][context_key(mode,station)]
-    mask=None if not render or (annotated_preview and mode=='RING') else frame.copy()
+    mask=None if not render or annotated_preview else frame.copy()
     if mask is not None:mask.clear()
     fits=[];components=[];reason='NOT_APPLICABLE';quick_blob_count=None
     region=gray=chosen=None;ring_candidates=[];ring_groups=[];alignment_pair=None;material_fits=[]
@@ -291,7 +297,7 @@ def native_views(frame,profile,mode,station,color,selected=False,diagnostic_mate
                 candidate_roi=_blob_candidate_roi(quick,c['roi'])
                 region=frame.copy(roi=candidate_roi);region.binary([tuple(threshold)])
                 gray=region.to_grayscale()
-                chosen=gray.copy() if render else None
+                chosen=gray.copy() if render and not annotated_preview else None
                 if chosen is not None:chosen.clear()
                 result=extract_mask_ellipses(gray.to_numpy_ref(),candidate_roi,c['min_area'],c['max_area'],render_mask=chosen.to_numpy_ref() if chosen is not None else None,close_kernel=3)
                 components=result['components'];fits=result['accepted']
@@ -413,8 +419,9 @@ def native_views(frame,profile,mode,station,color,selected=False,diagnostic_mate
     render_start=tick()
     retained=None
     if render:
-        retained=frame.copy()
-        if mode!='RING':retained.b_and(mask)
+        overlay=bool(fits or material_fits or ring_candidates or ring_groups or material_candidates)
+        retained=frame if annotated_preview and not overlay else frame.copy()
+        if mode!='RING' and mask is not None:retained.b_and(mask)
         ink_id=None if mode=='RING' else color
         draw_geometry(retained,fits,ink_id,fast_outline=mode=='RING')
         draw_geometry(retained,material_fits,diagnostic_material_color)
@@ -448,7 +455,7 @@ def restore_initial_state(session,state):
     session.select(state['mode'],state['station']);session.target_id=state['color']
 
 
-def main(token,root='/sdcard/transport_mvp_optimized/tuning_profiles',mailbox=ROOT,max_frames=None,initial_state=None,diagnostic_material_color=None,visual_demo=False,diagnostic_material_colors=None,vector_boundary=False,annotated_preview=False,preview_every=3):
+def main(token,root='/sdcard/transport_mvp_optimized/tuning_profiles',mailbox=ROOT,max_frames=None,initial_state=None,diagnostic_material_color=None,visual_demo=False,diagnostic_material_colors=None,vector_boundary=False,annotated_preview=False,preview_every=3,max_duration_ms=None,max_errors=None,preview_quality=60,preview_scale=.5):
     import image
     from vision.ellipse_native_optimized import configure_boundary_backend
     boundary_backend=configure_boundary_backend(vector_boundary)
@@ -457,11 +464,15 @@ def main(token,root='/sdcard/transport_mvp_optimized/tuning_profiles',mailbox=RO
     configure_shared_boundary(vector_boundary)
     if type(annotated_preview) is not bool:raise ValueError('Explicit annotated preview flag required')
     if type(preview_every) is not int or not 1<=preview_every<=10:raise ValueError('preview_every must be1..10')
+    if max_duration_ms is not None and (type(max_duration_ms) is not int or max_duration_ms<1):raise ValueError('Positive duration bound required')
+    if max_errors is not None and (type(max_errors) is not int or max_errors<1):raise ValueError('Positive error bound required')
+    if type(preview_quality) is not int or not 20<=preview_quality<=90:raise ValueError('Preview JPEG quality must be20..90')
+    if type(preview_scale) not in (int,float) or preview_scale not in (.25,.4,.5):raise ValueError('Preview scale must be0.25,0.4 or0.5')
     app=TuningApp(root);s=app.session;restore_initial_state(s,initial_state)
     commands=LiveCommands(s,token,mailbox,diagnostic_material_color,visual_demo,diagnostic_material_colors)
     material_tracker=StableTracker();paper_tracker=StableTracker()
     material_producer=None;material_binding_key=None;material_snapshot=None
-    material_clock=SourceClock(time.ticks_add(0,-1)+1 if hasattr(time,'ticks_add') else 4294967296)
+    material_clock=material_source_clock()
     if initial_state:commands.render_mode=initial_state.get('render_mode','THRESHOLD')
     last_poll=last_report=None;errors=0;native_count=0;recognition_frames=0;accepted_frames=0;started=time.ticks_ms()
     win_start=started;win_frames=win_recognition=win_accepted=win_preview=0;win_sums=[0]*5;win_max=[0]*5;win_gc=win_gc_max=win_poll=0
@@ -471,9 +482,11 @@ def main(token,root='/sdcard/transport_mvp_optimized/tuning_profiles',mailbox=RO
     try:
         os.exitpoint(os.EXITPOINT_ENABLE)
         app.open_display(True,to_ide=False)
-        composite=None;layout=None;preview_scale=.5
+        composite=None;layout=None
         print('LIVE_TUNING_READY:'+json.dumps(commands.state(True)))
         while not commands.stopped and (max_frames is None or native_count<max_frames):
+            if max_duration_ms is not None and time.ticks_diff(time.ticks_ms(),started)>=max_duration_ms:break
+            if max_errors is not None and errors>=max_errors:break
             os.exitpoint();now=time.ticks_ms()
             if last_poll is None or time.ticks_diff(now,last_poll)>=POLL_INTERVAL_MS:
                 last_poll=now;ack=commands.poll();win_poll+=time.ticks_diff(time.ticks_ms(),now)
@@ -510,12 +523,12 @@ def main(token,root='/sdcard/transport_mvp_optimized/tuning_profiles',mailbox=RO
                 if cid not in app.sensors:raise OSError(app.errors.get(cid,'Camera unavailable'))
                 t0=time.ticks_ms();frame=app.sensors[cid].snapshot(timeout=100,auto_reboot=False)
                 if frame is None or (frame.width(),frame.height())!=layout:raise ValueError('Fresh frame binding mismatch')
-                app.frame_id+=1;t1=time.ticks_ms();material_timestamp=material_clock.update(t1)
+                app.frame_id+=1;t1=time.ticks_ms();material_timestamp=material_clock.update(t1 & (material_clock.period-1))
                 selected=commands.render_mode=='SELECTED'
                 preview_interval=preview_every
                 preview_due=(native_count+1)%preview_interval==0
                 extra=({'diagnostic_material_colors':commands.diagnostic_material_colors} if diagnostic_material_colors is not None else {})
-                if annotated_preview and s.mode=='RING':extra['annotated_preview']=True
+                if annotated_preview:extra['annotated_preview']=True
                 extra['render']=preview_due
                 extra['profile_timing']=True
                 mask,retained,geometry=native_views(frame,material_producer.draft if material_producer else s.draft,
@@ -600,7 +613,7 @@ def main(token,root='/sdcard/transport_mvp_optimized/tuning_profiles',mailbox=RO
                         app.canvas.draw_string_advanced(8,29,16,'PIXEL ONLY dx=%.1f dy=%.1f / %s' %
                             (alignment['dx_px'],alignment['dy_px'],alignment['status']),color=(255,220,80))
                     app.Display.show_image(app.canvas);t4=time.ticks_ms()
-                    composite.compress_for_ide(quality=60);t5=time.ticks_ms();win_preview+=1
+                    composite.compress_for_ide(quality=preview_quality);t5=time.ticks_ms();win_preview+=1
                 else:
                     t4=t5=time.ticks_ms()
                 is_recognition=selected and s.mode in ('TOP','COLOR','RING')
@@ -671,7 +684,7 @@ def main(token,root='/sdcard/transport_mvp_optimized/tuning_profiles',mailbox=RO
                         'raw_material_fit_count':geometry.get('raw_material_fit_count',0),
                         'boundary_backend':boundary_backend,
                         'recognition_frames':recognition_frames,'accepted_frames':accepted_frames,'recognition_interval_ms':0,'mailbox_poll_interval_ms':POLL_INTERVAL_MS,
-                        'preview_width':pw if annotated_preview else pw*3,'preview_height':ph,'preview_scale':preview_scale,'preview_interval_frames':preview_interval,'preview_frames':win_preview,
+                        'preview_width':pw if annotated_preview else pw*3,'preview_height':ph,'preview_scale':preview_scale,'preview_quality':preview_quality,'preview_interval_frames':preview_interval,'preview_frames':win_preview,
                         'window':{'target_fps_met':duration>=1000 and errors==0 and win_recognition>=25*duration/1000,'frames':win_frames,'recognition_frames':win_recognition,'instance_frames':win_instances,
                             'instance_frames_semantics':'INDEPENDENT_PAPER_TARGET_COUNT' if s.mode=='RING' else 'ACCEPTED_ELLIPSE_COUNT',
                             'ring_proposal_frames':win_ring_proposals,'accepted_frames_semantics':'REVIEWED_RING_IDENTITY_PX_ONLY' if s.mode=='RING' else 'ACCEPTED_ELLIPSE',
