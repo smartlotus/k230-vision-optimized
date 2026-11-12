@@ -1,0 +1,30 @@
+{
+  "preview_no_frame_restarts": 7,
+  "disconnect_log_records": 8,
+  "preview_restarts_before_disconnect": true,
+  "disconnects": [
+    "[14:04:03] [DEBUG] [Backend] [canmv-backend] board disconnected source=poller tx drain err=USBDBG TX_BUF_LEN (0x8E) request: USBDBG TX_BUF_LEN (0x8E) write (response field 4, payload 0 bytes): The device does not recognize the command.",
+    "[14:04:03] [WARN] [Board] Disconnected (poller tx drain: USBDBG TX_BUF_LEN (0x8E) request: USBDBG TX_BUF_LEN (0x8E) write (response field 4, payload 0 bytes): The device does not recognize the command.)",
+    "[14:05:03] [DEBUG] [Backend] [canmv-backend] board disconnected source=preview frame_size err=USBDBG command 0x81 request: USBDBG command 0x81 write (response field 12, payload 0 bytes): The device does not recognize the command.",
+    "[14:05:03] [WARN] [Board] Disconnected (preview frame_size: USBDBG command 0x81 request: USBDBG command 0x81 write (response field 12, payload 0 bytes): The device does not recognize the command.)",
+    "[14:08:37] [DEBUG] [Backend] [canmv-backend] board disconnected source=poller tx drain err=USBDBG TX_BUF_LEN (0x8E) response (expected 4 bytes): short read: got 0 of 4 bytes",
+    "[14:08:37] [WARN] [Board] Disconnected (poller tx drain: USBDBG TX_BUF_LEN (0x8E) response (expected 4 bytes): short read: got 0 of 4 bytes)",
+    "[14:22:49] [DEBUG] [Backend] [canmv-backend] board disconnected source=preview frame_size err=USBDBG command 0x81 request: USBDBG command 0x81 write (response field 12, payload 0 bytes): The device does not recognize the command.",
+    "[14:22:49] [WARN] [Board] Disconnected (preview frame_size: USBDBG command 0x81 request: USBDBG command 0x81 write (response field 12, payload 0 bytes): The device does not recognize the command.)"
+  ],
+  "protocol_errors": [
+    "[14:04:02] [ERROR] [Backend] scriptRunning failed after 7593ms: USBDBG command 0xA4 request: USBDBG command 0xA4 write (response field 4, payload 0 bytes): A device which does not exist was specified.",
+    "[14:05:03] [ERROR] [Backend] scriptRunning failed after 8790ms: USBDBG command 0xA4 request: USBDBG command 0xA4 write (response field 4, payload 0 bytes): The device does not recognize the command.",
+    "[14:08:00] [ERROR] [Backend] scriptRunning failed after 4464ms: USBDBG command 0xA4 response (expected 4 bytes): short read: got 0 of 4 bytes",
+    "[14:08:41] [DEBUG] [Backend] [canmv-backend] handshake sync failed: sync: timed out waiting for status marker (discarded 0 bytes)",
+    "[14:08:42] [DEBUG] [Backend] [canmv-backend] handshake firmware probe failed: USBDBG FW_VERSION (0x80) response (expected 12 bytes): short read: got 0 of 12 bytes",
+    "[14:08:47] [DEBUG] [Backend] [canmv-backend] connect rejected: board opened on COM3 but did not respond to any USBDBG handshake command",
+    "[14:08:47] [ERROR] [Backend] connectBoard failed after 6772ms: board opened on COM3 but did not respond to any USBDBG handshake command",
+    "[14:08:47] [ERROR] [Board] Connect failed: board opened on COM3 but did not respond to any USBDBG handshake command"
+  ],
+  "inference": "Concurrent preview/watchdog traffic is a plausible contributor; correlation does not establish a physical USB root cause",
+  "created_utc": "2026-11-12T14:22:56.521517+00:00",
+  "log_sha256": "31e279e296a55a4f137fba5087b49019c2c89c4e2c64edf8c047853af1973081",
+  "source_log": "C:\\Users\\28389\\AppData\\Roaming\\Code\\logs\\20261112T055945\\window1\\exthost\\output_logging_20261112T055947\\2-CanMV.log",
+  "serial_opened": false
+}

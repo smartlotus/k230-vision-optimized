@@ -1,0 +1,21 @@
+
+MPY: soft reboot
+CanMV v1.8-36-gae2f20d(based on Micropython e00a144) on 2026-08-16; k230_canmv_lckfb with K230
+Type "help()" for more information.
+>>> 
+>>> 
+POST_STAGE:load
+POST_STAGE:loaded
+POST_STAGE:read:150528
+POST_STAGE:array
+POST_STAGE:input
+POST_STAGE:decode_begin
+POST_CLEANUP
+Traceback (most recent call last):
+  File "<stdin>", line 17, in <module>
+  File "/sdcard/kopt_20261112d/vision/yolo_candidates.py", line 38, in decode_material_proposals
+  File "/sdcard/kopt_20261112d/vision/yolo_candidates.py", line 62, in _decode_proposals
+ValueError: Expected decoded nonnegative sizes and sigmoid scores, not logits
+CanMV v1.8-36-gae2f20d(based on Micropython e00a144) on 2026-08-16; k230_canmv_lckfb with K230
+Type "help()" for more information.
+>>> 

@@ -1,0 +1,13 @@
+{
+  "installed_extension": "kendryte747.canmv-vscode-0.9.10",
+  "extension_js_sha256": "fa5309825e3f21cc093d264538dfab44789290e3e3dc1099a2aecd1e08482c32",
+  "confirmed_stop_preview_bridge_route": "if (method === Methods.stopPreview.method) {\n      setScriptBusyContext(true);\n      try {\n        await stopPreviewManual();\n        return { id: request3.id, result: {} };\n      } finally {\n        setScriptBusyContext(false);\n      }\n    }\n    setScriptBusyContext(true);\n    try {\n      if (method === Methods.runScript.method || method === Metho",
+  "correction": "MCP stopPreview routes to stopPreviewManual in installed extension; prior claim that only UI suppression works was incorrect.",
+  "observed_disconnect_sources": [
+    "poller tx drain",
+    "preview frame_size"
+  ],
+  "physical_usb_cause": "UNKNOWN",
+  "cooperative_scheduling_hypothesis": "Added exitpoint per hashed chunk and per measured loop; needs native evidence",
+  "user_manual_stop_requested_and_acknowledged": true
+}

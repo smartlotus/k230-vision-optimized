@@ -1,0 +1,22 @@
+{
+  "source_model": {
+    "checkpoint_sha256": "6de5c9b6a6b5e11bda653667721b07a04c3cfcda4a005c5cca6eb614b213f363",
+    "onnx_sha256": "df9c639010e342ff54d5189678c096b9f10e7d3337734b5ad4b081e3bf0e3fdb",
+    "kmodel_sha256": "59fd397f4e60488d98f208bdd2283f847800fda701326b6e0d4f520895f95106",
+    "original_optimizer_updates": 4,
+    "new_optimizer_updates": 0
+  },
+  "confirmed_python_error": "Original strict postprocessor refused raw quantized confidence minimum -0.0003509521; the interpreter returned to REPL and cleanup ran.",
+  "confirmed_host_events": "7 no-frame preview restarts and USBDBG poller/preview transport failures in the inspected host log.",
+  "corrected_inference": "Installed MCP bridge stopPreview invokes stopPreviewManual; requiring a separate UI stop as a distinct backend capability was incorrect.",
+  "root_cause": "UNKNOWN; host preview traffic correlation, runtime cooperative scheduling and native postprocessor are being isolated.",
+  "next_trial": "Prepared224 original image,5 measured iterations after3warmups, explicit manual preview stop via official MCP, cooperative exitpoints; no serial state queries until terminal completion.",
+  "host_tests": {
+    "count": 483,
+    "skipped": 0,
+    "command": "python -B -X utf8 -m tools.export_test_report --output ../docs/validation/kpu-pipeline-20261112/host-tests.json"
+  },
+  "production_validator_changed": false,
+  "confidence_threshold": 0.25,
+  "task_accuracy_verified": false
+}

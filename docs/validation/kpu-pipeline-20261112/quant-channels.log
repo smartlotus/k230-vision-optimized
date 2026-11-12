@@ -1,0 +1,11 @@
+
+MPY: soft reboot
+CanMV v1.8-36-gae2f20d(based on Micropython e00a144) on 2026-08-16; k230_canmv_lckfb with K230
+Type "help()" for more information.
+>>> 
+>>> 
+QUANT_CHANNELS:{"finite": true, "channels": [{"above1": 1029, "minimum": 3.552734, "maximum": 220.25, "channel": 0, "negative": 0}, {"above1": 1026, "minimum": -4.441406, "maximum": 221.125, "channel": 1, "negative": 2}, {"above1": 1029, "minimum": 7.105469, "maximum": 326.75, "channel": 2, "negative": 0}, {"above1": 1029, "minimum": 5.328125, "maximum": 227.375, "channel": 3, "negative": 0}, {"above1": 0, "minimum": -0.0003509521, "maximum": 0.0123291, "channel": 4, "negative": 319}], "shape": [1, 5, 1029], "sample_scores": [0.0007896423, 0.0008049011, 0.0008182526, 0.0008049011, 0.0008049011, 0.0008049011, 0.0008182526, 0.0008182526, 0.0008182526, 0.0008182526]}
+QUANT_CHECK_CLOSED
+CanMV v1.8-36-gae2f20d(based on Micropython e00a144) on 2026-08-16; k230_canmv_lckfb with K230
+Type "help()" for more information.
+>>> 

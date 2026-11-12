@@ -1,0 +1,25 @@
+
+MPY: soft reboot
+CanMV v1.8-36-gae2f20d(based on Micropython e00a144) on 2026-08-16; k230_canmv_lckfb with K230
+Type "help()" for more information.
+>>> 
+>>> 
+GLOBAL_MODEL_LOADED
+GLOBAL_ITER_DONE:0
+GLOBAL_ITER_DONE:1
+GLOBAL_ITER_DONE:2
+GLOBAL_ITER_DONE:3
+GLOBAL_ITER_DONE:4
+GLOBAL_ITER_DONE:5
+GLOBAL_ITER_DONE:6
+GLOBAL_ITER_DONE:7
+GLOBAL_ITER_DONE:8
+GLOBAL_ITER_DONE:9
+GLOBAL_ITER_DONE:10
+GLOBAL_ITER_DONE:11
+GLOBAL_ITER_DONE:12
+GLOBAL_RESULT:{"source": "frozen train image0", "iterations": 10, "raw_validity": {"raw_probability_range_valid": false, "projection_scope": "FILTER_SUBTHRESHOLD_ONLY_TIMING", "task_accuracy_verified": false, "scores_projected": 319, "raw_max_score": 0.0123291, "raw_min_score": -0.0003509521}, "live_camera": false, "proposals": 0, "timings_ms": [[8.132, 10.456, 0.185, 3.812, 23.605], [8.113, 10.469, 0.19, 3.843, 23.634], [8.078, 10.494, 0.182, 3.837, 23.609], [8.22, 10.492, 0.186, 3.821, 23.74], [8.085, 10.461, 0.179, 3.782, 23.528], [8.082, 10.502, 0.186, 3.855, 23.646], [8.098, 10.493, 0.185, 3.842, 23.639], [8.07, 10.634, 0.182, 3.821, 23.727], [8.073, 10.473, 0.181, 3.865, 23.612], [8.052, 10.519, 0.186, 3.81, 23.588]]}
+GLOBAL_CLEANUP
+CanMV v1.8-36-gae2f20d(based on Micropython e00a144) on 2026-08-16; k230_canmv_lckfb with K230
+Type "help()" for more information.
+>>> 

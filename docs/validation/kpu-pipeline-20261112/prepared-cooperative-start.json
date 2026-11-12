@@ -1,0 +1,8 @@
+{
+  "response": {
+    "status": "ok"
+  },
+  "runner_sha256": "c4073dcaf85c7d948d5a6cabc0e2781fa3b3743fbcb5d6fc70201e6d149b70b0",
+  "preview_stop_command_sent": true,
+  "status_polling_during_run": false
+}

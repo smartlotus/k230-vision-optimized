@@ -1,0 +1,36 @@
+{
+  "task": "connection-kpu",
+  "status": "BLOCKED_EXTERNAL_BOARD_POWER_OFF",
+  "user_reported_power_off": true,
+  "board_operations_after_power_off": 0,
+  "last_successful_board_state": {
+    "port": "COM3",
+    "firmware": "v1.8-36",
+    "kpu_only_fps": 95.422237,
+    "kpu_only_images": 4,
+    "kpu_only_iterations": 80,
+    "errors": 0
+  },
+  "full_chain": {
+    "ai2d_kpu_postprocess": "UNKNOWN_INCOMPLETE",
+    "camera_fps": false,
+    "accuracy": false,
+    "reason": "Repeated USBDBG communication loss after model/AI2D stages; final power off stopped further tests"
+  },
+  "connection_evidence": {
+    "preview_no_frame_restarts": 7,
+    "disconnect_records_before_latest": 8,
+    "poller_tx_drain_failures": true,
+    "preview_frame_size_failures": true,
+    "physical_root_cause": "UNKNOWN"
+  },
+  "host_tests": {
+    "run": 486,
+    "skipped": 0,
+    "exit_code": 0,
+    "evidence": "host-tests.json"
+  },
+  "original_profile_changes": 0,
+  "uart_enabled": false,
+  "motors_enabled": false
+}

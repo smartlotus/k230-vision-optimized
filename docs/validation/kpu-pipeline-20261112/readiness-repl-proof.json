@@ -1,0 +1,7 @@
+{
+  "cached_ready": false,
+  "fresh_repl_echo": true,
+  "interpreter_idle_before_probe": true,
+  "readiness_basis": "FRESH_LITERAL_REPL_ECHO",
+  "nonce": "READINESS_c6191d9ae8ea4628"
+}

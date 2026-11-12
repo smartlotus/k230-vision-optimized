@@ -1,0 +1,14 @@
+{
+  "proof": {
+    "cached_ready": false,
+    "fresh_repl_echo": true,
+    "interpreter_idle_before_probe": true,
+    "readiness_basis": "FRESH_LITERAL_REPL_ECHO",
+    "nonce": "READINESS_b33708a262024f04"
+  },
+  "response": {
+    "status": "ok"
+  },
+  "runner_sha256": "1ff08195915e168073c961e4ca82019d8810c36e86ac3a48c5589d24ea2c079c",
+  "serial_polling_during_run": false
+}

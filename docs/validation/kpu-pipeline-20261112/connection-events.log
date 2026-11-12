@@ -1,0 +1,27 @@
+[14:03:51] [INFO] [Preview] Auto-starting
+[14:03:52] [WARN] [Preview] No frames received for startup; restarting preview
+[14:03:53] [INFO] [Preview] Auto-starting
+[14:04:02] [ERROR] [Backend] scriptRunning failed after 7593ms: USBDBG command 0xA4 request: USBDBG command 0xA4 write (response field 4, payload 0 bytes): A device which does not exist was specified.
+[14:04:03] [DEBUG] [Backend] [canmv-backend] board disconnected source=poller tx drain err=USBDBG TX_BUF_LEN (0x8E) request: USBDBG TX_BUF_LEN (0x8E) write (response field 4, payload 0 bytes): The device does not recognize the command.
+[14:04:52] [INFO] [Preview] Auto-starting
+[14:05:02] [WARN] [Session] Request timed out: startPreview after 10000ms
+[14:05:03] [ERROR] [Backend] scriptRunning failed after 8790ms: USBDBG command 0xA4 request: USBDBG command 0xA4 write (response field 4, payload 0 bytes): The device does not recognize the command.
+[14:05:03] [DEBUG] [Backend] [canmv-backend] board disconnected source=preview frame_size err=USBDBG command 0x81 request: USBDBG command 0x81 write (response field 12, payload 0 bytes): The device does not recognize the command.
+[14:07:51] [INFO] [Preview] Auto-starting
+[14:07:53] [WARN] [Preview] No frames received for startup; restarting preview
+[14:07:54] [INFO] [Preview] Auto-starting
+[14:07:59] [WARN] [Preview] No frames received for startup; restarting preview
+[14:08:00] [ERROR] [Backend] scriptRunning failed after 4464ms: USBDBG command 0xA4 response (expected 4 bytes): short read: got 0 of 4 bytes
+[14:08:02] [INFO] [Preview] Auto-starting
+[14:08:07] [WARN] [Preview] No frames received for startup; restarting preview
+[14:08:08] [INFO] [Preview] Auto-starting
+[14:08:12] [WARN] [Preview] No frames received for startup; restarting preview
+[14:08:13] [INFO] [Preview] Auto-starting
+[14:08:16] [WARN] [Preview] No frames received for startup; restarting preview
+[14:08:17] [INFO] [Preview] Auto-starting
+[14:08:22] [WARN] [Preview] No frames received for startup; restarting preview
+[14:08:37] [DEBUG] [Backend] [canmv-backend] board disconnected source=poller tx drain err=USBDBG TX_BUF_LEN (0x8E) response (expected 4 bytes): short read: got 0 of 4 bytes
+[14:22:33] [INFO] [Preview] Auto-starting
+[14:22:43] [WARN] [Session] Request timed out: startPreview after 10000ms
+[14:22:43] [INFO] [Preview] Auto-starting
+[14:22:49] [DEBUG] [Backend] [canmv-backend] board disconnected source=preview frame_size err=USBDBG command 0x81 request: USBDBG command 0x81 write (response field 12, payload 0 bytes): The device does not recognize the command.

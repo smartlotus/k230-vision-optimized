@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "connection-kpu",
+  "title": "Diagnose CanMV connection losses and benchmark staged frozen-image KPU pipeline",
+  "paths": [
+    "k230_transport_mvp/tools/kpu_pipeline_probe.py",
+    "k230_transport_mvp/tools/check_canmv_connection.py",
+    "k230_transport_mvp/tests/test_kpu_pipeline_probe.py",
+    "docs/validation/kpu-pipeline-20261112"
+  ],
+  "lane": "serial",
+  "resources": [
+    "COM3"
+  ],
+  "depends": [],
+  "acceptance": [
+    "Serialized diagnostic transcript identifies disconnect stage; native finite pipeline timing or explicit unresolved failure; no original profile/UART/motion changes; qualified tests and remote checkpoint"
+  ],
+  "branch": "ops/connection-kpu",
+  "state": "blocked",
+  "claimed": true,
+  "agent": "codex",
+  "session": "connection-kpu-20261112-a",
+  "revision": 3,
+  "handoff": ".ops/handoffs/connection-kpu/20261112T145019-28893f5a.json",
+  "updated_at": "2026-11-12T14:50:21+00:00"
+}
