@@ -19,10 +19,10 @@
   ],
   "branch": "ops/connection-kpu",
   "state": "blocked",
-  "claimed": false,
+  "claimed": true,
   "agent": "codex",
-  "session": "connection-kpu-20261113-c",
-  "revision": 10,
-  "handoff": ".ops/handoffs/connection-kpu/20261113T042832-cd816aec.json",
-  "updated_at": "2026-11-13T04:28:53+00:00"
+  "session": "connection-kpu-20261113-d",
+  "revision": 12,
+  "handoff": ".ops/handoffs/connection-kpu/20261113T043742-a33304c5.json",
+  "updated_at": "2026-11-13T04:37:44+00:00"
 }

@@ -1,0 +1,38 @@
+{
+  "completed": [
+    "Fresh REPL echo succeeded before the retry.",
+    "Isolated model load completed and reported one input and one output.",
+    "Isolated KPU-only frozen-input test completed 8 iterations at 93.29881 FPS.",
+    "Combined AI2D-to-KPU retry reproduced the transport loss boundary and preserved the contradictory board_info versus scriptRunning evidence."
+  ],
+  "remaining": [
+    "Combined AI2D plus KPU plus postprocess receipt is still unavailable.",
+    "Camera FPS, resource percentage, and accuracy remain unverified.",
+    "Physical USB, power, firmware, and runtime root cause remain UNKNOWN."
+  ],
+  "decisions": [
+    "Do not treat the isolated 93.30 FPS result as whole-system FPS.",
+    "Do not retry the board again in this checkpoint after USBDBG command failure.",
+    "Preserve original profiles, UART, motion settings, and old files."
+  ],
+  "risks": [
+    "board_info can report cached ready=true while scriptRunning fails with a USBDBG device error; readiness must require a fresh command/REPL proof."
+  ],
+  "next_steps": [
+    "After a physical reset, run one model-load-only probe and one combined probe in separate fresh sessions, with no concurrent status polling during execution."
+  ],
+  "verification": [
+    {
+      "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_kpu*.py'",
+      "exit_code": 0,
+      "summary": "9 tests passed",
+      "evidence": ["k230_transport_mvp/tests/test_kpu_pipeline_probe.py", "k230_transport_mvp/tests/test_kpu_probe_cleanup.py"]
+    },
+    {
+      "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_frozen_model_fps.py'",
+      "exit_code": 0,
+      "summary": "3 tests passed",
+      "evidence": ["k230_transport_mvp/tests/test_frozen_model_fps.py"]
+    }
+  ]
+}

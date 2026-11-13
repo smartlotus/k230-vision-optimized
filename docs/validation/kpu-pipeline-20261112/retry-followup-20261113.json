@@ -1,0 +1,46 @@
+{
+  "scope": "RETRY_STAGED_MODEL_AND_COMBINED_PIPELINE",
+  "preflight": {
+    "port": "COM3",
+    "board": "LCKFB-LSPI-K230-1G-CanMV",
+    "firmware": "v1.8-36",
+    "board_info_ready_before": true,
+    "script_running_before": false,
+    "fresh_repl_echo": "K230_RETRY_20261113",
+    "preview_started": false
+  },
+  "stages": [
+    {
+      "id": "load-only",
+      "status": "PASS",
+      "transcript": ["LOAD_ONLY_BEGIN", "LOAD_ONLY_KPU_OBJECT", "LOAD_ONLY_MODEL_LOADED", "LOAD_ONLY_INPUTS:1", "LOAD_ONLY_OUTPUTS:1", "LOAD_ONLY_CLOSED"]
+    },
+    {
+      "id": "kpu-only-one-frozen-input",
+      "status": "PASS_TIMING_ONLY",
+      "iterations": 8,
+      "mean_ms": 10.71825,
+      "fps": 93.29881,
+      "camera": false,
+      "accuracy": false,
+      "transcript": ["KPU_ONE_BEGIN", "KPU_ONE_MODEL_LOADED", "KPU_ONE_INPUT_READY", "KPU_ONE_RESULT", "KPU_ONE_CLOSED"]
+    },
+    {
+      "id": "ai2d-to-kpu-zero-input",
+      "status": "DISCONNECTED_UNKNOWN",
+      "last_visible_stage": "AK_ZERO_BEGIN",
+      "missing_stage": "AK_ZERO_MODEL_LOADED",
+      "script_running_afterward": "USBDBG command 0xA4 write: A device which does not exist was specified",
+      "board_info_afterward": "connected=true, ready=true (cached identity; command path failed)",
+      "camera": false,
+      "accuracy": false
+    }
+  ],
+  "conclusion": "Model load and KPU-only inference can pass in isolated fresh scripts, while the combined AI2D-to-KPU script loses transport/output at or before model-load return. This is intermittent runtime/USBDBG/resource evidence, not proof of model corruption or a physical root cause.",
+  "preservation": {
+    "original_profile_changed": false,
+    "uart_enabled": false,
+    "motors_enabled": false,
+    "old_files_overwritten": false
+  }
+}

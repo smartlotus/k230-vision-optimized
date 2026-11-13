@@ -29,6 +29,12 @@
 
 本轮没有再次重试板卡，也没有修改原配置、UART、运动控制或旧文件。详见 `stable-reconnect-followup-20261113.json` 与 `stable-reconnect-followup-20261113.log`。
 
+## 2026-11-13 再次分段复测
+
+新鲜 REPL 回读成功后，单独的 `load_kmodel()` 测试完整通过，随后单独 KPU 测试 8 次完成，平均 10.71825 ms、约 93.30 FPS。把 AI2D 输出接入 KPU 后，只留下 `AK_ZERO_BEGIN`，没有出现 `AK_ZERO_MODEL_LOADED`；之后 `scriptRunning` 报 USBDBG 设备不存在。`board_info` 仍返回 `connected=true/ready=true`，说明身份缓存与实际命令通道已经不一致。
+
+本轮结果见 `retry-followup-20261113.json` 与 `retry-followup-20261113.log`。这进一步支持“组合脚本触发运行时/USBDBG/资源状态问题”的判断，但不能据此认定物理根因。
+
 另外保留了以下阶段结果：
 
 - 原严格后处理拒绝量化输出的微小负置信度（最小约-0.00035），随后返回REPL。

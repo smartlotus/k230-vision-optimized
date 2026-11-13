@@ -1,0 +1,11 @@
+RETRY FOLLOW-UP 2026-11-13
+
+Preflight: COM3, K230 v1.8-36, board_info ready=true, scriptRunning=false, preview not started.
+Fresh REPL echo: K230_RETRY_20261113.
+
+LOAD_ONLY: LOAD_ONLY_BEGIN -> LOAD_ONLY_KPU_OBJECT -> LOAD_ONLY_MODEL_LOADED -> INPUTS:1 -> OUTPUTS:1 -> CLOSED.
+KPU_ONE: model loaded, input ready, 8 KPU iterations completed; mean 10.71825 ms, 93.29881 FPS. Camera and accuracy excluded.
+
+AI2D_TO_KPU_ZERO: only AK_ZERO_BEGIN was visible. AK_ZERO_MODEL_LOADED did not appear.
+The subsequent scriptRunning request failed with USBDBG command 0xA4 write: A device which does not exist was specified.
+board_info still reported connected=true/ready=true, so the identity cache and command path disagreed. No further board retries were made.
