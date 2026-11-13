@@ -1,0 +1,14 @@
+HOST REAL PHOTO ACCURACY 2026-11-13
+
+Evaluated the existing material.onnx against approved val/test screenshots from material_manifest_reviewed_r4_20261110.json.
+Dataset: 2 val images + 1 test image, 5 approved visible_top boxes total.
+Threshold: confidence 0.25; NMS IoU 0.45; match threshold IoU 0.50.
+
+Results:
+- val image 48b365d9: 1 GT, 0 predictions, max score 0.0126711.
+- val image 86d28d99: 1 GT, 0 predictions, max score 0.0126818.
+- test image cfa68398: 3 GT, 0 predictions, max score 0.0126751.
+
+Totals: TP=0, FP=0, FN=5, recall=0.0, precision at threshold=0.0.
+The four train images also had max scores only 0.012613-0.0126465, so the pilot model is not usable for competition recognition.
+This is host ONNX evaluation, not a KPU board accuracy claim.

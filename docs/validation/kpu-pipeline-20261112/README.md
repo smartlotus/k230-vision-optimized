@@ -61,6 +61,10 @@
 
 项目提供 `canmv-transport-settings.json`，建议复制到工作区 `.vscode/settings.json`，将 `canmv.baudRate` 设为 `2000000`，并保持预览关闭、单一控制端。2 Mbps 下，流式真实图路径再次通过：读取 691200 字节、AI2D 0.636 ms、KPU 10.982 ms、总计 11.618 ms；等待 25 秒后仍能保持 `ready=true`，并成功回读 REPL nonce。该结果验证了低波特率工作区配置是有效规避方案，但没有修复扩展/backend 仍可能发送的 `TX_BUF_LEN` 不兼容命令。详见 `low-baud-followup-20261113.json` 与 `low-baud-followup-20261113.log`。
 
+## 真实截图准确率复测
+
+使用已有人工审核的 2 张验证图和 1 张测试图，共 5 个 visible_top 标注框，对当前 `material.onnx` 做主机推理：置信度阈值 0.25 下预测框为 0，TP=0、FN=5、IoU@0.5 召回率为 0；最高分只有约 0.0127。4 张训练图的最高分也只有约 0.0126。这个结果说明现有小测试模型不能作为比赛模型，详见 `real-photo-accuracy-20261113.json` 与 `real-photo-accuracy-20261113.log`。该报告是 ONNX 主机评估，不冒充 KPU 板端准确率。
+
 另外保留了以下阶段结果：
 
 - 原严格后处理拒绝量化输出的微小负置信度（最小约-0.00035），随后返回REPL。

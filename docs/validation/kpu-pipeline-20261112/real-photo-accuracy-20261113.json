@@ -1,0 +1,64 @@
+{
+  "scope": "HOST_ONNX_REAL_PHOTO_ACCURACY_SCREENSHOT_EVALUATION",
+  "model": {
+    "path": ".ops/local/frozen-model-20261112-p1/onnx-source/material.onnx",
+    "kmodel_sha256": "59fd397f4e60488d98f208bdd2283f847800fda701326b6e0d4f520895f95106",
+    "class": "visible_top",
+    "threshold": 0.25,
+    "nms": 0.45
+  },
+  "dataset": {
+    "source": "material_manifest_reviewed_r4_20261110.json",
+    "evaluated_splits": ["val", "test"],
+    "images": 3,
+    "ground_truth_boxes": 5,
+    "approved_labels_only": true
+  },
+  "rows": [
+    {
+      "split": "val",
+      "image_id": "48b365d9c5ff60085a0f835f974986f91321e91a752b5593bca9a2d57f662b35",
+      "ground_truth": 1,
+      "predictions_at_0_25": 0,
+      "tp_iou50": 0,
+      "fp": 0,
+      "fn": 1,
+      "max_score": 0.0126711
+    },
+    {
+      "split": "val",
+      "image_id": "86d28d9912c476108454dad00cfaefb1bc4926d295188153fa58d8d034ed88dd",
+      "ground_truth": 1,
+      "predictions_at_0_25": 0,
+      "tp_iou50": 0,
+      "fp": 0,
+      "fn": 1,
+      "max_score": 0.0126818
+    },
+    {
+      "split": "test",
+      "image_id": "cfa68398650971a91353d320bed5516cb0ba704e55ee565d456abbb76ba19ab2",
+      "ground_truth": 3,
+      "predictions_at_0_25": 0,
+      "tp_iou50": 0,
+      "fp": 0,
+      "fn": 3,
+      "max_score": 0.0126751
+    }
+  ],
+  "totals": {
+    "tp_iou50": 0,
+    "fp": 0,
+    "fn": 5,
+    "recall_iou50": 0.0,
+    "precision_at_threshold": 0.0,
+    "accuracy_status": "NOT_ACCEPTED"
+  },
+  "train_sanity": {
+    "images": 4,
+    "max_score_range": [0.012613, 0.0126465],
+    "threshold_predictions": 0,
+    "interpretation": "The pilot model is not producing usable confidence on its own training images."
+  },
+  "claim_boundary": "This is host ONNX evaluation on labeled screenshots. It is not a KPU board accuracy receipt, but it is sufficient to reject the current pilot model as a competition model."
+}

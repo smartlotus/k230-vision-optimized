@@ -1,0 +1,31 @@
+{
+  "completed": [
+    "Located the existing approved real-photo val/test screenshots and bounding-box annotations.",
+    "Evaluated the existing material.onnx on 2 val images and 1 test image with 5 labeled boxes.",
+    "Measured TP=0, FP=0, FN=5, recall=0 at IoU@0.5 and confidence 0.25.",
+    "Confirmed the four training images also produce maximum scores around 0.0126, rejecting the pilot model for competition use."
+  ],
+  "remaining": [
+    "This is host ONNX accuracy evidence; KPU-native board accuracy remains unverified.",
+    "A new competition-specific dataset and trained model are required."
+  ],
+  "decisions": [
+    "Use the existing screenshots as labeled evaluation data for the next model.",
+    "Do not report the current pilot model as accurate or competition-ready.",
+    "Keep speed measurements separate from accuracy metrics."
+  ],
+  "risks": [
+    "The current kmodel/ONNX output contract and quantization behavior may need revalidation after retraining."
+  ],
+  "next_steps": [
+    "Define the competition label set, train/val/test split, and output contract before starting the new training run."
+  ],
+  "verification": [
+    {
+      "command": "Host ONNX evaluation on approved val/test screenshots",
+      "exit_code": 0,
+      "summary": "3 images, 5 GT boxes, TP=0, FN=5, max confidence about 0.0127",
+      "evidence": ["docs/validation/kpu-pipeline-20261112/real-photo-accuracy-20261113.json", "docs/validation/kpu-pipeline-20261112/real-photo-accuracy-20261113.log"]
+    }
+  ]
+}
