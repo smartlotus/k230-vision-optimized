@@ -1,0 +1,30 @@
+{
+  "scope": "FIXED_STREAMING_REAL_IMAGE_AI2D_KPU",
+  "preflight": {
+    "port": "COM3",
+    "firmware": "v1.8-36",
+    "ready": true,
+    "running": false,
+    "preview_stopped": true
+  },
+  "single_frame": {
+    "status": "PASS_RUNTIME_ONLY",
+    "read_method": "image.Image + stream.readinto(frame.bytearray())",
+    "read_bytes": 691200,
+    "ai2d_ms": 0.634,
+    "kpu_ms": 10.966,
+    "total_ms": 11.6,
+    "output_shape": [1, 5, 1029],
+    "camera": false,
+    "accuracy": false,
+    "cleanup": "STREAM_CLOSED"
+  },
+  "short_loop": {
+    "status": "INCOMPLETE_NO_RECEIPT",
+    "requested_iterations": 5,
+    "terminal_output": "empty after run_script returned status=ok",
+    "board_info_afterward": "connected=true, ready=true",
+    "accepted_as_fps": false
+  },
+  "conclusion": "The repaired streaming real-image path crosses the previous large-read disconnect boundary for one complete frame. A repeat-loop receipt is still required before claiming sustained FPS."
+}

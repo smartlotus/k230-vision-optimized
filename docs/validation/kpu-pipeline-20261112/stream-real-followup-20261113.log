@@ -1,0 +1,16 @@
+STREAMING REAL IMAGE FOLLOW-UP 2026-11-13
+
+Preflight: COM3 / K230 v1.8-36 / ready=true / scriptRunning=false / preview stopped.
+
+Single-frame fixed path:
+STREAM_MODEL_LOADED
+STREAM_INPUT_BOUND
+STREAM_READ:691200
+STREAM_SOURCE_READY
+STREAM_AI2D_BUILT
+STREAM_AI2D_RUN
+STREAM_KPU_RUN
+STREAM_RESULT: ai2d=0.634 ms, kpu=10.966 ms, total=11.6 ms, shape=[1,5,1029]
+STREAM_CLOSED
+
+The following 5-iteration loop produced no terminal receipt. Board identity remained connected=true/ready=true, so the loop is retained as incomplete and is not used as a sustained FPS result.

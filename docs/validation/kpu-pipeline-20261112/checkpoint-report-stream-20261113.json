@@ -1,0 +1,37 @@
+{
+  "completed": [
+    "Verified the repaired streaming real-image path on COM3 with a complete one-frame receipt.",
+    "Read all 691200 bytes via readinto, completed AI2D, KPU, output readback, and cleanup.",
+    "Measured 0.634 ms AI2D, 10.966 ms KPU, and 11.6 ms total for the single frame.",
+    "Preserved the subsequent incomplete loop as UNKNOWN instead of converting it into sustained FPS."
+  ],
+  "remaining": [
+    "Sustained multi-frame FPS with real input and postprocess still needs a complete terminal receipt.",
+    "Camera capture, display, and accuracy remain unverified."
+  ],
+  "decisions": [
+    "Keep streaming readinto and explicit input binding as the active fixed path.",
+    "Do not claim 86 FPS or 25 FPS from the single-frame total alone.",
+    "Do not treat ready=true identity without a loop receipt as execution success."
+  ],
+  "risks": [
+    "The background USBDBG poller may still interrupt longer sessions even after the memory-safe code path passes one frame."
+  ],
+  "next_steps": [
+    "After the transport poller is isolated or disabled, repeat a bounded 5-frame streaming loop and then add scalar postprocess."
+  ],
+  "verification": [
+    {
+      "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_kpu*.py'",
+      "exit_code": 0,
+      "summary": "10 tests passed",
+      "evidence": ["k230_transport_mvp/tests/test_kpu_pipeline_probe.py"]
+    },
+    {
+      "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_frozen_model_fps.py'",
+      "exit_code": 0,
+      "summary": "3 tests passed",
+      "evidence": ["k230_transport_mvp/tests/test_frozen_model_fps.py"]
+    }
+  ]
+}

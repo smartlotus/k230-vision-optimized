@@ -53,6 +53,10 @@
 
 随后用 `f.read()` 一次性读取 691200 字节板上 RGB888P 冻结图时，板卡掉线，后续 REPL 回读为 `Not connected`，重连 1.5 秒仍未恢复 `ready`。这支持“大块临时分配/运行时压力”可能触发复位，但它不是主机高速上传；项目探针仍保留 `image.Image + readinto` 流式读取路径。详见 `transport-memory-followup-20261113.json` 与 `transport-memory-followup-20261113.log`。
 
+## 流式真实图复测
+
+修复后的流式真实图路径已完成单帧收据：读取 691200 字节、显式绑定输入、AI2D、KPU、输出读取和清理全部完成，总耗时 11.6 ms（AI2D 0.634 ms，KPU 10.966 ms），输出形状 `[1,5,1029]`。后续 5 次循环没有形成终端收据，虽然板卡身份仍为 `ready=true`，因此不把它记为持续 FPS。详见 `stream-real-followup-20261113.json` 与 `stream-real-followup-20261113.log`。
+
 另外保留了以下阶段结果：
 
 - 原严格后处理拒绝量化输出的微小负置信度（最小约-0.00035），随后返回REPL。
