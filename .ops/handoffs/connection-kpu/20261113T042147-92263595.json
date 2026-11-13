@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "task": "connection-kpu",
+  "created_at": "2026-11-13T04:21:47+00:00",
+  "agent": "codex",
+  "session": "connection-kpu-20261112-b",
+  "branch": "ops/connection-kpu",
+  "head": "09e82a32eae61e2d8651421daf8a9d2568e316ba",
+  "state": "blocked",
+  "files": {
+    "docs/validation/kpu-pipeline-20261112/README.md": "77a7d7e4c156ddcecfe1e8a20b959d77f72aaea334663729cf7fd31e6337bd66",
+    "docs/validation/kpu-pipeline-20261112/checkpoint-report-20261112.json": "ded305140f127cb1de19febb31fe27e0602584e3421601a09f083b1141815b23",
+    "docs/validation/kpu-pipeline-20261112/connection-log-followup-20261112.json": "af08f73d64147d1cdecef197558a916b4f5ab30155ab2a3a933dcd8e1b404f00",
+    "docs/validation/kpu-pipeline-20261112/reconnect-followup-20261112.json": "401cc4c0ac90375eaec8ee16bad8520b9197ebc3b880744ee67b65da6341f76b",
+    "docs/validation/kpu-pipeline-20261112/reconnect-followup-20261112.log": "15f3e4d3db4cfadad34b7c1819a75dcabcf836001b09b3fccdf09be846935dd0"
+  },
+  "git_blob_oids": {
+    "docs/validation/kpu-pipeline-20261112/README.md": "72722712b3d9b7a9f3bff92237463b0cb6f9b1be",
+    "docs/validation/kpu-pipeline-20261112/checkpoint-report-20261112.json": "e2a84198211f77dde2b1fcf6d41fbf5ec1705119",
+    "docs/validation/kpu-pipeline-20261112/connection-log-followup-20261112.json": "043345c18fb06bbbe0ea311fbb886a4973855256",
+    "docs/validation/kpu-pipeline-20261112/reconnect-followup-20261112.json": "aa564dff5c29fc6ffdb75bda6b467efc577219f1",
+    "docs/validation/kpu-pipeline-20261112/reconnect-followup-20261112.log": "19376412e4dd5b46df174e0717c103806bf90b8f"
+  },
+  "scope_git_blob_oids": {
+    "docs/validation/kpu-pipeline-20261112/README.md": "72722712b3d9b7a9f3bff92237463b0cb6f9b1be",
+    "docs/validation/kpu-pipeline-20261112/ai2d-global-runner.py": "6535c9b845702a40a5e2f6e5b2ab827b6ff46881",
+    "docs/validation/kpu-pipeline-20261112/ai2d-global-start.json": "0f9786fcf51330fea9b2d0cf2db6cb598d20c2dc",
+    "docs/validation/kpu-pipeline-20261112/checkpoint-report-20261112.json": "e2a84198211f77dde2b1fcf6d41fbf5ec1705119",
+    "docs/validation/kpu-pipeline-20261112/connection-events.log": "f0d443f7eb2c096656940d5531e19ae49d24bfe1",
+    "docs/validation/kpu-pipeline-20261112/connection-log-after-prepared.json": "a385defc2b0ddadab8daa2ba19e128f5a49b463e",
+    "docs/validation/kpu-pipeline-20261112/connection-log-before.json": "d23a93f91fdd93a18761f6b7bc966101305f3687",
+    "docs/validation/kpu-pipeline-20261112/connection-log-followup-20261112.json": "043345c18fb06bbbe0ea311fbb886a4973855256",
+    "docs/validation/kpu-pipeline-20261112/diagnostic-state.json": "fda5f5db7c877e67afd0b8afd31fb41c59ca8a6b",
+    "docs/validation/kpu-pipeline-20261112/gc-iteration-partial.log": "e46e1de9610579985f41c3e60668669896d79517",
+    "docs/validation/kpu-pipeline-20261112/gc-per-iteration-runner.py": "10d50a9eb11706e084b614f83352c57203e9a839",
+    "docs/validation/kpu-pipeline-20261112/gc-per-iteration-start.json": "47d2fb009a872c4b0a07e89deae94c3ffa2d0f0b",
+    "docs/validation/kpu-pipeline-20261112/global-owner-runner.py": "061b8317ef31cf226d90cc41390ff07386c35565",
+    "docs/validation/kpu-pipeline-20261112/global-owner-success.log": "b9a364a82cc7805cd23c3eef4ab16ab80f4119d2",
+    "docs/validation/kpu-pipeline-20261112/host-route-inspection.json": "e406548ccebe4a20ee71e1af42324bec89750bec",
+    "docs/validation/kpu-pipeline-20261112/host-tests.json": "cbc5016383b6f8ed23a0694af0c2e4cc4df91307",
+    "docs/validation/kpu-pipeline-20261112/host-tests.log": "3f7616853d6cac3afabc37dac9392f86256c3297",
+    "docs/validation/kpu-pipeline-20261112/no-active-telemetry-partial.log": "e46e1de9610579985f41c3e60668669896d79517",
+    "docs/validation/kpu-pipeline-20261112/no-active-telemetry-runner.py": "a96d74688e8934500119a07a526a84667bb5eadc",
+    "docs/validation/kpu-pipeline-20261112/no-active-telemetry-start.json": "9fb18814178865876000329ac15e5d3f82650680",
+    "docs/validation/kpu-pipeline-20261112/no-array-post-runner.py": "438507b1f8e023918eeba922cc68a25322625623",
+    "docs/validation/kpu-pipeline-20261112/postprocess-first.log": "7b205597fab1ae64f24fb4cbef20883cca0ca181",
+    "docs/validation/kpu-pipeline-20261112/prepared-attempt01-partial.log": "a9b5c39d67af280d4de34f1f495f3b15dc2f2c8e",
+    "docs/validation/kpu-pipeline-20261112/prepared-cooperative-partial.log": "9711a83227aea3ad39301282ad23fd7975c3caff",
+    "docs/validation/kpu-pipeline-20261112/prepared-cooperative-runner.py": "fbc6f3d20cfe7092a84ce6a3b4ebcf49a90aa1ae",
+    "docs/validation/kpu-pipeline-20261112/prepared-cooperative-start.json": "53dda87d8a72bdede7cae95e349ac6b29a2505c8",
+    "docs/validation/kpu-pipeline-20261112/prepared-runner.py": "ee0d2aa3b730bc12cbd783863984e9831cda16cc",
+    "docs/validation/kpu-pipeline-20261112/prepared-start.json": "522e5317c7fddbeff17952a6519d53ce02cc0637",
+    "docs/validation/kpu-pipeline-20261112/progress-final.json": "0c9e66f8fc3f56fc56f4ff1f49d31f640adb6b50",
+    "docs/validation/kpu-pipeline-20261112/quant-channels-runner.py": "a077db6fcb5cb7e7597171271ee23133dd4af905",
+    "docs/validation/kpu-pipeline-20261112/quant-channels.log": "bc7211be365674d45b7a22ae3d252b9192682066",
+    "docs/validation/kpu-pipeline-20261112/readiness-repl-proof.json": "530098edab12727ca62904c91d1328f97a9b3ae7",
+    "docs/validation/kpu-pipeline-20261112/reconnect-followup-20261112.json": "aa564dff5c29fc6ffdb75bda6b467efc577219f1",
+    "docs/validation/kpu-pipeline-20261112/reconnect-followup-20261112.log": "19376412e4dd5b46df174e0717c103806bf90b8f",
+    "docs/validation/kpu-pipeline-20261112/record-diagnostic-partial.log": "80355fec435b949a75dd657d0263ce28ade1c28b",
+    "docs/validation/kpu-pipeline-20261112/record-diagnostic-runner.py": "5ca1131fadfb4ccbc4f328d254e9a5a6ff6b6094",
+    "docs/validation/kpu-pipeline-20261112/retained-output-partial.log": "e46e1de9610579985f41c3e60668669896d79517",
+    "docs/validation/kpu-pipeline-20261112/retained-output-runner.py": "3c9cab89d29f9dd7da3d51922a81e65aff69562f",
+    "docs/validation/kpu-pipeline-20261112/retained-output-start.json": "0f4c386163d9d5cdd77d4a75ebe358e1c35ef33f",
+    "docs/validation/kpu-pipeline-20261112/scalar-only-partial.log": "650926dd4946d98cde5664bb1215429ebf80bd24",
+    "docs/validation/kpu-pipeline-20261112/scalar-post-partial.log": "80355fec435b949a75dd657d0263ce28ade1c28b",
+    "docs/validation/kpu-pipeline-20261112/scalar-post-runner.py": "912d87fe5b8754ffcaea8710b80ed139e1811ff8",
+    "docs/validation/kpu-pipeline-20261112/scalar-post-start.json": "723c0df87c8ea24e50048385ee48f255b96842be",
+    "k230_transport_mvp/tests/test_kpu_pipeline_probe.py": "fbe19e02f32aee589be579debb8faa7998a99f33",
+    "k230_transport_mvp/tools/check_canmv_connection.py": "aaa1ee8e8f77b9f2a12d837373926b76fd077f69",
+    "k230_transport_mvp/tools/kpu_pipeline_probe.py": "1cb4dcd83ec9e82be377be15bed0ff29eb2b0ff0"
+  },
+  "scope_fingerprints": {
+    "docs/validation/kpu-pipeline-20261112/README.md": "77a7d7e4c156ddcecfe1e8a20b959d77f72aaea334663729cf7fd31e6337bd66",
+    "docs/validation/kpu-pipeline-20261112/ai2d-global-runner.py": "ec312cd7fa14b51743d38636738fed80e8cf4a3070247965a5d2d0369ab6bd85",
+    "docs/validation/kpu-pipeline-20261112/ai2d-global-start.json": "16e38326846911565b0c616b8dd65c4171fd2b5054fc791be857c6677f16d866",
+    "docs/validation/kpu-pipeline-20261112/checkpoint-report-20261112.json": "ded305140f127cb1de19febb31fe27e0602584e3421601a09f083b1141815b23",
+    "docs/validation/kpu-pipeline-20261112/connection-events.log": "596911c19e321252fbd21214c2d971a6e782e84feecd06dc77def56cf83c932a",
+    "docs/validation/kpu-pipeline-20261112/connection-log-after-prepared.json": "b618180aff9fc3878d7ef7f51568f0ead995caace9543dc8e242040d1837b60e",
+    "docs/validation/kpu-pipeline-20261112/connection-log-before.json": "71da1d7b5a06321bdb8186eeedff42d32bbe0098e693b831cb219391ffdce25c",
+    "docs/validation/kpu-pipeline-20261112/connection-log-followup-20261112.json": "af08f73d64147d1cdecef197558a916b4f5ab30155ab2a3a933dcd8e1b404f00",
+    "docs/validation/kpu-pipeline-20261112/diagnostic-state.json": "9c1c2209928deea592208a3dfa1e3de417175eb5691c0b371fe391115d04118a",
+    "docs/validation/kpu-pipeline-20261112/gc-iteration-partial.log": "9957c68e077cce55daea578a6c88b4591227fc6a4d9e904bdb4bf533e06ffe16",
+    "docs/validation/kpu-pipeline-20261112/gc-per-iteration-runner.py": "554cdb9fed823c942d72315e6638b70940a09f790cd973956cd18f5354b7bf73",
+    "docs/validation/kpu-pipeline-20261112/gc-per-iteration-start.json": "ea34902566b742f9dcf912bc620c56de545e89bf42f9b707d7cda11546d916d9",
+    "docs/validation/kpu-pipeline-20261112/global-owner-runner.py": "62eeadfd164a34d44d8c0f33bd17bbdf4a160f59f79e54353e86ebf6bd28959f",
+    "docs/validation/kpu-pipeline-20261112/global-owner-success.log": "01cda9d430627be1b118ccf78f57c0985c1d21a4d089c1584be586764471fef6",
+    "docs/validation/kpu-pipeline-20261112/host-route-inspection.json": "3096ea00ce856c423f1cde53192a936491643c8b3396b38b1102b32ef40909f4",
+    "docs/validation/kpu-pipeline-20261112/host-tests.json": "fa88549472df8c6a86bd23b053ce9783d49383acdaf17cb38ce17c5e44eb15c0",
+    "docs/validation/kpu-pipeline-20261112/host-tests.log": "48cccbea661a0c046fca96a95b07dfd716ed855a6a2a591316fae251166bb1dc",
+    "docs/validation/kpu-pipeline-20261112/no-active-telemetry-partial.log": "9957c68e077cce55daea578a6c88b4591227fc6a4d9e904bdb4bf533e06ffe16",
+    "docs/validation/kpu-pipeline-20261112/no-active-telemetry-runner.py": "bd85e59cbc4d69bf2563bc56a3eee473e501169d54dcc3ed4a0a5cf284d357ed",
+    "docs/validation/kpu-pipeline-20261112/no-active-telemetry-start.json": "e31ce84fed61921cfb6200ee0fa8799151a33fd4379476da0fb2bae696eded7e",
+    "docs/validation/kpu-pipeline-20261112/no-array-post-runner.py": "c412f14960e4023e00e5d89c6484eca044140624ea6be27646cb0ae36a1d6f4e",
+    "docs/validation/kpu-pipeline-20261112/postprocess-first.log": "86371faf2c0b7ac3be5a713e097807c1e6ec1cbd9848830a719debd1aaaee1de",
+    "docs/validation/kpu-pipeline-20261112/prepared-attempt01-partial.log": "5b0c2cbfa541df6bb641d84efeaae3593274970f410aa3b6487d5af9980142e6",
+    "docs/validation/kpu-pipeline-20261112/prepared-cooperative-partial.log": "0b63b38542cbe9e65fd0c711a4d8545641df298c685344b8893e8be81bdbe7f7",
+    "docs/validation/kpu-pipeline-20261112/prepared-cooperative-runner.py": "035352927e3480511eb32067367ec7d7cf569960956b05c12577c86ab3c73124",
+    "docs/validation/kpu-pipeline-20261112/prepared-cooperative-start.json": "636ff2df1843657660c455fd6739d4dc1a548a4ed6a0a892d52e1015ecd87787",
+    "docs/validation/kpu-pipeline-20261112/prepared-runner.py": "35b8d8523c32841ab23d12f37b1eac3a7ed043c9da32e2ca3bd35deca3a706dc",
+    "docs/validation/kpu-pipeline-20261112/prepared-start.json": "f7cf80f0275257e1248b5d52ff7ff0a88a36efb3ae1589b57ef6a67902cfa5c2",
+    "docs/validation/kpu-pipeline-20261112/progress-final.json": "01a86b36234c273ae08d9840f34403879241eed79c60424a9f82ce9cc0f3d7bd",
+    "docs/validation/kpu-pipeline-20261112/quant-channels-runner.py": "bd393f32b7d9a48a97122bcace11b7f65e8f264da946f0e9ba1daaac6711a82b",
+    "docs/validation/kpu-pipeline-20261112/quant-channels.log": "67644282c67cb0b57f4cccb3fb0274bdd9f24fd8a6535c147899636d6cac64b8",
+    "docs/validation/kpu-pipeline-20261112/readiness-repl-proof.json": "64b1d39d0d0e2236d495b3b9c99a68f8ecf0724a00a3f6e70e11c09d0160cb03",
+    "docs/validation/kpu-pipeline-20261112/reconnect-followup-20261112.json": "401cc4c0ac90375eaec8ee16bad8520b9197ebc3b880744ee67b65da6341f76b",
+    "docs/validation/kpu-pipeline-20261112/reconnect-followup-20261112.log": "15f3e4d3db4cfadad34b7c1819a75dcabcf836001b09b3fccdf09be846935dd0",
+    "docs/validation/kpu-pipeline-20261112/record-diagnostic-partial.log": "a7315664e126e6206ab7c83f7aa8c11d05e8064f349c5cd58c8b8d96224e0b11",
+    "docs/validation/kpu-pipeline-20261112/record-diagnostic-runner.py": "7d2197e5a6a950bea8cc01edc4c677eb4de63d917af0a4c465ba1a33d07281c8",
+    "docs/validation/kpu-pipeline-20261112/retained-output-partial.log": "9957c68e077cce55daea578a6c88b4591227fc6a4d9e904bdb4bf533e06ffe16",
+    "docs/validation/kpu-pipeline-20261112/retained-output-runner.py": "93efd2c3853a20a91e8cedc50b0a78b2b549791e32c52a467ef4c8e7bb6a5d65",
+    "docs/validation/kpu-pipeline-20261112/retained-output-start.json": "fd59ab3477fc5246e402ed63d3d8e5d266397e4c6e8b79d8758f30eeb71071cc",
+    "docs/validation/kpu-pipeline-20261112/scalar-only-partial.log": "1911fdaffd2a1d778b5c4c002f171698afaa61a5f8ab8b8a13e6482525090367",
+    "docs/validation/kpu-pipeline-20261112/scalar-post-partial.log": "a7315664e126e6206ab7c83f7aa8c11d05e8064f349c5cd58c8b8d96224e0b11",
+    "docs/validation/kpu-pipeline-20261112/scalar-post-runner.py": "2ff5df2aed7357ec447f05635ec2244e98c4200c20843418eab823247e36851b",
+    "docs/validation/kpu-pipeline-20261112/scalar-post-start.json": "1886add2e0e43329e55ed71658b9f379dc633a4aa8d20661602540faa4790139",
+    "k230_transport_mvp/tests/test_kpu_pipeline_probe.py": "47d0a6ff72412f3a364b85d8d760249831aeb4ff03a77c22d77131d9de1e9dfd",
+    "k230_transport_mvp/tools/check_canmv_connection.py": "1f9693bbf5cdab199c975373cf24ca1c906702fc9e93c528c82049e70ed10c56",
+    "k230_transport_mvp/tools/kpu_pipeline_probe.py": "f60150d365c1eb212478d850fcb0bf008e545c1d8faf6596fe90575604e2562e"
+  },
+  "report": {
+    "completed": [
+      "Reconnected COM3 and verified K230 firmware v1.8-36 before testing.",
+      "Completed four frozen-input KPU-only timing rows at 95.69836-95.73684 FPS; preprocessing, display, and accuracy remain excluded.",
+      "Completed synthetic zero-input AI2D-only timing at 0.622375 ms mean.",
+      "Persisted the two new AI2D-to-KPU disconnect attempts and refreshed CanMV log analysis: 7 preview no-frame restarts and 28 disconnect records.",
+      "Host targeted regression passed 12 tests with zero failures and zero errors."
+    ],
+    "remaining": [
+      "A complete AI2D plus KPU plus postprocess receipt is still unavailable.",
+      "Camera FPS, resource percentage, and task accuracy remain unverified.",
+      "Physical USB, power, firmware, or runtime root cause remains UNKNOWN."
+    ],
+    "decisions": [
+      "Keep the strict production decoder unchanged; no benchmark-only score projection is accepted as recognition accuracy.",
+      "Do not change the original profile, UART, motion, main.py, or boot.py paths.",
+      "Preserve the task as blocked after the fresh connection loss instead of repeatedly retrying the board."
+    ],
+    "risks": [
+      "CanMV log timing correlates preview restarts with disconnects but does not prove physical root cause.",
+      "KPU-only FPS is a stage result and must not be reported as live camera recognition FPS."
+    ],
+    "next_steps": [
+      "When the board is stable again, run one prepared-input KPU plus scalar-postprocess probe, then add AI2D in a separate short session.",
+      "Require a complete receipt before making any 25 FPS full-pipeline claim."
+    ],
+    "verification": [
+      {
+        "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_kpu*.py'",
+        "exit_code": 0,
+        "summary": "9 tests passed",
+        "evidence": [
+          "k230_transport_mvp/tests/test_kpu_pipeline_probe.py",
+          "k230_transport_mvp/tests/test_kpu_probe_cleanup.py"
+        ]
+      },
+      {
+        "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_frozen_model_fps.py'",
+        "exit_code": 0,
+        "summary": "3 tests passed",
+        "evidence": [
+          "k230_transport_mvp/tests/test_frozen_model_fps.py"
+        ]
+      }
+    ]
+  }
+}

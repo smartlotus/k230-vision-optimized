@@ -1,0 +1,21 @@
+RECONNECT FOLLOW-UP 2026-11-12
+
+Board preflight: COM3, LCKFB-LSPI-K230-1G-CanMV, firmware v1.8-36, ready=true after reconnect.
+Preview was stopped before the bounded tests. Original profile/UART/motion paths were not changed.
+
+KPU_SHORT_ALL (four frozen 224x224 inputs, 10 measured iterations each; KPU only):
+- image 273f133e: 10.4495 ms, 95.69836 FPS
+- image 9517e3ec: 10.4485 ms, 95.70752 FPS
+- image c8f3f5f4: 10.4466 ms, 95.72491 FPS
+- image fbe4c512: 10.4453 ms, 95.73684 FPS
+- mean across image means: 95.7169075 FPS
+This excludes camera capture, AI2D, postprocess, display, and accuracy.
+
+AI2D_ZERO_RESULT (synthetic zero input, AI2D only): 8 iterations, 0.622375 ms mean, 1606.748 FPS.
+
+AI2D_KPU_ZERO: run_script returned status=ok but no stage output. A subsequent REPL health probe returned Not connected.
+Reconnect returned ready=false, then ready=true after a 2 second wait. No complete AI2D+KPU receipt was produced.
+
+ONE_FROZEN_RGB_AI2D_KPU: the only visible line was AI2D_ONE_BEGIN; no result was produced and the connection was lost.
+
+Latest CanMV log analysis: 7 preview no-frame restarts, 28 disconnect records, and preview restarts preceding disconnects. This is correlation only; physical USB/power/firmware root cause remains UNKNOWN.

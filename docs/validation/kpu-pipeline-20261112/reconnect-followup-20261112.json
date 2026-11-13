@@ -1,0 +1,77 @@
+{
+  "scope": "RECONNECT_FOLLOWUP_BOUNDED_STAGED_TEST",
+  "board": {
+    "port": "COM3",
+    "board": "LCKFB-LSPI-K230-1G-CanMV",
+    "firmware": "v1.8-36",
+    "profile_or_uart_changed": false,
+    "preview_started": false
+  },
+  "model": {
+    "path": "/sdcard/kmfps1112/material.kmodel",
+    "sha256": "59fd397f4e60488d98f208bdd2283f847800fda701326b6e0d4f520895f95106",
+    "original_optimizer_updates": 4,
+    "new_optimizer_updates": 0,
+    "accuracy_verified": false
+  },
+  "attempts": [
+    {
+      "id": "kpu-short-four-images",
+      "status": "PASS_TIMING_ONLY",
+      "scope": "FOUR_FROZEN_224_INPUTS_KPU_ONLY",
+      "iterations_per_image": 10,
+      "fps": [95.69836, 95.70752, 95.72491, 95.73684],
+      "mean_fps": 95.7169075,
+      "preprocessing_included": false,
+      "display_included": false,
+      "accuracy_verified": false,
+      "evidence": "terminal output KPU_SHORT_ALL from the reconnect follow-up"
+    },
+    {
+      "id": "ai2d-zero",
+      "status": "PASS_TIMING_ONLY",
+      "scope": "SYNTHETIC_ZERO_AI2D_ONLY",
+      "iterations": 8,
+      "mean_ms": 0.622375,
+      "fps": 1606.748,
+      "model_included": false,
+      "camera_included": false,
+      "accuracy_verified": false
+    },
+    {
+      "id": "ai2d-kpu-zero",
+      "status": "DISCONNECTED_UNKNOWN",
+      "scope": "SYNTHETIC_ZERO_AI2D_TO_KPU",
+      "run_script_returned": "status=ok",
+      "stage_output": "none",
+      "subsequent_repl_probe": "Not connected",
+      "reconnect_observation": "canmv_connect_board(COM3) returned ready=false; after 2 seconds board_info returned ready=true",
+      "exact_disconnect_stage": "UNKNOWN",
+      "accuracy_verified": false
+    },
+    {
+      "id": "single-frozen-rgb-ai2d-kpu",
+      "status": "DISCONNECTED_UNKNOWN",
+      "scope": "ONE_FROZEN_RGB888P_AI2D_TO_KPU",
+      "last_visible_stage": "AI2D_ONE_BEGIN",
+      "no_result": true,
+      "exact_disconnect_stage": "UNKNOWN",
+      "accuracy_verified": false
+    }
+  ],
+  "connection_log_followup": {
+    "preview_no_frame_restarts": 7,
+    "disconnect_log_records": 28,
+    "preview_restarts_before_disconnect": true,
+    "physical_root_cause": "UNKNOWN"
+  },
+  "host_validation": {
+    "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_kpu*.py' && python -m unittest discover -s k230_transport_mvp/tests -p 'test_frozen_model_fps.py'",
+    "result": "PASS",
+    "tests": 12,
+    "failures": 0,
+    "errors": 0
+  },
+  "resource_claim": "No board resource percentage was read back; KPU-only and AI2D-only timings are stage measurements, not whole-system FPS.",
+  "next_boundary": "Do not claim 25 FPS full recognition until a single stable AI2D+KPU+postprocess run produces a complete receipt; preserve this disconnect evidence."
+}

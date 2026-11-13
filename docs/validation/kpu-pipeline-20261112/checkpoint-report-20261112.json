@@ -1,0 +1,41 @@
+{
+  "completed": [
+    "Reconnected COM3 and verified K230 firmware v1.8-36 before testing.",
+    "Completed four frozen-input KPU-only timing rows at 95.69836-95.73684 FPS; preprocessing, display, and accuracy remain excluded.",
+    "Completed synthetic zero-input AI2D-only timing at 0.622375 ms mean.",
+    "Persisted the two new AI2D-to-KPU disconnect attempts and refreshed CanMV log analysis: 7 preview no-frame restarts and 28 disconnect records.",
+    "Host targeted regression passed 12 tests with zero failures and zero errors."
+  ],
+  "remaining": [
+    "A complete AI2D plus KPU plus postprocess receipt is still unavailable.",
+    "Camera FPS, resource percentage, and task accuracy remain unverified.",
+    "Physical USB, power, firmware, or runtime root cause remains UNKNOWN."
+  ],
+  "decisions": [
+    "Keep the strict production decoder unchanged; no benchmark-only score projection is accepted as recognition accuracy.",
+    "Do not change the original profile, UART, motion, main.py, or boot.py paths.",
+    "Preserve the task as blocked after the fresh connection loss instead of repeatedly retrying the board."
+  ],
+  "risks": [
+    "CanMV log timing correlates preview restarts with disconnects but does not prove physical root cause.",
+    "KPU-only FPS is a stage result and must not be reported as live camera recognition FPS."
+  ],
+  "next_steps": [
+    "When the board is stable again, run one prepared-input KPU plus scalar-postprocess probe, then add AI2D in a separate short session.",
+    "Require a complete receipt before making any 25 FPS full-pipeline claim."
+  ],
+  "verification": [
+    {
+      "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_kpu*.py'",
+      "exit_code": 0,
+      "summary": "9 tests passed",
+      "evidence": ["k230_transport_mvp/tests/test_kpu_pipeline_probe.py", "k230_transport_mvp/tests/test_kpu_probe_cleanup.py"]
+    },
+    {
+      "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_frozen_model_fps.py'",
+      "exit_code": 0,
+      "summary": "3 tests passed",
+      "evidence": ["k230_transport_mvp/tests/test_frozen_model_fps.py"]
+    }
+  ]
+}
