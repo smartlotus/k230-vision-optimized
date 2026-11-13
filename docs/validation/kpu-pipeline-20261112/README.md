@@ -23,6 +23,12 @@
 
 本次详细收据见 `reconnect-followup-20261112.json` 与 `reconnect-followup-20261112.log`。最新 CanMV 日志统计为 7 次预览无帧重启、28 条断连记录；预览与断连存在时间相关性，但物理 USB、电源、固件或运行时根因仍为 UNKNOWN。
 
+## 2026-11-13 稳定重连后的模型加载边界
+
+新鲜握手与 REPL 回读成功后，合成零输入测试依次输出 `CHAIN_BEGIN`、`KPU_OBJECT`，下一步 `load_kmodel` 没有继续输出；随后 `scriptRunning` 查询超时，停止脚本后板卡变为 `ready=false`。这把本轮断点收窄到模型加载/运行时交互附近，但仍不能判定是资源压力、USBDBG 竞争、固件还是物理 USB/供电根因。
+
+本轮没有再次重试板卡，也没有修改原配置、UART、运动控制或旧文件。详见 `stable-reconnect-followup-20261113.json` 与 `stable-reconnect-followup-20261113.log`。
+
 另外保留了以下阶段结果：
 
 - 原严格后处理拒绝量化输出的微小负置信度（最小约-0.00035），随后返回REPL。

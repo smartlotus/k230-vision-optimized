@@ -1,0 +1,36 @@
+{
+  "scope": "STABLE_RECONNECT_FOLLOWUP_BOUNDED_MODEL_LOAD",
+  "board_preflight": {
+    "port": "COM3",
+    "board": "LCKFB-LSPI-K230-1G-CanMV",
+    "firmware": "v1.8-36",
+    "ready": true,
+    "running": false,
+    "preview_started": false,
+    "fresh_repl_echo": "K230_READY_20261113"
+  },
+  "attempt": {
+    "id": "synthetic-zero-ai2d-kpu-one-shot",
+    "status": "DISCONNECTED_AT_MODEL_LOAD_UNKNOWN",
+    "stage_sequence_visible": ["CHAIN_BEGIN", "KPU_OBJECT"],
+    "next_stage": "load_kmodel",
+    "stage_result": "no further output",
+    "script_running_afterward": "timed out after 10000ms",
+    "stop_script_result": "status returned without payload",
+    "post_stop_board_ready": false,
+    "camera_included": false,
+    "accuracy_verified": false,
+    "full_pipeline_fps": false
+  },
+  "interpretation": {
+    "confirmed": "The fresh REPL handshake works before the test, and this attempt reaches KPU object creation.",
+    "unknown": "Whether the loss is model-load resource pressure, CanMV runtime state, USBDBG contention, or physical USB/power behavior.",
+    "not_claimed": ["25 FPS", "camera recognition FPS", "resource percentage", "accuracy"]
+  },
+  "preservation": {
+    "original_profile_changed": false,
+    "uart_enabled": false,
+    "motors_enabled": false,
+    "old_files_overwritten": false
+  }
+}

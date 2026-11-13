@@ -1,0 +1,39 @@
+{
+  "completed": [
+    "Verified a fresh COM3 handshake and exact REPL echo K230_READY_20261113 before testing.",
+    "Ran one bounded synthetic AI2D-to-KPU attempt without preview or camera input.",
+    "Persisted the stage boundary: CHAIN_BEGIN, KPU_OBJECT, then no output after entering load_kmodel.",
+    "Stopped the stalled script and preserved the post-stop ready=false state as evidence.",
+    "Host targeted regression passed 12 tests with zero failures and zero errors."
+  ],
+  "remaining": [
+    "No complete AI2D plus KPU plus postprocess timing receipt exists.",
+    "Camera FPS, resource percentage, and accuracy remain unverified.",
+    "Physical USB, power, firmware, and runtime root cause remain UNKNOWN."
+  ],
+  "decisions": [
+    "Stop board retries after the model-load stall; preserve the exact failure boundary.",
+    "Do not change original profiles, UART, motion, main.py, boot.py, or old files.",
+    "Do not convert KPU-only or synthetic AI2D numbers into whole-system FPS claims."
+  ],
+  "risks": [
+    "The model-load boundary may reflect runtime or memory pressure, but current evidence cannot distinguish it from USBDBG or physical connection behavior."
+  ],
+  "next_steps": [
+    "After a board reset and stable idle handshake, inspect model-file load and memory behavior with a single short probe before attempting full pipeline timing."
+  ],
+  "verification": [
+    {
+      "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_kpu*.py'",
+      "exit_code": 0,
+      "summary": "9 tests passed",
+      "evidence": ["k230_transport_mvp/tests/test_kpu_pipeline_probe.py", "k230_transport_mvp/tests/test_kpu_probe_cleanup.py"]
+    },
+    {
+      "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_frozen_model_fps.py'",
+      "exit_code": 0,
+      "summary": "3 tests passed",
+      "evidence": ["k230_transport_mvp/tests/test_frozen_model_fps.py"]
+    }
+  ]
+}

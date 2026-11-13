@@ -1,0 +1,13 @@
+STABLE RECONNECT FOLLOW-UP 2026-11-13
+
+Preflight: board_info COM3 ready=true, scriptRunning=false, preview not started.
+Fresh REPL probe echoed K230_READY_20261113.
+
+Synthetic zero AI2D->KPU one-shot transcript:
+CHAIN_BEGIN
+KPU_OBJECT
+No later stage output; load_kmodel was the next operation.
+
+After the silent stall, scriptRunning timed out after 10000 ms. stop_script returned, then board_info reported ready=false. No further board retries were made.
+
+Conclusion: the current evidence narrows the failure to model-load/runtime interaction after a valid REPL handshake, but does not establish the physical or firmware root cause.
