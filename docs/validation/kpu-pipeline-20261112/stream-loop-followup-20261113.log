@@ -1,0 +1,13 @@
+STREAM LOOP FOLLOW-UP 2026-11-13
+
+Configuration: 2 Mbps, preview stopped, single MCP owner, board-local frame0.rgb888p read by readinto.
+
+Five measured iterations completed after three warmups:
+- mean total: 14.4312 ms
+- FPS: 69.2943
+- AI2D: 0.658-0.662 ms
+- KPU: 10.542-10.733 ms
+- output copy: 0.031-0.044 ms
+- scalar output scan: 3.108-3.124 ms
+
+Raw score diagnostics stayed at min -0.0003509521, max 0.0123291, 314 negative scores, and zero scores above confidence 0.25. This is timing evidence only; accuracy remains unverified.

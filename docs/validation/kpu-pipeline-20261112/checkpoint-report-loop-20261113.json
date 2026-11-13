@@ -1,0 +1,38 @@
+{
+  "completed": [
+    "Completed a 5-frame low-baud streaming real-frame loop after three warmups.",
+    "Measured AI2D, KPU, output copy, and scalar output-scan stages for every frame.",
+    "Obtained a complete timing receipt: 14.4312 ms mean, 69.2943 FPS.",
+    "Recorded raw score contract failure separately: 314 negative scores and no scores above 0.25."
+  ],
+  "remaining": [
+    "Camera capture and display are not included.",
+    "Model accuracy remains unverified and the pilot output contract is still invalid for strict production decode.",
+    "Full competition model training is still the next major work item."
+  ],
+  "decisions": [
+    "Accept the loop as a stage-performance PASS only.",
+    "Keep accuracy and contract status separate from FPS.",
+    "Use the existing labeled screenshot evaluation to reject the pilot model."
+  ],
+  "risks": [
+    "The backend TX_BUF_LEN poller workaround and 2 Mbps setting remain required for stable board sessions."
+  ],
+  "next_steps": [
+    "Collect and annotate competition data, train a new model, then repeat this same low-baud loop with the new output contract."
+  ],
+  "verification": [
+    {
+      "command": "Low-baud five-frame board loop",
+      "exit_code": 0,
+      "summary": "5 complete frames, 14.4312 ms mean, 69.2943 FPS; camera/display excluded",
+      "evidence": ["docs/validation/kpu-pipeline-20261112/stream-loop-followup-20261113.json", "docs/validation/kpu-pipeline-20261112/stream-loop-followup-20261113.log"]
+    },
+    {
+      "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_kpu*.py'",
+      "exit_code": 0,
+      "summary": "10 tests passed",
+      "evidence": ["k230_transport_mvp/tests/test_kpu_pipeline_probe.py"]
+    }
+  ]
+}

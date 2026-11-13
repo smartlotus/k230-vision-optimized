@@ -1,0 +1,27 @@
+{
+  "scope": "LOW_BAUD_STREAMING_REAL_FRAME_FIVE_LOOP",
+  "configuration": {
+    "baud_rate": 2000000,
+    "preview": "stopped",
+    "input": "frame0.rgb888p via readinto",
+    "camera": false,
+    "display": false
+  },
+  "result": {
+    "status": "PASS_TIMING_ONLY",
+    "iterations": 5,
+    "read_bytes": 691200,
+    "mean_total_ms": 14.4312,
+    "fps": 69.2943,
+    "ai2d_ms": [0.659, 0.659, 0.662, 0.658, 0.662],
+    "kpu_ms": [10.562, 10.544, 10.703, 10.542, 10.733],
+    "output_copy_ms": [0.043, 0.042, 0.044, 0.031, 0.044],
+    "postprocess_scan_ms": [3.111, 3.115, 3.124, 3.108, 3.11],
+    "raw_min_score": -0.0003509521,
+    "raw_max_score": 0.0123291,
+    "negative_scores": 314,
+    "scores_above_025": 0,
+    "accuracy_verified": false
+  },
+  "interpretation": "Sustained streaming AI2D+KPU+output scan is stable at about 69.29 FPS in a frozen-image loop. This is not camera/display FPS and the raw model output still fails the strict probability contract."
+}
