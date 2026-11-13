@@ -41,6 +41,12 @@
 
 因此当前最强证据指向“代码触发的板端运行时/SDK 资源或所有权交互”，而不是模型损坏、AI2D 单独故障或摄像头故障。USB 线、电源、固件崩溃和 USBDBG 传输仍未被排除，不能把它们写成已确认根因。详见 `attribution-ladder-20261113.json` 与 `attribution-ladder-20261113.log`。
 
+## 修复：显式绑定 AI2D 输出 tensor
+
+已修改新版 `kpu_pipeline_probe.py` 的 AI2D 路径：不再提前调用未绑定的 `kpu.get_input_tensor(0)`，而是显式创建并保持一个 `1x3x224x224` 的 uint8 tensor，先调用 `kpu.set_input_tensor(0, destination)`，再让 AI2D 写入该 tensor。主机回归 13 项全部通过。
+
+修复后板端复测暂未执行：COM3 仍能看到 K230 身份，但 `ready=false`，等待 3 秒仍未恢复。修复后的板端组合路径保持 UNKNOWN，不把主机 PASS 当作硬件 PASS。详见 `fix-20261113.json` 与 `fix-20261113.log`。
+
 另外保留了以下阶段结果：
 
 - 原严格后处理拒绝量化输出的微小负置信度（最小约-0.00035），随后返回REPL。

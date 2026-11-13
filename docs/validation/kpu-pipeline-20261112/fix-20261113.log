@@ -1,0 +1,8 @@
+FIX 2026-11-13
+
+Changed kpu_pipeline_probe.py so AI2D mode explicitly allocates a persistent 1x3x224x224 uint8 tensor, binds it with kpu.set_input_tensor(0, destination), and reuses it as the AI2D destination. The previous unbound kpu.get_input_tensor(0) path is removed from the probe.
+
+Added a host regression test for the bind-before-builder contract.
+Host validation: 10 KPU pipeline tests passed; 3 frozen-model tests passed; 0 failures; 0 errors.
+
+Board validation was attempted after the code fix. COM3 identity was visible but ready=false immediately after connect and remained ready=false after a 3 second wait. The fixed combined board probe was not run; hardware acceptance remains UNKNOWN.

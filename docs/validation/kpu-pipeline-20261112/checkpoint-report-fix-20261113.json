@@ -1,0 +1,37 @@
+{
+  "completed": [
+    "Fixed the AI2D path to bind an explicit persistent KPU input tensor before AI2D writes into it.",
+    "Added a host regression test for the bind-before-builder contract.",
+    "Ran 10 KPU pipeline tests and 3 frozen-model tests with zero failures and zero errors.",
+    "Attempted board verification and preserved the ready=false hardware boundary without claiming board acceptance."
+  ],
+  "remaining": [
+    "The repaired combined AI2D plus KPU path still needs one fresh ready=true board session.",
+    "Camera FPS, resource percentage, and accuracy remain unverified."
+  ],
+  "decisions": [
+    "Keep old files and production profiles unchanged.",
+    "Treat host PASS and board UNKNOWN as separate claims.",
+    "Do not run another board probe until the board returns ready=true."
+  ],
+  "risks": [
+    "The explicit input binding fixes the confirmed ownership/API hazard, but a firmware or physical transport fault may still remain."
+  ],
+  "next_steps": [
+    "After physical reset and ready=true, run one fixed combined zero-input probe, then one frozen-image probe."
+  ],
+  "verification": [
+    {
+      "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_kpu*.py'",
+      "exit_code": 0,
+      "summary": "10 tests passed",
+      "evidence": ["k230_transport_mvp/tests/test_kpu_pipeline_probe.py"]
+    },
+    {
+      "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_frozen_model_fps.py'",
+      "exit_code": 0,
+      "summary": "3 tests passed",
+      "evidence": ["k230_transport_mvp/tests/test_frozen_model_fps.py"]
+    }
+  ]
+}

@@ -134,6 +134,20 @@ def release(value,errors,name):
     except Exception as error:errors.append(name+': '+str(error))
 
 
+def bind_ai2d_destination(nn,np,kpu,shape=(1,3,224,224)):
+    """Allocate and bind the KPU input before AI2D writes into it.
+
+    On the K230 runtime, calling ``get_input_tensor(0)`` before an input has
+    been explicitly bound can leave AI2D writing through an unowned handle.
+    Keep the backing ndarray alive for the whole probe and reuse this tensor
+    for every frame.
+    """
+    backing=np.zeros(shape,dtype=np.uint8)
+    destination=nn.from_numpy(backing)
+    kpu.set_input_tensor(0,destination)
+    return destination,backing
+
+
 def probe(root,mode='prepared',iterations=20,image_limit=4):
     if mode not in ('prepared','ai2d') or type(iterations) is not int or not 5<=iterations<=30:
         raise ValueError('Explicit mode and5..30 measured iterations required')
@@ -154,13 +168,17 @@ def probe(root,mode='prepared',iterations=20,image_limit=4):
         state=snapshot();state['kpu_note']='Model inference active in this benchmark; KPU usage percentage unavailable'
         return state
     report['resource_before']=resources()
+    report['input_binding']='EXPLICIT_NN_FROM_NUMPY_SET_INPUT_FOR_AI2D' if mode=='ai2d' else 'DIRECT_SOURCE_SET_INPUT'
     kpu=source=destination=builder=ai2d=output=raw_input=data=source_image=values=None
+    destination_backing=None
     try:
         print('PIPELINE_STAGE:MODEL_LOAD')
         kpu=nn.kpu();kpu.load_kmodel(root+'/material.kmodel')
         print('PIPELINE_STAGE:MODEL_LOADED')
         if mode=='ai2d':
-            destination=kpu.get_input_tensor(0)
+            destination,destination_backing=bind_ai2d_destination(nn,np,kpu)
+            gc.collect()
+            print('PIPELINE_STAGE:INPUT_TENSOR_BOUND')
             ai2d=nn.ai2d();ai2d.set_dtype(nn.ai2d_format.NCHW_FMT,nn.ai2d_format.NCHW_FMT,np.uint8,np.uint8)
             ai2d.set_pad_param(True,[0,0,0,0,49,49,0,0],0,[114,114,114])
             ai2d.set_resize_param(True,nn.interp_method.tf_bilinear,nn.interp_mode.half_pixel)
@@ -233,7 +251,7 @@ def probe(root,mode='prepared',iterations=20,image_limit=4):
         release(destination,report['cleanup_errors'],'destination');destination=None
         release(builder,report['cleanup_errors'],'builder');builder=None
         release(ai2d,report['cleanup_errors'],'ai2d');ai2d=None
-        data=raw_input=source_image=None;gc.collect()
+        destination_backing=None;data=raw_input=source_image=None;gc.collect()
         try:nn.shrink_memory_pool()
         except Exception as error:report['cleanup_errors'].append('pool: '+str(error))
         gc.collect();report['resource_after']=resources()

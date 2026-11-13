@@ -1,0 +1,25 @@
+{
+  "scope": "FIX_EXPLICIT_AI2D_KPU_INPUT_BINDING",
+  "fix": {
+    "file": "k230_transport_mvp/tools/kpu_pipeline_probe.py",
+    "old_behavior": "ai2d mode called kpu.get_input_tensor(0) before an input tensor was explicitly bound",
+    "new_behavior": "allocate a persistent 1x3x224x224 uint8 tensor, call kpu.set_input_tensor(0, tensor), then let AI2D write into that bound tensor",
+    "old_files_preserved": true
+  },
+  "host_validation": {
+    "kpu_tests": 10,
+    "frozen_model_tests": 3,
+    "failures": 0,
+    "errors": 0
+  },
+  "board_validation": {
+    "attempted": true,
+    "preflight_identity": "COM3 / K230 / v1.8-36",
+    "connect_result": "connected=true, ready=false",
+    "after_wait_seconds": 3,
+    "ready_after_wait": false,
+    "fixed_combined_probe_run": false,
+    "reason": "Board did not return to ready state after the previous combined-script disconnect"
+  },
+  "claim_boundary": "Code fix and host regression are verified; board runtime acceptance remains UNKNOWN until a fresh ready=true session runs the fixed combined probe."
+}

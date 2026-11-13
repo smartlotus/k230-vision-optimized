@@ -1,7 +1,7 @@
 import copy
 import unittest
 import numpy as np
-from tools.kpu_pipeline_probe import latency,timing_proposals,probe,sha_file,scalar_timing_proposals
+from tools.kpu_pipeline_probe import bind_ai2d_destination,latency,timing_proposals,probe,sha_file,scalar_timing_proposals
 from tools.check_canmv_connection import analyze,live_readiness
 from vision.yolo_candidates import input_contract
 from unittest.mock import patch,Mock
@@ -11,6 +11,23 @@ import hashlib
 
 
 class PipelineProbeTests(unittest.TestCase):
+    def test_ai2d_destination_is_bound_before_builder_use(self):
+        class FakeNN:
+            @staticmethod
+            def from_numpy(value):
+                return ('tensor',value)
+        class FakeKPU:
+            def __init__(self):self.bound=[]
+            def set_input_tensor(self,index,tensor):self.bound.append((index,tensor))
+        class FakeNP:
+            uint8=object()
+            @staticmethod
+            def zeros(shape,dtype):return {'shape':shape,'dtype':dtype}
+        kpu=FakeKPU()
+        destination,backing=bind_ai2d_destination(FakeNN,FakeNP,kpu)
+        self.assertEqual(backing['shape'],(1,3,224,224))
+        self.assertEqual(kpu.bound,[(0,destination)])
+
     def test_scalar_postprocess_matches_positive_geometry_without_numpy_work_buffers(self):
         raw=np.zeros((1,5,1029),np.float32);raw[0,4,2]=-.00035
         raw[0,:,0]=[112,112,28,14,.9];raw[0,:,1]=[112,112,28,14,.8]
