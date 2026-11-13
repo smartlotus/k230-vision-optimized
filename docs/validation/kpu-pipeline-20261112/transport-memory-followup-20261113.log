@@ -1,0 +1,9 @@
+TRANSPORT AND MEMORY FOLLOW-UP 2026-11-13
+
+With preview stopped and ready=true, the fixed explicit-input-binding zero-input script completed:
+FIXED_MODEL_LOADED -> FIXED_INPUT_BOUND -> FIXED_AI2D_BUILT -> FIXED_AI2D_RUN -> FIXED_KPU_RUN -> FIXED_CLOSED.
+KPU time was 10.954 ms; output shape was [1,5,1029].
+
+A comparison script then used f.read() to allocate the full 691200-byte RGB888P frozen image on the board. No stage output was retained; a later REPL probe returned Not connected, and reconnect after 1.5 seconds remained ready=false.
+
+This supports a large temporary allocation or runtime-pressure hypothesis, but the read was from the board SD card, not a high-speed host USB upload. The project probe continues to use streaming readinto and does not add the raw f.read() path.

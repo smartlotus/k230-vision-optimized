@@ -1,0 +1,38 @@
+{
+  "completed": [
+    "Verified the explicit AI2D input-binding fix on board with a complete zero-input AI2D-to-KPU run.",
+    "Measured the fixed synthetic combined path at 10.954 ms KPU time with output shape [1,5,1029].",
+    "Ran a controlled comparison using a 691200-byte board-local f.read() and recorded the subsequent disconnect.",
+    "Confirmed the project probe still uses streaming readinto rather than the failing raw f.read() path.",
+    "Host regression remains 13 tests passed with zero failures and zero errors."
+  ],
+  "remaining": [
+    "A fixed combined run using the streaming readinto real-image path still needs a fresh ready=true board session.",
+    "The low-level reason for the board reset under large temporary allocation remains UNKNOWN."
+  ],
+  "decisions": [
+    "Keep the explicit input binding fix.",
+    "Keep streaming readinto and avoid whole-image f.read() allocations on the board.",
+    "Do not claim camera FPS or accuracy from the synthetic pass."
+  ],
+  "risks": [
+    "USBDBG poller incompatibility and board-local memory pressure may coexist; the comparison does not prove a physical cable or power fault."
+  ],
+  "next_steps": [
+    "After reset, run only the fixed streaming-readinto real-image probe, with no preview and no concurrent status polling."
+  ],
+  "verification": [
+    {
+      "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_kpu*.py'",
+      "exit_code": 0,
+      "summary": "10 tests passed",
+      "evidence": ["k230_transport_mvp/tests/test_kpu_pipeline_probe.py"]
+    },
+    {
+      "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_frozen_model_fps.py'",
+      "exit_code": 0,
+      "summary": "3 tests passed",
+      "evidence": ["k230_transport_mvp/tests/test_frozen_model_fps.py"]
+    }
+  ]
+}

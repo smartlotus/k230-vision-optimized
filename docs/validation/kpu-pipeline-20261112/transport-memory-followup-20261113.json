@@ -1,0 +1,37 @@
+{
+  "scope": "FIXED_COMBINED_PIPELINE_AND_LARGE_READ_COMPARISON",
+  "preflight": {
+    "port": "COM3",
+    "firmware": "v1.8-36",
+    "ready": true,
+    "running": false,
+    "preview_stop_result": "ok"
+  },
+  "fixed_zero_input": {
+    "status": "PASS_RUNTIME_ONLY",
+    "stages": ["FIXED_BEGIN", "FIXED_MODEL_LOADED", "FIXED_INPUT_BOUND", "FIXED_SOURCE_READY", "FIXED_AI2D_BUILT", "FIXED_AI2D_RUN", "FIXED_KPU_RUN", "FIXED_CLOSED"],
+    "kpu_ms": 10.954,
+    "output_shape": [1, 5, 1029],
+    "camera": false,
+    "accuracy": false
+  },
+  "large_read_comparison": {
+    "status": "DISCONNECTED_UNKNOWN",
+    "method": "f.read() of /sdcard/kmfps1112/frame0.rgb888p",
+    "bytes_requested": 691200,
+    "visible_output": "none",
+    "afterward": "terminal REPL probe returned Not connected",
+    "reconnect_afterward": "connected=true, ready=false after 1.5 seconds",
+    "interpretation": "Large temporary allocation or board runtime pressure is plausible; this is board-local SD read, not host USB file upload."
+  },
+  "code_path_preserved": {
+    "project_probe_read": "image.Image + stream.readinto(image.bytearray())",
+    "raw_fread_added_to_project": false
+  },
+  "host_validation": {
+    "kpu_tests": 10,
+    "frozen_model_tests": 3,
+    "failures": 0,
+    "errors": 0
+  }
+}
