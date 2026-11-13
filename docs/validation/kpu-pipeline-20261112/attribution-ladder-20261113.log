@@ -1,0 +1,15 @@
+HARDWARE VS CODE ATTRIBUTION LADDER 2026-11-13
+
+Preflight: COM3, K230 v1.8-36, ready=true, scriptRunning=false, preview not started.
+Fresh REPL echo: ATTRIBUTION_REPL_20261113.
+
+S1 import and KPU object: S1_BEGIN -> S1_IMPORT_OK -> S1_KPU_OBJECT_OK.
+Direct kpu.release() is not available on this firmware object; this is a cleanup API note. The project helper uses __del__ fallback.
+
+S2 model load only: S2_BEGIN -> KPU object -> MODEL_LOAD_OK -> INPUTS:1 -> END.
+S3 AI2D only: tensors -> AI2D object -> BUILD_OK -> RUN_OK -> END.
+
+S4 combined KPU model plus AI2D tensors: no terminal output was retained and board_info then returned connected=false/ready=false.
+One reconnect after 2 seconds returned connected=true/ready=false.
+
+Attribution: isolated hardware/runtime primitives pass; the first reproducible boundary is their coexistence in one script. This favors a code-triggered board runtime/SDK resource or ownership interaction. USB, power, firmware, and USBDBG transport faults remain possible and are not proven or excluded.

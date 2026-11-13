@@ -1,0 +1,63 @@
+{
+  "scope": "HARDWARE_VS_CODE_ATTRIBUTION_LADDER",
+  "preflight": {
+    "port": "COM3",
+    "firmware": "v1.8-36",
+    "board_info_ready_before": true,
+    "script_running_before": false,
+    "fresh_repl_echo": "ATTRIBUTION_REPL_20261113",
+    "preview_started": false
+  },
+  "ladder": [
+    {
+      "stage": "import_and_kpu_object",
+      "status": "PASS_WITH_CLEANUP_API_NOTE",
+      "transcript": ["S1_BEGIN", "S1_IMPORT_OK", "S1_KPU_OBJECT_OK"],
+      "cleanup_note": "Direct kpu.release() raised AttributeError; project cleanup helper already falls back to __del__."
+    },
+    {
+      "stage": "model_load_only",
+      "status": "PASS",
+      "transcript": ["S2_BEGIN", "S2_KPU_OBJECT_OK", "S2_MODEL_LOAD_OK", "S2_INPUTS:1", "S2_END"]
+    },
+    {
+      "stage": "ai2d_only_tensor_build_run",
+      "status": "PASS",
+      "transcript": ["S3_BEGIN", "S3_TENSORS_OK", "S3_AI2D_OBJECT_OK", "S3_BUILD_OK", "S3_RUN_OK", "S3_END"]
+    },
+    {
+      "stage": "combined_kpu_ai2d_setup",
+      "status": "DISCONNECTED_UNKNOWN",
+      "last_visible_output": "none",
+      "script": "S4_BEGIN -> kpu object -> load model -> source tensor -> KPU input tensor -> AI2D build",
+      "actual_output": "empty terminal buffer",
+      "board_afterward": "connected=false, ready=false",
+      "reconnect_after_2_seconds": "connected=true, ready=false"
+    }
+  ],
+  "attribution": {
+    "strongly_supported": [
+      "Model file is readable and loadable in isolation.",
+      "KPU object and inference work in isolation.",
+      "AI2D object, build, and run work in isolation.",
+      "The failure appears when KPU model state and AI2D tensor state coexist in one script."
+    ],
+    "most_likely_class": "Code-triggered board runtime/SDK resource or ownership interaction",
+    "hardware_not_excluded": [
+      "USB cable/power instability",
+      "firmware crash or watchdog reset",
+      "USBDBG transport failure under board load"
+    ],
+    "not_supported": [
+      "Model file corruption as the primary cause",
+      "AI2D algorithm failure in isolation",
+      "Camera sensor failure as the primary cause"
+    ]
+  },
+  "preservation": {
+    "original_profile_changed": false,
+    "uart_enabled": false,
+    "motors_enabled": false,
+    "old_files_overwritten": false
+  }
+}

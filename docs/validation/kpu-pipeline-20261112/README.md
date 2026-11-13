@@ -35,6 +35,12 @@
 
 本轮结果见 `retry-followup-20261113.json` 与 `retry-followup-20261113.log`。这进一步支持“组合脚本触发运行时/USBDBG/资源状态问题”的判断，但不能据此认定物理根因。
 
+## 硬件与代码归因阶梯
+
+本轮按层测试：REPL、`nn.kpu()`、独立 `load_kmodel()`、独立 AI2D 张量建图与运行均通过。把 KPU 模型状态和 AI2D 张量放进同一脚本后，终端无阶段输出，板卡变为 `connected=false/ready=false`；两秒后重连仍未恢复 `ready`。
+
+因此当前最强证据指向“代码触发的板端运行时/SDK 资源或所有权交互”，而不是模型损坏、AI2D 单独故障或摄像头故障。USB 线、电源、固件崩溃和 USBDBG 传输仍未被排除，不能把它们写成已确认根因。详见 `attribution-ladder-20261113.json` 与 `attribution-ladder-20261113.log`。
+
 另外保留了以下阶段结果：
 
 - 原严格后处理拒绝量化输出的微小负置信度（最小约-0.00035），随后返回REPL。
