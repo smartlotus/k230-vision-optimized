@@ -1,0 +1,32 @@
+{
+  "scope": "LOW_BAUD_TRANSPORT_WORKAROUND_VALIDATION",
+  "configuration": {
+    "workspace_setting": "canmv.baudRate=2000000",
+    "preview": "stopped",
+    "owner": "single MCP/CanMV session",
+    "firmware": "v1.8-36"
+  },
+  "preflight": {
+    "port": "COM3",
+    "connect": "connected=true, ready=true after 1.5 seconds",
+    "repl_echo": "LOW_BAUD_20261113"
+  },
+  "streaming_real_frame": {
+    "status": "PASS_RUNTIME_ONLY",
+    "read_method": "readinto",
+    "bytes": 691200,
+    "ai2d_ms": 0.636,
+    "kpu_ms": 10.982,
+    "total_ms": 11.618,
+    "output_shape": [1, 5, 1029],
+    "cleanup": "LOW_STREAM_CLOSED",
+    "camera": false,
+    "accuracy": false
+  },
+  "stability_after_wait": {
+    "wait_seconds": 25,
+    "board_info": "connected=true, ready=true",
+    "repl_echo": "LOW_BAUD_AFTER_WAIT_20261113"
+  },
+  "interpretation": "Lowering the configured transport baud and keeping one owner/preview stopped avoids the previous 20-30 second disconnect window in this bounded test. The unsupported TX_BUF_LEN poller remains a stack risk; this is a validated workaround, not proof of firmware repair."
+}

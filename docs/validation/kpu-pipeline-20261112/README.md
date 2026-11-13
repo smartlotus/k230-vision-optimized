@@ -57,6 +57,10 @@
 
 修复后的流式真实图路径已完成单帧收据：读取 691200 字节、显式绑定输入、AI2D、KPU、输出读取和清理全部完成，总耗时 11.6 ms（AI2D 0.634 ms，KPU 10.966 ms），输出形状 `[1,5,1029]`。后续 5 次循环没有形成终端收据，虽然板卡身份仍为 `ready=true`，因此不把它记为持续 FPS。详见 `stream-real-followup-20261113.json` 与 `stream-real-followup-20261113.log`。
 
+## 低波特率传输规避验证
+
+项目提供 `canmv-transport-settings.json`，建议复制到工作区 `.vscode/settings.json`，将 `canmv.baudRate` 设为 `2000000`，并保持预览关闭、单一控制端。2 Mbps 下，流式真实图路径再次通过：读取 691200 字节、AI2D 0.636 ms、KPU 10.982 ms、总计 11.618 ms；等待 25 秒后仍能保持 `ready=true`，并成功回读 REPL nonce。该结果验证了低波特率工作区配置是有效规避方案，但没有修复扩展/backend 仍可能发送的 `TX_BUF_LEN` 不兼容命令。详见 `low-baud-followup-20261113.json` 与 `low-baud-followup-20261113.log`。
+
 另外保留了以下阶段结果：
 
 - 原严格后处理拒绝量化输出的微小负置信度（最小约-0.00035），随后返回REPL。

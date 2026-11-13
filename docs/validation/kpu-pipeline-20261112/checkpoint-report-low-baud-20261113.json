@@ -1,0 +1,38 @@
+{
+  "completed": [
+    "Added a checked-in workspace transport settings recipe: canmv.baudRate=2000000 and disabled startup minification.",
+    "Verified low-baud COM3 handshake and REPL echo.",
+    "Verified streaming 691200-byte real-frame AI2D plus KPU path at 11.618 ms total.",
+    "Waited 25 seconds and successfully read a second REPL nonce with ready=true.",
+    "Host regression remains 13 tests passed with zero failures and zero errors."
+  ],
+  "remaining": [
+    "The backend TX_BUF_LEN poller command remains unsupported by the firmware; low baud is a workaround, not a backend patch.",
+    "Sustained multi-frame postprocess and camera/display FPS remain unverified."
+  ],
+  "decisions": [
+    "Use 2 Mbps and one transport owner for further board tests.",
+    "Keep preview disabled during benchmarks.",
+    "Keep streaming readinto and explicit KPU input binding."
+  ],
+  "risks": [
+    "Longer sessions may still fail if the extension poller sends TX_BUF_LEN; no installed extension binary was modified."
+  ],
+  "next_steps": [
+    "Run a bounded 5-frame low-baud streaming loop, then add scalar postprocess if the terminal receipt remains complete."
+  ],
+  "verification": [
+    {
+      "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_kpu*.py'",
+      "exit_code": 0,
+      "summary": "10 tests passed",
+      "evidence": ["k230_transport_mvp/tests/test_kpu_pipeline_probe.py"]
+    },
+    {
+      "command": "PYTHONPATH=k230_transport_mvp python -m unittest discover -s k230_transport_mvp/tests -p 'test_frozen_model_fps.py'",
+      "exit_code": 0,
+      "summary": "3 tests passed",
+      "evidence": ["k230_transport_mvp/tests/test_frozen_model_fps.py"]
+    }
+  ]
+}

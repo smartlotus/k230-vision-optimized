@@ -1,0 +1,6 @@
+{
+  "canmv.baudRate": 2000000,
+  "canmv.autoMinifyStartupScripts": false,
+  "apply_to": ".vscode/settings.json",
+  "reason": "Bounded K230 transport workaround validated on COM3"
+}

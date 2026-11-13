@@ -1,0 +1,13 @@
+LOW BAUD TRANSPORT FOLLOW-UP 2026-11-13
+
+Workspace setting: canmv.baudRate=2000000. Preview stopped. Single MCP/CanMV owner.
+Connect COM3 returned ready=true after 1.5 seconds. REPL echoed LOW_BAUD_20261113.
+
+Streaming real-frame test completed:
+LOW_STREAM_MODEL
+LOW_STREAM_BOUND
+LOW_STREAM_READ:691200
+LOW_STREAM_RESULT: ai2d=0.636 ms, kpu=10.982 ms, total=11.618 ms, shape=[1,5,1029]
+LOW_STREAM_CLOSED
+
+After waiting 25 seconds, board_info still returned connected=true/ready=true and REPL echoed LOW_BAUD_AFTER_WAIT_20261113.

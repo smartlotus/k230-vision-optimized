@@ -18,11 +18,11 @@
     "Serialized diagnostic transcript identifies disconnect stage; native finite pipeline timing or explicit unresolved failure; no original profile/UART/motion changes; qualified tests and remote checkpoint"
   ],
   "branch": "ops/connection-kpu",
-  "state": "blocked",
-  "claimed": false,
+  "state": "ready",
+  "claimed": true,
   "agent": "codex",
-  "session": "connection-kpu-20261113-h",
-  "revision": 25,
-  "handoff": ".ops/handoffs/connection-kpu/20261113T050146-ce446c5f.json",
-  "updated_at": "2026-11-13T05:01:59+00:00"
+  "session": "connection-kpu-20261113-i",
+  "revision": 27,
+  "handoff": ".ops/handoffs/connection-kpu/20261113T051037-bb23c4d3.json",
+  "updated_at": "2026-11-13T05:10:40+00:00"
 }
