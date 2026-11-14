@@ -1,34 +1,57 @@
 {
-  "schema": "k230-cloud-preparation-v1",
-  "kernel": {
-    "ref": "lotus30/k230-topfacenet-original-cad-drive-smoke-20261114",
-    "id": 144989064,
-    "version": 2,
-    "is_private": true,
-    "gpu_requested": true,
-    "internet_requested": true,
-    "save_mode": "NO_RUN",
-    "provider_status": "COMPLETE_QUICK_SAVE_ONLY",
-    "source_semantic_readback": "PASS",
-    "execution_verified": false
+  "schema": "topface-cloud-current-v1.1",
+  "observed_utc": "2026-11-14T13:59:36.301562+00:00",
+  "historical_v1_preparation": {
+    "schema": "k230-cloud-preparation-v1",
+    "kernel": {
+      "ref": "lotus30/k230-topfacenet-original-cad-drive-smoke-20261114",
+      "id": 144989064,
+      "version": 2,
+      "is_private": true,
+      "gpu_requested": true,
+      "internet_requested": true,
+      "save_mode": "NO_RUN",
+      "provider_status": "COMPLETE_QUICK_SAVE_ONLY",
+      "source_semantic_readback": "PASS",
+      "execution_verified": false
+    },
+    "input_dataset": {
+      "ref": "lotus30/k230-topface-smoke-input-20261114",
+      "version": 2,
+      "status": "ready",
+      "input_manifest_sha256": "e0bd28ba4cc221de1615fd71f075ab693ae09f190c4242d434645e6b3f67bc9d"
+    },
+    "drive_folder": {
+      "id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+      "rclone_access_verified": true,
+      "kaggle_runtime_access_verified": false
+    },
+    "manual_next_step": {
+      "notebook_url": "https://www.kaggle.com/code/lotus30/k230-topfacenet-original-cad-drive-smoke-20261114/edit",
+      "associate_existing_secret": "DOASTRA_GDRIVE_OAUTH_JSON",
+      "then": "Save Version -> Save & Run All once"
+    },
+    "scientific_runs_started": 0,
+    "optimizer_steps": 0,
+    "revision_note": "BlenderProc 2.8.0 API compatibility corrected before any scientific run"
   },
-  "input_dataset": {
-    "ref": "lotus30/k230-topface-smoke-input-20261114",
-    "version": 2,
-    "status": "ready",
-    "input_manifest_sha256": "e0bd28ba4cc221de1615fd71f075ab693ae09f190c4242d434645e6b3f67bc9d"
+  "active_kernel": {
+    "ref": "lotus30/k230-topface-v11-01-simulation-pilot",
+    "id": 145002634,
+    "actual_running_version": 2,
+    "latest_version": 3,
+    "version3_status": "CANCEL_ACKNOWLEDGED",
+    "version2_status": "RUNNING",
+    "actual_stage": "PILOT_RENDER",
+    "executed_source_match": true,
+    "input_dataset": "lotus30/k230-topface-native-v11-input-20261114-a02/1",
+    "drive_admission_passed": true,
+    "cycles_gpu_verified": "PENDING_FINAL_DEVICE_RECEIPT"
   },
-  "drive_folder": {
-    "id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
-    "rclone_access_verified": true,
-    "kaggle_runtime_access_verified": false
-  },
-  "manual_next_step": {
-    "notebook_url": "https://www.kaggle.com/code/lotus30/k230-topfacenet-original-cad-drive-smoke-20261114/edit",
-    "associate_existing_secret": "DOASTRA_GDRIVE_OAUTH_JSON",
-    "then": "Save Version -> Save & Run All once"
-  },
-  "scientific_runs_started": 0,
-  "optimizer_steps": 0,
-  "revision_note": "BlenderProc 2.8.0 API compatibility corrected before any scientific run"
+  "run_id": "k230-topface-v11-pilot-1000-a02",
+  "optimizer_updates": 0,
+  "requested_pilot_scenes": 1000,
+  "old_v8": "retired; do not restart",
+  "manual_next_step": null,
+  "note": "Read exact version2 live logs/status and final immutable receipts; latest version3 cancellation is a separate session. Do not submit a replacement scientific run."
 }

@@ -1,0 +1,310 @@
+{
+  "manifest_file": "k230_transport_mvp/data/ai_pilot/material_manifest_reviewed_r4_20261110.json",
+  "manifest_bytes": 46861,
+  "manifest_sha256": "6d21a2e9d0a251c1161ee3b63345909d64ad1f8cda6d3f9be0e0c0454843e198",
+  "source_images": 12,
+  "all_top_bboxes": 33,
+  "approved_images": 7,
+  "approved_top_bboxes": 17,
+  "unreviewed_images": 5,
+  "uncertain_top_bboxes": 5,
+  "source_wh": [
+    640,
+    360
+  ],
+  "source_format": "RGB565",
+  "source_frame_bytes": 460800,
+  "approved_color_bbox_counts": {
+    "2": 5,
+    "4": 4,
+    "5": 4,
+    "1": 2,
+    "6": 1,
+    "3": 1
+  },
+  "all_color_bbox_counts": {
+    "2": 10,
+    "4": 9,
+    "5": 9,
+    "3": 2,
+    "1": 2,
+    "6": 1
+  },
+  "approved_splits": {
+    "train": {
+      "images": 4,
+      "bboxes": 12,
+      "groups": 1
+    },
+    "val": {
+      "images": 2,
+      "bboxes": 2,
+      "groups": 1
+    },
+    "test": {
+      "images": 1,
+      "bboxes": 3,
+      "groups": 1
+    }
+  },
+  "group_cross_split_count": 0,
+  "capture_file_hashes_checked": 36,
+  "capture_file_hash_mismatches": 0,
+  "real_ellipse_ground_truth_available": false,
+  "historical_test_previously_evaluated": true,
+  "fresh_blind_test_available": false,
+  "capture_witnesses": [
+    {
+      "role": "jpeg",
+      "path": "data/ai_pilot/material-series-20261109-g/capture-03.jpg",
+      "bytes": 79136,
+      "sha256": "bf337aa1f1d5b321196cac75906ad3750015c244c79c78d64e42f976bc4b79e9",
+      "passed": true
+    },
+    {
+      "role": "rgb565",
+      "path": "data/ai_pilot/material-series-20261109-g/capture-03.rgb565",
+      "bytes": 460800,
+      "sha256": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "passed": true
+    },
+    {
+      "role": "metadata",
+      "path": "data/ai_pilot/material-series-20261109-g/capture-03-lab.json",
+      "bytes": 194251,
+      "sha256": "5e220e246693647c391cbdca62dc93663407428121ded75fcc78a4d7f354b1b4",
+      "passed": true
+    },
+    {
+      "role": "jpeg",
+      "path": "evidence/board/three-object-multicolor-20261109/yellow-native.jpg",
+      "bytes": 77800,
+      "sha256": "11c436ec6440b56ee939fbd27fc3f38b1213ddc90dab484c26f1a0b0595db35b",
+      "passed": true
+    },
+    {
+      "role": "rgb565",
+      "path": "evidence/board/three-object-multicolor-20261109/yellow-native.rgb565",
+      "bytes": 460800,
+      "sha256": "3fa8c9e24f4115fde870ea4dabc544383ab311b1d6e78cde93804299feb4a61c",
+      "passed": true
+    },
+    {
+      "role": "metadata",
+      "path": "evidence/board/three-object-multicolor-20261109/yellow-native-lab.json",
+      "bytes": 193781,
+      "sha256": "d814952f330f328f63bc230472d4c69f331121bcd62df7ef36c8276318eb5566",
+      "passed": true
+    },
+    {
+      "role": "jpeg",
+      "path": "evidence/board/ring-alignment-20261109-d/frame3418.jpg",
+      "bytes": 65708,
+      "sha256": "92eba9ac12e12502ed841c2be450693cd87c3ab11e993717b7adfb6f092e9a79",
+      "passed": true
+    },
+    {
+      "role": "rgb565",
+      "path": "evidence/board/ring-alignment-20261109-d/frame3418.rgb565",
+      "bytes": 460800,
+      "sha256": "48b365d9c5ff60085a0f835f974986f91321e91a752b5593bca9a2d57f662b35",
+      "passed": true
+    },
+    {
+      "role": "metadata",
+      "path": "evidence/board/ring-alignment-20261109-d/frame3418-native-lab.json",
+      "bytes": 190886,
+      "sha256": "2510ad7ca735e0e174ae40d6a4d22cfea95f6768933d69a71ed27b60cfdc7e62",
+      "passed": true
+    },
+    {
+      "role": "jpeg",
+      "path": "evidence/board/ring-rough-20261108/native-frame100.jpg",
+      "bytes": 65315,
+      "sha256": "a8b8dc7aadb7d30ca6bd1fe04f23cf9463cb2ba0659214b1a6fbbe1e420e791e",
+      "passed": true
+    },
+    {
+      "role": "rgb565",
+      "path": "evidence/board/ring-rough-20261108/native-frame100.rgb565",
+      "bytes": 460800,
+      "sha256": "86d28d9912c476108454dad00cfaefb1bc4926d295188153fa58d8d034ed88dd",
+      "passed": true
+    },
+    {
+      "role": "metadata",
+      "path": "evidence/board/ring-rough-20261108/native-frame100.json",
+      "bytes": 577,
+      "sha256": "8ebe982f84cd4a729246deb65b6e62793a0725c36becb5b7802bc3f4db031bdf",
+      "passed": true
+    },
+    {
+      "role": "jpeg",
+      "path": "data/ai_pilot/material-series-20261109-g/capture-01.jpg",
+      "bytes": 79278,
+      "sha256": "31d2422e89c83992c56c3247bcd69d9e1fe56af3686b5d88cc618dbafe1a087a",
+      "passed": true
+    },
+    {
+      "role": "rgb565",
+      "path": "data/ai_pilot/material-series-20261109-g/capture-01.rgb565",
+      "bytes": 460800,
+      "sha256": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "passed": true
+    },
+    {
+      "role": "metadata",
+      "path": "data/ai_pilot/material-series-20261109-g/capture-01-lab.json",
+      "bytes": 194516,
+      "sha256": "407cb7b9e0e9aef51c63918a1db415fcc7a35fb24e639c8bed8ff0c4f39b521b",
+      "passed": true
+    },
+    {
+      "role": "jpeg",
+      "path": "data/ai_pilot/material-source-20261109-f/capture18.jpg",
+      "bytes": 76787,
+      "sha256": "683a827a5bf37f494d789357b4d161d6aa8f9c0f7daa2435517c0dbce19323bc",
+      "passed": true
+    },
+    {
+      "role": "rgb565",
+      "path": "data/ai_pilot/material-source-20261109-f/capture18.rgb565",
+      "bytes": 460800,
+      "sha256": "a017ed6207bd3bddf2fd93526adf11a75a565f8a02097e5672a94607738a03f1",
+      "passed": true
+    },
+    {
+      "role": "metadata",
+      "path": "data/ai_pilot/material-source-20261109-f/capture18-lab.json",
+      "bytes": 194236,
+      "sha256": "9e735678da5e8ad147d2926d09caa7f2668189c83ae09fb1cfb85139587f1fcf",
+      "passed": true
+    },
+    {
+      "role": "jpeg",
+      "path": "evidence/board/ygb-new-view-20261109-e/ygb-new-scene.jpg",
+      "bytes": 82033,
+      "sha256": "d2e3ad12778a4ef602a07593d3262380c71009bae0d5e4776ae3dad83b7ba8b8",
+      "passed": true
+    },
+    {
+      "role": "rgb565",
+      "path": "evidence/board/ygb-new-view-20261109-e/ygb-new-scene.rgb565",
+      "bytes": 460800,
+      "sha256": "a0b98a1dba6046dec36a1a4b4e2d845d5aad4be97839fb7d438c74efc06bf674",
+      "passed": true
+    },
+    {
+      "role": "metadata",
+      "path": "evidence/board/ygb-new-view-20261109-e/ygb-new-scene-lab.json",
+      "bytes": 196199,
+      "sha256": "f396e5cee0bffbaeba586461e425facac62ab63e824e2030fb0f32fd5129d6ed",
+      "passed": true
+    },
+    {
+      "role": "jpeg",
+      "path": "data/ai_pilot/material-series-20261109-g/capture-04.jpg",
+      "bytes": 80073,
+      "sha256": "b915480aeb7cd529cdf51341d0564ae898453933a7fcaaed9c23797183cd9175",
+      "passed": true
+    },
+    {
+      "role": "rgb565",
+      "path": "data/ai_pilot/material-series-20261109-g/capture-04.rgb565",
+      "bytes": 460800,
+      "sha256": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "passed": true
+    },
+    {
+      "role": "metadata",
+      "path": "data/ai_pilot/material-series-20261109-g/capture-04-lab.json",
+      "bytes": 194435,
+      "sha256": "cd634faee49addd2ac28273611edfe2a785ff24bf68ad8742c769c69bc275076",
+      "passed": true
+    },
+    {
+      "role": "jpeg",
+      "path": "evidence/board/three-object-multicolor-20261109/multi-native.jpg",
+      "bytes": 75045,
+      "sha256": "7309a3a480139e66c1fd31c0eb776e27eb8ae11cdad7bcc05d7086eb9ea9145f",
+      "passed": true
+    },
+    {
+      "role": "rgb565",
+      "path": "evidence/board/three-object-multicolor-20261109/multi-native.rgb565",
+      "bytes": 460800,
+      "sha256": "cfa68398650971a91353d320bed5516cb0ba704e55ee565d456abbb76ba19ab2",
+      "passed": true
+    },
+    {
+      "role": "metadata",
+      "path": "evidence/board/three-object-multicolor-20261109/multi-native-lab.json",
+      "bytes": 193795,
+      "sha256": "95b7af7c8208556c8aafc9236c0b7ff0ce37819266bb2a02011365a7d8b27556",
+      "passed": true
+    },
+    {
+      "role": "jpeg",
+      "path": "evidence/board/kpu-green-black-20261109-e/green-black-native.jpg",
+      "bytes": 75152,
+      "sha256": "43a546fe1af48d3efce86f99cf5e9daaa32cef0b32f3adc889e019d0ad405549",
+      "passed": true
+    },
+    {
+      "role": "rgb565",
+      "path": "evidence/board/kpu-green-black-20261109-e/green-black-native.rgb565",
+      "bytes": 460800,
+      "sha256": "dbdff4b593fc6b599104583851bb164abfd04c3553c436f1026b0a2fd303503f",
+      "passed": true
+    },
+    {
+      "role": "metadata",
+      "path": "evidence/board/kpu-green-black-20261109-e/green-black-native-lab.json",
+      "bytes": 193637,
+      "sha256": "8831c0b71c9c6b05b0f2a297edb83634d2e06d7de4f04dcfe61118e9257fcc2b",
+      "passed": true
+    },
+    {
+      "role": "jpeg",
+      "path": "evidence/board/kpu-green-black-20261109-e/ygb-after-fallback.jpg",
+      "bytes": 77287,
+      "sha256": "2c79ef043b0c81259578051a48e91f2ac5a0b6d574ffc409c7d9b8757b5db8a3",
+      "passed": true
+    },
+    {
+      "role": "rgb565",
+      "path": "evidence/board/kpu-green-black-20261109-e/ygb-after-fallback.rgb565",
+      "bytes": 460800,
+      "sha256": "e876e7e413d81d9fd583363d6fbc47d4f6f463d15f0258eba12193959ed0d0b3",
+      "passed": true
+    },
+    {
+      "role": "metadata",
+      "path": "evidence/board/kpu-green-black-20261109-e/ygb-after-fallback-lab.json",
+      "bytes": 193558,
+      "sha256": "60ca6495fe132a0d80fe2b249461ef305686211f5bec1b16cc99d05ca9d3aff8",
+      "passed": true
+    },
+    {
+      "role": "jpeg",
+      "path": "data/ai_pilot/material-series-20261109-g/capture-02.jpg",
+      "bytes": 79329,
+      "sha256": "72eb214ea80b8c92f955be30a0f7bf24b7420dbd56ee7880851f3fe276a27aab",
+      "passed": true
+    },
+    {
+      "role": "rgb565",
+      "path": "data/ai_pilot/material-series-20261109-g/capture-02.rgb565",
+      "bytes": 460800,
+      "sha256": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "passed": true
+    },
+    {
+      "role": "metadata",
+      "path": "data/ai_pilot/material-series-20261109-g/capture-02-lab.json",
+      "bytes": 194259,
+      "sha256": "c9358d37da8f77941ad83665f0bc5109683703e18431901233a8aeb875c89f3d",
+      "passed": true
+    }
+  ]
+}

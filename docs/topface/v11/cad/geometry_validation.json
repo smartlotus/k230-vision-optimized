@@ -1,0 +1,15 @@
+{
+  "mesh_count": 1,
+  "vertices": 9761,
+  "polygons": 19518,
+  "size_m": [
+    0.04999968968331814,
+    0.049999844282865524,
+    0.0599999997516768
+  ],
+  "top_face_count": 627,
+  "top_area_m2": 0.0007068465536495816,
+  "glb_up_axis_correction_deg": -90.0,
+  "original_topology_preserved": true,
+  "units": "m"
+}

@@ -1,0 +1,6 @@
+# Preserve SHA-bound manifests, notebooks, reports and receipts exactly.
+* -text whitespace=cr-at-eol
+*.il -whitespace
+*.dot -whitespace
+*.csv -whitespace
+*.log -whitespace

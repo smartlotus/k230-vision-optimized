@@ -1,0 +1,10 @@
+{
+  "kernel_id": 144989064,
+  "version": 3,
+  "status": "ERROR",
+  "failure": "FIXED_INPUT_MOUNT_NOT_FOUND",
+  "input_dataset_still_attached": true,
+  "optimizer_steps": 0,
+  "rendered_images": 0,
+  "repair": "Locate manifest by exact expected SHA256 across mount layouts; new run_id a02"
+}

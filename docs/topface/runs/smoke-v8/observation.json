@@ -1,0 +1,9 @@
+{
+  "observed_utc": "2026-11-14T12:31:23.946838+00:00",
+  "ref": "lotus30/k230-topfacenet-original-cad-drive-smoke-20261114",
+  "kernel_id": 144989064,
+  "version": 8,
+  "current_version": 8,
+  "status": "RUNNING",
+  "log_tail": []
+}

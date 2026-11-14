@@ -13,9 +13,14 @@ API = "https://www.googleapis.com/drive/v3/files"
 CHUNK = 8*1024*1024
 
 
-def sha(path):
+def sha(path, deadline=None):
     with Path(path).open("rb") as stream:
-        return hashlib.file_digest(stream, "sha256").hexdigest()
+        digest=hashlib.sha256()
+        while chunk:=stream.read(1024**2):
+            if deadline is not None and time.monotonic()>=deadline:
+                raise TimeoutError('Artifact hashing budget exhausted')
+            digest.update(chunk)
+        return digest.hexdigest()
 
 
 def atomic_json(path, value):
@@ -27,7 +32,7 @@ def atomic_json(path, value):
 
 
 class Drive:
-    def __init__(self, folder_id):
+    def __init__(self, folder_id, deadline=None):
         if not folder_id or not folder_id.replace("_", "").replace("-", "").isalnum():
             raise ValueError("Explicit Google Drive destination folder required")
         raw = os.environ.get(SECRET_NAME)
@@ -38,8 +43,16 @@ class Drive:
         self.folder_id = folder_id
         self.session = requests.Session()
         self.token, self.expiry = "", 0.
+        self.deadline=deadline
+
+    def check_budget(self):
+        remaining=90. if self.deadline is None else self.deadline-time.monotonic()
+        if remaining<=1.:
+            raise TimeoutError('Drive publication deadline exhausted')
+        return remaining
 
     def request(self, method, url, **kwargs):
+        remaining=self.check_budget()
         host = urlsplit(url)
         if host.scheme != "https" or host.netloc != "www.googleapis.com":
             raise ValueError("Unexpected Drive endpoint")
@@ -48,15 +61,16 @@ class Drive:
                 "client_id": self.oauth["client_id"],
                 "client_secret": self.oauth["client_secret"],
                 "refresh_token": self.oauth["refresh_token"],
-                "grant_type": "refresh_token"}, timeout=(15, 45), allow_redirects=False)
+                "grant_type": "refresh_token"}, timeout=(min(15,remaining), min(45,remaining)), allow_redirects=False)
             response.raise_for_status()
             payload = response.json()
             self.token = payload["access_token"]
             self.expiry = time.time()+payload["expires_in"]
         headers = kwargs.pop("headers", {})
         headers["Authorization"] = "Bearer "+self.token
+        remaining=self.check_budget()
         response = self.session.request(method, url, headers=headers,
-            timeout=(15, 90), allow_redirects=False, **kwargs)
+            timeout=(min(15,remaining), min(90,remaining)), allow_redirects=False, **kwargs)
         if response.is_redirect and response.status_code != 308:
             response.close()
             raise RuntimeError("Unexpected Google Drive redirect")
@@ -72,9 +86,37 @@ class Drive:
                 folder.get("capabilities", {}).get("canAddChildren") is not True):
             raise RuntimeError("Expected writable K230 destination folder not verified")
 
+    def reserve_run(self, run_id, input_sha256):
+        """Persistent single-writer admission guard, before any scientific work.
+
+        Drive names are not transactional locks. The project serial owner is
+        still required. This detects accidental reruns in a fresh Kaggle VM.
+        A started/failed run is reconciled explicitly, never replayed here.
+        """
+        name = run_id+'-RUN-ADMISSION.json'
+        with self.request('GET',API,params={'q':
+                f"'{self.folder_id}' in parents and name = '{name}' and trashed = false",
+                'fields':'files(id,name,appProperties)'}) as response:
+            existing = response.json().get('files',[])
+        if existing:
+            raise RuntimeError('Run identity already admitted on Drive; reconcile instead of replaying')
+        with self.request('POST',API,params={'fields':'id,name,parents,appProperties'},json={
+                'name':name,'parents':[self.folder_id],
+                'appProperties':{'project':'k230-topface','run_id':run_id,
+                    'input_sha256':input_sha256,'status':'ADMITTED_NO_AUTOMATIC_REPLAY'}}) as response:
+            marker=response.json()
+        if marker.get('parents') != [self.folder_id]:
+            raise RuntimeError('Run admission marker destination mismatch')
+        return marker['id']
+
+    def finish_run(self, marker_id, status):
+        with self.request('PATCH',API+'/'+marker_id,params={'fields':'id,appProperties'},
+                          json={'appProperties':{'status':status}}) as response:
+            return response.json()['id']
+
     def export(self, path, run_id, receipt_path):
         path = Path(path)
-        digest, size = sha(path), path.stat().st_size
+        digest, size = sha(path,self.deadline), path.stat().st_size
         remote_name = f"{run_id}-{digest[:16]}{''.join(path.suffixes)}"
         # The session journal is outside the archived result. Retain for reconciliation.
         journal_path = Path("/tmp/k230-private-upload")/(run_id+".upload.json")
@@ -114,6 +156,7 @@ class Drive:
                     offset = int(acknowledged.split("-")[-1])+1 if acknowledged else 0
             with path.open("rb") as stream:
                 while offset < size:
+                    self.check_budget()
                     stream.seek(offset)
                     data = stream.read(min(CHUNK, size-offset))
                     with self.request("PUT", location, data=data, headers={
@@ -136,6 +179,7 @@ class Drive:
         returned_size, returned_hash = 0, hashlib.sha256()
         with self.request("GET", API+"/"+meta["id"], params={"alt": "media"}, stream=True) as response:
             for chunk in response.iter_content(CHUNK):
+                self.check_budget()
                 if chunk:
                     returned_size += len(chunk)
                     returned_hash.update(chunk)
@@ -149,14 +193,16 @@ class Drive:
         return receipt
 
 
-def archive_directory(root, target):
+def archive_directory(root, target, deadline=None):
     root = Path(root)
     files = sorted(p for p in root.rglob("*") if p.is_file())
     manifest = [{"name": p.relative_to(root).as_posix(), "bytes": p.stat().st_size,
-                 "sha256": sha(p)} for p in files]
+                 "sha256": sha(p,deadline)} for p in files]
     atomic_json(root/"MEMBERS.json", manifest)
     with tarfile.open(target, "w:gz") as output:
         for path in files+[root/"MEMBERS.json"]:
+            if deadline is not None and time.monotonic()>=deadline:
+                raise TimeoutError('Artifact archive budget exhausted')
             if path.is_symlink():
                 raise ValueError("Symlinks cannot enter cloud archive")
             output.add(path, arcname=path.relative_to(root).as_posix(), recursive=False)

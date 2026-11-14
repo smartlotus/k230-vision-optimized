@@ -1,0 +1,21 @@
+{
+  "schema": "topface-submission-intent-v1.1",
+  "status": "PREPARED_NOT_SUBMITTED",
+  "dataset": "lotus30/k230-topface-native-v11-input-20261114-a02",
+  "required_dataset_version": 1,
+  "kernel": "lotus30/k230-topface-v11-01-simulation-pilot",
+  "run_id": "k230-topface-v11-pilot-1000-a02",
+  "input_manifest_sha256": "a623c1137b737420d38610793596caff281720a86321832d533f1d14299d614f",
+  "notebook_sha256": "d0c6a4bd88299aa266ac8b9ae9f59cba77297011931109095045240646745bf3",
+  "provider_mode": "QUICK_SAVE first; editor SAVE_AND_RUN_ALL after runtime Secret association",
+  "scientific_runs_admitted": 0,
+  "count": 1000,
+  "seed": 20261115,
+  "worker_max_seconds": 9000,
+  "provider_max_seconds": 10800,
+  "automatic_replay": false,
+  "secret_name": "DOASTRA_GDRIVE_OAUTH_JSON",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "storage_admission": "required inside exact runtime before download/render",
+  "old_kernel": "retired; no restart authorized by this new submission"
+}

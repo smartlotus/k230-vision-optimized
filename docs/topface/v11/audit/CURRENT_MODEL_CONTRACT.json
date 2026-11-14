@@ -1,0 +1,79 @@
+{
+  "schema": "topface-current-model-audit-v1.1",
+  "scope": "HISTORICAL_PILOT_NOT_ACCEPTED",
+  "onnx_input": {
+    "name": "images",
+    "shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "dtype": "float32",
+    "color": "RGB",
+    "layout": "NCHW",
+    "normalization": "uint8/255 once"
+  },
+  "preprocessing": {
+    "source_wh": [
+      640,
+      360
+    ],
+    "resized_wh": [
+      224,
+      126
+    ],
+    "padding_tblr": [
+      49,
+      49,
+      0,
+      0
+    ],
+    "pad_value": 114,
+    "host_interpolation": "OpenCV INTER_LINEAR",
+    "board_ai2d": "tf_bilinear / half_pixel"
+  },
+  "onnx_output": {
+    "name": "output0",
+    "shape": [
+      1,
+      5,
+      1029
+    ],
+    "encoding": "decoded cxcywh + one declared probability"
+  },
+  "kmodel_input": {
+    "shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "dtype": "uint8",
+    "compiler_preprocess": true
+  },
+  "versions": {
+    "historical_board_runtime": "2.11.0",
+    "compiler": "2.11.0",
+    "kpu_plugin": "2.11.0",
+    "current_board_readback": "UNKNOWN"
+  },
+  "evidence": [
+    "tools/material_model_contract.py:64-94",
+    "tools/material_preprocess.py:8-26",
+    "vision/yolo_candidates.py:12-23",
+    "docs/validation/frozen-model-fps-20261112/conversion.json",
+    "LIVE/k230_transport_mvp/evidence/board/kpu-green-black-20261109-e/kpu-bounded-probe-after-cleanup-native.json:67"
+  ],
+  "limits": {
+    "task_accuracy": false,
+    "native_ai2d_pixel_equivalence": false,
+    "live_csi2_rgb888p_capture": false,
+    "test_boxes": 5,
+    "test_tp": 0,
+    "test_fp": 0,
+    "test_fn": 5,
+    "optimizer_updates": 4
+  },
+  "new_model_required": "Independent multi-color/physical-center/ellipse contract; old square single-class validator is not applicable"
+}

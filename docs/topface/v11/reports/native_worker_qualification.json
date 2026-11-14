@@ -1,0 +1,185 @@
+{
+  "schema": "topface-native-pilot-v1.1",
+  "run_id": "native-v11-worker-qual-a03",
+  "status": "COMPUTE_AND_QA_PASS",
+  "observed_utc": "2026-11-14T13:38:36.150092+00:00",
+  "optimizer_steps": 0,
+  "requested_scenes": 6,
+  "seed": 20261115,
+  "automatic_replay": false,
+  "scope": "LOCAL_WORKER_QUALIFICATION",
+  "input_manifest_sha256": "23c2cc47053e7816635fb3040c7c6806ed411c534630455c86c7353feeaf3591",
+  "source_files": [
+    {
+      "path": "audit_v11.py",
+      "bytes": 9515,
+      "sha256": "d27c5a4022b84ec98e1fd82ee2eca27166db371d5bd8a4cd919df44009b8da37"
+    },
+    {
+      "path": "cad_bundle.bin",
+      "bytes": 608124,
+      "sha256": "642df0a28329ebe3adab0ca96888e5078b1a005dc7b9dbd345903e10274fc7f2"
+    },
+    {
+      "path": "camera_profile.yaml",
+      "bytes": 12464,
+      "sha256": "9367bdb88c4dacdb2c459c5e47e128ce188358fa92364b5562de726df9d4cefa"
+    },
+    {
+      "path": "camera_sweep.yaml",
+      "bytes": 432,
+      "sha256": "bf04b72832e1c134d4e692b458cfa98f01e7a5a34cbe130ee80cde72a5e771d1"
+    },
+    {
+      "path": "cloud_store.py",
+      "bytes": 10870,
+      "sha256": "1f764499ce2098139a57cbcfd7406000c98f4a8ca914bb8d96e9e4656148cf34"
+    },
+    {
+      "path": "geometry.py",
+      "bytes": 2996,
+      "sha256": "de5c6055507a76ad5656bf8b3f554139bd154bf581b7196722e308a3a3985cc4"
+    },
+    {
+      "path": "input_locator.py",
+      "bytes": 941,
+      "sha256": "2a1f79933d67272996993a01ab8ad5da6b2d00710884456d9112f02ee00e0011"
+    },
+    {
+      "path": "native_cad.py",
+      "bytes": 4624,
+      "sha256": "0d58d5ded69f85cb320ea4781d17c4abccffd170f733d0edd798794bc15e2e75"
+    },
+    {
+      "path": "native_job.py",
+      "bytes": 13120,
+      "sha256": "1c80d0a3c598671243c343ee7a3d876dc9c844f4be128748c44d96bd1623f1be"
+    },
+    {
+      "path": "render_native.py",
+      "bytes": 10635,
+      "sha256": "663d787fb52fedc0bdf5438fab40937218d6763e6290e4b532e3a5675f0fe08c"
+    },
+    {
+      "path": "scene_config.py",
+      "bytes": 4417,
+      "sha256": "e1e8ed0ea3a035ebb0438ec197411978f4d5e765df098f90fa3a9c9b8aadbc00"
+    },
+    {
+      "path": "SMOKE_HUMAN_REVIEW.json",
+      "bytes": 412,
+      "sha256": "5771259baeb8e81c9c27baf5cdb81b395aa72736bfb11c7055f816f8086346f7"
+    }
+  ],
+  "max_seconds": 600,
+  "stopping_condition": "complete requested scenes or finite deadline; no automatic scientific replay",
+  "stage": "PILOT_LABEL_QA",
+  "elapsed_seconds": 16.545999999998457,
+  "qualification_device": {
+    "selected_backend": "OPTIX",
+    "attempts": [
+      {
+        "backend": "OPTIX",
+        "devices": [
+          {
+            "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "type": "CUDA"
+          },
+          {
+            "name": "AMD Ryzen 9 8945HX with Radeon Graphics",
+            "type": "CPU"
+          },
+          {
+            "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "type": "OPTIX"
+          },
+          {
+            "name": "AMD Radeon(TM) 610M",
+            "type": "HIP"
+          }
+        ]
+      }
+    ],
+    "gpu_render_verified": true,
+    "successful_frames": 1,
+    "blender_version": "4.2.9 LTS",
+    "numpy_version": "1.24.3"
+  },
+  "images_rendered": 6,
+  "instances": 15,
+  "qa": {
+    "schema": "topface-v1.1-label-audit",
+    "status": "PASS",
+    "images": 6,
+    "instances": 15,
+    "issues": [],
+    "count_histogram": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1
+    },
+    "color_histogram": {
+      "1": 2,
+      "2": 3,
+      "3": 2,
+      "4": 3,
+      "5": 2,
+      "6": 3
+    },
+    "unique_scene_groups": 6,
+    "unique_scene_seeds": 6,
+    "camera_configuration_groups": 6,
+    "camera_group_cross_split_count": 0,
+    "split_policy": "SHA256 of height/pitch/HFOV configuration group; frozen before training",
+    "height_mm_range": [
+      100.0,
+      400.0
+    ],
+    "plane_angle_deg_range": [
+      80.0,
+      85.0
+    ],
+    "max_center_reprojection_error_px": 1.1457157353758233e-13,
+    "strong_perspective_outside_user_envelope": "excluded, not claimed as covered",
+    "real_geometry_accuracy_verified": false
+  },
+  "device": {
+    "selected_backend": "OPTIX",
+    "attempts": [
+      {
+        "backend": "OPTIX",
+        "devices": [
+          {
+            "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "type": "CUDA"
+          },
+          {
+            "name": "AMD Ryzen 9 8945HX with Radeon Graphics",
+            "type": "CPU"
+          },
+          {
+            "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "type": "OPTIX"
+          },
+          {
+            "name": "AMD Radeon(TM) 610M",
+            "type": "HIP"
+          }
+        ]
+      }
+    ],
+    "gpu_render_verified": true,
+    "successful_frames": 6,
+    "blender_version": "4.2.9 LTS",
+    "numpy_version": "1.24.3"
+  },
+  "durable_status": "LOCAL_ONLY",
+  "archive": {
+    "name": "native-v11-worker-qual-a03.tar.gz",
+    "bytes": 2755788,
+    "sha256": "84f17ca28bef669373f5588f1bc2ba2cdf6930510cac8fc3cd079fe3f8cecc87"
+  }
+}

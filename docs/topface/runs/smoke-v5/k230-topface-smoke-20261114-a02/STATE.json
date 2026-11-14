@@ -1,0 +1,10 @@
+{
+  "schema": "k230-kaggle-smoke-v1",
+  "run_id": "k230-topface-smoke-20261114-a02",
+  "status": "NEEDS_SECRET_OR_TECHNICAL_REPAIR",
+  "automatic_replay": false,
+  "optimizer_steps": 0,
+  "images_rendered": 0,
+  "error_type": "FileNotFoundError",
+  "elapsed_seconds": 0.0577598069999965
+}

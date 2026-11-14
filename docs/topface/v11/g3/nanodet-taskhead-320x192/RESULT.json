@@ -1,0 +1,337 @@
+{
+  "schema": "topface-g3-original-model-probe-v1",
+  "observed_utc": "2026-11-14T13:51:19.380993+00:00",
+  "source_model": "C:\\Users\\28389\\Desktop\\k230-vision-optimized\\.ops\\local\\topface-g3-nanodet-taskheads-a01\\nanodet-taskhead_untrained-320x192.onnx",
+  "source_bytes": 4758815,
+  "source_sha256": "d79d7f87f0237400a04ed91740ef4b27778eda059bbb892b35e25b822201f5cb",
+  "status": "COMPILE_AND_SIMULATOR_EXECUTED_UNTRAINED_TASK_HEAD",
+  "stage": "DONE",
+  "opset": [
+    {
+      "domain": "",
+      "version": 11
+    }
+  ],
+  "operator_counts": {
+    "Conv": 110,
+    "LeakyRelu": 71,
+    "MaxPool": 1,
+    "Concat": 33,
+    "Constant": 130,
+    "Reshape": 36,
+    "Transpose": 17,
+    "Shape": 17,
+    "Gather": 13,
+    "Add": 18,
+    "Div": 13,
+    "Mul": 26,
+    "Slice": 30,
+    "Resize": 2
+  },
+  "versions": {
+    "numpy": "2.2.6",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.24.4",
+    "nncase": "2.11.0",
+    "nncase-kpu": "2.11.0"
+  },
+  "optimizer_steps": 0,
+  "task_model": true,
+  "board_run": false,
+  "task_accuracy_verified": false,
+  "scope": "taskhead-untrained",
+  "final_model_ptq": false,
+  "inputs": [
+    {
+      "name": "images",
+      "shape": [
+        1,
+        3,
+        192,
+        320
+      ],
+      "dtype": "tensor(float)"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "topface_raw",
+      "shape": [
+        1,
+        1275,
+        50
+      ],
+      "dtype": "tensor(float)"
+    }
+  ],
+  "calibration_members": [
+    {
+      "scene": "scene-00002",
+      "split": "train",
+      "camera_group": "H250-P80-F62",
+      "rgb_sha256": "1f14f1c3b8ea5494b3dde9ee809e3875e94216d8148a0831259c3717fea81f2b",
+      "label_sha256": "f8358c0edd0dd84283eaa370c6d12e0e9b195fac8835b641d58183fad8de2a80"
+    },
+    {
+      "scene": "scene-00003",
+      "split": "train",
+      "camera_group": "H325-P80-F62",
+      "rgb_sha256": "8c1c6ac4293716080ba6a16d22bfc9b54201e9158ea09fe5950fd032a4177526",
+      "label_sha256": "f33b43b680858731c2ecffa647d7cf5d2331f5ce24ac3fdee7ce927f3e335567"
+    },
+    {
+      "scene": "scene-00004",
+      "split": "train",
+      "camera_group": "H400-P80-F62",
+      "rgb_sha256": "856d005685bcedbb2970243271c7c2c92ec2beed3c2d6f88616baf0b5d706ca1",
+      "label_sha256": "8282118212b5a8f6666bb564b076ed6b376d3a61c469a47ff812bae1d9e1336b"
+    },
+    {
+      "scene": "scene-00006",
+      "split": "train",
+      "camera_group": "H175-P85-F62",
+      "rgb_sha256": "c19aaf91095777b64be04963c4179496bd5aa5ee24f93da5be743020ea0f1ce2",
+      "label_sha256": "e3bd137315a81355aa52db9b8f7783dc4af531fe75c03a4af760f3381185f727"
+    },
+    {
+      "scene": "scene-00007",
+      "split": "train",
+      "camera_group": "H250-P85-F62",
+      "rgb_sha256": "d8ee3fe4711d903d292d66be335bfec319e38f5ca5789a4f635923f7d5bd1669",
+      "label_sha256": "c47aee0c0885bd9a4a1204b45f5dff2732cd3e526c8086a33c215c5f1f2edf14"
+    },
+    {
+      "scene": "scene-00008",
+      "split": "train",
+      "camera_group": "H325-P85-F62",
+      "rgb_sha256": "7ca0bb7aa82ef128e78d5453c657cd5c6b76c5ee3f6ddd27f9e9c23aaf230fb4",
+      "label_sha256": "64180469fe3ceb5d2efbd4537b2b79bd08fced9df33321b93934bf28d17ec7f9"
+    },
+    {
+      "scene": "scene-00009",
+      "split": "train",
+      "camera_group": "H400-P85-F62",
+      "rgb_sha256": "8127d9134bbd2d290533aa69db8773ac3cb11d11f4c78412c12c049c105f4db6",
+      "label_sha256": "c96538b2ab32c8e24aedfa5cf7cf6dcbdaea784d051cad506cf72917adaa2552"
+    },
+    {
+      "scene": "scene-00011",
+      "split": "train",
+      "camera_group": "H175-P90-F62",
+      "rgb_sha256": "e06c4de8cf7cb8809d93619b75074f420ae1037b405661135bdd9e2b3e6ce44f",
+      "label_sha256": "3f4a6ad0f8e109f7e65927613a143db1b676541008003c331af66c9ba65f4676"
+    },
+    {
+      "scene": "scene-00012",
+      "split": "train",
+      "camera_group": "H250-P90-F62",
+      "rgb_sha256": "082d73117edb14ce5e49ae7f40b9d65402197739c4a55889ecca0d56c78ece4a",
+      "label_sha256": "1e0c35f2a8086608e35d4c8fac785470dcedd26a5876d85b75da19ac6039e825"
+    },
+    {
+      "scene": "scene-00014",
+      "split": "train",
+      "camera_group": "H400-P90-F62",
+      "rgb_sha256": "ea2515fe26406232bb561dbefceff847c5f9b6c7d5e49cc3c54982a30ad5d1bd",
+      "label_sha256": "9035adb6815f52ff44d0aab71d8b757b4c78217f4be090283993ad3ad58a4d10"
+    },
+    {
+      "scene": "scene-00016",
+      "split": "train",
+      "camera_group": "H175-P95-F62",
+      "rgb_sha256": "d5a1e8262afb0be677c64d12d1c7cb67d6be434f564f09098e46f2dfef9f76f5",
+      "label_sha256": "aada31362a55f1ff00daa19b1a3801515620319fcd8013f49b778150a6da61d0"
+    },
+    {
+      "scene": "scene-00017",
+      "split": "train",
+      "camera_group": "H250-P95-F62",
+      "rgb_sha256": "7486e70493ba27e3a10a7971a69728ba3e711ff042a811f27ee460f06d1bf8f8",
+      "label_sha256": "2ed56c25f4cfcb9034796eec9c480fde10d2ad440ba75b85db4ce98316efa5fa"
+    },
+    {
+      "scene": "scene-00018",
+      "split": "train",
+      "camera_group": "H325-P95-F62",
+      "rgb_sha256": "0f05dad590c552d4d543981bf152d0ec57b8d79a688a562c3140e35e8dc0e2f4",
+      "label_sha256": "a6d6c14066ce5a0de77c0adf0faecb09d5a686942bd54d7548f1c26ba583d2f5"
+    },
+    {
+      "scene": "scene-00019",
+      "split": "train",
+      "camera_group": "H400-P95-F62",
+      "rgb_sha256": "fb8967842b8c14b6d6af7668d3237c09790bdb7dd25ea39b4831e1c6db3f4023",
+      "label_sha256": "4c0018c8729e560119e56916210bd0560d71b732d68c6b446e0303e2b4e0b6bd"
+    },
+    {
+      "scene": "scene-00021",
+      "split": "train",
+      "camera_group": "H175-P100-F62",
+      "rgb_sha256": "be4112335c48f264e35f196f8c38c398dee8f9d5200666a8929b1cceb3841ca2",
+      "label_sha256": "8d08f85fcf06c6ee0678081f8b19171f98ac044eecff4f642065a5215aeb076c"
+    },
+    {
+      "scene": "scene-00022",
+      "split": "train",
+      "camera_group": "H250-P100-F62",
+      "rgb_sha256": "c3409586166f57a4cec9db320b8ad4a208862d3825ae85ca8adb0eacc7a903ec",
+      "label_sha256": "4f6f5e842592faf19f04323ff16fdd25829977118251b65aa05396ff10eb9d8d"
+    }
+  ],
+  "paired_members": [
+    {
+      "scene": "scene-00023",
+      "split": "train",
+      "camera_group": "H325-P100-F62",
+      "rgb_sha256": "928cfda9dc5f4e8b49d51d9801f77918d236fc5ceb4dd273afbabc4f4dfbbddc",
+      "label_sha256": "f4d59f9cd68cafb2650b4309b736a1fc95e54a7fd8bfc27e61211bccceb0a4d8"
+    },
+    {
+      "scene": "scene-00025",
+      "split": "train",
+      "camera_group": "H100-P80-F65",
+      "rgb_sha256": "02d28b2383720bc33bbf7bcb6a0e7d393a17d14093750de1a265f8ce75ae18c3",
+      "label_sha256": "67de7aeceb206798c506ab6030bd49bc6b17534e1d10bca4bcb2ffaddeefcd63"
+    },
+    {
+      "scene": "scene-00026",
+      "split": "train",
+      "camera_group": "H175-P80-F65",
+      "rgb_sha256": "a4082ebf18a37e8212764faef0ea6e9fd549e987a522d5aa0812f26d894637fb",
+      "label_sha256": "0cb60f2a390785a67bf9f66e30b08116e99dea896346ee073e481a51ac682250"
+    },
+    {
+      "scene": "scene-00027",
+      "split": "train",
+      "camera_group": "H250-P80-F65",
+      "rgb_sha256": "27a1511d8b9d389064f6d655d0cc4b6d46f73378b4e9aaf2914a9d2c80d525e3",
+      "label_sha256": "2a3871f468220c5f158c5b1d82905bd2c0e5abf79d758639331926f4e9a781f1"
+    }
+  ],
+  "cases": [
+    {
+      "pattern": "scene-00023",
+      "input_sha256": "fbfddb26817b1120d59257dc99d50199806e7e6960932093db034c13ae7796e2",
+      "ort_seconds": 0.005253100000118138,
+      "output_bytes": 255000,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            1275,
+            50
+          ],
+          "dtype": "float32",
+          "min": -13.681758880615234,
+          "max": 4.1305251121521,
+          "sha256": "352de1b562825a4c5476912e201fd9e058cbcc982001f76fe6142f987430275e"
+        }
+      ]
+    },
+    {
+      "pattern": "scene-00025",
+      "input_sha256": "7b0ccae454294cd3e19ce15a534290327541a54924ab4dd1769e9a4471a64d13",
+      "ort_seconds": 0.00516300000163028,
+      "output_bytes": 255000,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            1275,
+            50
+          ],
+          "dtype": "float32",
+          "min": -15.42405891418457,
+          "max": 5.4390034675598145,
+          "sha256": "7a24656f8ce475dcea0757c4ac2c569449d34f77a4df63f651d4559b0196c998"
+        }
+      ]
+    },
+    {
+      "pattern": "scene-00026",
+      "input_sha256": "5884ad2b4bd1b3e77603a6f52b8314d36377d600704b6b014cb94a666a9ba14c",
+      "ort_seconds": 0.004052399999636691,
+      "output_bytes": 255000,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            1275,
+            50
+          ],
+          "dtype": "float32",
+          "min": -12.727476119995117,
+          "max": 5.537198066711426,
+          "sha256": "a592bfa78444132a099d21cf4bd58207c2b1d4e578dfce16179046582f6c85a3"
+        }
+      ]
+    },
+    {
+      "pattern": "scene-00027",
+      "input_sha256": "8f384ee64785c445fee24b64665ce537e9104c35c053292d297b08d00c97cce2",
+      "ort_seconds": 0.004186300000583287,
+      "output_bytes": 255000,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            1275,
+            50
+          ],
+          "dtype": "float32",
+          "min": -12.52955150604248,
+          "max": 4.120809555053711,
+          "sha256": "1bf6a49c27496b671bb1ad00ca1013574e76725981d273a533f591306d9e17e8"
+        }
+      ]
+    }
+  ],
+  "calibration_source": "SIXTEEN_QUALIFIED_SYNTHETIC_TRAIN_IMAGES_ENGINEERING_ONLY_NOT_FINAL_PTQ",
+  "compile_seconds": 29.9482210999995,
+  "kmodel_bytes": 1608536,
+  "kmodel_sha256": "249cca8881b076106800d16aafb5e05bcd616c76def018162787d6d253ad980f",
+  "simulator_inputs": [
+    [
+      1,
+      3,
+      192,
+      320
+    ]
+  ],
+  "simulator_comparisons": [
+    {
+      "pattern": "scene-00023",
+      "seconds": 8.387661100001424,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            1275,
+            50
+          ],
+          "max_abs_error": 3.328707695007324,
+          "mean_abs_error": 0.20392891764640808,
+          "relative_l2_error": 0.1352442055940628
+        }
+      ]
+    },
+    {
+      "pattern": "scene-00025",
+      "seconds": 7.668669799997588,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            1275,
+            50
+          ],
+          "max_abs_error": 3.3919308185577393,
+          "mean_abs_error": 0.2002197951078415,
+          "relative_l2_error": 0.14523912966251373
+        }
+      ]
+    }
+  ],
+  "numerical_acceptance": "MEASURED_ONLY_NO_NEW_TASK_TOLERANCE_REGISTERED",
+  "kpu_partition_acceptance": false
+}

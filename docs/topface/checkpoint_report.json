@@ -1,55 +1,68 @@
 {
   "completed": [
-    "Audited project and original execution plan; maintained independent task branch and OPS ownership",
-    "Recorded confirmed small fixed-focus GC2093 and 100-400mm lens-to-top / 80-100deg camera envelope with parameter provenance",
-    "Built stage-A cloud Drive-admission/BlenderProc/CAD render/audit package; uploaded private input Dataset v2 and Quick Save Notebook v2; remotely read back matching source",
-    "Validated one local native Blender RGB/material-index mask and 5 host geometric/audit checks"
+    "V1.1 G0/G1 provenance audit and original CAD validation",
+    "100 local native CPU Smoke scenes /246 instances; QA PASS, user30-image review PASS",
+    "Local Smoke archive accepted on Drive with full byte SHA readback",
+    "Native worker local6-scene/15-instance end-to-end qualification and14 host regressions PASS",
+    "Original Nano/Pico compile+Simulator; original Nano EMA equivalence and rectangular untrained task heads export/compile/Simulator",
+    "Prepared and read back private versioned source/input; user launched Kaggle145002634 v2; Drive admission and one-frame qualification passed; Pilot rendering active"
   ],
   "remaining": [
-    "User must associate existing DOASTRA_GDRIVE_OAUTH_JSON Secret in the prepared Notebook and run once",
-    "Kaggle Drive admission, BlenderProc quickstart and CAD smoke have not executed",
-    "200-frame preview/review, grouped synthetic data, complete TopFaceNet training, approved-real transfer evaluation, ONNX/nncase and board acceptance remain"
+    "Await exact v2 Pilot result and durable archive receipt; do not replace or replay active run",
+    "Pilot dataset diagnostics and overfit/pretrained/random-controlled short training",
+    "GatedFull generation and one formal model training",
+    "Final paired numerics/train-onlyPTQ, separate real evaluation, K230 package and full chain benchmark"
   ],
   "decisions": [
-    "Use the existing private remote for checkpoint backup and a new K230-specific Drive folder",
-    "Keep source CAD as one mesh; correct imported GLB coordinate convention by -90deg around X without topology changes",
-    "Only stage A is executable in this preparation; full task completion is not claimed"
+    "Continue nativebpy rather than repair retired BlenderProc v8",
+    "First task-head candidate NanoDet retaining official backbone/GhostPAN/towers/DFL; no final architecture or accuracy acceptance yet",
+    "Keep original CAD/r4 and production hardware paths unchanged; use private existing remote only"
   ],
   "risks": [
-    "Cloud code remains unverified until stage-A run; Quick Save COMPLETE is not execution",
-    "Fixed-focus nominal 700mm lens sharpness at 100-400mm and true camera intrinsics/distortion remain unmeasured",
-    "Browser control stopped because current Chrome URL could not be reliably determined; Secret association requires user"
+    "Final Cycles GPU device and 1000-scene count remain pending",
+    "Quantized raw errors remain measured-only; untrained-head Simulator execution is not numerical acceptance",
+    "Realintrinsics/focus/ISP/liveRGB888P and fresh blind geometry labels unknown"
   ],
   "next_steps": [
-    "Follow docs/topface/README.md; inspect exact current Notebook version/output before any submission; then continue the full original execution plan"
+    "Observe Kaggle ref lotus30/k230-topface-v11-01-simulation-pilot exact v2 and collect only bounded original receipts",
+    "Implement/read-only dataset diagnostics and the finite training sequence from v11/training/TRAINING_PLAN.json"
   ],
   "verification": [
     {
       "command": "python -m unittest discover -s research/topface -p test_*.py -v",
       "exit_code": 0,
-      "summary": "5 host geometry/audit checks passed",
+      "summary": "14 checks passed",
       "evidence": [
-        "docs/topface/host_tests.log"
+        "docs/topface/v11/reports/host_all_tests.log"
       ]
     },
     {
-      "command": "Blender 4.2.9 --background --factory-startup --python-exit-code 1 --python research/topface/local_blender_probe.py",
+      "command": "archive_local_smoke.py full remote byte stream SHA readback",
       "exit_code": 0,
-      "summary": "Original fused GLB import, CPU RGB/material-index mask; projected/visible IoU 0.961837",
+      "summary": "100 scenes /246 instances, 30052798 bytes; Drive SHA matched",
       "evidence": [
-        "docs/topface/local_blender_probe.log",
-        "docs/topface/local_cad_import.json",
-        "docs/topface/local_cad_validation.json"
+        "docs/topface/v11/reports/SMOKE_DRIVE_ACCEPTANCE.json"
       ]
     },
     {
-      "command": "Kaggle dataset status + kernels push --no-run + source pull/readback",
+      "command": "native_job.py explicit local qualification count6 seed20261115 max600",
       "exit_code": 0,
-      "summary": "Private dataset v2 READY; private Notebook ID144989064 Quick Save v2; semantic source matches; zero scientific runs and zero optimizer steps",
+      "summary": "6 scenes15instances, QA PASS; local only",
       "evidence": [
-        "docs/topface/cloud_preparation.json",
-        "docs/topface/INPUT_MANIFEST.json"
+        "docs/topface/v11/reports/native_worker_qualification.json"
+      ]
+    },
+    {
+      "command": "export_nanodet_candidate.py and probe_candidate.py --scope taskhead-untrained --compile for3 aligned dimensions",
+      "exit_code": 0,
+      "summary": "Original pretrained PT/officialONNX equivalent; all3 task-head graphs compiled andsimulated, nottrained or acceptednumerically",
+      "evidence": [
+        "docs/topface/v11/g3/PRETRAINED_EXPORT.json",
+        "docs/topface/v11/g3/COMPATIBILITY.md"
       ]
     }
-  ]
+  ],
+  "observed_utc": "2026-11-14T14:02:24.090306+00:00",
+  "cloud_job_active": true,
+  "goal_complete": false
 }

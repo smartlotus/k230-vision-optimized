@@ -1,0 +1,23 @@
+height_above_top_mm:
+- 100
+- 175
+- 250
+- 325
+- 400
+plane_angle_deg:
+- 80
+- 85
+- 90
+- 95
+- 100
+horizontal_fov_deg:
+- 62
+- 65
+- 68
+fov_status: INFERRED around vendor nominalH65
+camera_motion: vertical, user confirmed
+normal_object_pose: upright
+working_area_mm: null
+distortion_coefficients: null
+focus_blur_calibrated: false
+split_grouping: height + plane_angle + HFOV; entire configuration group in one split

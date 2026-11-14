@@ -1,0 +1,9 @@
+{
+  "observed_utc": "2026-11-14T13:48:43.615823+00:00",
+  "ref": "lotus30/k230-topface-v11-01-simulation-pilot",
+  "kernel_id": 145002634,
+  "version": 2,
+  "current_version": 3,
+  "status": "RUNNING",
+  "log_tail": []
+}

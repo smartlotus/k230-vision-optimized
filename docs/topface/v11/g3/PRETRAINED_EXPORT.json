@@ -1,0 +1,370 @@
+{
+  "schema": "topface-nanodet-pretrained-export-probe-v1.1",
+  "status": "PRETRAINED_ORIGINAL_AND_RECTANGULAR_PT_ORT_PASS_TASK_HEAD_UNTRAINED",
+  "optimizer_updates": 0,
+  "task_training_started": false,
+  "board_run": false,
+  "source_checkpoint_sha256": "f4c6080f3ef35a64c3030d559438b436462f227ce29700bca71327203e42dea2",
+  "source_checkpoint_bytes": 35470891,
+  "source_original_onnx_sha256": "4f12723cce3d48e47ca92cb925ba74d97a965c069208edca660bbb9f7ce2c610",
+  "torch": "2.10.0+cpu",
+  "onnx": "1.17.0",
+  "onnxruntime": "1.24.4",
+  "pretrained_loading": {
+    "loaded_tensors": 644,
+    "ignored_training_only_tensors": 243,
+    "missing_tensors": [],
+    "checkpoint_sha256": "f4c6080f3ef35a64c3030d559438b436462f227ce29700bca71327203e42dea2",
+    "classification_initialization": "original COCO",
+    "geometry_initialization": "absent",
+    "box_regression_initialization": "original COCO DFL channels",
+    "optimizer_updates": 0
+  },
+  "published_original_equivalence": {
+    "rtol": 0.001,
+    "atol": 0.001,
+    "pass": true,
+    "cases": [
+      {
+        "pattern": "zero",
+        "shape": [
+          1,
+          2125,
+          112
+        ],
+        "max_abs_error": 6.67572021484375e-05,
+        "mean_abs_error": 1.3568707117883605e-06,
+        "allclose": true
+      },
+      {
+        "pattern": "mid",
+        "shape": [
+          1,
+          2125,
+          112
+        ],
+        "max_abs_error": 6.771087646484375e-05,
+        "mean_abs_error": 1.5547742577837198e-06,
+        "allclose": true
+      },
+      {
+        "pattern": "seeded_normal",
+        "shape": [
+          1,
+          2125,
+          112
+        ],
+        "max_abs_error": 1.8477439880371094e-05,
+        "mean_abs_error": 4.6853986646056e-07,
+        "allclose": true
+      }
+    ]
+  },
+  "exports": [
+    {
+      "kind": "original",
+      "width": 224,
+      "height": 128,
+      "file": "nanodet-original-224x128.onnx",
+      "bytes": 4860067,
+      "sha256": "59ce3c418cdc06a6253f1bf4e3150ce1b0cabd80fd6cffe05ecda5e615111f62",
+      "seconds": 1.360000000000582,
+      "pytorch_ort": {
+        "rtol": 0.001,
+        "atol": 0.001,
+        "pass": true,
+        "cases": [
+          {
+            "pattern": "zero",
+            "shape": [
+              1,
+              596,
+              112
+            ],
+            "max_abs_error": 3.266334533691406e-05,
+            "mean_abs_error": 9.309844131166756e-07,
+            "allclose": true
+          },
+          {
+            "pattern": "mid",
+            "shape": [
+              1,
+              596,
+              112
+            ],
+            "max_abs_error": 5.841255187988281e-05,
+            "mean_abs_error": 1.0822169542734628e-06,
+            "allclose": true
+          },
+          {
+            "pattern": "seeded_normal",
+            "shape": [
+              1,
+              596,
+              112
+            ],
+            "max_abs_error": 1.3947486877441406e-05,
+            "mean_abs_error": 4.2116306531170267e-07,
+            "allclose": true
+          }
+        ]
+      }
+    },
+    {
+      "kind": "taskhead_untrained",
+      "width": 224,
+      "height": 128,
+      "file": "nanodet-taskhead_untrained-224x128.onnx",
+      "bytes": 4758815,
+      "sha256": "5f3e1f5f19f38aa6c3cd22e617b179a69301d06a99a0c89ee8d816873be75ef5",
+      "seconds": 0.8590000000003783,
+      "pytorch_ort": {
+        "rtol": 0.001,
+        "atol": 0.001,
+        "pass": true,
+        "cases": [
+          {
+            "pattern": "zero",
+            "shape": [
+              1,
+              596,
+              50
+            ],
+            "max_abs_error": 3.266334533691406e-05,
+            "mean_abs_error": 2.1748512608610326e-06,
+            "allclose": true
+          },
+          {
+            "pattern": "mid",
+            "shape": [
+              1,
+              596,
+              50
+            ],
+            "max_abs_error": 5.841255187988281e-05,
+            "mean_abs_error": 2.512312221369939e-06,
+            "allclose": true
+          },
+          {
+            "pattern": "seeded_normal",
+            "shape": [
+              1,
+              596,
+              50
+            ],
+            "max_abs_error": 1.3947486877441406e-05,
+            "mean_abs_error": 1.0112711379406392e-06,
+            "allclose": true
+          }
+        ]
+      }
+    },
+    {
+      "kind": "original",
+      "width": 320,
+      "height": 192,
+      "file": "nanodet-original-320x192.onnx",
+      "bytes": 4860067,
+      "sha256": "8d12e77db974e3503d77465cb8a8f89c61defaae5a7e6dabebe050916fef7df4",
+      "seconds": 0.9380000000019209,
+      "pytorch_ort": {
+        "rtol": 0.001,
+        "atol": 0.001,
+        "pass": true,
+        "cases": [
+          {
+            "pattern": "zero",
+            "shape": [
+              1,
+              1275,
+              112
+            ],
+            "max_abs_error": 4.5299530029296875e-05,
+            "mean_abs_error": 1.0747954775069957e-06,
+            "allclose": true
+          },
+          {
+            "pattern": "mid",
+            "shape": [
+              1,
+              1275,
+              112
+            ],
+            "max_abs_error": 4.7206878662109375e-05,
+            "mean_abs_error": 1.0510572110433714e-06,
+            "allclose": true
+          },
+          {
+            "pattern": "seeded_normal",
+            "shape": [
+              1,
+              1275,
+              112
+            ],
+            "max_abs_error": 1.430511474609375e-05,
+            "mean_abs_error": 4.2176870351795515e-07,
+            "allclose": true
+          }
+        ]
+      }
+    },
+    {
+      "kind": "taskhead_untrained",
+      "width": 320,
+      "height": 192,
+      "file": "nanodet-taskhead_untrained-320x192.onnx",
+      "bytes": 4758815,
+      "sha256": "d79d7f87f0237400a04ed91740ef4b27778eda059bbb892b35e25b822201f5cb",
+      "seconds": 0.8590000000003783,
+      "pytorch_ort": {
+        "rtol": 0.001,
+        "atol": 0.001,
+        "pass": true,
+        "cases": [
+          {
+            "pattern": "zero",
+            "shape": [
+              1,
+              1275,
+              50
+            ],
+            "max_abs_error": 4.5299530029296875e-05,
+            "mean_abs_error": 2.514598691050196e-06,
+            "allclose": true
+          },
+          {
+            "pattern": "mid",
+            "shape": [
+              1,
+              1275,
+              50
+            ],
+            "max_abs_error": 4.7206878662109375e-05,
+            "mean_abs_error": 2.4653518266859464e-06,
+            "allclose": true
+          },
+          {
+            "pattern": "seeded_normal",
+            "shape": [
+              1,
+              1275,
+              50
+            ],
+            "max_abs_error": 1.430511474609375e-05,
+            "mean_abs_error": 1.0306682725058636e-06,
+            "allclose": true
+          }
+        ]
+      }
+    },
+    {
+      "kind": "original",
+      "width": 384,
+      "height": 224,
+      "file": "nanodet-original-384x224.onnx",
+      "bytes": 4860067,
+      "sha256": "c9a1a77268ebe626abba5d5528e989f6fdc1ccaaf78b9a98c2f84eab0a984416",
+      "seconds": 1.0,
+      "pytorch_ort": {
+        "rtol": 0.001,
+        "atol": 0.001,
+        "pass": true,
+        "cases": [
+          {
+            "pattern": "zero",
+            "shape": [
+              1,
+              1788,
+              112
+            ],
+            "max_abs_error": 5.6624412536621094e-05,
+            "mean_abs_error": 1.214427925333439e-06,
+            "allclose": true
+          },
+          {
+            "pattern": "mid",
+            "shape": [
+              1,
+              1788,
+              112
+            ],
+            "max_abs_error": 6.961822509765625e-05,
+            "mean_abs_error": 1.2371681350487052e-06,
+            "allclose": true
+          },
+          {
+            "pattern": "seeded_normal",
+            "shape": [
+              1,
+              1788,
+              112
+            ],
+            "max_abs_error": 1.4781951904296875e-05,
+            "mean_abs_error": 4.570654539293173e-07,
+            "allclose": true
+          }
+        ]
+      }
+    },
+    {
+      "kind": "taskhead_untrained",
+      "width": 384,
+      "height": 224,
+      "file": "nanodet-taskhead_untrained-384x224.onnx",
+      "bytes": 4758815,
+      "sha256": "880ada92b3b5fac4ba64f6d92e9932d6b15c70343824412e13973553469cc1d7",
+      "seconds": 0.7659999999996217,
+      "pytorch_ort": {
+        "rtol": 0.001,
+        "atol": 0.001,
+        "pass": true,
+        "cases": [
+          {
+            "pattern": "zero",
+            "shape": [
+              1,
+              1788,
+              50
+            ],
+            "max_abs_error": 5.6624412536621094e-05,
+            "mean_abs_error": 2.840211436705431e-06,
+            "allclose": true
+          },
+          {
+            "pattern": "mid",
+            "shape": [
+              1,
+              1788,
+              50
+            ],
+            "max_abs_error": 6.961822509765625e-05,
+            "mean_abs_error": 2.896390014939243e-06,
+            "allclose": true
+          },
+          {
+            "pattern": "seeded_normal",
+            "shape": [
+              1,
+              1788,
+              50
+            ],
+            "max_abs_error": 1.4781951904296875e-05,
+            "mean_abs_error": 1.1207303032279015e-06,
+            "allclose": true
+          }
+        ]
+      }
+    }
+  ],
+  "task_initialization": {
+    "loaded_tensors": 644,
+    "ignored_training_only_tensors": 243,
+    "missing_tensors": [],
+    "checkpoint_sha256": "f4c6080f3ef35a64c3030d559438b436462f227ce29700bca71327203e42dea2",
+    "classification_initialization": "random six-color",
+    "geometry_initialization": "random twelve-channel",
+    "box_regression_initialization": "original COCO DFL channels",
+    "optimizer_updates": 0
+  },
+  "strict_320x180": "REJECTED_FPN_SIZE_MISMATCH_USE_ASPECT_PRESERVING_320x192_LETTERBOX"
+}

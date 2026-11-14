@@ -7,7 +7,7 @@
       "sha256": "e113812484e127dd2115520b8cbe037e1961687724ffaf48c130ee6f5d296525"
     },
     {
-      "path": "cad_bundle.zip",
+      "path": "cad_bundle.bin",
       "bytes": 608124,
       "sha256": "642df0a28329ebe3adab0ca96888e5078b1a005dc7b9dbd345903e10274fc7f2"
     },
@@ -28,8 +28,8 @@
     },
     {
       "path": "kaggle_job.py",
-      "bytes": 5823,
-      "sha256": "0cdaa96787a64f8923a878a2ed24be0313bd5b09b5a8b9e22882d0a8c6a6386e"
+      "bytes": 6033,
+      "sha256": "f4dabe4efa812b5fca7fc60184b5f6ebe47a37c963d55d73685e414dc50373f2"
     },
     {
       "path": "render_scene.py",
@@ -38,5 +38,5 @@
     }
   ],
   "cad_bundle_original_sha256": "642df0a28329ebe3adab0ca96888e5078b1a005dc7b9dbd345903e10274fc7f2",
-  "source_git_head_before_changes": "be544e675e01f7b7e26a9eb36b62407ce5a3268c"
+  "source_git_head_before_changes": "52a8cb7752b9bf9756222a9f4cdf9eb0afc616db"
 }

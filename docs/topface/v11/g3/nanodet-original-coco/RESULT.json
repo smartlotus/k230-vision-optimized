@@ -1,0 +1,207 @@
+{
+  "schema": "topface-g3-original-model-probe-v1",
+  "observed_utc": "2026-11-14T13:10:15.394297+00:00",
+  "source_model": "C:\\Users\\28389\\Desktop\\k230-vision-optimized\\.ops\\local\\topface-g3-models\\nanodet-plus-m_320.onnx",
+  "source_bytes": 4793615,
+  "source_sha256": "4f12723cce3d48e47ca92cb925ba74d97a965c069208edca660bbb9f7ce2c610",
+  "status": "COMPILE_AND_SIMULATOR_EXECUTED_ORIGINAL_COCO_ONLY",
+  "stage": "DONE",
+  "opset": [
+    {
+      "domain": "",
+      "version": 11
+    }
+  ],
+  "operator_counts": {
+    "Conv": 110,
+    "LeakyRelu": 71,
+    "MaxPool": 1,
+    "Concat": 33,
+    "Reshape": 36,
+    "Transpose": 17,
+    "Slice": 26,
+    "Resize": 2,
+    "Add": 5,
+    "Split": 4,
+    "Sigmoid": 4
+  },
+  "versions": {
+    "numpy": "2.2.6",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.24.4",
+    "nncase": "2.11.0",
+    "nncase-kpu": "2.11.0"
+  },
+  "optimizer_steps": 0,
+  "task_model": false,
+  "board_run": false,
+  "task_accuracy_verified": false,
+  "inputs": [
+    {
+      "name": "data",
+      "shape": [
+        1,
+        3,
+        320,
+        320
+      ],
+      "dtype": "tensor(float)"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "shape": [
+        1,
+        2125,
+        112
+      ],
+      "dtype": "tensor(float)"
+    }
+  ],
+  "cases": [
+    {
+      "pattern": "zero",
+      "input_sha256": "3630e065eb7b4540fbab11dbfd2619e8500f211b9c404380a1867fdc44b77c0c",
+      "ort_seconds": 0.01225229999909061,
+      "output_bytes": 952000,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            2125,
+            112
+          ],
+          "dtype": "float32",
+          "min": -11.689451217651367,
+          "max": 3.9514083862304688,
+          "sha256": "4bbdadc2eb6780458b89024f60e688c74f781c28bc3984c53cb801859935ee84"
+        }
+      ]
+    },
+    {
+      "pattern": "mid",
+      "input_sha256": "975c808b357ebe2e036ccb5fda96179c8aed5a842d96cbe1ab11463cb861831e",
+      "ort_seconds": 0.009601699999620905,
+      "output_bytes": 952000,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            2125,
+            112
+          ],
+          "dtype": "float32",
+          "min": -11.848475456237793,
+          "max": 3.2016847133636475,
+          "sha256": "67db9a6973577571384715e5bb2d3822e52872e4eea078875d9f8bf8a2e79097"
+        }
+      ]
+    },
+    {
+      "pattern": "ramp",
+      "input_sha256": "1e0b545dfb4d4ce70b88663d4ec778a14689823c2752c1fa35768166c551f894",
+      "ort_seconds": 0.009263500000088243,
+      "output_bytes": 952000,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            2125,
+            112
+          ],
+          "dtype": "float32",
+          "min": -11.254707336425781,
+          "max": 3.0743825435638428,
+          "sha256": "35e2331fa909c039c11f1d95eb43721a9b42168e95541d62aa81c25ff96309c8"
+        }
+      ]
+    },
+    {
+      "pattern": "checkerboard",
+      "input_sha256": "8cbad487a64cb643cbd620e1efe474b371100141f0880ad0b8478d1d16fad1b8",
+      "ort_seconds": 0.009934199999406701,
+      "output_bytes": 952000,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            2125,
+            112
+          ],
+          "dtype": "float32",
+          "min": -12.45265007019043,
+          "max": 2.7867863178253174,
+          "sha256": "154ce65e33c9646531f1390806d8dc5c1dbb9cbc61a83f2b7e8be28d01772168"
+        }
+      ]
+    },
+    {
+      "pattern": "seeded_noise",
+      "input_sha256": "8830cccee613014ddaf44502230b72efac7a7ac71513347ea897e2ba2cbfd6ff",
+      "ort_seconds": 0.009788399998797104,
+      "output_bytes": 952000,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            2125,
+            112
+          ],
+          "dtype": "float32",
+          "min": -12.798908233642578,
+          "max": 4.439389228820801,
+          "sha256": "a15644a471186440250e8394c183720e6824eae2748f9e5e523f3c206359719b"
+        }
+      ]
+    }
+  ],
+  "calibration_source": "FIVE_SYNTHETIC_ENGINEERING_FIXTURES_NOT_FINAL_MODEL_PTQ_DATA",
+  "compile_seconds": 30.81166200000007,
+  "kmodel_bytes": 1680960,
+  "kmodel_sha256": "a6c68e89898b60afa0eed4403420c129145a4c71c384d14da883bae350885793",
+  "simulator_inputs": [
+    [
+      1,
+      3,
+      320,
+      320
+    ]
+  ],
+  "simulator_comparisons": [
+    {
+      "pattern": "zero",
+      "seconds": 10.230331400000068,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            2125,
+            112
+          ],
+          "max_abs_error": 2.590768337249756,
+          "mean_abs_error": 0.0600033700466156,
+          "relative_l2_error": 0.16563934087753296
+        }
+      ]
+    },
+    {
+      "pattern": "mid",
+      "seconds": 11.075490100000025,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            2125,
+            112
+          ],
+          "max_abs_error": 3.298058032989502,
+          "mean_abs_error": 0.06644543260335922,
+          "relative_l2_error": 0.18995670974254608
+        }
+      ]
+    }
+  ],
+  "numerical_acceptance": "MEASURED_ONLY_NO_NEW_TASK_TOLERANCE_REGISTERED",
+  "kpu_partition_acceptance": false
+}

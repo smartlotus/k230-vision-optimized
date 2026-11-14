@@ -1,4 +1,4 @@
-"""Freeze original inputs and generate the first reviewable Kaggle notebook."""
+"""Retired V1.0 input builder; current execution uses prepare_v11.py."""
 import argparse
 from datetime import datetime, timezone
 import json
@@ -24,6 +24,9 @@ def field(value,unit,status,source,confidence,verification_method):
 
 
 def main(cad,upstream):
+    current=DOC/'execution_contract.json'
+    if current.exists() and json.loads(current.read_text(encoding='utf8')).get('schema')=='topface-execution-v1.1':
+        raise RuntimeError('V1.0 builder cannot overwrite the active V1.1 contract; use prepare_v11.py')
     DOC.mkdir(parents=True,exist_ok=True)
     source_files={"sensor_modes":upstream/"k230_transport_mvp/evidence/board/sensor-fps-modes.json",
         "sensor_startup":upstream/"k230_transport_mvp/evidence/board/preview-fps-native-modes.json",
@@ -112,7 +115,14 @@ def main(cad,upstream):
     staged.mkdir(parents=True,exist_ok=True)
     for filename in ["geometry.py","cloud_store.py","render_scene.py","audit_dataset.py","kaggle_job.py"]:
         shutil.copy2(HERE/filename,staged/filename)
-    shutil.copy2(cad,staged/"cad_bundle.zip")
+    # Kaggle automatically expands .zip uploads. Preserve exact original bytes
+    # as an opaque .bin input, and open it with ZipFile only inside our worker.
+    legacy=staged/"cad_bundle.zip"
+    if legacy.exists():
+        if sha(legacy)!=sha(cad):
+            raise ValueError("Unexpected legacy staged archive; preserve and inspect it")
+        legacy.unlink()
+    shutil.copy2(cad,staged/"cad_bundle.bin")
     shutil.copy2(DOC/"hardware_profile.json",staged/"hardware_profile.json")
     members=[p for p in sorted(staged.iterdir()) if p.is_file() and p.name not in {"dataset-metadata.json","INPUT_MANIFEST.json"}]
     manifest={"schema":"topface-kaggle-input-v1","files":[{"path":p.name,"bytes":p.stat().st_size,"sha256":sha(p)} for p in members],
@@ -124,7 +134,7 @@ def main(cad,upstream):
     kernel_dir=ROOT/".ops/local/topface-kernel"
     kernel_dir.mkdir(parents=True,exist_ok=True)
     intro="""# K230 TopFaceNet stage A: original CAD + Drive smoke\n\nAssociate the existing `DOASTRA_GDRIVE_OAUTH_JSON` Secret under Add-ons -> Secrets, enable Internet, then Save Version -> Save & Run All once. This stage performs storage admission before installing BlenderProc, renders exactly one original-CAD RGB/top-mask sample, audits projection geometry, uploads the complete result from Kaggle to the K230 Drive folder, and reads it back with SHA-256. It does not train or start the 200-frame preview.\n\nCamera: small fixed-focus GC2093 lens; nominal horizontal FOV 65 degrees. Operating range: 100-400mm vertically above the top plane, 80-100 degrees to the plane. Intrinsics remain uncalibrated.\n"""
-    code=f'''import hashlib, json, pathlib, sys, subprocess\ninput_root = pathlib.Path('/kaggle/input/k230-topface-smoke-input-20261114')\nexpected_manifest = {sha(staged/"INPUT_MANIFEST.json")!r}\nassert hashlib.sha256((input_root/'INPUT_MANIFEST.json').read_bytes()).hexdigest() == expected_manifest\nsys.path.insert(0,str(input_root))\nfrom kaggle_job import main\nmain({FOLDER!r}, input_root, 'k230-topface-smoke-20261114-a01')\n'''
+    code=(HERE/"input_locator.py").read_text(encoding="utf8")+f'''\nimport sys\ninput_root = locate_input('/kaggle/input', {sha(staged/"INPUT_MANIFEST.json")!r})\nprint('Verified input mount:', input_root)\nsys.path.insert(0,str(input_root))\nfrom kaggle_job import main\nmain({FOLDER!r}, input_root, 'k230-topface-smoke-20261114-a03')\n'''
     notebook={"nbformat":4,"nbformat_minor":5,"metadata":{"kernelspec":{"name":"python3","display_name":"Python 3"}},
         "cells":[{"cell_type":"markdown","metadata":{},"source":intro.splitlines(True),"id":"intro"},
             {"cell_type":"code","metadata":{},"source":code.splitlines(True),"execution_count":None,"outputs":[],"id":"smoke"}]}

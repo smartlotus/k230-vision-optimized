@@ -1,0 +1,9 @@
+{
+  "operation": "QUICK_SAVE",
+  "observed_utc": "2026-11-14T13:42:34.091404+00:00",
+  "ref": "lotus30/k230-topface-v11-01-simulation-pilot",
+  "source_sha256": "d0c6a4bd88299aa266ac8b9ae9f59cba77297011931109095045240646745bf3",
+  "session_timeout_seconds": 10800,
+  "scientific_execution": false,
+  "automatic_retry": false
+}

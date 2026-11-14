@@ -1,0 +1,49 @@
+[{"stream_name":"stderr","time":6.342993615,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.343063653,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.343069688,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.343073252,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.885498822,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.885542646,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.885547826,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.88555142,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":8.40241231,"data":"Verified input mount: /kaggle/input/datasets/lotus30/k230-topface-smoke-input-20261114\n"}
+,{"stream_name":"stdout","time":15.084774834,"data":"DRIVE_PHASE: SECRET_LOAD_BEGIN\n"}
+,{"stream_name":"stdout","time":15.084798032,"data":"DRIVE_SECRET_ERROR_CLASSIFICATION: [{\"type\": \"ConnectionError\", \"module\": \"builtins\", \"http_status\": null, \"errno\": null}, {\"type\": \"HTTPError\", \"module\": \"urllib.error\", \"http_status\": 400, \"errno\": null}]\n"}
+,{"stream_name":"stdout","time":15.084805702,"data":"{\"schema\": \"k230-kaggle-smoke-v1\", \"run_id\": \"k230-topface-smoke-20261114-a04\", \"status\": \"NEEDS_SECRET_OR_TECHNICAL_REPAIR\", \"automatic_replay\": false, \"optimizer_steps\": 0, \"images_rendered\": 0, \"stage\": \"DRIVE_ADMISSION\", \"error_type\": \"ConnectionError\", \"elapsed_seconds\": 6.670096397999998}\n"}
+,{"stream_name":"stderr","time":17.48579943,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":17.486558067,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":17.486581166,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=3600)\n"}
+,{"stream_name":"stderr","time":17.486585527,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":17.486588676,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":17.48659133,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":17.486593734,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":17.486596226,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":17.486598647,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":17.486600872,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":17.486603085,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":17.486605746,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":17.486608077,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":17.486638344,"data":"RuntimeError                              Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":17.486643326,"data":"/tmp/ipykernel_23/3974366917.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":17.486647729,"data":"     48 cloud_store.Drive=DiagnosedDrive\n"}
+,{"stream_name":"stderr","time":17.486651302,"data":"     49 from kaggle_job import main\n"}
+,{"stream_name":"stderr","time":17.486655258,"data":"---\u003e 50 main('1MwltNmaI24HjvcxnG1w608qui42RAPKf',input_root,'k230-topface-smoke-20261114-a04')\n"}
+,{"stream_name":"stderr","time":17.48665927,"data":"\n"}
+,{"stream_name":"stderr","time":17.486662531,"data":"/kaggle/input/datasets/lotus30/k230-topface-smoke-input-20261114/kaggle_job.py in main(folder_id, input_root, run_id)\n"}
+,{"stream_name":"stderr","time":17.486665982,"data":"    105         atomic_json(root/\"STATE.json\",state)\n"}
+,{"stream_name":"stderr","time":17.4866694,"data":"    106         print(json.dumps(state))\n"}
+,{"stream_name":"stderr","time":17.486672642,"data":"--\u003e 107         raise RuntimeError(\"Bounded smoke stopped; inspect STATE.json and stage log\") from None\n"}
+,{"stream_name":"stderr","time":17.486676316,"data":"    108 \n"}
+,{"stream_name":"stderr","time":17.486679681,"data":"    109 \n"}
+,{"stream_name":"stderr","time":17.48668443,"data":"\n"}
+,{"stream_name":"stderr","time":17.486692339,"data":"RuntimeError: Bounded smoke stopped; inspect STATE.json and stage log\n"}
+,{"stream_name":"stderr","time":17.486694889,"data":"\n"}
+,{"stream_name":"stderr","time":19.562464669,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":19.562491854,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":19.715584803,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":19.715610375,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":20.459446635,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":20.531005343,"data":"[NbConvertApp] Writing 8578 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":23.030104442,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":23.509796299,"data":"[NbConvertApp] Writing 288257 bytes to __results__.html\n"}
+]

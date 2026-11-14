@@ -1,0 +1,17 @@
+{
+  "id": "lotus30/k230-topface-v11-01-simulation-pilot",
+  "title": "K230 TopFaceNet V1.1 01 Simulation Pilot",
+  "code_file": "01_topface_simulation.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "lotus30/k230-topface-native-v11-input-20261114/1"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

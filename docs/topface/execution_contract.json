@@ -1,37 +1,40 @@
 {
-  "schema": "topface-execution-v1",
-  "source_plan": "K230_TopFaceNet_Sim2Real_Execution_Plan_2026-11-14.md",
+  "schema": "topface-execution-v1.1",
+  "source_plan": "K230_TopFaceNet_Sim2Real_Project_Plan_V1.1_2026-11-14.md",
   "stages": [
     {
-      "id": "A",
-      "scope": "Drive admission, environment, official quickstart, 1 original-CAD render and audit",
-      "max_seconds": 3600
+      "id": "G0/G1",
+      "scope": "source/data/hardware audit; historical evidence vs UNKNOWN calibration"
     },
     {
-      "id": "B",
-      "scope": "200 preview frames and contact sheets; user visual review required"
+      "id": "G2",
+      "scope": "100 independent Smoke; local native CPU completed; automatic QA and 30-image human gate PASS"
     },
     {
-      "id": "C",
-      "scope": "1000-3000 grouped synthetic frames after preview gate"
+      "id": "G3",
+      "scope": "NanoDet and PicoDet original graphs compiled/simulated; task heads and numerical acceptance pending"
     },
     {
-      "id": "D",
-      "scope": "MobileNetV2 and ShuffleNetV2 TopFaceNet; synthetic and approved-real experiments"
+      "id": "G4",
+      "scope": "1000 Kaggle Pilot scenes, 10-20 image overfit, short single-candidate training"
     },
     {
-      "id": "E",
-      "scope": "held-out evaluation, ONNX/nncase preparation, board acceptance separately"
+      "id": "G5",
+      "scope": "10000-20000 scenes and one formal model only after Pilot gates"
+    },
+    {
+      "id": "G6/G7/G8",
+      "scope": "separate synthetic/real assessment, paired PT/ORT/Simulator/KPU, deployment and full pipeline benchmark"
     }
   ],
-  "current_stage": "A_V2_SAVED_WITHOUT_RUNNING_WAITING_FOR_SECRET_ASSOCIATION",
+  "current_stage": "G4_KAGGLE_PILOT_V2_RUNNING",
   "training_started": false,
   "drive_folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
   "drive_remote": "gdrive:k230-topfacenet-20261114",
-  "kaggle_input": "lotus30/k230-topface-smoke-input-20261114",
-  "kaggle_kernel": "lotus30/k230-topfacenet-original-cad-drive-smoke-20261114",
+  "kaggle_input": "lotus30/k230-topface-native-v11-input-20261114-a02/1",
+  "kaggle_kernel": "lotus30/k230-topface-v11-01-simulation-pilot",
   "secret_name": "DOASTRA_GDRIVE_OAUTH_JSON",
-  "approval_boundary": "Associate existing Drive secret in new notebook; no new credential in source",
+  "approval_boundary": "Pilot authorized by user; runtime Secret must be attached before cloud scientific execution",
   "height_reference": "lens center to object top plane, vertical distance",
   "height_mm": [
     100,
@@ -44,5 +47,57 @@
   "lens": "small fixed-focus; nominal H65deg EFL4.3mm",
   "original_cad": "fused single mesh; semantic top faces only",
   "real_data": "r4 immutable; no real ellipse ground truth",
-  "scope_note": "Only stage A is executable in this first notebook; remaining stages are not yet implemented/verified"
+  "scope_note": "Current authoritative contract is V1.1; nested V1 is historical. No formal training, no new board execution; retired Kaggle v8 is not restarted.",
+  "legacy_v1_contract": {
+    "schema": "topface-execution-v1",
+    "source_plan": "K230_TopFaceNet_Sim2Real_Execution_Plan_2026-11-14.md",
+    "stages": [
+      {
+        "id": "A",
+        "scope": "Drive admission, environment, official quickstart, 1 original-CAD render and audit",
+        "max_seconds": 3600
+      },
+      {
+        "id": "B",
+        "scope": "200 preview frames and contact sheets; user visual review required"
+      },
+      {
+        "id": "C",
+        "scope": "1000-3000 grouped synthetic frames after preview gate"
+      },
+      {
+        "id": "D",
+        "scope": "MobileNetV2 and ShuffleNetV2 TopFaceNet; synthetic and approved-real experiments"
+      },
+      {
+        "id": "E",
+        "scope": "held-out evaluation, ONNX/nncase preparation, board acceptance separately"
+      }
+    ],
+    "current_stage": "A_PREPARED_NOT_EXECUTED",
+    "training_started": false,
+    "drive_folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+    "drive_remote": "gdrive:k230-topfacenet-20261114",
+    "kaggle_input": "lotus30/k230-topface-smoke-input-20261114",
+    "kaggle_kernel": "lotus30/k230-topfacenet-original-cad-drive-smoke-20261114",
+    "secret_name": "DOASTRA_GDRIVE_OAUTH_JSON",
+    "approval_boundary": "Associate existing Drive secret in new notebook; no new credential in source",
+    "height_reference": "lens center to object top plane, vertical distance",
+    "height_mm": [
+      100,
+      400
+    ],
+    "plane_angle_deg": [
+      80,
+      100
+    ],
+    "lens": "small fixed-focus; nominal H65deg EFL4.3mm",
+    "original_cad": "fused single mesh; semantic top faces only",
+    "real_data": "r4 immutable; no real ellipse ground truth",
+    "scope_note": "Only stage A is executable in this first notebook; remaining stages are not yet implemented/verified"
+  },
+  "source_plan_sha256": "71be320b7411f85895d97f6b0924b06049b08f2c5fec603d7e42eeec8f8a7bec",
+  "source_prompt": "K230_TopFaceNet_Execution_AI_Prompt_V1.1_2026-11-14.md",
+  "source_prompt_sha256": "65124f3f35c294b3f6458c912bea3c3dfce727b69afde950e8c8c86f7dd7411c",
+  "logical_training_plan": "v11/training/TRAINING_PLAN.json"
 }

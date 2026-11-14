@@ -1,0 +1,47 @@
+[{"stream_name":"stderr","time":8.31638402,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.316432905,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.316437906,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.316440844,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.900001708,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.900043577,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.900049316,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.900053842,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":10.495789234,"data":"Verified input mount: /kaggle/input/datasets/lotus30/k230-topface-smoke-input-20261114\n"}
+,{"stream_name":"stdout","time":10.54328158,"data":"{\"schema\": \"k230-kaggle-smoke-v1\", \"run_id\": \"k230-topface-smoke-20261114-a02\", \"status\": \"NEEDS_SECRET_OR_TECHNICAL_REPAIR\", \"automatic_replay\": false, \"optimizer_steps\": 0, \"images_rendered\": 0, \"error_type\": \"FileNotFoundError\", \"elapsed_seconds\": 0.0577598069999965}\n"}
+,{"stream_name":"stderr","time":10.768126241000001,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":10.768844671,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":10.768858189,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=3600)\n"}
+,{"stream_name":"stderr","time":10.768865504,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":10.768870344,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":10.768874365,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":10.768886662,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":10.768890099,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":10.768893623,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":10.768896914,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":10.768900193,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":10.768903668,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":10.768907002,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":10.768910369,"data":"RuntimeError                              Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":10.768913681,"data":"/tmp/ipykernel_23/3407625752.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":10.768917118,"data":"     26 sys.path.insert(0,str(input_root))\n"}
+,{"stream_name":"stderr","time":10.768920386,"data":"     27 from kaggle_job import main\n"}
+,{"stream_name":"stderr","time":10.768931865999999,"data":"---\u003e 28 main('1MwltNmaI24HjvcxnG1w608qui42RAPKf', input_root, 'k230-topface-smoke-20261114-a02')\n"}
+,{"stream_name":"stderr","time":10.768935785,"data":"\n"}
+,{"stream_name":"stderr","time":10.768943875,"data":"/kaggle/input/datasets/lotus30/k230-topface-smoke-input-20261114/kaggle_job.py in main(folder_id, input_root, run_id)\n"}
+,{"stream_name":"stderr","time":10.768947531,"data":"    101         atomic_json(root/\"STATE.json\",state)\n"}
+,{"stream_name":"stderr","time":10.768963455,"data":"    102         print(json.dumps(state))\n"}
+,{"stream_name":"stderr","time":10.768967388,"data":"--\u003e 103         raise RuntimeError(\"Bounded smoke stopped; inspect STATE.json and stage log\") from None\n"}
+,{"stream_name":"stderr","time":10.76897199,"data":"    104 \n"}
+,{"stream_name":"stderr","time":10.768975922,"data":"    105 \n"}
+,{"stream_name":"stderr","time":10.768979804,"data":"\n"}
+,{"stream_name":"stderr","time":10.768982873,"data":"RuntimeError: Bounded smoke stopped; inspect STATE.json and stage log\n"}
+,{"stream_name":"stderr","time":10.768986349,"data":"\n"}
+,{"stream_name":"stderr","time":12.966313569,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":12.966351804,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":13.132113314,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":13.132139418,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":13.884079901,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":13.955240708,"data":"[NbConvertApp] Writing 7195 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":16.417277339,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":16.90213368,"data":"[NbConvertApp] Writing 282733 bytes to __results__.html\n"}
+]

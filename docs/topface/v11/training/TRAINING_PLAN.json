@@ -1,0 +1,22 @@
+{
+  "schema": "topface-training-sequence-v1.1",
+  "status": "PLANNED_NOT_EXECUTED",
+  "authorization": "User requested end-to-end V1.1 execution and approved Smoke -> Pilot; routine finite implementation budgets selected by agent",
+  "current_optimizer_updates": 0,
+  "planned_logical_training_runs": 4,
+  "planned_formal_full_training_runs": 1,
+  "candidate": "NanoDet-Plus-m task-head prototype first; final choice pending paired numerics and Pilot",
+  "steps": [
+    {"id": "overfit", "images": [10, 20], "source": "Pilot train only, stratified across colors/count/geometry", "max_optimizer_updates": 1000, "early_stop": "registered sanity acceptance", "status": "NOT_RUN"},
+    {"id": "pilot_pretrained", "dataset_scenes": 1000, "max_epochs": 20, "initialization": "official byte-bound COCO EMA features/DFL; random new class/geometry channels", "status": "NOT_RUN"},
+    {"id": "pilot_random_control", "dataset": "identical Pilot splits", "max_epochs": 20, "initialization": "random, same architecture and controlled budget", "status": "NOT_RUN"},
+    {"id": "formal_full", "dataset_scenes": [10000, 20000], "epoch_window": [100, 200], "early_stop": "validation only", "single_formal_architecture": true, "requires": ["Pilot QA", "overfit sanity", "Pilot learning diagnosis", "task head compile/numerical contract"], "status": "NOT_ADMITTED"}
+  ],
+  "notes": [
+    "Four logical training experiments do not require four manual Kaggle launches; combine the three finite Pilot experiments in the training notebook where the measured session budget permits.",
+    "Compatibility/export/PTQ/Simulator and data rendering are not optimizer training runs.",
+    "No full training of both NanoDet and PicoDet. Pico original graph is a compatibility alternative.",
+    "GPU hours remain UNKNOWN until actual training throughput is measured. Provider quotas are observations, not a promised resource budget.",
+    "Failures preserve original attempts; no automatic replay of completed scientific work. Full generation is gated by Pilot, not by Smoke approval alone."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "topface-local-qualification-migration-v1.1",
+  "status": "FULL_BYTE_SHA256_PASS",
+  "observed_utc": "2026-11-14T13:37:32.995148+00:00",
+  "run_id": "LOCAL_NATIVE_BLENDER_SMOKE100",
+  "producer": "local CPU, not Kaggle",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "file_id": "1cn3RMsr0nryMGoWE_wCgw4BBlXMoBQCo",
+  "name": "k230-v11-local-smoke100-271857352a7dc8ab.tar.gz",
+  "bytes": 30052798,
+  "sha256": "271857352a7dc8abb7d861436ddac66f41722055e02d6f0951f99f6c54ed65d4",
+  "member_manifest_sha256": "bb45c222c339f7339226be13e44d1002c3d73b15a933c82b734c956a035d0d29",
+  "images": 100,
+  "instances": 246,
+  "human_review": "PASS",
+  "automatic_replay": false,
+  "provider_readback": "FULL_BYTE_SHA256_PASS"
+}

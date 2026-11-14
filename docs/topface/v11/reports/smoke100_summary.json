@@ -1,0 +1,57 @@
+{
+  "schema": "topface-v1.1-label-audit",
+  "status": "PASS",
+  "images": 100,
+  "instances": 246,
+  "issues": [],
+  "count_histogram": {
+    "0": 17,
+    "1": 17,
+    "2": 17,
+    "3": 17,
+    "4": 16,
+    "5": 16
+  },
+  "color_histogram": {
+    "1": 32,
+    "2": 49,
+    "3": 33,
+    "4": 50,
+    "5": 33,
+    "6": 49
+  },
+  "unique_scene_groups": 100,
+  "unique_scene_seeds": 100,
+  "camera_configuration_groups": 75,
+  "camera_group_cross_split_count": 0,
+  "split_policy": "SHA256 of height/pitch/HFOV configuration group; frozen before training",
+  "height_mm_range": [
+    100.0,
+    400.0
+  ],
+  "plane_angle_deg_range": [
+    80.0,
+    100.0
+  ],
+  "max_center_reprojection_error_px": 1.2710574864626038e-13,
+  "strong_perspective_outside_user_envelope": "excluded, not claimed as covered",
+  "real_geometry_accuracy_verified": false,
+  "scope": "LOCAL_NATIVE_BLENDER_QUALIFICATION_ONLY",
+  "progress": {
+    "status": "COMPLETE",
+    "completed_frames": 100,
+    "requested_frames": 100,
+    "elapsed_seconds": 442.28100000000086
+  },
+  "device": {
+    "selected_backend": "CPU",
+    "attempts": [],
+    "gpu_render_verified": false,
+    "successful_frames": 100,
+    "blender_version": "4.2.9 LTS",
+    "numpy_version": "1.24.3"
+  },
+  "human_review": "PASS",
+  "production_training_started": false,
+  "human_review_evidence": "docs/topface/v11/reports/SMOKE_HUMAN_REVIEW.json"
+}

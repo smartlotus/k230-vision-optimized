@@ -1,0 +1,12 @@
+{
+  "schema": "topface-smoke-human-gate-v1.1",
+  "status": "PASS",
+  "reviewed_images": 30,
+  "evidence": "docs/topface/v11/previews/selection.json",
+  "reviewer": "user",
+  "user_statement": "抽查通过，继续 Pilot",
+  "received_utc": "2026-11-14T13:31:33.606686+00:00",
+  "pilot_authorized": true,
+  "full_generation_authorized_by_this_gate": false,
+  "formal_model_training_started": false
+}

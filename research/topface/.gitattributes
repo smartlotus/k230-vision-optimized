@@ -1,0 +1,6 @@
+# Frozen scientific inputs must retain the same bytes after Windows checkout.
+*.py -text whitespace=cr-at-eol
+*.ipynb -text whitespace=cr-at-eol
+*.json -text whitespace=cr-at-eol
+*.yaml -text whitespace=cr-at-eol
+*.yml -text whitespace=cr-at-eol

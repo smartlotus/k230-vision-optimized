@@ -1,0 +1,22 @@
+{
+  "schema": "k230-kaggle-smoke-v1",
+  "run_id": "k230-topface-smoke-20261114-a04",
+  "status": "NEEDS_SECRET_OR_TECHNICAL_REPAIR",
+  "automatic_replay": false,
+  "optimizer_steps": 0,
+  "images_rendered": 0,
+  "stage": "ENVIRONMENT_INSTALL",
+  "drive_probe": {
+    "schema": "k230-cloud-direct-write-v1",
+    "run_id": "k230-topface-smoke-20261114-a04-storage-probe",
+    "status": "FULL_BYTE_SHA256_PASS",
+    "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+    "file_id": "1l4lnRJpR122WNdkGGA3VZ2upmYENQHcw",
+    "name": "k230-topface-smoke-20261114-a04-storage-probe-d4a971ea8ce7be63.json",
+    "bytes": 115,
+    "sha256": "d4a971ea8ce7be63777bd8aa1980b2b03563fa6c72d63dbafe6e12db0544a330",
+    "automatic_replay": false
+  },
+  "error_type": "RuntimeError",
+  "elapsed_seconds": 117.95401421700001
+}

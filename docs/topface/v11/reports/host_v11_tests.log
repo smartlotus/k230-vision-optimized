@@ -1,0 +1,11 @@
+C:\Users\28389\anaconda3\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (1.26.16) or chardet (7.4.3)/charset_normalizer (2.0.4) doesn't match a supported version!
+  warnings.warn(
+test_empty_target_mask_and_unlabelled_fifth_mask_fail (test_v11.V11Tests.test_empty_target_mask_and_unlabelled_fifth_mask_fail) ... ok
+test_occluded_center_keeps_3d_truth (test_v11.V11Tests.test_occluded_center_keeps_3d_truth) ... ok
+test_physical_center_is_distinct_from_perspective_conic_center (test_v11.V11Tests.test_physical_center_is_distinct_from_perspective_conic_center) ... ok
+test_smoke_configs_are_independent_and_keep_all_five (test_v11.V11Tests.test_smoke_configs_are_independent_and_keep_all_five) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.216s
+
+OK

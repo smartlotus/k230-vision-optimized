@@ -1,0 +1,57 @@
+{
+  "upstream": "https://github.com/RangiLyu/nanodet",
+  "commit": "be9b4a9001d7f9b6fc89c2df31ae8d428e35b4f0",
+  "license": "Apache-2.0",
+  "scope": "Unmodified feature-extractor and convolution modules only; does not import Lightning or original training pipeline",
+  "files": [
+    {
+      "upstream_path": "nanodet/model/backbone/shufflenetv2.py",
+      "local_path": "model/backbone/shufflenetv2.py",
+      "bytes": 7227,
+      "sha256": "18bd365969bdbe63a33e21c327417dd942ef6e8caab7c9439490dbc299061c2c",
+      "modified": false
+    },
+    {
+      "upstream_path": "nanodet/model/backbone/ghostnet.py",
+      "local_path": "model/backbone/ghostnet.py",
+      "bytes": 10962,
+      "sha256": "d3af66948fd68e1d17b04097096172c456566b592e51d10ae53045a5057ecfd4",
+      "modified": false
+    },
+    {
+      "upstream_path": "nanodet/model/fpn/ghost_pan.py",
+      "local_path": "model/fpn/ghost_pan.py",
+      "bytes": 8297,
+      "sha256": "1e38ba226e7c32e89c6133cff5855412786352373db9a86f4f7213706c714b35",
+      "modified": false
+    },
+    {
+      "upstream_path": "nanodet/model/module/activation.py",
+      "local_path": "model/module/activation.py",
+      "bytes": 1191,
+      "sha256": "c9000d9fbd03a03b2986a71d74cf761c9bcae5d9a4050cb8063fa207040e3f95",
+      "modified": false
+    },
+    {
+      "upstream_path": "nanodet/model/module/conv.py",
+      "local_path": "model/module/conv.py",
+      "bytes": 13248,
+      "sha256": "3aff5a8742360b5f864b418782be361780f7c893780226f19538a325375265e6",
+      "modified": false
+    },
+    {
+      "upstream_path": "nanodet/model/module/init_weights.py",
+      "local_path": "model/module/init_weights.py",
+      "bytes": 1453,
+      "sha256": "4d7bb049ad60f1a751952cc0f232d10833721c921f9fd85850b79143d523cf1a",
+      "modified": false
+    },
+    {
+      "upstream_path": "nanodet/model/module/norm.py",
+      "local_path": "model/module/norm.py",
+      "bytes": 1726,
+      "sha256": "7306c3af984554390a21e2ea28fd03726a6862e6f9bfae39abbabe1952e6aa90",
+      "modified": false
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "topface-prepared-cloud-readback-v1.1",
+  "status": "SOURCE_AND_INPUT_MANIFEST_MATCH",
+  "observed_utc": "2026-11-14T13:44:29.418279+00:00",
+  "kernel": "lotus30/k230-topface-v11-01-simulation-pilot",
+  "kernel_id": 145002634,
+  "version": 1,
+  "execution_mode": "QUICK_SAVE",
+  "scientific_run_started": false,
+  "notebook_cells_equal": true,
+  "private": true,
+  "dataset": "lotus30/k230-topface-native-v11-input-20261114-a02",
+  "dataset_version": 1,
+  "input_manifest_sha256": "a623c1137b737420d38610793596caff281720a86321832d533f1d14299d614f",
+  "source_sha256": "d0c6a4bd88299aa266ac8b9ae9f59cba77297011931109095045240646745bf3",
+  "docker_image": "gcr.io/kaggle-images/python@sha256:0717e81990be591f8c5f98f033d29ab23e9ffde057e5b3a6bd4371f93969e962",
+  "accelerator_requested": "NvidiaTeslaT4",
+  "runtime_secret_access": "UNVERIFIED_NEEDS_EDITOR_ATTACHMENT",
+  "gpu_quota_observed": "27.40h remaining of30; 2.60h used; reset2026-11-21T00:00:00Z",
+  "automatic_replay": false
+}

@@ -1,0 +1,56 @@
+C:\Users\28389\anaconda3\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (1.26.16) or chardet (7.4.3)/charset_normalizer (2.0.4) doesn't match a supported version!
+  warnings.warn(
+[{"stream_name":"stderr","time":8.379631892999999,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.379697865,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.379704782,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.37970838,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.022711295,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.022757657,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.022762881,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.022766585,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.380788628,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":10.381533596,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":10.381552131,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)\n"}
+,{"stream_name":"stderr","time":10.381558309,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":10.381562201,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":10.381565872,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":10.38160119,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":10.381605929,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":10.381609431,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":10.381613207000001,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":10.381617223,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":10.381620741,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":10.381624186,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":10.381627426,"data":"FileNotFoundError                         Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":10.381630884,"data":"/tmp/ipykernel_23/872005431.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":10.381634829,"data":"      2 input_root = pathlib.Path('/kaggle/input/k230-topface-smoke-input-20261114')\n"}
+,{"stream_name":"stderr","time":10.381638367,"data":"      3 expected_manifest = 'e0bd28ba4cc221de1615fd71f075ab693ae09f190c4242d434645e6b3f67bc9d'\n"}
+,{"stream_name":"stderr","time":10.381641938,"data":"----\u003e 4 assert hashlib.sha256((input_root/'INPUT_MANIFEST.json').read_bytes()).hexdigest() == expected_manifest\n"}
+,{"stream_name":"stderr","time":10.381646313,"data":"      5 sys.path.insert(0,str(input_root))\n"}
+,{"stream_name":"stderr","time":10.381649899,"data":"      6 from kaggle_job import main\n"}
+,{"stream_name":"stderr","time":10.381666463,"data":"\n"}
+,{"stream_name":"stderr","time":10.381670021,"data":"/usr/lib/python3.13/pathlib/_abc.py in read_bytes(self)\n"}
+,{"stream_name":"stderr","time":10.381673719,"data":"    623         Open the file in bytes mode, read it, and close the file.\n"}
+,{"stream_name":"stderr","time":10.381677305,"data":"    624         \"\"\"\n"}
+,{"stream_name":"stderr","time":10.381681107,"data":"--\u003e 625         with self.open(mode='rb') as f:\n"}
+,{"stream_name":"stderr","time":10.381684653,"data":"    626             return f.read()\n"}
+,{"stream_name":"stderr","time":10.381688205,"data":"    627 \n"}
+,{"stream_name":"stderr","time":10.381691874,"data":"\n"}
+,{"stream_name":"stderr","time":10.38169521,"data":"/usr/lib/python3.13/pathlib/_local.py in open(self, mode, buffering, encoding, errors, newline)\n"}
+,{"stream_name":"stderr","time":10.381698797,"data":"    535         if \"b\" not in mode:\n"}
+,{"stream_name":"stderr","time":10.381702748,"data":"    536             encoding = io.text_encoding(encoding)\n"}
+,{"stream_name":"stderr","time":10.381706479,"data":"--\u003e 537         return io.open(self, mode, buffering, encoding, errors, newline)\n"}
+,{"stream_name":"stderr","time":10.381711593,"data":"    538 \n"}
+,{"stream_name":"stderr","time":10.381715257,"data":"    539     def read_text(self, encoding=None, errors=None, newline=None):\n"}
+,{"stream_name":"stderr","time":10.381719631,"data":"\n"}
+,{"stream_name":"stderr","time":10.38172397,"data":"FileNotFoundError: [Errno 2] No such file or directory: '/kaggle/input/k230-topface-smoke-input-20261114/INPUT_MANIFEST.json'\n"}
+,{"stream_name":"stderr","time":10.381728,"data":"\n"}
+,{"stream_name":"stderr","time":12.603828654,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":12.603885088,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":12.775718172,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":12.775751351,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":13.527421773,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":13.598032191,"data":"[NbConvertApp] Writing 8444 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":16.028733068,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":16.511284852,"data":"[NbConvertApp] Writing 281217 bytes to __results__.html\n"}
+]

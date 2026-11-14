@@ -1,0 +1,14 @@
+C:\Users\28389\anaconda3\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (1.26.16) or chardet (7.4.3)/charset_normalizer (2.0.4) doesn't match a supported version!
+  warnings.warn(
+test_existing_drive_run_refuses_fresh_session_replay (test_native_job.NativeAdmissionTests.test_existing_drive_run_refuses_fresh_session_replay) ... ok
+test_expired_budget_stops_before_network_or_large_hash (test_native_job.NativeAdmissionTests.test_expired_budget_stops_before_network_or_large_hash) ... ok
+TOPFACE_STAGE {"run_id": "fixture-failure", "stage": "ENVIRONMENT_AND_STORAGE_ADMISSION", "elapsed_seconds": 0.0}
+TOPFACE_STAGE {"run_id": "fixture-failure", "stage": "NATIVE_BLENDER_RUNTIME", "elapsed_seconds": 0.01600000000325963}
+TOPFACE_STAGE {"run_id": "fixture-failure", "stage": "ONE_FRAME_RUNTIME_QUALIFICATION", "elapsed_seconds": 0.01600000000325963}
+TOPFACE_RESULT {"schema": "topface-native-pilot-v1.1", "run_id": "fixture-failure", "status": "FAILED_OR_BUDGET_STOP", "observed_utc": "2026-11-14T13:39:20.565828+00:00", "optimizer_steps": 0, "requested_scenes": 6, "seed": 20261115, "automatic_replay": false, "scope": "LOCAL_WORKER_QUALIFICATION", "input_manifest_sha256": "4a95ea1226cabb898264b4a4018edf3e1881acbbc93050dc9384c94ec08c3ef9", "source_files": [], "max_seconds": 600, "stopping_condition": "complete requested scenes or finite deadline; no automatic scientific replay", "stage": "ONE_FRAME_RUNTIME_QUALIFICATION", "elapsed_seconds": 0.01600000000325963, "qualification_cpu_fallback": true, "error_type": "RuntimeError", "durable_status": "UNACCEPTED_PRESERVE_SAVED_OUTPUT", "publication_error_type": "OSError"}
+test_failed_render_and_archive_still_persist_compact_recovery (test_native_job.NativeAdmissionTests.test_failed_render_and_archive_still_persist_compact_recovery) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.038s
+
+OK

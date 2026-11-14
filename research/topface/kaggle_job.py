@@ -33,9 +33,13 @@ def main(folder_id, input_root, run_id):
     state={"schema":"k230-kaggle-smoke-v1","run_id":run_id,"status":"STARTED",
            "automatic_replay":False,"optimizer_steps":0,"images_rendered":0}
     try:
+        state["stage"]="INPUT_MANIFEST_VERIFY"
         manifest=json.loads((input_root/"INPUT_MANIFEST.json").read_text())
         for member in manifest["files"]:
             file=input_root/member["path"]
+            if not file.is_file():
+                state["missing_input_member"]=member["path"]
+                raise ValueError("Frozen input member is missing")
             if file.stat().st_size != member["bytes"] or sha(file) != member["sha256"]:
                 raise ValueError("Private input dataset bytes differ from frozen manifest")
         environment={"python":sys.version,"platform":platform.platform(),"packages":{}}
@@ -60,7 +64,7 @@ def main(folder_id, input_root, run_id):
         # Prepare one exact original CAD asset; retain original bundle as provenance.
         assets=root/"assets"
         assets.mkdir()
-        with zipfile.ZipFile(input_root/"cad_bundle.zip") as bundle:
+        with zipfile.ZipFile(input_root/"cad_bundle.bin") as bundle:
             for name in bundle.namelist():
                 if not name.endswith("/"):
                     (assets/Path(name).name).write_bytes(bundle.read(name))

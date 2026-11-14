@@ -1,0 +1,43 @@
+{
+  "live": {
+    "root": "C:/Users/28389/Desktop/k230worker-live",
+    "branch": "ops/live-tuning",
+    "head": "c4fcbf2675eb45d6eb74241fe28f1bb12c072039",
+    "status": "## ops/live-tuning",
+    "remotes": "origin\thttps://github.com/smartlotus/k230worker-6ebd4c18.git (fetch)\norigin\thttps://github.com/smartlotus/k230worker-6ebd4c18.git (push)",
+    "branches": "main\n+ ops/ellipse-fit\n+ ops/host-hashing\n  ops/k230-buffer\n+ ops/k230-fps\n  ops/k230-vision\n* ops/live-tuning\n  ops/live-tuning-history-backup-20261107\n+ ops/scene-stability\n+ ops/selftest\n+ ops/transport-mvp\n  ops/vscode-run\n+ ops/workbench\n+ ops/workbench-v2\n  remotes/origin/HEAD -> origin/ops/vscode-run\n  remotes/origin/ops/ellipse-fit\n  remotes/origin/ops/host-hashing\n  remotes/origin/ops/k230-buffer\n  remotes/origin/ops/k230-fps\n  remotes/origin/ops/k230-vision\n  remotes/origin/ops/live-tuning\n  remotes/origin/ops/live-tuning-clean-20261108\n  remotes/origin/ops/scene-stability\n  remotes/origin/ops/selftest\n  remotes/origin/ops/transport-mvp\n  remotes/origin/ops/vscode-run\n  remotes/origin/ops/workbench\n  remotes/origin/ops/workbench-v2",
+    "recent_log": "c4fcbf2 (HEAD -> ops/live-tuning, origin/ops/live-tuning) ops: checkpoint live-tuning\n1bdd304 ops: checkpoint live-tuning\n646b44a ops: checkpoint live-tuning\n5f4a73a ops: retain rejected publication checkpoint evidence\n57c8029 ops: checkpoint live-tuning\n6a3d158 ops: checkpoint live-tuning\nf00e668 ops: checkpoint live-tuning\na9f7ada ops: checkpoint live-tuning\n49e52a9 ops: checkpoint live-tuning\nb278655 ops: checkpoint live-tuning",
+    "git_root_commits": "543209b9b356473f0626daf4a6a5f6ddbfdc94c5"
+  },
+  "optimized": {
+    "root": "C:/Users/28389/Desktop/k230-vision-optimized",
+    "branch": "ops/topfacenet-sim2real-20261114",
+    "head": "52a8cb7752b9bf9756222a9f4cdf9eb0afc616db",
+    "status": "## ops/topfacenet-sim2real-20261114\n M .ops/tasks/topfacenet-sim2real-20261114.json\n M docs/topface/INPUT_MANIFEST.json\n M docs/topface/execution_contract.json\n M docs/topface/hardware_evidence.json\n M research/topface/kaggle_job.py\n M research/topface/prepare_inputs.py\n M research/topface/topface_smoke.ipynb\n?? docs/topface/runs/\n?? docs/topface/v11/\n?? research/topface/audit_v11.py\n?? research/topface/build_audit_v11.py\n?? research/topface/input_locator.py\n?? research/topface/kaggle_observe.py\n?? research/topface/native_cad.py\n?? research/topface/probe_candidate.py\n?? research/topface/render_native.py\n?? research/topface/scene_config.py\n?? research/topface/test_input_locator.py\n?? research/topface/test_v11.py",
+    "remotes": "origin\thttps://github.com/smartlotus/k230-vision-optimized.git (fetch)\norigin\thttps://github.com/smartlotus/k230-vision-optimized.git (push)",
+    "branches": "main\n  ops/connection-kpu\n  ops/frozen-model-fps\n  ops/import-snapshot\n  ops/native-fps-20261112\n* ops/topfacenet-sim2real-20261114\n  remotes/origin/HEAD -> origin/main\n  remotes/origin/main\n  remotes/origin/ops/connection-kpu\n  remotes/origin/ops/frozen-model-fps\n  remotes/origin/ops/import-snapshot\n  remotes/origin/ops/native-fps-20261112\n  remotes/origin/ops/topfacenet-sim2real-20261114",
+    "recent_log": "52a8cb7 (HEAD -> ops/topfacenet-sim2real-20261114, origin/ops/topfacenet-sim2real-20261114) ops: checkpoint topfacenet-sim2real-20261114\n1d3c5df ops: checkpoint topfacenet-sim2real-20261114\naacf34c ops: checkpoint topfacenet-sim2real-20261114\nbe544e6 (origin/ops/connection-kpu, ops/connection-kpu) ops: checkpoint connection-kpu\nfcb9491 ops: checkpoint connection-kpu\n85c7370 ops: checkpoint connection-kpu\n0aa61e9 ops: checkpoint connection-kpu\nb22e456 ops: checkpoint connection-kpu\n1c92f79 ops: checkpoint connection-kpu\n6937a06 ops: checkpoint connection-kpu",
+    "git_root_commits": "32760e37b55ac5ca0373f03b2c9bb4e94c885109"
+  },
+  "import": {
+    "source_repository": "https://github.com/smartlotus/k230worker-6ebd4c18",
+    "source_branch": "ops/k230-fps",
+    "source_commit": "0c3b8499e2877bc05df786921e199ab0533685d2",
+    "copied_file_count": 332,
+    "copied_bytes": 14449548,
+    "derived_preservation_summaries": [
+      "k230_transport_mvp/evidence/k230-buffer/preservation.json",
+      "k230_transport_mvp/evidence/k230-fps/preservation.json",
+      "k230_transport_mvp/evidence/k230-vision/preservation.json"
+    ],
+    "excluded": [
+      "Old Git history and OPS runtime/task registry",
+      "VS Code workbench source and packaged VSIX",
+      "Historical training runs/weights and untracked operator work",
+      "Unrelated historical evidence; required test fixtures retained"
+    ],
+    "native_25fps_verified": false,
+    "actual_manifest_file_count": 332
+  },
+  "observed_utc": "2026-11-14T13:14:48.751014+00:00"
+}

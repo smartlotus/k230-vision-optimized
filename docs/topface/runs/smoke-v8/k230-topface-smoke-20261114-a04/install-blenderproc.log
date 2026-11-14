@@ -1,0 +1,39 @@
+Collecting blenderproc==2.8.0
+  Downloading blenderproc-2.8.0-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.13/dist-packages (from blenderproc==2.8.0) (81.0.0)
+Requirement already satisfied: pyyaml in /usr/local/lib/python3.13/dist-packages (from blenderproc==2.8.0) (6.0.3)
+Requirement already satisfied: requests in /usr/local/lib/python3.13/dist-packages (from blenderproc==2.8.0) (2.34.2)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.13/dist-packages (from blenderproc==2.8.0) (3.10.0)
+Requirement already satisfied: numpy in /usr/local/lib/python3.13/dist-packages (from blenderproc==2.8.0) (2.1.3)
+Requirement already satisfied: Pillow in /usr/local/lib/python3.13/dist-packages (from blenderproc==2.8.0) (13.0.0)
+Requirement already satisfied: h5py in /usr/local/lib/python3.13/dist-packages (from blenderproc==2.8.0) (3.14.0)
+Collecting progressbar (from blenderproc==2.8.0)
+  Downloading progressbar-2.5.tar.gz (10 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.13/dist-packages (from matplotlib->blenderproc==2.8.0) (1.4.0)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.13/dist-packages (from matplotlib->blenderproc==2.8.0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.13/dist-packages (from matplotlib->blenderproc==2.8.0) (4.67.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.13/dist-packages (from matplotlib->blenderproc==2.8.0) (1.5.1)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.13/dist-packages (from matplotlib->blenderproc==2.8.0) (26.3)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.13/dist-packages (from matplotlib->blenderproc==2.8.0) (3.3.3)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.13/dist-packages (from matplotlib->blenderproc==2.8.0) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.13/dist-packages (from python-dateutil>=2.7->matplotlib->blenderproc==2.8.0) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.13/dist-packages (from requests->blenderproc==2.8.0) (3.4.9)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.13/dist-packages (from requests->blenderproc==2.8.0) (3.20)
+Requirement already satisfied: urllib3<3,>=1.26 in /usr/local/lib/python3.13/dist-packages (from requests->blenderproc==2.8.0) (2.8.0)
+Requirement already satisfied: certifi>=2023.5.7 in /usr/local/lib/python3.13/dist-packages (from requests->blenderproc==2.8.0) (2026.10.23)
+Downloading blenderproc-2.8.0-py3-none-any.whl (371 kB)
+Building wheels for collected packages: progressbar
+  Building wheel for progressbar (pyproject.toml): started
+  Building wheel for progressbar (pyproject.toml): finished with status 'done'
+  Created wheel for progressbar: filename=progressbar-2.5-py3-none-any.whl size=12146 sha256=1a8aae74f11001200c3bd00a114e29853b6f395f436b5d94c58fc7c09340c2c7
+  Stored in directory: /root/.cache/pip/wheels/15/38/9d/0d335445b021c31266d906b07313cd961adc1e7cece18579e9
+Successfully built progressbar
+Installing collected packages: progressbar, blenderproc
+
+Successfully installed blenderproc-2.8.0 progressbar-2.5
