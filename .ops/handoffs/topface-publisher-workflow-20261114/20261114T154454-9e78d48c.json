@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "task": "topface-publisher-workflow-20261114",
+  "created_at": "2026-11-14T15:44:54+00:00",
+  "agent": "codex",
+  "session": "topface-publisher-wf-a",
+  "branch": "ops/topface-publisher-workflow-20261114",
+  "head": "e770ac0d7227a6b8fe2303b28837205f6a5ed924",
+  "state": "ready",
+  "files": {
+    ".github/workflows/topface_archive_transfer.yml": "add5bb2c4a7f62fb4ecea937f67f58357df4f8d0d15fb290fe9d35d6fe909383"
+  },
+  "git_blob_oids": {
+    ".github/workflows/topface_archive_transfer.yml": "247efeb0c0d5cc205857e9d5b2e45a0150de99be"
+  },
+  "scope_git_blob_oids": {
+    ".github/workflows/topface_archive_transfer.yml": "247efeb0c0d5cc205857e9d5b2e45a0150de99be"
+  },
+  "scope_fingerprints": {
+    ".github/workflows/topface_archive_transfer.yml": "add5bb2c4a7f62fb4ecea937f67f58357df4f8d0d15fb290fe9d35d6fe909383"
+  },
+  "report": {
+    "completed": [
+      "Installed reviewed canonicalprivate-only workflow onisolatedbranch; no mainintegration",
+      "Verified structuralguardsandpinnedcheckout"
+    ],
+    "remaining": [
+      "Rootqualify63KiBauditarchive technicaltransfer"
+    ],
+    "decisions": [
+      "UseexistingprivateGitHubtargetanddedicatedbranch; noGooglecredentialinGit"
+    ],
+    "risks": [
+      "Initialignoredlocal-logdirectorywasabsent, sofirstredirectedclaimdidnotexecute; directorycreatedandclaimrecoveredbeforefurtherwrites; no cloudsideeffect",
+      "Thisinstallationdoesnotprovecloudtransfer"
+    ],
+    "next_steps": [
+      "Rootusefixedtaskcommit fortransfercontroller and inspectoriginalGitHubrun"
+    ],
+    "verification": [
+      {
+        "command": "yaml.BaseLoader structuralchecks+canonicaltemplateequality",
+        "exit_code": 0,
+        "summary": "All guards/source match",
+        "evidence": [
+          ".github/workflows/topface_archive_transfer.yml"
+        ]
+      }
+    ]
+  }
+}
