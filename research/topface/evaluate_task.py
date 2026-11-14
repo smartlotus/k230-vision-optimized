@@ -91,7 +91,12 @@ def evaluate(model,loader,device,score_threshold=.25,ap_score_floor=.001,max_bat
                         errors[key].append(float(np.linalg.norm(physical-d['center_xy_projected_3d'])))
                     if g['geometry_valid']:
                         counts['matched_geometry_valid_gt']+=1;e=d['ellipse']
-                        if e is None:counts['missing_finite_ellipse']+=1;continue
+                        if g['orientation_valid']:
+                            counts['angle_valid_gt']+=1
+                        if e is None:
+                            counts['missing_finite_ellipse']+=1
+                            if g['orientation_valid']:counts['angle_abstentions']+=1
+                            continue
                         counts['finite_ellipse_predictions']+=1
                         conic=(np.asarray(g['conic'])-offset)/gain;axes=np.asarray(g['axes'])/gain
                         theta=.5*math.atan2(g['orientation'][0],g['orientation'][1])*180/math.pi
@@ -102,7 +107,6 @@ def evaluate(model,loader,device,score_threshold=.25,ap_score_floor=.001,max_bat
                         errors['semi_major_relative'].append(abs(e['semi_major']-axes[0])/axes[0])
                         errors['semi_minor_relative'].append(abs(e['semi_minor']-axes[1])/axes[1])
                         if g['orientation_valid']:
-                            counts['angle_valid_gt']+=1
                             if e['orientation_valid']:
                                 counts['angle_prediction_valid']+=1
                                 errors['orientation_error_deg'].append(abs((e['orientation_deg']-theta+90)%180-90))

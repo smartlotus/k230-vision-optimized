@@ -1,0 +1,17 @@
+{
+  "id": 145030012,
+  "isPrivate": true,
+  "enableGpu": true,
+  "enableInternet": false,
+  "datasetDataSources": [
+    "lotus30/k230-topface-v11-training-input-a01"
+  ],
+  "kernelDataSources": [
+    "lotus30/k230-topface-v11-01-simulation-pilot",
+    "lotus30/k230-topface-v11-01b-color-counterexamples"
+  ],
+  "currentVersionNumber": 1,
+  "machineShape": "NvidiaTeslaT4",
+  "exact_source_cells_match": true,
+  "notebook_sha256": "c9b857ca77dc460d66068d4ff9605f465913d176d4a1550ec8d5ded5665a8e34"
+}

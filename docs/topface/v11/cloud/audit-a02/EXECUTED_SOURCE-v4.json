@@ -1,0 +1,16 @@
+{
+  "id": 145013738,
+  "isPrivate": true,
+  "enableGpu": false,
+  "enableInternet": false,
+  "datasetDataSources": [
+    "lotus30/k230-topface-v11-audit-input-a02"
+  ],
+  "kernelDataSources": [
+    "lotus30/k230-topface-v11-01-simulation-pilot",
+    "lotus30/k230-topface-v11-01b-color-counterexamples"
+  ],
+  "currentVersionNumber": 4,
+  "dockerImage": "gcr.io/kaggle-images/python@sha256:0717e81990be591f8c5f98f033d29ab23e9ffde057e5b3a6bd4371f93969e962",
+  "exact_source_cells_match": true
+}

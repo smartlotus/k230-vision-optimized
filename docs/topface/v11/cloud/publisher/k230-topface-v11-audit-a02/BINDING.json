@@ -1,0 +1,25 @@
+{
+  "schema": "topface-cloud-transfer-binding-v1.1",
+  "run_id": "k230-topface-v11-audit-a02",
+  "archive": {
+    "name": "k230-topface-v11-audit-a02-07ee51966463164d.tar.gz",
+    "bytes": 126432,
+    "sha256": "07ee51966463164d897ef15eb4583c606178bc37cedccd8d2f5beadbaa1323ca"
+  },
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-02-dataset-audit",
+    "kernel_id": 145013738,
+    "version": 4,
+    "provider_status": "COMPLETE",
+    "source_sha256": "d933710c65765d445ece889999f5eae409dc4f1d03ade6c8c841fdb71c4289ac"
+  },
+  "drive_file_id": "1HFThcUtiJZH7k-hRC8McQ1P9GmcXPr3w",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "head": "836a70e8598f778841f344ed34b8500466ba6af0",
+  "branch": "ops/topface-transfer-1794673281392621400",
+  "secret_name": "TOPFACE_TRANSFER_1794673281392621400",
+  "publisher_source_commit": "617877c4e1ed0878f0d7c1dd741557a9d6187e05",
+  "created_utc": "2026-11-14T16:21:21.522217+00:00",
+  "automatic_replay": false,
+  "source_archive_path": "k230-topface-v11-audit-a02.tar.gz"
+}

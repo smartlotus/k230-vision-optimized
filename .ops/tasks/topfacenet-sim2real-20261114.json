@@ -17,11 +17,11 @@
     "Hardware provenance and camera range recorded; original fused CAD unchanged; Kaggle render/audit/train evidence preserved; approved r4 and production hardware unchanged; private remote checkpoint verified"
   ],
   "branch": "ops/topfacenet-sim2real-20261114",
-  "state": "blocked",
-  "claimed": false,
+  "state": "paused",
+  "claimed": true,
   "agent": "codex",
-  "session": "topface-20261114-c",
-  "revision": 11,
-  "handoff": ".ops/handoffs/topfacenet-sim2real-20261114/20261114T154328-e6fe4e5d.json",
-  "updated_at": "2026-11-14T15:43:51+00:00"
+  "session": "topface-20261114-d",
+  "revision": 13,
+  "handoff": ".ops/handoffs/topfacenet-sim2real-20261114/20261114T163611-1c31c414.json",
+  "updated_at": "2026-11-14T16:36:31+00:00"
 }

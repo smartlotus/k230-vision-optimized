@@ -1,0 +1,17 @@
+{
+  "run_id": "k230-topface-v11-audit-a02",
+  "source_archive_path": "k230-topface-v11-audit-a02.tar.gz",
+  "archive": {
+    "name": "k230-topface-v11-audit-a02-07ee51966463164d.tar.gz",
+    "bytes": 126432,
+    "sha256": "07ee51966463164d897ef15eb4583c606178bc37cedccd8d2f5beadbaa1323ca"
+  },
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-02-dataset-audit",
+    "kernel_id": 145013738,
+    "version": 4,
+    "provider_status": "COMPLETE",
+    "source_sha256": "d933710c65765d445ece889999f5eae409dc4f1d03ade6c8c841fdb71c4289ac"
+  },
+  "source_notebook": "docs/topface/v11/cloud/audit-a02/02_audit.ipynb"
+}

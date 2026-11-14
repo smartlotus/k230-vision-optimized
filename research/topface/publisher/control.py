@@ -45,7 +45,7 @@ def authorized():
         raise ValueError('Existing authorized repository is not private')
 
 
-def drive_local():
+def drive_local(cached=None):
     import requests
     config=configparser.ConfigParser(interpolation=None)
     config.read(Path(os.environ['APPDATA'])/'rclone/rclone.conf',encoding='utf8')
@@ -56,6 +56,8 @@ def drive_local():
     drive=object.__new__(Drive)
     drive.oauth={'client_id':remote['client_id'],'client_secret':remote['client_secret'],'refresh_token':token['refresh_token']}
     drive.folder_id=FOLDER;drive.session=requests.Session();drive.token='';drive.expiry=0.
+    if cached is not None and cached['drive_expiry_epoch']>time.time()+1200:
+        drive.token=cached['drive_access_token'];drive.expiry=cached['drive_expiry_epoch']
     drive.deadline=time.monotonic()+600
     drive.verify_folder()
     if drive.expiry<time.time()+1200:raise ValueError('Short access token lifetime insufficient for finite publisher')
@@ -102,7 +104,7 @@ def source_url(prep,file_path,token_file,source_notebook):
             page=None
             for _ in range(100):
                 request=ApiListKernelSessionOutputRequest();request.user_name=owner;request.kernel_slug=slug
-                request.version_label=f'v{version}';request.page_size=1000;request.page_token=page
+                request.version_label=f'v{version}';request.page_size=100;request.page_token=page
                 response=client.kernels.kernels_api_client.list_kernel_session_output(request)
                 matches=[item for item in response.files if item.file_name==file_path]
                 if matches:
@@ -244,7 +246,9 @@ def observe(run_id):
     if run['conclusion']!='success':return {'status':'TRANSFER_FAILED_TERMINAL_SECRET_REMOVED','github_run_id':run['databaseId'],'automatic_replay':False}
     jobs=json.loads(command('gh','run','view',str(run['databaseId']),'--repo',REPO,'--json','jobs'))['jobs']
     if len(jobs)!=1 or jobs[0]['name']!='transfer' or jobs[0]['conclusion']!='success':raise ValueError('Unexpected publisher jobs')
-    log=command('gh','api',f'repos/{REPO}/actions/jobs/{jobs[0]["databaseId"]}/logs')
+    # gh protects terminal output containing Actions ANSI sequences. Capture
+    # bytes as text, parse only our validated JSON receipt, never emit raw logs.
+    log=command('gh','api','--allow-escape-sequences',f'repos/{REPO}/actions/jobs/{jobs[0]["databaseId"]}/logs')
     matches=re.findall(r'TOPFACE_TRANSFER_RECEIPT (\{[^\r\n]*\})',log)
     if len(matches)!=1:raise ValueError('Unique compact publisher receipt missing')
     result=json.loads(matches[0]);uploaded=result['uploaded']
@@ -253,7 +257,10 @@ def observe(run_id):
     if result['status']!='DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED' or uploaded['file_id']!=binding['drive_file_id'] or uploaded['provider_readback']!='FULL_BYTE_SHA256_PASS':
         raise ValueError('Publisher full-byte acceptance missing')
     if any(uploaded[k]!=binding['archive'][k] for k in ('name','bytes','sha256')):raise ValueError('Published archive differs')
-    drive=drive_local()
+    atomic_json(folder/'CLOUD_RECEIPT.json',{**result,'github':{'run_id':run['databaseId'],'head':binding['head'],'branch':binding['branch']},
+        'secret_cleanup':'CONFIRMED_DELETED','independent_metadata_match':False})
+    cached=json.loads(unprotect(protected_path(run_id),run_id).decode('utf8'));validate_binding(binding,cached)
+    drive=drive_local(cached)
     with drive.request('GET',API+'/'+binding['drive_file_id'],params={'fields':'id,name,size,parents,trashed,sha256Checksum'}) as response:meta=response.json()
     if meta.get('id')!=uploaded['file_id'] or meta.get('name')!=uploaded['name'] or meta.get('parents')!=[FOLDER] or int(meta.get('size',-1))!=uploaded['bytes'] or meta.get('trashed'):
         raise ValueError('Independent Drive metadata does not match full-byte cloud receipt')
@@ -279,6 +286,13 @@ if __name__=='__main__':
     except Exception as error:
         # ConfigParser/provider exceptions may embed original credential lines,
         # signed URLs or headers. Never emit exception strings or tracebacks.
-        print(json.dumps({'status':'PUBLISHER_OPERATION_NEEDS_RECONCILIATION','error_type':type(error).__name__,
-            'automatic_retry':False}),file=sys.stderr)
+        import traceback
+        from urllib.parse import urlsplit
+        response=getattr(error,'response',None)
+        diagnostic={'status':'PUBLISHER_OPERATION_NEEDS_RECONCILIATION','error_type':type(error).__name__,
+            'automatic_retry':False,'stack_locations':[{'file':Path(f.filename).name,'line':f.lineno,'function':f.name}
+                for f in traceback.extract_tb(error.__traceback__)[-5:]]}
+        if response is not None:
+            diagnostic.update(http_status=response.status_code,http_host=urlsplit(response.url).hostname)
+        print(json.dumps(diagnostic),file=sys.stderr)
         raise SystemExit(1) from None

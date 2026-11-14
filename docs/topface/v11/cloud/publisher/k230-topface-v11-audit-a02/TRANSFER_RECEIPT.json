@@ -1,0 +1,29 @@
+{
+  "run_id": "k230-topface-v11-audit-a02",
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-02-dataset-audit",
+    "kernel_id": 145013738,
+    "version": 4,
+    "provider_status": "COMPLETE",
+    "source_sha256": "d933710c65765d445ece889999f5eae409dc4f1d03ade6c8c841fdb71c4289ac"
+  },
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "uploaded": {
+    "name": "k230-topface-v11-audit-a02-07ee51966463164d.tar.gz",
+    "bytes": 126432,
+    "sha256": "07ee51966463164d897ef15eb4583c606178bc37cedccd8d2f5beadbaa1323ca",
+    "file_id": "1HFThcUtiJZH7k-hRC8McQ1P9GmcXPr3w",
+    "provider_readback": "FULL_BYTE_SHA256_PASS"
+  },
+  "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+  "automatic_replay": false,
+  "provider_mutations": 1,
+  "github": {
+    "run_id": 43615193895,
+    "head": "836a70e8598f778841f344ed34b8500466ba6af0",
+    "branch": "ops/topface-transfer-1794673281392621400"
+  },
+  "secret_cleanup": "CONFIRMED_DELETED",
+  "independent_metadata_match": true,
+  "raw_archive_downloaded_to_host": false
+}

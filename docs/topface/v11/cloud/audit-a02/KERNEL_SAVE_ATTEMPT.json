@@ -1,0 +1,9 @@
+{
+  "operation": "SAVE_AND_RUN_ALL",
+  "observed_utc": "2026-11-14T16:10:47.750863+00:00",
+  "ref": "lotus30/k230-topface-v11-02-dataset-audit",
+  "source_sha256": "d933710c65765d445ece889999f5eae409dc4f1d03ade6c8c841fdb71c4289ac",
+  "session_timeout_seconds": 2400,
+  "scientific_execution": true,
+  "automatic_retry": false
+}

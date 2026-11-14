@@ -1,0 +1,23 @@
+{
+  "schema": "topface-exact-compact-collection-v1.1",
+  "ref": "lotus30/k230-topface-v11-02-dataset-audit",
+  "version": 4,
+  "run_id": "k230-topface-v11-audit-a02",
+  "observed_utc": "2026-11-14T16:21:18.459817+00:00",
+  "members": [
+    {
+      "name": "k230-topface-v11-audit-a02-RESULT.json",
+      "status": "COLLECTED",
+      "bytes": 8416,
+      "sha256": "791a864421a3f388a2578960b135695021958f4c22272684df8f329d082a184c"
+    },
+    {
+      "name": "near-similarity-01.jpg",
+      "status": "COLLECTED",
+      "bytes": 56775,
+      "sha256": "d874c670d01a8904d676b35948a08d8129a17e625390626355bfa2a0c92c674f"
+    }
+  ],
+  "raw_archive_downloaded_to_host": false,
+  "automatic_replay": false
+}

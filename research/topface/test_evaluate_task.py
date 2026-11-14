@@ -42,6 +42,13 @@ class TaskEvaluationTests(unittest.TestCase):
         self.assertEqual(result['matched_color_accuracy'],0.)
         self.assertEqual(result['task_mAP50'],0.)
 
+    def test_missing_ellipse_counts_as_abstention_for_valid_angle(self):
+        model,loader=self.fixture()
+        model.raw[:,:,44:46]=0
+        result=evaluate(model,loader,torch.device('cpu'))
+        self.assertEqual(result['denominators']['angle_valid_gt'],1)
+        self.assertEqual(result['denominators']['angle_abstentions'],1)
+
     def test_empty_scene_false_positive_has_explicit_denominator(self):
         model,loader=self.fixture();images,_,meta=loader[0];meta[0]['expected_world_count']=0
         result=evaluate(model,[(images,[[]],meta)],torch.device('cpu'))

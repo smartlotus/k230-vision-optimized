@@ -1,0 +1,98 @@
+{
+  "schema": "topface-downstream-input-v1.1",
+  "phase": "training",
+  "run_id": "k230-topface-v11-training-a01",
+  "created_utc": "2026-11-14T16:22:53.618479+00:00",
+  "files": [
+    {
+      "path": "cloud_artifacts.py",
+      "bytes": 3242,
+      "sha256": "ec8757c25ccba6be3b4b7d48697b40021c6c7fd5f882e747e398f0ea74b9ee78"
+    },
+    {
+      "path": "cloud_store.py",
+      "bytes": 10870,
+      "sha256": "1f764499ce2098139a57cbcfd7406000c98f4a8ca914bb8d96e9e4656148cf34"
+    },
+    {
+      "path": "combine_datasets.py",
+      "bytes": 2754,
+      "sha256": "ccee9efe5de1c16f790e1ed0c144d46b106f862c6b29ace40bbb1e067c4c6223"
+    },
+    {
+      "path": "dataset_diagnostics.py",
+      "bytes": 9565,
+      "sha256": "afb0244bd8094393086e0f7c3cf357e6f806064bda5bda4c0e183796e3ceb46d"
+    },
+    {
+      "path": "DOWNSTREAM_CONFIG.json",
+      "bytes": 17232,
+      "sha256": "24f2341c3f9a8c1a0ef276ff01374cbb77128c60abc8b0caa71a2bdf53748036"
+    },
+    {
+      "path": "downstream_job.py",
+      "bytes": 14988,
+      "sha256": "ddfa2e9403d3ab2ef218402babd946dd7b3c70f7089c5f1fee4784e20713870b"
+    },
+    {
+      "path": "evaluate_task.py",
+      "bytes": 8367,
+      "sha256": "dbf42a06370000d28ecba819b92abe5f639453ed4d32470d6717e662854171b6"
+    },
+    {
+      "path": "geometry.py",
+      "bytes": 2996,
+      "sha256": "de5c6055507a76ad5656bf8b3f554139bd154bf581b7196722e308a3a3985cc4"
+    },
+    {
+      "path": "input_locator.py",
+      "bytes": 941,
+      "sha256": "2a1f79933d67272996993a01ab8ad5da6b2d00710884456d9112f02ee00e0011"
+    },
+    {
+      "path": "nanodet-pretrained.bin",
+      "bytes": 35470891,
+      "sha256": "f4c6080f3ef35a64c3030d559438b436462f227ce29700bca71327203e42dea2"
+    },
+    {
+      "path": "nanodet-source.bin",
+      "bytes": 19158,
+      "sha256": "0615df8698c9db0f55208fa7e448e9c52acd1bee8f84712d3c7600017ac5f950"
+    },
+    {
+      "path": "nanodet_topface.py",
+      "bytes": 8288,
+      "sha256": "fca1d5091eeddd86763a8ff61bf26dbc547277c8d37e3bf26f3fef5663cea2cc"
+    },
+    {
+      "path": "native_job.py",
+      "bytes": 15094,
+      "sha256": "8f906523ee85d48eb37a203d6ea5c500fcf557eb49f4408e0ec1dfceb4a7a6ef"
+    },
+    {
+      "path": "near_similarity.py",
+      "bytes": 3593,
+      "sha256": "d623ef789ba65a0be973917081acec79d52118b1b286c2441183bdb9ece5aff9"
+    },
+    {
+      "path": "scene_config.py",
+      "bytes": 4820,
+      "sha256": "2d7c8abcbb930ac2b857729d90dd86e91544b0672cccadcd457dd4db1b415b62"
+    },
+    {
+      "path": "task_geometry.py",
+      "bytes": 7275,
+      "sha256": "7096404fdf4aab839e708ef5c8933d18b5eb3d7a0b347dcf631fa2303f713363"
+    },
+    {
+      "path": "task_training.py",
+      "bytes": 13879,
+      "sha256": "a59d26c72737f654667fe9feff33ccb8f6b8cd77abeaa2714251869a429732ad"
+    },
+    {
+      "path": "train_experiment.py",
+      "bytes": 17370,
+      "sha256": "8e1a507a870eae72aa484dbad92fb994a235f30491e22a23779c3f8624ed4b15"
+    }
+  ]
+}

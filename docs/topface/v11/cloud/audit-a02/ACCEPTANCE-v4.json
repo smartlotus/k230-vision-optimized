@@ -1,0 +1,32 @@
+{
+  "status": "COMPOSITE_AUDIT_AND_DRIVE_READBACK_ACCEPTED",
+  "training_admission": "PASS",
+  "ref": "lotus30/k230-topface-v11-02-dataset-audit",
+  "kernel_id": 145013738,
+  "version": 4,
+  "run_id": "k230-topface-v11-audit-a02",
+  "notebook_sha256": "d933710c65765d445ece889999f5eae409dc4f1d03ade6c8c841fdb71c4289ac",
+  "input_manifest_sha256": "76a6dde69b0954339118d648760b282c6f9ec2edb3908943eac6e3d230c23b7d",
+  "pilot_archive_sha256": "f559a9df0fe01ea17884ce63671e6e89a162a037faa0a80045eec574e417430f",
+  "supplement_archive_sha256": "3687e18684f2bd7575097a2825c5a6dba68db004c0962159f81ba3f31212c7ce",
+  "composite_audit_sha256": "436b07f54e3d9f124c93af8b2c3c215b9761542256108f0af7c870901e94e2d3",
+  "images": 1240,
+  "split_images": {
+    "synthetic_test": 154,
+    "val": 221,
+    "train": 865
+  },
+  "world_instances": 3216,
+  "conditional_colors_pass": true,
+  "similarity_review_passed": true,
+  "similarity_review_sha256": "8dbb9fa7ef1aa42ab79c4410671c95078a685379903d77afd319f16e0d5d3f6b",
+  "publication_receipt_sha256": "d29b511e30a499c2af78e1f8be446bb228282b6037b46fe2bd6c48d7f2321a5f",
+  "drive_archive": {
+    "name": "k230-topface-v11-audit-a02-07ee51966463164d.tar.gz",
+    "bytes": 126432,
+    "sha256": "07ee51966463164d897ef15eb4583c606178bc37cedccd8d2f5beadbaa1323ca",
+    "file_id": "1HFThcUtiJZH7k-hRC8McQ1P9GmcXPr3w",
+    "provider_readback": "FULL_BYTE_SHA256_PASS"
+  },
+  "optimizer_updates": 0
+}

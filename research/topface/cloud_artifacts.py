@@ -28,7 +28,7 @@ def fetch_archive(drive,receipt,destination,max_bytes=1024**3):
     return destination
 
 
-def extract_verified_archive(archive,destination,max_members=20000,max_expanded_bytes=3*1024**3):
+def extract_verified_archive(archive,destination,max_members=20000,max_expanded_bytes=3*1024**3,select=None):
     destination=Path(destination).resolve();destination.mkdir(parents=True,exist_ok=False)
     with tarfile.open(archive,'r:gz') as bundle:
         members=bundle.getmembers();names=[m.name for m in members]
@@ -45,10 +45,18 @@ def extract_verified_archive(archive,destination,max_members=20000,max_expanded_
         expected={r['name']:r for r in manifest}
         if len(expected)!=len(manifest) or set(names)!=(set(expected)|{'MEMBERS.json'}):
             raise ValueError('Archive member denominator differs from manifest')
-        bundle.extractall(destination,members=members,filter='data')
-    for name,row in expected.items():
+        selected=set(expected) if select is None else set(select(bundle,expected))
+        if not selected or not selected<=set(expected):
+            raise ValueError('Requested archive members are missing')
+        bundle.extractall(destination,members=[m for m in members if m.name in selected or m.name=='MEMBERS.json'],filter='data')
+    for name in selected:
+        row=expected[name]
         path=destination/name
         if (path.stat().st_size,sha(path))!=(row['bytes'],row['sha256']):
             raise ValueError('Extracted member hash mismatch')
-    return {'files':len(expected),'expanded_bytes':sum(r['bytes'] for r in expected.values()),
+    result={'files':len(expected),'expanded_bytes':sum(r['bytes'] for r in expected.values()),
         'member_manifest_sha256':hashlib.sha256(raw).hexdigest(),'sha256_verification':'ALL_MEMBERS_PASS'}
+    if selected!=set(expected):
+        result.update(sha256_verification='SELECTED_MEMBERS_PASS',verified_files=len(selected),
+                      verified_expanded_bytes=sum(expected[name]['bytes'] for name in selected))
+    return result

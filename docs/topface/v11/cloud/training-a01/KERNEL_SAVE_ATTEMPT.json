@@ -1,0 +1,9 @@
+{
+  "operation": "SAVE_AND_RUN_ALL",
+  "observed_utc": "2026-11-14T16:24:49.449842+00:00",
+  "ref": "lotus30/k230-topface-v11-03-pilot-training",
+  "source_sha256": "c9b857ca77dc460d66068d4ff9605f465913d176d4a1550ec8d5ded5665a8e34",
+  "session_timeout_seconds": 10800,
+  "scientific_execution": true,
+  "automatic_retry": false
+}

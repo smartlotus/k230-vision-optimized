@@ -73,9 +73,12 @@ def main():
     parser.add_argument('--qualification',action='store_true')
     parser.add_argument('--max-seconds',type=int,default=1800)
     parser.add_argument('--scene-plan',type=Path)
+    parser.add_argument('--start-index',type=int,default=0)
     argv=sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else []
     args=parser.parse_args(argv)
     if not 1<=args.count<=20000:raise ValueError('Count outside registered dataset range')
+    if args.start_index<0 or (args.start_index and (args.qualification or args.scene_plan)):
+        raise ValueError('Global start index requires a standard scene range')
     scene_plan=None
     if args.scene_plan:
         from supplement_plan import planned_config
@@ -133,8 +136,9 @@ def main():
         if time.monotonic()+30>=deadline:
             write_json(args.output/'PROGRESS.json',{'status':'BUDGET_STOP','completed_frames':frame,'requested_frames':args.count})
             raise RuntimeError('Stopped at a scene boundary before registered rendering deadline')
-        config=planned_config(scene_plan,frame) if scene_plan is not None else make_config(args.seed,frame,args.qualification)
-        directory=args.output/f'scene-{frame:05d}';directory.mkdir(exist_ok=False)
+        scene_index=args.start_index+frame
+        config=planned_config(scene_plan,frame) if scene_plan is not None else make_config(args.seed,scene_index,args.qualification)
+        directory=args.output/f'scene-{scene_index:05d}';directory.mkdir(exist_ok=False)
         scene.frame_set(frame)
         K=np.array(config['camera_intrinsics']);pose=np.array(config['camera_pose_world_from_cv'])
         projection_error=set_camera(scene,K,pose)

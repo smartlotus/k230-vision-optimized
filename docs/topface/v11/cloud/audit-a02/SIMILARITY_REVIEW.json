@@ -1,0 +1,96 @@
+{
+  "status": "REVIEWED_INDEPENDENT_SCENES",
+  "ref": "lotus30/k230-topface-v11-02-dataset-audit",
+  "version": 4,
+  "evidence_file": "NEAR_SIMILARITY_EVIDENCE.json",
+  "evidence_sha256": "4458782274a9b7dc84ddfd7ed29f24a684933d62f958fa5b4f5cd2829e80452f",
+  "previews": [
+    {
+      "name": "near-similarity-01.jpg",
+      "bytes": 56775,
+      "sha256": "d874c670d01a8904d676b35948a08d8129a17e625390626355bfa2a0c92c674f"
+    }
+  ],
+  "reviewer": "Codex visual and source review",
+  "disposition": "Retain the six pairs with the original splits. Shared object positions reflect the repeated layout family.",
+  "pairs": [
+    {
+      "a": "primary/scene-00097",
+      "b": "primary/scene-00217",
+      "kind": "contains_target",
+      "hamming": 2,
+      "verified_identity_differences": {
+        "scene_group_different": true,
+        "seed_different": true,
+        "camera_group_different": true,
+        "rgb_sha_different": true
+      },
+      "visual_observation": "Same top-right target category. Background hue, shadow, viewpoint and angular silhouette differ."
+    },
+    {
+      "a": "primary/scene-00565",
+      "b": "primary/scene-00685",
+      "kind": "contains_target",
+      "hamming": 2,
+      "verified_identity_differences": {
+        "scene_group_different": true,
+        "seed_different": true,
+        "camera_group_different": true,
+        "rgb_sha_different": true
+      },
+      "visual_observation": "Same central yellow category. Target scale and lighting differ, and the second image contains a ring."
+    },
+    {
+      "a": "primary/scene-00624",
+      "b": "primary/scene-00804",
+      "kind": "both_empty",
+      "hamming": 2,
+      "verified_identity_differences": {
+        "scene_group_different": true,
+        "seed_different": true,
+        "camera_group_different": true,
+        "rgb_sha_different": true
+      },
+      "visual_observation": "Empty frames with a shared ring motif. Background and lighting differ."
+    },
+    {
+      "a": "primary/scene-00835",
+      "b": "primary/scene-00865",
+      "kind": "contains_target",
+      "hamming": 2,
+      "verified_identity_differences": {
+        "scene_group_different": true,
+        "seed_different": true,
+        "camera_group_different": true,
+        "rgb_sha_different": true
+      },
+      "visual_observation": "Same central yellow category. Target illumination, background, visible side and shadow differ."
+    },
+    {
+      "a": "colorfix/scene-00066",
+      "b": "colorfix/scene-00118",
+      "kind": "contains_target",
+      "hamming": 2,
+      "verified_identity_differences": {
+        "scene_group_different": true,
+        "seed_different": true,
+        "camera_group_different": true,
+        "rgb_sha_different": true
+      },
+      "visual_observation": "Different target categories in the bottom-left corner. Background, viewpoint and shadow differ."
+    },
+    {
+      "a": "colorfix/scene-00198",
+      "b": "colorfix/scene-00212",
+      "kind": "contains_target",
+      "hamming": 2,
+      "verified_identity_differences": {
+        "scene_group_different": true,
+        "seed_different": true,
+        "camera_group_different": true,
+        "rgb_sha_different": true
+      },
+      "visual_observation": "Same dark category at the upper-left boundary. Crop, camera tilt, shadow and background differ."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "operation": "private dataset create",
+  "ref": "lotus30/k230-topface-v11-training-input-a01",
+  "expected_version": 1,
+  "input_manifest_sha256": "cab8469436412a9efa1271cfa169f006f489c88edd92911aa9e346cb6f561e02",
+  "observed_utc": "2026-11-14T16:23:22.6818321Z",
+  "automatic_retry": false
+}

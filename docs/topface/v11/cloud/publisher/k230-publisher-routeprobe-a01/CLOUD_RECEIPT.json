@@ -1,0 +1,28 @@
+{
+  "run_id": "k230-publisher-routeprobe-a01",
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-02-dataset-audit",
+    "kernel_id": 145013738,
+    "version": 3,
+    "provider_status": "COMPLETE",
+    "source_sha256": "bd562795ed7dc4dcd5b989c18fcfbc2069f185e756ab5b7a677126fbba4d98c5"
+  },
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "uploaded": {
+    "name": "k230-publisher-routeprobe-a01-848dde54e9be189e.tar.gz",
+    "bytes": 62911,
+    "sha256": "848dde54e9be189efe7c7961f1490181c761d1f534e648c80c06b6130e5274dd",
+    "file_id": "16Q8Nr_ud1UIwgBSfbX8Kh6-vi8mT_uVv",
+    "provider_readback": "FULL_BYTE_SHA256_PASS"
+  },
+  "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+  "automatic_replay": false,
+  "provider_mutations": 1,
+  "github": {
+    "run_id": 43612046891,
+    "head": "a30e87c5aa8c4b5caaffb207168f79f185a207dc",
+    "branch": "ops/topface-transfer-1794671201913572100"
+  },
+  "secret_cleanup": "CONFIRMED_DELETED",
+  "independent_metadata_match": false
+}

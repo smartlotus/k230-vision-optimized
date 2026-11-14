@@ -1,7 +1,7 @@
 """Finite V1.1 native-Blender Kaggle producer. No BlenderProc/bootstrap pip.
 
-Drive admission is mandatory before any cloud rendering. Local qualification
-is explicit, limited to six frames, and never presented as Kaggle evidence.
+Cloud jobs use direct Drive admission or the authorized publisher.
+Local qualification is limited to six frames.
 """
 import argparse
 from datetime import datetime, timezone
@@ -90,7 +90,7 @@ def extract_cad(input_root, assets):
             (assets/name).write_bytes(bundle.read(member))
 
 
-def render(blender, inputs, assets, output, count, seed, device, log, deadline, qualification=False):
+def render(blender, inputs, assets, output, count, seed, device, log, deadline, qualification=False,start_index=0):
     command = [str(blender), '--background', '--factory-startup', '--python-exit-code', '1',
         '--python', str(inputs/'render_native.py'), '--', '--assets', str(assets),
         '--output', str(output), '--count', str(count), '--seed', str(seed),
@@ -99,6 +99,8 @@ def render(blender, inputs, assets, output, count, seed, device, log, deadline, 
         command.append('--qualification')
     elif (inputs/'SCENE_PLAN.json').is_file():
         command.extend(['--scene-plan',str(inputs/'SCENE_PLAN.json')])
+    elif start_index:
+        command.extend(['--start-index',str(start_index)])
     execute(command, log, deadline, 8100)
 
 
@@ -116,10 +118,27 @@ def main(input_root, work_root, run_id, count=1000, seed=20261115,
     if not local and work_root != Path('/kaggle/working'):
         raise ValueError('Cloud producer must run in /kaggle/working')
     manifest = verify_inputs(input_root)
+    render_config_path=input_root/'FULL_RENDER_CONFIG.json'
+    publisher=render_config_path.is_file()
+    start_index=0
+    if publisher:
+        config=json.loads(render_config_path.read_text(encoding='utf8'))
+        if (config['run_id'],config['count'],config['seed'])!=(run_id,count,seed):
+            raise ValueError('Full shard intent differs from the frozen input')
+        pilot=config['pilot_admission'];receipt=config['publisher_receipt']
+        if (local or pilot['full_render_admission']!='PASS' or
+                receipt['status']!='DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED' or
+                receipt['folder_id']!=folder_id or receipt['secret_cleanup']!='CONFIRMED_DELETED'):
+            raise ValueError('Full shard requires accepted Pilot and publisher receipts')
+        start_index=config['start_index']
+        if (type(start_index) is not int or start_index<0 or start_index+count>config['total_scenes'] or
+                (input_root/'SCENE_PLAN.json').exists()):
+            raise ValueError('Full shard range differs from the dataset plan')
     gate = json.loads((input_root/'SMOKE_HUMAN_REVIEW.json').read_text(encoding='utf8'))
     if gate['status'] != 'PASS' or gate['reviewed_images'] < 30 or gate['pilot_authorized'] is not True:
         raise ValueError('Smoke human gate has not passed')
-    run_root = work_root/run_id
+    scratch=Path('/kaggle/temp') if Path('/kaggle/temp').is_dir() else Path('/tmp')
+    run_root = (scratch if publisher else work_root)/run_id
     run_root.mkdir(parents=True, exist_ok=False)
     result = run_root/'result'
     result.mkdir()
@@ -129,7 +148,8 @@ def main(input_root, work_root, run_id, count=1000, seed=20261115,
     state = {'schema':'topface-native-pilot-v1.1','run_id':run_id,'status':'STARTED',
         'observed_utc':datetime.now(timezone.utc).isoformat(), 'optimizer_steps':0,
         'requested_scenes':count,'seed':seed,'automatic_replay':False,
-        'scope':'LOCAL_WORKER_QUALIFICATION' if local else 'KAGGLE_NATIVE_BLENDER_PILOT',
+        'scope':'LOCAL_WORKER_QUALIFICATION' if local else ('KAGGLE_NATIVE_BLENDER_FULL_SHARD' if publisher else 'KAGGLE_NATIVE_BLENDER_PILOT'),
+        'start_index':start_index,
         'input_manifest_sha256':sha(input_root/'INPUT_MANIFEST.json'),
         'source_files':manifest['files'],'max_seconds':max_seconds,
         'stopping_condition':'complete requested scenes or finite deadline; no automatic scientific replay'}
@@ -143,6 +163,8 @@ def main(input_root, work_root, run_id, count=1000, seed=20261115,
         stage('ENVIRONMENT_AND_STORAGE_ADMISSION')
         if shutil.disk_usage(work_root).free < 8*1024**3:
             raise RuntimeError('Less than registered 8 GiB free working space')
+        if publisher and shutil.disk_usage(scratch).free < 4*1024**3:
+            raise RuntimeError('Insufficient cloud scratch space for Blender and render output')
         environment = {'python':sys.version,'local':local,'packages':{},'blenderproc_required':False}
         for package in ('numpy','opencv-python','torch','torchvision'):
             try:environment['packages'][package] = importlib.metadata.version(package)
@@ -151,12 +173,14 @@ def main(input_root, work_root, run_id, count=1000, seed=20261115,
             import torch
             environment.update(pytorch_gpu_available=torch.cuda.is_available(),
                 pytorch_gpu_names=[torch.cuda.get_device_name(i) for i in range(torch.cuda.device_count())])
-            # Failure here performs no environment download and no rendering.
-            drive = Drive(folder_id,deadline=deadline)
-            drive.verify_folder()
-            atomic_json(result/'admission-probe.json',{'run_id':run_id,'route':'notebook-direct','producer':'Kaggle'})
-            state['drive_probe'] = drive.export(result/'admission-probe.json',run_id+'-admission',result/'DRIVE_PROBE.json')
-            state['drive_admission_marker'] = drive.reserve_run(run_id,state['input_manifest_sha256'])
+            if publisher:
+                state['publisher_route_qualification']=receipt['github']
+            else:
+                drive = Drive(folder_id,deadline=deadline)
+                drive.verify_folder()
+                atomic_json(result/'admission-probe.json',{'run_id':run_id,'route':'notebook-direct','producer':'Kaggle'})
+                state['drive_probe'] = drive.export(result/'admission-probe.json',run_id+'-admission',result/'DRIVE_PROBE.json')
+                state['drive_admission_marker'] = drive.reserve_run(run_id,state['input_manifest_sha256'])
         atomic_json(result/'environment.json',environment)
         source = result/'source'
         source.mkdir()
@@ -188,11 +212,14 @@ def main(input_root, work_root, run_id, count=1000, seed=20261115,
         stage('PILOT_RENDER')
         render(blender,input_root,assets,result/'pilot',count,seed,
                'cpu' if selected['selected_backend']=='CPU' else 'auto',
-               result/'pilot-render.log',compute_deadline)
+               result/'pilot-render.log',compute_deadline,start_index=start_index)
         stage('PILOT_LABEL_QA')
         report = audit(result/'pilot')
         if report['images'] != count:
             raise RuntimeError('Pilot scene count mismatch')
+        if publisher:
+            from coco_topface import export
+            export(result/'pilot',report)
         state.update(status='COMPUTE_AND_QA_PASS',images_rendered=report['images'],instances=report['instances'],
             qa={k:v for k,v in report.items() if k!='scenes'},
             device=json.loads((result/'pilot/render_device.json').read_text()))
@@ -221,14 +248,16 @@ def main(input_root, work_root, run_id, count=1000, seed=20261115,
                     try:drive.finish_run(state['drive_admission_marker'],state['status'])
                     except Exception:state['admission_marker_final_status_update']='PENDING_RECONCILIATION'
             else:
-                state['durable_status'] = 'LOCAL_ONLY' if local else 'NO_DRIVE_ADMISSION'
+                state['durable_status'] = ('LOCAL_ONLY' if local else
+                    'PUBLISHER_PENDING_EXACT_SAVED_OUTPUT' if publisher else 'NO_DRIVE_ADMISSION')
         except Exception as error:
             state['durable_status'] = 'UNACCEPTED_PRESERVE_SAVED_OUTPUT'
             state['publication_error_type'] = type(error).__name__
         state['elapsed_seconds'] = time.monotonic()-started
         atomic_json(compact,state)
         print('TOPFACE_RESULT',json.dumps(state),flush=True)
-    if state['status'] != 'COMPUTE_AND_QA_PASS' or (not local and state['durable_status']!='FULL_BYTE_SHA256_PASS'):
+    # A publisher-route failure archive remains available for investigation.
+    if not publisher and (state['status'] != 'COMPUTE_AND_QA_PASS' or (not local and state['durable_status']!='FULL_BYTE_SHA256_PASS')):
         raise RuntimeError('Finite native job did not satisfy compute/storage acceptance; inspect compact RESULT')
     return state
 

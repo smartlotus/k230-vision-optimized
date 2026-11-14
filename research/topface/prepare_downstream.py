@@ -8,6 +8,7 @@ from datetime import datetime,timezone
 import json
 from pathlib import Path
 import shutil
+import zipfile
 
 from cloud_store import atomic_json,sha
 from nanodet_topface import CHECKPOINT_SHA256
@@ -16,7 +17,7 @@ ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
 
 
-def main(phase,revision,pilot_result,staging,audit_acceptance=None,supplement_result=None):
+def main(phase,revision,pilot_result,staging,audit_acceptance=None,supplement_result=None,publisher_receipt=None):
     if phase not in ('audit','training') or not revision.isalnum():raise ValueError('Explicit phase/revision required')
     parent=json.loads(Path(pilot_result).read_text(encoding='utf8'))
     if parent['status']!='COMPUTE_AND_QA_PASS' or parent['images_rendered']!=1000 or parent['durable_status']!='FULL_BYTE_SHA256_PASS':
@@ -42,7 +43,17 @@ def main(phase,revision,pilot_result,staging,audit_acceptance=None,supplement_re
         if supplement['status']!='COMPUTE_AND_QA_PASS' or supplement['images_rendered']!=240 or supplement['durable_status']!='FULL_BYTE_SHA256_PASS':
             raise ValueError('Supplement compute/QA/storage has not passed')
         config['supplement_compute']=supplement
-    files=['geometry.py','scene_config.py','cloud_store.py','native_job.py','cloud_artifacts.py','combine_datasets.py',
+    kernel_sources=[]
+    if publisher_receipt:
+        admission=json.loads(Path(publisher_receipt).read_text(encoding='utf8'))
+        if admission['status']!='DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED' or admission['folder_id']!=folder or admission['secret_cleanup']!='CONFIRMED_DELETED':
+            raise ValueError('Qualified authorized publisher route required')
+        config.update(storage_route='kaggle_saved_output_authorized_publisher',publisher_admission=admission,
+            host_run_admission={'run_id':run_id,'automatic_replay':False,'owner':'topfacenet-sim2real coordinator',
+                'policy':'one persisted Save intent; reconcile exact source/version before any retry; no manual editor reruns'})
+        kernel_sources=['lotus30/k230-topface-v11-01-simulation-pilot/2']
+        if supplement_result:kernel_sources.append('lotus30/k230-topface-v11-01b-color-counterexamples/2')
+    files=['geometry.py','scene_config.py','cloud_store.py','native_job.py','cloud_artifacts.py','combine_datasets.py','near_similarity.py',
            'downstream_job.py','dataset_diagnostics.py','input_locator.py']
     if phase=='training':
         if audit_acceptance is None:raise ValueError('Independent02 audit receipt required before training preparation')
@@ -53,7 +64,12 @@ def main(phase,revision,pilot_result,staging,audit_acceptance=None,supplement_re
         files+=['task_geometry.py','task_training.py','evaluate_task.py','train_experiment.py','nanodet_topface.py']
     for name in files:shutil.copy2(HERE/name,staging/name)
     if phase=='training':
-        shutil.copytree(HERE/'vendor/nanodet_core',staging/'vendor/nanodet_core',ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
+        # Kaggle dataset creation uploads root files. Use a pinned binary bundle
+        # to preserve the upstream package layout across the dataset importer.
+        with zipfile.ZipFile(staging/'nanodet-source.bin','w',zipfile.ZIP_DEFLATED) as bundle:
+            for source in sorted((HERE/'vendor/nanodet_core').rglob('*')):
+                if source.is_file() and '__pycache__' not in source.parts and source.suffix!='.pyc':
+                    bundle.write(source,source.relative_to(HERE).as_posix())
         checkpoint=ROOT/'.ops/local/topface-g3-models/nanodet-plus-m_320_checkpoint.ckpt'
         if sha(checkpoint)!=CHECKPOINT_SHA256:raise ValueError('Pretrained checkpoint identity changed')
         shutil.copy2(checkpoint,staging/'nanodet-pretrained.bin')
@@ -86,12 +102,22 @@ Attach existing `DOASTRA_GDRIVE_OAUTH_JSON`, enable Internet, and run once. A pe
     notebook={'nbformat':4,'nbformat_minor':5,'metadata':{'kernelspec':{'name':'python3','display_name':'Python 3'}},
         'cells':[{'cell_type':'markdown','id':'contract','metadata':{},'source':intro.splitlines(True)},
             {'cell_type':'code','id':'finite-worker','metadata':{},'source':code.splitlines(True),'execution_count':None,'outputs':[]}]}
+    if publisher_receipt:
+        intro=intro.replace('The cloud worker reads that immutable archive directly from Drive','The cloud worker reads that immutable archive from the mounted Kaggle notebook output')
+        start=intro.index('Attach existing')
+        end=intro.index('\n\n',start)
+        intro=intro[:start]+(
+            f'The API starts this private job with Internet disabled. The worker has {config["max_seconds"]} seconds '
+            'to verify inputs, run the experiment and save the output. The authorized GitHub Actions publisher '
+            'uploads the saved archive to Drive and verifies it by reading back every byte.'
+        )+intro[end:]
+        notebook['cells'][0]['source']=intro.splitlines(True)
     atomic_json(kernel_dir/name,notebook)
     title='K230 Topface V11 '+ordinal+(' Dataset Audit' if phase=='audit' else ' Pilot Training')
     atomic_json(kernel_dir/'kernel-metadata.json',{'id':kernel,'title':title,'code_file':name,
         'language':'python','kernel_type':'notebook','is_private':True,'enable_gpu':phase=='training',
-        'enable_tpu':False,'enable_internet':True,'dataset_sources':[dataset+'/1'],
-        'kernel_sources':[],'competition_sources':[],'model_sources':[]})
+        'enable_tpu':False,'enable_internet':not bool(publisher_receipt),'dataset_sources':[dataset+'/1'],
+        'kernel_sources':kernel_sources,'competition_sources':[],'model_sources':[]})
     frozen=ROOT/f'docs/topface/v11/cloud/{phase}-{revision}';frozen.mkdir(parents=True,exist_ok=False)
     for file in ('INPUT_MANIFEST.json','DOWNSTREAM_CONFIG.json'):shutil.copy2(staging/file,frozen/file)
     for file in (name,'kernel-metadata.json'):shutil.copy2(kernel_dir/file,frozen/file)
@@ -101,6 +127,9 @@ Attach existing `DOASTRA_GDRIVE_OAUTH_JSON`, enable Internet, and run once. A pe
         'input_manifest_sha256':sha(staging/'INPUT_MANIFEST.json'),
         'provider_max_seconds':config['provider_max_seconds'],'automatic_replay':False,
         'parent_pilot_archive_sha256':parent['drive_archive']['sha256']}
+    if publisher_receipt:
+        intent.update(execution_mode='API_SAVE_AND_RUN_ALL',publisher_admission_status='QUALIFIED_AND_AUTHORIZED',
+            archive_publication='Private GitHub Actions workflow with Drive byte readback')
     atomic_json(frozen/'SUBMISSION_INTENT.json',intent)
     print(json.dumps({'staging':str(staging),'kernel_dir':str(kernel_dir),'frozen':str(frozen),**intent},indent=2))
 
@@ -110,4 +139,5 @@ if __name__=='__main__':
     p.add_argument('--revision',required=True);p.add_argument('--pilot-result',type=Path,required=True)
     p.add_argument('--staging',type=Path,required=True);p.add_argument('--audit-acceptance',type=Path)
     p.add_argument('--supplement-result',type=Path)
+    p.add_argument('--publisher-receipt',type=Path)
     main(**vars(p.parse_args()))

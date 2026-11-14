@@ -1,0 +1,9 @@
+{
+  "observed_utc": "2026-11-14T16:29:30.036462+00:00",
+  "ref": "lotus30/k230-topface-v11-03-pilot-training",
+  "kernel_id": 145030012,
+  "version": 1,
+  "current_version": 1,
+  "status": "RUNNING",
+  "log_tail": []
+}

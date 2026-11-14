@@ -8,8 +8,10 @@ from datetime import datetime,timezone
 import importlib.metadata
 import json
 import math
+import os
 from pathlib import Path
 import random
+import shutil
 import time
 
 import numpy as np
@@ -37,7 +39,8 @@ def sanity_gate(metrics):
         'visible_center_median_at_most3_source_px':errors.get('physical_center_visible_px',{}).get('median',float('inf'))<=3.,
         'ellipse_iou_median_at_least75pct':errors.get('ellipse_iou',{}).get('median',0.)>=.75,
         'finite_ellipse_coverage_at_least90pct':denom.get('finite_ellipse_predictions',0)/max(1,denom.get('matched_geometry_valid_gt',0))>=.9,
-        'empty_false_positives_zero':denom.get('empty_false_positive_detections',0)==0}
+        'empty_scene_present_and_has_no_false_positives':(
+            denom.get('empty_observation_images',0)>0 and denom.get('empty_false_positive_detections',0)==0)}
     if denom.get('angle_valid_gt',0):
         checks['valid_angle_prediction_coverage_at_least90pct']=denom.get('angle_prediction_valid',0)/denom['angle_valid_gt']>=.9
         checks['angle_median_at_most10deg']=errors.get('orientation_error_deg',{}).get('median',float('inf'))<=10
@@ -91,28 +94,51 @@ def choose_overfit(root,width=320,height=192,count=16,seed=20261114):
         candidates.append((row['scene'],features))
     if len(candidates)<count:raise ValueError('Not enough fully representable train scenes for sanity selection')
     rng=np.random.default_rng(seed);rng.shuffle(candidates);chosen=[];covered=set()
+    for world_count in (0,1,2,3,4,5):
+        feature='count'+str(world_count)
+        eligible=[j for j,(_,features) in enumerate(candidates) if feature in features]
+        if not eligible or count<6:
+            raise ValueError('Overfit subset requires at least one scene of every object count')
+        best=max(eligible,key=lambda j:len(candidates[j][1]-covered))
+        scene,features=candidates.pop(best);chosen.append(scene);covered|=features
     while len(chosen)<count:
         best=max(range(len(candidates)),key=lambda j:len(candidates[j][1]-covered))
         scene,features=candidates.pop(best);chosen.append(scene);covered|=features
+    if any('color'+str(i) not in covered for i in range(6)) or 'geometry' not in covered:
+        raise ValueError('Overfit subset requires all six colors and geometry labels')
     return {'scenes':chosen,'covered_features':sorted(covered),'seed':seed,'selection':'train-only label-stratified, before any optimizer updates'}
 
 
 def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
           seed=20261114,batch_size=32,max_epochs=20,max_updates=None,deadline=None,selected_scenes=None,
-          initial_checkpoint=None,initial_checkpoint_sha256=None,use_amp=False):
+          initial_checkpoint=None,initial_checkpoint_sha256=None,use_amp=False,
+          formal_identity=None,resume_directory=None,resume_sha256=None,session_epochs=None):
     if kind not in ('overfit','pilot_pretrained','pilot_random_control','formal_full'):
         raise ValueError('Unknown finite experiment')
     if not torch.cuda.is_available():raise RuntimeError('Kaggle GPU training admission requires CUDA; no silent CPU full training')
     if max_epochs<1 or max_epochs>200 or (max_updates is not None and not 1<=max_updates<=1000):
         raise ValueError('Training budget outside registered limits')
     if kind=='overfit' and max_updates is None:raise ValueError('Overfit requires an explicit update budget')
+    if formal_identity is not None and (kind!='formal_full' or not 100<=max_epochs<=200 or
+            use_amp or max_updates is not None or selected_scenes is not None):
+        raise ValueError('Formal resume supports the frozen FP32 epoch schedule')
+    if resume_directory is not None and (not formal_identity or not resume_sha256 or initial_checkpoint is not None):
+        raise ValueError('Resume requires the recorded formal identity and previous checkpoint hash')
+    if session_epochs is not None and (not formal_identity or session_epochs<1):
+        raise ValueError('A session epoch cap is only valid for formal training')
     output=Path(output);output.mkdir(parents=True,exist_ok=False)
     device=torch.device('cuda:0');started=time.monotonic()
     deadline=deadline or started+7200
     random.seed(seed);np.random.seed(seed);torch.manual_seed(seed);torch.cuda.manual_seed_all(seed)
     torch.set_num_threads(2);torch.backends.cudnn.benchmark=False
+    if formal_identity is not None:
+        if os.environ.get('CUBLAS_WORKSPACE_CONFIG') not in (':4096:8',':16:8'):
+            raise ValueError('Set the deterministic CUDA workspace before starting formal training')
+        torch.use_deterministic_algorithms(True)
+        torch.backends.cudnn.allow_tf32=False
+        torch.backends.cuda.matmul.allow_tf32=False
     model=NanoDetTopFace().to(device)
-    initialization=model.initialize_pretrained(checkpoint,CHECKPOINT_SHA256) if kind!='pilot_random_control' else {'initialization':'random same architecture/new-head seed','optimizer_updates':0}
+    initialization=model.initialize_pretrained(checkpoint,CHECKPOINT_SHA256) if kind!='pilot_random_control' and resume_directory is None else {'initialization':'random same architecture/new-head seed','optimizer_updates':0}
     if initial_checkpoint is not None:
         if kind!='formal_full' or not initial_checkpoint_sha256 or sha(initial_checkpoint)!=initial_checkpoint_sha256:
             raise ValueError('Only a frozen selected Pilot checkpoint can initialize formal training')
@@ -151,28 +177,84 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
         'input_contract':output_contract(width,height),'test_evaluation':False,'real_evaluation':False,
         'automatic_replay':False,'torch':str(torch.__version__),'gpu':torch.cuda.get_device_name(0),
         'epoch_records':[]}
+    end_epoch=max_epochs
+    first_epoch=0
+    best_score=-float('inf');best_metrics=None;steps=0;timings=[];stale_epochs=0
+    target_updates=max_updates if max_updates is not None else max_epochs*len(loader)
+    warmup=min(100,max(10,target_updates//10))
+    schedule={'target_updates':target_updates,'warmup_updates':warmup,'epoch_batches':len(loader)}
+    runtime={'torch':str(torch.__version__),'cuda':torch.version.cuda,'device':torch.cuda.get_device_name(0),
+             'cudnn':torch.backends.cudnn.version()}
+    if formal_identity is not None:
+        state.update(formal_identity=formal_identity,schedule=schedule,runtime=runtime,
+                     checkpoint_boundary='epoch',completed_epochs=0)
+    if resume_directory is not None:
+        resume_directory=Path(resume_directory)
+        last=resume_directory/'last.pt'
+        if sha(last)!=resume_sha256:raise ValueError('Formal checkpoint digest differs')
+        previous=torch.load(last,map_location='cpu',weights_only=True)
+        recorded=previous['state']
+        for key in ('formal_identity','schedule','runtime','dataset_audit_sha256','training_scenes',
+                    'validation_scenes','width','height','batch_size','max_epochs','seed','learning_rate',
+                    'loss_weights','mixed_precision'):
+            if recorded[key]!=state[key]:raise ValueError(f'Formal checkpoint differs in {key}')
+        first_epoch=recorded['completed_epochs']
+        steps=recorded['optimizer_updates']
+        if not 0<first_epoch<max_epochs or steps!=first_epoch*len(loader):
+            raise ValueError('Formal checkpoint is outside a completed epoch boundary')
+        best_file=resume_directory/'best.pt'
+        if sha(best_file)!=recorded['best_checkpoint_sha256']:
+            raise ValueError('Previous best checkpoint identity differs')
+        shutil.copy2(best_file,output/'best.pt')
+        best_metrics=recorded['best_metrics']
+        best_score=recorded['best_validation_score']
+        stale_epochs=recorded['stale_epochs']
+        atomic_json(output/'BEST_METRICS.json',best_metrics)
+        for key in ('initialization','epoch','completed_epochs','optimizer_updates','best_epoch',
+                    'best_checkpoint_sha256','epoch_records'):
+            state[key]=recorded[key]
+        state['resumed_from_sha256']=resume_sha256
+        model.load_state_dict(previous['model'])
+        optimizer.load_state_dict(previous['optimizer'])
+        scaler.load_state_dict(previous['scaler'])
+        shuffle.set_state(previous['shuffle_rng'])
+        torch.set_rng_state(previous['torch_rng'])
+        torch.cuda.set_rng_state_all(previous['cuda_rng'])
+        random.setstate(previous['python_rng'])
+        numpy_rng=previous['numpy_rng']
+        np.random.set_state((numpy_rng[0],np.asarray(numpy_rng[1],dtype=np.uint32),*numpy_rng[2:]))
+    if session_epochs is not None:
+        end_epoch=min(max_epochs,first_epoch+session_epochs)
     atomic_json(output/'CONFIG.json',state)
     writer=None
     try:
         from torch.utils.tensorboard import SummaryWriter
         writer=SummaryWriter(str(output/'tensorboard'));state['tensorboard']='ENABLED'
     except ImportError:state['tensorboard']='UNAVAILABLE_JSON_METRICS_PRESERVED'
-    best_score=-float('inf');best_metrics=None;steps=0;timings=[];stale_epochs=0
     def save(name):
-        atomic_checkpoint(output/name,{'schema':'topface-training-checkpoint-v1.1',
+        value={'schema':'topface-training-checkpoint-v1.1',
             'model':model.state_dict(),'optimizer':optimizer.state_dict(),'scaler':scaler.state_dict(),
             'shuffle_rng':shuffle.get_state(),'torch_rng':torch.get_rng_state(),
             'cuda_rng':torch.cuda.get_rng_state_all(),'state':state,
-            'source_checkpoint_sha256':CHECKPOINT_SHA256})
+            'source_checkpoint_sha256':CHECKPOINT_SHA256}
+        if formal_identity is not None:
+            numpy_rng=np.random.get_state()
+            value.update(python_rng=random.getstate(),numpy_rng=(numpy_rng[0],numpy_rng[1].tolist(),*numpy_rng[2:]))
+        atomic_checkpoint(output/name,value)
     try:
-        baseline=evaluate(model,val_loader,device)
-        atomic_json(output/'BASELINE.json',baseline)
-        target_updates=max_updates if max_updates is not None else max_epochs*len(loader)
-        warmup=min(100,max(10,target_updates//10))
+        if first_epoch==0:
+            baseline=evaluate(model,val_loader,device)
+            atomic_json(output/'BASELINE.json',baseline)
         stop=False
-        epochs_to_run=math.ceil(max_updates/len(loader)) if kind=='overfit' else max_epochs
+        epochs_to_run=math.ceil(max_updates/len(loader)) if kind=='overfit' else end_epoch
         state['effective_epoch_limit']=epochs_to_run
-        for epoch in range(epochs_to_run):
+        for epoch in range(first_epoch,epochs_to_run):
+            if formal_identity is not None and state['epoch_records']:
+                elapsed=[record.get('epoch_wall_seconds',0.) for record in state['epoch_records'][-3:]]
+                if time.monotonic()+max(120.,1.5*max(elapsed))+120>=deadline:
+                    state['status']='FORMAL_SESSION_BOUNDARY' if state['completed_epochs']>first_epoch else 'FORMAL_NO_EPOCH_PROGRESS'
+                    break
+            epoch_started=time.monotonic()
             dataset.epoch=epoch;model.train();losses=[];assignment_counts=Counter()
             for images,targets,_ in loader:
                 if time.monotonic()+120>=deadline:
@@ -197,17 +279,27 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
                     writer.add_scalar('train/total_loss',losses[-1],steps)
                     for name,value in parts.items():writer.add_scalar('loss/'+name,value,steps)
                 if steps%100==0:
-                    state['epoch']=epoch+1;save('last.pt');atomic_json(output/'PROGRESS.json',state)
+                    state['epoch']=epoch+1
+                    if formal_identity is None:save('last.pt')
+                    atomic_json(output/'PROGRESS.json',state)
                     print('TOPFACE_TRAIN_PROGRESS',json.dumps({'kind':kind,'updates':steps,'epoch':epoch+1,'loss':losses[-1]}),flush=True)
                 if max_updates is not None and steps>=max_updates:stop=True;break
             state['epoch']=epoch+1
             # Reserve publication budget. Checkpoint stops do not claim val pass.
-            if state.get('status')=='BUDGET_CHECKPOINT_STOP':save('last.pt');break
+            if state.get('status')=='BUDGET_CHECKPOINT_STOP':
+                if formal_identity is None:save('last.pt')
+                else:
+                    state['uncommitted_optimizer_updates']=steps-state['completed_epochs']*len(loader)
+                    state['status']='FORMAL_BUDGET_STOP_MID_EPOCH'
+                break
             if kind=='overfit' and steps%25!=0 and not stop:continue
+            validation_started=time.monotonic()
             metrics=evaluate(model,val_loader,device);score=selection_score(metrics)
+            validation_seconds=time.monotonic()-validation_started
             state['epoch_records'].append({'epoch':epoch+1,'updates':steps,'loss_mean':float(np.mean(losses)) if losses else None,
                 'validation_score':score,'task_mAP50':metrics['task_mAP50'],'task_mAP50_95':metrics['task_mAP50_95'],
                 'recall50':metrics['class_agnostic_recall50'],'matched_color_accuracy':metrics['matched_color_accuracy'],
+                'training_wall_seconds':validation_started-epoch_started,'validation_wall_seconds':validation_seconds,
                 'assignment_counts':dict(assignment_counts)})
             atomic_json(output/f'validation-epoch{epoch+1:03d}.json',metrics)
             if writer:writer.add_scalar('val/task_mAP50',metrics['task_mAP50'],steps)
@@ -215,20 +307,28 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
             if prefer_validation(kind,score,best_score,metrics):
                 best_score=score;best_metrics=metrics;stale_epochs=0;state['best_epoch']=epoch+1
                 save('best.pt');atomic_json(output/'BEST_METRICS.json',metrics)
+                if formal_identity is not None:state['best_checkpoint_sha256']=sha(output/'best.pt')
             else:stale_epochs+=1
+            if formal_identity is not None:
+                state.update(completed_epochs=epoch+1,best_validation_score=best_score,
+                             best_metrics=best_metrics,stale_epochs=stale_epochs)
+            state['epoch_records'][-1]['epoch_wall_seconds']=time.monotonic()-epoch_started
             save('last.pt');atomic_json(output/'PROGRESS.json',state)
             print('TOPFACE_TRAIN_EPOCH',json.dumps(state['epoch_records'][-1]),flush=True)
             if sanity_pass:stop=True
             if kind=='formal_full' and epoch+1>=100 and stale_epochs>=20:stop=True
             if stop:break
-        if state.get('status')!='BUDGET_CHECKPOINT_STOP':state['status']='FINITE_TRAINING_COMPLETE'
+        if state['status']=='ADMITTED':
+            state['status']=('FORMAL_SESSION_BOUNDARY' if formal_identity is not None
+                             and state['completed_epochs']<max_epochs and not stop
+                             else 'FINITE_TRAINING_COMPLETE')
         state['best_validation_score']=best_score if math.isfinite(best_score) else None
         state['gate']=(sanity_gate(best_metrics) if kind=='overfit' else pilot_gate(best_metrics)) if best_metrics else {'pass':False,'reason':'NO_COMPLETED_VALIDATION'}
         state['step_seconds']={'n':len(timings),'median':float(np.median(timings)),'p95':float(np.quantile(timings,.95))} if timings else {'n':0}
         state['peak_cuda_allocated_bytes']=torch.cuda.max_memory_allocated()
     except Exception as error:
         state.update(status='FAILED_PRESERVE_CHECKPOINTS',error_type=type(error).__name__)
-        if steps:save('last.pt')
+        if steps and formal_identity is None:save('last.pt')
         raise
     finally:
         if writer:writer.close()

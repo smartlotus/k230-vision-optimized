@@ -1,0 +1,18 @@
+{
+  "schema": "topface-downstream-save-intent-v1.1",
+  "status": "PREPARED_NOT_SUBMITTED",
+  "phase": "audit",
+  "run_id": "k230-topface-v11-audit-a02",
+  "dataset": "lotus30/k230-topface-v11-audit-input-a02",
+  "dataset_version": 1,
+  "kernel": "lotus30/k230-topface-v11-02-dataset-audit",
+  "notebook_file": "02_audit.ipynb",
+  "notebook_sha256": "d933710c65765d445ece889999f5eae409dc4f1d03ade6c8c841fdb71c4289ac",
+  "input_manifest_sha256": "76a6dde69b0954339118d648760b282c6f9ec2edb3908943eac6e3d230c23b7d",
+  "provider_max_seconds": 2400,
+  "automatic_replay": false,
+  "parent_pilot_archive_sha256": "f559a9df0fe01ea17884ce63671e6e89a162a037faa0a80045eec574e417430f",
+  "execution_mode": "API_SAVE_AND_RUN_ALL",
+  "publisher_admission_status": "QUALIFIED_AND_AUTHORIZED",
+  "archive_publication": "separateauthorizedpublisher; no secretbinding/editor action required"
+}

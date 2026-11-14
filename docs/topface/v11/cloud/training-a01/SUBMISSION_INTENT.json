@@ -1,0 +1,18 @@
+{
+  "schema": "topface-downstream-save-intent-v1.1",
+  "status": "PREPARED_NOT_SUBMITTED",
+  "phase": "training",
+  "run_id": "k230-topface-v11-training-a01",
+  "dataset": "lotus30/k230-topface-v11-training-input-a01",
+  "dataset_version": 1,
+  "kernel": "lotus30/k230-topface-v11-03-pilot-training",
+  "notebook_file": "03_training.ipynb",
+  "notebook_sha256": "c9b857ca77dc460d66068d4ff9605f465913d176d4a1550ec8d5ded5665a8e34",
+  "input_manifest_sha256": "cab8469436412a9efa1271cfa169f006f489c88edd92911aa9e346cb6f561e02",
+  "provider_max_seconds": 10800,
+  "automatic_replay": false,
+  "parent_pilot_archive_sha256": "f559a9df0fe01ea17884ce63671e6e89a162a037faa0a80045eec574e417430f",
+  "execution_mode": "API_SAVE_AND_RUN_ALL",
+  "publisher_admission_status": "QUALIFIED_AND_AUTHORIZED",
+  "archive_publication": "Private GitHub Actions workflow with Drive byte readback"
+}
