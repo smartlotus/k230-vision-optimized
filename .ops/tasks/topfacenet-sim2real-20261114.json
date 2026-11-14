@@ -18,10 +18,10 @@
   ],
   "branch": "ops/topfacenet-sim2real-20261114",
   "state": "blocked",
-  "claimed": true,
+  "claimed": false,
   "agent": "codex",
   "session": "topface-20261114-a",
-  "revision": 4,
+  "revision": 5,
   "handoff": ".ops/handoffs/topfacenet-sim2real-20261114/20261114T121238-fed25cac.json",
-  "updated_at": "2026-11-14T12:12:41+00:00"
+  "updated_at": "2026-11-14T12:13:13+00:00"
 }
