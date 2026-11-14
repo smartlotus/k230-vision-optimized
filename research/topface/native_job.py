@@ -46,10 +46,40 @@ def execute(command, log, deadline, stage_cap):
     env.pop('PYTHONPATH', None)
     env.pop('PYTHONHOME', None)
     with Path(log).open('wb') as stream:
-        result = subprocess.run(command, stdout=stream, stderr=subprocess.STDOUT,
-                                env=env, timeout=min(stage_cap, remaining), check=False)
-    if result.returncode:
-        raise RuntimeError(f'Child process failed ({result.returncode}); inspect {Path(log).name}')
+        child = subprocess.Popen(command, stdout=stream, stderr=subprocess.STDOUT,env=env)
+        child_deadline=time.monotonic()+min(stage_cap,remaining)
+        cursor=0
+        completed=0
+        try:
+            while True:
+                try:
+                    code=child.wait(timeout=min(10,max(.1,child_deadline-time.monotonic())))
+                except subprocess.TimeoutExpired:
+                    code=None
+                with Path(log).open('r',encoding='utf8',errors='replace') as tail:
+                    tail.seek(cursor)
+                    for line in tail:
+                        if line.startswith('TOPFACE_PROGRESS '):
+                            try:
+                                progress=json.loads(line.split(' ',1)[1])
+                            except json.JSONDecodeError:
+                                continue
+                            if progress['completed_frames']>=completed+25:
+                                completed=progress['completed_frames']
+                                print('TOPFACE_RENDER_HEARTBEAT',json.dumps(progress),flush=True)
+                    cursor=tail.tell()
+                if code is not None:
+                    break
+                if time.monotonic()>=child_deadline:
+                    raise subprocess.TimeoutExpired(command,min(stage_cap,remaining))
+        except BaseException:
+            child.terminate()
+            try:child.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                child.kill();child.wait()
+            raise
+    if code:
+        raise RuntimeError(f'Child process failed ({code}); inspect {Path(log).name}')
 
 
 def install_blender(root, deadline):

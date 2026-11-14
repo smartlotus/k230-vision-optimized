@@ -135,7 +135,10 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
     if formal_identity is not None:
         if os.environ.get('CUBLAS_WORKSPACE_CONFIG') not in (':4096:8',':16:8'):
             raise ValueError('Set the deterministic CUDA workspace before starting formal training')
-        torch.use_deterministic_algorithms(True)
+        # CUDA bilinear interpolation backward in the upstream GhostPAN lacks
+        # a deterministic kernel. Keep its trained semantics and report this
+        # limitation instead of failing the first backward pass.
+        torch.use_deterministic_algorithms(True,warn_only=True)
         torch.backends.cudnn.allow_tf32=False
         torch.backends.cuda.matmul.allow_tf32=False
     model=NanoDetTopFace().to(device)
@@ -196,7 +199,11 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
              'cudnn':torch.backends.cudnn.version()}
     if formal_identity is not None:
         state.update(formal_identity=formal_identity,schedule=schedule,runtime=runtime,
-                     checkpoint_boundary='epoch',completed_epochs=0)
+                     checkpoint_boundary='epoch',completed_epochs=0,
+                     reproducibility={'data_order_rng_and_optimizer_restored':True,
+                         'bitwise_cuda_resume_verified':False,
+                         'deterministic_algorithms':'warn_only',
+                         'limitation':'Upstream bilinear GhostPAN CUDA backward may be nondeterministic.'})
     if resume_directory is not None:
         resume_directory=Path(resume_directory)
         last=resume_directory/'last.pt'

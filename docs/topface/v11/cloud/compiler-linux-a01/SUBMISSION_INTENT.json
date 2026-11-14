@@ -1,0 +1,13 @@
+{
+  "run_id": "k230-topface-v11-compiler-linux-a01",
+  "kernel": "lotus30/k230-topface-v11-07-compiler-linux-probe",
+  "dataset": "lotus30/k230-topface-v11-compiler-linux-input-a01",
+  "dataset_version": 1,
+  "notebook_file": "07_compiler_linux.ipynb",
+  "notebook_sha256": "6655782e0c20e9641f37c1c19aceba2a247434af579605af11fc02dd9776a9cd",
+  "input_manifest_sha256": "bf4410686ed3efe8d7df4fa346bf957b8cd61adfac0df2facda32f12e67c4001",
+  "provider_max_seconds": 2400,
+  "execution_mode": "API_SAVE_AND_RUN_ALL",
+  "publisher_admission_status": "QUALIFIED_AND_AUTHORIZED",
+  "automatic_replay": false
+}

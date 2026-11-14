@@ -1,0 +1,9 @@
+{
+  "operation": "SAVE_AND_RUN_ALL",
+  "observed_utc": "2026-11-14T18:19:13.739892+00:00",
+  "ref": "lotus30/k230-topface-v11-07-compiler-linux-probe",
+  "source_sha256": "8144138573e314bbe82a1b61ee5b0ddd645176a13c926c09b041df244804408e",
+  "session_timeout_seconds": 2400,
+  "scientific_execution": true,
+  "automatic_retry": false
+}

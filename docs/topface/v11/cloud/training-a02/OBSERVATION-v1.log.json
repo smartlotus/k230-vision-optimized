@@ -1,5 +1,30 @@
 {
-  "full_log_bytes": 0,
-  "last_lines": [],
+  "full_log_bytes": 4258668,
+  "last_lines": [
+    "libpng warning: eXIf: duplicate",
+    "libpng warning: eXIf: duplicate",
+    "libpng warning: eXIf: duplicate",
+    "libpng warning: eXIf: duplicate",
+    "libpng warning: eXIf: duplicate",
+    "libpng warning: eXIf: duplicate",
+    "libpng warning: eXIf: duplicate",
+    "",
+    "libpng warning: eXIf: duplicate",
+    "libpng warning: eXIf: duplicate",
+    "libpng warning: eXIf: duplicate",
+    "libpng warning: eXIf: duplicate",
+    "libpng warning: eXIf: duplicate",
+    "libpng warning: eXIf: duplicate",
+    "TOPFACE_TRAIN_EPOCH {\"epoch\": 12, \"updates\": 336, \"loss_mean\": 0.5212829891991403, \"validation_score\": 1.1063412185194597, \"task_mAP50\": 0.9841793951066405, \"task_mAP50_95\": 0.93729376232717, \"recall50\": 0.9853420195439739, \"matched_color_accuracy\": 0.996694214876033, \"training_wall_seconds\": 25.625056905000065, \"validation_wall_seconds\": 8.098559157999944, \"assignment_counts\": {\"world_instances\": 2179, \"observable_eligible_gt\": 2179, \"assigned_gt\": 2179, \"assigned_fifth_instance\": 137, \"positive_priors\": 6536}, \"epoch_wall_seconds\": 33.72537864600008}",
+    "TOPFACE_DOWNSTREAM_RESULT {\"schema\": \"topface-downstream-v1.1\", \"run_id\": \"k230-topface-v11-training-a02\", \"phase\": \"training\", \"status\": \"GEOMETRY_REFINEMENT_COMPLETE\", \"input_manifest_sha256\": \"dd8563b0fdb83d19f2a092acd58a213ad680267debbd7785b055bbfcb9770269\", \"automatic_replay\": false, \"started_utc\": \"2026-11-14T17:04:52.957136+00:00\", \"max_seconds\": 9000, \"optimizer_updates\": 336, \"board_run\": false, \"real_evaluation\": false, \"stage\": \"PILOT_GEOMETRY_REFINEMENT\", \"elapsed_seconds\": 797.7543242689999, \"storage_route\": \"API-only compute, exactKaggleSavedOutput -> authorizedprivateActions -> Drive\", \"publisher_route_qualification\": {\"run_id\": 43618174360, \"head\": \"4504c75107b19990d21bc20c275fa95b5c440098\", \"branch\": \"ops/topface-transfer-1794675259180414200\"}, \"host_run_admission\": {\"run_id\": \"k230-topface-v11-training-a02\", \"automatic_replay\": false, \"owner\": \"topfacenet-sim2real coordinator\", \"policy\": \"one persisted Save intent; reconcile exact source/version before any retry; no manual editor reruns\"}, \"parent_members\": {\"files\": 11540, \"expanded_bytes\": 401649408, \"member_manifest_sha256\": \"40dcda1d4c44b107629d1841067ff1fa94f276ee3edd9e8810a645709c2bf6ba\", \"sha256_verification\": \"ALL_MEMBERS_PASS\"}, \"pilot_archive_sha256\": \"f559a9df0fe01ea17884ce63671e6e89a162a037faa0a80045eec574e417430f\", \"pilot_audit_sha256\": \"5d6a0fc70a702237b4af329fb576b371918a385306b67251056b77a7be7bc0a7\", \"supplement_members\": {\"files\": 2924, \"expanded_bytes\": 104574531, \"member_manifest_sha256\": \"254bd1f8df4938cad8b5b0fa600503b1750f0dd767ceb01bddadc6b9a19670e3\", \"sha256_verification\": \"ALL_MEMBERS_PASS\"}, \"supplement_archive_sha256\": \"3687e18684f2bd7575097a2825c5a6dba68db004c0962159f81ba3f31212c7ce\", \"composite_audit_sha256\": \"436b07f54e3d9f124c93af8b2c3c215b9761542256108f0af7c870901e94e2d3\", \"similarity_review_evidence\": {\"pairs\": 6, \"all_listed_identity_checks_different\": true, \"previews\": [{\"name\": \"near-similarity-01.jpg\", \"bytes\": 56775, \"sha256\": \"d874c670d01a8904d676b35948a08d8129a17e625390626355bfa2a0c92c674f\"}]}, \"environment\": {\"torch\": \"2.11.0+cu130\", \"cuda\": \"13.0\", \"gpu_names\": [\"Tesla T4\", \"Tesla T4\"], \"training_device\": \"cuda:0\", \"amp\": false}, \"experiments\": [{\"kind\": \"pilot_geometry_refine\", \"status\": \"FINITE_TRAINING_COMPLETE\", \"optimizer_updates\": 336, \"epoch\": 12, \"gate\": {\"pass\": false, \"checks\": {\"recall50_at_least80pct\": true, \"color_at_least90pct\": true, \"task_map50_at_least75pct\": true, \"visible_center_median_at_most5_source_px\": true, \"ellipse_iou_median_at_least60pct\": true, \"finite_ellipse_coverage_at_least90pct\": true, \"empty_fp_per_image_at_most_point1\": true, \"valid_angle_prediction_coverage_at_least90pct\": false, \"angle_median_at_most15deg\": false, \"all_observable_4_recapture_at_least80pct\": true, \"all_observable_5_recapture_at_least80pct\": true}, \"scope\": \"registered synthetic Pilot gate, not real acceptance\"}, \"best_epoch\": 11, \"best_validation_score\": 1.1138168790577498, \"step_seconds\": {\"n\": 336, \"median\": 0.1976129689999766, \"p95\": 0.2205629922499952}, \"elapsed_seconds\": 468.3834475350001, \"checkpoints\": [{\"name\": \"best.pt\", \"bytes\": 14725821, \"sha256\": \"bbc41b90b5ebc94603f2efccbbb5e45b952afe13b6ffcf0053e226f652c2ea3b\"}, {\"name\": \"last.pt\", \"bytes\": 14726077, \"sha256\": \"5e288fddf709e054f481b79817cea1c72e44ddad09bfa682a06b4406287305f1\"}]}], \"full_admitted\": false, \"durable_status\": \"PUBLISHER_PENDING_EXACT_SAVED_OUTPUT\", \"archive\": {\"name\": \"k230-topface-v11-training-a02.tar.gz\", \"bytes\": 26566769, \"sha256\": \"facfefbcbb4d423d6eabfadb11d8be13a70d2ee76d2cd29457cec261e2395373\"}}",
+    "/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'",
+    "  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)",
+    "/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'",
+    "  text = re.sub(r'_', '\\_', text) # Escape underscores in display text",
+    "[NbConvertApp] Converting notebook __notebook__.ipynb to notebook",
+    "[NbConvertApp] Writing 684553 bytes to __notebook__.ipynb",
+    "[NbConvertApp] Converting notebook __notebook__.ipynb to html",
+    "[NbConvertApp] Writing 795032 bytes to __results__.html"
+  ],
   "full_log_available_in_kaggle": true
 }

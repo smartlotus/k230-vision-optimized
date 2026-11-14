@@ -75,6 +75,25 @@ def collect(ref,version,run_id,output,token_file,publisher_route=False,similarit
             atomic_json(output/name,report)
         if training:
             result=json.loads((output/(run_id+'-RESULT.json')).read_text(encoding='utf8'))
+            if result.get('schema') == 'topface-formal-session-v1.1':
+                prefix=f'{run_id}/formal_full/'
+                payloads={};raw_payloads={}
+                for member in result['compact_training_files']:
+                    if member['name'] not in ('RESULT.json','BEST_METRICS.json'):
+                        raise ValueError('Unexpected formal compact report')
+                    data=download(client,ref,version,prefix+member['name'],256*1024)
+                    if len(data)!=member['bytes'] or hashlib.sha256(data).hexdigest()!=member['sha256']:
+                        raise ValueError('Formal compact report differs from its saved digest')
+                    payloads[member['name']]=json.loads(data)
+                    raw_payloads[member['name']]=data
+                metrics=payloads['BEST_METRICS.json'];trace=payloads['RESULT.json']
+                if any(trace[key]!=result[key] for key in ('optimizer_updates','completed_epochs','best_epoch','checkpoints')):
+                    raise ValueError('Formal compact trace differs from the saved result')
+                (output/'formal_full').mkdir(parents=True,exist_ok=True)
+                for name,data in raw_payloads.items():
+                    target=output/'formal_full'/name
+                    temporary=target.with_suffix('.json.part');temporary.write_bytes(data);temporary.replace(target)
+                rows.append({'name':prefix+'BEST_METRICS.json','status':'COLLECTED'})
             allowed=('overfit','pilot_pretrained','pilot_random_control','pilot_geometry_refine')
             for experiment in result.get('experiments',[]):
                 kind=experiment['kind']

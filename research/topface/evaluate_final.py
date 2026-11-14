@@ -28,7 +28,7 @@ def evaluate_final(dataset, checkpoint, checkpoint_sha256, output, device='cuda:
     device = torch.device(device)
     model = NanoDetTopFace().to(device)
     model.load_state_dict(value['model'], strict=True)
-    result = evaluate(model, loader, device, score_threshold=.25, include_slices=True)
+    result = evaluate(model, loader, device, score_threshold=.25, include_slices=True,angle_diagnostics=True)
     result.update(scope='HELD_OUT_SYNTHETIC_TEST', checkpoint_sha256=checkpoint_sha256,
                   dataset_audit_sha256=test.audit_sha256, model_epoch=state['epoch'],
                   optimizer_updates=state['optimizer_updates'], physical_mm_error='UNAVAILABLE_WITHOUT_CALIBRATION')

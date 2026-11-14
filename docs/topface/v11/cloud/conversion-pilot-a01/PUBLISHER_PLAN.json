@@ -1,0 +1,17 @@
+{
+  "run_id": "k230-topface-v11-conversion-pilot-a01",
+  "source_archive_path": "k230-topface-v11-conversion-pilot-a01.tar.gz",
+  "archive": {
+    "name": "k230-topface-v11-conversion-pilot-a01-2e037100086e4845.tar.gz",
+    "bytes": 77724,
+    "sha256": "2e037100086e4845db1f73ef9abf7c76ec56ccc3eeb78ff658267917d7b29d6d"
+  },
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-07b-pilot-conversion",
+    "kernel_id": 145051007,
+    "version": 1,
+    "provider_status": "COMPLETE",
+    "source_sha256": "eb1f323f723843e2f6c296d11395d15dcc026e633d6b7953b164126057506b91"
+  },
+  "source_notebook": "C:/Users/28389/Desktop/k230-vision-optimized/docs/topface/v11/cloud/conversion-pilot-a01/07b_model_conversion.ipynb"
+}

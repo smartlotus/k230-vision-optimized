@@ -36,7 +36,12 @@ def run(input_root, run_id, max_seconds):
         similarity = build(dataset, diagnostics, output/'similarity-review')
         atomic_json(output/'DATASET_DIAGNOSTICS.json', diagnostics)
         state.update(status='FULL_AUDIT_COMPLETE', images=index['images'], instances=index['instances'],
+                     shard_inventory_sha256=config['shard_inventory_sha256'],
                      split_images=index['split_images'], dataset_index_sha256=sha(dataset/'AUDIT_V11.json'),
+                     integrity_status=diagnostics['status'],
+                     scene_and_camera_group_cross_split_count=diagnostics['scene_and_camera_group_cross_split_count'],
+                     exact_duplicate_rgb=diagnostics['exact_duplicate_rgb'],
+                     camera_groups=diagnostics['camera_groups'],
                      color_coverage=diagnostics['conditional_color_coverage'],
                      cross_split_candidates=diagnostics['perceptual_similarity']['candidate_counts'],
                      similarity_review_evidence={'pairs':len(similarity['pairs']), 'previews':similarity['previews']},

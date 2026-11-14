@@ -1,9 +1,9 @@
 {
   "schema": "topface-training-sequence-v1.1",
-  "status": "PILOT_GEOMETRY_REFINEMENT_RUNNING",
+  "status": "FULL_RENDER_SHARD_01_RUNNING",
   "authorization": "User requested end-to-end V1.1 execution and approved Smoke -> Pilot; routine finite implementation budgets selected by agent",
-  "current_optimizer_updates": 1170,
-  "planned_logical_training_runs": 4,
+  "current_optimizer_updates": 1506,
+  "planned_logical_training_runs": 5,
   "planned_formal_full_training_runs": 1,
   "candidate": "NanoDet-Plus-m task-head prototype first; final choice pending paired numerics and Pilot",
   "steps": [
@@ -30,6 +30,13 @@
       "status": "COMPUTE_AND_ARCHIVE_COMPLETE"
     },
     {
+      "id": "pilot_geometry_refine",
+      "dataset_scenes": 1240,
+      "max_epochs": 12,
+      "optimizer_updates": 336,
+      "status": "COMPUTE_AND_DRIVE_VERIFIED_DIRECTION_DIAGNOSIS_RECORDED"
+    },
+    {
       "id": "formal_full",
       "dataset_scenes": [
         10000,
@@ -47,7 +54,7 @@
         "Pilot learning diagnosis",
         "task head compile/numerical contract"
       ],
-      "status": "AWAITING_GEOMETRY_REFINEMENT_GATE",
+      "status": "AWAITING_FULL_DATA",
       "initial_target_scenes": 10000,
       "render_shards": 10,
       "global_indices": [
@@ -59,11 +66,13 @@
         "train": 7465,
         "val": 1601,
         "synthetic_test": 934
-      }
+      },
+      "planned_max_epochs": 100,
+      "planned_session_epochs": 100
     }
   ],
   "notes": [
-    "Four logical training experiments do not require four manual Kaggle launches; combine the three finite Pilot experiments in the training notebook where the measured session budget permits.",
+    "Five logical training experiments are planned including the focused geometry refinement and one formal Full experiment.",
     "Compatibility/export/PTQ/Simulator and data rendering are not optimizer training runs.",
     "No full training of both NanoDet and PicoDet. Pico original graph is a compatibility alternative.",
     "GPU hours remain UNKNOWN until actual training throughput is measured. Provider quotas are observations, not a promised resource budget.",
@@ -76,7 +85,7 @@
   "planned_counterexample_supplement_scenes": 240,
   "planned_combined_scenes": 1240,
   "conditional_data_gate": "every split/count1..5 has observable six-color coverage; merge source archives by hash, preserve original labels/splits",
-  "updates_state": "Verified from the completed Pilot v1 and archived on Drive.",
+  "updates_state": "Verified 1170 original Pilot updates and336 geometry-refinement updates.",
   "pilot_execution": {
     "ref": "lotus30/k230-topface-v11-03-pilot-training",
     "kernel_id": 145030012,
@@ -88,7 +97,7 @@
   },
   "combined_audit_receipt": "../cloud/audit-a02/ACCEPTANCE-v4.json",
   "geometry_refinement": {
-    "status": "RUNNING",
+    "status": "COMPUTE_AND_DRIVE_VERIFIED",
     "max_epochs": 12,
     "run_id": "k230-topface-v11-training-a02",
     "reason": "Pretrained best passed other gates. Matched angle coverage 142/188 and median error 17.17 degrees.",
@@ -97,6 +106,10 @@
     "kernel_id": 145035249,
     "version": 1,
     "max_new_optimizer_updates": 336,
-    "selection": "Prefer checkpoints meeting the original Pilot gate, then rank by the fixed validation score."
-  }
+    "selection": "Prefer checkpoints meeting the original Pilot gate, then rank by the fixed validation score.",
+    "new_optimizer_updates": 336,
+    "numerical_direction_gate_passed": false
+  },
+  "actual_completed_logical_training_runs": 4,
+  "g4_readiness": "G4_READINESS.json"
 }

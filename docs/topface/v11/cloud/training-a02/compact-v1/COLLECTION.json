@@ -1,0 +1,23 @@
+{
+  "schema": "topface-exact-compact-collection-v1.1",
+  "ref": "lotus30/k230-topface-v11-03b-geometry-refine",
+  "version": 1,
+  "run_id": "k230-topface-v11-training-a02",
+  "observed_utc": "2026-11-14T17:59:48.492733+00:00",
+  "members": [
+    {
+      "name": "k230-topface-v11-training-a02-RESULT.json",
+      "status": "COLLECTED",
+      "bytes": 4144,
+      "sha256": "f3c9ce7999a319c004469b072a04e3b62be0e30f21c38460cac5c4b750df75a3"
+    },
+    {
+      "name": "k230-topface-v11-training-a02/result/pilot_geometry_refine/BEST_METRICS.json",
+      "status": "COLLECTED",
+      "bytes": 69755,
+      "sha256": "f417552e7dffaecce2eb35f688a8d79ee9670e679159edc6920d942f6fbe1747"
+    }
+  ],
+  "raw_archive_downloaded_to_host": false,
+  "automatic_replay": false
+}

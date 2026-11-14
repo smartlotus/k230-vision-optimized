@@ -1,0 +1,39 @@
+{
+  "kind": "pilot",
+  "experiment": "pilot_pretrained",
+  "checkpoint_sha256": "b2aa039f15f015b497c700c34eb1c0f7cd5d91b0f042c67f41db9b4642a7f1aa",
+  "archive": {
+    "name": "k230-topface-v11-training-a01.tar.gz",
+    "bytes": 78719599,
+    "sha256": "1051dc5a7bd455ae2414f6090b6b5c0896d17412ba3bba66c39eb7f9b80d3530"
+  },
+  "publication": {
+    "run_id": "k230-topface-v11-training-a01",
+    "prep": {
+      "ref": "lotus30/k230-topface-v11-03-pilot-training",
+      "kernel_id": 145030012,
+      "version": 1,
+      "provider_status": "COMPLETE",
+      "source_sha256": "c9b857ca77dc460d66068d4ff9605f465913d176d4a1550ec8d5ded5665a8e34"
+    },
+    "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+    "uploaded": {
+      "name": "k230-topface-v11-training-a01-1051dc5a7bd455ae.tar.gz",
+      "bytes": 78719599,
+      "sha256": "1051dc5a7bd455ae2414f6090b6b5c0896d17412ba3bba66c39eb7f9b80d3530",
+      "file_id": "1gUAr0Znz_CyGozx4tIeHUGJMky8a0Aib",
+      "provider_readback": "FULL_BYTE_SHA256_PASS"
+    },
+    "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+    "automatic_replay": false,
+    "provider_mutations": 1,
+    "github": {
+      "run_id": 43618174360,
+      "head": "4504c75107b19990d21bc20c275fa95b5c440098",
+      "branch": "ops/topface-transfer-1794675259180414200"
+    },
+    "secret_cleanup": "CONFIRMED_DELETED",
+    "independent_metadata_match": true,
+    "raw_archive_downloaded_to_host": false
+  }
+}

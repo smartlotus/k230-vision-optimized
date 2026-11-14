@@ -1,0 +1,17 @@
+{
+  "run_id": "k230-topface-v11-training-a02",
+  "source_archive_path": "k230-topface-v11-training-a02.tar.gz",
+  "archive": {
+    "name": "k230-topface-v11-training-a02-facfefbcbb4d423d.tar.gz",
+    "bytes": 26566769,
+    "sha256": "facfefbcbb4d423d6eabfadb11d8be13a70d2ee76d2cd29457cec261e2395373"
+  },
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-03b-geometry-refine",
+    "kernel_id": 145035249,
+    "version": 1,
+    "provider_status": "COMPLETE",
+    "source_sha256": "925c9ebcb557e11c09267601ba9145b06d34b95fc5b48bc92df6e2989bba30f5"
+  },
+  "source_notebook": "docs/topface/v11/cloud/training-a02/03_training.ipynb"
+}

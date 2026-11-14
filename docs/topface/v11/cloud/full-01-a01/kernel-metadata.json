@@ -1,0 +1,15 @@
+{
+  "id": "lotus30/k230-topface-v11-04-full-shard-01",
+  "title": "K230 Topface V11 04 Full Shard 01",
+  "code_file": "04_full_shard.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "lotus30/k230-topface-v11-full-input-01-a01/1"
+  ],
+  "kernel_sources": [],
+  "competition_sources": []
+}

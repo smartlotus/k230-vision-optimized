@@ -1,0 +1,28 @@
+{
+  "observed_utc": "2026-11-14T18:44:36.626237+00:00",
+  "ref": "lotus30/k230-topface-v11-07b-pilot-conversion",
+  "kernel_id": 145051007,
+  "version": 1,
+  "current_version": 1,
+  "status": "COMPLETE",
+  "log_tail": [
+    "0.00s - Debugger warning: It seems that frozen modules are being used, which may",
+    "0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off",
+    "0.00s - to python to disable frozen modules.",
+    "0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.",
+    "0.00s - Debugger warning: It seems that frozen modules are being used, which may",
+    "0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off",
+    "0.00s - to python to disable frozen modules.",
+    "0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.",
+    "TOPFACE_MODEL_ARTIFACT_STAGE INPUTS_VERIFIED",
+    "TOPFACE_MODEL_ARTIFACT_RESULT {\"run_id\": \"k230-topface-v11-conversion-pilot-a01\", \"status\": \"MODEL_ARTIFACT_BUILD_FAILED\", \"optimizer_updates\": 0, \"input_manifest_sha256\": \"fa0e9606ad488aab6dcb20bd1eb6750793eda1cc2a07ae7e886d0f98971bf8ba\", \"runtime_input_manifest_sha256\": \"bf4410686ed3efe8d7df4fa346bf957b8cd61adfac0df2facda32f12e67c4001\", \"error_type\": \"ModuleNotFoundError\", \"elapsed_seconds\": 314.80171419899995, \"archive\": {\"name\": \"k230-topface-v11-conversion-pilot-a01.tar.gz\", \"bytes\": 77724, \"sha256\": \"2e037100086e4845db1f73ef9abf7c76ec56ccc3eeb78ff658267917d7b29d6d\"}, \"durable_status\": \"PUBLISHER_PENDING_EXACT_SAVED_OUTPUT\"}",
+    "/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'",
+    "  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)",
+    "/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'",
+    "  text = re.sub(r'_', '\\_', text) # Escape underscores in display text",
+    "[NbConvertApp] Converting notebook __notebook__.ipynb to notebook",
+    "[NbConvertApp] Writing 4716 bytes to __notebook__.ipynb",
+    "[NbConvertApp] Converting notebook __notebook__.ipynb to html",
+    "[NbConvertApp] Writing 280222 bytes to __results__.html"
+  ]
+}

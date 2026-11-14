@@ -28,6 +28,8 @@ def load_shards(shards, mount_root, destination, total_scenes, base_seed,
         receipt = shard['publication']
         archive = shard['archive']
         if (receipt['status'] != 'DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED' or
+                receipt['secret_cleanup'] != 'CONFIRMED_DELETED' or
+                not receipt['independent_metadata_match'] or
                 receipt['run_id'] != shard['run_id'] or
                 any(archive[key] != receipt['uploaded'][key] for key in ('bytes', 'sha256'))):
             raise ValueError('Full shard lacks matching publication evidence')

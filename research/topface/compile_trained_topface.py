@@ -8,9 +8,9 @@ from pathlib import Path
 
 import cv2
 import numpy as np
+import onnxruntime as ort
 
 from cloud_store import atomic_json, sha
-from export_nanodet_candidate import session
 from task_geometry import MEAN, STD, box_iou, decode, letterbox_bgr
 
 
@@ -52,7 +52,8 @@ def compare_detections(reference, actual, width, height):
     observed = simulator_result['detections']
     remaining = set(range(len(observed)))
     matches = []
-    for target in expected:
+    matched_reference = set()
+    for expected_index, target in enumerate(expected):
         indices = sorted(remaining)
         if not indices:
             break
@@ -63,10 +64,15 @@ def compare_detections(reference, actual, width, height):
             continue
         index = indices[position]
         remaining.remove(index)
+        matched_reference.add(expected_index)
         pair = observed[index]
         ellipse_a, ellipse_b = target['ellipse'], pair['ellipse']
-        row = {'bbox_iou':float(overlaps[position]), 'same_color':target['color_id']==pair['color_id'],
+        row = {'ort_index':expected_index, 'simulator_index':index,
+               'bbox_iou':float(overlaps[position]), 'same_color':target['color_id']==pair['color_id'],
                'score_abs':abs(target['score']-pair['score']),
+               'ort_ellipse_finite':ellipse_a is not None, 'simulator_ellipse_finite':ellipse_b is not None,
+               'ort_angle_valid':ellipse_a is not None and ellipse_a['orientation_valid'],
+               'simulator_angle_valid':ellipse_b is not None and ellipse_b['orientation_valid'],
                'physical_center_px':float(np.linalg.norm(np.asarray(target['center_xy_projected_3d'])-
                                                             pair['center_xy_projected_3d']))}
         if ellipse_a is not None and ellipse_b is not None:
@@ -78,6 +84,13 @@ def compare_detections(reference, actual, width, height):
                 row['angle_error_deg'] = abs((ellipse_a['orientation_deg']-ellipse_b['orientation_deg']+90)%180-90)
         matches.append(row)
     return {'ort_count':len(expected),'simulator_count':len(observed),'matches':matches,
+            'matched_count':len(matches), 'unmatched_ort_indices':sorted(set(range(len(expected)))-matched_reference),
+            'unmatched_simulator_indices':sorted(remaining),
+            'geometry_transitions':{
+                'finite_to_missing':sum(row['ort_ellipse_finite'] and not row['simulator_ellipse_finite'] for row in matches),
+                'missing_to_finite':sum(not row['ort_ellipse_finite'] and row['simulator_ellipse_finite'] for row in matches),
+                'angle_valid_to_invalid':sum(row['ort_angle_valid'] and not row['simulator_angle_valid'] for row in matches),
+                'angle_invalid_to_valid':sum(not row['ort_angle_valid'] and row['simulator_angle_valid'] for row in matches)},
             'ort_capacity':reference_result['capacity_state'],
             'simulator_capacity':simulator_result['capacity_state']}
 
@@ -130,7 +143,10 @@ def compile_model(export_dir, dataset, output, calibration_count=64, pair_count=
         compiler.compile()
         binary = compiler.gencode_tobytes()
         (output/'topface.kmodel').write_bytes(binary)
-        runtime = session(model)
+        options=ort.SessionOptions()
+        options.intra_op_num_threads=2
+        options.inter_op_num_threads=1
+        runtime = ort.InferenceSession(str(model),sess_options=options,providers=['CPUExecutionProvider'])
         simulator = nncase.Simulator()
         simulator.load_model(binary)
         comparisons = []
@@ -150,6 +166,11 @@ def compile_model(export_dir, dataset, output, calibration_count=64, pair_count=
                   'output_shape':[1,*reference.shape],'input':'NCHW_RGB_UINT8',
                   'score_threshold':.25,'nms_iou':.5,'compiler':versions,'board_status':'NOT_RUN'}
         atomic_json(output/'identity.json',identity)
+        contract = json.loads((export_dir/'output_contract.json').read_text(encoding='utf8'))
+        contract.update(training_status='TRAINED',ptq_status='TRAIN_ONLY_PTQ_PAIRED',board_status='NOT_RUN')
+        contract['compiled_input']={'shape':[1,3,height,width],'color':'RGB','dtype':'uint8','layout':'NCHW',
+                                    'normalization':'nncase swaps RGB to BGR and applies the model mean and std'}
+        atomic_json(output/'output_contract.json',contract)
         result={'status':'TRAINED_MODEL_COMPILED_AND_PAIRED','identity':identity,'compiler_settings':settings,
                 'calibration_members':[row for row,_,_ in calibration],
                 'paired_members':[row for row,_,_ in paired],'paired_measurements':comparisons}

@@ -1,0 +1,25 @@
+{
+  "schema": "topface-cloud-transfer-binding-v1.1",
+  "run_id": "k230-topface-v11-training-a02",
+  "archive": {
+    "name": "k230-topface-v11-training-a02-facfefbcbb4d423d.tar.gz",
+    "bytes": 26566769,
+    "sha256": "facfefbcbb4d423d6eabfadb11d8be13a70d2ee76d2cd29457cec261e2395373"
+  },
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-03b-geometry-refine",
+    "kernel_id": 145035249,
+    "version": 1,
+    "provider_status": "COMPLETE",
+    "source_sha256": "925c9ebcb557e11c09267601ba9145b06d34b95fc5b48bc92df6e2989bba30f5"
+  },
+  "drive_file_id": "1ziVARezXnEV7ovhxNEVve3s4by0NIJsd",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "head": "7f72d581d21368cd66e6bdbbd1b8db4941b465de",
+  "branch": "ops/topface-transfer-1794679212051872800",
+  "secret_name": "TOPFACE_TRANSFER_1794679212051872800",
+  "publisher_source_commit": "617877c4e1ed0878f0d7c1dd741557a9d6187e05",
+  "created_utc": "2026-11-14T18:00:12.186634+00:00",
+  "automatic_replay": false,
+  "source_archive_path": "k230-topface-v11-training-a02.tar.gz"
+}

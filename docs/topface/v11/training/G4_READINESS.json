@@ -1,0 +1,164 @@
+{
+  "schema": "topface-g4-readiness-v1.1",
+  "status": "G4_CORE_LEARNING_AND_DATA_PASS",
+  "full_render_admission": "PASS",
+  "source_plan_sections": [
+    "8.2 Pilot",
+    "8.3 Full V1",
+    "Third batch G4/G5"
+  ],
+  "gate_scope": "Pilot label/data integrity, successful overfit and learning of top detection, colors and basic geometric output.",
+  "checks": {
+    "recall50_at_least80pct": true,
+    "color_at_least90pct": true,
+    "task_map50_at_least75pct": true,
+    "visible_center_median_at_most5_source_px": true,
+    "ellipse_iou_median_at_least60pct": true,
+    "finite_ellipse_coverage_at_least90pct": true,
+    "empty_fp_per_image_at_most_point1": true,
+    "all_observable_4_recapture_at_least80pct": true,
+    "all_observable_5_recapture_at_least80pct": true,
+    "sanity_training_passed": true,
+    "grouped_dataset_audit_passed": true
+  },
+  "selected_experiment": "pilot_pretrained",
+  "selected_checkpoint": {
+    "name": "best.pt",
+    "bytes": 14727229,
+    "sha256": "b2aa039f15f015b497c700c34eb1c0f7cd5d91b0f042c67f41db9b4642a7f1aa"
+  },
+  "strict_geometry_gate_passed": false,
+  "strict_geometry_gate_evidence": "../cloud/training-a01/ACCEPTANCE-v1.json",
+  "angle_followup_evidence": "../cloud/training-a02/ACCEPTANCE-v1.json",
+  "angle_followup_status": "Completed; retained as diagnostic. Full geometry acceptance remains pending.",
+  "agent_correction": "The 90% direction coverage and 15-degree median angle thresholds were agent-defined. The V1.1 Pilot specifies learning detection, colors and basic geometry before Full. These direction metrics remain required reported diagnostics and are not a Full-render prerequisite.",
+  "selected_metrics": {
+    "images": 221,
+    "task_mAP50": 0.9826922013601768,
+    "task_mAP50_95": 0.9445719473694133,
+    "matched_color_accuracy": 0.993421052631579,
+    "class_agnostic_recall50": 0.990228013029316,
+    "errors": {
+      "physical_center_visible_px": {
+        "n": 582,
+        "min": 0.06151926692571843,
+        "p05": 0.4306114239367721,
+        "median": 2.1613069247887644,
+        "p95": 19.828994359406664,
+        "max": 45.63267236468797
+      },
+      "physical_center_occluded_px": {
+        "n": 23,
+        "min": 0.5260249221177875,
+        "p05": 1.31917135527148,
+        "median": 4.053258976964893,
+        "p95": 18.025813596763054,
+        "max": 19.22174166678408
+      },
+      "ellipse_iou": {
+        "n": 326,
+        "min": 0.5860617399438728,
+        "p05": 0.8148862077983521,
+        "median": 0.9153897624331089,
+        "p95": 0.9666879187457303,
+        "max": 0.9921722113502935
+      },
+      "conic_center_px": {
+        "n": 326,
+        "min": 0.09442031683435885,
+        "p05": 0.31902224391807715,
+        "median": 1.144934737308372,
+        "p95": 3.17017474596707,
+        "max": 9.33834111723391
+      },
+      "semi_major_relative": {
+        "n": 326,
+        "min": 5.740961159277783e-05,
+        "p05": 0.0018169258062020173,
+        "median": 0.03125247889230538,
+        "p95": 0.09668446712123822,
+        "max": 0.2301447420374389
+      },
+      "semi_minor_relative": {
+        "n": 326,
+        "min": 6.80098042800226e-05,
+        "p05": 0.0027277650187234274,
+        "median": 0.029093871518496812,
+        "p95": 0.09981778947316675,
+        "max": 0.27371315923973194
+      },
+      "orientation_error_deg": {
+        "n": 142,
+        "min": 0.27249586383707936,
+        "p05": 1.7683372131103883,
+        "median": 17.17234096657507,
+        "p95": 68.73983788641758,
+        "max": 85.91544178624005
+      }
+    },
+    "count_groups": {
+      "world_count_1": {
+        "images": 39,
+        "observable_gt": 39,
+        "matched_gt": 36,
+        "all_observable_targets_recalled": 36
+      },
+      "world_count_5": {
+        "images": 46,
+        "observable_gt": 230,
+        "matched_gt": 230,
+        "all_observable_targets_recalled": 46
+      },
+      "world_count_3": {
+        "images": 33,
+        "observable_gt": 99,
+        "matched_gt": 99,
+        "all_observable_targets_recalled": 33
+      },
+      "world_count_2": {
+        "images": 45,
+        "observable_gt": 90,
+        "matched_gt": 90,
+        "all_observable_targets_recalled": 45
+      },
+      "world_count_4": {
+        "images": 39,
+        "observable_gt": 156,
+        "matched_gt": 153,
+        "all_observable_targets_recalled": 36
+      },
+      "world_count_0": {
+        "images": 19,
+        "observable_gt": 0,
+        "matched_gt": 0,
+        "all_observable_targets_recalled": 19
+      }
+    },
+    "denominators": {
+      "world_instances": 614,
+      "images": 221,
+      "observable_gt": 614,
+      "operating_predictions": 612,
+      "capacity_UNCERTAIN": 46,
+      "tp_class_agnostic": 608,
+      "matched_color_correct": 604,
+      "matched_color_total": 608,
+      "fn_class_agnostic": 6,
+      "capacity_OVER_CAPACITY": 82,
+      "capacity_OK": 72,
+      "matched_geometry_valid_gt": 326,
+      "finite_ellipse_predictions": 326,
+      "angle_valid_gt": 188,
+      "angle_prediction_valid": 142,
+      "angle_abstentions": 46,
+      "capacity_EMPTY": 21,
+      "empty_observation_images": 19,
+      "empty_false_positive_detections": 0,
+      "fp": 4
+    }
+  },
+  "original_training_receipt_sha256": "61fb48468f78c6da15fe05abc5c121df03ad6b0fd898fadf767a80af4c42f77d",
+  "source_prompt_sha256": "65124f3f35c294b3f6458c912bea3c3dfce727b69afde950e8c8c86f7dd7411c",
+  "source_project_plan_sha256": "71be320b7411f85895d97f6b0924b06049b08f2c5fec603d7e42eeec8f8a7bec",
+  "independent_review": "Original plan and execution prompt reviewed independently. Numerical direction thresholds originated in the agent implementation. Core Pilot learning and data checks satisfy Full generation prerequisites."
+}

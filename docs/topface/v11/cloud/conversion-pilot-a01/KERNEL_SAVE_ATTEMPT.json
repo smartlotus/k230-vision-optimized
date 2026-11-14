@@ -1,0 +1,9 @@
+{
+  "operation": "SAVE_AND_RUN_ALL",
+  "observed_utc": "2026-11-14T18:34:55.609804+00:00",
+  "ref": "lotus30/k230-topface-v11-07b-conversion-pilot",
+  "source_sha256": "eb1f323f723843e2f6c296d11395d15dcc026e633d6b7953b164126057506b91",
+  "session_timeout_seconds": 4500,
+  "scientific_execution": true,
+  "automatic_retry": false
+}

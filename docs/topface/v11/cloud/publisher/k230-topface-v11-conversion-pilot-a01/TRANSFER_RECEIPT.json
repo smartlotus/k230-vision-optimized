@@ -1,0 +1,29 @@
+{
+  "run_id": "k230-topface-v11-conversion-pilot-a01",
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-07b-pilot-conversion",
+    "kernel_id": 145051007,
+    "version": 1,
+    "provider_status": "COMPLETE",
+    "source_sha256": "eb1f323f723843e2f6c296d11395d15dcc026e633d6b7953b164126057506b91"
+  },
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "uploaded": {
+    "name": "k230-topface-v11-conversion-pilot-a01-2e037100086e4845.tar.gz",
+    "bytes": 77724,
+    "sha256": "2e037100086e4845db1f73ef9abf7c76ec56ccc3eeb78ff658267917d7b29d6d",
+    "file_id": "1AjVtE6sFRpWGdsRYzmI89GXjbINU-5k8",
+    "provider_readback": "FULL_BYTE_SHA256_PASS"
+  },
+  "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+  "automatic_replay": false,
+  "provider_mutations": 1,
+  "github": {
+    "run_id": 43628246641,
+    "head": "69ddd0becf3d121f8f7c1cbc9faf4b43da73cb3c",
+    "branch": "ops/topface-transfer-1794681836621524200"
+  },
+  "secret_cleanup": "CONFIRMED_DELETED",
+  "independent_metadata_match": true,
+  "raw_archive_downloaded_to_host": false
+}

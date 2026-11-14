@@ -29,7 +29,7 @@ def source_ref(receipt):
 
 
 def prepare(phase, revision, staging, shard_inventory, pilot_acceptance, publisher_receipt,
-            dataset_acceptance=None, parent=None, session=1, session_epochs=20, max_epochs=100):
+            dataset_acceptance=None, parent=None, session=1, session_epochs=100, max_epochs=100):
     if not revision.isalnum() or phase not in ('full-audit', 'formal'):
         raise ValueError('Explicit Full audit or formal revision required')
     pilot = read(pilot_acceptance)
@@ -49,14 +49,15 @@ def prepare(phase, revision, staging, shard_inventory, pilot_acceptance, publish
         raise ValueError('Full shard sources must be unique')
     run_id = f'k230-topface-v11-{phase}-{revision}'
     ordinal = '05' if phase == 'full-audit' else '06'
-    kernel = f'lotus30/k230-topface-v11-{ordinal}-{phase}'
+    kernel = f'lotus30/k230-topface-v11-{ordinal}-' + ('full-audit' if phase == 'full-audit' else 'formal-training')
     dataset = f'lotus30/k230-topface-v11-{phase}-input-{revision}'
     files = ['cloud_store.py', 'cloud_artifacts.py', 'full_dataset.py', 'native_job.py',
              'scene_config.py', 'geometry.py', 'dataset_diagnostics.py', 'input_locator.py']
     if phase == 'full-audit':
         max_seconds = 5400
         module = 'full_audit_job'
-        config = {'run_id': run_id, 'shards': shards, 'scenes': TOTAL_SCENES, 'seed': SEED}
+        config = {'run_id': run_id, 'shards': shards, 'scenes': TOTAL_SCENES, 'seed': SEED,
+                  'shard_inventory_sha256':sha(shard_inventory)}
         config_name = 'FULL_AUDIT_CONFIG.json'
         files += ['full_audit_job.py', 'near_similarity.py']
     else:
@@ -159,6 +160,6 @@ if __name__ == '__main__':
     for name in ('dataset-acceptance', 'parent'):
         parser.add_argument('--'+name, type=Path)
     parser.add_argument('--session', type=int, default=1)
-    parser.add_argument('--session-epochs', type=int, default=20)
+    parser.add_argument('--session-epochs', type=int, default=100)
     parser.add_argument('--max-epochs', type=int, default=100)
     print(json.dumps(prepare(**vars(parser.parse_args())), indent=2))

@@ -1,0 +1,28 @@
+{
+  "run_id": "k230-topface-v11-compiler-linux-a01",
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-07-compiler-linux-probe",
+    "kernel_id": 145048637,
+    "version": 1,
+    "provider_status": "COMPLETE",
+    "source_sha256": "6655782e0c20e9641f37c1c19aceba2a247434af579605af11fc02dd9776a9cd"
+  },
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "uploaded": {
+    "name": "k230-topface-v11-compiler-linux-a01-a2fc6377cef80678.tar.gz",
+    "bytes": 64997,
+    "sha256": "a2fc6377cef80678998a335a141edefcd1d5837fabbe9c0b62c235c2327b8be8",
+    "file_id": "1zu4OySWTKVqn_xb4UnC7FG4Z-q93gBGr",
+    "provider_readback": "FULL_BYTE_SHA256_PASS"
+  },
+  "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+  "automatic_replay": false,
+  "provider_mutations": 1,
+  "github": {
+    "run_id": 43626109768,
+    "head": "9cfb1d19f2a1f4abcb327f541677f53d02eb2822",
+    "branch": "ops/topface-transfer-1794680452356684800"
+  },
+  "secret_cleanup": "CONFIRMED_DELETED",
+  "independent_metadata_match": false
+}

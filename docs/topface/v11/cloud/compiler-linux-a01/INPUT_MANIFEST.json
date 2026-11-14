@@ -1,0 +1,146 @@
+{
+  "schema": "topface-compiler-input-v1.1",
+  "run_id": "k230-topface-v11-compiler-linux-a01",
+  "files": [
+    {
+      "path": "certifi.bin",
+      "bytes": 135082,
+      "sha256": "e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1"
+    },
+    {
+      "path": "charset-normalizer.bin",
+      "bytes": 269972,
+      "sha256": "211d5a3eb6af8f513b8d4ca19a8c1b7accab1b5f0d3175f9826b03c1a920dc1f"
+    },
+    {
+      "path": "cloud_store.py",
+      "bytes": 10870,
+      "sha256": "1f764499ce2098139a57cbcfd7406000c98f4a8ca914bb8d96e9e4656148cf34"
+    },
+    {
+      "path": "coloredlogs.bin",
+      "bytes": 46018,
+      "sha256": "612ee75c546f53e92e70049c9dbfcc18c935a2b9a53b66085ce9ef6a6e5c0934"
+    },
+    {
+      "path": "compiler_probe_job.py",
+      "bytes": 2221,
+      "sha256": "6bb337b7609df38bfe37c72a88b256167e0fda1582338b49981ea3df2c377c2d"
+    },
+    {
+      "path": "compiler_runtime.py",
+      "bytes": 3046,
+      "sha256": "452e53a87bd197f280cd8a69d636a42cad8534c9cfd65f9879eff860837ea8d3"
+    },
+    {
+      "path": "dotnet7.bin",
+      "bytes": 31482932,
+      "sha256": "95e65b97ca160cbc4ffa36c700e2108450b437db150d369fd90e68667bc79222"
+    },
+    {
+      "path": "flatbuffers.bin",
+      "bytes": 26661,
+      "sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4"
+    },
+    {
+      "path": "humanfriendly.bin",
+      "bytes": 86794,
+      "sha256": "1697e1a8a8f550fd43c2865cd84542fc175a61dcb779b6fee18cf6b6ccba1477"
+    },
+    {
+      "path": "idna.bin",
+      "bytes": 69583,
+      "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c"
+    },
+    {
+      "path": "input_locator.py",
+      "bytes": 941,
+      "sha256": "2a1f79933d67272996993a01ab8ad5da6b2d00710884456d9112f02ee00e0011"
+    },
+    {
+      "path": "mpmath.bin",
+      "bytes": 536198,
+      "sha256": "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c"
+    },
+    {
+      "path": "native_job.py",
+      "bytes": 15094,
+      "sha256": "8f906523ee85d48eb37a203d6ea5c500fcf557eb49f4408e0ec1dfceb4a7a6ef"
+    },
+    {
+      "path": "nncase-kpu.bin",
+      "bytes": 1149863,
+      "sha256": "c5c4c38adbace5f1ce3b5794d6ca52560488ca0ccab04a4e1299759fb0f68e48"
+    },
+    {
+      "path": "nncase.bin",
+      "bytes": 30070777,
+      "sha256": "7d5fd66134484a3eb6cf452646e3d0a3df134869b7a03532e74103dfa189b616"
+    },
+    {
+      "path": "numpy.bin",
+      "bytes": 16821570,
+      "sha256": "ba10f8411898fc418a521833e014a77d3ca01c15b0c6cdcce6a0d2897e6dbbdf"
+    },
+    {
+      "path": "onnx.bin",
+      "bytes": 16048190,
+      "sha256": "4a183c6178be001bf398260e5ac2c927dc43e7746e8638d6c05c20e321f8c949"
+    },
+    {
+      "path": "onnxruntime.bin",
+      "bytes": 17222993,
+      "sha256": "e54ad52e61d2d4618dcff8fa1480ac66b24ee2eab73331322db1049f11ccf330"
+    },
+    {
+      "path": "opencv-python-headless.bin",
+      "bytes": 49969856,
+      "sha256": "0e0a27c19dd1f40ddff94976cfe43066fbbe9dfbb2ec1907d66c19caef42a57b"
+    },
+    {
+      "path": "packaging.bin",
+      "bytes": 129956,
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+    },
+    {
+      "path": "probe_rgb_preprocess.py",
+      "bytes": 4218,
+      "sha256": "249bb1c0bc5b81483c7b8578c29f21d31424102af7fb815967f81a43ca48b857"
+    },
+    {
+      "path": "protobuf.bin",
+      "bytes": 319942,
+      "sha256": "63848923da3325e1bf7e9003d680ce6e14b07e55d0473253a690c3a8b8fd6e61"
+    },
+    {
+      "path": "python311.bin",
+      "bytes": 30783322,
+      "sha256": "3288c54cea3db350052019b3f8b558dd8a3da8afa6fda573f5fd2bcb37635b4a"
+    },
+    {
+      "path": "requests.bin",
+      "bytes": 64738,
+      "sha256": "2462f94637a34fd532264295e186976db0f5d453d1cdd31473c85a6a161affb6"
+    },
+    {
+      "path": "RUNTIME_MANIFEST.json",
+      "bytes": 13288,
+      "sha256": "97db3e2177c8d76b59ee91081492ea9d6cbe2d9b08173e52d49e7569a38c3191"
+    },
+    {
+      "path": "sympy.bin",
+      "bytes": 6299353,
+      "sha256": "e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5"
+    },
+    {
+      "path": "task_geometry.py",
+      "bytes": 7397,
+      "sha256": "5a2773816cc2f52c1e8058b410ed842c9f0e958d5b830ce3d6c4931be1dfd1de"
+    },
+    {
+      "path": "urllib3.bin",
+      "bytes": 135717,
+      "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3"
+    }
+  ]
+}

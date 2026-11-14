@@ -1,0 +1,15 @@
+{
+  "id": "lotus30/k230-topface-v11-07-compiler-linux-probe",
+  "title": "K230 Topface V11 07 Compiler Linux Probe",
+  "code_file": "07_compiler_linux.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "lotus30/k230-topface-v11-compiler-linux-input-a01/1"
+  ],
+  "kernel_sources": [],
+  "competition_sources": []
+}

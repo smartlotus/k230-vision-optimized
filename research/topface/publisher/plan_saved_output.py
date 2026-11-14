@@ -11,7 +11,14 @@ def plan(frozen, observation, result):
     intent = json.loads((frozen/'SUBMISSION_INTENT.json').read_text(encoding='utf8'))
     provider = json.loads(observation.read_text(encoding='utf8'))
     saved = json.loads(result.read_text(encoding='utf8'))
-    if provider['status'] != 'COMPLETE' or provider['ref'] != intent['kernel']:
+    response_path = frozen/'KERNEL_SAVE_RESPONSE.json'
+    expected_ref = intent['kernel']
+    if response_path.exists():
+        response = json.loads(response_path.read_text(encoding='utf8'))
+        expected_ref = response['ref'].removeprefix('/code/')
+        if (provider['kernel_id'], provider['version']) != (response['kernelId'], response['versionNumber']):
+            raise ValueError('Observation differs from the original Save response')
+    if provider['status'] != 'COMPLETE' or provider['ref'] != expected_ref:
         raise ValueError('Expected a completed exact-version Kaggle output')
     if (saved['run_id'], saved['input_manifest_sha256']) != (intent['run_id'], intent['input_manifest_sha256']):
         raise ValueError('Saved output differs from the frozen execution identity')

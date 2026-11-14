@@ -105,6 +105,14 @@ def run(input_root, run_id, max_seconds):
         summary = work/run_id/'formal_full'
         summary.mkdir(parents=True)
         shutil.copy2(output/'formal_full/BEST_METRICS.json', summary/'BEST_METRICS.json')
+        compact = {key:value for key,value in result.items()
+                   if key not in ('training_scenes', 'validation_scenes', 'epoch_records', 'best_metrics')}
+        compact['training_scene_count'] = len(result['training_scenes'])
+        compact['validation_scene_count'] = len(result['validation_scenes'])
+        atomic_json(summary/'RESULT.json', compact)
+        state['compact_training_files'] = [
+            {'name':name, 'bytes':(summary/name).stat().st_size, 'sha256':sha(summary/name)}
+            for name in ('RESULT.json', 'BEST_METRICS.json')]
     except Exception as error:
         state.update(status='FAILED_PRESERVE_ORIGINAL_COMPUTE', error_type=type(error).__name__)
         result_file = output/'formal_full/RESULT.json'

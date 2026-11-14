@@ -1,0 +1,24 @@
+{
+  "full_log_bytes": 2808,
+  "last_lines": [
+    "0.00s - Debugger warning: It seems that frozen modules are being used, which may",
+    "0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off",
+    "0.00s - to python to disable frozen modules.",
+    "0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.",
+    "0.00s - Debugger warning: It seems that frozen modules are being used, which may",
+    "0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off",
+    "0.00s - to python to disable frozen modules.",
+    "0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.",
+    "TOPFACE_COMPILER_STAGE RUNTIME_READY",
+    "TOPFACE_COMPILER_RESULT {\"run_id\": \"k230-topface-v11-compiler-linux-a01\", \"status\": \"LINUX_COMPILER_FIXTURE_FAILED\", \"optimizer_updates\": 0, \"input_manifest_sha256\": \"bf4410686ed3efe8d7df4fa346bf957b8cd61adfac0df2facda32f12e67c4001\", \"error_type\": \"RuntimeError\", \"elapsed_seconds\": 16.250612227999994, \"archive\": {\"name\": \"k230-topface-v11-compiler-linux-a01.tar.gz\", \"bytes\": 64997, \"sha256\": \"a2fc6377cef80678998a335a141edefcd1d5837fabbe9c0b62c235c2327b8be8\"}, \"durable_status\": \"PUBLISHER_PENDING_EXACT_SAVED_OUTPUT\"}",
+    "/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'",
+    "  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)",
+    "/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'",
+    "  text = re.sub(r'_', '\\_', text) # Escape underscores in display text",
+    "[NbConvertApp] Converting notebook __notebook__.ipynb to notebook",
+    "[NbConvertApp] Writing 4331 bytes to __notebook__.ipynb",
+    "[NbConvertApp] Converting notebook __notebook__.ipynb to html",
+    "[NbConvertApp] Writing 279598 bytes to __results__.html"
+  ],
+  "full_log_available_in_kaggle": true
+}

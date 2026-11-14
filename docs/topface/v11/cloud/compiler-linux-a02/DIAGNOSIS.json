@@ -1,0 +1,9 @@
+{
+  "previous_version": 1,
+  "failure": "Permission denied for nncase.simulator.k230.sc",
+  "cause": "Wheel ZIP extraction did not restore Unix execute mode.",
+  "wheel_member_mode": "0755",
+  "optimizer_updates": 0,
+  "scientific_data_replayed": false,
+  "original_input_reused": "lotus30/k230-topface-v11-compiler-linux-input-a01/1"
+}

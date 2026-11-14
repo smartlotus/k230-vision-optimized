@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "host_tests": 46,
+  "test_command": "python -m unittest discover -s research/topface -p test_*.py",
+  "test_evidence": "Local .ops/local/topface-host-verification-f.log; executed 2026-11-14T18:44Z",
+  "syntax_command": "python -m compileall -q research/topface",
+  "syntax_exit_code": 0,
+  "independent_reviews": {
+    "board_fake_runtime_cases": 5,
+    "native_runtime_wheels_verified": 10,
+    "native_runtime_extracted_paths_no_collision": 9566,
+    "formal_audit_and_training_acceptance_fixture": "PASS with actual uploaded-only receipt shape"
+  },
+  "coverage_limits": [
+    "Native CP313 Linux import and trained export still awaiting actual Kaggle conversion v2",
+    "Full01 is RUNNING; no Full scene acceptance yet",
+    "No board attached or actual K230 runtime measured"
+  ],
+  "training_optimizer_updates_verified": 1506
+}

@@ -1,0 +1,17 @@
+{
+  "run_id": "k230-topface-v11-compiler-linux-a02",
+  "source_archive_path": "k230-topface-v11-compiler-linux-a02.tar.gz",
+  "archive": {
+    "name": "k230-topface-v11-compiler-linux-a02-40b6cc3c6afb4cb0.tar.gz",
+    "bytes": 66655,
+    "sha256": "40b6cc3c6afb4cb03e51812bd9ff557036a696337228fd0eddc70dd226b075b9"
+  },
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-07-compiler-linux-probe",
+    "kernel_id": 145048637,
+    "version": 2,
+    "provider_status": "COMPLETE",
+    "source_sha256": "8144138573e314bbe82a1b61ee5b0ddd645176a13c926c09b041df244804408e"
+  },
+  "source_notebook": "docs/topface/v11/cloud/compiler-linux-a02/07_compiler_linux.ipynb"
+}

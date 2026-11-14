@@ -1,0 +1,12 @@
+sh: 1: nncase.simulator.k230.sc: Permission denied
+Failed to run k230 scmodel(32512).
+[..runtime_function.cpp:176 (invoke)] Input/output error
+[..runtime_function.cpp:176 (invoke)] Input/output error
+Traceback (most recent call last):
+  File "/kaggle/input/datasets/lotus30/k230-topface-v11-compiler-linux-input-a01/probe_rgb_preprocess.py", line 70, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);main(p.parse_args().output)
+                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/lotus30/k230-topface-v11-compiler-linux-input-a01/probe_rgb_preprocess.py", line 50, in main
+    sim.set_input_tensor(0,nncase.RuntimeTensor.from_numpy(tensor));sim.run()
+                                                                    ^^^^^^^^^
+RuntimeError: Input/output error

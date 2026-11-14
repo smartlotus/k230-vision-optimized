@@ -16,7 +16,7 @@ PROJECT = Path(__file__).resolve().parents[2]/'k230_transport_mvp'
 MANIFEST_SHA = '6d21a2e9d0a251c1161ee3b63345909d64ad1f8cda6d3f9be0e0c0454843e198'
 
 
-def evaluate_real(export_dir, output):
+def evaluate_real(export_dir, output, phase='formal_historical_test'):
     if output.exists():
         raise FileExistsError('Preserve the existing r4 test result')
     sys.path.insert(0, str(PROJECT))
@@ -25,7 +25,10 @@ def evaluate_real(export_dir, output):
     path = PROJECT/'data/ai_pilot/material_manifest_reviewed_r4_20261110.json'
     model = export_dir/'topface.onnx'
     release = json.loads((export_dir/'RESULT.json').read_text(encoding='utf8'))
-    if release['experiment'] != 'formal_full' or release['status'] != 'PYTORCH_ONNX_PARITY_PASS':
+    allowed = ('formal_full',) if phase=='formal_historical_test' else ('pilot_pretrained','pilot_random_control','pilot_geometry_refine')
+    if phase not in ('formal_historical_test','pilot_validation'):
+        raise ValueError('Explicit real evaluation phase required')
+    if release['experiment'] not in allowed or release['status'] != 'PYTORCH_ONNX_PARITY_PASS':
         raise ValueError('Real test requires a frozen formal ONNX artifact')
     if sha(path) != MANIFEST_SHA or sha(model) != release['onnx_sha256']:
         raise ValueError('Exact model and approved r4 manifest are required')
@@ -36,7 +39,7 @@ def evaluate_real(export_dir, output):
     counts = Counter()
     colors = {color:Counter() for color in range(1,7)}
     for record in records:
-        if record.get('split')!='test':
+        if record.get('split')!=('test' if phase=='formal_historical_test' else 'val'):
             continue
         reasons, objects = review_gate(record)
         if reasons:
@@ -78,7 +81,9 @@ def evaluate_real(export_dir, output):
                      'gt':len(truth),'predictions':len(detections),'matched':matched})
     if not rows:
         raise ValueError('No approved real test frames')
-    result = {'status':'HISTORICAL_REAL_TEST_EVALUATED','model_sha256':release['onnx_sha256'],
+    result = {'status':'HISTORICAL_REAL_TEST_EVALUATED' if phase=='formal_historical_test' else 'PILOT_REAL_VALIDATION_EVALUATED',
+              'phase':phase,'evaluation_split':'test' if phase=='formal_historical_test' else 'val',
+              'model_sha256':release['onnx_sha256'],
               'manifest_sha256':MANIFEST_SHA,'camera_id':2,'score_threshold':.25,'matching_iou':.5,
               'denominators':dict(counts),'recall':counts['tp']/counts['gt'] if counts['gt'] else None,
               'precision':counts['tp']/counts['predictions'] if counts['predictions'] else None,
@@ -93,4 +98,5 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--export-dir',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--phase',choices=('formal_historical_test','pilot_validation'),default='formal_historical_test')
     print(json.dumps(evaluate_real(**vars(parser.parse_args())),indent=2))

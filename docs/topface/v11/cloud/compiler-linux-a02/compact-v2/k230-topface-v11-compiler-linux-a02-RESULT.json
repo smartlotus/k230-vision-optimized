@@ -1,0 +1,119 @@
+{
+  "run_id": "k230-topface-v11-compiler-linux-a02",
+  "status": "LINUX_COMPILER_FIXTURE_PASS",
+  "optimizer_updates": 0,
+  "input_manifest_sha256": "bf4410686ed3efe8d7df4fa346bf957b8cd61adfac0df2facda32f12e67c4001",
+  "compiler": {
+    "nncase": "2.11.0",
+    "nncase-kpu": "2.11.0"
+  },
+  "comparisons": [
+    {
+      "pattern": "zero",
+      "rgb_uint8": [
+        0,
+        0,
+        0
+      ],
+      "expected_bgr_normalized": [
+        -1.804444432258606,
+        -2.0357143878936768,
+        -2.1179039478302
+      ],
+      "simulator": [
+        -1.8125,
+        -2.03125,
+        -2.125
+      ],
+      "max_abs_error": 0.008055567741394043,
+      "pass": true
+    },
+    {
+      "pattern": "mid",
+      "rgb_uint8": [
+        128,
+        128,
+        128
+      ],
+      "expected_bgr_normalized": [
+        0.4264923930168152,
+        0.20518210530281067,
+        0.07406450808048248
+      ],
+      "simulator": [
+        0.4296875,
+        0.205078125,
+        0.07470703125
+      ],
+      "max_abs_error": 0.0031951069831848145,
+      "pass": true
+    },
+    {
+      "pattern": "max",
+      "rgb_uint8": [
+        255,
+        255,
+        255
+      ],
+      "expected_bgr_normalized": [
+        2.640000104904175,
+        2.4285714626312256,
+        2.248908281326294
+      ],
+      "simulator": [
+        2.630859375,
+        2.421875,
+        2.2578125
+      ],
+      "max_abs_error": 0.009140729904174805,
+      "pass": true
+    },
+    {
+      "pattern": "rgb_planes",
+      "rgb_uint8": [
+        32,
+        128,
+        224
+      ],
+      "expected_bgr_normalized": [
+        2.0996949672698975,
+        0.20518210530281067,
+        -1.5699118375778198
+      ],
+      "simulator": [
+        2.091796875,
+        0.205078125,
+        -1.568359375
+      ],
+      "max_abs_error": 0.007898092269897461,
+      "pass": true
+    },
+    {
+      "pattern": "rgb_reverse",
+      "rgb_uint8": [
+        224,
+        128,
+        32
+      ],
+      "expected_bgr_normalized": [
+        -1.246710181236267,
+        0.20518210530281067,
+        1.7180408239364624
+      ],
+      "simulator": [
+        -1.25,
+        0.205078125,
+        1.71875
+      ],
+      "max_abs_error": 0.00328981876373291,
+      "pass": true
+    }
+  ],
+  "elapsed_seconds": 16.23324059000001,
+  "archive": {
+    "name": "k230-topface-v11-compiler-linux-a02.tar.gz",
+    "bytes": 66655,
+    "sha256": "40b6cc3c6afb4cb03e51812bd9ff557036a696337228fd0eddc70dd226b075b9"
+  },
+  "durable_status": "PUBLISHER_PENDING_EXACT_SAVED_OUTPUT"
+}

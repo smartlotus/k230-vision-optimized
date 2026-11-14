@@ -1,6 +1,7 @@
 """Bounded CSI2, AI2D, KPU and display benchmark for CanMV."""
 import gc
 import json
+import math
 import time
 
 from topface_decode import decode
@@ -81,6 +82,7 @@ def run(root='/sdcard/topface_trial', frames=600, display=True):
     initialized_display = False
     kpu = builder = ai2d = destination = backing = overlay = None
     frame = raw = output = source = None
+    last_observation = None
     stage_names = ('capture', 'ai2d', 'kpu', 'decode', 'display', 'ai2d_kpu', 'through_postprocess', 'total')
     samples = {name: [] for name in stage_names}
     dropped = 0
@@ -89,6 +91,8 @@ def run(root='/sdcard/topface_trial', frames=600, display=True):
     status = 'STARTED'
     error_text = None
     start = time.ticks_ms()
+    measurement_start = measurement_end = None
+    measured_attempts = 0
     try:
         kpu = nn.kpu()
         kpu.load_kmodel(path)
@@ -114,6 +118,10 @@ def run(root='/sdcard/topface_trial', frames=600, display=True):
         initialized_media = True
         sensor.run()
         for step in range(frames+5):
+            if step == 5:
+                measurement_start = time.ticks_ms()
+            if step >= 5:
+                measured_attempts += 1
             if hasattr(os, 'exitpoint'):
                 os.exitpoint()
             start_frame = time.ticks_us()
@@ -142,16 +150,32 @@ def run(root='/sdcard/topface_trial', frames=600, display=True):
             detections = decode(lambda point, channel: raw[0, point, channel],
                                 width=width, height=height, positions=positions,
                                 score_threshold=identity['score_threshold'], nms_iou=identity['nms_iou'])
+            last_observation = detections
             decoded = time.ticks_us()
             raw = output = source = None
             if display:
                 overlay.draw_image(frame.to_rgb565(), 0, 0)
+                overlay.draw_string(8,8,detections['capacity_state'],color=(255,255,255))
                 for target in detections['detections']:
                     x1, y1, x2, y2 = target['bbox_xyxy_visible']
                     overlay.draw_rectangle(int(x1), int(y1), int(x2-x1), int(y2-y1), color=(0,255,0), thickness=2)
                     cx, cy = target['center_xy_projected_3d']
                     if 0 <= cx < 640 and 0 <= cy < 360:
                         overlay.draw_cross(int(cx), int(cy), color=(255,0,255))
+                    ellipse=target['ellipse']
+                    if ellipse is not None:
+                        ex,ey=ellipse['conic_center_xy']
+                        theta=ellipse['orientation_deg']*math.pi/180
+                        previous=None
+                        for point in range(25):
+                            angle=point*2*math.pi/24
+                            dx=ellipse['semi_major']*math.cos(angle)
+                            dy=ellipse['semi_minor']*math.sin(angle)
+                            pixel=(int(ex+dx*math.cos(theta)-dy*math.sin(theta)),
+                                   int(ey+dx*math.sin(theta)+dy*math.cos(theta)))
+                            if previous is not None:
+                                overlay.draw_line(previous[0],previous[1],pixel[0],pixel[1],color=(255,255,0))
+                            previous=pixel
                 Display.show_image(overlay, x=80, y=60)
             shown = time.ticks_us()
             if step >= 5:
@@ -164,11 +188,13 @@ def run(root='/sdcard/topface_trial', frames=600, display=True):
                 for key, used in memory().items():
                     memory_peak[key] = max(used, memory_peak.get(key, 0))
             frame = None
-        status = 'RUN_COMPLETE'
+        status = ('RUN_COMPLETE' if not dropped else 'RUN_COMPLETE_WITH_CAPTURE_LOSSES') if samples['total'] else 'NO_SUCCESSFUL_MEASUREMENTS'
     except Exception as error:
         status = 'RUN_FAILED'
         error_text = str(error)
     finally:
+        if measurement_start is not None:
+            measurement_end = time.ticks_ms()
         raw = output = source = frame = None
         for label, cleanup in (('sensor', sensor.stop if sensor is not None else None),
                                ('display', Display.deinit if initialized_display else None),
@@ -180,15 +206,26 @@ def run(root='/sdcard/topface_trial', frames=600, display=True):
                     cleanup_errors.append(label+': '+str(error))
         kpu = builder = ai2d = destination = backing = overlay = None
         gc.collect()
+        if hasattr(nn,'shrink_memory_pool'):
+            try:
+                nn.shrink_memory_pool()
+            except Exception as error:
+                cleanup_errors.append('pool: '+str(error))
     seconds = time.ticks_diff(time.ticks_ms(), start)/1000
+    measurement_seconds = (time.ticks_diff(measurement_end, measurement_start)/1000
+                           if measurement_start is not None else None)
     report = {'status': status, 'error': error_text, 'runtime': str(nn.version()), 'display': display,
               'model_sha256': identity['kmodel_sha256'], 'capture_timeouts': dropped,
               'displayed_frames': len(samples['total']) if display else 0,
               'requested_measurement_frames': frames, 'elapsed_seconds_including_setup': seconds,
+              'measurement_attempts': measured_attempts, 'successful_measurement_frames':len(samples['total']),
+              'measurement_wall_seconds':measurement_seconds,
+              'effective_camera_to_result_fps':(len(samples['total'])/measurement_seconds
+                  if measurement_seconds is not None and measurement_seconds > 0 else None),
               'timing': {name: summarize(values) for name, values in samples.items()},
               'peak_sampled_memory': memory_peak, 'memory_after_cleanup': memory(),
-              'cleanup_errors': cleanup_errors}
+              'cleanup_errors': cleanup_errors, 'last_observation': last_observation}
     if samples['total']:
-        report['fps_from_mean_frame_time'] = 1000000*len(samples['total'])/sum(samples['total'])
+        report['successful_frame_active_time_fps'] = 1000000*len(samples['total'])/sum(samples['total'])
     print('TOPFACE_BOARD_RESULT '+json.dumps(report))
     return report

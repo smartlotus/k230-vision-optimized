@@ -1,0 +1,197 @@
+{
+  "schema": "topface-model-artifact-input-v1.1",
+  "run_id": "k230-topface-v11-conversion-pilot-a02",
+  "created_utc": "2026-11-14T18:48:20.356976+00:00",
+  "files": [
+    {
+      "path": "cloud_artifacts.py",
+      "bytes": 3782,
+      "sha256": "6025ffde705583553039224de4343ba27eda3968c8e1f9818dd0df0d6e7ba761"
+    },
+    {
+      "path": "cloud_store.py",
+      "bytes": 10870,
+      "sha256": "1f764499ce2098139a57cbcfd7406000c98f4a8ca914bb8d96e9e4656148cf34"
+    },
+    {
+      "path": "combine_datasets.py",
+      "bytes": 2754,
+      "sha256": "ccee9efe5de1c16f790e1ed0c144d46b106f862c6b29ace40bbb1e067c4c6223"
+    },
+    {
+      "path": "compile_trained_topface.py",
+      "bytes": 11242,
+      "sha256": "181258544dab8e05d5a21c5bd233f6b9a03ebf5d8805cbdb1de40db60d75a882"
+    },
+    {
+      "path": "compiler_runtime.py",
+      "bytes": 3174,
+      "sha256": "3cba54a57a6814563ea18ae2e611ff47d18e1e9a0920334b1666889f76dea4cc"
+    },
+    {
+      "path": "dataset_diagnostics.py",
+      "bytes": 9565,
+      "sha256": "afb0244bd8094393086e0f7c3cf357e6f806064bda5bda4c0e183796e3ceb46d"
+    },
+    {
+      "path": "downstream_job.py",
+      "bytes": 15699,
+      "sha256": "c5579a1bc8a9c24fb209093fe521a89d2c5d8506a44120213e634119e3b416d9"
+    },
+    {
+      "path": "evaluate_final.py",
+      "bytes": 2421,
+      "sha256": "e90267e367068ba96d35d106786fea13cacebdef814a18ef26a934672bd36c23"
+    },
+    {
+      "path": "evaluate_task.py",
+      "bytes": 13944,
+      "sha256": "94d4a319e8017a51b3ad47ff537893e7ca3ec6c5e0e53a4c25a2dc9704ba5ef1"
+    },
+    {
+      "path": "export_nanodet_candidate.py",
+      "bytes": 4795,
+      "sha256": "4de5e254e8cb6c686d63a416843e72629a9fc40adf3cdd241383b56ae068a1be"
+    },
+    {
+      "path": "export_trained_topface.py",
+      "bytes": 4243,
+      "sha256": "b7a632823262501a4618ca7c14479866879060e94bab6f49d3d267b29ce0bceb"
+    },
+    {
+      "path": "formal_job.py",
+      "bytes": 7694,
+      "sha256": "7169d92e721a430ff44ee2cc4f6e42b7074e803ed12a250aa6de705dd467930a"
+    },
+    {
+      "path": "full_dataset.py",
+      "bytes": 4881,
+      "sha256": "e2b09c9af5930d21b8b4502a595ffec311ca8a689b84b24f8a71f54370305ffc"
+    },
+    {
+      "path": "geometry.py",
+      "bytes": 2996,
+      "sha256": "de5c6055507a76ad5656bf8b3f554139bd154bf581b7196722e308a3a3985cc4"
+    },
+    {
+      "path": "input_locator.py",
+      "bytes": 941,
+      "sha256": "2a1f79933d67272996993a01ab8ad5da6b2d00710884456d9112f02ee00e0011"
+    },
+    {
+      "path": "MODEL_ARTIFACT_CONFIG.json",
+      "bytes": 2237,
+      "sha256": "414f322dce68bca4438d921dd3f54423fd8b16c7ca35fed3c95371a86bb95f1b"
+    },
+    {
+      "path": "model_artifact_job.py",
+      "bytes": 8568,
+      "sha256": "86392ff3b6683fd86845b9823cedcd402ef8f9bc757d4f4b55146f78279a43d8"
+    },
+    {
+      "path": "nanodet-source.bin",
+      "bytes": 19158,
+      "sha256": "0615df8698c9db0f55208fa7e448e9c52acd1bee8f84712d3c7600017ac5f950"
+    },
+    {
+      "path": "nanodet_topface.py",
+      "bytes": 8288,
+      "sha256": "fca1d5091eeddd86763a8ff61bf26dbc547277c8d37e3bf26f3fef5663cea2cc"
+    },
+    {
+      "path": "native-coloredlogs.bin",
+      "bytes": 46018,
+      "sha256": "612ee75c546f53e92e70049c9dbfcc18c935a2b9a53b66085ce9ef6a6e5c0934"
+    },
+    {
+      "path": "native-flatbuffers.bin",
+      "bytes": 26661,
+      "sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4"
+    },
+    {
+      "path": "native-humanfriendly.bin",
+      "bytes": 86794,
+      "sha256": "1697e1a8a8f550fd43c2865cd84542fc175a61dcb779b6fee18cf6b6ccba1477"
+    },
+    {
+      "path": "native-mpmath.bin",
+      "bytes": 536198,
+      "sha256": "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c"
+    },
+    {
+      "path": "native-onnx.bin",
+      "bytes": 17583581,
+      "sha256": "3c137eecf6bc618c2f9398bcc381474b55c817237992b169dfe728e169549e8f"
+    },
+    {
+      "path": "native-onnxruntime.bin",
+      "bytes": 17244738,
+      "sha256": "e30c972bc02e072911aabb6891453ec73795386c0af2b761b65444b8a4c4745f"
+    },
+    {
+      "path": "native-packaging.bin",
+      "bytes": 66469,
+      "sha256": "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484"
+    },
+    {
+      "path": "native-protobuf.bin",
+      "bytes": 319942,
+      "sha256": "63848923da3325e1bf7e9003d680ce6e14b07e55d0473253a690c3a8b8fd6e61"
+    },
+    {
+      "path": "native-sympy.bin",
+      "bytes": 6299353,
+      "sha256": "e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5"
+    },
+    {
+      "path": "native-typing-extensions.bin",
+      "bytes": 44614,
+      "sha256": "f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548"
+    },
+    {
+      "path": "NATIVE_EXPORT_RUNTIME.json",
+      "bytes": 6218,
+      "sha256": "7b66f449d535ddb2b56ea79a4d86172f3fb5b14c5815f182c876b7ec19fd7a25"
+    },
+    {
+      "path": "native_export_runtime.py",
+      "bytes": 4263,
+      "sha256": "97356f78c2c794ae2d27558eee376989669dfff3502b6ce56eb90b0c1b4ba502"
+    },
+    {
+      "path": "native_job.py",
+      "bytes": 16439,
+      "sha256": "5e4662e912da8bd919d596db1f05c504f53ae7853566de3e48e2ae2deabea2f1"
+    },
+    {
+      "path": "package_trial.py",
+      "bytes": 2629,
+      "sha256": "c9b3e650622f7d1203872bea3862fe9f1ecc37699100df35aecd7a723da87843"
+    },
+    {
+      "path": "scene_config.py",
+      "bytes": 4820,
+      "sha256": "2d7c8abcbb930ac2b857729d90dd86e91544b0672cccadcd457dd4db1b415b62"
+    },
+    {
+      "path": "task_geometry.py",
+      "bytes": 7397,
+      "sha256": "5a2773816cc2f52c1e8058b410ed842c9f0e958d5b830ce3d6c4931be1dfd1de"
+    },
+    {
+      "path": "task_training.py",
+      "bytes": 14998,
+      "sha256": "0ffdfb9344ef37cfd8d60b7e2a2f9316ee38c25a19d54c7b8eb757d8ec24b822"
+    },
+    {
+      "path": "topface_decode.py",
+      "bytes": 5469,
+      "sha256": "183b15db64b07c7c9a7e0a988a3470da95d65789dbedde5db27d6c9bee6a16a1"
+    },
+    {
+      "path": "topface_trial.py",
+      "bytes": 10793,
+      "sha256": "65e867e8a45d611ed21eff3b6f1f1df653e7f3307a2b75198dcd788b413f53aa"
+    }
+  ]
+}

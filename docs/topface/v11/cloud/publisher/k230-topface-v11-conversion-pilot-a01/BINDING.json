@@ -1,0 +1,25 @@
+{
+  "schema": "topface-cloud-transfer-binding-v1.1",
+  "run_id": "k230-topface-v11-conversion-pilot-a01",
+  "archive": {
+    "name": "k230-topface-v11-conversion-pilot-a01-2e037100086e4845.tar.gz",
+    "bytes": 77724,
+    "sha256": "2e037100086e4845db1f73ef9abf7c76ec56ccc3eeb78ff658267917d7b29d6d"
+  },
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-07b-pilot-conversion",
+    "kernel_id": 145051007,
+    "version": 1,
+    "provider_status": "COMPLETE",
+    "source_sha256": "eb1f323f723843e2f6c296d11395d15dcc026e633d6b7953b164126057506b91"
+  },
+  "drive_file_id": "1AjVtE6sFRpWGdsRYzmI89GXjbINU-5k8",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "head": "69ddd0becf3d121f8f7c1cbc9faf4b43da73cb3c",
+  "branch": "ops/topface-transfer-1794681836621524200",
+  "secret_name": "TOPFACE_TRANSFER_1794681836621524200",
+  "publisher_source_commit": "617877c4e1ed0878f0d7c1dd741557a9d6187e05",
+  "created_utc": "2026-11-14T18:43:56.740681+00:00",
+  "automatic_replay": false,
+  "source_archive_path": "k230-topface-v11-conversion-pilot-a01.tar.gz"
+}

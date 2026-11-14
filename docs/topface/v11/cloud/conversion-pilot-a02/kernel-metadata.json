@@ -1,0 +1,20 @@
+{
+  "id": "lotus30/k230-topface-v11-07b-pilot-conversion",
+  "title": "K230 Topface V11 07b Pilot Conversion",
+  "code_file": "07b_model_conversion.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "lotus30/k230-topface-v11-conversion-pilot-input-a02/1",
+    "lotus30/k230-topface-v11-compiler-linux-input-a01/1"
+  ],
+  "kernel_sources": [
+    "lotus30/k230-topface-v11-03-pilot-training/1",
+    "lotus30/k230-topface-v11-01-simulation-pilot/2",
+    "lotus30/k230-topface-v11-01b-color-counterexamples/2"
+  ],
+  "competition_sources": []
+}

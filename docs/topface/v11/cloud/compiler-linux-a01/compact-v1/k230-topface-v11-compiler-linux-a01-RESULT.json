@@ -1,0 +1,14 @@
+{
+  "run_id": "k230-topface-v11-compiler-linux-a01",
+  "status": "LINUX_COMPILER_FIXTURE_FAILED",
+  "optimizer_updates": 0,
+  "input_manifest_sha256": "bf4410686ed3efe8d7df4fa346bf957b8cd61adfac0df2facda32f12e67c4001",
+  "error_type": "RuntimeError",
+  "elapsed_seconds": 16.250612227999994,
+  "archive": {
+    "name": "k230-topface-v11-compiler-linux-a01.tar.gz",
+    "bytes": 64997,
+    "sha256": "a2fc6377cef80678998a335a141edefcd1d5837fabbe9c0b62c235c2327b8be8"
+  },
+  "durable_status": "PUBLISHER_PENDING_EXACT_SAVED_OUTPUT"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "topface-exact-compact-collection-v1.1",
+  "ref": "lotus30/k230-topface-v11-07-compiler-linux-probe",
+  "version": 1,
+  "run_id": "k230-topface-v11-compiler-linux-a01",
+  "observed_utc": "2026-11-14T18:19:43.854396+00:00",
+  "members": [
+    {
+      "name": "k230-topface-v11-compiler-linux-a01-RESULT.json",
+      "status": "COLLECTED",
+      "bytes": 532,
+      "sha256": "837e59ed758415c8ad91cd1894ea689bc0a49fc96125a108b6083509f9929ddd"
+    }
+  ],
+  "raw_archive_downloaded_to_host": false,
+  "automatic_replay": false
+}

@@ -1,0 +1,28 @@
+{
+  "run_id": "k230-topface-v11-training-a02",
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-03b-geometry-refine",
+    "kernel_id": 145035249,
+    "version": 1,
+    "provider_status": "COMPLETE",
+    "source_sha256": "925c9ebcb557e11c09267601ba9145b06d34b95fc5b48bc92df6e2989bba30f5"
+  },
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "uploaded": {
+    "name": "k230-topface-v11-training-a02-facfefbcbb4d423d.tar.gz",
+    "bytes": 26566769,
+    "sha256": "facfefbcbb4d423d6eabfadb11d8be13a70d2ee76d2cd29457cec261e2395373",
+    "file_id": "1ziVARezXnEV7ovhxNEVve3s4by0NIJsd",
+    "provider_readback": "FULL_BYTE_SHA256_PASS"
+  },
+  "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+  "automatic_replay": false,
+  "provider_mutations": 1,
+  "github": {
+    "run_id": 43624153621,
+    "head": "7f72d581d21368cd66e6bdbbd1b8db4941b465de",
+    "branch": "ops/topface-transfer-1794679212051872800"
+  },
+  "secret_cleanup": "CONFIRMED_DELETED",
+  "independent_metadata_match": false
+}

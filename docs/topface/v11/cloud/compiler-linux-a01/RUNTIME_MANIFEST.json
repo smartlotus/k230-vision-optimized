@@ -1,0 +1,286 @@
+{
+  "schema": "topface-offline-compiler-runtime-v1.1",
+  "artifacts": [
+    {
+      "kind": "python",
+      "path": "python311.bin",
+      "original_name": "cpython-3.11.18+20261110-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.11.18%2B20261110-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz",
+      "bytes": 30783322,
+      "sha256": "3288c54cea3db350052019b3f8b558dd8a3da8afa6fda573f5fd2bcb37635b4a"
+    },
+    {
+      "kind": "dotnet",
+      "path": "dotnet7.bin",
+      "original_name": "dotnet-runtime-linux-x64.tar.gz",
+      "url": "https://builds.dotnet.microsoft.com/dotnet/Runtime/7.0.20/dotnet-runtime-7.0.20-linux-x64.tar.gz",
+      "sha512": "87855297338555a7b577d7e314e5dbf2c2350f8c867a489cd1e535634bad5c123a1871464d37fc9421837ff5d426c2eadecbe0f60bbf3fd32bc2461f47790a40",
+      "bytes": 31482932,
+      "sha256": "95e65b97ca160cbc4ffa36c700e2108450b437db150d369fd90e68667bc79222"
+    },
+    {
+      "kind": "wheel",
+      "package": "nncase",
+      "version": "2.11.0",
+      "path": "nncase.bin",
+      "original_name": "nncase-2.11.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/ea/16/54c41ed69ce91fca3a64d9577e792a45a57cfd89861f3e2b28e3cb341264/nncase-2.11.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "bytes": 30070777,
+      "sha256": "7d5fd66134484a3eb6cf452646e3d0a3df134869b7a03532e74103dfa189b616",
+      "requires_dist": [
+        "numpy"
+      ]
+    },
+    {
+      "kind": "wheel",
+      "package": "nncase-kpu",
+      "version": "2.11.0",
+      "path": "nncase-kpu.bin",
+      "original_name": "nncase_kpu-2.11.0-py2.py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/36/a8/6d8413fc42e92f4b0b002dd9a08b74704454b8387a3a5a9a8bd7a5609631/nncase_kpu-2.11.0-py2.py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "bytes": 1149863,
+      "sha256": "c5c4c38adbace5f1ce3b5794d6ca52560488ca0ccab04a4e1299759fb0f68e48",
+      "requires_dist": [
+        "nncase>=2.11.0"
+      ]
+    },
+    {
+      "kind": "wheel",
+      "package": "numpy",
+      "version": "2.2.6",
+      "path": "numpy.bin",
+      "original_name": "numpy-2.2.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/b3/dd/2238b898e51bd6d389b7389ffb20d7f4c10066d80351187ec8e303a5a475/numpy-2.2.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 16821570,
+      "sha256": "ba10f8411898fc418a521833e014a77d3ca01c15b0c6cdcce6a0d2897e6dbbdf",
+      "requires_dist": null
+    },
+    {
+      "kind": "wheel",
+      "package": "opencv-python-headless",
+      "version": "4.11.0.86",
+      "path": "opencv-python-headless.bin",
+      "original_name": "opencv_python_headless-4.11.0.86-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/dd/5c/c139a7876099916879609372bfa513b7f1257f7f1a908b0bdc1c2328241b/opencv_python_headless-4.11.0.86-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 49969856,
+      "sha256": "0e0a27c19dd1f40ddff94976cfe43066fbbe9dfbb2ec1907d66c19caef42a57b",
+      "requires_dist": [
+        "numpy>=1.13.3; python_version < \"3.7\"",
+        "numpy>=1.21.0; python_version <= \"3.9\" and platform_system == \"Darwin\" and platform_machine == \"arm64\"",
+        "numpy>=1.21.2; python_version >= \"3.10\"",
+        "numpy>=1.21.4; python_version >= \"3.10\" and platform_system == \"Darwin\"",
+        "numpy>=1.23.5; python_version >= \"3.11\"",
+        "numpy>=1.26.0; python_version >= \"3.12\"",
+        "numpy>=1.19.3; python_version >= \"3.6\" and platform_system == \"Linux\" and platform_machine == \"aarch64\"",
+        "numpy>=1.17.0; python_version >= \"3.7\"",
+        "numpy>=1.17.3; python_version >= \"3.8\"",
+        "numpy>=1.19.3; python_version >= \"3.9\""
+      ]
+    },
+    {
+      "kind": "wheel",
+      "package": "onnx",
+      "version": "1.17.0",
+      "path": "onnx.bin",
+      "original_name": "onnx-1.17.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/b1/2f/91092557ed478e323a2b4471e2081fdf88d1dd52ae988ceaf7db4e4506ff/onnx-1.17.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 16048190,
+      "sha256": "4a183c6178be001bf398260e5ac2c927dc43e7746e8638d6c05c20e321f8c949",
+      "requires_dist": [
+        "numpy>=1.20",
+        "protobuf>=3.20.2",
+        "google-re2; extra == \"reference\"",
+        "Pillow; extra == \"reference\""
+      ]
+    },
+    {
+      "kind": "wheel",
+      "package": "onnxruntime",
+      "version": "1.24.4",
+      "path": "onnxruntime.bin",
+      "original_name": "onnxruntime-1.24.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/d5/b6/7a4df417cdd01e8f067a509e123ac8b31af450a719fa7ed81787dd6057ec/onnxruntime-1.24.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "bytes": 17222993,
+      "sha256": "e54ad52e61d2d4618dcff8fa1480ac66b24ee2eab73331322db1049f11ccf330",
+      "requires_dist": [
+        "flatbuffers",
+        "numpy>=1.21.6",
+        "packaging",
+        "protobuf",
+        "sympy"
+      ]
+    },
+    {
+      "kind": "wheel",
+      "package": "protobuf",
+      "version": "5.29.5",
+      "path": "protobuf.bin",
+      "original_name": "protobuf-5.29.5-cp38-abi3-manylinux2014_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/85/e4/07c80521879c2d15f321465ac24c70efe2381378c00bf5e56a0f4fbac8cd/protobuf-5.29.5-cp38-abi3-manylinux2014_x86_64.whl",
+      "bytes": 319942,
+      "sha256": "63848923da3325e1bf7e9003d680ce6e14b07e55d0473253a690c3a8b8fd6e61",
+      "requires_dist": null
+    },
+    {
+      "kind": "wheel",
+      "package": "flatbuffers",
+      "version": "25.12.19",
+      "path": "flatbuffers.bin",
+      "original_name": "flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/e8/2d/d2a548598be01649e2d46231d151a6c56d10b964d94043a335ae56ea2d92/flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "bytes": 26661,
+      "sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4",
+      "requires_dist": null
+    },
+    {
+      "kind": "wheel",
+      "package": "packaging",
+      "version": "26.3",
+      "path": "packaging.bin",
+      "original_name": "packaging-26.3-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl",
+      "bytes": 129956,
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+      "requires_dist": null
+    },
+    {
+      "kind": "wheel",
+      "package": "sympy",
+      "version": "1.14.0",
+      "path": "sympy.bin",
+      "original_name": "sympy-1.14.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl",
+      "bytes": 6299353,
+      "sha256": "e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5",
+      "requires_dist": [
+        "mpmath<1.4,>=1.1.0",
+        "pytest>=7.1.0; extra == \"dev\"",
+        "hypothesis>=6.70.0; extra == \"dev\""
+      ]
+    },
+    {
+      "kind": "wheel",
+      "package": "coloredlogs",
+      "version": "15.0.1",
+      "path": "coloredlogs.bin",
+      "original_name": "coloredlogs-15.0.1-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/a7/06/3d6badcf13db419e25b07041d9c7b4a2c331d3f4e7134445ec5df57714cd/coloredlogs-15.0.1-py2.py3-none-any.whl",
+      "bytes": 46018,
+      "sha256": "612ee75c546f53e92e70049c9dbfcc18c935a2b9a53b66085ce9ef6a6e5c0934",
+      "requires_dist": [
+        "humanfriendly (>=9.1)",
+        "capturer (>=2.4) ; extra == 'cron'"
+      ]
+    },
+    {
+      "kind": "wheel",
+      "package": "humanfriendly",
+      "version": "10.0",
+      "path": "humanfriendly.bin",
+      "original_name": "humanfriendly-10.0-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/f0/0f/310fb31e39e2d734ccaa2c0fb981ee41f7bd5056ce9bc29b2248bd569169/humanfriendly-10.0-py2.py3-none-any.whl",
+      "bytes": 86794,
+      "sha256": "1697e1a8a8f550fd43c2865cd84542fc175a61dcb779b6fee18cf6b6ccba1477",
+      "requires_dist": [
+        "monotonic ; python_version == \"2.7\"",
+        "pyreadline ; sys_platform == \"win32\" and python_version<\"3.8\"",
+        "pyreadline3 ; sys_platform == \"win32\" and python_version>=\"3.8\""
+      ]
+    },
+    {
+      "kind": "wheel",
+      "package": "mpmath",
+      "version": "1.3.0",
+      "path": "mpmath.bin",
+      "original_name": "mpmath-1.3.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl",
+      "bytes": 536198,
+      "sha256": "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c",
+      "requires_dist": [
+        "pytest (>=4.6) ; extra == 'develop'",
+        "pycodestyle ; extra == 'develop'",
+        "pytest-cov ; extra == 'develop'",
+        "codecov ; extra == 'develop'",
+        "wheel ; extra == 'develop'",
+        "sphinx ; extra == 'docs'",
+        "gmpy2 (>=2.1.0a4) ; (platform_python_implementation != \"PyPy\") and extra == 'gmpy'",
+        "pytest (>=4.6) ; extra == 'tests'"
+      ]
+    },
+    {
+      "kind": "wheel",
+      "package": "requests",
+      "version": "2.32.5",
+      "path": "requests.bin",
+      "original_name": "requests-2.32.5-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/1e/db/4254e3eabe8020b458f1a747140d32277ec7a271daf1d235b70dc0b4e6e3/requests-2.32.5-py3-none-any.whl",
+      "bytes": 64738,
+      "sha256": "2462f94637a34fd532264295e186976db0f5d453d1cdd31473c85a6a161affb6",
+      "requires_dist": [
+        "charset_normalizer<4,>=2",
+        "idna<4,>=2.5",
+        "urllib3<3,>=1.21.1",
+        "certifi>=2017.4.17",
+        "PySocks!=1.5.7,>=1.5.6; extra == \"socks\"",
+        "chardet<6,>=3.0.2; extra == \"use-chardet-on-py3\""
+      ]
+    },
+    {
+      "kind": "wheel",
+      "package": "certifi",
+      "version": "2026.10.23",
+      "path": "certifi.bin",
+      "original_name": "certifi-2026.10.23-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/32/d1/a3652fe2c19134d0d15922177821d863cbd7e842d53a21bbe7e8e3a1b5ac/certifi-2026.10.23-py3-none-any.whl",
+      "bytes": 135082,
+      "sha256": "e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1",
+      "requires_dist": null
+    },
+    {
+      "kind": "wheel",
+      "package": "charset-normalizer",
+      "version": "3.5.2",
+      "path": "charset-normalizer.bin",
+      "original_name": "charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/e4/ed/cf505d3011ffceb12c2067a7a5d3cfe92b875d4d44bb0ff0d69375e2c184/charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "bytes": 269972,
+      "sha256": "211d5a3eb6af8f513b8d4ca19a8c1b7accab1b5f0d3175f9826b03c1a920dc1f",
+      "requires_dist": null
+    },
+    {
+      "kind": "wheel",
+      "package": "idna",
+      "version": "3.20",
+      "path": "idna.bin",
+      "original_name": "idna-3.20-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl",
+      "bytes": 69583,
+      "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c",
+      "requires_dist": [
+        "ruff>=0.16.0; extra == \"all\"",
+        "mypy>=1.11.2; extra == \"all\"",
+        "ty>=0.0.37; extra == \"all\"",
+        "pytest>=8.3.2; extra == \"all\"",
+        "hypothesis>=6.141.1; extra == \"all\"",
+        "coverage>=7.10.0; extra == \"all\""
+      ]
+    },
+    {
+      "kind": "wheel",
+      "package": "urllib3",
+      "version": "2.8.0",
+      "path": "urllib3.bin",
+      "original_name": "urllib3-2.8.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/92/9d/c4e665119135114480843e7ab388fa94d8480650450e6f8e26b70d323a4c/urllib3-2.8.0-py3-none-any.whl",
+      "bytes": 135717,
+      "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3",
+      "requires_dist": [
+        "brotli>=1.2.0; platform_python_implementation == \"CPython\" and extra == \"brotli\"",
+        "brotlicffi>=1.2.0.0; platform_python_implementation != \"CPython\" and extra == \"brotli\"",
+        "h2<5,>=4; extra == \"h2\"",
+        "pysocks!=1.5.7,<2.0,>=1.5.6; extra == \"socks\"",
+        "backports-zstd>=1.0.0; python_version < \"3.14\" and extra == \"zstd\""
+      ]
+    }
+  ]
+}

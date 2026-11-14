@@ -1,0 +1,25 @@
+{
+  "schema": "topface-cloud-transfer-binding-v1.1",
+  "run_id": "k230-topface-v11-compiler-linux-a02",
+  "archive": {
+    "name": "k230-topface-v11-compiler-linux-a02-40b6cc3c6afb4cb0.tar.gz",
+    "bytes": 66655,
+    "sha256": "40b6cc3c6afb4cb03e51812bd9ff557036a696337228fd0eddc70dd226b075b9"
+  },
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-07-compiler-linux-probe",
+    "kernel_id": 145048637,
+    "version": 2,
+    "provider_status": "COMPLETE",
+    "source_sha256": "8144138573e314bbe82a1b61ee5b0ddd645176a13c926c09b041df244804408e"
+  },
+  "drive_file_id": "1x3DYEGLy5g2yhBe7rGIOhwHT2bs1im-A",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "head": "95f0d75afc07c4765ee145a4ce6c347920dfcdb0",
+  "branch": "ops/topface-transfer-1794680643817007300",
+  "secret_name": "TOPFACE_TRANSFER_1794680643817007300",
+  "publisher_source_commit": "617877c4e1ed0878f0d7c1dd741557a9d6187e05",
+  "created_utc": "2026-11-14T18:24:03.945650+00:00",
+  "automatic_replay": false,
+  "source_archive_path": "k230-topface-v11-compiler-linux-a02.tar.gz"
+}

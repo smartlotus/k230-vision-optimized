@@ -1,0 +1,72 @@
+{
+  "schema": "topface-full-render-input-v1.1",
+  "run_id": "k230-topface-v11-full-01-a01",
+  "global_scene_range": [
+    0,
+    1000
+  ],
+  "seed": 20261117,
+  "created_utc": "2026-11-14T18:02:18.043090+00:00",
+  "files": [
+    {
+      "path": "audit_v11.py",
+      "bytes": 9694,
+      "sha256": "08bcf43c8c7bb5c134a9389282b42f9c28cc65777a4eec49fb3455ecbcf2ab6c"
+    },
+    {
+      "path": "cad_bundle.bin",
+      "bytes": 608124,
+      "sha256": "642df0a28329ebe3adab0ca96888e5078b1a005dc7b9dbd345903e10274fc7f2"
+    },
+    {
+      "path": "cloud_store.py",
+      "bytes": 10870,
+      "sha256": "1f764499ce2098139a57cbcfd7406000c98f4a8ca914bb8d96e9e4656148cf34"
+    },
+    {
+      "path": "coco_topface.py",
+      "bytes": 1601,
+      "sha256": "0ead8f663395c155cb74e1cf841d79b5ac4e88e5fb10d0268eab598fec5fc2fd"
+    },
+    {
+      "path": "FULL_RENDER_CONFIG.json",
+      "bytes": 7183,
+      "sha256": "7216c20ac8fdefc3e2ca3cea136c21a00914da5d4e54dcb6b2a18f85b427260a"
+    },
+    {
+      "path": "geometry.py",
+      "bytes": 2996,
+      "sha256": "de5c6055507a76ad5656bf8b3f554139bd154bf581b7196722e308a3a3985cc4"
+    },
+    {
+      "path": "input_locator.py",
+      "bytes": 941,
+      "sha256": "2a1f79933d67272996993a01ab8ad5da6b2d00710884456d9112f02ee00e0011"
+    },
+    {
+      "path": "native_cad.py",
+      "bytes": 4624,
+      "sha256": "0d58d5ded69f85cb320ea4781d17c4abccffd170f733d0edd798794bc15e2e75"
+    },
+    {
+      "path": "native_job.py",
+      "bytes": 15094,
+      "sha256": "8f906523ee85d48eb37a203d6ea5c500fcf557eb49f4408e0ec1dfceb4a7a6ef"
+    },
+    {
+      "path": "render_native.py",
+      "bytes": 11945,
+      "sha256": "1e24bda4dd89c49265d12e13145be87b786f01fb05187121abb5229fd78d54bd"
+    },
+    {
+      "path": "scene_config.py",
+      "bytes": 4820,
+      "sha256": "2d7c8abcbb930ac2b857729d90dd86e91544b0672cccadcd457dd4db1b415b62"
+    },
+    {
+      "path": "SMOKE_HUMAN_REVIEW.json",
+      "bytes": 412,
+      "sha256": "5771259baeb8e81c9c27baf5cdb81b395aa72736bfb11c7055f816f8086346f7"
+    }
+  ]
+}

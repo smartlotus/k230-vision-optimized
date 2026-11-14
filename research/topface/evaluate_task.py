@@ -70,6 +70,8 @@ def evaluate(model,loader,device,score_threshold=.25,ap_score_floor=.001,max_bat
                 for item in items:
                     if item['bbox'] is None or item['visible_area_px']<16:
                         counts['unobservable_or_under16px_retained']+=1;continue
+                    if item['geometry_valid'] and item['orientation_valid']:
+                        counts['all_observable_angle_valid_gt']+=1
                     source=(np.array(item['bbox'])-np.tile(offset,2))/gain
                     entry={**item,'bbox_source':source.tolist()}
                     if include_slices:
@@ -150,9 +152,11 @@ def evaluate(model,loader,device,score_threshold=.25,ap_score_floor=.001,max_bat
                         errors['semi_major_relative'].append(abs(e['semi_major']-axes[0])/axes[0])
                         errors['semi_minor_relative'].append(abs(e['semi_minor']-axes[1])/axes[1])
                         if g['orientation_valid']:
+                            angle_error=abs((e['orientation_deg']-theta+90)%180-90)
+                            errors['all_finite_valid_gt_orientation_error_deg'].append(angle_error)
                             if e['orientation_valid']:
                                 counts['angle_prediction_valid']+=1
-                                angle=abs((e['orientation_deg']-theta+90)%180-90)
+                                angle=angle_error
                                 errors['orientation_error_deg'].append(angle)
                                 if angle_diagnostics:slice_errors[group_key]['orientation_error_deg'].append(angle)
                                 if include_slices:
@@ -176,7 +180,10 @@ def evaluate(model,loader,device,score_threshold=.25,ap_score_floor=.001,max_bat
         'host_forward_ms_per_image_batch_average':stats(times),'board_latency_measured':False,
         'real_accuracy_verified':False,'scene_names':[r['scene'] for r in records]}
     if include_slices:
-        result['class_agnostic_precision50']=counts['tp_class_agnostic']/max(1,counts['operating_predictions'])
+        result['class_agnostic_precision50']=(counts['tp_class_agnostic']/counts['operating_predictions']
+                                            if counts['operating_predictions'] else None)
+        result['end_to_end_angle_coverage']=(counts['angle_prediction_valid']/counts['all_observable_angle_valid_gt']
+                                           if counts['all_observable_angle_valid_gt'] else None)
         result['capacity_accuracy']=counts['correct_capacity_decisions']/max(1,counts['images'])
         result['over_capacity_recall']=counts['correct_over_capacity_rejections']/max(1,counts['true_over_capacity_images'])
         result['slices']={}

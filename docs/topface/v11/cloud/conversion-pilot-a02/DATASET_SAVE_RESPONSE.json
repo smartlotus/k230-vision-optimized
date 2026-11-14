@@ -1,0 +1,9 @@
+{
+  "ref": "lotus30/k230-topface-v11-conversion-pilot-input-a02",
+  "version": 1,
+  "private": true,
+  "manifest_sha256": "677bd7700cc890635756c9808d93f4c4c641c4d7a544f072f6517989b8029f34",
+  "observed_utc": "2026-11-14T18:48:39.932610+00:00",
+  "status": "CREATING",
+  "exit_code": 0
+}
