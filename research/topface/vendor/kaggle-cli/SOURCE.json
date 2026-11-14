@@ -1,0 +1,21 @@
+{
+  "source": "https://github.com/Kaggle/kaggle-cli/tree/main/skills",
+  "files": [
+    {
+      "path": "references/auth.md",
+      "sha256": "7926108e2d85b8cb5fdc2669c4dbfe6537e43e34e23e6e85920aaeef4600e8b6"
+    },
+    {
+      "path": "references/datasets.md",
+      "sha256": "b06c9a7c2521f79fe2b9c8768559e9daf4e4b9f353d11dd568195a4decc3ae12"
+    },
+    {
+      "path": "references/kernels.md",
+      "sha256": "22bc5aff9a6cd3216109a1dbc070edf90e6a748195ee1fb8d0d508912bedf51c"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "b33dc3fb675dc242cafcb3c6ef1e183f60c33f09db86254fbb58c20c5fc3f023"
+    }
+  ]
+}

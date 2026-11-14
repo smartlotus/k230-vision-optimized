@@ -1,0 +1,12 @@
+C:\Users\28389\anaconda3\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (1.26.16) or chardet (7.4.3)/charset_normalizer (2.0.4) doesn't match a supported version!
+  warnings.warn(
+test_all_four_labels_survive_and_round_direction_is_not_validated (test_audit.AuditTests.test_all_four_labels_survive_and_round_direction_is_not_validated) ... ok
+test_empty_frame_and_contaminated_mask (test_audit.AuditTests.test_empty_frame_and_contaminated_mask) ... ok
+test_height_scaling_and_outside_camera_envelope (test_geometry.GeometryTests.test_height_scaling_and_outside_camera_envelope) ... ok
+test_vertical_centered_disk_has_known_image_diameter (test_geometry.GeometryTests.test_vertical_centered_disk_has_known_image_diameter) ... ok
+test_vertical_height_is_top_relative_and_projection_round_trips (test_geometry.GeometryTests.test_vertical_height_is_top_relative_and_projection_round_trips) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.112s
+
+OK

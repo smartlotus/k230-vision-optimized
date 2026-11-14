@@ -1,0 +1,22 @@
+{
+  "scope": "NATIVE_BLENDER_CPU_CAD_AND_COMPOSITOR_ONLY",
+  "visible_pixels": 2852,
+  "visible_bbox": [
+    290,
+    150,
+    350,
+    210
+  ],
+  "projected_ellipse": {
+    "center": [
+      320.0,
+      180.0
+    ],
+    "semi_major": 30.137964248657227,
+    "semi_minor": 30.137964248657227,
+    "orientation_deg": 0.0,
+    "angle_valid": false
+  },
+  "visible_full_iou": 0.961837217156366,
+  "blenderproc_and_kaggle_verified": false
+}

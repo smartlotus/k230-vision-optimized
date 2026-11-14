@@ -1,0 +1,151 @@
+{
+  "observed_utc": "2026-11-14T12:08:14.417540+00:00",
+  "witnesses": {
+    "sensor_modes": {
+      "path": "C:\\Users\\28389\\Desktop\\k230worker\\k230_transport_mvp\\evidence\\board\\sensor-fps-modes.json",
+      "bytes": 819,
+      "sha256": "4c59f241a9b075e4171c9f4a58bfad4ec1f2b6cb41812b01bcb0458cc0b9b78b"
+    },
+    "sensor_startup": {
+      "path": "C:\\Users\\28389\\Desktop\\k230worker\\k230_transport_mvp\\evidence\\board\\preview-fps-native-modes.json",
+      "bytes": 948,
+      "sha256": "a75d3ccd2d6cce40c853775b8c6958fc70e361ee8288d38fa024a6dcb8ac2621"
+    },
+    "capture_metadata": {
+      "path": "C:\\Users\\28389\\Desktop\\k230-vision-optimized\\k230_transport_mvp\\data\\ai_pilot\\material-series-20261109-g\\capture-03-lab.json",
+      "bytes": 194251,
+      "sha256": "5e220e246693647c391cbdca62dc93663407428121ded75fcc78a4d7f354b1b4"
+    },
+    "r4": {
+      "path": "C:\\Users\\28389\\Desktop\\k230-vision-optimized\\k230_transport_mvp\\data\\ai_pilot\\material_manifest_reviewed_r4_20261110.json",
+      "bytes": 46861,
+      "sha256": "6d21a2e9d0a251c1161ee3b63345909d64ad1f8cda6d3f9be0e0c0454843e198"
+    },
+    "board_preflight": {
+      "path": "C:\\Users\\28389\\Desktop\\k230-vision-optimized\\docs\\validation\\native-fps-20261112\\preflight.json",
+      "bytes": 7209,
+      "sha256": "ec35a13d01423dfd614819c7c9d4f08e509e5c707f197ceeb00a6470c8d88dbc"
+    },
+    "native_smoke_log": {
+      "path": "C:\\Users\\28389\\Desktop\\k230-vision-optimized\\docs\\validation\\native-fps-20261112\\smoke01.log",
+      "bytes": 2654,
+      "sha256": "b147c24280fe7e4317f7f39799645b11f78b86294a49820db7da783239079f03"
+    }
+  },
+  "sensor_modes": {
+    "current_running_fps_unchanged": 30,
+    "test": "ACTUAL_FIRMWARE_SENSOR_MODE_READBACK",
+    "rows": [
+      {
+        "error": null,
+        "camera_id": 1,
+        "listed": [
+          "gc2093_csi1\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+          [
+            {
+              "fps": 30,
+              "height": 1080,
+              "width": 1920
+            },
+            {
+              "fps": 60,
+              "height": 1080,
+              "width": 1920
+            },
+            {
+              "fps": 90,
+              "height": 960,
+              "width": 1280
+            },
+            {
+              "fps": 90,
+              "height": 720,
+              "width": 1280
+            }
+          ]
+        ]
+      },
+      {
+        "error": null,
+        "camera_id": 2,
+        "listed": [
+          "gc2093_csi2\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+          [
+            {
+              "fps": 30,
+              "height": 1080,
+              "width": 1920
+            },
+            {
+              "fps": 60,
+              "height": 1080,
+              "width": 1920
+            },
+            {
+              "fps": 90,
+              "height": 960,
+              "width": 1280
+            },
+            {
+              "fps": 90,
+              "height": 720,
+              "width": 1280
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  "startup": {
+    "source": "NATIVE_SENSOR_STARTUP_LOG",
+    "lines": [
+      "find sensor gc2093_csi2\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000, type 29, output 1920x1080@30",
+      "find sensor gc2093_csi1\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000, type 26, output 1920x1080@60",
+      "FPS_CHECK_RESTORE_CONTINUOUS",
+      "find sensor gc2093_csi2\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000, type 29, output 1920x1080@30",
+      "find sensor gc2093_csi1\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000, type 25, output 1920x1080@30"
+    ],
+    "limit": "Actual mode initialization; processing FPS separately measured; IDE refresh not measured"
+  },
+  "capture_metadata_without_lab_grid": {
+    "motors_enabled": false,
+    "x0": 2,
+    "camera_mount_fixed": null,
+    "profile_revision": 25,
+    "image_profile": {
+      "vflip": false,
+      "rotation": 0,
+      "height": 360,
+      "width": 640,
+      "crop": false,
+      "hmirror": false,
+      "pose_id": null
+    },
+    "camera_id": 2,
+    "y0": 2,
+    "jpeg_saved": true,
+    "distance_cm": null,
+    "jpeg": "/sdcard/transport_mvp/ellipse_perf_samples/sample-000021-live.jpg",
+    "timestamp_ms": 18873011,
+    "is_simulated": false,
+    "mode": "RING",
+    "height": 360,
+    "source": "REAL_CAMERA_NATIVE_LAB",
+    "frame_id": 9061,
+    "stride": 4,
+    "station": "PROCESS",
+    "width": 640
+  },
+  "r4_counts": {
+    "images": 12,
+    "approved_images": 7,
+    "approved_top_boxes": 17,
+    "approved_splits": {
+      "train": 4,
+      "val": 2,
+      "test": 1
+    }
+  },
+  "live_hardware_probed_this_run": false,
+  "real_annotations_modified": false
+}

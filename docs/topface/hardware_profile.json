@@ -1,0 +1,371 @@
+{
+  "schema": "k230-hardware-profile-v1",
+  "parameters": {
+    "board": {
+      "value": "LCKFB-LSPI-K230-1G-CanMV",
+      "unit": null,
+      "status": "measured",
+      "source": "native_smoke_log",
+      "confidence": "high",
+      "verification_method": "historical local board/capture evidence, SHA-bound in hardware_evidence.json; not a fresh board read"
+    },
+    "firmware": {
+      "value": "v1.8-36-gae2f20d",
+      "unit": null,
+      "status": "measured",
+      "source": "native_smoke_log",
+      "confidence": "high",
+      "verification_method": "historical local board/capture evidence, SHA-bound in hardware_evidence.json; not a fresh board read"
+    },
+    "board_memory": {
+      "value": 1,
+      "unit": "GB",
+      "status": "from_datasheet",
+      "source": "https://wiki.lckfb.com/zh-hans/lushan-pi-k230/quick-start.html",
+      "confidence": "high",
+      "verification_method": "board variant specification; not an exhaustive RAM test"
+    },
+    "csi_port": {
+      "value": 2,
+      "unit": null,
+      "status": "read_from_config",
+      "source": "k230_transport_mvp/k230/camera_roles.py",
+      "confidence": "high",
+      "verification_method": "historical local board/capture evidence, SHA-bound in hardware_evidence.json; not a fresh board read"
+    },
+    "stream_channel": {
+      "value": 0,
+      "unit": null,
+      "status": "read_from_config",
+      "source": "camera_manager.py default output channel",
+      "confidence": "high",
+      "verification_method": "default API channel; fresh channel enumeration pending"
+    },
+    "sensor_model": {
+      "value": "GC2093",
+      "unit": null,
+      "status": "measured",
+      "source": "sensor_modes",
+      "confidence": "high",
+      "verification_method": "historical local board/capture evidence, SHA-bound in hardware_evidence.json; not a fresh board read"
+    },
+    "sensor_native_dimensions": {
+      "value": [
+        1920,
+        1080
+      ],
+      "unit": "px",
+      "status": "measured",
+      "source": "sensor_startup",
+      "confidence": "high",
+      "verification_method": "historical local board/capture evidence, SHA-bound in hardware_evidence.json; not a fresh board read"
+    },
+    "sensor_supported_modes": {
+      "value": [
+        {
+          "fps": 30,
+          "height": 1080,
+          "width": 1920
+        },
+        {
+          "fps": 60,
+          "height": 1080,
+          "width": 1920
+        },
+        {
+          "fps": 90,
+          "height": 960,
+          "width": 1280
+        },
+        {
+          "fps": 90,
+          "height": 720,
+          "width": 1280
+        }
+      ],
+      "unit": null,
+      "status": "measured",
+      "source": "sensor_modes",
+      "confidence": "high",
+      "verification_method": "historical local board/capture evidence, SHA-bound in hardware_evidence.json; not a fresh board read"
+    },
+    "width": {
+      "value": 640,
+      "unit": "px",
+      "status": "measured",
+      "source": "capture_metadata",
+      "confidence": "high",
+      "verification_method": "historical local board/capture evidence, SHA-bound in hardware_evidence.json; not a fresh board read"
+    },
+    "height": {
+      "value": 360,
+      "unit": "px",
+      "status": "measured",
+      "source": "capture_metadata",
+      "confidence": "high",
+      "verification_method": "historical local board/capture evidence, SHA-bound in hardware_evidence.json; not a fresh board read"
+    },
+    "fps_configured": {
+      "value": 30,
+      "unit": "fps",
+      "status": "read_from_config",
+      "source": "sensor_startup",
+      "confidence": "high",
+      "verification_method": "historical local board/capture evidence, SHA-bound in hardware_evidence.json; not a fresh board read"
+    },
+    "pixel_format": {
+      "value": "RGB565",
+      "unit": null,
+      "status": "read_from_config",
+      "source": "k230_transport_mvp/k230/camera_manager.py",
+      "confidence": "high",
+      "verification_method": "historical local board/capture evidence, SHA-bound in hardware_evidence.json; not a fresh board read"
+    },
+    "model_color_order": {
+      "value": "RGB",
+      "unit": null,
+      "status": "read_from_config",
+      "source": "k230_transport_mvp/tools/material_preprocess.py",
+      "confidence": "high",
+      "verification_method": "historical local board/capture evidence, SHA-bound in hardware_evidence.json; not a fresh board read"
+    },
+    "lens_model": {
+      "value": "LCKFB small fixed-focus GC2093 module",
+      "unit": null,
+      "status": "estimated",
+      "source": "user chat 2026-11-14; height clarified as lens-to-top and small fixed-focus lens confirmed",
+      "confidence": "high",
+      "verification_method": "user identification; lens serial/individual optics not measured"
+    },
+    "camera_height_mm": {
+      "value": [
+        100,
+        400
+      ],
+      "unit": "mm",
+      "status": "estimated",
+      "source": "user chat 2026-11-14; height clarified as lens-to-top and small fixed-focus lens confirmed",
+      "confidence": "high",
+      "verification_method": "user operating envelope; vertical lens-to-object-top distance"
+    },
+    "camera_plane_angle_deg": {
+      "value": [
+        80,
+        100
+      ],
+      "unit": "deg",
+      "status": "estimated",
+      "source": "user chat 2026-11-14; height clarified as lens-to-top and small fixed-focus lens confirmed",
+      "confidence": "high",
+      "verification_method": "90 means top-down; signed deviation +/-10 degrees from vertical"
+    },
+    "camera_motion": {
+      "value": "vertical",
+      "unit": null,
+      "status": "estimated",
+      "source": "user chat 2026-11-14; height clarified as lens-to-top and small fixed-focus lens confirmed",
+      "confidence": "high",
+      "verification_method": "user operating condition; no motion-control commands enabled"
+    },
+    "focal_length_mm": {
+      "value": 4.3,
+      "unit": "mm",
+      "status": "from_datasheet",
+      "source": "https://wiki.lckfb.com/zh-hans/lushan-pi-k230/image-recog/use-sensor.html",
+      "confidence": "high",
+      "verification_method": "small fixed-focus module nominal EFL"
+    },
+    "horizontal_fov_deg": {
+      "value": 65,
+      "unit": "deg",
+      "status": "from_datasheet",
+      "source": "https://wiki.lckfb.com/zh-hans/lushan-pi-k230/image-recog/use-sensor.html",
+      "confidence": "high",
+      "verification_method": "small lens nominal horizontal FOV, not calibration"
+    },
+    "vertical_fov_deg": {
+      "value": 40,
+      "unit": "deg",
+      "status": "from_datasheet",
+      "source": "https://wiki.lckfb.com/zh-hans/lushan-pi-k230/image-recog/use-sensor.html",
+      "confidence": "high",
+      "verification_method": "small lens nominal vertical FOV, not calibration"
+    },
+    "diagonal_fov_deg": {
+      "value": 73,
+      "unit": "deg",
+      "status": "from_datasheet",
+      "source": "https://wiki.lckfb.com/zh-hans/lushan-pi-k230/image-recog/use-sensor.html",
+      "confidence": "high",
+      "verification_method": "small lens nominal diagonal FOV, not calibration"
+    },
+    "lens_f_number": {
+      "value": 2,
+      "unit": null,
+      "status": "from_datasheet",
+      "source": "https://wiki.lckfb.com/zh-hans/lushan-pi-k230/image-recog/use-sensor.html",
+      "confidence": "high",
+      "verification_method": "small lens nominal aperture"
+    },
+    "nominal_focus_distance_mm": {
+      "value": 700,
+      "unit": "mm",
+      "status": "from_datasheet",
+      "source": "https://wiki.lckfb.com/zh-hans/lushan-pi-k230/image-recog/use-sensor.html",
+      "confidence": "high",
+      "verification_method": "vendor small-lens fixed-focus description; 100-400mm sharpness needs real images"
+    },
+    "nominal_distortion_bound": {
+      "value": 0.5,
+      "unit": "percent",
+      "status": "from_datasheet",
+      "source": "https://wiki.lckfb.com/zh-hans/lushan-pi-k230/image-recog/use-sensor.html",
+      "confidence": "high",
+      "verification_method": "vendor distortion specification, not Brown-Conrady coefficients"
+    },
+    "lens_serial": {
+      "value": null,
+      "unit": null,
+      "status": "unknown",
+      "source": "not present in inspected evidence",
+      "confidence": "unknown",
+      "verification_method": "requires current sensor readback or calibration at actual CSI2 resolution/focus"
+    },
+    "fps_actual": {
+      "value": null,
+      "unit": "fps",
+      "status": "unknown",
+      "source": "not present in inspected evidence",
+      "confidence": "unknown",
+      "verification_method": "requires current sensor readback or calibration at actual CSI2 resolution/focus"
+    },
+    "exposure_us": {
+      "value": null,
+      "unit": "us",
+      "status": "unknown",
+      "source": "not present in inspected evidence",
+      "confidence": "unknown",
+      "verification_method": "requires current sensor readback or calibration at actual CSI2 resolution/focus"
+    },
+    "gain": {
+      "value": null,
+      "unit": null,
+      "status": "unknown",
+      "source": "not present in inspected evidence",
+      "confidence": "unknown",
+      "verification_method": "requires current sensor readback or calibration at actual CSI2 resolution/focus"
+    },
+    "white_balance": {
+      "value": null,
+      "unit": null,
+      "status": "unknown",
+      "source": "not present in inspected evidence",
+      "confidence": "unknown",
+      "verification_method": "requires current sensor readback or calibration at actual CSI2 resolution/focus"
+    },
+    "fx": {
+      "value": null,
+      "unit": "px",
+      "status": "unknown",
+      "source": "not present in inspected evidence",
+      "confidence": "unknown",
+      "verification_method": "requires current sensor readback or calibration at actual CSI2 resolution/focus"
+    },
+    "fy": {
+      "value": null,
+      "unit": "px",
+      "status": "unknown",
+      "source": "not present in inspected evidence",
+      "confidence": "unknown",
+      "verification_method": "requires current sensor readback or calibration at actual CSI2 resolution/focus"
+    },
+    "cx": {
+      "value": null,
+      "unit": "px",
+      "status": "unknown",
+      "source": "not present in inspected evidence",
+      "confidence": "unknown",
+      "verification_method": "requires current sensor readback or calibration at actual CSI2 resolution/focus"
+    },
+    "cy": {
+      "value": null,
+      "unit": "px",
+      "status": "unknown",
+      "source": "not present in inspected evidence",
+      "confidence": "unknown",
+      "verification_method": "requires current sensor readback or calibration at actual CSI2 resolution/focus"
+    },
+    "distortion_coefficients": {
+      "value": null,
+      "unit": null,
+      "status": "unknown",
+      "source": "not present in inspected evidence",
+      "confidence": "unknown",
+      "verification_method": "requires current sensor readback or calibration at actual CSI2 resolution/focus"
+    },
+    "camera_roll_deg": {
+      "value": null,
+      "unit": "deg",
+      "status": "unknown",
+      "source": "not present in inspected evidence",
+      "confidence": "unknown",
+      "verification_method": "requires current sensor readback or calibration at actual CSI2 resolution/focus"
+    },
+    "camera_yaw_deg": {
+      "value": null,
+      "unit": "deg",
+      "status": "unknown",
+      "source": "not present in inspected evidence",
+      "confidence": "unknown",
+      "verification_method": "requires current sensor readback or calibration at actual CSI2 resolution/focus"
+    },
+    "model_input_width": {
+      "value": 224,
+      "unit": "px",
+      "status": "read_from_config",
+      "source": "TopFaceNet execution plan; intended new experiment",
+      "confidence": "high",
+      "verification_method": "experiment choice, not a board measurement"
+    },
+    "model_input_height": {
+      "value": 224,
+      "unit": "px",
+      "status": "read_from_config",
+      "source": "TopFaceNet execution plan; intended new experiment",
+      "confidence": "high",
+      "verification_method": "experiment choice, not a board measurement"
+    },
+    "preprocessing": {
+      "value": {
+        "layout": "NCHW",
+        "resize": "letterbox",
+        "interpolation": "bilinear",
+        "normalization": "uint8 / 255 exactly once",
+        "pad": 114
+      },
+      "unit": null,
+      "status": "read_from_config",
+      "source": "material_preprocess.py and planned TopFaceNet contract",
+      "confidence": "high",
+      "verification_method": "host reference only; native AI2D equivalence remains unverified"
+    }
+  },
+  "simulation_priors": {
+    "hfov_deg": [
+      62,
+      68
+    ],
+    "status": "estimated",
+    "focal_is_square_pixels": true,
+    "principal_point": "image midpoint for smoke only",
+    "distortion": "none for smoke geometry qualification",
+    "focus_blur": "must be assessed from real 100-400mm images before acceptance"
+  },
+  "protected": {
+    "uart": false,
+    "motors": false,
+    "production_save": false,
+    "csi0": "quarantined",
+    "csi1": "unchanged"
+  }
+}

@@ -1,0 +1,61 @@
+TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
+20:01:59 | INFO: Data are loaded, start creating Blender stuff
+20:01:59 | INFO: Blender create Mesh node material_block.stl
+20:01:59 | INFO: glTF import finished in 0.01s
+Blender 4.2.9 LTS (hash a10f621e649a built 2025-04-15 03:32:43)
+Fra:0 Mem:12.76M (Peak 12.76M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Plane
+Fra:0 Mem:12.76M (Peak 12.76M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | material_block.stl
+Fra:0 Mem:14.42M (Peak 14.42M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:0 Mem:14.06M (Peak 14.42M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:0 Mem:14.07M (Peak 14.42M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:0 Mem:14.07M (Peak 14.42M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:0 Mem:14.07M (Peak 14.42M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:0 Mem:14.15M (Peak 14.42M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Procedurals
+Fra:0 Mem:14.15M (Peak 14.42M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Background
+Fra:0 Mem:14.15M (Peak 14.42M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Camera
+Fra:0 Mem:14.15M (Peak 14.42M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Meshes Flags
+Fra:0 Mem:14.15M (Peak 14.42M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects
+Fra:0 Mem:14.15M (Peak 14.42M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:0 Mem:14.15M (Peak 14.42M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:0 Mem:14.15M (Peak 14.42M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Particle Systems
+Fra:0 Mem:14.15M (Peak 14.42M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:0 Mem:14.15M (Peak 14.42M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Meshes
+Fra:0 Mem:14.45M (Peak 14.45M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:0 Mem:14.56M (Peak 14.56M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:0 Mem:14.56M (Peak 14.56M) | Time:00:00.00 | Mem:0.12M, Peak:0.12M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:0 Mem:14.56M (Peak 14.56M) | Time:00:00.00 | Mem:0.12M, Peak:0.12M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:0 Mem:14.56M (Peak 14.56M) | Time:00:00.00 | Mem:0.71M, Peak:0.71M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:0 Mem:14.56M (Peak 14.56M) | Time:00:00.00 | Mem:1.43M, Peak:2.02M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:0 Mem:14.56M (Peak 14.56M) | Time:00:00.00 | Mem:1.43M, Peak:2.02M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:0 Mem:15.23M (Peak 15.23M) | Time:00:00.00 | Mem:1.43M, Peak:2.02M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:0 Mem:15.23M (Peak 15.23M) | Time:00:00.00 | Mem:2.10M, Peak:2.10M | Scene, ViewLayer | Updating Objects Flags
+Fra:0 Mem:15.23M (Peak 15.23M) | Time:00:00.00 | Mem:2.10M, Peak:2.10M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:0 Mem:15.23M (Peak 15.23M) | Time:00:00.00 | Mem:2.10M, Peak:2.10M | Scene, ViewLayer | Updating Images
+Fra:0 Mem:15.23M (Peak 15.23M) | Time:00:00.00 | Mem:2.10M, Peak:2.10M | Scene, ViewLayer | Updating Camera Volume
+Fra:0 Mem:15.23M (Peak 15.23M) | Time:00:00.00 | Mem:2.10M, Peak:2.10M | Scene, ViewLayer | Updating Lookup Tables
+Fra:0 Mem:15.23M (Peak 15.23M) | Time:00:00.00 | Mem:2.18M, Peak:2.18M | Scene, ViewLayer | Updating Lights
+Fra:0 Mem:15.23M (Peak 15.23M) | Time:00:00.00 | Mem:2.18M, Peak:2.18M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:0 Mem:15.23M (Peak 15.23M) | Time:00:00.00 | Mem:2.18M, Peak:2.18M | Scene, ViewLayer | Updating Integrator
+Fra:0 Mem:15.23M (Peak 15.23M) | Time:00:00.00 | Mem:2.18M, Peak:2.18M | Scene, ViewLayer | Updating Film
+Fra:0 Mem:15.24M (Peak 15.24M) | Time:00:00.00 | Mem:2.10M, Peak:2.18M | Scene, ViewLayer | Updating Lookup Tables
+Fra:0 Mem:15.24M (Peak 15.24M) | Time:00:00.00 | Mem:2.18M, Peak:2.18M | Scene, ViewLayer | Updating Baking
+Fra:0 Mem:15.24M (Peak 15.24M) | Time:00:00.00 | Mem:2.18M, Peak:2.18M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:0 Mem:15.24M (Peak 15.24M) | Time:00:00.00 | Mem:2.18M, Peak:2.18M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:0 Mem:15.24M (Peak 15.24M) | Time:00:00.00 | Mem:2.18M, Peak:2.18M | Scene, ViewLayer | Sample 0/12
+Fra:0 Mem:32.82M (Peak 32.82M) | Time:00:00.17 | Remaining:00:01.79 | Mem:19.76M, Peak:19.76M | Scene, ViewLayer | Sample 1/12
+Fra:0 Mem:40.74M (Peak 52.17M) | Time:00:04.16 | Mem:19.76M, Peak:19.76M | Scene, ViewLayer | Sample 12/12
+Fra:0 Mem:40.74M (Peak 52.17M) | Time:00:04.16 | Mem:19.76M, Peak:19.76M | Scene, ViewLayer | Finished
+Fra:0 Mem:21.21M (Peak 52.17M) | Time:00:04.17 | Compositing
+Fra:0 Mem:21.21M (Peak 52.17M) | Time:00:04.17 | Compositing | Initializing execution
+Fra:0 Mem:21.22M (Peak 52.17M) | Time:00:04.17 | Compositing | Operation 2-6
+Fra:0 Mem:24.79M (Peak 52.17M) | Time:00:04.17 | Compositing | Operation 3-6
+Fra:0 Mem:24.80M (Peak 52.17M) | Time:00:04.17 | Compositing | Operation 4-6
+Fra:0 Mem:25.67M (Peak 52.17M) | Time:00:04.17 | Compositing | Operation 5-6
+Fra:0 Mem:25.67M (Peak 52.17M) | Time:00:04.17 | Compositing | Operation 6-6
+Fra:0 Mem:25.68M (Peak 52.17M) | Time:00:04.17 | Compositing | Operation 7-6
+Saved: 'C:\Users\28389\Desktop\k230-vision-optimized\.ops\local\topface-cad-probe\visible-0000.png'
+Saved: 'C:\Users\28389\Desktop\k230-vision-optimized\.ops\local\topface-cad-probe\rgb.png'
+Time: 00:04.36 (Saving: 00:00.02)
+
+
+Blender quit

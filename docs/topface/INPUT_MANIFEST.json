@@ -1,0 +1,42 @@
+{
+  "schema": "topface-kaggle-input-v1",
+  "files": [
+    {
+      "path": "audit_dataset.py",
+      "bytes": 4983,
+      "sha256": "e113812484e127dd2115520b8cbe037e1961687724ffaf48c130ee6f5d296525"
+    },
+    {
+      "path": "cad_bundle.zip",
+      "bytes": 608124,
+      "sha256": "642df0a28329ebe3adab0ca96888e5078b1a005dc7b9dbd345903e10274fc7f2"
+    },
+    {
+      "path": "cloud_store.py",
+      "bytes": 8379,
+      "sha256": "013b597f3dfe75e869cc868285e816cc09ef395a995a6803b6bc05010d6f01b1"
+    },
+    {
+      "path": "geometry.py",
+      "bytes": 2996,
+      "sha256": "de5c6055507a76ad5656bf8b3f554139bd154bf581b7196722e308a3a3985cc4"
+    },
+    {
+      "path": "hardware_profile.json",
+      "bytes": 13404,
+      "sha256": "0c34f53721c47e7b28735c9ab337662f385543a0a4367476ae85c1cfa34774d3"
+    },
+    {
+      "path": "kaggle_job.py",
+      "bytes": 5823,
+      "sha256": "0cdaa96787a64f8923a878a2ed24be0313bd5b09b5a8b9e22882d0a8c6a6386e"
+    },
+    {
+      "path": "render_scene.py",
+      "bytes": 12340,
+      "sha256": "d85bdf17c4bf749bdece4c7d77d716751003badf5a9c267a391cf3928c501331"
+    }
+  ],
+  "cad_bundle_original_sha256": "642df0a28329ebe3adab0ca96888e5078b1a005dc7b9dbd345903e10274fc7f2",
+  "source_git_head_before_changes": "be544e675e01f7b7e26a9eb36b62407ce5a3268c"
+}

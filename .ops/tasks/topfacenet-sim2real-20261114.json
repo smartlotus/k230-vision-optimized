@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "topfacenet-sim2real-20261114",
+  "title": "Auditable Kaggle TopFaceNet sim2real training with Drive persistence",
+  "paths": [
+    "research/topface",
+    "docs/topface"
+  ],
+  "lane": "serial",
+  "resources": [
+    "Kaggle-gpu",
+    "gdrive-k230"
+  ],
+  "depends": [],
+  "acceptance": [
+    "Hardware provenance and camera range recorded; original fused CAD unchanged; Kaggle render/audit/train evidence preserved; approved r4 and production hardware unchanged; private remote checkpoint verified"
+  ],
+  "branch": "ops/topfacenet-sim2real-20261114",
+  "state": "blocked",
+  "claimed": true,
+  "agent": "codex",
+  "session": "topface-20261114-a",
+  "revision": 3,
+  "handoff": ".ops/handoffs/topfacenet-sim2real-20261114/20261114T121129-956a8df6.json",
+  "updated_at": "2026-11-14T12:11:32+00:00"
+}
