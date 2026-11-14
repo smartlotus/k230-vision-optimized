@@ -27,7 +27,7 @@
       "scope": "separate synthetic/real assessment, paired PT/ORT/Simulator/KPU, deployment and full pipeline benchmark"
     }
   ],
-  "current_stage": "G4_KAGGLE_PILOT_V2_RUNNING",
+  "current_stage": "PILOT1000_COMPUTE_AND_DRIVE_ACCEPTED_PENDING_INDEPENDENT02_AUDIT",
   "training_started": false,
   "drive_folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
   "drive_remote": "gdrive:k230-topfacenet-20261114",
@@ -99,5 +99,6 @@
   "source_plan_sha256": "71be320b7411f85895d97f6b0924b06049b08f2c5fec603d7e42eeec8f8a7bec",
   "source_prompt": "K230_TopFaceNet_Execution_AI_Prompt_V1.1_2026-11-14.md",
   "source_prompt_sha256": "65124f3f35c294b3f6458c912bea3c3dfce727b69afde950e8c8c86f7dd7411c",
-  "logical_training_plan": "v11/training/TRAINING_PLAN.json"
+  "logical_training_plan": "v11/training/TRAINING_PLAN.json",
+  "pilot_acceptance": "v11/cloud/pilot-a02/ACCEPTANCE.json"
 }

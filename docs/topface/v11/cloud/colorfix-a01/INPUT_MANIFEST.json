@@ -1,0 +1,73 @@
+{
+  "schema": "topface-native-color-supplement-input-v1.1",
+  "created_utc": "2026-11-14T15:01:27.325005+00:00",
+  "run_id": "k230-topface-v11-color-counterexamples-a01",
+  "parent_run": "k230-topface-v11-pilot-1000-a02",
+  "original1000_replayed": false,
+  "new_scenes": 240,
+  "seed": 20261116,
+  "worker_max_seconds": 3600,
+  "provider_max_seconds": 4200,
+  "files": [
+    {
+      "path": "audit_v11.py",
+      "bytes": 9515,
+      "sha256": "d27c5a4022b84ec98e1fd82ee2eca27166db371d5bd8a4cd919df44009b8da37"
+    },
+    {
+      "path": "cad_bundle.bin",
+      "bytes": 608124,
+      "sha256": "642df0a28329ebe3adab0ca96888e5078b1a005dc7b9dbd345903e10274fc7f2"
+    },
+    {
+      "path": "cloud_store.py",
+      "bytes": 10870,
+      "sha256": "1f764499ce2098139a57cbcfd7406000c98f4a8ca914bb8d96e9e4656148cf34"
+    },
+    {
+      "path": "geometry.py",
+      "bytes": 2996,
+      "sha256": "de5c6055507a76ad5656bf8b3f554139bd154bf581b7196722e308a3a3985cc4"
+    },
+    {
+      "path": "input_locator.py",
+      "bytes": 941,
+      "sha256": "2a1f79933d67272996993a01ab8ad5da6b2d00710884456d9112f02ee00e0011"
+    },
+    {
+      "path": "native_cad.py",
+      "bytes": 4624,
+      "sha256": "0d58d5ded69f85cb320ea4781d17c4abccffd170f733d0edd798794bc15e2e75"
+    },
+    {
+      "path": "native_job.py",
+      "bytes": 13238,
+      "sha256": "3b4b45d5c08741b4ecfbecb853d2ae9f69c2048d3f8cc080f82995722f9a71ba"
+    },
+    {
+      "path": "render_native.py",
+      "bytes": 11089,
+      "sha256": "f76ea88ba5c530c617cd93846ffc4d8b9c7761e1680e4ae592c3303481d91b57"
+    },
+    {
+      "path": "scene_config.py",
+      "bytes": 4820,
+      "sha256": "2d7c8abcbb930ac2b857729d90dd86e91544b0672cccadcd457dd4db1b415b62"
+    },
+    {
+      "path": "SCENE_PLAN.json",
+      "bytes": 53359,
+      "sha256": "49d86e4fce4288114dd9d30d6ccb810d039137db6a89d7c2c6dc36a4026c1761"
+    },
+    {
+      "path": "SMOKE_HUMAN_REVIEW.json",
+      "bytes": 412,
+      "sha256": "5771259baeb8e81c9c27baf5cdb81b395aa72736bfb11c7055f816f8086346f7"
+    },
+    {
+      "path": "supplement_plan.py",
+      "bytes": 2667,
+      "sha256": "956a635aec1b64e73748b0dfdbf3276dd5bd2e35ee9dceabd3fde3cf2ab4b9b6"
+    }
+  ]
+}

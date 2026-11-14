@@ -84,6 +84,7 @@ def choose_overfit(root,width=320,height=192,count=16,seed=20261114):
         if counts.get('assignment_conflicts',0) or counts.get('no_representable_prior',0):continue
         if counts.get('observable_eligible_gt',0)!=len(items):continue
         features={'count'+str(len(items))}|{'color'+str(i['color_channel']) for i in items}
+        features|={'count'+str(len(items))+'_color'+str(i['color_channel']) for i in items}
         if any(i['geometry_valid'] for i in items):features.add('geometry')
         if any(not i['center_visible'] for i in items):features.add('hidden_center')
         if any(i['truncated'] for i in items):features.add('boundary')

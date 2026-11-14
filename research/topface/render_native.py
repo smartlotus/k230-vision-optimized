@@ -72,9 +72,16 @@ def main():
     parser.add_argument('--samples',type=int,default=24)
     parser.add_argument('--qualification',action='store_true')
     parser.add_argument('--max-seconds',type=int,default=1800)
+    parser.add_argument('--scene-plan',type=Path)
     argv=sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else []
     args=parser.parse_args(argv)
     if not 1<=args.count<=20000:raise ValueError('Count outside registered dataset range')
+    scene_plan=None
+    if args.scene_plan:
+        from supplement_plan import planned_config
+        scene_plan=json.loads(args.scene_plan.read_text(encoding='utf8'))
+        if scene_plan['count']!=args.count or len(scene_plan['scenes'])!=args.count:
+            raise ValueError('Explicit scene plan count differs from registered run')
     args.assets=args.assets.resolve();args.output=args.output.resolve()
     args.output.mkdir(parents=True,exist_ok=False)
     started=time.monotonic();deadline=started+args.max_seconds
@@ -126,7 +133,7 @@ def main():
         if time.monotonic()+30>=deadline:
             write_json(args.output/'PROGRESS.json',{'status':'BUDGET_STOP','completed_frames':frame,'requested_frames':args.count})
             raise RuntimeError('Stopped at a scene boundary before registered rendering deadline')
-        config=make_config(args.seed,frame,args.qualification)
+        config=planned_config(scene_plan,frame) if scene_plan is not None else make_config(args.seed,frame,args.qualification)
         directory=args.output/f'scene-{frame:05d}';directory.mkdir(exist_ok=False)
         scene.frame_set(frame)
         K=np.array(config['camera_intrinsics']);pose=np.array(config['camera_pose_world_from_cv'])

@@ -1,0 +1,8 @@
+{
+  "schema": "topface-board-port-inventory-v1.1",
+  "observed_utc": "2026-11-14T14:49:24.320664+00:00",
+  "port_opened": false,
+  "board_code_executed": false,
+  "runtime_readback": "NOT_RUN",
+  "status": "SERIAL_PACKAGE_UNAVAILABLE"
+}

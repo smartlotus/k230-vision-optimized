@@ -1,0 +1,7 @@
+test_counterexamples_cover_all_colors_each_count_each_split (test_color_sampling.ColorSamplingTests.test_counterexamples_cover_all_colors_each_count_each_split) ... ok
+test_full_generator_colors_are_not_a_function_of_count (test_color_sampling.ColorSamplingTests.test_full_generator_colors_are_not_a_function_of_count) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.499s
+
+OK

@@ -1,0 +1,28 @@
+{
+  "scope": "LOCAL106_INTEGRITY_INTERFACE_ONLY_NOT_FULL1240_COVERAGE",
+  "images": 106,
+  "instances": 264,
+  "parents": [
+    {
+      "prefix": "primary",
+      "archive_sha256": "local-smoke-qualified",
+      "audit_sha256": "704b84733629ddca835b8d16d8a650b995c0901a98793d4b52a1ec1e4ce760e8",
+      "images": 100
+    },
+    {
+      "prefix": "colorfix",
+      "archive_sha256": "local-colorfix-qualified",
+      "audit_sha256": "bd2cd834fa3a3a6334b3b11f7afcc7a56c036709a7112ffea929b7dd6a69ab0e",
+      "images": 6
+    }
+  ],
+  "scene_groups": 106,
+  "camera_group_cross_split_count": 0,
+  "exact_duplicate_rgb": 0,
+  "optimizer_updates": 0,
+  "conditional_color_coverage": {
+    "all_counts_have_all_six": false,
+    "all_split_count_pairs_have_all_six": false,
+    "all_split_count_pairs_have_observable_six": false
+  }
+}

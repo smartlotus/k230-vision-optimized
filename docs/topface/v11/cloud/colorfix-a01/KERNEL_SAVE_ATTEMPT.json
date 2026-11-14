@@ -1,0 +1,9 @@
+{
+  "operation": "QUICK_SAVE",
+  "observed_utc": "2026-11-14T15:03:31.839529+00:00",
+  "ref": "lotus30/k230-topface-v11-01b-color-counterexamples",
+  "source_sha256": "77656170df76fa4bb15233d8ae18169628831bc11d429ee8eb84613407b68615",
+  "session_timeout_seconds": 4200,
+  "scientific_execution": false,
+  "automatic_retry": false
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "topface-downstream-input-v1.1",
+  "phase": "audit",
+  "run_id": "k230-topface-v11-audit-a01",
+  "created_utc": "2026-11-14T14:50:43.655102+00:00",
+  "files": [
+    {
+      "path": "cloud_artifacts.py",
+      "bytes": 3242,
+      "sha256": "ec8757c25ccba6be3b4b7d48697b40021c6c7fd5f882e747e398f0ea74b9ee78"
+    },
+    {
+      "path": "cloud_store.py",
+      "bytes": 10870,
+      "sha256": "1f764499ce2098139a57cbcfd7406000c98f4a8ca914bb8d96e9e4656148cf34"
+    },
+    {
+      "path": "dataset_diagnostics.py",
+      "bytes": 8056,
+      "sha256": "99db26b320250916c4c698e396985b3d75c0e338bebaa651ce6a2de8bc053bb3"
+    },
+    {
+      "path": "DOWNSTREAM_CONFIG.json",
+      "bytes": 7365,
+      "sha256": "9566c183fc1d69cb4d48c68b70b18d56c7f9dceb1dd1a6e6f5a3d2e7804be0d6"
+    },
+    {
+      "path": "downstream_job.py",
+      "bytes": 9115,
+      "sha256": "ab787c13c036dfb2600983174bf64b70110944fbbb951dece68f305b64668c04"
+    },
+    {
+      "path": "geometry.py",
+      "bytes": 2996,
+      "sha256": "de5c6055507a76ad5656bf8b3f554139bd154bf581b7196722e308a3a3985cc4"
+    },
+    {
+      "path": "input_locator.py",
+      "bytes": 941,
+      "sha256": "2a1f79933d67272996993a01ab8ad5da6b2d00710884456d9112f02ee00e0011"
+    },
+    {
+      "path": "native_job.py",
+      "bytes": 13120,
+      "sha256": "1c80d0a3c598671243c343ee7a3d876dc9c844f4be128748c44d96bd1623f1be"
+    },
+    {
+      "path": "scene_config.py",
+      "bytes": 4417,
+      "sha256": "e1e8ed0ea3a035ebb0438ec197411978f4d5e765df098f90fa3a9c9b8aadbc00"
+    }
+  ]
+}

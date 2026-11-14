@@ -1,0 +1,102 @@
+{
+  "schema": "topface-pilot-compute-durable-acceptance-v1.1",
+  "status": "COMPUTE_QA_AND_FULL_DRIVE_READBACK_ACCEPTED",
+  "observed_utc": "2026-11-14T14:50:37.164318+00:00",
+  "kernel_id": 145002634,
+  "version": 2,
+  "run_id": "k230-topface-v11-pilot-1000-a02",
+  "input_manifest_sha256": "a623c1137b737420d38610793596caff281720a86321832d533f1d14299d614f",
+  "source_verified": "EXECUTED_SOURCE-v2.json",
+  "saved_result_sha256": "63dbf61aced05b69ac289427aa5c357e5addfddd78e6e9f50ea1b25e0efba354",
+  "images": 1000,
+  "instances": 2496,
+  "actual_device": {
+    "selected_backend": "OPTIX",
+    "attempts": [
+      {
+        "backend": "OPTIX",
+        "devices": [
+          {
+            "name": "Tesla T4",
+            "type": "CUDA"
+          },
+          {
+            "name": "Tesla T4",
+            "type": "CUDA"
+          },
+          {
+            "name": "Intel Xeon CPU @ 2.00GHz",
+            "type": "CPU"
+          },
+          {
+            "name": "Tesla T4",
+            "type": "OPTIX"
+          },
+          {
+            "name": "Tesla T4",
+            "type": "OPTIX"
+          }
+        ]
+      }
+    ],
+    "gpu_render_verified": true,
+    "successful_frames": 1000,
+    "blender_version": "4.2.9 LTS",
+    "numpy_version": "1.24.3"
+  },
+  "qa": {
+    "schema": "topface-v1.1-label-audit",
+    "status": "PASS",
+    "images": 1000,
+    "instances": 2496,
+    "issues": [],
+    "count_histogram": {
+      "0": 167,
+      "1": 167,
+      "2": 167,
+      "3": 167,
+      "4": 166,
+      "5": 166
+    },
+    "color_histogram": {
+      "1": 332,
+      "2": 499,
+      "3": 333,
+      "4": 500,
+      "5": 333,
+      "6": 499
+    },
+    "unique_scene_groups": 1000,
+    "unique_scene_seeds": 1000,
+    "camera_configuration_groups": 75,
+    "camera_group_cross_split_count": 0,
+    "split_policy": "SHA256 of height/pitch/HFOV configuration group; frozen before training",
+    "height_mm_range": [
+      100.0,
+      400.0
+    ],
+    "plane_angle_deg_range": [
+      80.0,
+      100.0
+    ],
+    "max_center_reprojection_error_px": 2.274846706538671e-13,
+    "strong_perspective_outside_user_envelope": "excluded, not claimed as covered",
+    "real_geometry_accuracy_verified": false
+  },
+  "drive_archive": {
+    "schema": "k230-cloud-direct-write-v1",
+    "run_id": "k230-topface-v11-pilot-1000-a02",
+    "status": "FULL_BYTE_SHA256_PASS",
+    "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+    "file_id": "14u97X9ziKHo7iOsSuMq4OIHfOPkstnBh",
+    "name": "k230-topface-v11-pilot-1000-a02-f559a9df0fe01ea1.tar.gz",
+    "bytes": 301494689,
+    "sha256": "f559a9df0fe01ea17884ce63671e6e89a162a037faa0a80045eec574e417430f",
+    "automatic_replay": false
+  },
+  "optimizer_updates": 0,
+  "training_admission": "REQUIRES_INDEPENDENT02_AND_COLOR_COUNT_SUPPLEMENT",
+  "raw_archive_downloaded_to_host": false,
+  "automatic_replay": false,
+  "post_acceptance_distribution_finding": "../../reports/COLOR_COUNT_CONFOUNDING.json"
+}

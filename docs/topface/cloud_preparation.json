@@ -1,6 +1,6 @@
 {
   "schema": "topface-cloud-current-v1.1",
-  "observed_utc": "2026-11-14T13:59:36.301562+00:00",
+  "observed_utc": "2026-11-14T14:54:13.308538+00:00",
   "historical_v1_preparation": {
     "schema": "k230-cloud-preparation-v1",
     "kernel": {
@@ -41,17 +41,28 @@
     "actual_running_version": 2,
     "latest_version": 3,
     "version3_status": "CANCEL_ACKNOWLEDGED",
-    "version2_status": "RUNNING",
-    "actual_stage": "PILOT_RENDER",
+    "version2_status": "COMPLETE",
+    "actual_stage": "COMPUTE_AND_QA_PASS",
     "executed_source_match": true,
     "input_dataset": "lotus30/k230-topface-native-v11-input-20261114-a02/1",
     "drive_admission_passed": true,
-    "cycles_gpu_verified": "PENDING_FINAL_DEVICE_RECEIPT"
+    "cycles_gpu_verified": true,
+    "actual_cycles_backend": "OPTIX",
+    "drive_archive_accepted": true
   },
   "run_id": "k230-topface-v11-pilot-1000-a02",
   "optimizer_updates": 0,
   "requested_pilot_scenes": 1000,
   "old_v8": "retired; do not restart",
-  "manual_next_step": null,
-  "note": "Read exact version2 live logs/status and final immutable receipts; latest version3 cancellation is a separate session. Do not submit a replacement scientific run."
+  "manual_next_step": {
+    "ref": "lotus30/k230-topface-v11-02-dataset-audit",
+    "kernel_id": 145013738,
+    "prepared_version": 1,
+    "action": "attach existing Secret and Save&RunAll once, CPU audit only",
+    "reason": "API Save has no Secret binding capability"
+  },
+  "note": "Read exact version2 live logs/status and final immutable receipts; latest version3 cancellation is a separate session. Do not submit a replacement scientific run.",
+  "actual_pilot_scenes": 1000,
+  "actual_instances": 2496,
+  "pilot_acceptance": "v11/cloud/pilot-a02/ACCEPTANCE.json"
 }

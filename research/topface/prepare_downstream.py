@@ -16,7 +16,7 @@ ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
 
 
-def main(phase,revision,pilot_result,staging,audit_acceptance=None):
+def main(phase,revision,pilot_result,staging,audit_acceptance=None,supplement_result=None):
     if phase not in ('audit','training') or not revision.isalnum():raise ValueError('Explicit phase/revision required')
     parent=json.loads(Path(pilot_result).read_text(encoding='utf8'))
     if parent['status']!='COMPUTE_AND_QA_PASS' or parent['images_rendered']!=1000 or parent['durable_status']!='FULL_BYTE_SHA256_PASS':
@@ -37,7 +37,12 @@ def main(phase,revision,pilot_result,staging,audit_acceptance=None):
         'max_seconds':1800 if phase=='audit' else 9000,'provider_max_seconds':2400 if phase=='audit' else 10800,
         'worker_budget':'includes source fetch, diagnostics, finite experiment(s), archive, full Drive readback',
         'automatic_replay':False,'full_admission':False}
-    files=['geometry.py','scene_config.py','cloud_store.py','native_job.py','cloud_artifacts.py',
+    if supplement_result:
+        supplement=json.loads(Path(supplement_result).read_text(encoding='utf8'))
+        if supplement['status']!='COMPUTE_AND_QA_PASS' or supplement['images_rendered']!=240 or supplement['durable_status']!='FULL_BYTE_SHA256_PASS':
+            raise ValueError('Supplement compute/QA/storage has not passed')
+        config['supplement_compute']=supplement
+    files=['geometry.py','scene_config.py','cloud_store.py','native_job.py','cloud_artifacts.py','combine_datasets.py',
            'downstream_job.py','dataset_diagnostics.py','input_locator.py']
     if phase=='training':
         if audit_acceptance is None:raise ValueError('Independent02 audit receipt required before training preparation')
@@ -104,4 +109,5 @@ if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--phase',choices=['audit','training'],required=True)
     p.add_argument('--revision',required=True);p.add_argument('--pilot-result',type=Path,required=True)
     p.add_argument('--staging',type=Path,required=True);p.add_argument('--audit-acceptance',type=Path)
+    p.add_argument('--supplement-result',type=Path)
     main(**vars(p.parse_args()))

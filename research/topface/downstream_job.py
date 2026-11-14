@@ -54,6 +54,21 @@ def main(input_root,run_id,phase,max_seconds=7200):
         audit=json.loads((pilot/'AUDIT_V11.json').read_text(encoding='utf8'))
         if audit['status']!='PASS' or audit['images']!=1000:raise ValueError('Parent label audit mismatch')
         state['pilot_archive_sha256']=receipt['sha256'];state['pilot_audit_sha256']=sha(pilot/'AUDIT_V11.json')
+        expected_count=1000
+        if config.get('supplement_compute'):
+            supplement=config['supplement_compute'];extra_receipt=supplement['drive_archive']
+            if supplement['status']!='COMPUTE_AND_QA_PASS' or supplement['images_rendered']!=240 or supplement['durable_status']!='FULL_BYTE_SHA256_PASS':
+                raise ValueError('Original240-scene supplement compute/QA/storage acceptance required')
+            fetch_archive(drive,extra_receipt,directory/'supplement.tar.gz')
+            state['supplement_members']=extract_verified_archive(directory/'supplement.tar.gz',directory/'supplement-source')
+            from combine_datasets import combine
+            composite=directory/'composite-pilot'
+            combined=combine([('primary',pilot,receipt['sha256']),
+                ('colorfix',directory/'supplement-source/pilot',extra_receipt['sha256'])],composite)
+            if combined['images']!=1240:raise ValueError('Composite Pilot denominator differs')
+            pilot=composite;expected_count=1240
+            state['supplement_archive_sha256']=extra_receipt['sha256']
+            state['composite_audit_sha256']=sha(pilot/'AUDIT_V11.json')
         source=result/'source';source.mkdir()
         for member in manifest['files']:
             path=input_root/member['path']
@@ -61,18 +76,25 @@ def main(input_root,run_id,phase,max_seconds=7200):
                 target=source/member['path'];target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(path,target)
         stage('INDEPENDENT_DATASET_DIAGNOSTICS')
         from dataset_diagnostics import diagnose
-        diagnostics=diagnose(pilot,1000);atomic_json(result/'DATASET_DIAGNOSTICS.json',diagnostics)
+        diagnostics=diagnose(pilot,expected_count);atomic_json(result/'DATASET_DIAGNOSTICS.json',diagnostics)
         # Similarity is a review candidate. Do not silently delete frames or
         # turn grayscale similarity into a fabricated provenance violation.
         near=diagnostics['perceptual_similarity']['candidate_counts'].get('cross_split_contains_target',0)
         if phase=='audit':
-            state.update(status='AUDIT_COMPLETE',images=1000,diagnostics={k:diagnostics[k] for k in (
-                'images','world_instances','split_images','visibility_denominators','per_input','perceptual_similarity')},
-                training_admission='NEEDS_SIMILARITY_REVIEW' if near else 'INTEGRITY_AND_GROUP_PASS')
+            conditional=diagnostics['conditional_color_coverage']['all_split_count_pairs_have_observable_six']
+            state.update(status='AUDIT_COMPLETE',images=expected_count,diagnostics={k:diagnostics[k] for k in (
+                'images','world_instances','split_images','visibility_denominators','per_input','perceptual_similarity',
+                'conditional_color_coverage','world_color_by_split_and_count')},
+                training_admission=('NEEDS_COLOR_COUNT_COVERAGE' if not conditional else
+                    'NEEDS_SIMILARITY_REVIEW' if near else 'INTEGRITY_AND_GROUP_PASS'))
         else:
             audit_acceptance=config['audit_acceptance']
             if audit_acceptance['pilot_archive_sha256']!=receipt['sha256'] or audit_acceptance['training_admission']!='PASS':
                 raise ValueError('Independent02 audit acceptance missing/different')
+            if not diagnostics['conditional_color_coverage']['all_split_count_pairs_have_observable_six']:
+                raise ValueError('Count/color confounding coverage is still incomplete')
+            if config.get('supplement_compute') and audit_acceptance.get('supplement_archive_sha256')!=state['supplement_archive_sha256']:
+                raise ValueError('Independent02 acceptance does not bind supplemental archive')
             if near and not audit_acceptance.get('similarity_review_passed'):
                 raise ValueError('Target-bearing cross-split similarity review required')
             import torch

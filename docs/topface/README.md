@@ -7,7 +7,11 @@
 - G0/G1：真实工程、r4、相机、AI2D/KPU和原始模型审计已完成首轮，见 [审计](v11/audit/PROJECT_AUDIT.md)、[未知项](v11/audit/RISK_AND_UNKNOWN.md)。实时CSI2 RGB888P、真实内参/失焦/ISP/新现场FPS仍未确认。
 - G2：本地原生Blender实际100场景/246实例，自动QA通过，用户30图抽查通过；完整归档已迁移Drive并全字节SHA读回，见 [QA](v11/reports/SIMULATION_QA.md)、[回执](v11/reports/SMOKE_DRIVE_ACCEPTANCE.json)、[预览](v11/previews/index.html)。不冒充Kaggle/GPU或真实识别精度。
 - G3：两个官方COCO图均已ORT、nncase2.11编译和Simulator；NanoDet官方EMA加载及三个矩形尺寸的项目头也完成PT/ORT和编译/Simulator。新增头仍未训练，量化误差未接受，板端未运行。见 [兼容性报告](v11/g3/COMPATIBILITY.md)。
-- G4：用户已启动新 [01_simulation Pilot Notebook](https://www.kaggle.com/code/lotus30/k230-topface-v11-01-simulation-pilot/edit)。实际运行 **v2、ID145002634**；v3是另一个取消的会话。v2源码已读回匹配，Drive准入和单帧资格验证通过，进入1000场景PILOT_RENDER。最新观察见 `v11/cloud/pilot-a02/OBSERVATION-v2-latest.json`。在最终RESULT与Drive归档验收前，不能称Pilot完成。
+- G4：新 [01_simulation Pilot Notebook](https://www.kaggle.com/code/lotus30/k230-topface-v11-01-simulation-pilot/edit) 实际 **v2、ID145002634** 已 COMPLETE，1000独立场景/2496实例、QA PASS、75相机配置组无跨split。实际Cycles为Tesla T4 OPTIX、1000帧；总3647.732s。301494689字节归档已在Drive全字节SHA读回，精确版本/源码/输入/保存JSON一致。见 `v11/cloud/pilot-a02/ACCEPTANCE.json` 和 `v11/reports/PILOT1000_SUMMARY.json`。v3是独立取消会话，旧v8仍退役。
+- 条件分布检查发现原生成器的颜色与物块数量相关（单目标全黄、双目标仅蓝绿）。原1000标签/几何及归档有效，但尚不能据此准入训练。见 `v11/reports/COLOR_COUNT_CONFOUNDING.json`。
+- 已准备 [01b颜色组合补充](https://www.kaggle.com/code/lotus30/k230-topface-v11-01b-color-counterexamples/edit) v1（ID145015590），只新增240场景，原1000不重跑；120train/60val/60test，每split/count1..5均含六色，seed/group与原1000无交集。新颜色RNG不扰动几何/光照；6图实际qualification与独立审查通过。私有输入及源码已读回匹配。需要用户关联Secret并Save&RunAll一次。
+- [02独立CPU审计](https://www.kaggle.com/code/lotus30/k230-topface-v11-02-dataset-audit/edit) v1（ID145013738）也已准备并读回匹配，等待同样的编辑器启动。它先审计原数据，不重算渲染。两个任务可并行；原02源码是已冻结基线，后续原1000+补240的独立合并审计使用新revision，不能直接继承基线审计为组合数据训练验收。
+- 组合训练前将再次校验原1000和补240两个归档全部成员，保持标签与split原字节，拒绝重复scene/seed/RGB或跨splitcamera group。组合数据1240，训练门要求每split/count的可观察顶面覆盖六色；按条件统计与近重复审查通过后才运行03训练。尚未准入Full。
 - 训练 optimizer updates=0。计划4个逻辑训练实验（overfit、20epoch预训练Pilot、同预算随机初始化对照、唯一正式全量模型），见 [训练顺序](v11/training/TRAINING_PLAN.json)。两个候选不会各做全量训练。
 
 ## 冻结身份与云存储
@@ -35,4 +39,4 @@ r4两仓相同SHA且未修改：12图/33框，7批准图/17框，实际5个黑�
 3. 运行独立02_dataset_audit的尺度/可见性/近重复/泄漏诊断，再进入03_training的10–20图overfit及Pilot短训。Pilot门禁通过后再准入Full10000–20000场景和唯一正式模型。
 4. 完成合成/真实分开的评估、最终train-only PTQ、PT/ORT/Simulator/KPU配对及板端完整链路benchmark。尚未完成，不从历史冻结图FPS推断新模型25FPS。
 
-本地主机检查：`python -m unittest discover -s research/topface -p 'test_*.py' -v`。当前32项通过，日志 `v11/reports/host_all_tests.log`。原生worker最新本地qualification为6图/15实例，`v11/reports/native_worker_qualification.json`。兼容性导出与nncase使用已有隔离CPU环境，不向旧工程安装依赖。
+本地主机检查：`python -m unittest discover -s research/topface -p 'test_*.py' -v`。当前38项通过，日志 `v11/reports/host_all_tests.log`。原生worker最新本地qualification为6图/15实例，`v11/reports/native_worker_qualification.json`。兼容性导出与nncase使用已有隔离CPU环境，不向旧工程安装依赖。

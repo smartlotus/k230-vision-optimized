@@ -1,0 +1,11 @@
+{
+  "schema": "k230-cloud-direct-write-v1",
+  "run_id": "k230-topface-v11-pilot-1000-a02",
+  "status": "FULL_BYTE_SHA256_PASS",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "file_id": "14u97X9ziKHo7iOsSuMq4OIHfOPkstnBh",
+  "name": "k230-topface-v11-pilot-1000-a02-f559a9df0fe01ea1.tar.gz",
+  "bytes": 301494689,
+  "sha256": "f559a9df0fe01ea17884ce63671e6e89a162a037faa0a80045eec574e417430f",
+  "automatic_replay": false
+}

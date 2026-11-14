@@ -1,0 +1,2655 @@
+{
+  "schema": "topface-counterexample-scene-plan-v1.1",
+  "base_seed": 20261116,
+  "count": 240,
+  "parent_pilot_run": "k230-topface-v11-pilot-1000-a02",
+  "parent_pilot_replayed": false,
+  "purpose": "break count/color confounding; every1..5 count includes every first-target color within each split",
+  "split_scene_quotas": {
+    "train": 120,
+    "val": 60,
+    "synthetic_test": 60
+  },
+  "scenes": [
+    {
+      "source_scene_index": 586,
+      "expected_instance_count": 4,
+      "split": "synthetic_test",
+      "camera_group_id": "H175-P90-F68",
+      "color_ids": [
+        2,
+        6,
+        1,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 33,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H325-P85-F65",
+      "color_ids": [
+        5,
+        3,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 127,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H250-P80-F68",
+      "color_ids": [
+        4
+      ]
+    },
+    {
+      "source_scene_index": 47,
+      "expected_instance_count": 5,
+      "split": "val",
+      "camera_group_id": "H250-P100-F65",
+      "color_ids": [
+        3,
+        6,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 148,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H325-P100-F68",
+      "color_ids": [
+        1,
+        4,
+        6,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 79,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H400-P80-F62",
+      "color_ids": [
+        4
+      ]
+    },
+    {
+      "source_scene_index": 15,
+      "expected_instance_count": 3,
+      "split": "val",
+      "camera_group_id": "H100-P95-F62",
+      "color_ids": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 38,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H325-P90-F65",
+      "color_ids": [
+        5,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 109,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H400-P85-F65",
+      "color_ids": [
+        2
+      ]
+    },
+    {
+      "source_scene_index": 155,
+      "expected_instance_count": 5,
+      "split": "val",
+      "camera_group_id": "H100-P85-F62",
+      "color_ids": [
+        6,
+        2,
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 225,
+      "expected_instance_count": 3,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P80-F62",
+      "color_ids": [
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 141,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H175-P95-F68",
+      "color_ids": [
+        1,
+        4,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 226,
+      "expected_instance_count": 4,
+      "split": "val",
+      "camera_group_id": "H175-P80-F62",
+      "color_ids": [
+        6,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 185,
+      "expected_instance_count": 5,
+      "split": "val",
+      "camera_group_id": "H100-P90-F65",
+      "color_ids": [
+        1,
+        5,
+        2,
+        6,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 93,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H325-P95-F62",
+      "color_ids": [
+        6,
+        2,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 7,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H250-P85-F62",
+      "color_ids": [
+        1
+      ]
+    },
+    {
+      "source_scene_index": 51,
+      "expected_instance_count": 3,
+      "split": "val",
+      "camera_group_id": "H175-P80-F68",
+      "color_ids": [
+        3,
+        2,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 56,
+      "expected_instance_count": 2,
+      "split": "val",
+      "camera_group_id": "H175-P85-F68",
+      "color_ids": [
+        2,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 849,
+      "expected_instance_count": 3,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P100-F62",
+      "color_ids": [
+        6,
+        1,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 14,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H400-P90-F62",
+      "color_ids": [
+        3,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 511,
+      "expected_instance_count": 1,
+      "split": "synthetic_test",
+      "camera_group_id": "H175-P90-F68",
+      "color_ids": [
+        1
+      ]
+    },
+    {
+      "source_scene_index": 436,
+      "expected_instance_count": 4,
+      "split": "synthetic_test",
+      "camera_group_id": "H175-P90-F68",
+      "color_ids": [
+        6,
+        3,
+        2,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 98,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H325-P100-F62",
+      "color_ids": [
+        6,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 194,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H400-P95-F65",
+      "color_ids": [
+        5,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 178,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H325-P80-F65",
+      "color_ids": [
+        5,
+        4,
+        2,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 189,
+      "expected_instance_count": 3,
+      "split": "val",
+      "camera_group_id": "H400-P90-F65",
+      "color_ids": [
+        5,
+        1,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 257,
+      "expected_instance_count": 5,
+      "split": "synthetic_test",
+      "camera_group_id": "H250-P85-F65",
+      "color_ids": [
+        5,
+        4,
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 169,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H400-P95-F62",
+      "color_ids": [
+        3
+      ]
+    },
+    {
+      "source_scene_index": 699,
+      "expected_instance_count": 3,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P100-F62",
+      "color_ids": [
+        4,
+        6,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 5,
+      "expected_instance_count": 5,
+      "split": "val",
+      "camera_group_id": "H100-P85-F62",
+      "color_ids": [
+        1,
+        3,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 91,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H175-P95-F62",
+      "color_ids": [
+        5
+      ]
+    },
+    {
+      "source_scene_index": 27,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H250-P80-F65",
+      "color_ids": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 177,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H250-P80-F65",
+      "color_ids": [
+        6,
+        3,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 80,
+      "expected_instance_count": 2,
+      "split": "val",
+      "camera_group_id": "H100-P85-F62",
+      "color_ids": [
+        3,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 39,
+      "expected_instance_count": 3,
+      "split": "val",
+      "camera_group_id": "H400-P90-F65",
+      "color_ids": [
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 75,
+      "expected_instance_count": 3,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P80-F62",
+      "color_ids": [
+        1,
+        4,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 46,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H175-P100-F65",
+      "color_ids": [
+        6,
+        5,
+        2,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 356,
+      "expected_instance_count": 2,
+      "split": "val",
+      "camera_group_id": "H175-P85-F68",
+      "color_ids": [
+        6,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 335,
+      "expected_instance_count": 5,
+      "split": "val",
+      "camera_group_id": "H100-P90-F65",
+      "color_ids": [
+        6,
+        3,
+        4,
+        2,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 135,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H100-P90-F68",
+      "color_ids": [
+        6,
+        2,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 201,
+      "expected_instance_count": 3,
+      "split": "val",
+      "camera_group_id": "H175-P80-F68",
+      "color_ids": [
+        6,
+        3,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 105,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H100-P85-F65",
+      "color_ids": [
+        1,
+        6,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 164,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H400-P90-F62",
+      "color_ids": [
+        2,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 82,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H250-P85-F62",
+      "color_ids": [
+        5,
+        3,
+        1,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 40,
+      "expected_instance_count": 4,
+      "split": "val",
+      "camera_group_id": "H100-P95-F65",
+      "color_ids": [
+        1,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 147,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H250-P100-F68",
+      "color_ids": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 121,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H175-P100-F65",
+      "color_ids": [
+        3
+      ]
+    },
+    {
+      "source_scene_index": 200,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H100-P80-F68",
+      "color_ids": [
+        6,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 22,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H250-P100-F62",
+      "color_ids": [
+        3,
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 197,
+      "expected_instance_count": 5,
+      "split": "val",
+      "camera_group_id": "H250-P100-F65",
+      "color_ids": [
+        2,
+        4,
+        5,
+        3,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 149,
+      "expected_instance_count": 5,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P100-F68",
+      "color_ids": [
+        3,
+        6,
+        5,
+        4,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 131,
+      "expected_instance_count": 5,
+      "split": "val",
+      "camera_group_id": "H175-P85-F68",
+      "color_ids": [
+        5,
+        3,
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 340,
+      "expected_instance_count": 4,
+      "split": "val",
+      "camera_group_id": "H100-P95-F65",
+      "color_ids": [
+        3,
+        4,
+        1,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 71,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H175-P100-F68",
+      "color_ids": [
+        2,
+        5,
+        4,
+        3,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 610,
+      "expected_instance_count": 4,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P90-F62",
+      "color_ids": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 134,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H400-P85-F68",
+      "color_ids": [
+        3,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 62,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H250-P90-F68",
+      "color_ids": [
+        2,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 64,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H400-P90-F68",
+      "color_ids": [
+        3,
+        6,
+        4,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 175,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H100-P80-F65",
+      "color_ids": [
+        4
+      ]
+    },
+    {
+      "source_scene_index": 184,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H400-P85-F65",
+      "color_ids": [
+        6,
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 41,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H175-P95-F65",
+      "color_ids": [
+        4,
+        1,
+        3,
+        5,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 76,
+      "expected_instance_count": 4,
+      "split": "val",
+      "camera_group_id": "H175-P80-F62",
+      "color_ids": [
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 245,
+      "expected_instance_count": 5,
+      "split": "val",
+      "camera_group_id": "H100-P100-F62",
+      "color_ids": [
+        3,
+        4,
+        6,
+        2,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 301,
+      "expected_instance_count": 1,
+      "split": "val",
+      "camera_group_id": "H175-P80-F62",
+      "color_ids": [
+        3
+      ]
+    },
+    {
+      "source_scene_index": 525,
+      "expected_instance_count": 3,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P80-F62",
+      "color_ids": [
+        1,
+        4,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 170,
+      "expected_instance_count": 2,
+      "split": "val",
+      "camera_group_id": "H100-P100-F62",
+      "color_ids": [
+        6,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 133,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H325-P85-F68",
+      "color_ids": [
+        5
+      ]
+    },
+    {
+      "source_scene_index": 23,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H325-P100-F62",
+      "color_ids": [
+        3,
+        5,
+        4,
+        1,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 217,
+      "expected_instance_count": 1,
+      "split": "val",
+      "camera_group_id": "H250-P95-F68",
+      "color_ids": [
+        1
+      ]
+    },
+    {
+      "source_scene_index": 153,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H325-P80-F62",
+      "color_ids": [
+        3,
+        4,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 19,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H400-P95-F62",
+      "color_ids": [
+        2
+      ]
+    },
+    {
+      "source_scene_index": 376,
+      "expected_instance_count": 4,
+      "split": "val",
+      "camera_group_id": "H175-P80-F62",
+      "color_ids": [
+        4,
+        6,
+        5,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 103,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H325-P80-F65",
+      "color_ids": [
+        1
+      ]
+    },
+    {
+      "source_scene_index": 265,
+      "expected_instance_count": 1,
+      "split": "val",
+      "camera_group_id": "H100-P95-F65",
+      "color_ids": [
+        2
+      ]
+    },
+    {
+      "source_scene_index": 124,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H400-P100-F65",
+      "color_ids": [
+        5,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 313,
+      "expected_instance_count": 1,
+      "split": "val",
+      "camera_group_id": "H325-P90-F62",
+      "color_ids": [
+        4
+      ]
+    },
+    {
+      "source_scene_index": 190,
+      "expected_instance_count": 4,
+      "split": "val",
+      "camera_group_id": "H100-P95-F65",
+      "color_ids": [
+        5,
+        1,
+        6,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 442,
+      "expected_instance_count": 4,
+      "split": "val",
+      "camera_group_id": "H250-P95-F68",
+      "color_ids": [
+        6,
+        2,
+        5,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 145,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H100-P100-F68",
+      "color_ids": [
+        1
+      ]
+    },
+    {
+      "source_scene_index": 176,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H175-P80-F65",
+      "color_ids": [
+        3,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 34,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H400-P85-F65",
+      "color_ids": [
+        5,
+        3,
+        4,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 760,
+      "expected_instance_count": 4,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P90-F62",
+      "color_ids": [
+        5,
+        6,
+        2,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 292,
+      "expected_instance_count": 4,
+      "split": "val",
+      "camera_group_id": "H250-P95-F68",
+      "color_ids": [
+        2,
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 122,
+      "expected_instance_count": 2,
+      "split": "val",
+      "camera_group_id": "H250-P100-F65",
+      "color_ids": [
+        5,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 158,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H325-P85-F62",
+      "color_ids": [
+        1,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 37,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H250-P90-F65",
+      "color_ids": [
+        5
+      ]
+    },
+    {
+      "source_scene_index": 501,
+      "expected_instance_count": 3,
+      "split": "val",
+      "camera_group_id": "H175-P80-F68",
+      "color_ids": [
+        6,
+        5,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 9,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H400-P85-F62",
+      "color_ids": [
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 101,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H175-P80-F65",
+      "color_ids": [
+        6,
+        3,
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 28,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H325-P80-F65",
+      "color_ids": [
+        4,
+        5,
+        3,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 1,
+      "expected_instance_count": 1,
+      "split": "val",
+      "camera_group_id": "H175-P80-F62",
+      "color_ids": [
+        1
+      ]
+    },
+    {
+      "source_scene_index": 235,
+      "expected_instance_count": 1,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P90-F62",
+      "color_ids": [
+        4
+      ]
+    },
+    {
+      "source_scene_index": 599,
+      "expected_instance_count": 5,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P100-F68",
+      "color_ids": [
+        6,
+        2,
+        1,
+        5,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 20,
+      "expected_instance_count": 2,
+      "split": "val",
+      "camera_group_id": "H100-P100-F62",
+      "color_ids": [
+        1,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 554,
+      "expected_instance_count": 2,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P80-F65",
+      "color_ids": [
+        6,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 375,
+      "expected_instance_count": 3,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P80-F62",
+      "color_ids": [
+        5,
+        4,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 152,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H250-P80-F62",
+      "color_ids": [
+        6,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 685,
+      "expected_instance_count": 1,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P90-F62",
+      "color_ids": [
+        4
+      ]
+    },
+    {
+      "source_scene_index": 182,
+      "expected_instance_count": 2,
+      "split": "synthetic_test",
+      "camera_group_id": "H250-P85-F65",
+      "color_ids": [
+        4,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 224,
+      "expected_instance_count": 2,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P100-F68",
+      "color_ids": [
+        5,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 238,
+      "expected_instance_count": 4,
+      "split": "val",
+      "camera_group_id": "H325-P90-F62",
+      "color_ids": [
+        1,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 21,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H175-P100-F62",
+      "color_ids": [
+        3,
+        6,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 320,
+      "expected_instance_count": 2,
+      "split": "val",
+      "camera_group_id": "H100-P100-F62",
+      "color_ids": [
+        5,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 404,
+      "expected_instance_count": 2,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P80-F65",
+      "color_ids": [
+        3,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 50,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H100-P80-F68",
+      "color_ids": [
+        1,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 67,
+      "expected_instance_count": 1,
+      "split": "val",
+      "camera_group_id": "H250-P95-F68",
+      "color_ids": [
+        3
+      ]
+    },
+    {
+      "source_scene_index": 171,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H175-P100-F62",
+      "color_ids": [
+        5,
+        2,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 260,
+      "expected_instance_count": 2,
+      "split": "val",
+      "camera_group_id": "H100-P90-F65",
+      "color_ids": [
+        3,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 2,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H250-P80-F62",
+      "color_ids": [
+        1,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 479,
+      "expected_instance_count": 5,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P80-F65",
+      "color_ids": [
+        4,
+        2,
+        6,
+        1,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 11,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H175-P90-F62",
+      "color_ids": [
+        1,
+        3,
+        5,
+        2,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 110,
+      "expected_instance_count": 2,
+      "split": "val",
+      "camera_group_id": "H100-P90-F65",
+      "color_ids": [
+        4,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 123,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H325-P100-F65",
+      "color_ids": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 25,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H100-P80-F65",
+      "color_ids": [
+        3
+      ]
+    },
+    {
+      "source_scene_index": 161,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H175-P90-F62",
+      "color_ids": [
+        6,
+        3,
+        2,
+        1,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 315,
+      "expected_instance_count": 3,
+      "split": "val",
+      "camera_group_id": "H100-P95-F62",
+      "color_ids": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 16,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H175-P95-F62",
+      "color_ids": [
+        2,
+        3,
+        6,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 286,
+      "expected_instance_count": 4,
+      "split": "synthetic_test",
+      "camera_group_id": "H175-P90-F68",
+      "color_ids": [
+        4,
+        5,
+        1,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 163,
+      "expected_instance_count": 1,
+      "split": "val",
+      "camera_group_id": "H325-P90-F62",
+      "color_ids": [
+        6
+      ]
+    },
+    {
+      "source_scene_index": 99,
+      "expected_instance_count": 3,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P100-F62",
+      "color_ids": [
+        2,
+        1,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 130,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H100-P85-F68",
+      "color_ids": [
+        6,
+        5,
+        3,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 13,
+      "expected_instance_count": 1,
+      "split": "val",
+      "camera_group_id": "H325-P90-F62",
+      "color_ids": [
+        2
+      ]
+    },
+    {
+      "source_scene_index": 59,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H400-P85-F68",
+      "color_ids": [
+        6,
+        1,
+        5,
+        4,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 143,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H325-P95-F68",
+      "color_ids": [
+        5,
+        4,
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 399,
+      "expected_instance_count": 3,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P100-F62",
+      "color_ids": [
+        6,
+        4,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 249,
+      "expected_instance_count": 3,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P100-F62",
+      "color_ids": [
+        4,
+        5,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 77,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H250-P80-F62",
+      "color_ids": [
+        3,
+        5,
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 92,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H250-P95-F62",
+      "color_ids": [
+        5,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 125,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H100-P80-F68",
+      "color_ids": [
+        3,
+        2,
+        4,
+        6,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 211,
+      "expected_instance_count": 1,
+      "split": "synthetic_test",
+      "camera_group_id": "H175-P90-F68",
+      "color_ids": [
+        3
+      ]
+    },
+    {
+      "source_scene_index": 100,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H100-P80-F65",
+      "color_ids": [
+        1,
+        6,
+        2,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 460,
+      "expected_instance_count": 4,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P90-F62",
+      "color_ids": [
+        1,
+        4,
+        3,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 140,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H100-P95-F68",
+      "color_ids": [
+        4,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 119,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H400-P95-F65",
+      "color_ids": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 128,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H325-P80-F68",
+      "color_ids": [
+        2,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 172,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H250-P100-F62",
+      "color_ids": [
+        4,
+        5,
+        1,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 557,
+      "expected_instance_count": 5,
+      "split": "synthetic_test",
+      "camera_group_id": "H250-P85-F65",
+      "color_ids": [
+        5,
+        4,
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 65,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H100-P95-F68",
+      "color_ids": [
+        1,
+        5,
+        6,
+        2,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 118,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H325-P95-F65",
+      "color_ids": [
+        4,
+        6,
+        2,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 58,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H325-P85-F68",
+      "color_ids": [
+        2,
+        3,
+        1,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 63,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H325-P90-F68",
+      "color_ids": [
+        2,
+        5,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 351,
+      "expected_instance_count": 3,
+      "split": "val",
+      "camera_group_id": "H175-P80-F68",
+      "color_ids": [
+        3,
+        4,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 524,
+      "expected_instance_count": 2,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P100-F68",
+      "color_ids": [
+        5,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 137,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H250-P90-F68",
+      "color_ids": [
+        4,
+        3,
+        6,
+        2,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 45,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H100-P100-F65",
+      "color_ids": [
+        6,
+        4,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 61,
+      "expected_instance_count": 1,
+      "split": "synthetic_test",
+      "camera_group_id": "H175-P90-F68",
+      "color_ids": [
+        1
+      ]
+    },
+    {
+      "source_scene_index": 181,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H175-P85-F65",
+      "color_ids": [
+        5
+      ]
+    },
+    {
+      "source_scene_index": 339,
+      "expected_instance_count": 3,
+      "split": "val",
+      "camera_group_id": "H400-P90-F65",
+      "color_ids": [
+        2,
+        5,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 68,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H325-P95-F68",
+      "color_ids": [
+        3,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 407,
+      "expected_instance_count": 5,
+      "split": "synthetic_test",
+      "camera_group_id": "H250-P85-F65",
+      "color_ids": [
+        2,
+        4,
+        6,
+        1,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 31,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H175-P85-F65",
+      "color_ids": [
+        4
+      ]
+    },
+    {
+      "source_scene_index": 361,
+      "expected_instance_count": 1,
+      "split": "synthetic_test",
+      "camera_group_id": "H175-P90-F68",
+      "color_ids": [
+        5
+      ]
+    },
+    {
+      "source_scene_index": 157,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H250-P85-F62",
+      "color_ids": [
+        2
+      ]
+    },
+    {
+      "source_scene_index": 8,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H325-P85-F62",
+      "color_ids": [
+        2,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 17,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H250-P95-F62",
+      "color_ids": [
+        2,
+        5,
+        6,
+        1,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 94,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H400-P95-F62",
+      "color_ids": [
+        6,
+        2,
+        5,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 57,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H250-P85-F68",
+      "color_ids": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 254,
+      "expected_instance_count": 2,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P80-F65",
+      "color_ids": [
+        6,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 209,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H400-P85-F68",
+      "color_ids": [
+        5,
+        6,
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 4,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H400-P80-F62",
+      "color_ids": [
+        1,
+        3,
+        5,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 117,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H250-P95-F65",
+      "color_ids": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 230,
+      "expected_instance_count": 2,
+      "split": "val",
+      "camera_group_id": "H100-P85-F62",
+      "color_ids": [
+        2,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 179,
+      "expected_instance_count": 5,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P80-F65",
+      "color_ids": [
+        4,
+        3,
+        5,
+        2,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 549,
+      "expected_instance_count": 3,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P100-F62",
+      "color_ids": [
+        2,
+        1,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 116,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H175-P95-F65",
+      "color_ids": [
+        1,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 107,
+      "expected_instance_count": 5,
+      "split": "synthetic_test",
+      "camera_group_id": "H250-P85-F65",
+      "color_ids": [
+        2,
+        5,
+        4,
+        6,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 52,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H250-P80-F68",
+      "color_ids": [
+        1,
+        4,
+        6,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 70,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H100-P100-F68",
+      "color_ids": [
+        4,
+        2,
+        1,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 139,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H400-P90-F68",
+      "color_ids": [
+        6
+      ]
+    },
+    {
+      "source_scene_index": 675,
+      "expected_instance_count": 3,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P80-F62",
+      "color_ids": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 160,
+      "expected_instance_count": 4,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P90-F62",
+      "color_ids": [
+        3,
+        2,
+        5,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 374,
+      "expected_instance_count": 2,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P100-F68",
+      "color_ids": [
+        2,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 43,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H325-P95-F65",
+      "color_ids": [
+        6
+      ]
+    },
+    {
+      "source_scene_index": 886,
+      "expected_instance_count": 4,
+      "split": "synthetic_test",
+      "camera_group_id": "H175-P90-F68",
+      "color_ids": [
+        6,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 835,
+      "expected_instance_count": 1,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P90-F62",
+      "color_ids": [
+        6
+      ]
+    },
+    {
+      "source_scene_index": 166,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H175-P95-F62",
+      "color_ids": [
+        3,
+        2,
+        5,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 329,
+      "expected_instance_count": 5,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P80-F65",
+      "color_ids": [
+        1,
+        4,
+        6,
+        2,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 69,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H400-P95-F68",
+      "color_ids": [
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 113,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H325-P90-F65",
+      "color_ids": [
+        1,
+        6,
+        3,
+        4,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 136,
+      "expected_instance_count": 4,
+      "split": "synthetic_test",
+      "camera_group_id": "H175-P90-F68",
+      "color_ids": [
+        2,
+        4,
+        3,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 173,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H325-P100-F62",
+      "color_ids": [
+        2,
+        5,
+        1,
+        6,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 142,
+      "expected_instance_count": 4,
+      "split": "val",
+      "camera_group_id": "H250-P95-F68",
+      "color_ids": [
+        4,
+        5,
+        3,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 146,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H175-P100-F68",
+      "color_ids": [
+        5,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 32,
+      "expected_instance_count": 2,
+      "split": "synthetic_test",
+      "camera_group_id": "H250-P85-F65",
+      "color_ids": [
+        1,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 415,
+      "expected_instance_count": 1,
+      "split": "val",
+      "camera_group_id": "H100-P95-F65",
+      "color_ids": [
+        6
+      ]
+    },
+    {
+      "source_scene_index": 115,
+      "expected_instance_count": 1,
+      "split": "val",
+      "camera_group_id": "H100-P95-F65",
+      "color_ids": [
+        4
+      ]
+    },
+    {
+      "source_scene_index": 191,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H175-P95-F65",
+      "color_ids": [
+        3,
+        1,
+        6,
+        5,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 465,
+      "expected_instance_count": 3,
+      "split": "val",
+      "camera_group_id": "H100-P95-F62",
+      "color_ids": [
+        4,
+        1,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 482,
+      "expected_instance_count": 2,
+      "split": "synthetic_test",
+      "camera_group_id": "H250-P85-F65",
+      "color_ids": [
+        4,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 165,
+      "expected_instance_count": 3,
+      "split": "val",
+      "camera_group_id": "H100-P95-F62",
+      "color_ids": [
+        4,
+        5,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 112,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H250-P90-F65",
+      "color_ids": [
+        3,
+        1,
+        4,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 272,
+      "expected_instance_count": 2,
+      "split": "val",
+      "camera_group_id": "H250-P100-F65",
+      "color_ids": [
+        4,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 385,
+      "expected_instance_count": 1,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P90-F62",
+      "color_ids": [
+        6
+      ]
+    },
+    {
+      "source_scene_index": 489,
+      "expected_instance_count": 3,
+      "split": "val",
+      "camera_group_id": "H400-P90-F65",
+      "color_ids": [
+        5,
+        2,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 154,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H400-P80-F62",
+      "color_ids": [
+        2,
+        5,
+        4,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 388,
+      "expected_instance_count": 4,
+      "split": "val",
+      "camera_group_id": "H325-P90-F62",
+      "color_ids": [
+        5,
+        4,
+        6,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 367,
+      "expected_instance_count": 1,
+      "split": "val",
+      "camera_group_id": "H250-P95-F68",
+      "color_ids": [
+        5
+      ]
+    },
+    {
+      "source_scene_index": 825,
+      "expected_instance_count": 3,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P80-F62",
+      "color_ids": [
+        5,
+        3,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 151,
+      "expected_instance_count": 1,
+      "split": "val",
+      "camera_group_id": "H175-P80-F62",
+      "color_ids": [
+        5
+      ]
+    },
+    {
+      "source_scene_index": 299,
+      "expected_instance_count": 5,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P100-F68",
+      "color_ids": [
+        6,
+        5,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 29,
+      "expected_instance_count": 5,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P80-F65",
+      "color_ids": [
+        1,
+        6,
+        4,
+        5,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 167,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H250-P95-F62",
+      "color_ids": [
+        1,
+        4,
+        3,
+        5,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 736,
+      "expected_instance_count": 4,
+      "split": "synthetic_test",
+      "camera_group_id": "H175-P90-F68",
+      "color_ids": [
+        4,
+        5,
+        6,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 95,
+      "expected_instance_count": 5,
+      "split": "val",
+      "camera_group_id": "H100-P100-F62",
+      "color_ids": [
+        4,
+        5,
+        3,
+        2,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 53,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H325-P80-F68",
+      "color_ids": [
+        5,
+        4,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 3,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H325-P80-F62",
+      "color_ids": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 449,
+      "expected_instance_count": 5,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P100-F68",
+      "color_ids": [
+        3,
+        1,
+        2,
+        5,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 86,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H175-P90-F62",
+      "color_ids": [
+        4,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 83,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H325-P85-F62",
+      "color_ids": [
+        4,
+        3,
+        5,
+        1,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 73,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H325-P100-F68",
+      "color_ids": [
+        3
+      ]
+    },
+    {
+      "source_scene_index": 88,
+      "expected_instance_count": 4,
+      "split": "val",
+      "camera_group_id": "H325-P90-F62",
+      "color_ids": [
+        3,
+        4,
+        5,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 215,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H100-P95-F68",
+      "color_ids": [
+        6,
+        4,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "source_scene_index": 811,
+      "expected_instance_count": 1,
+      "split": "synthetic_test",
+      "camera_group_id": "H175-P90-F68",
+      "color_ids": [
+        5
+      ]
+    },
+    {
+      "source_scene_index": 97,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H250-P100-F62",
+      "color_ids": [
+        6
+      ]
+    },
+    {
+      "source_scene_index": 81,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H175-P85-F62",
+      "color_ids": [
+        4,
+        1,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 188,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H325-P90-F65",
+      "color_ids": [
+        4,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 535,
+      "expected_instance_count": 1,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P90-F62",
+      "color_ids": [
+        2
+      ]
+    },
+    {
+      "source_scene_index": 87,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H250-P90-F62",
+      "color_ids": [
+        5,
+        4,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 104,
+      "expected_instance_count": 2,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P80-F65",
+      "color_ids": [
+        3,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 26,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H175-P80-F65",
+      "color_ids": [
+        4,
+        2
+      ]
+    },
+    {
+      "source_scene_index": 305,
+      "expected_instance_count": 5,
+      "split": "val",
+      "camera_group_id": "H100-P85-F62",
+      "color_ids": [
+        5,
+        3,
+        2,
+        1,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 74,
+      "expected_instance_count": 2,
+      "split": "synthetic_test",
+      "camera_group_id": "H400-P100-F68",
+      "color_ids": [
+        2,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 106,
+      "expected_instance_count": 4,
+      "split": "train",
+      "camera_group_id": "H175-P85-F65",
+      "color_ids": [
+        2,
+        3,
+        5,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 281,
+      "expected_instance_count": 5,
+      "split": "val",
+      "camera_group_id": "H175-P85-F68",
+      "color_ids": [
+        4,
+        6,
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 129,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H400-P80-F68",
+      "color_ids": [
+        5,
+        1,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 44,
+      "expected_instance_count": 2,
+      "split": "train",
+      "camera_group_id": "H400-P95-F65",
+      "color_ids": [
+        6,
+        4
+      ]
+    },
+    {
+      "source_scene_index": 55,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H100-P85-F68",
+      "color_ids": [
+        2
+      ]
+    },
+    {
+      "source_scene_index": 89,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H400-P90-F62",
+      "color_ids": [
+        5,
+        4,
+        2,
+        6,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 203,
+      "expected_instance_count": 5,
+      "split": "train",
+      "camera_group_id": "H325-P80-F68",
+      "color_ids": [
+        4,
+        1,
+        3,
+        2,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 310,
+      "expected_instance_count": 4,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P90-F62",
+      "color_ids": [
+        5,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 187,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H250-P90-F65",
+      "color_ids": [
+        6
+      ]
+    },
+    {
+      "source_scene_index": 111,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H175-P90-F65",
+      "color_ids": [
+        2,
+        6,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 159,
+      "expected_instance_count": 3,
+      "split": "train",
+      "camera_group_id": "H400-P85-F62",
+      "color_ids": [
+        4,
+        1,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 85,
+      "expected_instance_count": 1,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P90-F62",
+      "color_ids": [
+        2
+      ]
+    },
+    {
+      "source_scene_index": 10,
+      "expected_instance_count": 4,
+      "split": "synthetic_test",
+      "camera_group_id": "H100-P90-F62",
+      "color_ids": [
+        1,
+        4,
+        2,
+        3
+      ]
+    },
+    {
+      "source_scene_index": 35,
+      "expected_instance_count": 5,
+      "split": "val",
+      "camera_group_id": "H100-P90-F65",
+      "color_ids": [
+        2,
+        3,
+        4,
+        6,
+        5
+      ]
+    },
+    {
+      "source_scene_index": 661,
+      "expected_instance_count": 1,
+      "split": "synthetic_test",
+      "camera_group_id": "H175-P90-F68",
+      "color_ids": [
+        3
+      ]
+    },
+    {
+      "source_scene_index": 206,
+      "expected_instance_count": 2,
+      "split": "val",
+      "camera_group_id": "H175-P85-F68",
+      "color_ids": [
+        1,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 332,
+      "expected_instance_count": 2,
+      "split": "synthetic_test",
+      "camera_group_id": "H250-P85-F65",
+      "color_ids": [
+        1,
+        6
+      ]
+    },
+    {
+      "source_scene_index": 49,
+      "expected_instance_count": 1,
+      "split": "train",
+      "camera_group_id": "H400-P100-F65",
+      "color_ids": [
+        1
+      ]
+    }
+  ]
+}

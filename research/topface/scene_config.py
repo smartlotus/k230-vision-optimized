@@ -37,6 +37,10 @@ def make_config(base_seed, index, single_qualification=False):
     grid=grid@rotate.T
     rng.shuffle(grid)
     objects=[]
+    # Separate RNG stream preserves scene geometry while preventing color from
+    # sharing index%6 with object count. Frozen legacy inputs remain immutable.
+    color_rng=np.random.default_rng(np.random.SeedSequence([base_seed,index,0xC010]))
+    color_order=color_rng.permutation(np.arange(1,7)).tolist()
     for instance in range(count):
         if single_qualification:
             xy=center
@@ -47,7 +51,7 @@ def make_config(base_seed, index, single_qualification=False):
                 # Small groups also cover image corners and the optical centre.
                 uv=([320,180],[35,35],[605,35],[35,325],[605,325])[index % 5]
                 xy=pixel_to_top(uv,K,pose)[:2]
-        color_id=1 if single_qualification else 1+(index+instance) % 6
+        color_id=1 if single_qualification else color_order[instance]
         objects.append({"instance_id":instance+1,"color_id":color_id,
             "color_material":COLORS[color_id][0],"position_m":[float(xy[0]),float(xy[1]),0.],
             "yaw_rad":float(rng.uniform(0,2*np.pi)),
@@ -60,6 +64,7 @@ def make_config(base_seed, index, single_qualification=False):
     camera_group,split=camera_partition(height*1000,angle,hfov)
     return {"schema":"topface-scene-v1.1","scene_group_id":group,"random_seed":scene_seed,
         "base_seed":base_seed,"scene_index":index,"split":split,"camera_group_id":camera_group,
+        "color_policy":"independent seeded permutation; separate RNG stream from count/layout",
         "width":640,"height":360,"expected_instance_count":count,"max_instances":5,
         "camera_intrinsics":K.tolist(),"camera_pose_world_from_cv":pose.tolist(),
         "camera_height_above_top_mm":height*1000,"plane_angle_deg":angle,"hfov_deg":hfov,

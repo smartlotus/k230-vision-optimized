@@ -1,0 +1,65 @@
+{
+  "schema": "topface-color-count-confounding-audit-v1.1",
+  "scope": "FROZEN_PILOT_SOURCE_DETERMINISTIC_METADATA_AND_LOCAL_SMOKE_LABEL_AUDIT",
+  "source_sha256": "e1e8ed0ea3a035ebb0438ec197411978f4d5e765df098f90fa3a9c9b8aadbc00",
+  "pilot_marginals_match_saved_cloud_QA": true,
+  "pilot_joint_world_instance_counts": {
+    "1": {
+      "2": 167
+    },
+    "2": {
+      "3": 167,
+      "4": 167
+    },
+    "3": {
+      "4": 167,
+      "5": 167,
+      "6": 167
+    },
+    "4": {
+      "5": 166,
+      "6": 166,
+      "1": 166,
+      "2": 166
+    },
+    "5": {
+      "6": 166,
+      "1": 166,
+      "2": 166,
+      "3": 166,
+      "4": 166
+    }
+  },
+  "local_smoke_joint": {
+    "1": {
+      "2": 17
+    },
+    "2": {
+      "3": 17,
+      "4": 17
+    },
+    "3": {
+      "4": 17,
+      "5": 17,
+      "6": 17
+    },
+    "4": {
+      "5": 16,
+      "6": 16,
+      "1": 16,
+      "2": 16
+    },
+    "5": {
+      "6": 16,
+      "1": 16,
+      "2": 16,
+      "3": 16,
+      "4": 16
+    }
+  },
+  "issue": "Color IDs are deterministically coupled to scene index modulo6, the same variable controlling target count. Single-target scenes only containyellow; two-target scenes onlyblue+green; val shares this bias. Labels/geometry are valid but distribution coverage is incomplete.",
+  "labels_modified": false,
+  "pilot_original_compute_preserved": true,
+  "training_admission": "NEEDS_COUNT_COLOR_COVERAGE_FIX_OR_EXPLICIT_DIAGNOSTIC_LIMITATION",
+  "next_action": "Prepare finite additional independent color-randomized counterexample scenes; do not replay original1000; use corrected color sampling forFull."
+}

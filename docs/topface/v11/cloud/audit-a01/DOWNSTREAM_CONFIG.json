@@ -1,0 +1,233 @@
+{
+  "schema": "topface-downstream-config-v1.1",
+  "phase": "audit",
+  "run_id": "k230-topface-v11-audit-a01",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "pilot_run_id": "k230-topface-v11-pilot-1000-a02",
+  "pilot_compute": {
+    "schema": "topface-native-pilot-v1.1",
+    "run_id": "k230-topface-v11-pilot-1000-a02",
+    "status": "COMPUTE_AND_QA_PASS",
+    "observed_utc": "2026-11-14T13:47:06.614572+00:00",
+    "optimizer_steps": 0,
+    "requested_scenes": 1000,
+    "seed": 20261115,
+    "automatic_replay": false,
+    "scope": "KAGGLE_NATIVE_BLENDER_PILOT",
+    "input_manifest_sha256": "a623c1137b737420d38610793596caff281720a86321832d533f1d14299d614f",
+    "source_files": [
+      {
+        "path": "audit_v11.py",
+        "bytes": 9515,
+        "sha256": "d27c5a4022b84ec98e1fd82ee2eca27166db371d5bd8a4cd919df44009b8da37"
+      },
+      {
+        "path": "cad_bundle.bin",
+        "bytes": 608124,
+        "sha256": "642df0a28329ebe3adab0ca96888e5078b1a005dc7b9dbd345903e10274fc7f2"
+      },
+      {
+        "path": "camera_profile.yaml",
+        "bytes": 12464,
+        "sha256": "9367bdb88c4dacdb2c459c5e47e128ce188358fa92364b5562de726df9d4cefa"
+      },
+      {
+        "path": "camera_sweep.yaml",
+        "bytes": 432,
+        "sha256": "bf04b72832e1c134d4e692b458cfa98f01e7a5a34cbe130ee80cde72a5e771d1"
+      },
+      {
+        "path": "cloud_store.py",
+        "bytes": 10870,
+        "sha256": "1f764499ce2098139a57cbcfd7406000c98f4a8ca914bb8d96e9e4656148cf34"
+      },
+      {
+        "path": "geometry.py",
+        "bytes": 2996,
+        "sha256": "de5c6055507a76ad5656bf8b3f554139bd154bf581b7196722e308a3a3985cc4"
+      },
+      {
+        "path": "input_locator.py",
+        "bytes": 941,
+        "sha256": "2a1f79933d67272996993a01ab8ad5da6b2d00710884456d9112f02ee00e0011"
+      },
+      {
+        "path": "native_cad.py",
+        "bytes": 4624,
+        "sha256": "0d58d5ded69f85cb320ea4781d17c4abccffd170f733d0edd798794bc15e2e75"
+      },
+      {
+        "path": "native_job.py",
+        "bytes": 13120,
+        "sha256": "1c80d0a3c598671243c343ee7a3d876dc9c844f4be128748c44d96bd1623f1be"
+      },
+      {
+        "path": "render_native.py",
+        "bytes": 10635,
+        "sha256": "663d787fb52fedc0bdf5438fab40937218d6763e6290e4b532e3a5675f0fe08c"
+      },
+      {
+        "path": "scene_config.py",
+        "bytes": 4417,
+        "sha256": "e1e8ed0ea3a035ebb0438ec197411978f4d5e765df098f90fa3a9c9b8aadbc00"
+      },
+      {
+        "path": "SMOKE_HUMAN_REVIEW.json",
+        "bytes": 412,
+        "sha256": "5771259baeb8e81c9c27baf5cdb81b395aa72736bfb11c7055f816f8086346f7"
+      }
+    ],
+    "max_seconds": 9000,
+    "stopping_condition": "complete requested scenes or finite deadline; no automatic scientific replay",
+    "stage": "PILOT_LABEL_QA",
+    "elapsed_seconds": 3647.731968106,
+    "drive_probe": {
+      "schema": "k230-cloud-direct-write-v1",
+      "run_id": "k230-topface-v11-pilot-1000-a02-admission",
+      "status": "FULL_BYTE_SHA256_PASS",
+      "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+      "file_id": "1Nv6LVDzRgR0AtwHPVdP3unM8hvQ7H9Qp",
+      "name": "k230-topface-v11-pilot-1000-a02-admission-4ed2295083a53ef3.json",
+      "bytes": 104,
+      "sha256": "4ed2295083a53ef36e1fb62b0d1ccec293d5f5ec98b75f3cfbfd8662d11a74ce",
+      "automatic_replay": false
+    },
+    "drive_admission_marker": "1bVJDu6mLxpgg0oM-3RBvHv68aRF1yXLS",
+    "qualification_device": {
+      "selected_backend": "OPTIX",
+      "attempts": [
+        {
+          "backend": "OPTIX",
+          "devices": [
+            {
+              "name": "Tesla T4",
+              "type": "CUDA"
+            },
+            {
+              "name": "Tesla T4",
+              "type": "CUDA"
+            },
+            {
+              "name": "Intel Xeon CPU @ 2.00GHz",
+              "type": "CPU"
+            },
+            {
+              "name": "Tesla T4",
+              "type": "OPTIX"
+            },
+            {
+              "name": "Tesla T4",
+              "type": "OPTIX"
+            }
+          ]
+        }
+      ],
+      "gpu_render_verified": true,
+      "successful_frames": 1,
+      "blender_version": "4.2.9 LTS",
+      "numpy_version": "1.24.3"
+    },
+    "images_rendered": 1000,
+    "instances": 2496,
+    "qa": {
+      "schema": "topface-v1.1-label-audit",
+      "status": "PASS",
+      "images": 1000,
+      "instances": 2496,
+      "issues": [],
+      "count_histogram": {
+        "0": 167,
+        "1": 167,
+        "2": 167,
+        "3": 167,
+        "4": 166,
+        "5": 166
+      },
+      "color_histogram": {
+        "1": 332,
+        "2": 499,
+        "3": 333,
+        "4": 500,
+        "5": 333,
+        "6": 499
+      },
+      "unique_scene_groups": 1000,
+      "unique_scene_seeds": 1000,
+      "camera_configuration_groups": 75,
+      "camera_group_cross_split_count": 0,
+      "split_policy": "SHA256 of height/pitch/HFOV configuration group; frozen before training",
+      "height_mm_range": [
+        100.0,
+        400.0
+      ],
+      "plane_angle_deg_range": [
+        80.0,
+        100.0
+      ],
+      "max_center_reprojection_error_px": 2.274846706538671e-13,
+      "strong_perspective_outside_user_envelope": "excluded, not claimed as covered",
+      "real_geometry_accuracy_verified": false
+    },
+    "device": {
+      "selected_backend": "OPTIX",
+      "attempts": [
+        {
+          "backend": "OPTIX",
+          "devices": [
+            {
+              "name": "Tesla T4",
+              "type": "CUDA"
+            },
+            {
+              "name": "Tesla T4",
+              "type": "CUDA"
+            },
+            {
+              "name": "Intel Xeon CPU @ 2.00GHz",
+              "type": "CPU"
+            },
+            {
+              "name": "Tesla T4",
+              "type": "OPTIX"
+            },
+            {
+              "name": "Tesla T4",
+              "type": "OPTIX"
+            }
+          ]
+        }
+      ],
+      "gpu_render_verified": true,
+      "successful_frames": 1000,
+      "blender_version": "4.2.9 LTS",
+      "numpy_version": "1.24.3"
+    },
+    "durable_status": "FULL_BYTE_SHA256_PASS",
+    "archive": {
+      "name": "k230-topface-v11-pilot-1000-a02.tar.gz",
+      "bytes": 301494689,
+      "sha256": "f559a9df0fe01ea17884ce63671e6e89a162a037faa0a80045eec574e417430f"
+    },
+    "drive_archive": {
+      "schema": "k230-cloud-direct-write-v1",
+      "run_id": "k230-topface-v11-pilot-1000-a02",
+      "status": "FULL_BYTE_SHA256_PASS",
+      "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+      "file_id": "14u97X9ziKHo7iOsSuMq4OIHfOPkstnBh",
+      "name": "k230-topface-v11-pilot-1000-a02-f559a9df0fe01ea1.tar.gz",
+      "bytes": 301494689,
+      "sha256": "f559a9df0fe01ea17884ce63671e6e89a162a037faa0a80045eec574e417430f",
+      "automatic_replay": false
+    }
+  },
+  "pilot_provider": {
+    "ref": "lotus30/k230-topface-v11-01-simulation-pilot",
+    "id": 145002634,
+    "version": 2
+  },
+  "max_seconds": 1800,
+  "provider_max_seconds": 2400,
+  "worker_budget": "includes source fetch, diagnostics, finite experiment(s), archive, full Drive readback",
+  "automatic_replay": false,
+  "full_admission": false
+}

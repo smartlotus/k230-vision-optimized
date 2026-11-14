@@ -1,0 +1,8 @@
+C:\Users\28389\anaconda3\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (1.26.16) or chardet (7.4.3)/charset_normalizer (2.0.4) doesn't match a supported version!
+  warnings.warn(
+resource,used,remaining,total,refreshAt
+
+GPU,3.62h,26.38h,30.00h,2026-11-21T00:00:00+00:00
+
+TPU,0.00h,20.00h,20.00h,2026-11-21T00:00:00+00:00
+

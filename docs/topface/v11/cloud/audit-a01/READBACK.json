@@ -1,0 +1,17 @@
+{
+  "schema": "topface-downstream-readback-v1.1",
+  "status": "SOURCE_AND_INPUT_MANIFEST_MATCH",
+  "observed_utc": "2026-11-14T14:53:23.646908+00:00",
+  "kernel": "lotus30/k230-topface-v11-02-dataset-audit",
+  "kernel_id": 145013738,
+  "version": 1,
+  "execution_mode": "QUICK_SAVE",
+  "private": true,
+  "gpu_requested": false,
+  "scientific_execution_started": false,
+  "notebook_cells_equal": true,
+  "input_manifest_sha256": "5b50945bab3491545cc38b677db6955945b6d735e7b5f706ce0ccd303f399d95",
+  "dataset": "lotus30/k230-topface-v11-audit-input-a01/1",
+  "runtime_secret_access": "REQUIRES_USER_EDITOR_ATTACHMENT",
+  "automatic_replay": false
+}

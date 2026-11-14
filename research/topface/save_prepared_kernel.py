@@ -13,7 +13,11 @@ from cloud_store import atomic_json, sha
 def main(kernel_dir, frozen_dir, token_file):
     kernel_dir,frozen_dir=Path(kernel_dir),Path(frozen_dir)
     intent=json.loads((frozen_dir/'SUBMISSION_INTENT.json').read_text(encoding='utf8'))
-    if sha(kernel_dir/'01_topface_simulation.ipynb')!=intent['notebook_sha256']:
+    metadata=json.loads((kernel_dir/'kernel-metadata.json').read_text(encoding='utf8'))
+    notebook=intent.get('notebook_file','01_topface_simulation.ipynb')
+    if metadata['code_file']!=notebook or metadata['id']!=intent['kernel']:
+        raise ValueError('Kernel metadata differs from frozen intent')
+    if sha(kernel_dir/notebook)!=intent['notebook_sha256']:
         raise ValueError('Notebook differs from frozen intent')
     attempt=frozen_dir/'KERNEL_SAVE_ATTEMPT.json'
     if attempt.exists():raise RuntimeError('Previous Save attempt requires read-only reconciliation')
@@ -22,12 +26,14 @@ def main(kernel_dir, frozen_dir, token_file):
         from kaggle.api.kaggle_api_extended import KaggleApi
         api=KaggleApi();api.authenticate()
     atomic_json(attempt,{'operation':'QUICK_SAVE','observed_utc':datetime.now(timezone.utc).isoformat(),
-        'ref':intent['kernel'],'source_sha256':intent['notebook_sha256'],'session_timeout_seconds':10800,
+        'ref':intent['kernel'],'source_sha256':intent['notebook_sha256'],
+        'session_timeout_seconds':intent.get('provider_max_seconds',10800),
         'scientific_execution':False,'automatic_retry':False})
     # Inspected kaggle2.2.5 kernels_push -> SDK save_kernel -> requests.send:
     # a single Save call, no mutation retry decorator.
     try:
-        response=api.kernels_push(str(kernel_dir),timeout='10800',acc='NvidiaTeslaT4',no_run=True)
+        response=api.kernels_push(str(kernel_dir),timeout=str(intent.get('provider_max_seconds',10800)),
+            acc='NvidiaTeslaT4' if metadata.get('enable_gpu') else None,no_run=True)
         result=type(response).to_dict(response)
         atomic_json(frozen_dir/'KERNEL_SAVE_RESPONSE.json',result)
         print(json.dumps(result))

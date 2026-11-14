@@ -40,6 +40,9 @@ def diagnose(root,expected_count=1000,max_seconds=600):
     if len(scenes)!=expected_count:raise ValueError('QA row denominator mismatch')
     counts=Counter();colors=Counter();splits=Counter();visible_colors=Counter()
     visibility=Counter();split_groups=defaultdict(set);camera_groups=defaultdict(set)
+    color_by_count=defaultdict(Counter);color_by_split_count=defaultdict(Counter)
+    observable_color_by_split_count=defaultdict(Counter)
+    first_color_by_split_count=defaultdict(Counter)
     values=defaultdict(list);images=[];rgb_hashes=set();label_hashes=[]
     for row in scenes:
         if time.monotonic()>deadline:raise TimeoutError('Diagnostic time budget exhausted')
@@ -62,6 +65,10 @@ def diagnose(root,expected_count=1000,max_seconds=600):
                        'hash':perceptual_hash(image)})
         for item in label['instances']:
             color=str(item['color_id']);colors[color]+=1
+            key=label['split']+'/count'+str(label['expected_instance_count'])
+            color_by_count[str(label['expected_instance_count'])][color]+=1
+            color_by_split_count[key][color]+=1
+            if item['instance_id']==1:first_color_by_split_count[key][color]+=1
             if item['color_id'] not in range(1,7):raise ValueError('Color ID outside approved1..6 mapping')
             visibility['world_instances']+=1
             for flag in ('center_valid','center_visible','geometry_valid','truncated','occluded'):
@@ -79,6 +86,7 @@ def diagnose(root,expected_count=1000,max_seconds=600):
             width,height=box[2]-box[0],box[3]-box[1]
             if min(width,height)<=0:raise ValueError('Invalid visible bbox')
             visibility['observable_bboxes']+=1;visible_colors[color]+=1
+            if item['visible_area_px']>=16:observable_color_by_split_count[key][color]+=1
             values['visible_bbox_width_px'].append(width);values['visible_bbox_height_px'].append(height)
             values[f'color{color}_bbox_width_px'].append(width)
             if not item['truncated']:
@@ -111,6 +119,13 @@ def diagnose(root,expected_count=1000,max_seconds=600):
         'audit_sha256':sha(audit_path),'label_sha256_sequence':label_hashes,
         'world_instances':visibility['world_instances'],'count_histogram':dict(counts),
         'world_color_histogram':dict(colors),'observable_color_histogram':dict(visible_colors),
+        'world_color_by_count':{k:dict(v) for k,v in color_by_count.items()},
+        'world_color_by_split_and_count':{k:dict(v) for k,v in color_by_split_count.items()},
+        'observable_color_by_split_and_count':{k:dict(v) for k,v in observable_color_by_split_count.items()},
+        'first_instance_color_by_split_and_count':{k:dict(v) for k,v in first_color_by_split_count.items()},
+        'conditional_color_coverage':{'all_counts_have_all_six':all(set(color_by_count[str(c)])==set(map(str,range(1,7))) for c in range(1,6)),
+            'all_split_count_pairs_have_all_six':all(set(color_by_split_count[split+'/count'+str(c)])==set(map(str,range(1,7))) for split in ('train','val','synthetic_test') for c in range(1,6)),
+            'all_split_count_pairs_have_observable_six':all(set(observable_color_by_split_count[split+'/count'+str(c)])==set(map(str,range(1,7))) for split in ('train','val','synthetic_test') for c in range(1,6))},
         'split_images':dict(splits),'scene_groups':len(split_groups),'camera_groups':len(camera_groups),
         'scene_and_camera_group_cross_split_count':0,'exact_duplicate_rgb':0,
         'visibility_denominators':dict(visibility),'distributions':{k:stats(v) for k,v in values.items()},

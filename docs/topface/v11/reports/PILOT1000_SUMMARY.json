@@ -1,0 +1,65 @@
+{
+  "schema": "topface-kaggle-pilot-summary-v1.1",
+  "status": "PASS_COMPUTE_AND_DURABLE_STORAGE",
+  "source_exact_version": 2,
+  "run_id": "k230-topface-v11-pilot-1000-a02",
+  "scenes": 1000,
+  "instances": 2496,
+  "elapsed_seconds": 3647.731968106,
+  "render_seconds": 3502.3633864229996,
+  "actual_cycles_backend": "OPTIX",
+  "gpu_render_verified": true,
+  "qa": {
+    "schema": "topface-v1.1-label-audit",
+    "status": "PASS",
+    "images": 1000,
+    "instances": 2496,
+    "issues": [],
+    "count_histogram": {
+      "0": 167,
+      "1": 167,
+      "2": 167,
+      "3": 167,
+      "4": 166,
+      "5": 166
+    },
+    "color_histogram": {
+      "1": 332,
+      "2": 499,
+      "3": 333,
+      "4": 500,
+      "5": 333,
+      "6": 499
+    },
+    "unique_scene_groups": 1000,
+    "unique_scene_seeds": 1000,
+    "camera_configuration_groups": 75,
+    "camera_group_cross_split_count": 0,
+    "split_policy": "SHA256 of height/pitch/HFOV configuration group; frozen before training",
+    "height_mm_range": [
+      100.0,
+      400.0
+    ],
+    "plane_angle_deg_range": [
+      80.0,
+      100.0
+    ],
+    "max_center_reprojection_error_px": 2.274846706538671e-13,
+    "strong_perspective_outside_user_envelope": "excluded, not claimed as covered",
+    "real_geometry_accuracy_verified": false
+  },
+  "drive_archive": {
+    "schema": "k230-cloud-direct-write-v1",
+    "run_id": "k230-topface-v11-pilot-1000-a02",
+    "status": "FULL_BYTE_SHA256_PASS",
+    "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+    "file_id": "14u97X9ziKHo7iOsSuMq4OIHfOPkstnBh",
+    "name": "k230-topface-v11-pilot-1000-a02-f559a9df0fe01ea1.tar.gz",
+    "bytes": 301494689,
+    "sha256": "f559a9df0fe01ea17884ce63671e6e89a162a037faa0a80045eec574e417430f",
+    "automatic_replay": false
+  },
+  "optimizer_updates": 0,
+  "independent_dataset_diagnostics": "PENDING02",
+  "formal_training_admitted": false
+}

@@ -97,6 +97,8 @@ def render(blender, inputs, assets, output, count, seed, device, log, deadline, 
         '--samples', '24', '--device', device, '--max-seconds', str(max(30, int(deadline-time.monotonic())-30))]
     if qualification:
         command.append('--qualification')
+    elif (inputs/'SCENE_PLAN.json').is_file():
+        command.extend(['--scene-plan',str(inputs/'SCENE_PLAN.json')])
     execute(command, log, deadline, 8100)
 
 

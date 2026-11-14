@@ -3,17 +3,19 @@
   "ref": "lotus30/k230-topface-v11-01-simulation-pilot",
   "version": 2,
   "run_id": "k230-topface-v11-pilot-1000-a02",
-  "observed_utc": "2026-11-14T14:36:41.145862+00:00",
+  "observed_utc": "2026-11-14T14:50:15.128775+00:00",
   "members": [
     {
       "name": "k230-topface-v11-pilot-1000-a02-RESULT.json",
-      "status": "NOT_AVAILABLE_OR_FETCH_FAILED",
-      "error_type": "HTTPError"
+      "status": "COLLECTED",
+      "bytes": 6122,
+      "sha256": "63dbf61aced05b69ac289427aa5c357e5addfddd78e6e9f50ea1b25e0efba354"
     },
     {
       "name": "k230-topface-v11-pilot-1000-a02-DRIVE.json",
-      "status": "NOT_AVAILABLE_OR_FETCH_FAILED",
-      "error_type": "HTTPError"
+      "status": "COLLECTED",
+      "bytes": 431,
+      "sha256": "72b12786a4ed53506a9c7b5c82a680e1763dbd53dbce6776e5396f7722f20597"
     }
   ],
   "raw_archive_downloaded_to_host": false,

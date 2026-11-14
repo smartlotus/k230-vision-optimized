@@ -58,8 +58,13 @@
     "Compatibility/export/PTQ/Simulator and data rendering are not optimizer training runs.",
     "No full training of both NanoDet and PicoDet. Pico original graph is a compatibility alternative.",
     "GPU hours remain UNKNOWN until actual training throughput is measured. Provider quotas are observations, not a promised resource budget.",
-    "Failures preserve original attempts; no automatic replay of completed scientific work. Full generation is gated by Pilot, not by Smoke approval alone."
+    "Failures preserve original attempts; no automatic replay of completed scientific work. Full generation is gated by Pilot, not by Smoke approval alone.",
+    "Post-generation conditional audit detected legacy color/count confounding before optimizer work.240new scenes supplement the accepted original1000; no original render replay and no extra logical model-training run."
   ],
   "gate_implementation": "research/topface/train_experiment.py; all finite ellipse/angle/empty/count denominators checked",
-  "implementation_review": "IMPLEMENTATION_REVIEW.md"
+  "implementation_review": "IMPLEMENTATION_REVIEW.md",
+  "planned_pilot_base_scenes": 1000,
+  "planned_counterexample_supplement_scenes": 240,
+  "planned_combined_scenes": 1240,
+  "conditional_data_gate": "every split/count1..5 has observable six-color coverage; merge source archives by hash, preserve original labels/splits"
 }

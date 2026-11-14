@@ -1,0 +1,7 @@
+test_export_shapes_seeded_five_object_and_empty_cases_match_host (test_portable_decode.PortableDecoderTests.test_export_shapes_seeded_five_object_and_empty_cases_match_host) ... ok
+test_portable_contract_rejects_wrong_shape_and_nonfinite_logit (test_portable_decode.PortableDecoderTests.test_portable_contract_rejects_wrong_shape_and_nonfinite_logit) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.326s
+
+OK

@@ -1,81 +1,91 @@
 {
   "completed": [
-    "V1.1 G0/G1 provenance audit and original CAD validation",
-    "100 local native CPU Smoke scenes /246 instances; QA PASS, user30-image review PASS",
-    "Local Smoke archive accepted on Drive with full byte SHA readback",
-    "Native worker local6-scene/15-instance end-to-end qualification and14 host regressions PASS",
-    "Original Nano/Pico compile+Simulator; original Nano EMA equivalence and rectangular untrained task heads export/compile/Simulator",
-    "Prepared and read back private versioned source/input; user launched Kaggle145002634 v2; Drive admission and one-frame qualification passed; Pilot rendering active",
-    "Implemented hash-bound downstream02/03 cloud consumers and finite logical training controller (not submitted/run)",
-    "Independently reviewed training gates/loss/decoder and fixed findings;32 host regressions pass",
-    "Local train split73scenes175GT: allassigned,11fifthinstances; real model forward/backwardfinite with0optimizer updates",
-    "Small compiler RGBuint8->BGRmean/std fixture compile+Simulator semantics PASS; not final task model"
+    "V1.1 G0/G1 provenance and original CAD audits; camera UNKNOWNs explicit; protected production/r4 untouched",
+    "Local100sceneSmoke/246instances, automatedQA+30imageuserreviewPASS; fullDrivearchiveaccepted",
+    "Exact Kaggle145002634 v2 COMPLETE:1000independentscenes/2496instances, QA PASS, actualT4OPTIX1000frames,3647.732seconds;301494689byteDrivearchive fullSHAreadbackaccepted",
+    "Two officialCOCO graphs compile+Simulator; NanoEMA originalequivalence and3rectangular projecthead exports/compiles/simulations; nottrained/numericallyaccepted",
+    "Reviewed finite training/diagnostics/cloudconsumption sources;38hostregressionchecksPASS; hostforward/backwardfinite with0optimizer updates",
+    "PortableMicroPythondecode hostpaired casesPASS; tinyRGBuint8->BGRmean/std compilerfixturePASS; no newboardexecution",
+    "Discovered legacy count/colorconfoundingbeforetraining, retained original1000; independentcolorRNGfix+240newsceneplan, noseed/groupoverlap, no camerasplit leakage",
+    "Color supplement local6scene/18instanceactualnativeOPTIX qualification andindependent reviewPASS; composite106local hash/groupinterfacePASS",
+    "Private02CPU auditNotebook145013738v1 and01b supplementNotebook145015590v1 plusdatasetv1each prepared/source-and-manifestreadbackPASS, notscientificallyexecuted"
   ],
   "remaining": [
-    "Await exact Kaggle145002634 v2 Pilot finalresult/Drive receipt; last22:41 RUNNING; do not replay or replace",
-    "Pilot dataset diagnostics and overfit/pretrained/random-controlled short training",
-    "GatedFull generation and one formal model training",
-    "Final paired numerics/train-onlyPTQ, separate real evaluation, K230 package and full chain benchmark"
+    "User must attach existingDOASTRA_GDRIVE_OAUTH_JSON andSave&RunAllonce in prepared02CPU audit and01b240scene supplement; both currentlyv1QUICK_SAVEonly",
+    "Observe original new savedversions; collect boundedRESULT/DRIVEreceipts; keep rawarchivescloud",
+    "After240accepted, prepare independent composite1240audit/newrevision and verifyallmembers/group/conditionalobservablecolorcoverage+near-duplicatecandidates; do not promote old02baseline tocompositeacceptance",
+    "Then03training:16imageoverfitmax1000updates, freshpretrained20epochPilot andsamebudgetrandomcontrol;4logicaltrainingruns totalincludingoneformal",
+    "Pilotgates ->10000-20000Full+singleformal100-200epochtrain; finalpaired PT/ORT/Simulator/KPU, separate realevaluation anddeploymentbenchmark"
   ],
   "decisions": [
-    "Continue nativebpy rather than repair retired BlenderProc v8",
-    "First task-head candidate NanoDet retaining official backbone/GhostPAN/towers/DFL; no final architecture or accuracy acceptance yet",
-    "Keep original CAD/r4 and production hardware paths unchanged; use private existing remote only"
+    "Use nativeBlender4.2.9; oldv8 remainsretired; originalPilotv2 preserved and neverreplayed",
+    "Patch color sampler using separate RNG; do not alter oldlabels or pretend existingconditionalcoveragewascomplete",
+    "Prepare finite240counterexamples (120train/60val/60test), keepcamera-group split; original1000 retained",
+    "Keep all produced Kaggle rawdata/checkpoints incllargearchivescloud-side; onlycompactreceipts/previews local",
+    "Wait for actualruntime Secretattachment; no credentials in source/args/Git and noassumedAPIinheritance"
   ],
   "risks": [
-    "Final Cycles GPU device and 1000-scene count remain pending",
-    "Quantized raw errors remain measured-only; untrained-head Simulator execution is not numerical acceptance",
-    "Realintrinsics/focus/ISP/liveRGB888P and fresh blind geometry labels unknown"
+    "KaggleAPIhasnoSecret-bindingfield; newNotebookruntime accessstillUNVERIFIED untiluser editorassociation",
+    "Actual02and01buserSave&RunAllpending; QuickSaveCOMPLETE isnotcompute",
+    "CurrentoriginalPilotconditionalcolorbiasmust becovered beforetraining; rawlabelsvalidbutgenerativecoverageincomplete",
+    "Newuntrained-headquantizederrorsnotaccepted; currentKModels floatBGRexternalnormalization; tinyRGBfixturedoesnotprovefinaltaskmodel/AI2Dequivalence",
+    "Realintrinsics/focus/ISP/liveRGB888P/currentboardruntime andfreshblindgeometrytruthUNKNOWN; no currentboardruntimeexecuted",
+    "Checkpoint best/lastandRNGsaving implemented, exact cross-session trainingresume notyetverified"
   ],
   "next_steps": [
-    "Observe Kaggle ref lotus30/k230-topface-v11-01-simulation-pilot exact v2 and collect only bounded original receipts",
-    "Implement/read-only dataset diagnostics and the finite training sequence from v11/training/TRAINING_PLAN.json"
+    "Read docs/topface/README.md, thishandoff andpreparednotebookREADBACKs; verifytaskscopeandclaim anewbeforewrites",
+    "Afteruserstart, queryexactnewversionof lotus30/k230-topface-v11-02-dataset-audit (id145013738) andlotus30/k230-topface-v11-01b-color-counterexamples(id145015590); donotrepeatQuickSaveorScientificrun",
+    "Use collect_compact.py exactversion/runid, inspect actualRESULT andfullDriveSHAreceipt; follow prepare_downstream.py --supplement-result forcompositeauditafter240accepted",
+    "ContinuefulloriginalV1.1objective; nofullcompletionclaim; goalremainsactive, currentmanualinterventionfirstauditturn"
   ],
   "verification": [
     {
-      "command": "python -m unittest discover -s research/topface -p test_*.py -v",
+      "command": "isolatedCPU python -m unittest discover -s research/topface -p test_*.py -v",
       "exit_code": 0,
-      "summary": "14 checks passed",
+      "summary": "38hostchecksPASS; color-countcoverage/safecomposite, metricgates, loss, geometry, portabledecode andstorageguards",
       "evidence": [
         "docs/topface/v11/reports/host_all_tests.log"
       ]
     },
     {
-      "command": "archive_local_smoke.py full remote byte stream SHA readback",
+      "command": "exactKaggle145002634v2 savedcompactreadback + frozeninput/sourceverification",
       "exit_code": 0,
-      "summary": "100 scenes /246 instances, 30052798 bytes; Drive SHA matched",
+      "summary": "1000scenes2496instances, actualOPTIX, completeQA andDrivefullbyteSHAreceipt accepted",
       "evidence": [
-        "docs/topface/v11/reports/SMOKE_DRIVE_ACCEPTANCE.json"
+        "docs/topface/v11/cloud/pilot-a02/ACCEPTANCE.json",
+        "docs/topface/v11/reports/PILOT1000_SUMMARY.json"
       ]
     },
     {
-      "command": "native_job.py explicit local qualification count6 seed20261115 max600",
+      "command": "native_job --count6 --seed20261116 --local-blender originalbinary, explicitSCENE_PLAN",
       "exit_code": 0,
-      "summary": "6 scenes15instances, QA PASS; local only",
+      "summary": "6scenes18instancesQA PASS; independentper-frame/source/seed/colorplan reviewPASS",
       "evidence": [
-        "docs/topface/v11/reports/native_worker_qualification.json"
+        "docs/topface/v11/reports/COLORFIX_LOCAL_QUALIFICATION.json",
+        "docs/topface/v11/reports/color_sampling_tests.log"
       ]
     },
     {
-      "command": "export_nanodet_candidate.py and probe_candidate.py --scope taskhead-untrained --compile for3 aligned dimensions",
+      "command": "combine_datasets +diagnose onoriginal local100andnewqualified6",
       "exit_code": 0,
-      "summary": "Original pretrained PT/officialONNX equivalent; all3 task-head graphs compiled andsimulated, nottrained or acceptednumerically",
+      "summary": "106scenes copiedwithunchangedlabels/hashes/groups andnoduplicateRGB; notfull1240coverageacceptance",
       "evidence": [
-        "docs/topface/v11/g3/PRETRAINED_EXPORT.json",
-        "docs/topface/v11/g3/COMPATIBILITY.md"
+        "docs/topface/v11/reports/COMPOSITE_LOCAL_INTEGRATION.json"
       ]
     },
     {
-      "command": "existing isolated CPU env python -m unittest discover -s research/topface -p test_*.py -v",
+      "command": "privateDatasetsv1+NotebooksQuickSavev1 andsource/manifestreadback",
       "exit_code": 0,
-      "summary": "32checksPASS, including wrongcolor/emptyFP/geometrydenominators/hashdrift/GTmatching/sanitycheckpoint preference",
+      "summary": "02CPU audit and01b supplement prepared; nooptimizer ornewscientificexecution",
       "evidence": [
-        "docs/topface/v11/reports/host_all_tests.log",
-        "docs/topface/v11/training/IMPLEMENTATION_REVIEW.md"
+        "docs/topface/v11/cloud/audit-a01/READBACK.json",
+        "docs/topface/v11/cloud/colorfix-a01/READBACK.json"
       ]
     }
   ],
-  "observed_utc": "2026-11-14T14:43:41.973736+00:00",
-  "cloud_job_active": true,
-  "goal_complete": false
+  "observed_utc": "2026-11-14T15:08:27.923649+00:00",
+  "optimizer_updates": 0,
+  "goal_complete": false,
+  "cloud_compute_active_verified": false,
+  "manual_intervention_required": true
 }

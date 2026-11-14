@@ -1,0 +1,17 @@
+{
+  "schema": "topface-color-counterexample-intent-v1.1",
+  "status": "PREPARED_NOT_SUBMITTED",
+  "run_id": "k230-topface-v11-color-counterexamples-a01",
+  "dataset": "lotus30/k230-topface-v11-colorfix-input-a01",
+  "dataset_version": 1,
+  "kernel": "lotus30/k230-topface-v11-01b-color-counterexamples",
+  "notebook_file": "01b_color_counterexamples.ipynb",
+  "notebook_sha256": "77656170df76fa4bb15233d8ae18169628831bc11d429ee8eb84613407b68615",
+  "input_manifest_sha256": "bd0405b22b8f5bd45cb0f56e1385b33ccffc9535d05b16da06f0d468a3b23dc0",
+  "worker_max_seconds": 3600,
+  "provider_max_seconds": 4200,
+  "automatic_replay": false,
+  "original1000_replayed": false,
+  "new_scenes": 240,
+  "seed": 20261116
+}

@@ -1,6 +1,6 @@
 {
   "schema": "topface-v1.1-requirement-evidence-v1",
-  "observed_utc": "2026-11-14T14:42:06.168964+00:00",
+  "observed_utc": "2026-11-14T14:54:13.309622+00:00",
   "goal_complete": false,
   "authority": "V1.1 plan/prompt SHA in docs/topface/execution_contract.json; user operating envelope and Smoke approval retained",
   "items": [
@@ -89,22 +89,18 @@
     },
     {
       "requirement": "1000 Kaggle Pilot scenes and durable acceptance",
-      "status": "EXACT_VERSION2_RUNNING_NOT_ACCEPTED",
+      "status": "COMPLETE_COMPUTE_QA_AND_DURABLE_ACCEPTANCE",
       "evidence": [
-        "cloud/pilot-a02/EXECUTED_SOURCE-v2.json",
-        "cloud/pilot-a02/OBSERVATION-v2-latest.json"
-      ],
-      "remaining": [
-        "exact count QA",
-        "full archive receipt",
-        "actual Cycles device"
+        "cloud/pilot-a02/ACCEPTANCE.json",
+        "reports/PILOT1000_SUMMARY.json"
       ]
     },
     {
       "requirement": "02 independent dataset diagnostics",
-      "status": "SOURCE_WRITTEN_LOCAL100_DIAGNOSTIC_PASS_NOT_CLOUD_PILOT_EXECUTED",
+      "status": "PREPARED_PRIVATE_NOTEBOOK_V1_READBACK_PASS_NEEDS_RUNTIME_SECRET",
       "evidence": [
-        "reports/smoke_diagnostics.json"
+        "reports/smoke_diagnostics.json",
+        "cloud/audit-a01/READBACK.json"
       ],
       "remaining": [
         "1000-scene02 run and acceptance"
@@ -169,13 +165,16 @@
     },
     {
       "requirement": "Executable K230 package / lifecycle / UART off / complete25FPS benchmark",
-      "status": "NOT_IMPLEMENTED_NEW_MODEL_BOARD_NOT_RUN",
+      "status": "PORTABLE_DECODE_HOST_PARITY_PASS_BOARD_PACKAGE_AND_RUNTIME_NOT_RUN",
       "remaining": [
         "independent install package",
         "fresh runtime pairing",
         "camera/buffer/AI2D proof",
         "P50/P95/P99 droppedframes memory stability",
         "full camera-to-display measurement"
+      ],
+      "evidence": [
+        "reports/portable_decoder_tests.log"
       ]
     }
   ]

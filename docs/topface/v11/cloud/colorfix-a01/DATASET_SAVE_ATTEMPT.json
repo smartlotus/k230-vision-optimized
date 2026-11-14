@@ -1,0 +1,9 @@
+{
+  "operation": "private dataset create",
+  "ref": "lotus30/k230-topface-v11-colorfix-input-a01",
+  "expected_version": 1,
+  "new_scenes": 240,
+  "parent1000_replayed": false,
+  "observed_utc": "2026-11-14T15:02:22.886785+00:00",
+  "automatic_retry": false
+}

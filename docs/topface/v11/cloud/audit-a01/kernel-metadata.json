@@ -1,0 +1,17 @@
+{
+  "id": "lotus30/k230-topface-v11-02-dataset-audit",
+  "title": "K230 Topface V11 02 Dataset Audit",
+  "code_file": "02_audit.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "lotus30/k230-topface-v11-audit-input-a01/1"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": []
+}
