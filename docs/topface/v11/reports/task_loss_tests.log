@@ -1,0 +1,12 @@
+C:\Users\28389\anaconda3\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (1.26.16) or chardet (7.4.3)/charset_normalizer (2.0.4) doesn't match a supported version!
+  warnings.warn(
+test_all_five_annotated_targets_can_receive_training_priors (test_task_training.TaskLossTests.test_all_five_annotated_targets_can_receive_training_priors) ... ok
+test_empty_scene_has_finite_background_loss_and_no_geometry_gradient (test_task_training.TaskLossTests.test_empty_scene_has_finite_background_loss_and_no_geometry_gradient) ... ok
+test_large_gt_cannot_take_fifth_instances_only_representable_prior (test_task_training.TaskLossTests.test_large_gt_cannot_take_fifth_instances_only_representable_prior) ... ok
+test_occluded_center_keeps_flags_but_masks_coordinate_and_round_angle_loss (test_task_training.TaskLossTests.test_occluded_center_keeps_flags_but_masks_coordinate_and_round_angle_loss) ... ok
+test_regression_is_equal_per_instance_with_different_positive_counts (test_task_training.TaskLossTests.test_regression_is_equal_per_instance_with_different_positive_counts) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.041s
+
+OK

@@ -1,0 +1,112 @@
+{
+  "schema": "topface-nanodet-candidate-output-v1.1",
+  "candidate_not_final": true,
+  "input": {
+    "shape": [
+      1,
+      3,
+      128,
+      224
+    ],
+    "dtype": "float32",
+    "layout": "NCHW",
+    "color": "BGR",
+    "normalization": "(uint8-[103.53,116.28,123.675])/[57.375,57.12,58.395] exactly once",
+    "source_wh": [
+      640,
+      360
+    ],
+    "resize": "aspect-preserving bilinear; centered letterbox pad114",
+    "letterbox": {
+      "source_wh": [
+        640,
+        360
+      ],
+      "model_wh": [
+        224,
+        128
+      ],
+      "gain": 0.35,
+      "resized_wh": [
+        224,
+        126
+      ],
+      "padding_tblr": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "pad_value": 114,
+      "coordinate_origin": "continuous top-left image edge",
+      "point_forward": "source_xy*gain+[left,top]",
+      "point_inverse": "(model_xy-[left,top])/gain",
+      "axis_forward": "source_length*gain",
+      "axis_inverse": "model_length/gain",
+      "orientation": "theta in radians encoded sin(2theta),cos(2theta); unchanged by isotropic resize"
+    }
+  },
+  "output": {
+    "name": "topface_raw",
+    "shape": [
+      1,
+      596,
+      50
+    ],
+    "dtype": "float32",
+    "channels": {
+      "color_presence_logits": [
+        0,
+        6
+      ],
+      "box_ltrb_dfl_logits": [
+        6,
+        38
+      ],
+      "physical_center_xy_stride_offsets": [
+        38,
+        40
+      ],
+      "center_valid_visible_logits": [
+        40,
+        42
+      ],
+      "ellipse_log_semiaxes_stride": [
+        42,
+        44
+      ],
+      "orientation_sin2_cos2": [
+        44,
+        46
+      ],
+      "geometry_confidence_logit": 46,
+      "visibility_quality_logit": 47,
+      "ellipse_conic_center_xy_stride_offsets": [
+        48,
+        50
+      ]
+    },
+    "grid": "p=(column*stride,row*stride), no0.5 bias; row-major; levels8,16,32,64",
+    "class_id_mapping": "approved color_id1..6 maps to channels0..5",
+    "class_loss": "hard-label sigmoid focal BCE gamma2 alpha0.25; background all6zero",
+    "score": "max sigmoid(class_presence_logits), exactly once; no additional objectness",
+    "bbox_decode": "softmax each8-bin DFL then expectation0..7 times stride; ltrb around grid",
+    "center_decode": "grid + raw offset * stride; physical CAD center, not conic center",
+    "ellipse_decode": "conic center=grid+channels48:50*stride; exp(log semiaxes)*stride; orientation atan2(sin2,cos2)/2",
+    "nms": "host after declared sigmoid of class logits; class-agnostic top-face box NMS",
+    "maximum_returned_instances": 5,
+    "capacity": "0 EMPTY,1..3 OK,4..5 OVER_CAPACITY; boundary ambiguity with<4 -> UNCERTAIN",
+    "loss_masks": {
+      "physical_center": "center_valid AND center_visible; hidden truth retained",
+      "center_flags": "both flags always supervised for positive priors, including hidden center=false",
+      "axes_conic": "geometry_valid",
+      "orientation": "geometry_valid AND orientation_valid",
+      "geometry_confidence": "BCE geometry_valid",
+      "visibility_quality": "BCE continuous visible_fraction"
+    },
+    "geometry_safety": "reject nonfinite raw output; reject exp-overflow geometry; normalize angle vector; canonicalize major>=minor and theta in[-90,90)deg"
+  },
+  "training_status": "NOT_TRAINED",
+  "ptq_status": "NOT_FINAL_CALIBRATION",
+  "board_status": "NOT_RUN"
+}

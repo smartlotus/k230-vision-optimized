@@ -1,0 +1,474 @@
+{
+  "schema": "topface-task-evaluation-v1.1",
+  "scope": "LOCAL_UNTRAINED_EVALUATION_INTEGRATION_ONLY",
+  "images": 2,
+  "denominators": {
+    "world_instances": 6,
+    "images": 2,
+    "observable_gt": 6,
+    "operating_predictions": 0,
+    "capacity_EMPTY": 2,
+    "fn_class_agnostic": 6
+  },
+  "operating_score_threshold": 0.25,
+  "ap_score_floor": 0.001,
+  "max_detections_per_image": 5,
+  "ap_method": "task-specific101-point interpolation; not pycocotoolsCOCO AP",
+  "task_mAP50": 0.0,
+  "task_mAP50_95": 0.0,
+  "ap_by_iou": [
+    {
+      "iou": 0.5,
+      "macro_ap": 0.0,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 1,
+          "predictions": 9,
+          "ap": 0.0
+        },
+        {
+          "color_id": 2,
+          "gt": 2,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 3,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 4,
+          "gt": 1,
+          "predictions": 1,
+          "ap": 0.0
+        },
+        {
+          "color_id": 5,
+          "gt": 0,
+          "predictions": 0,
+          "ap": null
+        },
+        {
+          "color_id": 6,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        }
+      ]
+    },
+    {
+      "iou": 0.55,
+      "macro_ap": 0.0,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 1,
+          "predictions": 9,
+          "ap": 0.0
+        },
+        {
+          "color_id": 2,
+          "gt": 2,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 3,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 4,
+          "gt": 1,
+          "predictions": 1,
+          "ap": 0.0
+        },
+        {
+          "color_id": 5,
+          "gt": 0,
+          "predictions": 0,
+          "ap": null
+        },
+        {
+          "color_id": 6,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        }
+      ]
+    },
+    {
+      "iou": 0.6,
+      "macro_ap": 0.0,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 1,
+          "predictions": 9,
+          "ap": 0.0
+        },
+        {
+          "color_id": 2,
+          "gt": 2,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 3,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 4,
+          "gt": 1,
+          "predictions": 1,
+          "ap": 0.0
+        },
+        {
+          "color_id": 5,
+          "gt": 0,
+          "predictions": 0,
+          "ap": null
+        },
+        {
+          "color_id": 6,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        }
+      ]
+    },
+    {
+      "iou": 0.65,
+      "macro_ap": 0.0,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 1,
+          "predictions": 9,
+          "ap": 0.0
+        },
+        {
+          "color_id": 2,
+          "gt": 2,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 3,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 4,
+          "gt": 1,
+          "predictions": 1,
+          "ap": 0.0
+        },
+        {
+          "color_id": 5,
+          "gt": 0,
+          "predictions": 0,
+          "ap": null
+        },
+        {
+          "color_id": 6,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        }
+      ]
+    },
+    {
+      "iou": 0.7,
+      "macro_ap": 0.0,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 1,
+          "predictions": 9,
+          "ap": 0.0
+        },
+        {
+          "color_id": 2,
+          "gt": 2,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 3,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 4,
+          "gt": 1,
+          "predictions": 1,
+          "ap": 0.0
+        },
+        {
+          "color_id": 5,
+          "gt": 0,
+          "predictions": 0,
+          "ap": null
+        },
+        {
+          "color_id": 6,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        }
+      ]
+    },
+    {
+      "iou": 0.75,
+      "macro_ap": 0.0,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 1,
+          "predictions": 9,
+          "ap": 0.0
+        },
+        {
+          "color_id": 2,
+          "gt": 2,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 3,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 4,
+          "gt": 1,
+          "predictions": 1,
+          "ap": 0.0
+        },
+        {
+          "color_id": 5,
+          "gt": 0,
+          "predictions": 0,
+          "ap": null
+        },
+        {
+          "color_id": 6,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        }
+      ]
+    },
+    {
+      "iou": 0.8,
+      "macro_ap": 0.0,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 1,
+          "predictions": 9,
+          "ap": 0.0
+        },
+        {
+          "color_id": 2,
+          "gt": 2,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 3,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 4,
+          "gt": 1,
+          "predictions": 1,
+          "ap": 0.0
+        },
+        {
+          "color_id": 5,
+          "gt": 0,
+          "predictions": 0,
+          "ap": null
+        },
+        {
+          "color_id": 6,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        }
+      ]
+    },
+    {
+      "iou": 0.85,
+      "macro_ap": 0.0,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 1,
+          "predictions": 9,
+          "ap": 0.0
+        },
+        {
+          "color_id": 2,
+          "gt": 2,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 3,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 4,
+          "gt": 1,
+          "predictions": 1,
+          "ap": 0.0
+        },
+        {
+          "color_id": 5,
+          "gt": 0,
+          "predictions": 0,
+          "ap": null
+        },
+        {
+          "color_id": 6,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        }
+      ]
+    },
+    {
+      "iou": 0.8999999999999999,
+      "macro_ap": 0.0,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 1,
+          "predictions": 9,
+          "ap": 0.0
+        },
+        {
+          "color_id": 2,
+          "gt": 2,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 3,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 4,
+          "gt": 1,
+          "predictions": 1,
+          "ap": 0.0
+        },
+        {
+          "color_id": 5,
+          "gt": 0,
+          "predictions": 0,
+          "ap": null
+        },
+        {
+          "color_id": 6,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        }
+      ]
+    },
+    {
+      "iou": 0.95,
+      "macro_ap": 0.0,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 1,
+          "predictions": 9,
+          "ap": 0.0
+        },
+        {
+          "color_id": 2,
+          "gt": 2,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 3,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        },
+        {
+          "color_id": 4,
+          "gt": 1,
+          "predictions": 1,
+          "ap": 0.0
+        },
+        {
+          "color_id": 5,
+          "gt": 0,
+          "predictions": 0,
+          "ap": null
+        },
+        {
+          "color_id": 6,
+          "gt": 1,
+          "predictions": 0,
+          "ap": 0.0
+        }
+      ]
+    }
+  ],
+  "class_agnostic_recall50": 0.0,
+  "matched_color_accuracy": 0.0,
+  "errors": {},
+  "count_groups": {
+    "world_count_1": {
+      "images": 1,
+      "observable_gt": 1,
+      "matched_gt": 0,
+      "all_observable_targets_recalled": 0
+    },
+    "world_count_5": {
+      "images": 1,
+      "observable_gt": 5,
+      "matched_gt": 0,
+      "all_observable_targets_recalled": 0
+    }
+  },
+  "host_forward_ms_per_image_batch_average": {
+    "n": 1,
+    "min": 32.837250000739004,
+    "p05": 32.837250000739004,
+    "median": 32.837250000739004,
+    "p95": 32.837250000739004,
+    "max": 32.837250000739004
+  },
+  "board_latency_measured": false,
+  "real_accuracy_verified": false,
+  "scene_names": [
+    "scene-00001",
+    "scene-00005"
+  ],
+  "optimizer_updates": 0,
+  "elapsed_seconds": 0.14099999999962165
+}

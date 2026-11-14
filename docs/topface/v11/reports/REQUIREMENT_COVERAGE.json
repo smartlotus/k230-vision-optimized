@@ -1,0 +1,182 @@
+{
+  "schema": "topface-v1.1-requirement-evidence-v1",
+  "observed_utc": "2026-11-14T14:42:06.168964+00:00",
+  "goal_complete": false,
+  "authority": "V1.1 plan/prompt SHA in docs/topface/execution_contract.json; user operating envelope and Smoke approval retained",
+  "items": [
+    {
+      "requirement": "G0 repository/data/model/protected-boundary audit",
+      "status": "FIRST_AUDIT_COMPLETE",
+      "evidence": [
+        "audit/PROJECT_AUDIT.md",
+        "audit/REUSE_MAP.md",
+        "audit/RISK_AND_UNKNOWN.md",
+        "audit/DATA_INVENTORY.json",
+        "audit/CURRENT_MODEL_CONTRACT.json"
+      ]
+    },
+    {
+      "requirement": "G1 current camera calibration/hardware",
+      "status": "HISTORICAL_EVIDENCE_AND_INFERRED_SWEEP_COMPLETE_CURRENT_CALIBRATION_UNKNOWN",
+      "evidence": [
+        "camera/camera_profile.yaml",
+        "camera/camera_sweep.yaml",
+        "camera/calibration_gap_report.md"
+      ],
+      "remaining": [
+        "real intrinsics/distortion/focus/ISP",
+        "current board/runtime/channel/stride",
+        "working plane metric calibration"
+      ]
+    },
+    {
+      "requirement": "Original fused CAD validation and top-only labeling",
+      "status": "LOCAL_VALIDATED",
+      "evidence": [
+        "cad/geometry_validation.json",
+        "cad/CAD_VALIDATION.md"
+      ]
+    },
+    {
+      "requirement": "Six simulation repositories and licences",
+      "status": "REVIEW_COMPLETE_NO_SOURCE_COPIED",
+      "evidence": [
+        "reports/SIMULATION_REPOSITORIES.md"
+      ]
+    },
+    {
+      "requirement": "MuJoCo version and Renderer smoke",
+      "status": "LOCAL_PASS_NOT_USED_FOR_POSES",
+      "evidence": [
+        "reports/MUJOCO_ENVIRONMENT.json"
+      ]
+    },
+    {
+      "requirement": "100 independent Smoke scenes, labels/overlay, automatic QA and >=30 human review",
+      "status": "PASS_LOCAL_CPU_AND_DRIVE_ACCEPTED",
+      "evidence": [
+        "reports/smoke100_summary.json",
+        "reports/SMOKE_HUMAN_REVIEW.json",
+        "reports/SMOKE_DRIVE_ACCEPTANCE.json",
+        "previews/index.html"
+      ]
+    },
+    {
+      "requirement": "Original NanoDet and PicoDet load/ONNX/ORT/nncase/partitions",
+      "status": "ORIGINAL_COMPILE_SIM_EXECUTED_NANO_PRETRAINED_LOADED",
+      "evidence": [
+        "g3/COMPATIBILITY.md",
+        "g3/PRETRAINED_EXPORT.json"
+      ],
+      "remaining": [
+        "Pico original framework loading/export only if needed for selection",
+        "actual target latency/memory",
+        "task quantization numeric acceptance"
+      ]
+    },
+    {
+      "requirement": "One forward bbox/sixcolors/physicalcenter/flags/ellipse/coniccenter",
+      "status": "UNTRAINED_NANO_HEAD_PT_ORT_AND_COMPILE_SIM_EXECUTED",
+      "evidence": [
+        "g3/nanodet-taskhead-224x128/RESULT.json",
+        "g3/nanodet-taskhead-320x192/RESULT.json",
+        "g3/nanodet-taskhead-384x224/RESULT.json"
+      ],
+      "remaining": [
+        "train/validate/freeze one formal model",
+        "final output contract/board preprocessing paired proof"
+      ]
+    },
+    {
+      "requirement": "1000 Kaggle Pilot scenes and durable acceptance",
+      "status": "EXACT_VERSION2_RUNNING_NOT_ACCEPTED",
+      "evidence": [
+        "cloud/pilot-a02/EXECUTED_SOURCE-v2.json",
+        "cloud/pilot-a02/OBSERVATION-v2-latest.json"
+      ],
+      "remaining": [
+        "exact count QA",
+        "full archive receipt",
+        "actual Cycles device"
+      ]
+    },
+    {
+      "requirement": "02 independent dataset diagnostics",
+      "status": "SOURCE_WRITTEN_LOCAL100_DIAGNOSTIC_PASS_NOT_CLOUD_PILOT_EXECUTED",
+      "evidence": [
+        "reports/smoke_diagnostics.json"
+      ],
+      "remaining": [
+        "1000-scene02 run and acceptance"
+      ]
+    },
+    {
+      "requirement": "03 overfit/Pilot/control training and metrics",
+      "status": "IMPLEMENTED_REVIEWED_HOST_INTEGRATION_ONLY_ZERO_UPDATES",
+      "evidence": [
+        "training/TRAINING_PLAN.json",
+        "training/IMPLEMENTATION_REVIEW.md",
+        "reports/TRAINING_INTEGRATION_NO_UPDATES.json",
+        "reports/host_all_tests.log"
+      ],
+      "remaining": [
+        "actual Kaggle optimizer runs",
+        "checkpoints/TensorBoard",
+        "Pilot gates"
+      ]
+    },
+    {
+      "requirement": "10000-20000 Full synthetic data",
+      "status": "NOT_ADMITTED_BEFORE_PILOT_GATE",
+      "remaining": [
+        "measured render throughput/budget",
+        "finite shard identities and archive acceptance",
+        "coverage failure-directed augmentation"
+      ]
+    },
+    {
+      "requirement": "One formal TopFaceNet 100-200epoch validation-early-stop",
+      "status": "NOT_RUN",
+      "remaining": [
+        "selected architecture/init/size",
+        "Full data accepted",
+        "actual training/best/last/hash"
+      ]
+    },
+    {
+      "requirement": "Separate synthetic and approved real assessment/active learning",
+      "status": "NOT_RUN",
+      "remaining": [
+        "frozen selected model/threshold",
+        "synthetic test once",
+        "r4 reliable bbox/color evaluation",
+        "fresh blind scene/session truth",
+        "real center/ellipse labels or explicit UNKNOWN"
+      ]
+    },
+    {
+      "requirement": "PT->ORT->Simulator->KPU paired final export",
+      "status": "EARLY_ENGINEERING_ONLY_FINAL_NOT_RUN",
+      "evidence": [
+        "g3/RGB_UINT8_PREPROCESS_FIXTURE.json"
+      ],
+      "remaining": [
+        "final trained ONNX",
+        "train-only final PTQ",
+        "per-channel/raw/decoded numerical comparison",
+        "actual KPU paired data"
+      ]
+    },
+    {
+      "requirement": "Executable K230 package / lifecycle / UART off / complete25FPS benchmark",
+      "status": "NOT_IMPLEMENTED_NEW_MODEL_BOARD_NOT_RUN",
+      "remaining": [
+        "independent install package",
+        "fresh runtime pairing",
+        "camera/buffer/AI2D proof",
+        "P50/P95/P99 droppedframes memory stability",
+        "full camera-to-display measurement"
+      ]
+    }
+  ]
+}

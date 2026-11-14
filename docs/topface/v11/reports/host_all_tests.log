@@ -2,6 +2,11 @@ C:\Users\28389\anaconda3\Lib\site-packages\requests\__init__.py:113: RequestsDep
   warnings.warn(
 test_all_four_labels_survive_and_round_direction_is_not_validated (test_audit.AuditTests.test_all_four_labels_survive_and_round_direction_is_not_validated) ... ok
 test_empty_frame_and_contaminated_mask (test_audit.AuditTests.test_empty_frame_and_contaminated_mask) ... ok
+test_complete_member_inventory_and_hashes_are_required (test_cloud_artifacts.CloudArtifactTests.test_complete_member_inventory_and_hashes_are_required) ... ok
+test_path_traversal_and_missing_inventory_member_are_rejected (test_cloud_artifacts.CloudArtifactTests.test_path_traversal_and_missing_inventory_member_are_rejected) ... ok
+test_empty_scene_false_positive_has_explicit_denominator (test_evaluate_task.TaskEvaluationTests.test_empty_scene_false_positive_has_explicit_denominator) ... ok
+test_perfect_bbox_color_physical_and_conic_geometry_score_one (test_evaluate_task.TaskEvaluationTests.test_perfect_bbox_color_physical_and_conic_geometry_score_one) ... ok
+test_wrong_color_is_not_hidden_by_class_agnostic_recall (test_evaluate_task.TaskEvaluationTests.test_wrong_color_is_not_hidden_by_class_agnostic_recall) ... ok
 test_height_scaling_and_outside_camera_envelope (test_geometry.GeometryTests.test_height_scaling_and_outside_camera_envelope) ... ok
 test_vertical_centered_disk_has_known_image_diameter (test_geometry.GeometryTests.test_vertical_centered_disk_has_known_image_diameter) ... ok
 test_vertical_height_is_top_relative_and_projection_round_trips (test_geometry.GeometryTests.test_vertical_height_is_top_relative_and_projection_round_trips) ... ok
@@ -10,16 +15,29 @@ test_old_and_namespaced_mounts_and_hash_mismatch (test_input_locator.InputLocato
 test_existing_drive_run_refuses_fresh_session_replay (test_native_job.NativeAdmissionTests.test_existing_drive_run_refuses_fresh_session_replay) ... ok
 test_expired_budget_stops_before_network_or_large_hash (test_native_job.NativeAdmissionTests.test_expired_budget_stops_before_network_or_large_hash) ... ok
 TOPFACE_STAGE {"run_id": "fixture-failure", "stage": "ENVIRONMENT_AND_STORAGE_ADMISSION", "elapsed_seconds": 0.0}
-TOPFACE_STAGE {"run_id": "fixture-failure", "stage": "NATIVE_BLENDER_RUNTIME", "elapsed_seconds": 0.01599999999962165}
-TOPFACE_STAGE {"run_id": "fixture-failure", "stage": "ONE_FRAME_RUNTIME_QUALIFICATION", "elapsed_seconds": 0.01599999999962165}
-TOPFACE_RESULT {"schema": "topface-native-pilot-v1.1", "run_id": "fixture-failure", "status": "FAILED_OR_BUDGET_STOP", "observed_utc": "2026-11-14T13:40:13.035077+00:00", "optimizer_steps": 0, "requested_scenes": 6, "seed": 20261115, "automatic_replay": false, "scope": "LOCAL_WORKER_QUALIFICATION", "input_manifest_sha256": "4a95ea1226cabb898264b4a4018edf3e1881acbbc93050dc9384c94ec08c3ef9", "source_files": [], "max_seconds": 600, "stopping_condition": "complete requested scenes or finite deadline; no automatic scientific replay", "stage": "ONE_FRAME_RUNTIME_QUALIFICATION", "elapsed_seconds": 0.01599999999962165, "qualification_cpu_fallback": true, "error_type": "RuntimeError", "durable_status": "UNACCEPTED_PRESERVE_SAVED_OUTPUT", "publication_error_type": "OSError"}
+TOPFACE_STAGE {"run_id": "fixture-failure", "stage": "NATIVE_BLENDER_RUNTIME", "elapsed_seconds": 0.014999999999417923}
+TOPFACE_STAGE {"run_id": "fixture-failure", "stage": "ONE_FRAME_RUNTIME_QUALIFICATION", "elapsed_seconds": 0.014999999999417923}
+TOPFACE_RESULT {"schema": "topface-native-pilot-v1.1", "run_id": "fixture-failure", "status": "FAILED_OR_BUDGET_STOP", "observed_utc": "2026-11-14T14:40:43.604506+00:00", "optimizer_steps": 0, "requested_scenes": 6, "seed": 20261115, "automatic_replay": false, "scope": "LOCAL_WORKER_QUALIFICATION", "input_manifest_sha256": "4a95ea1226cabb898264b4a4018edf3e1881acbbc93050dc9384c94ec08c3ef9", "source_files": [], "max_seconds": 600, "stopping_condition": "complete requested scenes or finite deadline; no automatic scientific replay", "stage": "ONE_FRAME_RUNTIME_QUALIFICATION", "elapsed_seconds": 0.030999999999039574, "qualification_cpu_fallback": true, "error_type": "RuntimeError", "durable_status": "UNACCEPTED_PRESERVE_SAVED_OUTPUT", "publication_error_type": "OSError"}
 test_failed_render_and_archive_still_persist_compact_recovery (test_native_job.NativeAdmissionTests.test_failed_render_and_archive_still_persist_compact_recovery) ... ok
+test_five_detections_and_distinct_physical_conic_centers (test_task_geometry.TaskGeometryTests.test_five_detections_and_distinct_physical_conic_centers) ... ok
+test_letterbox_and_inverse_are_exact_and_grid_has_no_half_stride (test_task_geometry.TaskGeometryTests.test_letterbox_and_inverse_are_exact_and_grid_has_no_half_stride) ... ok
+test_nonfinite_or_wrong_contract_is_rejected (test_task_geometry.TaskGeometryTests.test_nonfinite_or_wrong_contract_is_rejected) ... ok
+test_padding_false_positives_do_not_consume_five_valid_slots (test_task_geometry.TaskGeometryTests.test_padding_false_positives_do_not_consume_five_valid_slots) ... ok
+test_all_five_annotated_targets_can_receive_training_priors (test_task_training.TaskLossTests.test_all_five_annotated_targets_can_receive_training_priors) ... ok
+test_empty_scene_has_finite_background_loss_and_no_geometry_gradient (test_task_training.TaskLossTests.test_empty_scene_has_finite_background_loss_and_no_geometry_gradient) ... ok
+test_large_gt_cannot_take_fifth_instances_only_representable_prior (test_task_training.TaskLossTests.test_large_gt_cannot_take_fifth_instances_only_representable_prior) ... ok
+test_occluded_center_keeps_flags_but_masks_coordinate_and_round_angle_loss (test_task_training.TaskLossTests.test_occluded_center_keeps_flags_but_masks_coordinate_and_round_angle_loss) ... ok
+test_qa_member_drift_is_rejected_before_loading (test_task_training.TaskLossTests.test_qa_member_drift_is_rejected_before_loading) ... ok
+test_regression_is_equal_per_instance_with_different_positive_counts (test_task_training.TaskLossTests.test_regression_is_equal_per_instance_with_different_positive_counts) ... ok
+test_lower_scalar_score_sanity_success_is_the_saved_overfit_model (test_training_gates.TrainingGateTests.test_lower_scalar_score_sanity_success_is_the_saved_overfit_model) ... ok
+test_ninety_nine_missing_ellipses_cannot_pass_pilot (test_training_gates.TrainingGateTests.test_ninety_nine_missing_ellipses_cannot_pass_pilot) ... ok
+test_valid_angles_and_fifth_target_recall_cannot_be_omitted (test_training_gates.TrainingGateTests.test_valid_angles_and_fifth_target_recall_cannot_be_omitted) ... ok
 test_empty_target_mask_and_unlabelled_fifth_mask_fail (test_v11.V11Tests.test_empty_target_mask_and_unlabelled_fifth_mask_fail) ... ok
 test_occluded_center_keeps_3d_truth (test_v11.V11Tests.test_occluded_center_keeps_3d_truth) ... ok
 test_physical_center_is_distinct_from_perspective_conic_center (test_v11.V11Tests.test_physical_center_is_distinct_from_perspective_conic_center) ... ok
 test_smoke_configs_are_independent_and_keep_all_five (test_v11.V11Tests.test_smoke_configs_are_independent_and_keep_all_five) ... ok
 
 ----------------------------------------------------------------------
-Ran 14 tests in 0.265s
+Ran 32 tests in 0.366s
 
 OK

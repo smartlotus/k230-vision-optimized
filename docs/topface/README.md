@@ -35,4 +35,4 @@ r4两仓相同SHA且未修改：12图/33框，7批准图/17框，实际5个黑�
 3. 运行独立02_dataset_audit的尺度/可见性/近重复/泄漏诊断，再进入03_training的10–20图overfit及Pilot短训。Pilot门禁通过后再准入Full10000–20000场景和唯一正式模型。
 4. 完成合成/真实分开的评估、最终train-only PTQ、PT/ORT/Simulator/KPU配对及板端完整链路benchmark。尚未完成，不从历史冻结图FPS推断新模型25FPS。
 
-本地主机检查：`python -m unittest discover -s research/topface -p 'test_*.py' -v`。当前14项通过，日志 `v11/reports/host_all_tests.log`。原生worker最新本地qualification为6图/15实例，`v11/reports/native_worker_qualification.json`。兼容性导出与nncase使用已有隔离CPU环境，不向旧工程安装依赖。
+本地主机检查：`python -m unittest discover -s research/topface -p 'test_*.py' -v`。当前32项通过，日志 `v11/reports/host_all_tests.log`。原生worker最新本地qualification为6图/15实例，`v11/reports/native_worker_qualification.json`。兼容性导出与nncase使用已有隔离CPU环境，不向旧工程安装依赖。

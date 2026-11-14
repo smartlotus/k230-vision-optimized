@@ -1,0 +1,10 @@
+C:\Users\28389\anaconda3\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (1.26.16) or chardet (7.4.3)/charset_normalizer (2.0.4) doesn't match a supported version!
+  warnings.warn(
+test_empty_scene_false_positive_has_explicit_denominator (test_evaluate_task.TaskEvaluationTests.test_empty_scene_false_positive_has_explicit_denominator) ... ok
+test_perfect_bbox_color_physical_and_conic_geometry_score_one (test_evaluate_task.TaskEvaluationTests.test_perfect_bbox_color_physical_and_conic_geometry_score_one) ... ok
+test_wrong_color_is_not_hidden_by_class_agnostic_recall (test_evaluate_task.TaskEvaluationTests.test_wrong_color_is_not_hidden_by_class_agnostic_recall) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.074s
+
+OK

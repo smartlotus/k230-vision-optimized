@@ -1,0 +1,13 @@
+{
+  "scope": "LOCAL_ENVIRONMENT_PROBE_NOT_TRAINING",
+  "physics_pose_generation_used": false,
+  "version": "3.3.7",
+  "status": "RENDERER_SMOKE_PASS",
+  "shape": [
+    64,
+    64,
+    3
+  ],
+  "dtype": "uint8",
+  "finite": true
+}

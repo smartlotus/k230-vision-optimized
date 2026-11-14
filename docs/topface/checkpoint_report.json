@@ -5,10 +5,14 @@
     "Local Smoke archive accepted on Drive with full byte SHA readback",
     "Native worker local6-scene/15-instance end-to-end qualification and14 host regressions PASS",
     "Original Nano/Pico compile+Simulator; original Nano EMA equivalence and rectangular untrained task heads export/compile/Simulator",
-    "Prepared and read back private versioned source/input; user launched Kaggle145002634 v2; Drive admission and one-frame qualification passed; Pilot rendering active"
+    "Prepared and read back private versioned source/input; user launched Kaggle145002634 v2; Drive admission and one-frame qualification passed; Pilot rendering active",
+    "Implemented hash-bound downstream02/03 cloud consumers and finite logical training controller (not submitted/run)",
+    "Independently reviewed training gates/loss/decoder and fixed findings;32 host regressions pass",
+    "Local train split73scenes175GT: allassigned,11fifthinstances; real model forward/backwardfinite with0optimizer updates",
+    "Small compiler RGBuint8->BGRmean/std fixture compile+Simulator semantics PASS; not final task model"
   ],
   "remaining": [
-    "Await exact v2 Pilot result and durable archive receipt; do not replace or replay active run",
+    "Await exact Kaggle145002634 v2 Pilot finalresult/Drive receipt; last22:41 RUNNING; do not replay or replace",
     "Pilot dataset diagnostics and overfit/pretrained/random-controlled short training",
     "GatedFull generation and one formal model training",
     "Final paired numerics/train-onlyPTQ, separate real evaluation, K230 package and full chain benchmark"
@@ -60,9 +64,18 @@
         "docs/topface/v11/g3/PRETRAINED_EXPORT.json",
         "docs/topface/v11/g3/COMPATIBILITY.md"
       ]
+    },
+    {
+      "command": "existing isolated CPU env python -m unittest discover -s research/topface -p test_*.py -v",
+      "exit_code": 0,
+      "summary": "32checksPASS, including wrongcolor/emptyFP/geometrydenominators/hashdrift/GTmatching/sanitycheckpoint preference",
+      "evidence": [
+        "docs/topface/v11/reports/host_all_tests.log",
+        "docs/topface/v11/training/IMPLEMENTATION_REVIEW.md"
+      ]
     }
   ],
-  "observed_utc": "2026-11-14T14:02:24.090306+00:00",
+  "observed_utc": "2026-11-14T14:43:41.973736+00:00",
   "cloud_job_active": true,
   "goal_complete": false
 }

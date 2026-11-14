@@ -17,6 +17,7 @@ from torch import nn
 from vendor.nanodet_core.model.backbone.shufflenetv2 import ShuffleNetV2
 from vendor.nanodet_core.model.fpn.ghost_pan import GhostPAN
 from vendor.nanodet_core.model.module.conv import DepthwiseConvModule
+from task_geometry import letterbox_parameters
 
 CHECKPOINT_SHA256 = 'f4c6080f3ef35a64c3030d559438b436462f227ce29700bca71327203e42dea2'
 STRIDES=(8,16,32,64)
@@ -117,17 +118,26 @@ def output_contract(width,height):
     return {'schema':'topface-nanodet-candidate-output-v1.1','candidate_not_final':True,
         'input':{'shape':[1,3,height,width],'dtype':'float32','layout':'NCHW','color':'BGR',
             'normalization':'(uint8-[103.53,116.28,123.675])/[57.375,57.12,58.395] exactly once',
-            'source_wh':[640,360],'resize':'aspect-preserving bilinear; centered letterbox pad114'},
+            'source_wh':[640,360],'resize':'aspect-preserving bilinear; centered letterbox pad114',
+            'letterbox':letterbox_parameters(width,height)},
         'output':{'name':'topface_raw','shape':[1,locations,50],'dtype':'float32',
-            'channels':{'color_quality_logits':[0,6],'box_ltrb_dfl_logits':[6,38],
+            'channels':{'color_presence_logits':[0,6],'box_ltrb_dfl_logits':[6,38],
                 'physical_center_xy_stride_offsets':[38,40],'center_valid_visible_logits':[40,42],
                 'ellipse_log_semiaxes_stride':[42,44],'orientation_sin2_cos2':[44,46],
                 'geometry_confidence_logit':46,'visibility_quality_logit':47,
                 'ellipse_conic_center_xy_stride_offsets':[48,50]},
-            'grid':'NanoDet x/y integer grid at strides8,16,32,64; row-major within each level',
+            'grid':'p=(column*stride,row*stride), no0.5 bias; row-major; levels8,16,32,64',
+            'class_id_mapping':'approved color_id1..6 maps to channels0..5',
+            'class_loss':'hard-label sigmoid focal BCE gamma2 alpha0.25; background all6zero',
+            'score':'max sigmoid(class_presence_logits), exactly once; no additional objectness',
             'bbox_decode':'softmax each8-bin DFL then expectation0..7 times stride; ltrb around grid',
             'center_decode':'grid + raw offset * stride; physical CAD center, not conic center',
             'ellipse_decode':'conic center=grid+channels48:50*stride; exp(log semiaxes)*stride; orientation atan2(sin2,cos2)/2',
             'nms':'host after declared sigmoid of class logits; class-agnostic top-face box NMS',
-            'maximum_returned_instances':5,'capacity':'0 EMPTY,1..3 OK,4..5 OVER_CAPACITY; uncertainty separate'},
+            'maximum_returned_instances':5,'capacity':'0 EMPTY,1..3 OK,4..5 OVER_CAPACITY; boundary ambiguity with<4 -> UNCERTAIN',
+            'loss_masks':{'physical_center':'center_valid AND center_visible; hidden truth retained',
+                'center_flags':'both flags always supervised for positive priors, including hidden center=false',
+                'axes_conic':'geometry_valid','orientation':'geometry_valid AND orientation_valid',
+                'geometry_confidence':'BCE geometry_valid','visibility_quality':'BCE continuous visible_fraction'},
+            'geometry_safety':'reject nonfinite raw output; reject exp-overflow geometry; normalize angle vector; canonicalize major>=minor and theta in[-90,90)deg'},
         'training_status':'NOT_TRAINED','ptq_status':'NOT_FINAL_CALIBRATION','board_status':'NOT_RUN'}

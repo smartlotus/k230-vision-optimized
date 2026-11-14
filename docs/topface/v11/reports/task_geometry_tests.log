@@ -1,0 +1,8 @@
+test_five_detections_and_distinct_physical_conic_centers (test_task_geometry.TaskGeometryTests.test_five_detections_and_distinct_physical_conic_centers) ... ok
+test_letterbox_and_inverse_are_exact_and_grid_has_no_half_stride (test_task_geometry.TaskGeometryTests.test_letterbox_and_inverse_are_exact_and_grid_has_no_half_stride) ... ok
+test_nonfinite_or_wrong_contract_is_rejected (test_task_geometry.TaskGeometryTests.test_nonfinite_or_wrong_contract_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.098s
+
+OK

@@ -1,0 +1,82 @@
+{
+  "scope": "LOCAL_REAL_SYNTHETIC_FORWARD_BACKWARD_INTEGRATION_ONLY",
+  "optimizer_updates": 0,
+  "training_scenes_checked": 73,
+  "assignment_counts": {
+    "world_instances": 175,
+    "observable_eligible_gt": 175,
+    "assigned_gt": 175,
+    "positive_priors": 525,
+    "assigned_fifth_instance": 11
+  },
+  "selection": {
+    "scenes": [
+      "scene-00011",
+      "scene-00058",
+      "scene-00066",
+      "scene-00045",
+      "scene-00038",
+      "scene-00049",
+      "scene-00036",
+      "scene-00072",
+      "scene-00087",
+      "scene-00081",
+      "scene-00021",
+      "scene-00086",
+      "scene-00031",
+      "scene-00069",
+      "scene-00016",
+      "scene-00007"
+    ],
+    "covered_features": [
+      "boundary",
+      "color0",
+      "color1",
+      "color2",
+      "color3",
+      "color4",
+      "color5",
+      "count0",
+      "count1",
+      "count2",
+      "count3",
+      "count4",
+      "count5",
+      "geometry",
+      "hidden_center"
+    ],
+    "seed": 20261114,
+    "selection": "train-only label-stratified, before any optimizer updates"
+  },
+  "initialization": {
+    "loaded_tensors": 644,
+    "ignored_training_only_tensors": 243,
+    "missing_tensors": [],
+    "checkpoint_sha256": "f4c6080f3ef35a64c3030d559438b436462f227ce29700bca71327203e42dea2",
+    "classification_initialization": "random six-color",
+    "geometry_initialization": "random twelve-channel",
+    "box_regression_initialization": "original COCO DFL channels",
+    "optimizer_updates": 0
+  },
+  "loss": 3.65685772895813,
+  "loss_parts": {
+    "color": 1.1266143321990967,
+    "dfl": 2.1827378273010254,
+    "bbox": 0.5053561329841614,
+    "physical": 0.1327022761106491,
+    "conic": 0.14081093668937683,
+    "axes": 0.14877749979496002,
+    "orientation": 1.1171375513076782,
+    "center_flags": 0.7027745842933655,
+    "geometry_confidence": 0.600398063659668,
+    "visibility_quality": 0.7094129323959351
+  },
+  "finite_parameter_gradients": true,
+  "batch_assignment": {
+    "world_instances": 5,
+    "observable_eligible_gt": 5,
+    "assigned_gt": 5,
+    "positive_priors": 15
+  },
+  "dataset_audit_sha256": "704b84733629ddca835b8d16d8a650b995c0901a98793d4b52a1ec1e4ce760e8"
+}
