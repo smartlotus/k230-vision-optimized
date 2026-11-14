@@ -28,13 +28,18 @@ def observe(ref, version, token_file, output=None):
         events=json.loads(raw) if raw else []
         lines="".join(event.get("data","") for event in events).splitlines()
     except (json.JSONDecodeError,TypeError):lines=raw.splitlines()
+    last_lines=[line[:4096] for line in lines[-24:]]
     result={"observed_utc":datetime.now(timezone.utc).isoformat(),"ref":ref,
         "kernel_id":metadata.id,"version":version,"current_version":metadata.current_version_number,
-        "status":status.status.name,"log_tail":lines[-24:]}
+        "status":status.status.name,"log_tail":last_lines}
     if output:
         output=Path(output)
         atomic_json(output,result)
-        output.with_suffix(".log.json").write_text(raw,encoding="utf8")
+        atomic_json(output.with_suffix(".log.json"),{
+            "full_log_bytes":len(raw.encode("utf8")),
+            "last_lines":last_lines,
+            "full_log_available_in_kaggle":True,
+        })
     print(json.dumps(result,indent=2))
     return result
 

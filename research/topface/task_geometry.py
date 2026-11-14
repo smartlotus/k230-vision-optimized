@@ -28,12 +28,17 @@ def letterbox_parameters(width,height,source_width=640,source_height=360):
         'orientation':'theta in radians encoded sin(2theta),cos(2theta); unchanged by isotropic resize'}
 
 
-def preprocess_bgr(image,width=320,height=192):
+def letterbox_bgr(image,width=320,height=192):
     if image.dtype!=np.uint8 or image.shape!=(360,640,3):raise ValueError('Expected uint8 BGR640x360')
     info=letterbox_parameters(width,height)
     canvas=np.full((height,width,3),114,np.uint8)
     top,_,left,_=info['padding_tblr'];rw,rh=info['resized_wh']
     canvas[top:top+rh,left:left+rw]=cv2.resize(image,(rw,rh),interpolation=cv2.INTER_LINEAR)
+    return canvas,info
+
+
+def preprocess_bgr(image,width=320,height=192):
+    canvas,info=letterbox_bgr(image,width,height)
     normalized=((canvas.astype(np.float32)-MEAN)/STD).transpose(2,0,1).copy()
     return normalized,info
 

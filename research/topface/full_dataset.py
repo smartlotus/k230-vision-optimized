@@ -3,6 +3,8 @@ from collections import Counter
 import json
 from pathlib import Path
 
+import numpy as np
+
 from cloud_artifacts import extract_verified_archive
 from cloud_store import atomic_json, sha
 from scene_config import camera_partition
@@ -48,6 +50,9 @@ def load_shards(shards, mount_root, destination, total_scenes, base_seed,
                 scene = f'scene-{scene_index:05d}'
                 if item['scene'] != scene or item['group'] != f'SG-{base_seed}-{scene_index:06d}':
                     raise ValueError('Scene is outside the frozen Full range')
+                seed = int(np.random.SeedSequence([base_seed,scene_index]).generate_state(1)[0])
+                if item['seed'] != seed:
+                    raise ValueError('Full scene seed differs from its registered global index')
                 if item['seed'] in seen_seeds or item['rgb_sha256'] in seen_pixels:
                     raise ValueError('Duplicate scene seed or RGB across Full shards')
                 seen_seeds.add(item['seed'])

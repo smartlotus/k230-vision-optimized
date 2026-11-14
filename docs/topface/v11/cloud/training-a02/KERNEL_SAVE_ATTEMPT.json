@@ -1,0 +1,9 @@
+{
+  "operation": "SAVE_AND_RUN_ALL",
+  "observed_utc": "2026-11-14T17:01:56.478248+00:00",
+  "ref": "lotus30/k230-topface-v11-03b-geometry-refine",
+  "source_sha256": "925c9ebcb557e11c09267601ba9145b06d34b95fc5b48bc92df6e2989bba30f5",
+  "session_timeout_seconds": 10800,
+  "scientific_execution": true,
+  "automatic_retry": false
+}

@@ -1,0 +1,19 @@
+{
+  "id": 145035249,
+  "isPrivate": true,
+  "enableGpu": true,
+  "enableInternet": false,
+  "datasetDataSources": [
+    "lotus30/k230-topface-v11-training-input-a02"
+  ],
+  "kernelDataSources": [
+    "lotus30/k230-topface-v11-01-simulation-pilot",
+    "lotus30/k230-topface-v11-01b-color-counterexamples",
+    "lotus30/k230-topface-v11-03-pilot-training"
+  ],
+  "currentVersionNumber": 1,
+  "dockerImage": "gcr.io/kaggle-private-byod/python@sha256:de153e6d303881930c51286216393d56f56b26458d0661350305a1e8144eea01",
+  "machineShape": "NvidiaTeslaT4",
+  "exact_source_cells_match": true,
+  "notebook_sha256": "925c9ebcb557e11c09267601ba9145b06d34b95fc5b48bc92df6e2989bba30f5"
+}

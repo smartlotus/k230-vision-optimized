@@ -75,7 +75,7 @@ def collect(ref,version,run_id,output,token_file,publisher_route=False,similarit
             atomic_json(output/name,report)
         if training:
             result=json.loads((output/(run_id+'-RESULT.json')).read_text(encoding='utf8'))
-            allowed=('overfit','pilot_pretrained','pilot_random_control')
+            allowed=('overfit','pilot_pretrained','pilot_random_control','pilot_geometry_refine')
             for experiment in result.get('experiments',[]):
                 kind=experiment['kind']
                 if kind not in allowed:raise ValueError('Unexpected training report')
@@ -91,6 +91,9 @@ def collect(ref,version,run_id,output,token_file,publisher_route=False,similarit
                 directory=output/kind
                 atomic_json(directory/'BEST_METRICS.json',metrics)
                 atomic_json(directory/'RESULT.json',trace)
+                if kind=='pilot_geometry_refine':
+                    baseline=json.loads(download(client,ref,version,prefix+'BASELINE.json',256*1024))
+                    atomic_json(directory/'BASELINE.json',baseline)
                 rows.append({'name':prefix+'BEST_METRICS.json','status':'COLLECTED',
                              'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()})
     receipt={'schema':'topface-exact-compact-collection-v1.1','ref':ref,'version':version,'run_id':run_id,

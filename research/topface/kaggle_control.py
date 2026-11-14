@@ -24,6 +24,12 @@ def main():
         env["KAGGLE_API_TOKEN"]=token
     command=args.arguments
     if command and command[0]=="--":command=command[1:]
+    if os.name=='nt' and command[:2] in (['datasets','create'],['datasets','version']):
+        # The CLI's resumable upload state escapes the native path separator.
+        # Normalize paths before the CLI uses one as a local state filename.
+        for index,arg in enumerate(command[:-1]):
+            if arg in ('-p','--path'):
+                command[index+1]=str(Path(command[index+1]).resolve())
     result=subprocess.run([sys.executable,"-m","kaggle",*command],env=env)
     raise SystemExit(result.returncode)
 

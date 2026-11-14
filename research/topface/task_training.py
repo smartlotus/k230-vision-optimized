@@ -78,7 +78,8 @@ class TopFaceDataset(Dataset):
                 'geometry_valid':item['geometry_valid'],'orientation_valid':item['orientation_valid'],
                 'visible_fraction':item['visible_fraction'],'truncated':item['truncated']})
         return torch.from_numpy(image),targets,{'scene':row['scene'],'group':row['group'],
-            'camera_group':row['camera_group'],'split':row['split'],'expected_world_count':len(targets),'letterbox':info}
+            'camera_group':row['camera_group'],'split':row['split'],'expected_world_count':len(targets),'letterbox':info,
+            'camera_height_mm':label.get('camera_height_above_top_mm'),'camera_plane_angle_deg':label.get('plane_angle_deg')}
 
 
 def collate(items):
@@ -95,13 +96,16 @@ def giou_loss(pred,target):
 
 
 class TopFaceLoss(nn.Module):
-    def __init__(self,width=320,height=192,positives_per_gt=3):
+    def __init__(self,width=320,height=192,positives_per_gt=3,ellipse_shape_loss=False):
         super().__init__();points,scale=priors(width,height)
         self.points_numpy=points;self.scales_numpy=scale
         self.register_buffer('points',torch.from_numpy(points));self.register_buffer('scale',torch.from_numpy(scale))
         self.positives_per_gt=positives_per_gt
+        self.ellipse_shape_loss=ellipse_shape_loss
         self.weights={'color':1.,'dfl':.25,'bbox':2.,'physical':1.,'conic':1.,'axes':.5,
                       'orientation':.2,'center_flags':.2,'geometry_confidence':.2,'visibility_quality':.2}
+        if ellipse_shape_loss:
+            self.weights.update(ellipse_anisotropy=.25,ellipse_log_shape=.5)
 
     def assign(self,targets):
         points=self.points_numpy;scales=self.scales_numpy
@@ -198,10 +202,23 @@ class TopFaceLoss(nn.Module):
             axes=tensor('axes')/stride
             if (axes<=0).any():raise ValueError('Invalid positive ellipse semiaxis truth')
             sums['axes']=masked_smooth_l1(pred[:,42:44],axes.log(),geometry)
+            angle_vector=tensor('orientation')
+            if self.ellipse_shape_loss:
+                # The anisotropic part of a log ellipse shape tensor is invariant
+                # to swapping the two axes and rotating the angle by 90 degrees.
+                predicted_gap=pred[:,42]-pred[:,43]
+                true_gap=axes[:,0].log()-axes[:,1].log()
+                unit=F.normalize(pred[:,44:46],dim=1,eps=1e-4)
+                scale=.02
+                sums['ellipse_anisotropy']=weighted_mean(
+                    F.smooth_l1_loss(predicted_gap/scale,true_gap/scale,reduction='none'),geometry)
+                sums['ellipse_log_shape']=weighted_mean(F.smooth_l1_loss(
+                    predicted_gap[:,None]*unit/scale,true_gap[:,None]*angle_vector/scale,
+                    reduction='none'),geometry)
             if orientation.any():
                 vector=pred[orientation,44:46];norm=vector.norm(dim=1)
                 normalized=vector/norm.clamp(min=1e-4)[:,None]
-                angle_loss=1-(normalized*tensor('orientation')[orientation]).sum(dim=1)+.1*(norm-1).abs()
+                angle_loss=1-(normalized*angle_vector[orientation]).sum(dim=1)+.1*(norm-1).abs()
                 sums['orientation']=(angle_loss*weights[orientation]).sum()/weights[orientation].sum()
             sums['center_flags']=weighted_mean(F.binary_cross_entropy_with_logits(pred[:,40:42],torch.stack([valid,visible],dim=1).to(raw.dtype),reduction='none'))
             sums['geometry_confidence']=weighted_mean(F.binary_cross_entropy_with_logits(pred[:,46],geometry.to(raw.dtype),reduction='none'))

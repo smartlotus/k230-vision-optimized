@@ -71,8 +71,12 @@ def audit(root,require_smoke=False):
             axes=tuple(np.maximum(1,np.round([ellipse['semi_major'],ellipse['semi_minor']])).astype(int))
             conic_center=tuple(np.round(ellipse['center']).astype(int))
             cv2.ellipse(conic_mask,conic_center,axes,ellipse['orientation_deg'],0,360,1,-1)
-            fit_iou=float((full&conic_mask).sum()/max(1,(full|conic_mask).sum()))
-            if fit_iou<.9:issue('ELLIPSE_FIT_IOU',instance_id=index,iou=fit_iou)
+            union=int((full|conic_mask).sum())
+            if raw.get('sequence_event')=='exit_and_reentry' and union==0:
+                fit_iou=None
+            else:
+                fit_iou=float((full&conic_mask).sum()/max(1,union))
+            if fit_iou is not None and fit_iou<.9:issue('ELLIPSE_FIT_IOU',instance_id=index,iou=fit_iou)
             yy,xx=np.where(visible)
             bbox=[int(xx.min()),int(yy.min()),int(xx.max()+1),int(yy.max()+1)] if len(xx) else None
             fraction=min(1.,visible_area/max(1.,full_area))

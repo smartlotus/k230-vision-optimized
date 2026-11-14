@@ -18,7 +18,9 @@ def export(checkpoint, checkpoint_sha256, output):
     if value['schema'] != 'topface-training-checkpoint-v1.1':
         raise ValueError('Expected a TopFaceNet training checkpoint')
     state = value['state']
-    if state['optimizer_updates'] < 1 or state['kind'] not in ('pilot_pretrained', 'pilot_random_control', 'formal_full'):
+    if state['optimizer_updates'] < 1 or state['kind'] not in (
+        'pilot_pretrained', 'pilot_random_control', 'pilot_geometry_refine', 'formal_full'
+    ):
         raise ValueError('Expected a learned Pilot or formal model')
     torch.set_num_threads(2)
     width, height = state['width'], state['height']

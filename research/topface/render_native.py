@@ -74,11 +74,16 @@ def main():
     parser.add_argument('--max-seconds',type=int,default=1800)
     parser.add_argument('--scene-plan',type=Path)
     parser.add_argument('--start-index',type=int,default=0)
+    parser.add_argument('--redetection-sequences',action='store_true')
     argv=sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else []
     args=parser.parse_args(argv)
     if not 1<=args.count<=20000:raise ValueError('Count outside registered dataset range')
     if args.start_index<0 or (args.start_index and (args.qualification or args.scene_plan)):
         raise ValueError('Global start index requires a standard scene range')
+    if args.redetection_sequences:
+        from sequence_config import BASE_SEED, FRAMES, SCENARIOS, sequence_config
+        if args.count!=FRAMES*len(SCENARIOS) or args.seed!=BASE_SEED or args.start_index or args.scene_plan or args.qualification:
+            raise ValueError('Redetection rendering requires the frozen sequence plan')
     scene_plan=None
     if args.scene_plan:
         from supplement_plan import planned_config
@@ -137,7 +142,9 @@ def main():
             write_json(args.output/'PROGRESS.json',{'status':'BUDGET_STOP','completed_frames':frame,'requested_frames':args.count})
             raise RuntimeError('Stopped at a scene boundary before registered rendering deadline')
         scene_index=args.start_index+frame
-        config=planned_config(scene_plan,frame) if scene_plan is not None else make_config(args.seed,scene_index,args.qualification)
+        if args.redetection_sequences:config=sequence_config(frame)
+        elif scene_plan is not None:config=planned_config(scene_plan,frame)
+        else:config=make_config(args.seed,scene_index,args.qualification)
         directory=args.output/f'scene-{scene_index:05d}';directory.mkdir(exist_ok=False)
         scene.frame_set(frame)
         K=np.array(config['camera_intrinsics']);pose=np.array(config['camera_pose_world_from_cv'])
@@ -169,6 +176,7 @@ def main():
                 'top_boundary_xy':project(world,K,pose).tolist(),
                 'top_face_visible_mask':f'visible-{index+1}.png'})
         if config['occluder']:
+            occluder.dimensions=config.get('occluder_box_m',(.011,.07,.008))
             occluder.location=Vector(config['objects'][0]['position_m'])+Vector((0.,0.,.068))
             occluder.rotation_euler=(0.,0.,config['objects'][0]['yaw_rad'])
         for index,output in enumerate(mask_outputs):

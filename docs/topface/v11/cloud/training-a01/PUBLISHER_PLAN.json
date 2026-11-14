@@ -1,0 +1,17 @@
+{
+  "run_id": "k230-topface-v11-training-a01",
+  "source_archive_path": "k230-topface-v11-training-a01.tar.gz",
+  "archive": {
+    "name": "k230-topface-v11-training-a01-1051dc5a7bd455ae.tar.gz",
+    "bytes": 78719599,
+    "sha256": "1051dc5a7bd455ae2414f6090b6b5c0896d17412ba3bba66c39eb7f9b80d3530"
+  },
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-03-pilot-training",
+    "kernel_id": 145030012,
+    "version": 1,
+    "provider_status": "COMPLETE",
+    "source_sha256": "c9b857ca77dc460d66068d4ff9605f465913d176d4a1550ec8d5ded5665a8e34"
+  },
+  "source_notebook": "docs/topface/v11/cloud/training-a01/03_training.ipynb"
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "topface-exact-compact-collection-v1.1",
+  "ref": "lotus30/k230-topface-v11-03-pilot-training",
+  "version": 1,
+  "run_id": "k230-topface-v11-training-a01",
+  "observed_utc": "2026-11-14T16:54:18.874512+00:00",
+  "members": [
+    {
+      "name": "k230-topface-v11-training-a01-RESULT.json",
+      "status": "COLLECTED",
+      "bytes": 7080,
+      "sha256": "5a703e9d08dd6e139baacfe89adb6056242a2ce14ba1cb82cd1916042bef8988"
+    },
+    {
+      "name": "k230-topface-v11-training-a01/result/overfit/BEST_METRICS.json",
+      "status": "COLLECTED",
+      "bytes": 12232,
+      "sha256": "9f10d5c9ff10d716ab29d068e88eae97595f641576ce6d426b2962fcb48996e2"
+    },
+    {
+      "name": "k230-topface-v11-training-a01/result/pilot_pretrained/BEST_METRICS.json",
+      "status": "COLLECTED",
+      "bytes": 18654,
+      "sha256": "6e8b06725a85f8abf02a3057c973155a73ca9e475d2f291f2e538a8d4d20b94c"
+    },
+    {
+      "name": "k230-topface-v11-training-a01/result/pilot_random_control/BEST_METRICS.json",
+      "status": "COLLECTED",
+      "bytes": 18774,
+      "sha256": "3e293bd115d0643536893071d6d51eb2ac24df17fa057708db7bdb122155ce35"
+    }
+  ],
+  "raw_archive_downloaded_to_host": false,
+  "automatic_replay": false
+}

@@ -1,0 +1,35 @@
+{
+  "status": "ESTIMATE_FROM_PILOT_EPOCH_WALL_TIMING",
+  "observed_pilot": {
+    "training_images": 865,
+    "validation_images": 221,
+    "epoch_seconds_median": {
+      "training_wall_seconds": 24.085517239500064,
+      "validation_wall_seconds": 7.782042384000022
+    },
+    "receipt": "../cloud/training-a01/ACCEPTANCE-v1.json"
+  },
+  "full_plan": {
+    "images": 10000,
+    "train": 7465,
+    "val": 1601,
+    "synthetic_test": 934,
+    "training_batch": 32,
+    "updates_per_epoch": 234,
+    "minimum_epoch_window": 100
+  },
+  "estimated_full_epoch_seconds": {
+    "data_and_train": 207.85940600331557,
+    "validation": 56.37579120716758,
+    "total": 264.23519721048314
+  },
+  "estimated_formal_gpu_hours": {
+    "100_epochs": 7.339866589180087,
+    "150_epochs": 11.00979988377013,
+    "200_epochs": 14.679733178360173
+  },
+  "pilot_render_seconds_per_1000": 3647.731968,
+  "estimated_full_render_gpu_hours": 10.1325888,
+  "last_measured_gpu_quota_hours": 25.87,
+  "scope": "Linear sizing estimate. Recalculate with the first actual Full epoch and account for startup and archiving overhead."
+}

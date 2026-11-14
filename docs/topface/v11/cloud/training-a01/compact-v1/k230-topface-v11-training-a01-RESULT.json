@@ -1,0 +1,202 @@
+{
+  "schema": "topface-downstream-v1.1",
+  "run_id": "k230-topface-v11-training-a01",
+  "phase": "training",
+  "status": "FINITE_PILOT_TRAINING_SEQUENCE_COMPLETE",
+  "input_manifest_sha256": "cab8469436412a9efa1271cfa169f006f489c88edd92911aa9e346cb6f561e02",
+  "automatic_replay": false,
+  "started_utc": "2026-11-14T16:27:44.178002+00:00",
+  "max_seconds": 9000,
+  "optimizer_updates": 1170,
+  "board_run": false,
+  "real_evaluation": false,
+  "stage": "PILOT_RANDOM_CONTROL_20_EPOCHS",
+  "elapsed_seconds": 1521.590153011,
+  "storage_route": "API-only compute, exactKaggleSavedOutput -> authorizedprivateActions -> Drive",
+  "publisher_route_qualification": {
+    "run_id": 43615193895,
+    "head": "836a70e8598f778841f344ed34b8500466ba6af0",
+    "branch": "ops/topface-transfer-1794673281392621400"
+  },
+  "host_run_admission": {
+    "run_id": "k230-topface-v11-training-a01",
+    "automatic_replay": false,
+    "owner": "topfacenet-sim2real coordinator",
+    "policy": "one persisted Save intent; reconcile exact source/version before any retry; no manual editor reruns"
+  },
+  "parent_members": {
+    "files": 11540,
+    "expanded_bytes": 401649408,
+    "member_manifest_sha256": "40dcda1d4c44b107629d1841067ff1fa94f276ee3edd9e8810a645709c2bf6ba",
+    "sha256_verification": "ALL_MEMBERS_PASS"
+  },
+  "pilot_archive_sha256": "f559a9df0fe01ea17884ce63671e6e89a162a037faa0a80045eec574e417430f",
+  "pilot_audit_sha256": "5d6a0fc70a702237b4af329fb576b371918a385306b67251056b77a7be7bc0a7",
+  "supplement_members": {
+    "files": 2924,
+    "expanded_bytes": 104574531,
+    "member_manifest_sha256": "254bd1f8df4938cad8b5b0fa600503b1750f0dd767ceb01bddadc6b9a19670e3",
+    "sha256_verification": "ALL_MEMBERS_PASS"
+  },
+  "supplement_archive_sha256": "3687e18684f2bd7575097a2825c5a6dba68db004c0962159f81ba3f31212c7ce",
+  "composite_audit_sha256": "436b07f54e3d9f124c93af8b2c3c215b9761542256108f0af7c870901e94e2d3",
+  "similarity_review_evidence": {
+    "pairs": 6,
+    "all_listed_identity_checks_different": true,
+    "previews": [
+      {
+        "name": "near-similarity-01.jpg",
+        "bytes": 56775,
+        "sha256": "d874c670d01a8904d676b35948a08d8129a17e625390626355bfa2a0c92c674f"
+      }
+    ]
+  },
+  "environment": {
+    "torch": "2.11.0+cu130",
+    "cuda": "13.0",
+    "gpu_names": [
+      "Tesla T4",
+      "Tesla T4"
+    ],
+    "training_device": "cuda:0",
+    "amp": false
+  },
+  "experiments": [
+    {
+      "kind": "overfit",
+      "status": "FINITE_TRAINING_COMPLETE",
+      "optimizer_updates": 50,
+      "epoch": 50,
+      "gate": {
+        "pass": true,
+        "checks": {
+          "recall50_at_least95pct": true,
+          "color_at_least95pct": true,
+          "task_map50_at_least95pct": true,
+          "visible_center_median_at_most3_source_px": true,
+          "ellipse_iou_median_at_least75pct": true,
+          "finite_ellipse_coverage_at_least90pct": true,
+          "empty_scene_present_and_has_no_false_positives": true,
+          "valid_angle_prediction_coverage_at_least90pct": true,
+          "angle_median_at_most10deg": true,
+          "all_observable_4_targets_recalled": true,
+          "all_observable_5_targets_recalled": true
+        },
+        "scope": "overfit train sanity only, not generalization"
+      },
+      "best_epoch": 50,
+      "best_validation_score": 1.080835172331224,
+      "step_seconds": {
+        "n": 50,
+        "median": 0.12203320300002929,
+        "p95": 0.12445331115000044
+      },
+      "elapsed_seconds": 42.067235283,
+      "checkpoints": [
+        {
+          "name": "best.pt",
+          "bytes": 14693117,
+          "sha256": "af910b7e86fb57d98553064cbc289abb14602e556c813e1dc24447e27bdb236d"
+        },
+        {
+          "name": "last.pt",
+          "bytes": 14693117,
+          "sha256": "dbdb1a962d6e7ee7a5e92e56bec1f55736a7508714c9e6e97283b8f3f64756e1"
+        }
+      ]
+    },
+    {
+      "kind": "pilot_pretrained",
+      "status": "FINITE_TRAINING_COMPLETE",
+      "optimizer_updates": 560,
+      "epoch": 20,
+      "gate": {
+        "pass": false,
+        "checks": {
+          "recall50_at_least80pct": true,
+          "color_at_least90pct": true,
+          "task_map50_at_least75pct": true,
+          "visible_center_median_at_most5_source_px": true,
+          "ellipse_iou_median_at_least60pct": true,
+          "finite_ellipse_coverage_at_least90pct": true,
+          "empty_fp_per_image_at_most_point1": true,
+          "valid_angle_prediction_coverage_at_least90pct": false,
+          "angle_median_at_most15deg": false,
+          "all_observable_4_recapture_at_least80pct": true,
+          "all_observable_5_recapture_at_least80pct": true
+        },
+        "scope": "registered synthetic Pilot gate, not real acceptance"
+      },
+      "best_epoch": 20,
+      "best_validation_score": 1.1138399596279944,
+      "step_seconds": {
+        "n": 560,
+        "median": 0.1826262679999786,
+        "p95": 0.21127182864992733
+      },
+      "elapsed_seconds": 668.105713673,
+      "checkpoints": [
+        {
+          "name": "best.pt",
+          "bytes": 14727229,
+          "sha256": "b2aa039f15f015b497c700c34eb1c0f7cd5d91b0f042c67f41db9b4642a7f1aa"
+        },
+        {
+          "name": "last.pt",
+          "bytes": 14727229,
+          "sha256": "415511795649532cfa05b54a566a3eec71325bb56b8224f6d62bb59fc1a436e9"
+        }
+      ]
+    },
+    {
+      "kind": "pilot_random_control",
+      "status": "FINITE_TRAINING_COMPLETE",
+      "optimizer_updates": 560,
+      "epoch": 20,
+      "gate": {
+        "pass": false,
+        "checks": {
+          "recall50_at_least80pct": true,
+          "color_at_least90pct": true,
+          "task_map50_at_least75pct": true,
+          "visible_center_median_at_most5_source_px": true,
+          "ellipse_iou_median_at_least60pct": true,
+          "finite_ellipse_coverage_at_least90pct": true,
+          "empty_fp_per_image_at_most_point1": true,
+          "valid_angle_prediction_coverage_at_least90pct": false,
+          "angle_median_at_most15deg": false,
+          "all_observable_4_recapture_at_least80pct": false,
+          "all_observable_5_recapture_at_least80pct": true
+        },
+        "scope": "registered synthetic Pilot gate, not real acceptance"
+      },
+      "best_epoch": 20,
+      "best_validation_score": 0.855044610115674,
+      "step_seconds": {
+        "n": 560,
+        "median": 0.18397787149990563,
+        "p95": 0.20989403399989895
+      },
+      "elapsed_seconds": 671.8419680970001,
+      "checkpoints": [
+        {
+          "name": "best.pt",
+          "bytes": 14726973,
+          "sha256": "ff78f1c9350b6c396ee2ea4bd143d9dbef23878acc182aaa23fd168a03addd08"
+        },
+        {
+          "name": "last.pt",
+          "bytes": 14726973,
+          "sha256": "14e90c34f2d166198b8ae1287d07be4edaf44bf84b7be499bf2898b814ebf200"
+        }
+      ]
+    }
+  ],
+  "full_admitted": false,
+  "durable_status": "PUBLISHER_PENDING_EXACT_SAVED_OUTPUT",
+  "archive": {
+    "name": "k230-topface-v11-training-a01.tar.gz",
+    "bytes": 78719599,
+    "sha256": "1051dc5a7bd455ae2414f6090b6b5c0896d17412ba3bba66c39eb7f9b80d3530"
+  }
+}

@@ -46,6 +46,7 @@ def build(root,diagnostics,output):
             pages.append({'name':name,'bytes':(output/name).stat().st_size,'sha256':sha(output/name)});tiles=[]
     report={'schema':'topface-near-similarity-review-input-v1.1','status':'EVIDENCE_READY_NOT_AUTOMATIC_PASS',
         'pairs':evidence,'previews':pages,'all_listed_identity_checks_different':all(all(p['identity_checks'].values()) for p in evidence),
+        'candidate_counts':diagnostics['perceptual_similarity']['candidate_counts'],
         'scope':'independent seed/scene/camera/pixel witnesses plus bounded actual-image previews; pHash similarity is not a leakage verdict',
         'original_images_or_labels_modified':False}
     atomic_json(output/'NEAR_SIMILARITY_EVIDENCE.json',report);return report

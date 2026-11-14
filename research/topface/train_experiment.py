@@ -112,8 +112,9 @@ def choose_overfit(root,width=320,height=192,count=16,seed=20261114):
 def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
           seed=20261114,batch_size=32,max_epochs=20,max_updates=None,deadline=None,selected_scenes=None,
           initial_checkpoint=None,initial_checkpoint_sha256=None,use_amp=False,
-          formal_identity=None,resume_directory=None,resume_sha256=None,session_epochs=None):
-    if kind not in ('overfit','pilot_pretrained','pilot_random_control','formal_full'):
+          formal_identity=None,resume_directory=None,resume_sha256=None,session_epochs=None,
+          ellipse_shape_loss=False):
+    if kind not in ('overfit','pilot_pretrained','pilot_random_control','pilot_geometry_refine','formal_full'):
         raise ValueError('Unknown finite experiment')
     if not torch.cuda.is_available():raise RuntimeError('Kaggle GPU training admission requires CUDA; no silent CPU full training')
     if max_epochs<1 or max_epochs>200 or (max_updates is not None and not 1<=max_updates<=1000):
@@ -138,9 +139,9 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
         torch.backends.cudnn.allow_tf32=False
         torch.backends.cuda.matmul.allow_tf32=False
     model=NanoDetTopFace().to(device)
-    initialization=model.initialize_pretrained(checkpoint,CHECKPOINT_SHA256) if kind!='pilot_random_control' and resume_directory is None else {'initialization':'random same architecture/new-head seed','optimizer_updates':0}
+    initialization=model.initialize_pretrained(checkpoint,CHECKPOINT_SHA256) if kind!='pilot_random_control' and resume_directory is None and initial_checkpoint is None else {'initialization':'random same architecture/new-head seed','optimizer_updates':0}
     if initial_checkpoint is not None:
-        if kind!='formal_full' or not initial_checkpoint_sha256 or sha(initial_checkpoint)!=initial_checkpoint_sha256:
+        if kind not in ('formal_full','pilot_geometry_refine') or not initial_checkpoint_sha256 or sha(initial_checkpoint)!=initial_checkpoint_sha256:
             raise ValueError('Only a frozen selected Pilot checkpoint can initialize formal training')
         parent=torch.load(initial_checkpoint,map_location='cpu',weights_only=True)
         model.load_state_dict(parent['model'],strict=True)
@@ -151,7 +152,7 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
     dataset=TopFaceDataset(root,'train',width,height,scene_names=selected_scenes,augment=kind!='overfit',seed=seed)
     validation=TopFaceDataset(root,'train' if kind=='overfit' else 'val',width,height,
                               scene_names=selected_scenes if kind=='overfit' else None)
-    criterion=TopFaceLoss(width,height).to(device)
+    criterion=TopFaceLoss(width,height,ellipse_shape_loss=ellipse_shape_loss).to(device)
     preflight=Counter()
     for index in range(len(dataset)):
         _,items,_=dataset[index];_,counts=criterion.assign(items);preflight.update(counts)
@@ -163,8 +164,14 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
                       num_workers=0,collate_fn=collate,pin_memory=True)
     val_loader=DataLoader(validation,batch_size=min(batch_size,len(validation)),shuffle=False,
                           num_workers=0,collate_fn=collate,pin_memory=True)
-    lr=.003 if kind=='overfit' else .001
-    optimizer=torch.optim.AdamW(model.parameters(),lr=lr,weight_decay=.001 if kind=='overfit' else .05)
+    lr={'overfit':.003,'pilot_geometry_refine':.0003}.get(kind,.001)
+    if kind=='pilot_geometry_refine':
+        predictions=set(model.head.gfl_cls.parameters())
+        parameters=[{'params':[p for p in model.parameters() if p not in predictions],'lr_scale':.25},
+                    {'params':list(model.head.gfl_cls.parameters()),'lr_scale':1.}]
+    else:
+        parameters=model.parameters()
+    optimizer=torch.optim.AdamW(parameters,lr=lr,weight_decay=.001 if kind=='overfit' else .05)
     scaler=torch.amp.GradScaler('cuda',enabled=use_amp)
     state={'schema':'topface-logical-training-v1.1','kind':kind,'status':'ADMITTED',
         'started_utc':datetime.now(timezone.utc).isoformat(),'seed':seed,'width':width,'height':height,
@@ -173,7 +180,9 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
         'training_scenes':[r['scene'] for r in dataset.rows], 'validation_scenes':[r['scene'] for r in validation.rows],
         'dataset_audit_sha256':dataset.audit_sha256,'learning_rate':lr,'loss_weights':criterion.weights,
         'mixed_precision':use_amp,
-        'validation_selection':'mAP50_95 +.1color +.1medianEllipseIoU -.01min(medianVisibleCenterPx,20)',
+        'ellipse_shape_loss':ellipse_shape_loss,
+        'validation_selection':('Prefer full Pilot gate, then rank by validation score' if kind=='pilot_geometry_refine'
+                                else 'mAP50_95 +.1color +.1medianEllipseIoU -.01min(medianVisibleCenterPx,20)'),
         'input_contract':output_contract(width,height),'test_evaluation':False,'real_evaluation':False,
         'automatic_replay':False,'torch':str(torch.__version__),'gpu':torch.cuda.get_device_name(0),
         'epoch_records':[]}
@@ -243,7 +252,8 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
         atomic_checkpoint(output/name,value)
     try:
         if first_epoch==0:
-            baseline=evaluate(model,val_loader,device)
+            baseline=evaluate(model,val_loader,device,include_slices=kind=='pilot_geometry_refine',
+                              angle_diagnostics=kind=='pilot_geometry_refine')
             atomic_json(output/'BASELINE.json',baseline)
         stop=False
         epochs_to_run=math.ceil(max_updates/len(loader)) if kind=='overfit' else end_epoch
@@ -262,7 +272,7 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
                 images=images.to(device,non_blocking=True)
                 progress=steps/max(1,target_updates)
                 factor=(.1+.9*steps/warmup) if steps<warmup else .05+.95*.5*(1+math.cos(math.pi*min(progress,1)))
-                for group in optimizer.param_groups:group['lr']=lr*factor
+                for group in optimizer.param_groups:group['lr']=lr*factor*group.get('lr_scale',1.)
                 optimizer.zero_grad(set_to_none=True);tick=time.perf_counter()
                 with torch.autocast(device_type='cuda',dtype=torch.float16,enabled=use_amp):raw=model(images)
                 loss,parts,counts=criterion(raw.float(),targets)
@@ -294,7 +304,11 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
                 break
             if kind=='overfit' and steps%25!=0 and not stop:continue
             validation_started=time.monotonic()
-            metrics=evaluate(model,val_loader,device);score=selection_score(metrics)
+            metrics=evaluate(model,val_loader,device,include_slices=kind=='pilot_geometry_refine',
+                             angle_diagnostics=kind=='pilot_geometry_refine')
+            score=selection_score(metrics)
+            if kind=='pilot_geometry_refine' and pilot_gate(metrics)['pass']:
+                score+=2.
             validation_seconds=time.monotonic()-validation_started
             state['epoch_records'].append({'epoch':epoch+1,'updates':steps,'loss_mean':float(np.mean(losses)) if losses else None,
                 'validation_score':score,'task_mAP50':metrics['task_mAP50'],'task_mAP50_95':metrics['task_mAP50_95'],

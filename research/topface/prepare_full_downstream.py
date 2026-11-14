@@ -8,11 +8,11 @@ import zipfile
 
 from cloud_store import atomic_json, sha
 from prepare_full_shard import FOLDER_ID, SEED, TOTAL_SCENES
+from nanodet_topface import CHECKPOINT_SHA256
 
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-CHECKPOINT_SHA256 = 'f4c6080f3ef35a64c3030d559438b436462f227ce29700bca71327203e42dea2'
 
 
 def read(path):
@@ -29,7 +29,7 @@ def source_ref(receipt):
 
 
 def prepare(phase, revision, staging, shard_inventory, pilot_acceptance, publisher_receipt,
-            dataset_acceptance=None, parent=None, session=1, session_epochs=20, max_epochs=150):
+            dataset_acceptance=None, parent=None, session=1, session_epochs=20, max_epochs=100):
     if not revision.isalnum() or phase not in ('full-audit', 'formal'):
         raise ValueError('Explicit Full audit or formal revision required')
     pilot = read(pilot_acceptance)
@@ -78,7 +78,8 @@ def prepare(phase, revision, staging, shard_inventory, pilot_acceptance, publish
         experiment = {'experiment_id': f'k230-topface-v11-formal-{revision}' if session == 1 else previous['experiment_id'],
                       'shards': shards, 'scenes': TOTAL_SCENES, 'data_seed': SEED,
                       'width': 320, 'height': 192, 'training_seed': 20261114,
-                      'batch_size': 32, 'max_epochs': max_epochs}
+                      'batch_size': 32, 'max_epochs': max_epochs,
+                      'ellipse_shape_loss': pilot['selected_experiment']=='pilot_geometry_refine'}
         config = {'run_id': run_id, 'experiment': experiment, 'session': session,
                   'session_epochs': session_epochs, 'max_seconds': max_seconds, 'parent': previous,
                   'dataset_acceptance': audit, 'pilot_admission': pilot}
@@ -159,5 +160,5 @@ if __name__ == '__main__':
         parser.add_argument('--'+name, type=Path)
     parser.add_argument('--session', type=int, default=1)
     parser.add_argument('--session-epochs', type=int, default=20)
-    parser.add_argument('--max-epochs', type=int, default=150)
+    parser.add_argument('--max-epochs', type=int, default=100)
     print(json.dumps(prepare(**vars(parser.parse_args())), indent=2))

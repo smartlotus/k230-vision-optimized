@@ -16,6 +16,41 @@ from cloud_store import Drive,archive_directory,atomic_json,sha
 from native_job import verify_inputs
 
 
+def train_phases(pilot,result,input_root,config,deadline,stage,state):
+    from train_experiment import train,choose_overfit
+    checkpoint=input_root/'nanodet-pretrained.bin'
+    refinement=config.get('geometry_refinement')
+    if refinement:
+        from formal_job import unpack_session
+        stage('PILOT_GEOMETRY_REFINEMENT')
+        source=unpack_session(Path('/kaggle/input').resolve(),result.parent/'parent',refinement,
+                              'pilot_pretrained',('best.pt',),deadline)
+        refined=train(pilot,result/'pilot_geometry_refine',checkpoint,kind='pilot_geometry_refine',
+            max_epochs=refinement['max_epochs'],deadline=deadline,initial_checkpoint=source/'best.pt',
+            initial_checkpoint_sha256=refinement['checkpoint_sha256'],ellipse_shape_loss=True)
+        state['status']=('GEOMETRY_REFINEMENT_COMPLETE' if refined['status']=='FINITE_TRAINING_COMPLETE'
+                         else 'GEOMETRY_REFINEMENT_BUDGET_STOP')
+        return [refined]
+
+    stage('OVERFIT_TRAIN_SANITY')
+    selection=choose_overfit(pilot)
+    atomic_json(result/'OVERFIT_SELECTION.json',selection)
+    overfit=train(pilot,result/'overfit',checkpoint,kind='overfit',max_epochs=200,
+                  max_updates=1000,deadline=deadline,selected_scenes=selection['scenes'])
+    if not overfit['gate']['pass']:
+        state['status']='OVERFIT_GATE_FAILED_NO_PILOT_TRAINING'
+        return [overfit]
+    stage('PILOT_PRETRAINED_20_EPOCHS')
+    pretrained=train(pilot,result/'pilot_pretrained',checkpoint,kind='pilot_pretrained',max_epochs=20,deadline=deadline)
+    if pretrained['status']!='FINITE_TRAINING_COMPLETE':
+        state['status']='PILOT_BUDGET_STOP_NO_AUTOMATIC_REPLAY'
+        return [overfit,pretrained]
+    stage('PILOT_RANDOM_CONTROL_20_EPOCHS')
+    random=train(pilot,result/'pilot_random_control',checkpoint,kind='pilot_random_control',max_epochs=20,deadline=deadline)
+    state['status']='FINITE_PILOT_TRAINING_SEQUENCE_COMPLETE' if random['status']=='FINITE_TRAINING_COMPLETE' else 'CONTROL_BUDGET_STOP'
+    return [overfit,pretrained,random]
+
+
 def mount_training_source(input_root,directory):
     bundle=input_root/'nanodet-source.bin'
     if not bundle.is_file():
@@ -156,29 +191,8 @@ def main(input_root,run_id,phase,max_seconds=7200):
             state['environment']={'torch':str(torch.__version__),'cuda':torch.version.cuda,
                 'gpu_names':[torch.cuda.get_device_name(i) for i in range(torch.cuda.device_count())],
                 'training_device':'cuda:0','amp':False}
-            from train_experiment import train,choose_overfit
-            stage('OVERFIT_TRAIN_SANITY')
-            selection=choose_overfit(pilot)
-            atomic_json(result/'OVERFIT_SELECTION.json',selection)
-            experiments=[]
-            overfit=train(pilot,result/'overfit',input_root/'nanodet-pretrained.bin',kind='overfit',
-                max_epochs=200,max_updates=1000,deadline=compute_deadline,selected_scenes=selection['scenes'])
-            experiments.append(overfit);state['optimizer_updates']+=overfit['optimizer_updates']
-            if not overfit['gate']['pass']:
-                state['status']='OVERFIT_GATE_FAILED_NO_PILOT_TRAINING'
-            else:
-                stage('PILOT_PRETRAINED_20_EPOCHS')
-                pretrained=train(pilot,result/'pilot_pretrained',input_root/'nanodet-pretrained.bin',
-                    kind='pilot_pretrained',max_epochs=20,deadline=compute_deadline)
-                experiments.append(pretrained);state['optimizer_updates']+=pretrained['optimizer_updates']
-                if pretrained['status']!='FINITE_TRAINING_COMPLETE':
-                    state['status']='PILOT_BUDGET_STOP_NO_AUTOMATIC_REPLAY'
-                else:
-                    stage('PILOT_RANDOM_CONTROL_20_EPOCHS')
-                    random=train(pilot,result/'pilot_random_control',input_root/'nanodet-pretrained.bin',
-                        kind='pilot_random_control',max_epochs=20,deadline=compute_deadline)
-                    experiments.append(random);state['optimizer_updates']+=random['optimizer_updates']
-                    state['status']='FINITE_PILOT_TRAINING_SEQUENCE_COMPLETE' if random['status']=='FINITE_TRAINING_COMPLETE' else 'CONTROL_BUDGET_STOP'
+            experiments=train_phases(pilot,result,input_root,config,compute_deadline,stage,state)
+            state['optimizer_updates']=sum(experiment['optimizer_updates'] for experiment in experiments)
             state['experiments']=[{k:e.get(k) for k in ('kind','status','optimizer_updates','epoch','gate',
                 'best_epoch','best_validation_score','step_seconds','elapsed_seconds','checkpoints')} for e in experiments]
             if offline:
@@ -186,7 +200,9 @@ def main(input_root,run_id,phase,max_seconds=7200):
                     name=experiment['kind']
                     target=work/run_id/'result'/name
                     target.mkdir(parents=True,exist_ok=False)
-                    for report_name in ('BEST_METRICS.json','RESULT.json'):
+                    report_names=('BEST_METRICS.json','RESULT.json')
+                    if name=='pilot_geometry_refine':report_names+=('BASELINE.json',)
+                    for report_name in report_names:
                         report=result/name/report_name
                         if report.is_file():shutil.copy2(report,target/report_name)
             state['full_admitted']=False

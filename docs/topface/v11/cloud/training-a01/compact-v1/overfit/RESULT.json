@@ -1,0 +1,280 @@
+{
+  "schema": "topface-logical-training-v1.1",
+  "kind": "overfit",
+  "status": "FINITE_TRAINING_COMPLETE",
+  "started_utc": "2026-11-14T16:30:04.248885+00:00",
+  "seed": 20261114,
+  "width": 320,
+  "height": 192,
+  "batch_size": 16,
+  "max_epochs": 200,
+  "max_updates": 1000,
+  "optimizer_updates": 50,
+  "epoch": 50,
+  "initialization": {
+    "loaded_tensors": 644,
+    "ignored_training_only_tensors": 243,
+    "missing_tensors": [],
+    "checkpoint_sha256": "f4c6080f3ef35a64c3030d559438b436462f227ce29700bca71327203e42dea2",
+    "classification_initialization": "random six-color",
+    "geometry_initialization": "random twelve-channel",
+    "box_regression_initialization": "original COCO DFL channels",
+    "optimizer_updates": 0
+  },
+  "preflight_assignment": {
+    "world_instances": 37,
+    "observable_eligible_gt": 37,
+    "assigned_gt": 37,
+    "positive_priors": 111,
+    "assigned_fifth_instance": 2
+  },
+  "training_scenes": [
+    "primary/scene-00266",
+    "primary/scene-00355",
+    "primary/scene-00556",
+    "primary/scene-00960",
+    "colorfix/scene-00022",
+    "colorfix/scene-00030",
+    "colorfix/scene-00045",
+    "colorfix/scene-00046",
+    "colorfix/scene-00084",
+    "colorfix/scene-00123",
+    "colorfix/scene-00127",
+    "colorfix/scene-00150",
+    "colorfix/scene-00190",
+    "colorfix/scene-00208",
+    "colorfix/scene-00224",
+    "colorfix/scene-00230"
+  ],
+  "validation_scenes": [
+    "primary/scene-00266",
+    "primary/scene-00355",
+    "primary/scene-00556",
+    "primary/scene-00960",
+    "colorfix/scene-00022",
+    "colorfix/scene-00030",
+    "colorfix/scene-00045",
+    "colorfix/scene-00046",
+    "colorfix/scene-00084",
+    "colorfix/scene-00123",
+    "colorfix/scene-00127",
+    "colorfix/scene-00150",
+    "colorfix/scene-00190",
+    "colorfix/scene-00208",
+    "colorfix/scene-00224",
+    "colorfix/scene-00230"
+  ],
+  "dataset_audit_sha256": "436b07f54e3d9f124c93af8b2c3c215b9761542256108f0af7c870901e94e2d3",
+  "learning_rate": 0.003,
+  "loss_weights": {
+    "color": 1.0,
+    "dfl": 0.25,
+    "bbox": 2.0,
+    "physical": 1.0,
+    "conic": 1.0,
+    "axes": 0.5,
+    "orientation": 0.2,
+    "center_flags": 0.2,
+    "geometry_confidence": 0.2,
+    "visibility_quality": 0.2
+  },
+  "mixed_precision": false,
+  "validation_selection": "mAP50_95 +.1color +.1medianEllipseIoU -.01min(medianVisibleCenterPx,20)",
+  "input_contract": {
+    "schema": "topface-nanodet-candidate-output-v1.1",
+    "candidate_not_final": true,
+    "input": {
+      "shape": [
+        1,
+        3,
+        192,
+        320
+      ],
+      "dtype": "float32",
+      "layout": "NCHW",
+      "color": "BGR",
+      "normalization": "(uint8-[103.53,116.28,123.675])/[57.375,57.12,58.395] exactly once",
+      "source_wh": [
+        640,
+        360
+      ],
+      "resize": "aspect-preserving bilinear; centered letterbox pad114",
+      "letterbox": {
+        "source_wh": [
+          640,
+          360
+        ],
+        "model_wh": [
+          320,
+          192
+        ],
+        "gain": 0.5,
+        "resized_wh": [
+          320,
+          180
+        ],
+        "padding_tblr": [
+          6,
+          6,
+          0,
+          0
+        ],
+        "pad_value": 114,
+        "coordinate_origin": "continuous top-left image edge",
+        "point_forward": "source_xy*gain+[left,top]",
+        "point_inverse": "(model_xy-[left,top])/gain",
+        "axis_forward": "source_length*gain",
+        "axis_inverse": "model_length/gain",
+        "orientation": "theta in radians encoded sin(2theta),cos(2theta); unchanged by isotropic resize"
+      }
+    },
+    "output": {
+      "name": "topface_raw",
+      "shape": [
+        1,
+        1275,
+        50
+      ],
+      "dtype": "float32",
+      "channels": {
+        "color_presence_logits": [
+          0,
+          6
+        ],
+        "box_ltrb_dfl_logits": [
+          6,
+          38
+        ],
+        "physical_center_xy_stride_offsets": [
+          38,
+          40
+        ],
+        "center_valid_visible_logits": [
+          40,
+          42
+        ],
+        "ellipse_log_semiaxes_stride": [
+          42,
+          44
+        ],
+        "orientation_sin2_cos2": [
+          44,
+          46
+        ],
+        "geometry_confidence_logit": 46,
+        "visibility_quality_logit": 47,
+        "ellipse_conic_center_xy_stride_offsets": [
+          48,
+          50
+        ]
+      },
+      "grid": "p=(column*stride,row*stride), no0.5 bias; row-major; levels8,16,32,64",
+      "class_id_mapping": "approved color_id1..6 maps to channels0..5",
+      "class_loss": "hard-label sigmoid focal BCE gamma2 alpha0.25; background all6zero",
+      "score": "max sigmoid(class_presence_logits), exactly once; no additional objectness",
+      "bbox_decode": "softmax each8-bin DFL then expectation0..7 times stride; ltrb around grid",
+      "center_decode": "grid + raw offset * stride; physical CAD center, not conic center",
+      "ellipse_decode": "conic center=grid+channels48:50*stride; exp(log semiaxes)*stride; orientation atan2(sin2,cos2)/2",
+      "nms": "host after declared sigmoid of class logits; class-agnostic top-face box NMS",
+      "maximum_returned_instances": 5,
+      "capacity": "0 EMPTY,1..3 OK,4..5 OVER_CAPACITY; boundary ambiguity with<4 -> UNCERTAIN",
+      "loss_masks": {
+        "physical_center": "center_valid AND center_visible; hidden truth retained",
+        "center_flags": "both flags always supervised for positive priors, including hidden center=false",
+        "axes_conic": "geometry_valid",
+        "orientation": "geometry_valid AND orientation_valid",
+        "geometry_confidence": "BCE geometry_valid",
+        "visibility_quality": "BCE continuous visible_fraction"
+      },
+      "geometry_safety": "reject nonfinite raw output; reject exp-overflow geometry; normalize angle vector; canonicalize major>=minor and theta in[-90,90)deg"
+    },
+    "training_status": "NOT_TRAINED",
+    "ptq_status": "NOT_FINAL_CALIBRATION",
+    "board_status": "NOT_RUN"
+  },
+  "test_evaluation": false,
+  "real_evaluation": false,
+  "automatic_replay": false,
+  "torch": "2.11.0+cu130",
+  "gpu": "Tesla T4",
+  "epoch_records": [
+    {
+      "epoch": 25,
+      "updates": 25,
+      "loss_mean": 0.6607171893119812,
+      "validation_score": 0.22462963808234826,
+      "task_mAP50": 0.1830257440459765,
+      "task_mAP50_95": 0.17102212729634167,
+      "recall50": 0.918918918918919,
+      "matched_color_accuracy": 0.2647058823529412,
+      "training_wall_seconds": 0.2698072689999549,
+      "validation_wall_seconds": 0.5455736060000049,
+      "assignment_counts": {
+        "world_instances": 37,
+        "observable_eligible_gt": 37,
+        "assigned_gt": 37,
+        "positive_priors": 111,
+        "assigned_fifth_instance": 2
+      }
+    },
+    {
+      "epoch": 50,
+      "updates": 50,
+      "loss_mean": 0.3644968569278717,
+      "validation_score": 1.080835172331224,
+      "task_mAP50": 0.9719471947194719,
+      "task_mAP50_95": 0.919004400440044,
+      "recall50": 1.0,
+      "matched_color_accuracy": 0.972972972972973,
+      "training_wall_seconds": 0.2732887179999466,
+      "validation_wall_seconds": 0.6417226830000118,
+      "assignment_counts": {
+        "world_instances": 37,
+        "observable_eligible_gt": 37,
+        "assigned_gt": 37,
+        "positive_priors": 111,
+        "assigned_fifth_instance": 2
+      }
+    }
+  ],
+  "tensorboard": "ENABLED",
+  "effective_epoch_limit": 1000,
+  "best_epoch": 50,
+  "best_validation_score": 1.080835172331224,
+  "gate": {
+    "pass": true,
+    "checks": {
+      "recall50_at_least95pct": true,
+      "color_at_least95pct": true,
+      "task_map50_at_least95pct": true,
+      "visible_center_median_at_most3_source_px": true,
+      "ellipse_iou_median_at_least75pct": true,
+      "finite_ellipse_coverage_at_least90pct": true,
+      "empty_scene_present_and_has_no_false_positives": true,
+      "valid_angle_prediction_coverage_at_least90pct": true,
+      "angle_median_at_most10deg": true,
+      "all_observable_4_targets_recalled": true,
+      "all_observable_5_targets_recalled": true
+    },
+    "scope": "overfit train sanity only, not generalization"
+  },
+  "step_seconds": {
+    "n": 50,
+    "median": 0.12203320300002929,
+    "p95": 0.12445331115000044
+  },
+  "peak_cuda_allocated_bytes": 626898944,
+  "elapsed_seconds": 42.067235283,
+  "checkpoints": [
+    {
+      "name": "best.pt",
+      "bytes": 14693117,
+      "sha256": "af910b7e86fb57d98553064cbc289abb14602e556c813e1dc24447e27bdb236d"
+    },
+    {
+      "name": "last.pt",
+      "bytes": 14693117,
+      "sha256": "dbdb1a962d6e7ee7a5e92e56bec1f55736a7508714c9e6e97283b8f3f64756e1"
+    }
+  ]
+}

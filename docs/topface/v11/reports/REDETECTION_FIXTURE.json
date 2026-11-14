@@ -1,0 +1,15 @@
+{
+  "scope": "LOCAL_SYNTHETIC_SEQUENCE_RENDER",
+  "status": "PASS",
+  "images": 36,
+  "sequences": 3,
+  "source_model_evaluation": "PENDING_FORMAL_CHECKPOINT",
+  "event_frame_counts": {
+    "occlusion/visible_True": 8,
+    "occlusion/visible_False": 4,
+    "in_frame_motion/visible_True": 12,
+    "exit_and_reentry/visible_True": 8,
+    "exit_and_reentry/visible_False": 4
+  },
+  "audit_sha256": "94bff29d4cf38899f90de2c99900cf3e82b9c1ecbe0a4a63b0d3cf3b69c10c41"
+}

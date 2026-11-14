@@ -87,16 +87,21 @@ def run(input_root, run_id, max_seconds):
         stage('FORMAL_TRAINING')
         kwargs = ({'resume_directory': source, 'resume_sha256': parent['checkpoint_sha256']} if resume else {
             'initial_checkpoint': source/'best.pt', 'initial_checkpoint_sha256': parent['checkpoint_sha256']})
+        if resume and parent['experiment_id']!=immutable['experiment_id']:
+            raise ValueError('Formal checkpoint belongs to another experiment')
         result = train(dataset, output/'formal_full', input_root/'nanodet-pretrained.bin',
                        kind='formal_full', width=immutable['width'], height=immutable['height'],
                        seed=immutable['training_seed'], batch_size=immutable['batch_size'],
                        max_epochs=immutable['max_epochs'], deadline=deadline-600,
                        formal_identity=immutable['experiment_id'], session_epochs=config['session_epochs'],
+                       ellipse_shape_loss=immutable['ellipse_shape_loss'],
                        **kwargs)
         state.update({key: result[key] for key in (
             'status', 'completed_epochs', 'optimizer_updates', 'checkpoints', 'best_epoch',
             'best_validation_score', 'gate', 'schedule', 'runtime')})
         state['epoch_records'] = result['epoch_records'][-config['session_epochs']:]
+        state['resume_eligible'] = (state['status']=='FORMAL_SESSION_BOUNDARY' and
+                                    state['completed_epochs']>parent.get('completed_epochs',0))
         summary = work/run_id/'formal_full'
         summary.mkdir(parents=True)
         shutil.copy2(output/'formal_full/BEST_METRICS.json', summary/'BEST_METRICS.json')

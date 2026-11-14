@@ -1,8 +1,8 @@
 {
   "schema": "topface-training-sequence-v1.1",
-  "status": "PILOT_PRETRAINED_TRAINING_RUNNING",
+  "status": "PILOT_GEOMETRY_REFINEMENT_RUNNING",
   "authorization": "User requested end-to-end V1.1 execution and approved Smoke -> Pilot; routine finite implementation budgets selected by agent",
-  "current_optimizer_updates": 274,
+  "current_optimizer_updates": 1170,
   "planned_logical_training_runs": 4,
   "planned_formal_full_training_runs": 1,
   "candidate": "NanoDet-Plus-m task-head prototype first; final choice pending paired numerics and Pilot",
@@ -13,21 +13,21 @@
       "source": "Pilot train only, stratified across colors/count/geometry",
       "max_optimizer_updates": 1000,
       "early_stop": "registered sanity acceptance",
-      "status": "SANITY_PASS"
+      "status": "COMPUTE_AND_ARCHIVE_COMPLETE"
     },
     {
       "id": "pilot_pretrained",
       "dataset_scenes": 1240,
       "max_epochs": 20,
       "initialization": "official byte-bound COCO EMA features/DFL; random new class/geometry channels",
-      "status": "RUNNING"
+      "status": "COMPUTE_AND_ARCHIVE_COMPLETE"
     },
     {
       "id": "pilot_random_control",
       "dataset": "identical Pilot splits",
       "max_epochs": 20,
       "initialization": "random, same architecture and controlled budget",
-      "status": "AWAITING_PRETRAINED"
+      "status": "COMPUTE_AND_ARCHIVE_COMPLETE"
     },
     {
       "id": "formal_full",
@@ -47,7 +47,7 @@
         "Pilot learning diagnosis",
         "task head compile/numerical contract"
       ],
-      "status": "NOT_ADMITTED",
+      "status": "AWAITING_GEOMETRY_REFINEMENT_GATE",
       "initial_target_scenes": 10000,
       "render_shards": 10,
       "global_indices": [
@@ -76,14 +76,27 @@
   "planned_counterexample_supplement_scenes": 240,
   "planned_combined_scenes": 1240,
   "conditional_data_gate": "every split/count1..5 has observable six-color coverage; merge source archives by hash, preserve original labels/splits",
-  "updates_state": "Minimum observed from the live logs, including 50 overfit updates.",
+  "updates_state": "Verified from the completed Pilot v1 and archived on Drive.",
   "pilot_execution": {
     "ref": "lotus30/k230-topface-v11-03-pilot-training",
     "kernel_id": 145030012,
     "version": 1,
     "provider_status_at_submission": "RUNNING",
     "requested_gpu": "NvidiaTeslaT4",
-    "manual_editor_launch": false
+    "manual_editor_launch": false,
+    "final_status": "COMPLETE_AND_DRIVE_VERIFIED"
   },
-  "combined_audit_receipt": "../cloud/audit-a02/ACCEPTANCE-v4.json"
+  "combined_audit_receipt": "../cloud/audit-a02/ACCEPTANCE-v4.json",
+  "geometry_refinement": {
+    "status": "RUNNING",
+    "max_epochs": 12,
+    "run_id": "k230-topface-v11-training-a02",
+    "reason": "Pretrained best passed other gates. Matched angle coverage 142/188 and median error 17.17 degrees.",
+    "checkpoint_parent": "../cloud/training-a01/GEOMETRY_REFINEMENT_PARENT.json",
+    "ref": "lotus30/k230-topface-v11-03b-geometry-refine",
+    "kernel_id": 145035249,
+    "version": 1,
+    "max_new_optimizer_updates": 336,
+    "selection": "Prefer checkpoints meeting the original Pilot gate, then rank by the fixed validation score."
+  }
 }

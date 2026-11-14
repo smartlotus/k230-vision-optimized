@@ -1,0 +1,786 @@
+{
+  "schema": "topface-task-evaluation-v1.1",
+  "scope": "SYNTHETIC_ONLY",
+  "images": 221,
+  "denominators": {
+    "world_instances": 614,
+    "images": 221,
+    "observable_gt": 614,
+    "operating_predictions": 639,
+    "capacity_UNCERTAIN": 37,
+    "tp_class_agnostic": 588,
+    "matched_color_correct": 569,
+    "matched_color_total": 588,
+    "fn_class_agnostic": 26,
+    "capacity_OVER_CAPACITY": 88,
+    "capacity_OK": 77,
+    "fp": 51,
+    "matched_geometry_valid_gt": 315,
+    "finite_ellipse_predictions": 315,
+    "angle_valid_gt": 179,
+    "angle_abstentions": 45,
+    "angle_prediction_valid": 134,
+    "capacity_EMPTY": 19,
+    "empty_observation_images": 19,
+    "empty_false_positive_detections": 1
+  },
+  "operating_score_threshold": 0.25,
+  "ap_score_floor": 0.001,
+  "max_detections_per_image": 5,
+  "ap_method": "task-specific101-point interpolation; not pycocotoolsCOCO AP",
+  "task_mAP50": 0.9258691512287803,
+  "task_mAP50_95": 0.7183974024162822,
+  "ap_by_iou": [
+    {
+      "iou": 0.5,
+      "macro_ap": 0.9258691512287803,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 92,
+          "predictions": 132,
+          "ap": 0.9383465264685036
+        },
+        {
+          "color_id": 2,
+          "gt": 122,
+          "predictions": 248,
+          "ap": 0.9642721767584923
+        },
+        {
+          "color_id": 3,
+          "gt": 96,
+          "predictions": 152,
+          "ap": 0.8782939757625656
+        },
+        {
+          "color_id": 4,
+          "gt": 116,
+          "predictions": 173,
+          "ap": 0.9777189607745255
+        },
+        {
+          "color_id": 5,
+          "gt": 78,
+          "predictions": 251,
+          "ap": 0.8231098388911708
+        },
+        {
+          "color_id": 6,
+          "gt": 110,
+          "predictions": 149,
+          "ap": 0.9734734287174246
+        }
+      ]
+    },
+    {
+      "iou": 0.55,
+      "macro_ap": 0.9226693732713579,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 92,
+          "predictions": 132,
+          "ap": 0.9383465264685036
+        },
+        {
+          "color_id": 2,
+          "gt": 122,
+          "predictions": 248,
+          "ap": 0.9642721767584923
+        },
+        {
+          "color_id": 3,
+          "gt": 96,
+          "predictions": 152,
+          "ap": 0.8673980422649653
+        },
+        {
+          "color_id": 4,
+          "gt": 116,
+          "predictions": 173,
+          "ap": 0.9777189607745255
+        },
+        {
+          "color_id": 5,
+          "gt": 78,
+          "predictions": 251,
+          "ap": 0.8148071046442362
+        },
+        {
+          "color_id": 6,
+          "gt": 110,
+          "predictions": 149,
+          "ap": 0.9734734287174246
+        }
+      ]
+    },
+    {
+      "iou": 0.6,
+      "macro_ap": 0.9063803436976391,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 92,
+          "predictions": 132,
+          "ap": 0.9171567576925761
+        },
+        {
+          "color_id": 2,
+          "gt": 122,
+          "predictions": 248,
+          "ap": 0.9642721767584923
+        },
+        {
+          "color_id": 3,
+          "gt": 96,
+          "predictions": 152,
+          "ap": 0.8673980422649653
+        },
+        {
+          "color_id": 4,
+          "gt": 116,
+          "predictions": 173,
+          "ap": 0.9777189607745255
+        },
+        {
+          "color_id": 5,
+          "gt": 78,
+          "predictions": 251,
+          "ap": 0.7382626959778509
+        },
+        {
+          "color_id": 6,
+          "gt": 110,
+          "predictions": 149,
+          "ap": 0.9734734287174246
+        }
+      ]
+    },
+    {
+      "iou": 0.65,
+      "macro_ap": 0.8991412374792173,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 92,
+          "predictions": 132,
+          "ap": 0.9171567576925761
+        },
+        {
+          "color_id": 2,
+          "gt": 122,
+          "predictions": 248,
+          "ap": 0.9435965557707466
+        },
+        {
+          "color_id": 3,
+          "gt": 96,
+          "predictions": 152,
+          "ap": 0.8673980422649653
+        },
+        {
+          "color_id": 4,
+          "gt": 116,
+          "predictions": 173,
+          "ap": 0.9777189607745255
+        },
+        {
+          "color_id": 5,
+          "gt": 78,
+          "predictions": 251,
+          "ap": 0.7155036796550653
+        },
+        {
+          "color_id": 6,
+          "gt": 110,
+          "predictions": 149,
+          "ap": 0.9734734287174246
+        }
+      ]
+    },
+    {
+      "iou": 0.7,
+      "macro_ap": 0.8783651327300969,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 92,
+          "predictions": 132,
+          "ap": 0.9171567576925761
+        },
+        {
+          "color_id": 2,
+          "gt": 122,
+          "predictions": 248,
+          "ap": 0.9308763198431353
+        },
+        {
+          "color_id": 3,
+          "gt": 96,
+          "predictions": 152,
+          "ap": 0.85006741812088
+        },
+        {
+          "color_id": 4,
+          "gt": 116,
+          "predictions": 173,
+          "ap": 0.9643374440303532
+        },
+        {
+          "color_id": 5,
+          "gt": 78,
+          "predictions": 251,
+          "ap": 0.6342794279762124
+        },
+        {
+          "color_id": 6,
+          "gt": 110,
+          "predictions": 149,
+          "ap": 0.9734734287174246
+        }
+      ]
+    },
+    {
+      "iou": 0.75,
+      "macro_ap": 0.8461217344391807,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 92,
+          "predictions": 132,
+          "ap": 0.9171567576925761
+        },
+        {
+          "color_id": 2,
+          "gt": 122,
+          "predictions": 248,
+          "ap": 0.8886176098248293
+        },
+        {
+          "color_id": 3,
+          "gt": 96,
+          "predictions": 152,
+          "ap": 0.85006741812088
+        },
+        {
+          "color_id": 4,
+          "gt": 116,
+          "predictions": 173,
+          "ap": 0.9530918349122899
+        },
+        {
+          "color_id": 5,
+          "gt": 78,
+          "predictions": 251,
+          "ap": 0.5534911889733
+        },
+        {
+          "color_id": 6,
+          "gt": 110,
+          "predictions": 149,
+          "ap": 0.9143055971112078
+        }
+      ]
+    },
+    {
+      "iou": 0.8,
+      "macro_ap": 0.7877063305031268,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 92,
+          "predictions": 132,
+          "ap": 0.8937248797270129
+        },
+        {
+          "color_id": 2,
+          "gt": 122,
+          "predictions": 248,
+          "ap": 0.8248578888593839
+        },
+        {
+          "color_id": 3,
+          "gt": 96,
+          "predictions": 152,
+          "ap": 0.8296635574650604
+        },
+        {
+          "color_id": 4,
+          "gt": 116,
+          "predictions": 173,
+          "ap": 0.8925168887497731
+        },
+        {
+          "color_id": 5,
+          "gt": 78,
+          "predictions": 251,
+          "ap": 0.4241948439383789
+        },
+        {
+          "color_id": 6,
+          "gt": 110,
+          "predictions": 149,
+          "ap": 0.8612799242791517
+        }
+      ]
+    },
+    {
+      "iou": 0.85,
+      "macro_ap": 0.6780854780088986,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 92,
+          "predictions": 132,
+          "ap": 0.6954257489699928
+        },
+        {
+          "color_id": 2,
+          "gt": 122,
+          "predictions": 248,
+          "ap": 0.7249247904961673
+        },
+        {
+          "color_id": 3,
+          "gt": 96,
+          "predictions": 152,
+          "ap": 0.7303457061386683
+        },
+        {
+          "color_id": 4,
+          "gt": 116,
+          "predictions": 173,
+          "ap": 0.7887007386753702
+        },
+        {
+          "color_id": 5,
+          "gt": 78,
+          "predictions": 251,
+          "ap": 0.288064570576659
+        },
+        {
+          "color_id": 6,
+          "gt": 110,
+          "predictions": 149,
+          "ap": 0.841051313196534
+        }
+      ]
+    },
+    {
+      "iou": 0.8999999999999999,
+      "macro_ap": 0.3091052706607971,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 92,
+          "predictions": 132,
+          "ap": 0.34837584390063137
+        },
+        {
+          "color_id": 2,
+          "gt": 122,
+          "predictions": 248,
+          "ap": 0.3573429235749839
+        },
+        {
+          "color_id": 3,
+          "gt": 96,
+          "predictions": 152,
+          "ap": 0.2776922869735577
+        },
+        {
+          "color_id": 4,
+          "gt": 116,
+          "predictions": 173,
+          "ap": 0.4060170968423477
+        },
+        {
+          "color_id": 5,
+          "gt": 78,
+          "predictions": 251,
+          "ap": 0.07644771279849073
+        },
+        {
+          "color_id": 6,
+          "gt": 110,
+          "predictions": 149,
+          "ap": 0.38875575987477134
+        }
+      ]
+    },
+    {
+      "iou": 0.95,
+      "macro_ap": 0.030529972143726547,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 92,
+          "predictions": 132,
+          "ap": 0.027517382011153967
+        },
+        {
+          "color_id": 2,
+          "gt": 122,
+          "predictions": 248,
+          "ap": 0.025235352888575695
+        },
+        {
+          "color_id": 3,
+          "gt": 96,
+          "predictions": 152,
+          "ap": 0.03016023279697787
+        },
+        {
+          "color_id": 4,
+          "gt": 116,
+          "predictions": 173,
+          "ap": 0.058102965425279804
+        },
+        {
+          "color_id": 5,
+          "gt": 78,
+          "predictions": 251,
+          "ap": 0.01169917656217449
+        },
+        {
+          "color_id": 6,
+          "gt": 110,
+          "predictions": 149,
+          "ap": 0.03046472317819746
+        }
+      ]
+    }
+  ],
+  "class_agnostic_recall50": 0.9576547231270358,
+  "matched_color_accuracy": 0.967687074829932,
+  "errors": {
+    "physical_center_visible_px": {
+      "n": 566,
+      "min": 0.227322488792014,
+      "p05": 0.9217582435435032,
+      "median": 4.541561743066037,
+      "p95": 25.739537612236724,
+      "max": 68.5286642943813
+    },
+    "physical_center_occluded_px": {
+      "n": 19,
+      "min": 0.8005340939087191,
+      "p05": 1.3020799357223034,
+      "median": 3.8771543012285297,
+      "p95": 18.2008446454922,
+      "max": 55.936815743292065
+    },
+    "ellipse_iou": {
+      "n": 315,
+      "min": 0.5359576078728236,
+      "p05": 0.6641871042170594,
+      "median": 0.8529411764705882,
+      "p95": 0.9411375777440582,
+      "max": 0.9902486591906388
+    },
+    "conic_center_px": {
+      "n": 315,
+      "min": 0.09437880761197559,
+      "p05": 0.5316190416736697,
+      "median": 2.5815173513199543,
+      "p95": 7.2425129173496545,
+      "max": 15.135538845346082
+    },
+    "semi_major_relative": {
+      "n": 315,
+      "min": 0.00013179589149591293,
+      "p05": 0.00426497230925354,
+      "median": 0.05218016130221017,
+      "p95": 0.19237240325166596,
+      "max": 0.31384404630911444
+    },
+    "semi_minor_relative": {
+      "n": 315,
+      "min": 2.2604136066834926e-05,
+      "p05": 0.003251014573463226,
+      "median": 0.05086116782085051,
+      "p95": 0.17286378498456217,
+      "max": 0.3112848267038836
+    },
+    "orientation_error_deg": {
+      "n": 134,
+      "min": 0.06433260539122898,
+      "p05": 2.516608102770392,
+      "median": 29.239655218867746,
+      "p95": 80.61316564428412,
+      "max": 87.59686290963057
+    }
+  },
+  "count_groups": {
+    "world_count_1": {
+      "images": 39,
+      "observable_gt": 39,
+      "matched_gt": 37,
+      "all_observable_targets_recalled": 37
+    },
+    "world_count_5": {
+      "images": 46,
+      "observable_gt": 230,
+      "matched_gt": 228,
+      "all_observable_targets_recalled": 44
+    },
+    "world_count_3": {
+      "images": 33,
+      "observable_gt": 99,
+      "matched_gt": 94,
+      "all_observable_targets_recalled": 28
+    },
+    "world_count_2": {
+      "images": 45,
+      "observable_gt": 90,
+      "matched_gt": 85,
+      "all_observable_targets_recalled": 40
+    },
+    "world_count_4": {
+      "images": 39,
+      "observable_gt": 156,
+      "matched_gt": 144,
+      "all_observable_targets_recalled": 28
+    },
+    "world_count_0": {
+      "images": 19,
+      "observable_gt": 0,
+      "matched_gt": 0,
+      "all_observable_targets_recalled": 19
+    }
+  },
+  "host_forward_ms_per_image_batch_average": {
+    "n": 7,
+    "min": 0.9701371250017132,
+    "p05": 1.0366610937502685,
+    "median": 1.193870624994986,
+    "p95": 1.3332571781234037,
+    "max": 1.333693874997266
+  },
+  "board_latency_measured": false,
+  "real_accuracy_verified": false,
+  "scene_names": [
+    "primary/scene-00001",
+    "primary/scene-00005",
+    "primary/scene-00013",
+    "primary/scene-00015",
+    "primary/scene-00020",
+    "primary/scene-00035",
+    "primary/scene-00039",
+    "primary/scene-00040",
+    "primary/scene-00047",
+    "primary/scene-00051",
+    "primary/scene-00056",
+    "primary/scene-00067",
+    "primary/scene-00076",
+    "primary/scene-00080",
+    "primary/scene-00088",
+    "primary/scene-00090",
+    "primary/scene-00095",
+    "primary/scene-00110",
+    "primary/scene-00114",
+    "primary/scene-00115",
+    "primary/scene-00122",
+    "primary/scene-00126",
+    "primary/scene-00131",
+    "primary/scene-00142",
+    "primary/scene-00151",
+    "primary/scene-00155",
+    "primary/scene-00163",
+    "primary/scene-00165",
+    "primary/scene-00170",
+    "primary/scene-00185",
+    "primary/scene-00189",
+    "primary/scene-00190",
+    "primary/scene-00197",
+    "primary/scene-00201",
+    "primary/scene-00206",
+    "primary/scene-00217",
+    "primary/scene-00226",
+    "primary/scene-00230",
+    "primary/scene-00238",
+    "primary/scene-00240",
+    "primary/scene-00245",
+    "primary/scene-00260",
+    "primary/scene-00264",
+    "primary/scene-00265",
+    "primary/scene-00272",
+    "primary/scene-00276",
+    "primary/scene-00281",
+    "primary/scene-00292",
+    "primary/scene-00301",
+    "primary/scene-00305",
+    "primary/scene-00313",
+    "primary/scene-00315",
+    "primary/scene-00320",
+    "primary/scene-00335",
+    "primary/scene-00339",
+    "primary/scene-00340",
+    "primary/scene-00347",
+    "primary/scene-00351",
+    "primary/scene-00356",
+    "primary/scene-00367",
+    "primary/scene-00376",
+    "primary/scene-00380",
+    "primary/scene-00388",
+    "primary/scene-00390",
+    "primary/scene-00395",
+    "primary/scene-00410",
+    "primary/scene-00414",
+    "primary/scene-00415",
+    "primary/scene-00422",
+    "primary/scene-00426",
+    "primary/scene-00431",
+    "primary/scene-00442",
+    "primary/scene-00451",
+    "primary/scene-00455",
+    "primary/scene-00463",
+    "primary/scene-00465",
+    "primary/scene-00470",
+    "primary/scene-00485",
+    "primary/scene-00489",
+    "primary/scene-00490",
+    "primary/scene-00497",
+    "primary/scene-00501",
+    "primary/scene-00506",
+    "primary/scene-00517",
+    "primary/scene-00526",
+    "primary/scene-00530",
+    "primary/scene-00538",
+    "primary/scene-00540",
+    "primary/scene-00545",
+    "primary/scene-00560",
+    "primary/scene-00564",
+    "primary/scene-00565",
+    "primary/scene-00572",
+    "primary/scene-00576",
+    "primary/scene-00581",
+    "primary/scene-00592",
+    "primary/scene-00601",
+    "primary/scene-00605",
+    "primary/scene-00613",
+    "primary/scene-00615",
+    "primary/scene-00620",
+    "primary/scene-00635",
+    "primary/scene-00639",
+    "primary/scene-00640",
+    "primary/scene-00647",
+    "primary/scene-00651",
+    "primary/scene-00656",
+    "primary/scene-00667",
+    "primary/scene-00676",
+    "primary/scene-00680",
+    "primary/scene-00688",
+    "primary/scene-00690",
+    "primary/scene-00695",
+    "primary/scene-00710",
+    "primary/scene-00714",
+    "primary/scene-00715",
+    "primary/scene-00722",
+    "primary/scene-00726",
+    "primary/scene-00731",
+    "primary/scene-00742",
+    "primary/scene-00751",
+    "primary/scene-00755",
+    "primary/scene-00763",
+    "primary/scene-00765",
+    "primary/scene-00770",
+    "primary/scene-00785",
+    "primary/scene-00789",
+    "primary/scene-00790",
+    "primary/scene-00797",
+    "primary/scene-00801",
+    "primary/scene-00806",
+    "primary/scene-00817",
+    "primary/scene-00826",
+    "primary/scene-00830",
+    "primary/scene-00838",
+    "primary/scene-00840",
+    "primary/scene-00845",
+    "primary/scene-00860",
+    "primary/scene-00864",
+    "primary/scene-00865",
+    "primary/scene-00872",
+    "primary/scene-00876",
+    "primary/scene-00881",
+    "primary/scene-00892",
+    "primary/scene-00901",
+    "primary/scene-00905",
+    "primary/scene-00913",
+    "primary/scene-00915",
+    "primary/scene-00920",
+    "primary/scene-00935",
+    "primary/scene-00939",
+    "primary/scene-00940",
+    "primary/scene-00947",
+    "primary/scene-00951",
+    "primary/scene-00956",
+    "primary/scene-00967",
+    "primary/scene-00976",
+    "primary/scene-00980",
+    "primary/scene-00988",
+    "primary/scene-00990",
+    "primary/scene-00995",
+    "colorfix/scene-00003",
+    "colorfix/scene-00006",
+    "colorfix/scene-00009",
+    "colorfix/scene-00012",
+    "colorfix/scene-00013",
+    "colorfix/scene-00016",
+    "colorfix/scene-00017",
+    "colorfix/scene-00025",
+    "colorfix/scene-00029",
+    "colorfix/scene-00033",
+    "colorfix/scene-00034",
+    "colorfix/scene-00037",
+    "colorfix/scene-00038",
+    "colorfix/scene-00040",
+    "colorfix/scene-00044",
+    "colorfix/scene-00049",
+    "colorfix/scene-00051",
+    "colorfix/scene-00052",
+    "colorfix/scene-00061",
+    "colorfix/scene-00062",
+    "colorfix/scene-00063",
+    "colorfix/scene-00065",
+    "colorfix/scene-00068",
+    "colorfix/scene-00071",
+    "colorfix/scene-00073",
+    "colorfix/scene-00075",
+    "colorfix/scene-00076",
+    "colorfix/scene-00077",
+    "colorfix/scene-00082",
+    "colorfix/scene-00083",
+    "colorfix/scene-00086",
+    "colorfix/scene-00090",
+    "colorfix/scene-00093",
+    "colorfix/scene-00100",
+    "colorfix/scene-00102",
+    "colorfix/scene-00105",
+    "colorfix/scene-00107",
+    "colorfix/scene-00111",
+    "colorfix/scene-00115",
+    "colorfix/scene-00118",
+    "colorfix/scene-00121",
+    "colorfix/scene-00141",
+    "colorfix/scene-00147",
+    "colorfix/scene-00161",
+    "colorfix/scene-00181",
+    "colorfix/scene-00184",
+    "colorfix/scene-00185",
+    "colorfix/scene-00187",
+    "colorfix/scene-00189",
+    "colorfix/scene-00191",
+    "colorfix/scene-00193",
+    "colorfix/scene-00195",
+    "colorfix/scene-00196",
+    "colorfix/scene-00198",
+    "colorfix/scene-00203",
+    "colorfix/scene-00210",
+    "colorfix/scene-00220",
+    "colorfix/scene-00223",
+    "colorfix/scene-00235",
+    "colorfix/scene-00237"
+  ]
+}

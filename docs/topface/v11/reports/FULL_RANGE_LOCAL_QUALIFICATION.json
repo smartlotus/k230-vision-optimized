@@ -1,0 +1,43 @@
+{
+  "scope": "LOCAL_FULL_RANGE_QUALIFICATION",
+  "status": "PASS",
+  "images": 6,
+  "indices": [
+    1000,
+    1006
+  ],
+  "audit_sha256": "35f418eca99431668e65968c2a93a9e72e8545593cc9745698c6507c0b9be8e2",
+  "gpu": {
+    "selected_backend": "OPTIX",
+    "attempts": [
+      {
+        "backend": "OPTIX",
+        "devices": [
+          {
+            "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "type": "CUDA"
+          },
+          {
+            "name": "AMD Ryzen 9 8945HX with Radeon Graphics",
+            "type": "CPU"
+          },
+          {
+            "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "type": "OPTIX"
+          },
+          {
+            "name": "AMD Radeon(TM) 610M",
+            "type": "HIP"
+          }
+        ]
+      }
+    ],
+    "gpu_render_verified": true,
+    "successful_frames": 6,
+    "blender_version": "4.2.9 LTS",
+    "numpy_version": "1.24.3"
+  },
+  "coco_images": 6,
+  "coco_annotations": 15,
+  "optimizer_updates": 0
+}

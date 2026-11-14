@@ -17,7 +17,8 @@ ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
 
 
-def main(phase,revision,pilot_result,staging,audit_acceptance=None,supplement_result=None,publisher_receipt=None):
+def main(phase,revision,pilot_result,staging,audit_acceptance=None,supplement_result=None,publisher_receipt=None,
+         refinement_parent=None):
     if phase not in ('audit','training') or not revision.isalnum():raise ValueError('Explicit phase/revision required')
     parent=json.loads(Path(pilot_result).read_text(encoding='utf8'))
     if parent['status']!='COMPUTE_AND_QA_PASS' or parent['images_rendered']!=1000 or parent['durable_status']!='FULL_BYTE_SHA256_PASS':
@@ -62,6 +63,17 @@ def main(phase,revision,pilot_result,staging,audit_acceptance=None,supplement_re
             raise ValueError('Independent02 audit did not accept the same parent archive')
         config['audit_acceptance']=acceptance
         files+=['task_geometry.py','task_training.py','evaluate_task.py','train_experiment.py','nanodet_topface.py']
+        if refinement_parent:
+            refinement=json.loads(refinement_parent.read_text(encoding='utf8'))
+            receipt=refinement['publication']
+            if (not publisher_receipt or receipt['status']!='DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED' or
+                    receipt['folder_id']!=folder or receipt['secret_cleanup']!='CONFIRMED_DELETED' or
+                    refinement['experiment']!='pilot_pretrained'):
+                raise ValueError('Geometry refinement requires a verified pretrained Pilot checkpoint')
+            config['geometry_refinement']={**refinement,'max_epochs':12}
+            kernel_sources.append(f"{receipt['prep']['ref']}/{receipt['prep']['version']}")
+            kernel='lotus30/k230-topface-v11-03b-geometry-refine'
+            files+=['formal_job.py','full_dataset.py']
     for name in files:shutil.copy2(HERE/name,staging/name)
     if phase=='training':
         # Kaggle dataset creation uploads root files. Use a pinned binary bundle
@@ -112,8 +124,16 @@ Attach existing `DOASTRA_GDRIVE_OAUTH_JSON`, enable Internet, and run once. A pe
             'uploads the saved archive to Drive and verifies it by reading back every byte.'
         )+intro[end:]
         notebook['cells'][0]['source']=intro.splitlines(True)
+    if refinement_parent:
+        notebook['cells'][0]['source']=[
+            '# 03b Geometry refinement\n\n',
+            'Start from the verified pretrained Pilot checkpoint, train for at most 12 epochs on the same split, ',
+            'and evaluate the original Pilot gates using the unchanged 50-channel decoding contract. ',
+            'Compare angle coverage, axis ratio errors and near-round validity against the parent baseline.\n',
+        ]
     atomic_json(kernel_dir/name,notebook)
     title='K230 Topface V11 '+ordinal+(' Dataset Audit' if phase=='audit' else ' Pilot Training')
+    if refinement_parent:title='K230 Topface V11 03b Geometry Refine'
     atomic_json(kernel_dir/'kernel-metadata.json',{'id':kernel,'title':title,'code_file':name,
         'language':'python','kernel_type':'notebook','is_private':True,'enable_gpu':phase=='training',
         'enable_tpu':False,'enable_internet':not bool(publisher_receipt),'dataset_sources':[dataset+'/1'],
@@ -140,4 +160,5 @@ if __name__=='__main__':
     p.add_argument('--staging',type=Path,required=True);p.add_argument('--audit-acceptance',type=Path)
     p.add_argument('--supplement-result',type=Path)
     p.add_argument('--publisher-receipt',type=Path)
+    p.add_argument('--refinement-parent',type=Path)
     main(**vars(p.parse_args()))

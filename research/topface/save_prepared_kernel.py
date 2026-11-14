@@ -29,10 +29,19 @@ def main(kernel_dir, frozen_dir, token_file,execute=False):
     with contextlib.redirect_stdout(io.StringIO()),contextlib.redirect_stderr(io.StringIO()):
         from kaggle.api.kaggle_api_extended import KaggleApi
         api=KaggleApi();api.authenticate()
-    atomic_json(attempt,{'operation':'SAVE_AND_RUN_ALL' if execute else 'QUICK_SAVE','observed_utc':datetime.now(timezone.utc).isoformat(),
+    if execute:
+        status=json.loads(api.dataset_status(intent['dataset'],format='json(status,current_version_number)'))
+        if (status['status'].lower(),status['current_version_number'])!=('ready',intent['dataset_version']):
+            raise RuntimeError('The pinned Kaggle input dataset version is not ready')
+        atomic_json(frozen_dir/'DATASET_READY.json',{'ref':intent['dataset'],
+            'version':intent['dataset_version'],'status':'ready','observed_utc':datetime.now(timezone.utc).isoformat()})
+    record={'operation':'SAVE_AND_RUN_ALL' if execute else 'QUICK_SAVE','observed_utc':datetime.now(timezone.utc).isoformat(),
         'ref':intent['kernel'],'source_sha256':intent['notebook_sha256'],
         'session_timeout_seconds':intent.get('provider_max_seconds',10800),
-        'scientific_execution':execute,'automatic_retry':False})
+        'scientific_execution':execute,'automatic_retry':False}
+    with attempt.open('x',encoding='utf8') as stream:
+        json.dump(record,stream,indent=2)
+        stream.write('\n')
     # Inspected kaggle2.2.5 kernels_push -> SDK save_kernel -> requests.send:
     # a single Save call, no mutation retry decorator.
     try:

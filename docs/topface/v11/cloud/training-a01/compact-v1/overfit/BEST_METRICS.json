@@ -1,0 +1,579 @@
+{
+  "schema": "topface-task-evaluation-v1.1",
+  "scope": "SYNTHETIC_ONLY",
+  "images": 16,
+  "denominators": {
+    "world_instances": 37,
+    "images": 16,
+    "observable_gt": 37,
+    "operating_predictions": 37,
+    "capacity_OK": 8,
+    "tp_class_agnostic": 37,
+    "matched_color_correct": 36,
+    "matched_color_total": 37,
+    "matched_geometry_valid_gt": 33,
+    "angle_valid_gt": 18,
+    "finite_ellipse_predictions": 33,
+    "angle_prediction_valid": 18,
+    "fn_class_agnostic": 0,
+    "capacity_OVER_CAPACITY": 4,
+    "capacity_EMPTY": 1,
+    "empty_observation_images": 1,
+    "empty_false_positive_detections": 0,
+    "capacity_UNCERTAIN": 3
+  },
+  "operating_score_threshold": 0.25,
+  "ap_score_floor": 0.001,
+  "max_detections_per_image": 5,
+  "ap_method": "task-specific101-point interpolation; not pycocotoolsCOCO AP",
+  "task_mAP50": 0.9719471947194719,
+  "task_mAP50_95": 0.919004400440044,
+  "ap_by_iou": [
+    {
+      "iou": 0.5,
+      "macro_ap": 0.9719471947194719,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 5,
+          "predictions": 7,
+          "ap": 1.0
+        },
+        {
+          "color_id": 2,
+          "gt": 6,
+          "predictions": 30,
+          "ap": 0.8316831683168316
+        },
+        {
+          "color_id": 3,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        },
+        {
+          "color_id": 4,
+          "gt": 6,
+          "predictions": 11,
+          "ap": 1.0
+        },
+        {
+          "color_id": 5,
+          "gt": 8,
+          "predictions": 14,
+          "ap": 1.0
+        },
+        {
+          "color_id": 6,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        }
+      ]
+    },
+    {
+      "iou": 0.55,
+      "macro_ap": 0.9719471947194719,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 5,
+          "predictions": 7,
+          "ap": 1.0
+        },
+        {
+          "color_id": 2,
+          "gt": 6,
+          "predictions": 30,
+          "ap": 0.8316831683168316
+        },
+        {
+          "color_id": 3,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        },
+        {
+          "color_id": 4,
+          "gt": 6,
+          "predictions": 11,
+          "ap": 1.0
+        },
+        {
+          "color_id": 5,
+          "gt": 8,
+          "predictions": 14,
+          "ap": 1.0
+        },
+        {
+          "color_id": 6,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        }
+      ]
+    },
+    {
+      "iou": 0.6,
+      "macro_ap": 0.9719471947194719,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 5,
+          "predictions": 7,
+          "ap": 1.0
+        },
+        {
+          "color_id": 2,
+          "gt": 6,
+          "predictions": 30,
+          "ap": 0.8316831683168316
+        },
+        {
+          "color_id": 3,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        },
+        {
+          "color_id": 4,
+          "gt": 6,
+          "predictions": 11,
+          "ap": 1.0
+        },
+        {
+          "color_id": 5,
+          "gt": 8,
+          "predictions": 14,
+          "ap": 1.0
+        },
+        {
+          "color_id": 6,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        }
+      ]
+    },
+    {
+      "iou": 0.65,
+      "macro_ap": 0.9719471947194719,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 5,
+          "predictions": 7,
+          "ap": 1.0
+        },
+        {
+          "color_id": 2,
+          "gt": 6,
+          "predictions": 30,
+          "ap": 0.8316831683168316
+        },
+        {
+          "color_id": 3,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        },
+        {
+          "color_id": 4,
+          "gt": 6,
+          "predictions": 11,
+          "ap": 1.0
+        },
+        {
+          "color_id": 5,
+          "gt": 8,
+          "predictions": 14,
+          "ap": 1.0
+        },
+        {
+          "color_id": 6,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        }
+      ]
+    },
+    {
+      "iou": 0.7,
+      "macro_ap": 0.9719471947194719,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 5,
+          "predictions": 7,
+          "ap": 1.0
+        },
+        {
+          "color_id": 2,
+          "gt": 6,
+          "predictions": 30,
+          "ap": 0.8316831683168316
+        },
+        {
+          "color_id": 3,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        },
+        {
+          "color_id": 4,
+          "gt": 6,
+          "predictions": 11,
+          "ap": 1.0
+        },
+        {
+          "color_id": 5,
+          "gt": 8,
+          "predictions": 14,
+          "ap": 1.0
+        },
+        {
+          "color_id": 6,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        }
+      ]
+    },
+    {
+      "iou": 0.75,
+      "macro_ap": 0.9719471947194719,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 5,
+          "predictions": 7,
+          "ap": 1.0
+        },
+        {
+          "color_id": 2,
+          "gt": 6,
+          "predictions": 30,
+          "ap": 0.8316831683168316
+        },
+        {
+          "color_id": 3,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        },
+        {
+          "color_id": 4,
+          "gt": 6,
+          "predictions": 11,
+          "ap": 1.0
+        },
+        {
+          "color_id": 5,
+          "gt": 8,
+          "predictions": 14,
+          "ap": 1.0
+        },
+        {
+          "color_id": 6,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        }
+      ]
+    },
+    {
+      "iou": 0.8,
+      "macro_ap": 0.9719471947194719,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 5,
+          "predictions": 7,
+          "ap": 1.0
+        },
+        {
+          "color_id": 2,
+          "gt": 6,
+          "predictions": 30,
+          "ap": 0.8316831683168316
+        },
+        {
+          "color_id": 3,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        },
+        {
+          "color_id": 4,
+          "gt": 6,
+          "predictions": 11,
+          "ap": 1.0
+        },
+        {
+          "color_id": 5,
+          "gt": 8,
+          "predictions": 14,
+          "ap": 1.0
+        },
+        {
+          "color_id": 6,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        }
+      ]
+    },
+    {
+      "iou": 0.85,
+      "macro_ap": 0.9719471947194719,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 5,
+          "predictions": 7,
+          "ap": 1.0
+        },
+        {
+          "color_id": 2,
+          "gt": 6,
+          "predictions": 30,
+          "ap": 0.8316831683168316
+        },
+        {
+          "color_id": 3,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        },
+        {
+          "color_id": 4,
+          "gt": 6,
+          "predictions": 11,
+          "ap": 1.0
+        },
+        {
+          "color_id": 5,
+          "gt": 8,
+          "predictions": 14,
+          "ap": 1.0
+        },
+        {
+          "color_id": 6,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        }
+      ]
+    },
+    {
+      "iou": 0.8999999999999999,
+      "macro_ap": 0.9122112211221122,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 5,
+          "predictions": 7,
+          "ap": 0.6415841584158416
+        },
+        {
+          "color_id": 2,
+          "gt": 6,
+          "predictions": 30,
+          "ap": 0.8316831683168316
+        },
+        {
+          "color_id": 3,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        },
+        {
+          "color_id": 4,
+          "gt": 6,
+          "predictions": 11,
+          "ap": 1.0
+        },
+        {
+          "color_id": 5,
+          "gt": 8,
+          "predictions": 14,
+          "ap": 1.0
+        },
+        {
+          "color_id": 6,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 1.0
+        }
+      ]
+    },
+    {
+      "iou": 0.95,
+      "macro_ap": 0.5022552255225522,
+      "per_color": [
+        {
+          "color_id": 1,
+          "gt": 5,
+          "predictions": 7,
+          "ap": 0.6415841584158416
+        },
+        {
+          "color_id": 2,
+          "gt": 6,
+          "predictions": 30,
+          "ap": 0.3702970297029703
+        },
+        {
+          "color_id": 3,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 0.693069306930693
+        },
+        {
+          "color_id": 4,
+          "gt": 6,
+          "predictions": 11,
+          "ap": 0.8036303630363039
+        },
+        {
+          "color_id": 5,
+          "gt": 8,
+          "predictions": 14,
+          "ap": 0.2524752475247525
+        },
+        {
+          "color_id": 6,
+          "gt": 6,
+          "predictions": 9,
+          "ap": 0.2524752475247525
+        }
+      ]
+    }
+  ],
+  "class_agnostic_recall50": 1.0,
+  "matched_color_accuracy": 0.972972972972973,
+  "errors": {
+    "physical_center_visible_px": {
+      "n": 33,
+      "min": 0.27094636924871734,
+      "p05": 0.42396976853312124,
+      "median": 1.8302558370027273,
+      "p95": 2.7537615458920026,
+      "max": 2.883597423152466
+    },
+    "ellipse_iou": {
+      "n": 33,
+      "min": 0.6868607395751377,
+      "p05": 0.7052588294885948,
+      "median": 0.828360329639102,
+      "p95": 0.9180452938134139,
+      "max": 0.9354652837798905
+    },
+    "conic_center_px": {
+      "n": 33,
+      "min": 0.4513968076276248,
+      "p05": 0.5955701323021593,
+      "median": 1.4812073290897962,
+      "p95": 3.0135970596342214,
+      "max": 3.506814767546029
+    },
+    "semi_major_relative": {
+      "n": 33,
+      "min": 0.006322416585763176,
+      "p05": 0.01221463640761503,
+      "median": 0.15258894254977662,
+      "p95": 0.31496073984038164,
+      "max": 0.3740365633432623
+    },
+    "semi_minor_relative": {
+      "n": 33,
+      "min": 0.0017767467340583751,
+      "p05": 0.00859736723413889,
+      "median": 0.05503368643549396,
+      "p95": 0.11207302229036306,
+      "max": 0.17178021017525055
+    },
+    "orientation_error_deg": {
+      "n": 18,
+      "min": 0.41698494720706947,
+      "p05": 0.6410257380895196,
+      "median": 5.854248513056625,
+      "p95": 17.50215915795068,
+      "max": 22.73921003980294
+    },
+    "physical_center_occluded_px": {
+      "n": 4,
+      "min": 1.8012617623034175,
+      "p05": 2.2427205324822705,
+      "median": 7.458415811404745,
+      "p95": 13.10197663469396,
+      "max": 13.618941089172829
+    }
+  },
+  "count_groups": {
+    "world_count_2": {
+      "images": 4,
+      "observable_gt": 8,
+      "matched_gt": 8,
+      "all_observable_targets_recalled": 4
+    },
+    "world_count_1": {
+      "images": 5,
+      "observable_gt": 5,
+      "matched_gt": 5,
+      "all_observable_targets_recalled": 5
+    },
+    "world_count_4": {
+      "images": 2,
+      "observable_gt": 8,
+      "matched_gt": 8,
+      "all_observable_targets_recalled": 2
+    },
+    "world_count_0": {
+      "images": 1,
+      "observable_gt": 0,
+      "matched_gt": 0,
+      "all_observable_targets_recalled": 1
+    },
+    "world_count_3": {
+      "images": 2,
+      "observable_gt": 6,
+      "matched_gt": 6,
+      "all_observable_targets_recalled": 2
+    },
+    "world_count_5": {
+      "images": 2,
+      "observable_gt": 10,
+      "matched_gt": 10,
+      "all_observable_targets_recalled": 2
+    }
+  },
+  "host_forward_ms_per_image_batch_average": {
+    "n": 1,
+    "min": 1.432297874998767,
+    "p05": 1.432297874998767,
+    "median": 1.432297874998767,
+    "p95": 1.432297874998767,
+    "max": 1.432297874998767
+  },
+  "board_latency_measured": false,
+  "real_accuracy_verified": false,
+  "scene_names": [
+    "primary/scene-00266",
+    "primary/scene-00355",
+    "primary/scene-00556",
+    "primary/scene-00960",
+    "colorfix/scene-00022",
+    "colorfix/scene-00030",
+    "colorfix/scene-00045",
+    "colorfix/scene-00046",
+    "colorfix/scene-00084",
+    "colorfix/scene-00123",
+    "colorfix/scene-00127",
+    "colorfix/scene-00150",
+    "colorfix/scene-00190",
+    "colorfix/scene-00208",
+    "colorfix/scene-00224",
+    "colorfix/scene-00230"
+  ]
+}
