@@ -1,0 +1,22 @@
+{
+  "source_project": "user-owned doastraforgpt ACT publisher",
+  "source_file": "C:\\Users\\28389\\Desktop\\doastraforgpt\\research\\act_cloud_first\\ci_transfer.py",
+  "source_sha256": "19474c13a2d34a5b8621fe9d3bdd79c6326a7ebc0da7bb54de23539a3eacdbbf",
+  "adapted_sha256": "a98d33a4f143132eaebf543112d04c82a72ecceea88f0d403921cd1a1f0212df",
+  "changes": [
+    "K230 run_id instead of ACT revision",
+    "fixed K230 Drive folder identity",
+    "K230 envelope/log tags and immutable archive naming"
+  ],
+  "unchanged_mechanism": [
+    "signedKaggle source allowlist",
+    "full source SHA size",
+    "recoverable single resumable session",
+    "complete Drive byte readback",
+    "safe errors",
+    "600s limit,1GiB cap,stdlib only"
+  ],
+  "prepared_only": true,
+  "cloud_actions_executed": false,
+  "credentials_read_or_sent": false
+}

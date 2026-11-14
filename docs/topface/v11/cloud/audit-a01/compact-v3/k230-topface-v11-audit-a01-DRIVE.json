@@ -1,0 +1,11 @@
+{
+  "schema": "k230-cloud-direct-write-v1",
+  "run_id": "k230-topface-v11-audit-a01",
+  "status": "FULL_BYTE_SHA256_PASS",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "file_id": "1B66aTgszkV-pThLlLNeM5K5QFT0eLDST",
+  "name": "k230-topface-v11-audit-a01-848dde54e9be189e.tar.gz",
+  "bytes": 62911,
+  "sha256": "848dde54e9be189efe7c7961f1490181c761d1f534e648c80c06b6130e5274dd",
+  "automatic_replay": false
+}

@@ -1,0 +1,18 @@
+{
+  "run_id": "k230-publisher-routeprobe-a01",
+  "source_archive_path": "k230-topface-v11-audit-a01.tar.gz",
+  "archive": {
+    "name": "k230-publisher-routeprobe-a01-848dde54e9be189e.tar.gz",
+    "bytes": 62911,
+    "sha256": "848dde54e9be189efe7c7961f1490181c761d1f534e648c80c06b6130e5274dd"
+  },
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-02-dataset-audit",
+    "kernel_id": 145013738,
+    "version": 3,
+    "provider_status": "COMPLETE",
+    "source_sha256": "bd562795ed7dc4dcd5b989c18fcfbc2069f185e756ab5b7a677126fbba4d98c5"
+  },
+  "purpose": "cloud-to-cloud route engineering qualification using already-computed63KiB archive; zero scientific replay",
+  "source_notebook": "docs/topface/v11/cloud/audit-a01/02_audit.ipynb"
+}

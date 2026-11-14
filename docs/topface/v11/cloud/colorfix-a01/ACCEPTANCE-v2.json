@@ -1,0 +1,97 @@
+{
+  "status": "EXACT_SOURCE_COMPUTE_QA_AND_FULL_DRIVE_READBACK_ACCEPTED",
+  "kernel_id": 145015590,
+  "version": 2,
+  "run_id": "k230-topface-v11-color-counterexamples-a01",
+  "input_manifest_sha256": "bd0405b22b8f5bd45cb0f56e1385b33ccffc9535d05b16da06f0d468a3b23dc0",
+  "notebook_source_sha256": "77656170df76fa4bb15233d8ae18169628831bc11d429ee8eb84613407b68615",
+  "source_cells_match": true,
+  "images": 240,
+  "instances": 720,
+  "device": {
+    "selected_backend": "OPTIX",
+    "attempts": [
+      {
+        "backend": "OPTIX",
+        "devices": [
+          {
+            "name": "Tesla T4",
+            "type": "CUDA"
+          },
+          {
+            "name": "Tesla T4",
+            "type": "CUDA"
+          },
+          {
+            "name": "Intel Xeon CPU @ 2.00GHz",
+            "type": "CPU"
+          },
+          {
+            "name": "Tesla T4",
+            "type": "OPTIX"
+          },
+          {
+            "name": "Tesla T4",
+            "type": "OPTIX"
+          }
+        ]
+      }
+    ],
+    "gpu_render_verified": true,
+    "successful_frames": 240,
+    "blender_version": "4.2.9 LTS",
+    "numpy_version": "1.24.3"
+  },
+  "qa": {
+    "schema": "topface-v1.1-label-audit",
+    "status": "PASS",
+    "images": 240,
+    "instances": 720,
+    "issues": [],
+    "count_histogram": {
+      "0": 0,
+      "1": 48,
+      "2": 48,
+      "3": 48,
+      "4": 48,
+      "5": 48
+    },
+    "color_histogram": {
+      "1": 115,
+      "2": 122,
+      "3": 115,
+      "4": 124,
+      "5": 129,
+      "6": 115
+    },
+    "unique_scene_groups": 240,
+    "unique_scene_seeds": 240,
+    "camera_configuration_groups": 75,
+    "camera_group_cross_split_count": 0,
+    "split_policy": "SHA256 of height/pitch/HFOV configuration group; frozen before training",
+    "height_mm_range": [
+      100.0,
+      400.0
+    ],
+    "plane_angle_deg_range": [
+      80.0,
+      100.0
+    ],
+    "max_center_reprojection_error_px": 1.2710574864626038e-13,
+    "strong_perspective_outside_user_envelope": "excluded, not claimed as covered",
+    "real_geometry_accuracy_verified": false
+  },
+  "drive_archive": {
+    "schema": "k230-cloud-direct-write-v1",
+    "run_id": "k230-topface-v11-color-counterexamples-a01",
+    "status": "FULL_BYTE_SHA256_PASS",
+    "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+    "file_id": "18qz0wswWU7o3dt6Uy0j5cAK1UkTeA1zQ",
+    "name": "k230-topface-v11-color-counterexamples-a01-3687e18684f2bd75.tar.gz",
+    "bytes": 75588174,
+    "sha256": "3687e18684f2bd7575097a2825c5a6dba68db004c0962159f81ba3f31212c7ce",
+    "automatic_replay": false
+  },
+  "optimizer_updates": 0,
+  "original1000_replayed": false
+}

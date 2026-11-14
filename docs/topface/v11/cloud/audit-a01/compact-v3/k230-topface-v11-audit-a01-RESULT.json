@@ -1,0 +1,194 @@
+{
+  "schema": "topface-downstream-v1.1",
+  "run_id": "k230-topface-v11-audit-a01",
+  "phase": "audit",
+  "status": "AUDIT_COMPLETE",
+  "input_manifest_sha256": "5b50945bab3491545cc38b677db6955945b6d735e7b5f706ce0ccd303f399d95",
+  "automatic_replay": false,
+  "started_utc": "2026-11-14T15:19:19.338337+00:00",
+  "max_seconds": 1800,
+  "optimizer_updates": 0,
+  "board_run": false,
+  "real_evaluation": false,
+  "stage": "INDEPENDENT_DATASET_DIAGNOSTICS",
+  "elapsed_seconds": 29.439511029000016,
+  "storage_probe": {
+    "schema": "k230-cloud-direct-write-v1",
+    "run_id": "k230-topface-v11-audit-a01-probe",
+    "status": "FULL_BYTE_SHA256_PASS",
+    "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+    "file_id": "1T11_szMgGdM5z6U4QXDOY0qnee7M0ZFT",
+    "name": "k230-topface-v11-audit-a01-probe-798a561779848864.json",
+    "bytes": 89,
+    "sha256": "798a56177984886437393bd3d1bfe83152558027e9320f87cc18ea7b89976541",
+    "automatic_replay": false
+  },
+  "admission_marker": "1qc6EBRnfOkrm9FPbgrgodyeE2tOyxkJw",
+  "parent_members": {
+    "files": 11540,
+    "expanded_bytes": 401649408,
+    "member_manifest_sha256": "40dcda1d4c44b107629d1841067ff1fa94f276ee3edd9e8810a645709c2bf6ba",
+    "sha256_verification": "ALL_MEMBERS_PASS"
+  },
+  "pilot_archive_sha256": "f559a9df0fe01ea17884ce63671e6e89a162a037faa0a80045eec574e417430f",
+  "pilot_audit_sha256": "5d6a0fc70a702237b4af329fb576b371918a385306b67251056b77a7be7bc0a7",
+  "images": 1000,
+  "diagnostics": {
+    "images": 1000,
+    "world_instances": 2496,
+    "split_images": {
+      "synthetic_test": 94,
+      "val": 161,
+      "train": 745
+    },
+    "visibility_denominators": {
+      "world_instances": 2496,
+      "center_valid": 2493,
+      "center_visible": 2382,
+      "geometry_valid": 1986,
+      "truncated": 502,
+      "occluded": 814,
+      "observable_bboxes": 2496
+    },
+    "per_input": {
+      "224x128": {
+        "source_wh": [
+          640,
+          360
+        ],
+        "resized_wh": [
+          224,
+          126
+        ],
+        "padding_tblr": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "gain": 0.35,
+        "pad_value": 114,
+        "color": "BGR",
+        "normalization": "official NanoDet mean/std exactly once",
+        "400mm_untruncated_short_side_px": {
+          "n": 502,
+          "min": 8.75,
+          "p05": 11.899999999999999,
+          "median": 12.95,
+          "p95": 14.0,
+          "max": 15.399999999999999
+        }
+      },
+      "320x192": {
+        "source_wh": [
+          640,
+          360
+        ],
+        "resized_wh": [
+          320,
+          180
+        ],
+        "padding_tblr": [
+          6,
+          6,
+          0,
+          0
+        ],
+        "gain": 0.5,
+        "pad_value": 114,
+        "color": "BGR",
+        "normalization": "official NanoDet mean/std exactly once",
+        "400mm_untruncated_short_side_px": {
+          "n": 502,
+          "min": 12.5,
+          "p05": 17.0,
+          "median": 18.5,
+          "p95": 20.0,
+          "max": 22.0
+        }
+      },
+      "384x224": {
+        "source_wh": [
+          640,
+          360
+        ],
+        "resized_wh": [
+          384,
+          216
+        ],
+        "padding_tblr": [
+          4,
+          4,
+          0,
+          0
+        ],
+        "gain": 0.6,
+        "pad_value": 114,
+        "color": "BGR",
+        "normalization": "official NanoDet mean/std exactly once",
+        "400mm_untruncated_short_side_px": {
+          "n": 502,
+          "min": 15.0,
+          "p05": 20.4,
+          "median": 22.2,
+          "p95": 24.0,
+          "max": 26.4
+        }
+      }
+    },
+    "perceptual_similarity": {
+      "method": "64-bit grayscale DCTpHash <=3 Hamming; not a leakage verdict",
+      "candidate_counts": {
+        "contains_target": 8,
+        "cross_split_contains_target": 3,
+        "both_empty": 7,
+        "cross_split_both_empty": 1
+      },
+      "cross_split_examples_max30": [
+        {
+          "a": "scene-00097",
+          "b": "scene-00217",
+          "hamming": 2,
+          "kind": "contains_target"
+        },
+        {
+          "a": "scene-00565",
+          "b": "scene-00685",
+          "hamming": 2,
+          "kind": "contains_target"
+        },
+        {
+          "a": "scene-00624",
+          "b": "scene-00804",
+          "hamming": 2,
+          "kind": "both_empty"
+        },
+        {
+          "a": "scene-00835",
+          "b": "scene-00865",
+          "hamming": 2,
+          "kind": "contains_target"
+        }
+      ],
+      "interpretation": "Labels retain all0..5 world objects, including unobservable/truncated targets. Similar empty images or similar renders are not automatically discarded; inspect target-bearing cross-split candidates."
+    }
+  },
+  "training_admission": "NEEDS_SIMILARITY_REVIEW",
+  "durable_status": "FULL_BYTE_SHA256_PASS",
+  "archive": {
+    "name": "k230-topface-v11-audit-a01.tar.gz",
+    "bytes": 62911,
+    "sha256": "848dde54e9be189efe7c7961f1490181c761d1f534e648c80c06b6130e5274dd"
+  },
+  "drive_archive": {
+    "schema": "k230-cloud-direct-write-v1",
+    "run_id": "k230-topface-v11-audit-a01",
+    "status": "FULL_BYTE_SHA256_PASS",
+    "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+    "file_id": "1B66aTgszkV-pThLlLNeM5K5QFT0eLDST",
+    "name": "k230-topface-v11-audit-a01-848dde54e9be189e.tar.gz",
+    "bytes": 62911,
+    "sha256": "848dde54e9be189efe7c7961f1490181c761d1f534e648c80c06b6130e5274dd",
+    "automatic_replay": false
+  }
+}

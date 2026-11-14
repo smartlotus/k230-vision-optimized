@@ -1,0 +1,32 @@
+{
+  "schema": "topface-audit-source-and-compute-acceptance-v1.1",
+  "status": "COMPUTE_AND_FULL_DRIVE_READBACK_ACCEPTED",
+  "observed_utc": "2026-11-14T15:37:02.332626+00:00",
+  "ref": "lotus30/k230-topface-v11-02-dataset-audit",
+  "kernel_id": 145013738,
+  "version": 3,
+  "provider_status": "COMPLETE",
+  "source_sha256": "bd562795ed7dc4dcd5b989c18fcfbc2069f185e756ab5b7a677126fbba4d98c5",
+  "source_cells_match": true,
+  "input_manifest_sha256": "5b50945bab3491545cc38b677db6955945b6d735e7b5f706ce0ccd303f399d95",
+  "parent_members": {
+    "files": 11540,
+    "expanded_bytes": 401649408,
+    "member_manifest_sha256": "40dcda1d4c44b107629d1841067ff1fa94f276ee3edd9e8810a645709c2bf6ba",
+    "sha256_verification": "ALL_MEMBERS_PASS"
+  },
+  "pilot_archive_sha256": "f559a9df0fe01ea17884ce63671e6e89a162a037faa0a80045eec574e417430f",
+  "drive_archive": {
+    "schema": "k230-cloud-direct-write-v1",
+    "run_id": "k230-topface-v11-audit-a01",
+    "status": "FULL_BYTE_SHA256_PASS",
+    "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+    "file_id": "1B66aTgszkV-pThLlLNeM5K5QFT0eLDST",
+    "name": "k230-topface-v11-audit-a01-848dde54e9be189e.tar.gz",
+    "bytes": 62911,
+    "sha256": "848dde54e9be189efe7c7961f1490181c761d1f534e648c80c06b6130e5274dd",
+    "automatic_replay": false
+  },
+  "training_admission": "NEEDS_COLOR_COUNT_SUPPLEMENT_AND_SIMILARITY_REVIEW",
+  "optimizer_updates": 0
+}

@@ -1,0 +1,12 @@
+C:\Users\28389\anaconda3\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (1.26.16) or chardet (7.4.3)/charset_normalizer (2.0.4) doesn't match a supported version!
+  warnings.warn(
+test_entire_body_hash_required_and_last_byte_tampering_fails (test_publisher.PublisherTests.test_entire_body_hash_required_and_last_byte_tampering_fails) ... ok
+test_only_fixed_folder_allowlisted_source_and_short_access_envelope (test_publisher.PublisherTests.test_only_fixed_folder_allowlisted_source_and_short_access_envelope) ... ok
+test_readback_checks_destination_and_stream_bytes (test_publisher.PublisherTests.test_readback_checks_destination_and_stream_bytes) ... ok
+test_head_message_and_parent_must_match_original_transfer (test_publisher_control.PublisherBindingTests.test_head_message_and_parent_must_match_original_transfer) ... ok
+test_protected_payload_cannot_substitute_reserved_drive_identity (test_publisher_control.PublisherBindingTests.test_protected_payload_cannot_substitute_reserved_drive_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.002s
+
+OK

@@ -1,0 +1,50 @@
+{
+  "schema": "topface-legacy-pilot-val-retest-v1.1",
+  "scope": "HOST_ONNX_VAL_ONLY",
+  "model": "historicalYOLOv8n visible_top,1epoch4optimizerupdates",
+  "model_sha256": "df9c639010e342ff54d5189678c096b9f10e7d3337734b5ad4b081e3bf0e3fdb",
+  "manifest_sha256": "6d21a2e9d0a251c1161ee3b63345909d64ad1f8cda6d3f9be0e0c0454843e198",
+  "input": "verifiedRGB565->RGB224x126 pad49/49value114 NCHW /255once",
+  "confidence_threshold": 0.25,
+  "nms_iou": 0.45,
+  "matching_iou": 0.5,
+  "images": 2,
+  "gt": 2,
+  "predictions": 0,
+  "tp": 0,
+  "fp": 0,
+  "fn": 2,
+  "recall": 0.0,
+  "precision": null,
+  "precision_reason": "undefined:no predictions",
+  "rows": [
+    {
+      "image_id": "48b365d9c5ff60085a0f835f974986f91321e91a752b5593bca9a2d57f662b35",
+      "gt": 1,
+      "max_score": 0.012677431106567383,
+      "predictions": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "color_scope": "red-bench only"
+    },
+    {
+      "image_id": "86d28d9912c476108454dad00cfaefb1bc4926d295188153fa58d8d034ed88dd",
+      "gt": 1,
+      "max_score": 0.012688428163528442,
+      "predictions": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "color_scope": "red-bench only"
+    }
+  ],
+  "test_pixels_read": false,
+  "optimizer_updates_this_probe": 0,
+  "board_run": false,
+  "new_topfacenet_result": false,
+  "color_or_ellipse_accuracy_verified": false,
+  "limits": "Two red-bench val images do not establish overall accuracy. Existing old test was already used historically; no new test tuning.",
+  "ort": "1.24.4",
+  "numpy": "2.2.6"
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "k230-cloud-direct-write-v1",
+  "run_id": "k230-topface-v11-color-counterexamples-a01",
+  "status": "FULL_BYTE_SHA256_PASS",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "file_id": "18qz0wswWU7o3dt6Uy0j5cAK1UkTeA1zQ",
+  "name": "k230-topface-v11-color-counterexamples-a01-3687e18684f2bd75.tar.gz",
+  "bytes": 75588174,
+  "sha256": "3687e18684f2bd7575097a2825c5a6dba68db004c0962159f81ba3f31212c7ce",
+  "automatic_replay": false
+}

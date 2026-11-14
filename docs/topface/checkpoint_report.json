@@ -8,14 +8,18 @@
     "PortableMicroPythondecode hostpaired casesPASS; tinyRGBuint8->BGRmean/std compilerfixturePASS; no newboardexecution",
     "Discovered legacy count/colorconfoundingbeforetraining, retained original1000; independentcolorRNGfix+240newsceneplan, noseed/groupoverlap, no camerasplit leakage",
     "Color supplement local6scene/18instanceactualnativeOPTIX qualification andindependent reviewPASS; composite106local hash/groupinterfacePASS",
-    "Private02CPU auditNotebook145013738v1 and01b supplementNotebook145015590v1 plusdatasetv1each prepared/source-and-manifestreadbackPASS, notscientificallyexecuted"
+    "Private02CPU auditNotebook145013738v1 and01b supplementNotebook145015590v1 plusdatasetv1each prepared/source-and-manifestreadbackPASS, notscientificallyexecuted",
+    "User explicitly authorized future same-scope privateActions publisher; exactpublicpermissionrecord saved",
+    "HistoricalACT056-062 automaticcompute/packer/GitHubpublisherroute audited; K230publisher/hostDPAPI/sourcebinding implemented withreviewfixes",
+    "CPUaudit145013738v3 COMPLETE/fullDriveaccepted:11540parentmembersallhashPASS;3targetbearing crosssplit perceptualcandidates needreview",
+    "Supplement145015590v2 COMPLETE:240scenes720instances, actualOPTIX, QA/fullDriveaccepted; total1240scenes3216instances",
+    "Historical4-updateYOLOpilot val-only hostretest:2redbenchimages2GT,pred0,recall0,maxscore0.01269; no testpixels ornewtraining"
   ],
   "remaining": [
-    "User must attach existingDOASTRA_GDRIVE_OAUTH_JSON andSave&RunAllonce in prepared02CPU audit and01b240scene supplement; both currentlyv1QUICK_SAVEonly",
-    "Observe original new savedversions; collect boundedRESULT/DRIVEreceipts; keep rawarchivescloud",
-    "After240accepted, prepare independent composite1240audit/newrevision and verifyallmembers/group/conditionalobservablecolorcoverage+near-duplicatecandidates; do not promote old02baseline tocompositeacceptance",
-    "Then03training:16imageoverfitmax1000updates, freshpretrained20epochPilot andsamebudgetrandomcontrol;4logicaltrainingruns totalincludingoneformal",
-    "Pilotgates ->10000-20000Full+singleformal100-200epochtrain; finalpaired PT/ORT/Simulator/KPU, separate realevaluation anddeploymentbenchmark"
+    "Install reviewed publisherworkflow ontoisolatedprivate taskbranch, qualify63KiBauditarchivecloud->Drive transfer andSecretcleanup",
+    "Convert upcomingcompositeaudit/03training to API-only savedoutput + authorizedcloudpublisher; no moreNotebookSecretmanualsteps",
+    "Auditcombined1240conditionalobservablecolorcoverage and near-similarity; thenfiniteoverfit/Pilot/controltraining",
+    "Pilotgates->Fullgeneration/singleformaltrain, finalaccuracy/export/boardvalidation remain"
   ],
   "decisions": [
     "Use nativeBlender4.2.9; oldv8 remainsretired; originalPilotv2 preserved and neverreplayed",
@@ -25,18 +29,17 @@
     "Wait for actualruntime Secretattachment; no credentials in source/args/Git and noassumedAPIinheritance"
   ],
   "risks": [
-    "KaggleAPIhasnoSecret-bindingfield; newNotebookruntime accessstillUNVERIFIED untiluser editorassociation",
-    "Actual02and01buserSave&RunAllpending; QuickSaveCOMPLETE isnotcompute",
     "CurrentoriginalPilotconditionalcolorbiasmust becovered beforetraining; rawlabelsvalidbutgenerativecoverageincomplete",
     "Newuntrained-headquantizederrorsnotaccepted; currentKModels floatBGRexternalnormalization; tinyRGBfixturedoesnotprovefinaltaskmodel/AI2Dequivalence",
     "Realintrinsics/focus/ISP/liveRGB888P/currentboardruntime andfreshblindgeometrytruthUNKNOWN; no currentboardruntimeexecuted",
-    "Checkpoint best/lastandRNGsaving implemented, exact cross-session trainingresume notyetverified"
+    "Checkpoint best/lastandRNGsaving implemented, exact cross-session trainingresume notyetverified",
+    "Publisher exactcurrentuser DPAPI/sessionidentity retained; CLIrefresh/recovery notyetqualified, do notclaimlosslessauto-resume",
+    "No newTopFaceNetoptimizerupdates; oldpilotvalrecall0 isonly2redbenchtargets,notglobalaccuracy"
   ],
   "next_steps": [
-    "Read docs/topface/README.md, thishandoff andpreparednotebookREADBACKs; verifytaskscopeandclaim anewbeforewrites",
-    "Afteruserstart, queryexactnewversionof lotus30/k230-topface-v11-02-dataset-audit (id145013738) andlotus30/k230-topface-v11-01b-color-counterexamples(id145015590); donotrepeatQuickSaveorScientificrun",
-    "Use collect_compact.py exactversion/runid, inspect actualRESULT andfullDriveSHAreceipt; follow prepare_downstream.py --supplement-result forcompositeauditafter240accepted",
-    "ContinuefulloriginalV1.1objective; nofullcompletionclaim; goalremainsactive, currentmanualinterventionfirstauditturn"
+    "Switch briefly to scoped workflowinstallation task after thischeckpoint; do not alter completedKaggle science",
+    "UseROUTE_PROBE_PLAN withsource145013738v3/63KiBarchive andno scientificreplay; inspectsameGitHubtransfer onuncertain send",
+    "Returnroot taskclaim thenAPI-submitofflinecompositeaudit andtrain afteractualgates"
   ],
   "verification": [
     {
@@ -81,11 +84,37 @@
         "docs/topface/v11/cloud/audit-a01/READBACK.json",
         "docs/topface/v11/cloud/colorfix-a01/READBACK.json"
       ]
+    },
+    {
+      "command": "evaluate_legacy_val.py --output LEGACY_MODEL_VAL_RETEST.json",
+      "exit_code": 0,
+      "summary": "Twofixedvalimages,RGB565verified;TP0FP0FN2; no test pixels ortraining",
+      "evidence": [
+        "docs/topface/v11/reports/LEGACY_MODEL_VAL_RETEST.json"
+      ]
+    },
+    {
+      "command": "publisheroffline tests +DPAPIdummyroundtrip",
+      "exit_code": 0,
+      "summary": "3transport+2bindingtestsPASS; DPAPI dummy roundtripPASS, no actualcredentialssent",
+      "evidence": [
+        "docs/topface/v11/reports/publisher_offline_tests.log"
+      ]
+    },
+    {
+      "command": "exact auditv3/supplementv2 savedsourceandcompactreadback",
+      "exit_code": 0,
+      "summary": "Bothacceptedactualcompute/archive; no rawarchiverelay",
+      "evidence": [
+        "docs/topface/v11/cloud/audit-a01/ACCEPTANCE-v3.json",
+        "docs/topface/v11/cloud/colorfix-a01/ACCEPTANCE-v2.json"
+      ]
     }
   ],
   "observed_utc": "2026-11-14T15:08:27.923649+00:00",
   "optimizer_updates": 0,
   "goal_complete": false,
   "cloud_compute_active_verified": false,
-  "manual_intervention_required": true
+  "manual_intervention_required": false,
+  "publisher_workflow_pending": true
 }

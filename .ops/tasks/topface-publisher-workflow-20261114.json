@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "topface-publisher-workflow-20261114",
+  "title": "Install authorized private K230 archive publisher workflow on isolated branch",
+  "paths": [
+    ".github/workflows/topface_archive_transfer.yml"
+  ],
+  "lane": "serial",
+  "resources": [
+    "GitHub-k230-publisher"
+  ],
+  "depends": [],
+  "acceptance": [
+    "Exact reviewed private-only workflow copied; pinned checkout, no credentials in Git; task branch backup verified; no main integration"
+  ],
+  "branch": "ops/topface-publisher-workflow-20261114",
+  "state": "planned",
+  "claimed": false,
+  "agent": null,
+  "session": null,
+  "revision": 1,
+  "handoff": null,
+  "updated_at": "2026-11-14T15:41:08+00:00"
+}
