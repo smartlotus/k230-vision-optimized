@@ -20,7 +20,9 @@ def manifest(saved):
     if saved['export']['experiment']!='formal_full':
         raise ValueError('Complete final reports require a frozen formal model')
     rows=saved['evaluation_reports'];names=[row['path'] for row in rows]
+    pictures=[name for name in names if name.endswith('.jpg')]
     if (len(names)!=len(set(names)) or not CORE<=set(names) or len(names)>18 or
+            len(pictures)>12 or (pictures and 'failure-previews/EVIDENCE.json' not in names) or
             sum(row['bytes'] for row in rows)>12*1024**2):
         raise ValueError('Final report inventory or bounded total differs')
     for row in rows:

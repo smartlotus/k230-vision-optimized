@@ -29,6 +29,14 @@ class ModelReportTests(unittest.TestCase):
         saved=self.saved();saved['export']['experiment']='pilot_pretrained'
         with self.assertRaisesRegex(ValueError,'frozen formal'):manifest(saved)
 
+    def test_failure_images_need_their_evidence_and_at_most_twelve_members(self):
+        saved=self.saved()
+        saved['evaluation_reports'].append({'path':'failure-previews/case-01.jpg','bytes':100,'sha256':'a'*64})
+        with self.assertRaisesRegex(ValueError,'inventory'):manifest(saved)
+        saved=self.saved();saved['evaluation_reports'].append({'path':'failure-previews/EVIDENCE.json','bytes':100,'sha256':'a'*64})
+        saved['evaluation_reports'] += [{'path':f'failure-previews/case-{i:02d}.jpg','bytes':100,'sha256':'a'*64} for i in range(1,14)]
+        with self.assertRaisesRegex(ValueError,'inventory'):manifest(saved)
+
     def test_whole_test_denominator_and_model_must_match_bounded_reports(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);identity={'onnx_sha256':'o','checkpoint_sha256':'c'}

@@ -3,6 +3,7 @@ import argparse
 from datetime import datetime,timezone
 import json
 from pathlib import Path
+import uuid
 
 import numpy as np
 
@@ -77,7 +78,7 @@ def evaluate(samples,model_dir,output):
             sha(model_dir/'topface.onnx')!=identity['onnx_sha256']):
         raise ValueError('Requires complete bounded real capture and matching selected models')
     runtime=session(model_dir/'topface.onnx');rows=[]
-    work=output.parent/(output.stem+'-simulator-work')
+    work=Path(__file__).resolve().parents[2]/'.ops/local'/('topface-board-pair-simulator-'+uuid.uuid4().hex)
     with KModelRuntime(model_dir/'topface.kmodel',model_dir/'identity.json',work) as simulator:
         for number,record in enumerate(state['samples'],1):
             if record['sample']!=number:raise ValueError('Native sample sequence differs')

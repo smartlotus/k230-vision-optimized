@@ -1,0 +1,21 @@
+{
+  "status": "FOCUSED_CHECKS_PASS",
+  "observed_utc": "2026-11-15T04:43:23.292764+00:00",
+  "scope": "Report collection bounds and ignored native-pair Simulator workspace only",
+  "focused_report_tests": 8,
+  "syntax_checks": [
+    "evaluate_board_pairs.py",
+    "collect_model_reports.py"
+  ],
+  "changes": [
+    "Requireatmost12JPEGpreviewsandtheirevidenceJSON",
+    "KeepSimulatorworkingdumpsinignored.ops/local ratherthancommittedreportdirectory"
+  ],
+  "actual_native_KPU_run": "NOT_RUN",
+  "actual_formal_report_collection": "NOT_RUN",
+  "source_sha256": {
+    "collect_model_reports.py": "14a9c12a9366455eb21a67469385c6febfb2fce04351ed7e97cc6b339ac501c4",
+    "evaluate_board_pairs.py": "8fc8c64ae6bb6ed38686b53bff981a61c88a190c3ce6498505ba6c088ef10e11",
+    "test_model_reports.py": "b74957d0ed5db014c0a0399875ae3a059115e038c8629488d5cd61809fecdcb7"
+  }
+}

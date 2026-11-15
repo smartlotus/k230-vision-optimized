@@ -1,0 +1,72 @@
+{
+  "schema": "topface-full-render-input-v1.1",
+  "run_id": "k230-topface-v11-full-09-a01",
+  "global_scene_range": [
+    8000,
+    9000
+  ],
+  "seed": 20261117,
+  "created_utc": "2026-11-15T04:40:38.415517+00:00",
+  "files": [
+    {
+      "path": "audit_v11.py",
+      "bytes": 10831,
+      "sha256": "7a43bcc8e5d7f3498a03559022612a764ec52204281430a249cfff62eef9c786"
+    },
+    {
+      "path": "cad_bundle.bin",
+      "bytes": 608124,
+      "sha256": "642df0a28329ebe3adab0ca96888e5078b1a005dc7b9dbd345903e10274fc7f2"
+    },
+    {
+      "path": "cloud_store.py",
+      "bytes": 10870,
+      "sha256": "1f764499ce2098139a57cbcfd7406000c98f4a8ca914bb8d96e9e4656148cf34"
+    },
+    {
+      "path": "coco_topface.py",
+      "bytes": 1601,
+      "sha256": "0ead8f663395c155cb74e1cf841d79b5ac4e88e5fb10d0268eab598fec5fc2fd"
+    },
+    {
+      "path": "FULL_RENDER_CONFIG.json",
+      "bytes": 7526,
+      "sha256": "5793d3cdccf1b30ac0fba75731995fcc92d1131fc4d430777ae5f1a6fbb1fc38"
+    },
+    {
+      "path": "geometry.py",
+      "bytes": 2996,
+      "sha256": "de5c6055507a76ad5656bf8b3f554139bd154bf581b7196722e308a3a3985cc4"
+    },
+    {
+      "path": "input_locator.py",
+      "bytes": 941,
+      "sha256": "2a1f79933d67272996993a01ab8ad5da6b2d00710884456d9112f02ee00e0011"
+    },
+    {
+      "path": "native_cad.py",
+      "bytes": 4624,
+      "sha256": "0d58d5ded69f85cb320ea4781d17c4abccffd170f733d0edd798794bc15e2e75"
+    },
+    {
+      "path": "native_job.py",
+      "bytes": 16439,
+      "sha256": "5e4662e912da8bd919d596db1f05c504f53ae7853566de3e48e2ae2deabea2f1"
+    },
+    {
+      "path": "render_native.py",
+      "bytes": 13135,
+      "sha256": "705a633fa4b4a57977250caf3d0a1f65803b5cbd21f0619462e631e61d990ac4"
+    },
+    {
+      "path": "scene_config.py",
+      "bytes": 4820,
+      "sha256": "2d7c8abcbb930ac2b857729d90dd86e91544b0672cccadcd457dd4db1b415b62"
+    },
+    {
+      "path": "SMOKE_HUMAN_REVIEW.json",
+      "bytes": 412,
+      "sha256": "5771259baeb8e81c9c27baf5cdb81b395aa72736bfb11c7055f816f8086346f7"
+    }
+  ]
+}
