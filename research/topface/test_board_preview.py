@@ -192,7 +192,8 @@ class PreviewPreparationTests(unittest.TestCase):
                 atomic_json(kernel / 'job.ipynb', {'cells': [{'source':
                     'input_hash=' + repr(old_digest) + '\nfrom model_artifact_job import run\n'}]})
                 atomic_json(kernel / 'kernel-metadata.json',
-                            {'id': 'lotus30/k230-topface-v11-07b-formal-conversion'})
+                            {'id': 'lotus30/k230-topface-v11-07b-formal-conversion',
+                             'dataset_sources': ['lotus30/previewfixture/1', 'lotus30/runtime/1']})
                 return {'notebook_file': 'job.ipynb', 'input_manifest_sha256': old_digest,
                         'run_id': 'separate-fixture', 'dataset': 'lotus30/previewfixture'}
             with patch('prepare_board_preview.ROOT', root), patch('prepare_board_preview.prepare', baseline):
@@ -201,6 +202,10 @@ class PreviewPreparationTests(unittest.TestCase):
             self.assertEqual(marker.read_bytes(), b'original-frozen-job')
             self.assertEqual(intent['kernel'], 'lotus30/k230-topface-v11-07c-formal-board-preview')
             self.assertEqual(intent['provider_max_seconds'], 6300)
+            self.assertLessEqual(len(intent['dataset'].split('/')[1]), 50)
+            self.assertEqual(json.loads((staging / 'dataset-metadata.json').read_text())['id'], intent['dataset'])
+            bound = json.loads((frozen / 'kernel-metadata.json').read_text())['dataset_sources']
+            self.assertEqual(bound, [intent['dataset'] + '/1', 'lotus30/runtime/1'])
             manifest = json.loads((staging / 'INPUT_MANIFEST.json').read_text())
             names = {row['path'] for row in manifest['files']}
             self.assertEqual(names, {path.name for path in staging.iterdir()} -

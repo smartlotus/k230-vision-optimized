@@ -1,0 +1,45 @@
+{
+  "status": "PRE_SUBMISSION_SLUG_CONTRACT_FIX_HOST_PASS",
+  "observed_utc": "2026-11-15T15:08:28.282871+00:00",
+  "old_slug": "k230-topface-v11-conversion-formal-input-previewa01",
+  "old_length": 51,
+  "new_slug": "k230-topface-v11-board-preview-input-a01",
+  "new_length": 40,
+  "cli_contract": {
+    "source": ".ops/local/topface-control-isolated-311/Lib/site-packages/kaggle/api/kaggle_api_extended.py",
+    "line": 6136,
+    "minimum": 6,
+    "maximum": 50
+  },
+  "preview_host_tests": 9,
+  "identity_rebinding": [
+    "staging dataset id",
+    "kernel dataset_sources",
+    "submission intent dataset"
+  ],
+  "source_code_hashes": {
+    "research/topface/prepare_board_preview.py": "af48dc04861426e3cd2809e2a3135ea5bd94c4f0c830cf5aa1ad02eb52b3dc36",
+    "research/topface/test_board_preview.py": "ce03da4e0dc079d6cf3538424e0328a6bc6e691457697a15f46b0965176f67b6",
+    "docs/topface/v11/reports/BOARD_PREVIEW_SLUG_FIX_TESTS.log": "da7391e70b2e2f611b510bf0df94d60a147007c9d5eb1688648f109342d10377"
+  },
+  "preview_owner_replacement": {
+    "old_pid": 20052,
+    "old_launcher": 52876,
+    "new_pid": 2792,
+    "new_launcher": 54548,
+    "precondition": "WAITING_FOR_ORIGINAL_FORMAL_ACCEPTANCE; no frozen preview directory, no cloud submission; exact owned PID and lock verified",
+    "reason": "Existing waiter had imported the old function before correction",
+    "prior_wait_log": ".ops/local/topface-formal-preview-a01-continuation.pre-slug-fix.log",
+    "record": ".ops/local/topface-preview-slug-owner-replacement.json"
+  },
+  "original_processes_verified_live": [
+    47708,
+    33992,
+    50296,
+    23136,
+    43232
+  ],
+  "original_training_or_plan_changed": false,
+  "cloud_preview_submitted": false,
+  "native_test": "NOT_RUN"
+}

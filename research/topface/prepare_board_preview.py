@@ -10,8 +10,11 @@ from prepare_model_artifact import prepare, HERE, ROOT, read
 
 def prepare_preview(revision, staging, parent, runtime_receipt, runtime_qualification,
                     native_runtime, dataset_acceptance, shard_inventory):
-    if not revision.startswith('preview') or not revision.isalnum():
+    if not revision.startswith('preview') or not revision.isalnum() or not revision[7:]:
         raise ValueError('Use a separate preview revision')
+    dataset = 'lotus30/k230-topface-v11-board-preview-input-' + revision[7:]
+    if not 6 <= len(dataset.split('/')[1]) <= 50:
+        raise ValueError('Preview input slug exceeds the Kaggle CLI length contract')
     intent = prepare('formal_conversion', revision, staging, parent, runtime_receipt,
                      runtime_qualification, native_runtime, dataset_acceptance, shard_inventory)
     staging = staging.resolve()
@@ -31,6 +34,14 @@ def prepare_preview(revision, staging, parent, runtime_receipt, runtime_qualific
                           if path.name not in ('INPUT_MANIFEST.json', 'dataset-metadata.json')]}
     atomic_json(staging / 'INPUT_MANIFEST.json', manifest)
     metadata = read(kernel / 'kernel-metadata.json')
+    original_input = intent['dataset'] + '/1'
+    if metadata['dataset_sources'].count(original_input) != 1:
+        raise ValueError('Expected one explicit private preview input binding')
+    metadata['dataset_sources'] = [dataset + '/1' if value == original_input else value
+                                   for value in metadata['dataset_sources']]
+    data_metadata = read(staging / 'dataset-metadata.json')
+    data_metadata['id'] = dataset
+    atomic_json(staging / 'dataset-metadata.json', data_metadata)
     metadata.update(id='lotus30/k230-topface-v11-07c-formal-board-preview',
                     title='K230 Topface V11 07c Formal Board Preview')
     notebook = read(kernel / intent['notebook_file'])
@@ -42,7 +53,7 @@ def prepare_preview(revision, staging, parent, runtime_receipt, runtime_qualific
     notebook['cells'][0]['source'] = source
     atomic_json(kernel / intent['notebook_file'], notebook)
     atomic_json(kernel / 'kernel-metadata.json', metadata)
-    intent.update(kernel=metadata['id'], notebook_sha256=sha(kernel / intent['notebook_file']),
+    intent.update(kernel=metadata['id'], dataset=dataset, notebook_sha256=sha(kernel / intent['notebook_file']),
                   input_manifest_sha256=sha(staging / 'INPUT_MANIFEST.json'), provider_max_seconds=6300)
     for folder, names in ((staging, ('MODEL_ARTIFACT_CONFIG.json', 'INPUT_MANIFEST.json')),
                           (kernel, (intent['notebook_file'], 'kernel-metadata.json'))):
