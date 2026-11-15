@@ -1,6 +1,6 @@
 {
   "schema": "topface-v1.1-requirement-evidence-v1",
-  "observed_utc": "2026-11-15T15:42:16.701480+00:00",
+  "observed_utc": "2026-11-15T16:08:19.271190+00:00",
   "goal_complete": false,
   "authority": "V1.1 plan/prompt SHA in docs/topface/execution_contract.json; user operating envelope and Smoke approval retained",
   "items": [
@@ -170,9 +170,8 @@
     },
     {
       "requirement": "Separate synthetic and approved real assessment/active learning",
-      "status": "PILOT_HISTORICAL_REAL_VAL_AND_DIAGNOSTIC_SEQUENCE_EXECUTED_FORMAL_PENDING",
+      "status": "FORMAL_WEIGHTS_FROZEN_INDEPENDENT_TEST_RUNNING_NATIVE_DEFERRED",
       "remaining": [
-        "freeze selected formal weights and existing thresholds",
         "formal934scene independent synthetic evaluation with color/geometric/occlusion/angle/size/capacity slices",
         "formal historical r4 assessment and accepted1872frame synthetic sequence on final ONNX and Simulator",
         "fresh blinded real scene/session truth after final model freeze",
@@ -195,24 +194,24 @@
     },
     {
       "requirement": "PT->ORT->Simulator->KPU paired final export",
-      "status": "PILOT_ONNX_COMPILED_AND_SIMULATOR_PAIRED_FORMAL_NOT_EXECUTED",
+      "status": "FORMAL_PREVIEW_ONNX_KMODEL_AND_TRAIN_PAIR_DONE_HELDOUT_NATIVE_PENDING",
       "evidence": [
         "g3/RGB_UINT8_PREPROCESS_FIXTURE.json",
         "cloud/conversion-pilot-a02/MODEL_FILES_RECEIPT.json",
         "reports/PILOT_CONVERSION_A02.json",
         "reports/PREPARED_INPUT_ROUTE_QUALIFICATION.json",
         "reports/BOARD_PAIR_HOST_QUALIFICATION.json",
-        "reports/BOARD_PAIR_PROTOCOL.md"
+        "reports/BOARD_PAIR_PROTOCOL.md",
+        "reports/BOARD_PREVIEW_A01_ACCEPTANCE.json"
       ],
       "remaining": [
-        "actual final trained ONNX/KModel and train-only final PTQ",
         "formal held-out per-channel/raw/decoded numerical comparison",
         "actual native KPU paired capture and equivalent output contract"
       ]
     },
     {
       "requirement": "Executable K230 package / lifecycle / UART off / complete25FPS benchmark",
-      "status": "BOARD_BUNDLE_AND_PAIR_ROUTE_HOST_QUALIFIED_NATIVE_NOT_RUN",
+      "status": "FORMAL_PREVIEW_BOARD_BUNDLE_DELIVERED_FULL_BUNDLE_AND_NATIVE_PENDING",
       "remaining": [
         "build final board trial bundle from exact formal model",
         "fresh runtime/channel/stride/AI2D/lifecycle pairing",
@@ -225,7 +224,8 @@
         "reports/BOARD_PAIR_HOST_QUALIFICATION.json",
         "reports/BOARD_PAIR_PROTOCOL.md",
         "reports/BOARD_TEST_PLAN.md",
-        "reports/BOARD_AVAILABILITY_20261115.json"
+        "reports/BOARD_AVAILABILITY_20261115.json",
+        "reports/BOARD_PREVIEW_A01_ACCEPTANCE.json"
       ]
     },
     {
@@ -234,7 +234,8 @@
       "evidence": [
         "../README.md",
         "training/FORMAL_TRAINING_A01.md",
-        "reports/BOARD_PREVIEW_PROTOCOL.md"
+        "reports/BOARD_PREVIEW_PROTOCOL.md",
+        "reports/BOARD_PREVIEW_A01_ACCEPTANCE.json"
       ],
       "remaining": [
         "final user-accessible file index covering original plan deliverables1to17",
