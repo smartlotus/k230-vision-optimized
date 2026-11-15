@@ -1,0 +1,384 @@
+{
+  "status": "PILOT_REAL_VALIDATION_EVALUATED",
+  "phase": "pilot_validation",
+  "evaluation_split": "val",
+  "backend": "NNCASE_SIMULATOR",
+  "model_sha256": "c5ec898ebc7cbd8fb82c3902565c02ab1876f556651ce91e7edbbd43e183ef68",
+  "reference_onnx_sha256": "52b0c08395714832793ad196dbf2921bcdc1618a402962fedc3a2d1fc88abf3c",
+  "manifest_sha256": "6d21a2e9d0a251c1161ee3b63345909d64ad1f8cda6d3f9be0e0c0454843e198",
+  "camera_id": 2,
+  "score_threshold": 0.25,
+  "matching_iou": 0.5,
+  "denominators": {
+    "color_labeled_matches": 2,
+    "correct_color": 2,
+    "images": 2,
+    "gt": 2,
+    "predictions": 7,
+    "tp": 2,
+    "fp": 5,
+    "fn": 0
+  },
+  "recall": 1.0,
+  "precision": 0.2857142857142857,
+  "matched_color_accuracy": 1.0,
+  "colors": {
+    "1": {
+      "gt": 2,
+      "predictions": 2,
+      "correct": 2
+    },
+    "2": {
+      "predictions": 1
+    },
+    "3": {},
+    "4": {},
+    "5": {
+      "predictions": 4
+    },
+    "6": {}
+  },
+  "rows": [
+    {
+      "image_id": "48b365d9c5ff60085a0f835f974986f91321e91a752b5593bca9a2d57f662b35",
+      "scene_group": "operator-confirmed-red-bench",
+      "gt": 1,
+      "predictions": 4,
+      "matched": [
+        {
+          "bbox_iou": 0.9109589087917874,
+          "approved_color": 1,
+          "predicted_color": 1
+        }
+      ],
+      "detections": [
+        {
+          "score": 0.8050197958946228,
+          "color_id": 1,
+          "color_probabilities": [
+            0.8050197958946228,
+            0.053502149879932404,
+            0.11182181537151337,
+            0.04296246916055679,
+            0.06255973130464554,
+            0.004086002707481384
+          ],
+          "bbox_xyxy_visible": [
+            257.6036376953125,
+            75.58160400390625,
+            317.3099365234375,
+            136.7224578857422
+          ],
+          "bbox_xyxy_unclipped": [
+            257.6036376953125,
+            75.58160400390625,
+            317.3099365234375,
+            136.7224578857422
+          ],
+          "center_xy_projected_3d": [
+            289.056640625,
+            105.9921875
+          ],
+          "center_valid_probability": 0.9995761513710022,
+          "center_visible_probability": 0.999651312828064,
+          "ellipse": {
+            "conic_center_xy": [
+              289.201171875,
+              105.91796875
+            ],
+            "semi_major": 29.142514787722227,
+            "semi_minor": 28.817061602613542,
+            "orientation_deg": 79.86786134716948,
+            "orientation_valid": false,
+            "geometry_confidence": 0.9985104203224182
+          },
+          "visibility_quality": 0.9994557499885559,
+          "boundary_candidate": false
+        },
+        {
+          "score": 0.5136684775352478,
+          "color_id": 5,
+          "color_probabilities": [
+            0.06301947683095932,
+            0.12421300262212753,
+            0.017576880753040314,
+            0.005426943767815828,
+            0.5136684775352478,
+            0.023153413087129593
+          ],
+          "bbox_xyxy_visible": [
+            72.60392761230469,
+            90.06674194335938,
+            109.65663146972656,
+            134.21632385253906
+          ],
+          "bbox_xyxy_unclipped": [
+            72.60392761230469,
+            90.06674194335938,
+            109.65663146972656,
+            134.21632385253906
+          ],
+          "center_xy_projected_3d": [
+            92.69921875,
+            114.3837890625
+          ],
+          "center_valid_probability": 0.9986801743507385,
+          "center_visible_probability": 0.15662017464637756,
+          "ellipse": {
+            "conic_center_xy": [
+              93.55859375,
+              114.73828125
+            ],
+            "semi_major": 20.690378808553366,
+            "semi_minor": 19.515267748509135,
+            "orientation_deg": -33.66049234112563,
+            "orientation_valid": true,
+            "geometry_confidence": 0.9862577319145203
+          },
+          "visibility_quality": 0.5651187300682068,
+          "boundary_candidate": false
+        },
+        {
+          "score": 0.32338011264801025,
+          "color_id": 5,
+          "color_probabilities": [
+            0.013955709524452686,
+            0.11940813809633255,
+            0.009936419315636158,
+            0.014785408973693848,
+            0.32338011264801025,
+            0.04038906842470169
+          ],
+          "bbox_xyxy_visible": [
+            20.50225067138672,
+            115.2845458984375,
+            54.9677734375,
+            147.864990234375
+          ],
+          "bbox_xyxy_unclipped": [
+            20.50225067138672,
+            115.2845458984375,
+            54.9677734375,
+            147.864990234375
+          ],
+          "center_xy_projected_3d": [
+            35.259765625,
+            132.1490478515625
+          ],
+          "center_valid_probability": 0.9977830052375793,
+          "center_visible_probability": 0.103748619556427,
+          "ellipse": {
+            "conic_center_xy": [
+              35.46484375,
+              131.8682861328125
+            ],
+            "semi_major": 19.503360208608676,
+            "semi_minor": 19.224441653512326,
+            "orientation_deg": -6.086638612194569,
+            "orientation_valid": false,
+            "geometry_confidence": 0.9657707214355469
+          },
+          "visibility_quality": 0.47344422340393066,
+          "boundary_candidate": false
+        },
+        {
+          "score": 0.26894140243530273,
+          "color_id": 5,
+          "color_probabilities": [
+            0.007403014227747917,
+            0.07107367366552353,
+            0.01073516346514225,
+            0.01233609952032566,
+            0.26894140243530273,
+            0.03527754545211792
+          ],
+          "bbox_xyxy_visible": [
+            147.56564331054688,
+            287.3467102050781,
+            206.96780395507812,
+            346.4262390136719
+          ],
+          "bbox_xyxy_unclipped": [
+            147.56564331054688,
+            287.3467102050781,
+            206.96780395507812,
+            346.4262390136719
+          ],
+          "center_xy_projected_3d": [
+            177.2548828125,
+            314.39453125
+          ],
+          "center_valid_probability": 0.997730553150177,
+          "center_visible_probability": 0.12220858782529831,
+          "ellipse": {
+            "conic_center_xy": [
+              177.5927734375,
+              313.86328125
+            ],
+            "semi_major": 27.903191305335415,
+            "semi_minor": 27.018302412607277,
+            "orientation_deg": 1.9868337354352823,
+            "orientation_valid": true,
+            "geometry_confidence": 0.930962085723877
+          },
+          "visibility_quality": 0.4876505434513092,
+          "boundary_candidate": false
+        }
+      ]
+    },
+    {
+      "image_id": "86d28d9912c476108454dad00cfaefb1bc4926d295188153fa58d8d034ed88dd",
+      "scene_group": "operator-confirmed-red-bench",
+      "gt": 1,
+      "predictions": 3,
+      "matched": [
+        {
+          "bbox_iou": 0.8832547214498142,
+          "approved_color": 1,
+          "predicted_color": 1
+        }
+      ],
+      "detections": [
+        {
+          "score": 0.6636689305305481,
+          "color_id": 1,
+          "color_probabilities": [
+            0.6636689305305481,
+            0.0361519381403923,
+            0.07263670116662979,
+            0.05165378004312515,
+            0.051272422075271606,
+            0.0028895805589854717
+          ],
+          "bbox_xyxy_visible": [
+            264.72552490234375,
+            98.56968688964844,
+            328.2884216308594,
+            161.2603759765625
+          ],
+          "bbox_xyxy_unclipped": [
+            264.72552490234375,
+            98.56968688964844,
+            328.2884216308594,
+            161.2603759765625
+          ],
+          "center_xy_projected_3d": [
+            296.5234375,
+            130.0732421875
+          ],
+          "center_valid_probability": 0.9991135001182556,
+          "center_visible_probability": 0.9992930889129639,
+          "ellipse": {
+            "conic_center_xy": [
+              296.03125,
+              129.990234375
+            ],
+            "semi_major": 30.645660377816412,
+            "semi_minor": 30.00892904586284,
+            "orientation_deg": 84.7409411986423,
+            "orientation_valid": true,
+            "geometry_confidence": 0.9956005811691284
+          },
+          "visibility_quality": 0.998848557472229,
+          "boundary_candidate": false
+        },
+        {
+          "score": 0.46004629135131836,
+          "color_id": 5,
+          "color_probabilities": [
+            0.00955939944833517,
+            0.0979066863656044,
+            0.00937623716890812,
+            0.02964751236140728,
+            0.46004629135131836,
+            0.036356665194034576
+          ],
+          "bbox_xyxy_visible": [
+            86.43697357177734,
+            214.63560485839844,
+            138.46054077148438,
+            261.30853271484375
+          ],
+          "bbox_xyxy_unclipped": [
+            86.43697357177734,
+            214.63560485839844,
+            138.46054077148438,
+            261.30853271484375
+          ],
+          "center_xy_projected_3d": [
+            110.6162109375,
+            240.111328125
+          ],
+          "center_valid_probability": 0.9987305998802185,
+          "center_visible_probability": 0.18772758543491364,
+          "ellipse": {
+            "conic_center_xy": [
+              111.49267578125,
+              239.4140625
+            ],
+            "semi_major": 26.625411145364552,
+            "semi_minor": 25.012259032734967,
+            "orientation_deg": -41.83821859839076,
+            "orientation_valid": true,
+            "geometry_confidence": 0.9720985889434814
+          },
+          "visibility_quality": 0.5660784840583801,
+          "boundary_candidate": false
+        },
+        {
+          "score": 0.4532618522644043,
+          "color_id": 2,
+          "color_probabilities": [
+            0.008412977680563927,
+            0.4532618522644043,
+            0.0009039677097462118,
+            0.0072890776209533215,
+            0.34466394782066345,
+            0.007968815043568611
+          ],
+          "bbox_xyxy_visible": [
+            0.12928199768066406,
+            3.1756553649902344,
+            39.27008819580078,
+            58.92054748535156
+          ],
+          "bbox_xyxy_unclipped": [
+            0.12928199768066406,
+            3.1756553649902344,
+            39.27008819580078,
+            58.92054748535156
+          ],
+          "center_xy_projected_3d": [
+            13.90234375,
+            30.0625
+          ],
+          "center_valid_probability": 0.9991204142570496,
+          "center_visible_probability": 0.014785408973693848,
+          "ellipse": {
+            "conic_center_xy": [
+              13.564453125,
+              30.21484375
+            ],
+            "semi_major": 27.376859074821148,
+            "semi_minor": 23.14385603472205,
+            "orientation_deg": -20.4762844146575,
+            "orientation_valid": true,
+            "geometry_confidence": 0.7270074486732483
+          },
+          "visibility_quality": 0.14511536061763763,
+          "boundary_candidate": false
+        }
+      ]
+    }
+  ],
+  "center_ellipse_source_truth": "UNAVAILABLE",
+  "fresh_real_blind_test": "NOT_RUN",
+  "simulator_timing_seconds": {
+    "model_load": 3.2044457999945735,
+    "inference": [
+      14.052938399996492,
+      12.69690350000019
+    ],
+    "scope": "HOST_SIMULATOR; not native KPU latency"
+  }
+}

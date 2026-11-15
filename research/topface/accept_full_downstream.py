@@ -107,6 +107,9 @@ def accept_formal(frozen, collected, publication, output, model_output):
     atomic_json(model_output, {'kind':'formal_model', 'experiment':'formal_full',
         'experiment_id':result['experiment_id'], 'session':result['session'],
         'completed_epochs':result['completed_epochs'], 'checkpoint_sha256':best['sha256'],
+        'training_input':{'ref':intent['dataset'],'version':intent['dataset_version'],
+                          'manifest_sha256':intent['input_manifest_sha256']},
+        'real_background_bank':config.get('real_background_bank'),
         'archive':result['archive'], 'publication':durable})
     atomic_json(output, value)
     return value

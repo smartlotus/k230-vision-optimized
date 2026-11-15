@@ -1,0 +1,129 @@
+{
+  "status": "PILOT_CURRENT_MODEL_ACCURACY_RETEST_COMPLETE",
+  "observed_utc": "2026-11-15T02:14:28.637892+00:00",
+  "model_experiment": "pilot_pretrained",
+  "new_training_updates": 0,
+  "thresholds_changed": false,
+  "score_threshold": 0.25,
+  "nms_iou": 0.5,
+  "matching_iou": 0.5,
+  "synthetic_validation": {
+    "source": "docs/topface/v11/cloud/training-a01/compact-v1/pilot_pretrained/BEST_METRICS.json",
+    "sha256": "227dbf42ab2717ea0374cba7ef3f34ef5dcc9bde933297533c16f32cb4a75830",
+    "images": 221,
+    "denominators": {
+      "world_instances": 614,
+      "images": 221,
+      "observable_gt": 614,
+      "operating_predictions": 612,
+      "capacity_UNCERTAIN": 46,
+      "tp_class_agnostic": 608,
+      "matched_color_correct": 604,
+      "matched_color_total": 608,
+      "fn_class_agnostic": 6,
+      "capacity_OVER_CAPACITY": 82,
+      "capacity_OK": 72,
+      "matched_geometry_valid_gt": 326,
+      "finite_ellipse_predictions": 326,
+      "angle_valid_gt": 188,
+      "angle_prediction_valid": 142,
+      "angle_abstentions": 46,
+      "capacity_EMPTY": 21,
+      "empty_observation_images": 19,
+      "empty_false_positive_detections": 0,
+      "fp": 4
+    },
+    "task_mAP50": 0.9826922013601768,
+    "task_mAP50_95": 0.9445719473694133,
+    "scope": "PREVIOUS_ACTUAL_TRAINING_VALIDATION; not rerun or real-world accuracy"
+  },
+  "current_tests": {
+    "REAL_ONNX": {
+      "path": "docs/topface/v11/reports/pilot-accuracy-20261115-a01/REAL_ONNX.json",
+      "sha256": "3c91ea4482b7571902fa72b2496b63b034c688112d493a106333aa59b6a5b68c",
+      "backend": "ONNX_RUNTIME",
+      "denominators": {
+        "color_labeled_matches": 2,
+        "correct_color": 2,
+        "images": 2,
+        "gt": 2,
+        "predictions": 5,
+        "tp": 2,
+        "fp": 3,
+        "fn": 0
+      },
+      "precision": 0.4,
+      "recall": 1.0,
+      "matched_color_accuracy": 1.0
+    },
+    "REAL_SIMULATOR": {
+      "path": "docs/topface/v11/reports/pilot-accuracy-20261115-a01/REAL_SIMULATOR.json",
+      "sha256": "d07f1285b87e805f8cd296da28424b44ac80ee816598dff6edbf0c35d303d503",
+      "backend": "NNCASE_SIMULATOR",
+      "denominators": {
+        "color_labeled_matches": 2,
+        "correct_color": 2,
+        "images": 2,
+        "gt": 2,
+        "predictions": 7,
+        "tp": 2,
+        "fp": 5,
+        "fn": 0
+      },
+      "precision": 0.2857142857142857,
+      "recall": 1.0,
+      "matched_color_accuracy": 1.0
+    },
+    "SEQUENCE_ONNX": {
+      "path": "docs/topface/v11/reports/pilot-accuracy-20261115-a01/SEQUENCE_ONNX.json",
+      "sha256": "3c434a145afa232b9be99d6b13b55351b0f7cb019a97c862f2fb7d820778f2b8",
+      "backend": "ONNX_RUNTIME",
+      "denominators": {
+        "frames": 36,
+        "visible_gt": 28,
+        "hidden_frames": 8,
+        "predictions": 32,
+        "tp": 28,
+        "fp": 4,
+        "fn": 0,
+        "correct_color": 28,
+        "color_labeled_matches": 28
+      },
+      "precision": 0.875,
+      "recall": 1.0,
+      "matched_color_accuracy": 1.0
+    },
+    "SEQUENCE_SIMULATOR": {
+      "path": "docs/topface/v11/reports/pilot-accuracy-20261115-a01/SEQUENCE_SIMULATOR.json",
+      "sha256": "9fe00071a9309027e785270d21dacdb53292709c2a75c0f18bf8d70df942e32d",
+      "backend": "NNCASE_SIMULATOR",
+      "denominators": {
+        "frames": 36,
+        "visible_gt": 28,
+        "hidden_frames": 8,
+        "predictions": 32,
+        "tp": 28,
+        "fp": 4,
+        "fn": 0,
+        "correct_color": 28,
+        "color_labeled_matches": 28
+      },
+      "precision": 0.875,
+      "recall": 1.0,
+      "matched_color_accuracy": 1.0
+    }
+  },
+  "measurement_definitions": {
+    "localization_color_match": false,
+    "recovery_color_match": true,
+    "single_target_localization_tp_max_per_frame": 1,
+    "note": "The initial sequence JSON matching.color_match=true refers to recovery only; localization precision/recall are class-agnostic. Source metadata was clarified after these runs; numerical results and original reports are preserved."
+  },
+  "limitations": [
+    "Only two real val frames from one red scene; not six-color real generalization.",
+    "Sequence fixtures: 175mm/90deg, blue and black only, now used for development evaluation; not blind or formal acceptance.",
+    "Top fully outside but larger base visible produces four ONNX false positives, confirmed by native render and top-mask truth.",
+    "No new real blind test, real center/ellipse truth, or native K230 FPS measured."
+  ],
+  "formal_training": "NOT_STARTED; Full data generation remains in progress"
+}

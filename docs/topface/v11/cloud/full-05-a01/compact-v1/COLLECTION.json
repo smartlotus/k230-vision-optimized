@@ -1,0 +1,17 @@
+{
+  "schema": "topface-exact-compact-collection-v1.1",
+  "ref": "lotus30/k230-topface-v11-04-full-shard-05",
+  "version": 1,
+  "run_id": "k230-topface-v11-full-05-a01",
+  "observed_utc": "2026-11-15T01:33:05.960224+00:00",
+  "members": [
+    {
+      "name": "k230-topface-v11-full-05-a01-RESULT.json",
+      "status": "COLLECTED",
+      "bytes": 5327,
+      "sha256": "1e900dbbfe0d0cdb9e25159f71913c98e6a42e9c18bcd09c3d51da0cb22409e4"
+    }
+  ],
+  "raw_archive_downloaded_to_host": false,
+  "automatic_replay": false
+}

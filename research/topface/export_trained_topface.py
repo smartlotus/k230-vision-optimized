@@ -36,6 +36,7 @@ def export(checkpoint, checkpoint_sha256, output, dataset=None):
     receipt = {'schema': 'topface-trained-export-v1.1', 'checkpoint_sha256': checkpoint_sha256,
                'optimizer_updates': state['optimizer_updates'], 'epoch': state['epoch'],
                'experiment': state['kind'], 'dataset_audit_sha256': state['dataset_audit_sha256'],
+               'real_background_augmentation':state.get('real_background_augmentation'),
                'width': width, 'height': height, 'onnx_sha256': sha(model_path),
                'onnx_bytes': model_path.stat().st_size, 'pytorch_ort': compare(model, model_path, height, width)}
     if dataset is not None:

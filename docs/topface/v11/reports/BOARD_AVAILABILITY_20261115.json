@@ -1,0 +1,8 @@
+{
+  "observed_utc": "2026-11-15T00:47:45.593285+00:00",
+  "status": "NO_SERIAL_PORT_PRESENT",
+  "command": "SerialPort.GetPortNames and Get-PnpDevice -Class Ports -PresentOnly",
+  "available_ports": [],
+  "board_runtime_test": "NOT_RUN",
+  "hardware_or_production_files_modified": false
+}

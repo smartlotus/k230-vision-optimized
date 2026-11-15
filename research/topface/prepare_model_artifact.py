@@ -35,7 +35,8 @@ def prepare(phase,revision,staging,parent,runtime_receipt,runtime_qualification,
     run_id=f'k230-topface-v11-conversion-{label}-{revision}'
     dataset=f'lotus30/k230-topface-v11-conversion-{label}-input-{revision}'
     ref=f'lotus30/k230-topface-v11-07b-{label}-conversion'
-    config={'run_id':run_id,'phase':phase,'parent':selected}
+    max_seconds=21600 if phase=='formal_conversion' else 3600
+    config={'run_id':run_id,'phase':phase,'parent':selected,'max_seconds':max_seconds}
     if phase=='pilot_conversion':
         config['pilot_sources']={}
         for prefix,folder,name in (
@@ -59,6 +60,12 @@ def prepare(phase,revision,staging,parent,runtime_receipt,runtime_qualification,
         config.update(shards=inventory['shards'],total_scenes=inventory['total_planned'],
                       data_seed=inventory['seed'],dataset_index_sha256=audit['dataset_index_sha256'])
         mounts.extend(source_ref(row['publication']) for row in inventory['shards'])
+        if selected.get('real_background_bank') is not None:
+            config['ptq_background_bank']=selected['real_background_bank']
+            config['training_input']=selected['training_input']
+            # The selected formal output retains an exact source copy, including
+            # this INPUT_MANIFEST and background bank. Reuse that mounted copy;
+            # mounting the original dataset too would make the hash locator ambiguous.
     staging=staging.resolve()
     frozen=ROOT/f'docs/topface/v11/cloud/conversion-{label}-{revision}'
     kernel=staging.with_name(staging.name+'-kernel')
@@ -69,7 +76,8 @@ def prepare(phase,revision,staging,parent,runtime_receipt,runtime_qualification,
            'downstream_job.py','formal_job.py','full_dataset.py','native_job.py','combine_datasets.py',
            'scene_config.py','geometry.py','dataset_diagnostics.py','task_geometry.py',
            'nanodet_topface.py','export_nanodet_candidate.py','export_trained_topface.py',
-           'compile_trained_topface.py','evaluate_task.py','evaluate_final.py','task_training.py','input_locator.py')
+           'compile_trained_topface.py','evaluate_task.py','evaluate_final.py','task_training.py','input_locator.py',
+           'nncase_simulator.py','simulate_dataset.py','evaluate_saved_raw.py','background_augmentation.py')
     for name in names:
         shutil.copy2(HERE/name,staging/name)
     native=read(native_runtime/'NATIVE_EXPORT_RUNTIME.json')
@@ -94,13 +102,15 @@ def prepare(phase,revision,staging,parent,runtime_receipt,runtime_qualification,
     atomic_json(staging/'dataset-metadata.json',{'id':dataset,'title':f'K230 Topface V11 {label} conversion input',
         'licenses':[{'name':'other'}],'description':'Private byte-pinned model conversion source and cloud artifact identities.'})
     runtime_input=read(ROOT/'docs/topface/v11/cloud/compiler-linux-a01/SUBMISSION_INTENT.json')
+    training_root=(f"locate_input('/kaggle/input',{config['training_input']['manifest_sha256']!r})"
+                   if 'training_input' in config else 'None')
     code=(HERE/'input_locator.py').read_text(encoding='utf8')+f'''
 import sys
 input_root=locate_input('/kaggle/input',{sha(staging/'INPUT_MANIFEST.json')!r})
 runtime_root=locate_input('/kaggle/input',{runtime_input['input_manifest_sha256']!r})
 sys.path.insert(0,str(input_root))
 from model_artifact_job import run
-run(input_root,runtime_root,{run_id!r})
+run(input_root,runtime_root,{run_id!r},training_input_root={training_root})
 '''
     name='07b_model_conversion.ipynb'
     atomic_json(kernel/name,{'nbformat':4,'nbformat_minor':5,
@@ -115,7 +125,7 @@ run(input_root,runtime_root,{run_id!r})
             shutil.copy2(source/file,frozen/file)
     intent={'run_id':run_id,'kernel':ref,'dataset':dataset,'dataset_version':1,'notebook_file':name,
         'notebook_sha256':sha(kernel/name),'input_manifest_sha256':sha(staging/'INPUT_MANIFEST.json'),
-        'provider_max_seconds':4500,'execution_mode':'API_SAVE_AND_RUN_ALL',
+        'provider_max_seconds':max_seconds+900,'execution_mode':'API_SAVE_AND_RUN_ALL',
         'publisher_admission_status':'QUALIFIED_AND_AUTHORIZED','automatic_replay':False}
     atomic_json(frozen/'SUBMISSION_INTENT.json',intent)
     return intent

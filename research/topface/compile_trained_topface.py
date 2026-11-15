@@ -3,6 +3,7 @@ import argparse
 import importlib.metadata
 import importlib.util
 import json
+import hashlib
 import os
 from pathlib import Path
 
@@ -14,7 +15,7 @@ from cloud_store import atomic_json, sha
 from task_geometry import MEAN, STD, box_iou, decode, letterbox_bgr
 
 
-def load_samples(dataset, width, height, calibration_count, pair_count):
+def load_samples(dataset, width, height, calibration_count, pair_count,backgrounds=None):
     dataset = dataset.resolve()
     index = json.loads((dataset/'AUDIT_V11.json').read_text(encoding='utf8'))
     if index['status'] != 'PASS':
@@ -25,8 +26,9 @@ def load_samples(dataset, width, height, calibration_count, pair_count):
     if len(train) < count:
         raise ValueError('Insufficient audited train scenes for calibration and paired verification')
     indices = np.linspace(0, len(train)-1, count, dtype=int)
+    paired_indices = {int(index) for index in np.linspace(0, count-1, pair_count, dtype=int)}
     specimens = []
-    for index in indices:
+    for specimen_index,index in enumerate(indices):
         row = train[index]
         folder = (dataset/row['scene']).resolve()
         if not folder.is_relative_to(dataset) or sha(folder/'rgb.png') != row['rgb_sha256']:
@@ -36,11 +38,19 @@ def load_samples(dataset, width, height, calibration_count, pair_count):
         label = json.loads((folder/'labels.json').read_text(encoding='utf8'))
         if label['split'] != 'train' or label['scene_group_id'] != row['group']:
             raise ValueError('PTQ scene identity differs')
-        canvas, _ = letterbox_bgr(cv2.imread(str(folder/'rgb.png')), width, height)
+        image=cv2.imread(str(folder/'rgb.png'))
+        operations=[]
+        if backgrounds is not None and specimen_index not in paired_indices:
+            image,operations=backgrounds.apply(image,label['instances'],
+                np.random.default_rng(np.random.SeedSequence([20261114,int(index),0xCA1])))
+        canvas, _ = letterbox_bgr(image, width, height)
         bgr = ((canvas.astype(np.float32)-MEAN)/STD).transpose(2,0,1)[None].copy()
         rgb = canvas[:,:,::-1].transpose(2,0,1)[None].copy()
-        specimens.append((row, rgb, bgr))
-    paired_indices = {int(index) for index in np.linspace(0, count-1, pair_count, dtype=int)}
+        traced={**row,'compiler_rgb_tensor_sha256':hashlib.sha256(rgb.tobytes()).hexdigest()}
+        if backgrounds is not None and specimen_index not in paired_indices:
+            traced['training_background_augmentation']={'bank_manifest_sha256':backgrounds.identity['manifest_sha256'],
+                'seed_components':[20261114,int(index),0xCA1],'paste_boxes_xyxy':operations}
+        specimens.append((traced, rgb, bgr))
     return ([value for i,value in enumerate(specimens) if i not in paired_indices],
             [value for i,value in enumerate(specimens) if i in paired_indices])
 
@@ -95,7 +105,7 @@ def compare_detections(reference, actual, width, height):
             'simulator_capacity':simulator_result['capacity_state']}
 
 
-def compile_model(export_dir, dataset, output, calibration_count=64, pair_count=12):
+def compile_model(export_dir, dataset, output, calibration_count=64, pair_count=12,background_bank=None):
     export_dir = export_dir.resolve()
     dataset = dataset.resolve()
     export = json.loads((export_dir/'RESULT.json').read_text(encoding='utf8'))
@@ -106,7 +116,14 @@ def compile_model(export_dir, dataset, output, calibration_count=64, pair_count=
     if not 16 <= calibration_count <= 256 or not 2 <= pair_count <= 32:
         raise ValueError('Calibration and verification sizes are outside the supported range')
     width,height = export['width'],export['height']
-    calibration,paired = load_samples(dataset,width,height,calibration_count,pair_count)
+    backgrounds=None
+    if background_bank is not None:
+        from background_augmentation import BackgroundBank
+        backgrounds=BackgroundBank(background_bank)
+    if export['experiment']=='formal_full' and export.get('real_background_augmentation')!=(
+            backgrounds.identity if backgrounds is not None else None):
+        raise ValueError('Formal PTQ backgrounds differ from the trained augmentation policy')
+    calibration,paired = load_samples(dataset,width,height,calibration_count,pair_count,backgrounds)
     output = output.resolve()
     output.mkdir(parents=True,exist_ok=False)
     plugin_spec = importlib.util.find_spec('_nncase')
@@ -172,6 +189,7 @@ def compile_model(export_dir, dataset, output, calibration_count=64, pair_count=
                                     'normalization':'nncase swaps RGB to BGR and applies the model mean and std'}
         atomic_json(output/'output_contract.json',contract)
         result={'status':'TRAINED_MODEL_COMPILED_AND_PAIRED','identity':identity,'compiler_settings':settings,
+                'calibration_background_bank':backgrounds.identity if backgrounds is not None else None,
                 'calibration_members':[row for row,_,_ in calibration],
                 'paired_members':[row for row,_,_ in paired],'paired_measurements':comparisons}
         atomic_json(output/'RESULT.json',result)
@@ -193,5 +211,6 @@ if __name__ == '__main__':
         parser.add_argument('--'+key, type=Path, required=True)
     parser.add_argument('--calibration-count', type=int, default=64)
     parser.add_argument('--pair-count', type=int, default=12)
+    parser.add_argument('--background-bank',type=Path)
     result = compile_model(**vars(parser.parse_args()))
     print(json.dumps(result['identity'],indent=2))

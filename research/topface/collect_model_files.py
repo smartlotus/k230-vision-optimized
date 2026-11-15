@@ -23,8 +23,11 @@ def collect(result, publication, token_file, output, receipt):
             any(durable['uploaded'][key] != saved['archive'][key] for key in ('bytes', 'sha256'))):
         raise ValueError('Deliverables require the accepted original conversion archive')
     rows = saved['model_files']
-    allowed = {'topface.onnx', 'topface.kmodel', 'identity.json', 'topface-board-bundle.tar.gz'}
+    allowed = {'topface.onnx', 'topface.kmodel', 'identity.json', 'topface-board-bundle.tar.gz',
+               'output_contract.json','topface-best.pt'}
     required = {'topface.onnx', 'topface.kmodel', 'identity.json'}
+    if saved['export']['experiment']=='formal_full':
+        required.update(('output_contract.json','topface-best.pt','topface-board-bundle.tar.gz'))
     names = [Path(row['path']).name for row in rows]
     if (len(names) != len(set(names)) or not required <= set(names) <= allowed or
             sum(row['bytes'] for row in rows) > 64*1024**2):
@@ -56,6 +59,8 @@ def collect(result, publication, token_file, output, receipt):
         raise ValueError('Collected model identity differs')
     if saved['export']['onnx_sha256'] != identity['onnx_sha256']:
         raise ValueError('Export report differs from the collected model')
+    if (output/'topface-best.pt').exists() and sha(output/'topface-best.pt')!=identity['checkpoint_sha256']:
+        raise ValueError('Selected formal checkpoint differs from the exported model')
     atomic_json(output/'RESULT.json', saved['export'])
     value = {'status':'BOUNDED_MODEL_DELIVERABLES_SHA256_PASS', 'run_id':saved['run_id'],
              'observed_utc':datetime.now(timezone.utc).isoformat(), 'source':source,

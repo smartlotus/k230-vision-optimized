@@ -1,0 +1,36 @@
+{
+  "status": "PTQ_BACKGROUND_DATAFLOW_QUALIFIED",
+  "scope": "ENGINEERING_SMOKE_TRAIN_FIXTURE",
+  "calibration_count": 32,
+  "pair_count": 12,
+  "background_augmented_calibration_frames": 11,
+  "pairs_identical_to_original": true,
+  "calibration_and_pairs_disjoint": true,
+  "all_sources_train": true,
+  "bank_identity": {
+    "manifest_sha256": "852f5851b4708c9582a5c8145dcd1e55adf4d20a6a6e3af7bec1011dd966c3c5",
+    "source_manifest_sha256": "6d21a2e9d0a251c1161ee3b63345909d64ad1f8cda6d3f9be0e0c0454843e198",
+    "source_scope": "APPROVED_REAL_TRAIN_ONLY",
+    "sources": [
+      "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d"
+    ],
+    "patch_count": 64,
+    "policy": {
+      "probability": 0.35,
+      "max_patches": 2,
+      "scale_range": [
+        0.75,
+        1.25
+      ],
+      "target_exclusion_margin_px": 12,
+      "placement_attempts": 24,
+      "feather_border_px": 6
+    },
+    "supervision": "Existing synthetic labels only; no real geometric truth inferred"
+  },
+  "optimizer_updates": 0,
+  "formal_ptq_not_yet_run": true
+}

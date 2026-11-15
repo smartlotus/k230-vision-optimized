@@ -50,8 +50,10 @@ def run(input_root, run_id, max_seconds):
 
     root = scratch/run_id
     root.mkdir(exist_ok=False)
-    output = root/'result'
-    output.mkdir()
+    # Kaggle saves its working volume after a failed/timed-out notebook. Keep
+    # epoch checkpoints there even when the normal final archiver is interrupted.
+    output = work/run_id
+    output.mkdir(exist_ok=False)
     frozen_source=output/'source'
     frozen_source.mkdir()
     for member in input_manifest['files']:
@@ -63,6 +65,11 @@ def run(input_root, run_id, max_seconds):
              'experiment_id': immutable['experiment_id'], 'session': config['session'],
              'status': 'STARTED', 'optimizer_updates': 0,
              'input_manifest_sha256': sha(input_root/'INPUT_MANIFEST.json')}
+    atomic_json(output/'RUN_IDENTITY.json',{**state,'max_seconds':max_seconds,
+        'dataset_index_sha256':config['dataset_acceptance']['dataset_index_sha256'],
+        'parent_checkpoint_sha256':config['parent']['checkpoint_sha256'],
+        'checkpoint_location':'KAGGLE_WORKING_EPOCH_BOUNDARIES',
+        'hard_preemption_recovery_verified':False})
 
     def stage(name):
         state['stage'] = name
@@ -115,8 +122,9 @@ def run(input_root, run_id, max_seconds):
         state['resume_eligible'] = (state['status']=='FORMAL_SESSION_BOUNDARY' and
                                     state['completed_epochs']>parent.get('completed_epochs',0))
         summary = work/run_id/'formal_full'
-        summary.mkdir(parents=True)
-        shutil.copy2(output/'formal_full/BEST_METRICS.json', summary/'BEST_METRICS.json')
+        summary.mkdir(parents=True,exist_ok=True)
+        # Keep the full trace and emit the bounded collector view alongside it.
+        shutil.copy2(summary/'RESULT.json',summary/'TRAINING_TRACE.json')
         compact = {key:value for key,value in result.items()
                    if key not in ('training_scenes', 'validation_scenes', 'epoch_records', 'best_metrics')}
         compact['training_scene_count'] = len(result['training_scenes'])

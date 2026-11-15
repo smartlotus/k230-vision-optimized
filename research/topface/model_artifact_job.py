@@ -36,7 +36,7 @@ def original_pilot(config,mount,root,deadline):
     return destination
 
 
-def run(input_root,runtime_input,run_id):
+def run(input_root,runtime_input,run_id,training_input_root=None):
     input_root=Path(input_root).resolve()
     runtime_input=Path(runtime_input).resolve()
     verify_inputs(input_root)
@@ -50,7 +50,7 @@ def run(input_root,runtime_input,run_id):
     output=root/run_id
     output.mkdir(exist_ok=False)
     started=time.monotonic()
-    deadline=started+3600
+    deadline=started+config.get('max_seconds',3600)
     state={'run_id':run_id,'status':'STARTED','optimizer_updates':0,
            'input_manifest_sha256':sha(input_root/'INPUT_MANIFEST.json'),
            'runtime_input_manifest_sha256':sha(runtime_input/'INPUT_MANIFEST.json')}
@@ -75,6 +75,16 @@ def run(input_root,runtime_input,run_id):
         if sha(dataset/'AUDIT_V11.json')!=config['dataset_index_sha256']:
             raise ValueError('Conversion dataset differs from the selected checkpoint')
         print('TOPFACE_MODEL_ARTIFACT_STAGE INPUTS_VERIFIED',flush=True)
+        ptq_backgrounds=None
+        if config.get('ptq_background_bank') is not None:
+            training_input_root=Path(training_input_root).resolve()
+            if sha(training_input_root/'INPUT_MANIFEST.json')!=config['training_input']['manifest_sha256']:
+                raise ValueError('PTQ background source differs from the frozen formal input')
+            verify_inputs(training_input_root)
+            from background_augmentation import unpack
+            bank=config['ptq_background_bank']
+            ptq_backgrounds=unpack(training_input_root/'real-background-bank.bin',scratch/'ptq-backgrounds',
+                                   bank['archive_sha256'],bank['manifest_sha256'])
         parent=config['parent']
         source=unpack_session(mount,scratch/'parent',parent,parent['experiment'],('best.pt',),deadline-600)
         checkpoint=source/'best.pt'
@@ -104,6 +114,8 @@ def run(input_root,runtime_input,run_id):
             command=[str(python),str(input_root/'compile_trained_topface.py'),
                      '--export-dir',str(exported),'--dataset',str(dataset),'--output',str(output/'compiled'),
                      '--calibration-count','64','--pair-count','12']
+            if ptq_backgrounds is not None:
+                command.extend(['--background-bank',str(ptq_backgrounds)])
             process=subprocess.run(command,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=1800)
         if process.returncode:
             raise RuntimeError('Trained model compiler or Simulator failed')
@@ -111,6 +123,28 @@ def run(input_root,runtime_input,run_id):
         state.update(status='TRAINED_EXPORT_COMPILE_AND_SIMULATOR_COMPLETE',
                      identity=conversion['identity'],paired_measurements=conversion['paired_measurements'])
         if config['phase']=='formal_conversion':
+            print('TOPFACE_MODEL_ARTIFACT_STAGE QUANTIZED_SYNTHETIC_TEST',flush=True)
+            evaluation_budget=min(18000,int(deadline-time.monotonic()-600))
+            if evaluation_budget<120:
+                raise TimeoutError('No finite budget remains for the frozen quantized test')
+            paired=output/'paired-synthetic-test'
+            with (output/'simulator-test.log').open('wb') as log:
+                process=subprocess.run([str(python),str(input_root/'simulate_dataset.py'),
+                    '--dataset',str(dataset),'--model-dir',str(output/'compiled'),'--output',str(paired),
+                    '--onnx',str(exported/'topface.onnx'),
+                    '--max-seconds',str(evaluation_budget)],env=env,stdout=log,stderr=subprocess.STDOUT,
+                    timeout=evaluation_budget+30)
+            if process.returncode:
+                raise RuntimeError('Frozen paired synthetic-test inference failed; preserve raw outputs')
+            from evaluate_saved_raw import evaluate_raw
+            task=evaluate_raw(dataset,paired,exported,output/'PAIRED_SYNTHETIC_TEST.json')
+            keys=('images','task_mAP50','task_mAP50_95','class_agnostic_precision50','class_agnostic_recall50',
+                  'matched_color_accuracy','denominators','errors','capacity_accuracy','end_to_end_angle_coverage')
+            state['paired_synthetic_test']={backend:{key:metrics[key] for key in keys}
+                for backend,metrics in task['backends'].items()}
+            raw_summary=json.loads((paired/'RESULT.json').read_text(encoding='utf8'))
+            state['quantized_test_inference']={key:raw_summary[key] for key in ('images','completed_images',
+                'scene_order_sha256','simulator_inference_seconds','raw_channel_mae','raw_channel_max','files')}
             process=subprocess.run([str(python),str(input_root/'package_trial.py'),'--compiled',str(output/'compiled'),
                 '--export',str(exported),'--output',str(output/'board-package')],env=env,
                 stdout=subprocess.DEVNULL,stderr=subprocess.STDOUT,timeout=60)
@@ -118,12 +152,18 @@ def run(input_root,runtime_input,run_id):
                 raise RuntimeError('Board package construction failed')
         models=root/(run_id+'-models')
         models.mkdir()
-        for path in (exported/'topface.onnx',output/'compiled/topface.kmodel',output/'compiled/identity.json'):
+        delivery_files=(exported/'topface.onnx',output/'compiled/topface.kmodel',
+                        output/'compiled/identity.json',output/'compiled/output_contract.json')
+        for path in delivery_files:
             shutil.copy2(path,models/path.name)
         state['model_files']=[{'path':(models/path.name).relative_to(root).as_posix(),
                               'bytes':path.stat().st_size,'sha256':sha(path)}
-                             for path in (exported/'topface.onnx',output/'compiled/topface.kmodel',output/'compiled/identity.json')]
+                             for path in delivery_files]
         if config['phase']=='formal_conversion':
+            selected=models/'topface-best.pt'
+            shutil.copy2(checkpoint,selected)
+            state['model_files'].append({'path':selected.relative_to(root).as_posix(),
+                                        'bytes':selected.stat().st_size,'sha256':sha(selected)})
             board_bundle=models/'topface-board-bundle.tar.gz'
             archive_directory(output/'board-package',board_bundle,deadline)
             state['model_files'].append({'path':board_bundle.relative_to(root).as_posix(),

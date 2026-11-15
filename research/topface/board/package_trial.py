@@ -25,6 +25,12 @@ def package(compiled, export, output):
         shutil.copy2(source, output/source.name)
     atomic_json(output/'identity.json', identity)
     atomic_json(output/'output_contract.json', contract)
+    atomic_json(output/'BENCHMARK_STATUS.json',{
+        'status':'NOT_RUN','model_sha256':identity['kmodel_sha256'],
+        'reason':'Package is constructed in Kaggle; the physical K230 is not connected to that runtime.',
+        'stages':{name:{'n':0,'p50_ms':None,'p95_ms':None,'p99_ms':None}
+                  for name in ('KPU_only','AI2D_KPU','Camera_AI2D_KPU_Postprocess','Camera_to_Display')},
+        'effective_fps':None,'capture_timeouts':None,'peak_memory':None,'stability':None})
     (output/'README.md').write_text(
         '# K230 TopFaceNet CSI2 evaluation\n\n'
         'Copy this directory to `/sdcard/topface_trial` and run the following in CanMV IDE.\n\n'
