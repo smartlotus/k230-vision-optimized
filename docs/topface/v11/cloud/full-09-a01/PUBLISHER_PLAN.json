@@ -1,0 +1,17 @@
+{
+  "run_id": "k230-topface-v11-full-09-a01",
+  "source_archive_path": "k230-topface-v11-full-09-a01.tar.gz",
+  "archive": {
+    "name": "k230-topface-v11-full-09-a01-a2e9c4de836ae6fc.tar.gz",
+    "bytes": 302029353,
+    "sha256": "a2e9c4de836ae6fc56de6a7fef6661a8d195c324670db6322a3fd266138adc73"
+  },
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-04-full-shard-09",
+    "kernel_id": 145127787,
+    "version": 1,
+    "provider_status": "COMPLETE",
+    "source_sha256": "6d8aad805e420abdcd5a996309a266520df0d70f76e095c319f76a7c009a9bae"
+  },
+  "source_notebook": "C:/Users/28389/Desktop/k230-vision-optimized/docs/topface/v11/cloud/full-09-a01/04_full_shard.ipynb"
+}

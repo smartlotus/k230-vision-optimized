@@ -1,0 +1,15 @@
+{
+  "status": "PREPARED_NOT_SUBMITTED",
+  "phase": "full_render",
+  "run_id": "k230-topface-v11-full-10-a01",
+  "kernel": "lotus30/k230-topface-v11-04-full-shard-10",
+  "dataset": "lotus30/k230-topface-v11-full-input-10-a01",
+  "dataset_version": 1,
+  "notebook_file": "04_full_shard.ipynb",
+  "notebook_sha256": "1da7d84d2aa55b5d73162810b5d0c0ea778e5c6443a01803568762e769f0e037",
+  "input_manifest_sha256": "5ba4e833c36ec31498a79e6004eff815b62ecb808459c7aa639e6bad1d30259d",
+  "provider_max_seconds": 8100,
+  "execution_mode": "API_SAVE_AND_RUN_ALL",
+  "publisher_admission_status": "QUALIFIED_AND_AUTHORIZED",
+  "automatic_replay": false
+}

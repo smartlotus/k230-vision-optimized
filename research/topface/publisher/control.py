@@ -248,7 +248,15 @@ def observe(run_id):
     if len(jobs)!=1 or jobs[0]['name']!='transfer' or jobs[0]['conclusion']!='success':raise ValueError('Unexpected publisher jobs')
     # gh protects terminal output containing Actions ANSI sequences. Capture
     # bytes as text, parse only our validated JSON receipt, never emit raw logs.
-    log=command('gh','api','--allow-escape-sequences',f'repos/{REPO}/actions/jobs/{jobs[0]["databaseId"]}/logs')
+    log_path=f'repos/{REPO}/actions/jobs/{jobs[0]["databaseId"]}/logs'
+    for attempt in range(3):
+        try:
+            log=command('gh','api','--allow-escape-sequences',log_path,timeout=30)
+            break
+        except (RuntimeError,subprocess.TimeoutExpired):
+            if attempt==2:
+                raise
+            time.sleep(2**attempt)
     matches=re.findall(r'TOPFACE_TRANSFER_RECEIPT (\{[^\r\n]*\})',log)
     if len(matches)!=1:raise ValueError('Unique compact publisher receipt missing')
     result=json.loads(matches[0]);uploaded=result['uploaded']
