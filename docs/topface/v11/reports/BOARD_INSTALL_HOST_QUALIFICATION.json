@@ -1,0 +1,45 @@
+{
+  "schema": "topface-board-install-host-qualification-v1",
+  "observed_utc": "2026-11-15T14:01:09.737530+00:00",
+  "status": "HOST_FIXTURE_PASS_NATIVE_NOT_RUN",
+  "test_count": 14,
+  "test_log": "docs/topface/v11/reports/BOARD_DEPLOYMENT_HOST_TESTS.log",
+  "scope": [
+    "actual file-assembly script executed by fake RPC against a temporary host filesystem",
+    "multi-part transfer and final closed-target readback",
+    "immutable receipt and new isolated directory",
+    "tamper and traversal rejection",
+    "explicit loopback/authenticated/enabled MCP configuration",
+    "uncertain write and running-join timeout preserve state without replay",
+    "default preflight has no board mutation",
+    "all43 README local links resolve"
+  ],
+  "independent_review": "PASS by board_handoff_review; read-only fixture review; no external services or hardware",
+  "native_install": "NOT_RUN",
+  "native_inference": "NOT_RUN",
+  "native_accuracy": "NOT_RUN",
+  "native_fps": "NOT_RUN",
+  "formal_training_mutated": false,
+  "files": [
+    {
+      "path": "research/topface/deploy_board_trial.py",
+      "sha256": "be7c3281328778b5555791a8f3ffc2cc4d792113820a3ee4764b73772a7db57c"
+    },
+    {
+      "path": "research/topface/test_board_deployment.py",
+      "sha256": "078ec0e2af38f576ffb40bec048c909a6dd7af18188bb8345a83cae32029cb72"
+    },
+    {
+      "path": "docs/topface/README.md",
+      "sha256": "ca32cdd2a8c813963767426b3f8f5690614ddd390ee21ee09840c6fd1eb24a75"
+    },
+    {
+      "path": "docs/topface/v11/reports/BOARD_INSTALL_PROTOCOL.md",
+      "sha256": "dd8850ea5d7859cadc42bcfd3c48db3a5440ba302acf1a082306255399de8cd1"
+    },
+    {
+      "path": "docs/topface/v11/reports/BOARD_DEPLOYMENT_HOST_TESTS.log",
+      "sha256": "74ce885662ce404577e5c13e36deb4abc775479f37ae524d2bf1c866172f6a13"
+    }
+  ]
+}
