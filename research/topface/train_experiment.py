@@ -10,10 +10,12 @@ import json
 import math
 import os
 from pathlib import Path
+import platform
 import random
 import shutil
 import time
 
+import cv2
 import numpy as np
 import torch
 from torch.utils.data import DataLoader
@@ -200,7 +202,8 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
     warmup=min(100,max(10,target_updates//10))
     schedule={'target_updates':target_updates,'warmup_updates':warmup,'epoch_batches':len(loader)}
     runtime={'torch':str(torch.__version__),'cuda':torch.version.cuda,'device':torch.cuda.get_device_name(0),
-             'cudnn':torch.backends.cudnn.version()}
+             'cudnn':torch.backends.cudnn.version(),'python':platform.python_version(),
+             'numpy':np.__version__,'opencv':cv2.__version__}
     if formal_identity is not None:
         state.update(formal_identity=formal_identity,schedule=schedule,runtime=runtime,
                      checkpoint_boundary='epoch',completed_epochs=0,

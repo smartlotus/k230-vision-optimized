@@ -1,0 +1,100 @@
+{
+  "status": "FROZEN_FULL_LAYOUT_GEOMETRY_AUDITED",
+  "observed_utc": "2026-11-15T02:42:45.131933+00:00",
+  "base_seed": 20261117,
+  "indices": [
+    0,
+    9999
+  ],
+  "statistics": {
+    "scenes": 10000,
+    "split_synthetic_test": 934,
+    "world_empty_synthetic_test": 134,
+    "split_val": 1601,
+    "world_instances": 24996,
+    "top_projection_no_intersection": 0,
+    "partially_or_fully_outside": 5010,
+    "split_train": 7465,
+    "world_empty_train": 1334,
+    "world_empty_val": 199
+  },
+  "camera_groups": 75,
+  "partial_counts_by_height_mm": {
+    "175.0": 448,
+    "100.0": 4541,
+    "250.0": 21
+  },
+  "partial_counts_by_camera_group": {
+    "H100-P100-F62": 469,
+    "H100-P100-F65": 193,
+    "H100-P100-F68": 229,
+    "H100-P80-F62": 201,
+    "H100-P80-F65": 251,
+    "H100-P80-F68": 409,
+    "H100-P85-F62": 469,
+    "H100-P85-F65": 198,
+    "H100-P85-F68": 261,
+    "H100-P90-F62": 268,
+    "H100-P90-F65": 467,
+    "H100-P90-F68": 198,
+    "H100-P95-F62": 201,
+    "H100-P95-F65": 268,
+    "H100-P95-F68": 459,
+    "H175-P100-F62": 18,
+    "H175-P100-F65": 69,
+    "H175-P80-F62": 85,
+    "H175-P80-F65": 9,
+    "H175-P85-F62": 15,
+    "H175-P85-F65": 70,
+    "H175-P90-F62": 25,
+    "H175-P90-F68": 67,
+    "H175-P95-F62": 81,
+    "H175-P95-F65": 9,
+    "H250-P100-F62": 20,
+    "H250-P85-F62": 1
+  },
+  "minimum_projected_top_intersection_px2": 748.6770740821958,
+  "minimum_case": {
+    "scene_index": 8299,
+    "instance_id": 1,
+    "camera_group": "H400-P100-F65",
+    "physical_top_center": [
+      605.0000000000001,
+      325.0
+    ]
+  },
+  "empty_train_slots_by_camera_group": {
+    "H100-P100-F65": 66,
+    "H100-P85-F65": 67,
+    "H100-P90-F68": 67,
+    "H175-P100-F62": 67,
+    "H175-P85-F62": 67,
+    "H175-P90-F65": 67,
+    "H175-P95-F68": 67,
+    "H250-P100-F68": 67,
+    "H250-P80-F65": 66,
+    "H250-P85-F68": 66,
+    "H250-P90-F62": 67,
+    "H250-P95-F65": 67,
+    "H325-P100-F65": 67,
+    "H325-P80-F62": 67,
+    "H325-P85-F65": 66,
+    "H325-P90-F68": 66,
+    "H325-P95-F62": 67,
+    "H400-P80-F68": 67,
+    "H400-P85-F62": 67,
+    "H400-P95-F68": 66
+  },
+  "method": "512-vertex inscribed r15mm top disk at z60mm, float64 convex polygon image clipping; no occluder suppression",
+  "interpretation": "If every top disk intersects the image, no top-fully-offscreen/body-visible sample exists regardless of base shape.",
+  "limitations": [
+    "Analytic top disk using original CAD dimensions, not a fresh mesh raster audit.",
+    "Partial truncation differs from complete top exit; occlusion is not counted as exit."
+  ],
+  "proposed_followup": "Independent audited train-only body-only negative background augmentation; not yet implemented or qualified",
+  "source_sha256": {
+    "scene_config.py": "2d7c8abcbb930ac2b857729d90dd86e91544b0672cccadcd457dd4db1b415b62",
+    "geometry.py": "de5c6055507a76ad5656bf8b3f554139bd154bf581b7196722e308a3a3985cc4"
+  },
+  "elapsed_seconds": 6.3613888999971095
+}

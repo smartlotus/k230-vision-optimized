@@ -1,6 +1,8 @@
 """Prepare a private Kaggle Full audit or formal training session."""
 import argparse
 from datetime import datetime, timezone
+import hashlib
+import io
 import json
 from pathlib import Path
 import shutil
@@ -15,6 +17,8 @@ CHECKPOINT_SHA256 = 'f4c6080f3ef35a64c3030d559438b436462f227ce29700bca71327203e4
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
+LEARNING_FILES=('train_experiment.py','task_training.py','nanodet_topface.py',
+                'evaluate_task.py','task_geometry.py','background_augmentation.py','dataset_diagnostics.py')
 
 
 def read(path):
@@ -28,6 +32,32 @@ def source_ref(receipt):
     ):
         raise ValueError('Private Kaggle source requires verified Drive publication')
     return f"{prep['ref']}/{prep['version']}"
+
+
+def validate_resume(config, training_sources=None):
+    """A new provider session must retain the one logical experiment exactly."""
+    if config['session']==1:
+        return
+    parent=config['parent']
+    if (parent.get('experiment_config')!=config['experiment'] or
+            parent.get('dataset_index_sha256')!=config['dataset_acceptance']['dataset_index_sha256'] or
+            parent.get('real_background_bank')!=config.get('real_background_bank') or
+            training_sources is None or parent.get('training_source_sha256')!=training_sources or
+            parent['session']!=config['session']-1 or
+            not 0<parent['completed_epochs']<config['experiment']['max_epochs']):
+        raise ValueError('Resume must preserve the accepted logical experiment, dataset and background policy')
+
+
+def nanodet_bundle():
+    """Pin content rather than workstation file timestamps across sessions."""
+    payload=io.BytesIO()
+    with zipfile.ZipFile(payload,'w') as bundle:
+        for source in sorted((HERE/'vendor/nanodet_core').rglob('*')):
+            if source.is_file() and '__pycache__' not in source.parts and source.suffix!='.pyc':
+                member=zipfile.ZipInfo(source.relative_to(HERE).as_posix(),date_time=(2026,1,1,0,0,0))
+                member.compress_type=zipfile.ZIP_DEFLATED
+                bundle.writestr(member,source.read_bytes())
+    return payload.getvalue()
 
 
 def prepare(phase, revision, staging, shard_inventory, pilot_acceptance, publisher_receipt,
@@ -103,6 +133,12 @@ def prepare(phase, revision, staging, shard_inventory, pilot_acceptance, publish
                 'manifest_sha256':background['manifest_sha256'],'identity':background['identity'],
                 'qualification_sha256':sha(real_background_qualification)}
             experiment['real_background_augmentation']=config['real_background_bank']
+        vendor_bundle=nanodet_bundle()
+        training_sources={name:sha(HERE/name) for name in LEARNING_FILES}
+        training_sources.update({'nanodet-source.bin':hashlib.sha256(vendor_bundle).hexdigest(),
+                                 'nanodet-pretrained.bin':CHECKPOINT_SHA256})
+        validate_resume(config,training_sources)
+        config['training_source_sha256']=training_sources
     staging = staging.resolve()
     kernel_dir = staging.with_name(staging.name+'-kernel')
     frozen = ROOT/'docs/topface/v11/cloud'/f'{phase}-{revision}'
@@ -121,10 +157,7 @@ def prepare(phase, revision, staging, shard_inventory, pilot_acceptance, publish
         if sha(checkpoint) != CHECKPOINT_SHA256:
             raise ValueError('Pretrained checkpoint identity changed')
         shutil.copy2(checkpoint, staging/'nanodet-pretrained.bin')
-        with zipfile.ZipFile(staging/'nanodet-source.bin', 'w', zipfile.ZIP_DEFLATED) as bundle:
-            for source in sorted((HERE/'vendor/nanodet_core').rglob('*')):
-                if source.is_file() and '__pycache__' not in source.parts and source.suffix != '.pyc':
-                    bundle.write(source, source.relative_to(HERE).as_posix())
+        (staging/'nanodet-source.bin').write_bytes(vendor_bundle)
     atomic_json(staging/config_name, config)
     manifest = {'schema': 'topface-full-downstream-input-v1.1', 'run_id': run_id,
                 'created_utc': datetime.now(timezone.utc).isoformat(),

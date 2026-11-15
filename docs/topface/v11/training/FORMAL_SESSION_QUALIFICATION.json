@@ -1,0 +1,45 @@
+{
+  "status": "LOCAL_FORMAL_SESSION_EVIDENCE_GATE_QUALIFIED",
+  "observed_utc": "2026-11-15T02:28:49.479416+00:00",
+  "optimizer_updates": 0,
+  "gpu_resume_executed": false,
+  "cloud_publication_fixture_only": true,
+  "host_tests_passed": 61,
+  "new_formal_session_tests": 7,
+  "syntax_files": 99,
+  "learning_source_files": [
+    "train_experiment.py",
+    "task_training.py",
+    "nanodet_topface.py",
+    "evaluate_task.py",
+    "task_geometry.py",
+    "background_augmentation.py",
+    "dataset_diagnostics.py"
+  ],
+  "deterministic_vendor_zip": {
+    "bytes": 19158,
+    "sha256": "c647ad120fe48a987b5fb012fe360620b525865f063eb340bb9470d7faf94be3"
+  },
+  "checks": [
+    "clean epoch accepts last.pt while retaining earlier best.pt",
+    "unfinished boundary cannot become final model",
+    "final completed model selects best.pt",
+    "mid-epoch/failed/no-progress rejected",
+    "metadata-only publication and tampered compact rejected",
+    "partial optimizer update count and changed frozen config rejected",
+    "budget/background/dataset/session/learning source drift rejected"
+  ],
+  "read_only_review": "act_route_audit checked actual train/compact shapes and unchanged Full-audit branch; added its dataset_diagnostics dependency finding",
+  "limitations": [
+    "No actual GPU resume yet",
+    "No claim of bitwise CUDA recovery",
+    "Hard-preemption loose-checkpoint recovery remains unqualified"
+  ],
+  "unit_log_sha256": "6e3937eb8dc0eb1aa004adfd452c7b4adf4bbdd0e62f27f10bc243a5db924852",
+  "source_sha256": {
+    "research/topface/accept_full_downstream.py": "3e21efc4cf98456ba432cf1cd96b897fe34f11a6f35c71683fdcb95fcc603611",
+    "research/topface/prepare_full_downstream.py": "9994772707d78f345ea93c55e5def2ae15a5f70da5106187d267b11aa9170fd3",
+    "research/topface/train_experiment.py": "fb06362b3f453c72ec48e2a103115e23ccd82ea63d6d3c0e8be60878c2727dfd",
+    "research/topface/test_formal_session.py": "0609a1c30c4d295f07a57170eb4f45782d53a2df1d4b6fc8f18e54e7de07e9d4"
+  }
+}

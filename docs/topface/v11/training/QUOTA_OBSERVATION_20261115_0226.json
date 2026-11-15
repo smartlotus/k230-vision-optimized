@@ -1,0 +1,17 @@
+{
+  "status": "OFFICIAL_ACCELERATOR_QUOTA_OBSERVED",
+  "observed_utc": "2026-11-15T02:26:16.607462+00:00",
+  "refresh_time": "2026-11-21 00:00:00",
+  "units": "hours",
+  "source": "KaggleApi.quota_view / get_accelerator_quota_statistics",
+  "gpu": {
+    "used": 10.366249502499999,
+    "allowed": 30.0,
+    "remaining": 19.633750497500003
+  },
+  "tpu": {
+    "used": 0.0,
+    "allowed": 20.0,
+    "remaining": 20.0
+  }
+}
