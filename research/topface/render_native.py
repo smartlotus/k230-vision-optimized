@@ -85,9 +85,14 @@ def main():
         if args.count!=FRAMES*len(SCENARIOS) or args.seed!=BASE_SEED or args.start_index or args.scene_plan or args.qualification:
             raise ValueError('Redetection rendering requires the frozen sequence plan')
     scene_plan=None
+    body_only=False
     if args.scene_plan:
         from supplement_plan import planned_config
         scene_plan=json.loads(args.scene_plan.read_text(encoding='utf8'))
+        if scene_plan.get('schema')=='topface-body-only-plan-v1.1':
+            from body_negative_plan import planned_config
+            body_only=True
+            if args.seed!=scene_plan['base_seed']:raise ValueError('Negative plan seed differs from render identity')
         if scene_plan['count']!=args.count or len(scene_plan['scenes'])!=args.count:
             raise ValueError('Explicit scene plan count differs from registered run')
     args.assets=args.assets.resolve();args.output=args.output.resolve()
@@ -107,6 +112,7 @@ def main():
     instances=[]
     for index in range(5):
         obj=original.copy();obj.data=original.data.copy();bpy.context.collection.objects.link(obj)
+        if body_only:obj.pass_index=index+1
         obj.data.materials.clear()
         obj.data.materials.append(printed_material(f'body-{index}',(.5,.05,.02)))
         obj.data.materials.append(printed_material(f'top-{index}',(.5,.05,.02),top_id=index+1))
@@ -129,6 +135,7 @@ def main():
     scene.use_nodes=True;tree=scene.node_tree;tree.nodes.clear()
     layers=tree.nodes.new('CompositorNodeRLayers')
     bpy.context.view_layer.use_pass_material_index=True
+    if body_only:bpy.context.view_layer.use_pass_object_index=True
     composite=tree.nodes.new('CompositorNodeComposite');tree.links.new(layers.outputs['Image'],composite.inputs['Image'])
     mask_outputs=[]
     for index in range(5):
@@ -137,6 +144,13 @@ def main():
         output=tree.nodes.new('CompositorNodeOutputFile')
         output.format.file_format='PNG';output.format.color_mode='BW';output.format.color_depth='8'
         tree.links.new(mask.outputs['Alpha'],output.inputs[0]);mask_outputs.append(output)
+    body_output=None
+    if body_only:
+        mask=tree.nodes.new('CompositorNodeIDMask');mask.index=1;mask.use_antialiasing=False
+        tree.links.new(layers.outputs['IndexOB'],mask.inputs['ID value'])
+        body_output=tree.nodes.new('CompositorNodeOutputFile')
+        body_output.format.file_format='PNG';body_output.format.color_mode='BW';body_output.format.color_depth='8'
+        tree.links.new(mask.outputs['Alpha'],body_output.inputs[0])
     for frame in range(args.count):
         if time.monotonic()+30>=deadline:
             write_json(args.output/'PROGRESS.json',{'status':'BUDGET_STOP','completed_frames':frame,'requested_frames':args.count})
@@ -181,12 +195,18 @@ def main():
             occluder.rotation_euler=(0.,0.,config['objects'][0]['yaw_rad'])
         for index,output in enumerate(mask_outputs):
             output.base_path=str(directory);output.file_slots[0].path=f'mask-{index+1}-'
+        if body_only:
+            body_output.base_path=str(directory);body_output.file_slots[0].path='body-mask-'
         scene.render.filepath=str(directory/'rgb.png')
         bpy.ops.render.render(write_still=True)
         for index in range(5):
             files=list(directory.glob(f'mask-{index+1}-*.png'))
             if len(files)!=1:raise RuntimeError('Expected one face-index mask per slot')
             files[0].rename(directory/f'visible-{index+1}.png')
+        if body_only:
+            files=list(directory.glob('body-mask-*.png'))
+            if len(files)!=1:raise RuntimeError('Expected one fused-CAD object-ID mask')
+            files[0].rename(directory/'body-1.png')
         config.update(instances=labels,blender_projection_max_error_px=projection_error,
                       material_index_slots=5,blender_version=bpy.app.version_string)
         write_json(directory/'labels_raw.json',config)

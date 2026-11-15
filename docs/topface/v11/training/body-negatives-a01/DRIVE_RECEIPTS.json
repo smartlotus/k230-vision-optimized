@@ -1,0 +1,31 @@
+{
+  "status": "LOCAL_BODY_INPUTS_DURABLY_PUBLISHED",
+  "observed_utc": "2026-11-15T03:13:59.534273+00:00",
+  "files": [
+    {
+      "status": "FULL_BYTE_SHA256_PASS",
+      "run_id": "k230-topface-v11-body-bank-a01",
+      "file_id": "1D5LeJZWz6P9hISi8HvBqR6M4I_DYNBA9",
+      "name": "k230-topface-v11-body-bank-a01-0065a34de464018e.bin",
+      "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+      "bytes": 27035880,
+      "sha256": "0065a34de464018e4e9fb6ea8c845064540b01a1b899c192a61a3fc8b8656fda",
+      "readback_bytes": 27035880,
+      "origin": "AUTHORIZED_LOCAL_BLENDER_SOURCE; not relayed cloud output",
+      "automatic_replay": false
+    },
+    {
+      "status": "FULL_BYTE_SHA256_PASS",
+      "run_id": "k230-topface-v11-body-process-a01",
+      "file_id": "1mHenmD3OQ1sBa3cnuikRQ3X2ECnXAMvj",
+      "name": "k230-topface-v11-body-process-a01-a8049f98b75b3fcb.tar.gz",
+      "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+      "bytes": 30893635,
+      "sha256": "a8049f98b75b3fcb23191db61d48bd0a3beab648ca54141e42e7e20635c2cc91",
+      "readback_bytes": 30893635,
+      "origin": "AUTHORIZED_LOCAL_BLENDER_SOURCE; not relayed cloud output",
+      "automatic_replay": false
+    }
+  ],
+  "credentials_logged": false
+}

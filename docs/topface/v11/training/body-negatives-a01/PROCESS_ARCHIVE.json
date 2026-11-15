@@ -1,0 +1,24 @@
+{
+  "status": "LOCAL_ORIGINAL_RENDER_ARCHIVE_CREATED",
+  "archive": {
+    "name": "topface-body-negatives-a01-process.tar.gz",
+    "bytes": 30893635,
+    "sha256": "a8049f98b75b3fcb23191db61d48bd0a3beab648ca54141e42e7e20635c2cc91"
+  },
+  "rendered_frames": 120,
+  "source_audit_sha256": "30861406c4303f6c26ffefb3ce94921b6cd989cbf6908c4f8af5dee51c1891dd",
+  "local_origin": true,
+  "cloud_publication": "PENDING",
+  "snapshot_scope": {
+    "observed_utc": "2026-11-15T03:08:49.105248+00:00",
+    "scope": "Post-render source snapshot and actual original render/audit/dataflow outputs",
+    "run": "local-body-negative-a01",
+    "render_base_seed": 20261123,
+    "render_frames": 120,
+    "source_topology_modified": false,
+    "cad_glb_sha256": "99c4fa89054623b3d870d594ceb735cd78515389e58dd6339d9b59e97a381858",
+    "exact_prelaunch_code_manifest": "NOT_CAPTURED; snapshot includes later seed-identity guard and audit validation refinements",
+    "render_completion": "Actual original120frames retained; no replay",
+    "model_updates": 0
+  }
+}

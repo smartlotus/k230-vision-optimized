@@ -1,0 +1,12 @@
+{
+  "status": "REAUTHENTICATED_AND_FULL_BYTE_INPUT_PUBLICATION_VERIFIED",
+  "observed_utc": "2026-11-15T03:14:54.993096+00:00",
+  "previous_oauth_error": "invalid_grant",
+  "user_completed_browser_reauthorization": true,
+  "scope": "drive.file",
+  "destination_folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "full_byte_evidence": "../training/body-negatives-a01/DRIVE_RECEIPTS.json",
+  "original_full07_compute_replayed": false,
+  "credentials_logged": false,
+  "credential_backup": "Local CurrentUser DPAPI only, Git ignored"
+}

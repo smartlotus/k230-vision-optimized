@@ -1,0 +1,12 @@
+{
+  "status": "FULL_BYTE_SHA256_PASS",
+  "run_id": "k230-topface-v11-body-process-a01",
+  "file_id": "1mHenmD3OQ1sBa3cnuikRQ3X2ECnXAMvj",
+  "name": "k230-topface-v11-body-process-a01-a8049f98b75b3fcb.tar.gz",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "bytes": 30893635,
+  "sha256": "a8049f98b75b3fcb23191db61d48bd0a3beab648ca54141e42e7e20635c2cc91",
+  "readback_bytes": 30893635,
+  "origin": "AUTHORIZED_LOCAL_BLENDER_SOURCE; not relayed cloud output",
+  "automatic_replay": false
+}

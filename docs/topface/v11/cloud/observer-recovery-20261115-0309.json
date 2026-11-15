@@ -1,0 +1,29 @@
+{
+  "status": "STOPPED_LOCAL_OBSERVERS_RECONCILED",
+  "observed_utc": "2026-11-15T03:07:09.121458+00:00",
+  "original_cloud_run": "lotus30/k230-topface-v11-04-full-shard-07/1",
+  "cloud_status": "RUNNING",
+  "authoritative_observation": ".ops/local/topface-full07-user-check.json",
+  "previous_sessions_missing": [
+    89978,
+    25308
+  ],
+  "previous_pids_absent": {
+    "render_series": 16244,
+    "audit_waiter": 25356
+  },
+  "locks": [
+    {
+      "lock": "topface-full-series.lock",
+      "previous_pid": 16244,
+      "preserved_as": "topface-full-series.lock.20261115T0309.stopped"
+    },
+    {
+      "lock": "topface-full-audit-after-render.lock",
+      "previous_pid": 25356,
+      "preserved_as": "topface-full-audit-after-render.lock.20261115T0309.stopped"
+    }
+  ],
+  "reason": "Host handles disappeared; no matching process remains. Cloud job continues unchanged.",
+  "next_action": "Reattach original saved identities; accepted shards stay closed; no new Save for currentFull07"
+}

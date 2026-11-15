@@ -133,6 +133,7 @@ class FormalSessionTests(unittest.TestCase):
             baseline=copy.deepcopy(fixture.config);baseline.update(session=2,parent=parent)
             changes=[lambda c:c['experiment'].update(max_epochs=200),
                      lambda c:c.update(real_background_bank={'identity':'changed'}),
+                     lambda c:c.update(body_negative_bank={'identity':'changed'}),
                      lambda c:c['dataset_acceptance'].update(dataset_index_sha256='c'*64),
                      lambda c:c.update(session=3)]
             for change in changes:

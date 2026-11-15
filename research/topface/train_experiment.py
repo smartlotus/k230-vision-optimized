@@ -115,11 +115,13 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
           seed=20261114,batch_size=32,max_epochs=20,max_updates=None,deadline=None,selected_scenes=None,
           initial_checkpoint=None,initial_checkpoint_sha256=None,use_amp=False,
           formal_identity=None,resume_directory=None,resume_sha256=None,session_epochs=None,
-          ellipse_shape_loss=False,background_bank=None):
+          ellipse_shape_loss=False,background_bank=None,body_negative_bank=None):
     if kind not in ('overfit','pilot_pretrained','pilot_random_control','pilot_geometry_refine','formal_full'):
         raise ValueError('Unknown finite experiment')
     if background_bank is not None and kind!='formal_full':
         raise ValueError('The qualified real background policy belongs to the frozen formal experiment')
+    if body_negative_bank is not None and kind!='formal_full':
+        raise ValueError('Body-only source policy belongs to the frozen formal experiment')
     if not torch.cuda.is_available():raise RuntimeError('Kaggle GPU training admission requires CUDA; no silent CPU full training')
     if max_epochs<1 or max_epochs>200 or (max_updates is not None and not 1<=max_updates<=1000):
         raise ValueError('Training budget outside registered limits')
@@ -157,7 +159,7 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
     # Overfit starts fresh from original features; Pilot does not inherit its
     # fitted sixteen-image weights. Both Pilot controls start with the same RNG.
     dataset=TopFaceDataset(root,'train',width,height,scene_names=selected_scenes,augment=kind!='overfit',seed=seed,
-                          background_bank=background_bank)
+                          background_bank=background_bank,body_negative_bank=body_negative_bank)
     validation=TopFaceDataset(root,'train' if kind=='overfit' else 'val',width,height,
                               scene_names=selected_scenes if kind=='overfit' else None)
     criterion=TopFaceLoss(width,height,ellipse_shape_loss=ellipse_shape_loss).to(device)
@@ -190,6 +192,7 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
         'mixed_precision':use_amp,
         'ellipse_shape_loss':ellipse_shape_loss,
         'real_background_augmentation':dataset.backgrounds.identity if dataset.backgrounds is not None else None,
+        'body_only_augmentation':dataset.body_only.identity if dataset.body_only is not None else None,
         'validation_selection':('Prefer full Pilot gate, then rank by validation score' if kind=='pilot_geometry_refine'
                                 else 'mAP50_95 +.1color +.1medianEllipseIoU -.01min(medianVisibleCenterPx,20)'),
         'input_contract':output_contract(width,height),'test_evaluation':False,'real_evaluation':False,
@@ -219,7 +222,7 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
         recorded=previous['state']
         for key in ('formal_identity','schedule','runtime','dataset_audit_sha256','training_scenes',
                     'validation_scenes','width','height','batch_size','max_epochs','seed','learning_rate',
-                    'loss_weights','mixed_precision','real_background_augmentation'):
+                    'loss_weights','mixed_precision','real_background_augmentation','body_only_augmentation'):
             if recorded[key]!=state[key]:raise ValueError(f'Formal checkpoint differs in {key}')
         first_epoch=recorded['completed_epochs']
         steps=recorded['optimizer_updates']
@@ -280,6 +283,8 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
                     break
             epoch_started=time.monotonic()
             dataset.epoch=epoch;model.train();losses=[];assignment_counts=Counter()
+            dataset.body_counts.clear();dataset.body_used.clear()
+            if dataset.body_only is not None:dataset.body_trace=output/'body-negative-events.jsonl'
             for images,targets,_ in loader:
                 if time.monotonic()+120>=deadline:
                     state['status']='BUDGET_CHECKPOINT_STOP';stop=True;break
@@ -329,6 +334,9 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
                 'recall50':metrics['class_agnostic_recall50'],'matched_color_accuracy':metrics['matched_color_accuracy'],
                 'training_wall_seconds':validation_started-epoch_started,'validation_wall_seconds':validation_seconds,
                 'assignment_counts':dict(assignment_counts)})
+            if dataset.body_only is not None:
+                state['epoch_records'][-1]['body_only_augmentation']={**dict(dataset.body_counts),
+                    'distinct_source_members':len(dataset.body_used)}
             atomic_json(output/f'validation-epoch{epoch+1:03d}.json',metrics)
             if writer:writer.add_scalar('val/task_mAP50',metrics['task_mAP50'],steps)
             sanity_pass=kind=='overfit' and sanity_gate(metrics)['pass']

@@ -18,7 +18,8 @@ CHECKPOINT_SHA256 = 'f4c6080f3ef35a64c3030d559438b436462f227ce29700bca71327203e4
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 LEARNING_FILES=('train_experiment.py','task_training.py','nanodet_topface.py',
-                'evaluate_task.py','task_geometry.py','background_augmentation.py','dataset_diagnostics.py')
+                'evaluate_task.py','task_geometry.py','background_augmentation.py','dataset_diagnostics.py',
+                'body_negative_bank.py','geometry.py','scene_config.py')
 
 
 def read(path):
@@ -42,6 +43,7 @@ def validate_resume(config, training_sources=None):
     if (parent.get('experiment_config')!=config['experiment'] or
             parent.get('dataset_index_sha256')!=config['dataset_acceptance']['dataset_index_sha256'] or
             parent.get('real_background_bank')!=config.get('real_background_bank') or
+            parent.get('body_negative_bank')!=config.get('body_negative_bank') or
             training_sources is None or parent.get('training_source_sha256')!=training_sources or
             parent['session']!=config['session']-1 or
             not 0<parent['completed_epochs']<config['experiment']['max_epochs']):
@@ -62,7 +64,8 @@ def nanodet_bundle():
 
 def prepare(phase, revision, staging, shard_inventory, pilot_acceptance, publisher_receipt,
             dataset_acceptance=None, parent=None, session=1, session_epochs=100, max_epochs=100,
-            real_background_bank=None,real_background_qualification=None):
+            real_background_bank=None,real_background_qualification=None,
+            body_negative_bank=None,body_negative_qualification=None):
     if not revision.isalnum() or phase not in ('full-audit', 'formal'):
         raise ValueError('Explicit Full audit or formal revision required')
     pilot = read(pilot_acceptance)
@@ -119,7 +122,7 @@ def prepare(phase, revision, staging, shard_inventory, pilot_acceptance, publish
                   'dataset_acceptance': audit, 'pilot_admission': pilot}
         mounts.append(source_ref(previous['publication']))
         files += ['formal_job.py', 'downstream_job.py', 'task_geometry.py', 'task_training.py',
-                  'evaluate_task.py', 'train_experiment.py', 'nanodet_topface.py','background_augmentation.py']
+                  'evaluate_task.py', 'train_experiment.py', 'nanodet_topface.py','background_augmentation.py','body_negative_bank.py']
         if real_background_bank is not None:
             if real_background_qualification is None:
                 raise ValueError('Real background augmentation needs its actual qualification record')
@@ -133,6 +136,17 @@ def prepare(phase, revision, staging, shard_inventory, pilot_acceptance, publish
                 'manifest_sha256':background['manifest_sha256'],'identity':background['identity'],
                 'qualification_sha256':sha(real_background_qualification)}
             experiment['real_background_augmentation']=config['real_background_bank']
+        if body_negative_bank is not None:
+            if body_negative_qualification is None:raise ValueError('Body-only input needs its actual mask qualification')
+            body=read(body_negative_qualification)
+            if (body['status']!='BODY_ONLY_TRAIN_BANK_MASK_AND_GEOMETRY_QUALIFIED' or
+                    sha(body_negative_bank)!=body['archive']['sha256'] or
+                    body['identity']['source_scope']!='AUDITED_SYNTHETIC_TRAIN_ONLY'):
+                raise ValueError('Body-only bank differs from its qualified original-CAD train source')
+            config['body_negative_bank']={'archive_sha256':sha(body_negative_bank),
+                'manifest_sha256':body['manifest_sha256'],'identity':body['identity'],
+                'qualification_sha256':sha(body_negative_qualification)}
+            experiment['body_only_augmentation']=config['body_negative_bank']
         vendor_bundle=nanodet_bundle()
         training_sources={name:sha(HERE/name) for name in LEARNING_FILES}
         training_sources.update({'nanodet-source.bin':hashlib.sha256(vendor_bundle).hexdigest(),
@@ -153,6 +167,9 @@ def prepare(phase, revision, staging, shard_inventory, pilot_acceptance, publish
         if real_background_bank is not None:
             shutil.copy2(real_background_bank,staging/'real-background-bank.bin')
             shutil.copy2(real_background_qualification,staging/'REAL_BACKGROUND_QUALIFICATION.json')
+        if body_negative_bank is not None:
+            shutil.copy2(body_negative_bank,staging/'body-negative-bank.bin')
+            shutil.copy2(body_negative_qualification,staging/'BODY_NEGATIVE_QUALIFICATION.json')
         checkpoint = ROOT/'.ops/local/topface-g3-models/nanodet-plus-m_320_checkpoint.ckpt'
         if sha(checkpoint) != CHECKPOINT_SHA256:
             raise ValueError('Pretrained checkpoint identity changed')
@@ -213,6 +230,8 @@ if __name__ == '__main__':
         parser.add_argument('--'+name, type=Path)
     parser.add_argument('--real-background-bank',type=Path)
     parser.add_argument('--real-background-qualification',type=Path)
+    parser.add_argument('--body-negative-bank',type=Path)
+    parser.add_argument('--body-negative-qualification',type=Path)
     parser.add_argument('--session', type=int, default=1)
     parser.add_argument('--session-epochs', type=int, default=100)
     parser.add_argument('--max-epochs', type=int, default=100)

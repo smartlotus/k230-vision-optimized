@@ -66,6 +66,9 @@ def prepare(phase,revision,staging,parent,runtime_receipt,runtime_qualification,
             # The selected formal output retains an exact source copy, including
             # this INPUT_MANIFEST and background bank. Reuse that mounted copy;
             # mounting the original dataset too would make the hash locator ambiguous.
+        if selected.get('body_negative_bank') is not None:
+            config['ptq_body_negative_bank']=selected['body_negative_bank']
+            config['training_input']=selected['training_input']
     staging=staging.resolve()
     frozen=ROOT/f'docs/topface/v11/cloud/conversion-{label}-{revision}'
     kernel=staging.with_name(staging.name+'-kernel')
@@ -77,7 +80,7 @@ def prepare(phase,revision,staging,parent,runtime_receipt,runtime_qualification,
            'scene_config.py','geometry.py','dataset_diagnostics.py','task_geometry.py',
            'nanodet_topface.py','export_nanodet_candidate.py','export_trained_topface.py',
            'compile_trained_topface.py','evaluate_task.py','evaluate_final.py','task_training.py','input_locator.py',
-           'nncase_simulator.py','simulate_dataset.py','evaluate_saved_raw.py','background_augmentation.py')
+           'nncase_simulator.py','simulate_dataset.py','evaluate_saved_raw.py','background_augmentation.py','body_negative_bank.py')
     for name in names:
         shutil.copy2(HERE/name,staging/name)
     native=read(native_runtime/'NATIVE_EXPORT_RUNTIME.json')

@@ -1,0 +1,12 @@
+{
+  "status": "FULL_BYTE_SHA256_PASS",
+  "run_id": "k230-topface-v11-body-bank-a01",
+  "file_id": "1D5LeJZWz6P9hISi8HvBqR6M4I_DYNBA9",
+  "name": "k230-topface-v11-body-bank-a01-0065a34de464018e.bin",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "bytes": 27035880,
+  "sha256": "0065a34de464018e4e9fb6ea8c845064540b01a1b899c192a61a3fc8b8656fda",
+  "readback_bytes": 27035880,
+  "origin": "AUTHORIZED_LOCAL_BLENDER_SOURCE; not relayed cloud output",
+  "automatic_replay": false
+}

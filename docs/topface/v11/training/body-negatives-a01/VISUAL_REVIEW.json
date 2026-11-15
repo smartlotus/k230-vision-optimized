@@ -1,0 +1,52 @@
+{
+  "status": "REVIEWED_BODY_VISIBLE_TOP_OFFSCREEN",
+  "observed_utc": "2026-11-15T03:11:03.675036+00:00",
+  "reviewer": "coordinator native image inspection + independent read-only act_route_audit",
+  "previews": [
+    {
+      "name": "negative-preview-01.jpg",
+      "bytes": 50838,
+      "sha256": "7334262ba5cb8826c013556834d42c4df79970525070d6396982f9858a25651c",
+      "source_frame_indices": [
+        0,
+        7,
+        14,
+        21,
+        28,
+        35,
+        36,
+        43,
+        50,
+        57
+      ]
+    },
+    {
+      "name": "negative-preview-02.jpg",
+      "bytes": 48684,
+      "sha256": "0e31e8cea1ced69d964b2d443378b76159a76306337c07a48c804383ffec8d7a",
+      "source_frame_indices": [
+        64,
+        71,
+        72,
+        79,
+        86,
+        93,
+        100,
+        107,
+        108,
+        115
+      ]
+    }
+  ],
+  "scope": "20preview examples covering20camera groups; all120native mask/geometry checks in separatequalification",
+  "visual_findings": [
+    "Normal upright original fused bodies enter frame while target top remains outside",
+    "Sampled source colors and heights vary; no top visible in viewed examples"
+  ],
+  "independent_review": [
+    "all120sources/20traincamera groups/sixcolors checked",
+    "source seeds unique and disjoint fromFull10000",
+    "no heldout bank sources; positive slots preserved; world count and source identity retained"
+  ],
+  "training_quality_improvement": "NOT_YET_MEASURED"
+}

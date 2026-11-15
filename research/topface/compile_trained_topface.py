@@ -15,7 +15,7 @@ from cloud_store import atomic_json, sha
 from task_geometry import MEAN, STD, box_iou, decode, letterbox_bgr
 
 
-def load_samples(dataset, width, height, calibration_count, pair_count,backgrounds=None):
+def load_samples(dataset, width, height, calibration_count, pair_count,backgrounds=None,body_negatives=None):
     dataset = dataset.resolve()
     index = json.loads((dataset/'AUDIT_V11.json').read_text(encoding='utf8'))
     if index['status'] != 'PASS':
@@ -39,8 +39,11 @@ def load_samples(dataset, width, height, calibration_count, pair_count,backgroun
         if label['split'] != 'train' or label['scene_group_id'] != row['group']:
             raise ValueError('PTQ scene identity differs')
         image=cv2.imread(str(folder/'rgb.png'))
-        operations=[]
-        if backgrounds is not None and specimen_index not in paired_indices:
+        operations=[];body_event=None
+        if body_negatives is not None and specimen_index not in paired_indices:
+            image,label,body_event=body_negatives.maybe_replace(image,label,row,
+                np.random.default_rng(np.random.SeedSequence([20261114,int(index),0xCA2])))
+        if backgrounds is not None and specimen_index not in paired_indices and body_event is None:
             image,operations=backgrounds.apply(image,label['instances'],
                 np.random.default_rng(np.random.SeedSequence([20261114,int(index),0xCA1])))
         canvas, _ = letterbox_bgr(image, width, height)
@@ -50,6 +53,9 @@ def load_samples(dataset, width, height, calibration_count, pair_count,backgroun
         if backgrounds is not None and specimen_index not in paired_indices:
             traced['training_background_augmentation']={'bank_manifest_sha256':backgrounds.identity['manifest_sha256'],
                 'seed_components':[20261114,int(index),0xCA1],'paste_boxes_xyxy':operations}
+        if body_negatives is not None and specimen_index not in paired_indices:
+            traced['training_body_only_augmentation']={'bank_manifest_sha256':body_negatives.identity['manifest_sha256'],
+                'seed_components':[20261114,int(index),0xCA2],'replacement':body_event}
         specimens.append((traced, rgb, bgr))
     return ([value for i,value in enumerate(specimens) if i not in paired_indices],
             [value for i,value in enumerate(specimens) if i in paired_indices])
@@ -105,7 +111,7 @@ def compare_detections(reference, actual, width, height):
             'simulator_capacity':simulator_result['capacity_state']}
 
 
-def compile_model(export_dir, dataset, output, calibration_count=64, pair_count=12,background_bank=None):
+def compile_model(export_dir, dataset, output, calibration_count=64, pair_count=12,background_bank=None,body_negative_bank=None):
     export_dir = export_dir.resolve()
     dataset = dataset.resolve()
     export = json.loads((export_dir/'RESULT.json').read_text(encoding='utf8'))
@@ -123,7 +129,14 @@ def compile_model(export_dir, dataset, output, calibration_count=64, pair_count=
     if export['experiment']=='formal_full' and export.get('real_background_augmentation')!=(
             backgrounds.identity if backgrounds is not None else None):
         raise ValueError('Formal PTQ backgrounds differ from the trained augmentation policy')
-    calibration,paired = load_samples(dataset,width,height,calibration_count,pair_count,backgrounds)
+    body_negatives=None
+    if body_negative_bank is not None:
+        from body_negative_bank import BodyOnlyBank
+        body_negatives=BodyOnlyBank(body_negative_bank)
+    if export['experiment']=='formal_full' and export.get('body_only_augmentation')!=(
+            body_negatives.identity if body_negatives is not None else None):
+        raise ValueError('Formal PTQ body-only sources differ from trained augmentation')
+    calibration,paired = load_samples(dataset,width,height,calibration_count,pair_count,backgrounds,body_negatives)
     output = output.resolve()
     output.mkdir(parents=True,exist_ok=False)
     plugin_spec = importlib.util.find_spec('_nncase')
@@ -190,6 +203,9 @@ def compile_model(export_dir, dataset, output, calibration_count=64, pair_count=
         atomic_json(output/'output_contract.json',contract)
         result={'status':'TRAINED_MODEL_COMPILED_AND_PAIRED','identity':identity,'compiler_settings':settings,
                 'calibration_background_bank':backgrounds.identity if backgrounds is not None else None,
+                'calibration_body_only_bank':body_negatives.identity if body_negatives is not None else None,
+                'calibration_body_only_replacements':sum(bool(row.get('training_body_only_augmentation',{}).get('replacement'))
+                                                         for row,_,_ in calibration),
                 'calibration_members':[row for row,_,_ in calibration],
                 'paired_members':[row for row,_,_ in paired],'paired_measurements':comparisons}
         atomic_json(output/'RESULT.json',result)
@@ -212,5 +228,6 @@ if __name__ == '__main__':
     parser.add_argument('--calibration-count', type=int, default=64)
     parser.add_argument('--pair-count', type=int, default=12)
     parser.add_argument('--background-bank',type=Path)
+    parser.add_argument('--body-negative-bank',type=Path)
     result = compile_model(**vars(parser.parse_args()))
     print(json.dumps(result['identity'],indent=2))

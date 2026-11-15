@@ -96,11 +96,17 @@ def run(input_root, run_id, max_seconds):
         mount_training_source(input_root, root/'code')
         from train_experiment import train
         backgrounds=None
+        body_negatives=None
         if config.get('real_background_bank') is not None:
             from background_augmentation import unpack
             frozen_bank=config['real_background_bank']
             backgrounds=unpack(input_root/'real-background-bank.bin',root/'real-backgrounds',
                                frozen_bank['archive_sha256'],frozen_bank['manifest_sha256'])
+        if config.get('body_negative_bank') is not None:
+            from body_negative_bank import unpack as unpack_body
+            bank=config['body_negative_bank']
+            body_negatives=unpack_body(input_root/'body-negative-bank.bin',root/'body-negatives',
+                bank['archive_sha256'],bank['manifest_sha256'])
 
         stage('FORMAL_TRAINING')
         kwargs = ({'resume_directory': source, 'resume_sha256': parent['checkpoint_sha256']} if resume else {
@@ -114,6 +120,7 @@ def run(input_root, run_id, max_seconds):
                        formal_identity=immutable['experiment_id'], session_epochs=config['session_epochs'],
                        ellipse_shape_loss=immutable['ellipse_shape_loss'],
                        background_bank=backgrounds,
+                       body_negative_bank=body_negatives,
                        **kwargs)
         state.update({key: result[key] for key in (
             'status', 'completed_epochs', 'optimizer_updates', 'checkpoints', 'best_epoch',

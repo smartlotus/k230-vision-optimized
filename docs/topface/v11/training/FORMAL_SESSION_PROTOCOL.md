@@ -6,7 +6,7 @@
 
 1. 用既有 `collect_compact.py --training --publisher-route` 收取该确切版本的根 RESULT、formal_full/RESULT 和 BEST_METRICS，保留原字节。
 2. 用 `accept_full_downstream.py --phase formal-session` 接受该会话。`--output` 为会话接受记录，`--model-output` 为新的 resume parent；两者使用新文件名，不能覆盖历史记录。
-3. 下一次 `prepare_full_downstream.py --phase formal` 指向这个 parent，`--session` 加一，`--max-epochs` 保持原值；继续提供同一已审核背景 bank 和 qualification。revision/run_id 是新的会话交易身份，原 `experiment_id` 保持不变。
+3. 下一次 `prepare_full_downstream.py --phase formal` 指向这个 parent，`--session` 加一，`--max-epochs` 保持原值；继续提供同一已审核真实背景 bank 和 body-only bank 及其 qualification。revision/run_id 是新的会话交易身份，原 `experiment_id` 保持不变。
 4. 继续原本的私有 API Save、精确版本观察、云端发布和全字节校验。只有实际完成至少100 epochs 的 `FINITE_TRAINING_COMPLETE` 才走 `--phase formal` 接受为最终模型。
 
 resume parent 指向 `last.pt`，并单独保存 `best.pt` 哈希。best 可以来自较早 epoch。parent.archive 保存 Kaggle 原始文件名，publication 保存 Drive 的带摘要对象名，两者不能混用。

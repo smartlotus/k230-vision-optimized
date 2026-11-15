@@ -21,10 +21,15 @@ from cloud_store import sha
 
 class TopFaceDataset(Dataset):
     def __init__(self,root,split='train',width=320,height=192,scene_names=None,augment=False,seed=20261114,
-                 background_bank=None):
+                 background_bank=None,body_negative_bank=None):
         self.root=Path(root);self.width=width;self.height=height
         self.augment=augment;self.seed=seed;self.epoch=0;self.rows=[]
         self.backgrounds=None
+        self.body_only=None;self.body_counts=Counter();self.body_used=set();self.body_trace=None
+        if body_negative_bank is not None:
+            if split!='train' or not augment:raise ValueError('Body-only augmentation is restricted to augmented training')
+            from body_negative_bank import BodyOnlyBank
+            self.body_only=BodyOnlyBank(body_negative_bank)
         if background_bank is not None:
             if split!='train' or not augment:
                 raise ValueError('Real background augmentation is restricted to augmented training')
@@ -61,8 +66,21 @@ class TopFaceDataset(Dataset):
         label=json.loads((directory/'labels.json').read_text(encoding='utf8'))
         if label['split']!=row['split']:raise ValueError('Split identity changed')
         image=cv2.imread(str(directory/'rgb.png'))
+        replacement=None
         if self.augment:
-            if self.backgrounds is not None:
+            if self.body_only is not None:
+                self.body_counts['read_slots']+=1
+                if not label['instances']:self.body_counts['world_empty_slots']+=1
+                body_seed=[self.seed,self.epoch,index,0xB0]
+                image,label,replacement=self.body_only.maybe_replace(image,label,row,
+                    np.random.default_rng(np.random.SeedSequence(body_seed)))
+                if replacement is not None:
+                    self.body_counts['replacements']+=1;self.body_used.add(replacement['source_scene'])
+                    replacement.update(epoch=self.epoch,base_slot=index,seed_components=body_seed)
+                    if self.body_trace is not None:
+                        with Path(self.body_trace).open('a',encoding='utf8') as stream:
+                            stream.write(json.dumps(replacement)+'\n')
+            if self.backgrounds is not None and replacement is None:
                 background_rng=np.random.default_rng(np.random.SeedSequence([self.seed,self.epoch,index,0xB6]))
                 image,_=self.backgrounds.apply(image,label['instances'],background_rng)
             # No hue shift/channel swap; only small photometric degradation.
@@ -87,9 +105,12 @@ class TopFaceDataset(Dataset):
                 'center_valid':item['center_valid'],'center_visible':item['center_visible'],
                 'geometry_valid':item['geometry_valid'],'orientation_valid':item['orientation_valid'],
                 'visible_fraction':item['visible_fraction'],'truncated':item['truncated']})
-        return torch.from_numpy(image),targets,{'scene':row['scene'],'group':row['group'],
-            'camera_group':row['camera_group'],'split':row['split'],'expected_world_count':len(targets),'letterbox':info,
+        meta={'scene':row['scene'] if replacement is None else replacement['source_scene'],
+            'group':label['scene_group_id'],'camera_group':label['camera_group_id'],
+            'split':row['split'],'expected_world_count':len(targets),'letterbox':info,
             'camera_height_mm':label.get('camera_height_above_top_mm'),'camera_plane_angle_deg':label.get('plane_angle_deg')}
+        if replacement is not None:meta['body_only_augmentation']=replacement
+        return torch.from_numpy(image),targets,meta
 
 
 def collate(items):

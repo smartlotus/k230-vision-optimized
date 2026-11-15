@@ -76,15 +76,22 @@ def run(input_root,runtime_input,run_id,training_input_root=None):
             raise ValueError('Conversion dataset differs from the selected checkpoint')
         print('TOPFACE_MODEL_ARTIFACT_STAGE INPUTS_VERIFIED',flush=True)
         ptq_backgrounds=None
-        if config.get('ptq_background_bank') is not None:
+        ptq_body_negatives=None
+        if config.get('ptq_background_bank') is not None or config.get('ptq_body_negative_bank') is not None:
             training_input_root=Path(training_input_root).resolve()
             if sha(training_input_root/'INPUT_MANIFEST.json')!=config['training_input']['manifest_sha256']:
                 raise ValueError('PTQ background source differs from the frozen formal input')
             verify_inputs(training_input_root)
+        if config.get('ptq_background_bank') is not None:
             from background_augmentation import unpack
             bank=config['ptq_background_bank']
             ptq_backgrounds=unpack(training_input_root/'real-background-bank.bin',scratch/'ptq-backgrounds',
                                    bank['archive_sha256'],bank['manifest_sha256'])
+        if config.get('ptq_body_negative_bank') is not None:
+            from body_negative_bank import unpack as unpack_body
+            bank=config['ptq_body_negative_bank']
+            ptq_body_negatives=unpack_body(training_input_root/'body-negative-bank.bin',scratch/'ptq-body-negatives',
+                bank['archive_sha256'],bank['manifest_sha256'])
         parent=config['parent']
         source=unpack_session(mount,scratch/'parent',parent,parent['experiment'],('best.pt',),deadline-600)
         checkpoint=source/'best.pt'
@@ -116,6 +123,8 @@ def run(input_root,runtime_input,run_id,training_input_root=None):
                      '--calibration-count','64','--pair-count','12']
             if ptq_backgrounds is not None:
                 command.extend(['--background-bank',str(ptq_backgrounds)])
+            if ptq_body_negatives is not None:
+                command.extend(['--body-negative-bank',str(ptq_body_negatives)])
             process=subprocess.run(command,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=1800)
         if process.returncode:
             raise RuntimeError('Trained model compiler or Simulator failed')

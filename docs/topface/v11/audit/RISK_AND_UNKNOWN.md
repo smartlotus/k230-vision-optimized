@@ -10,6 +10,7 @@
 - 12张 train 留出图的30个ORT/Simulator检测全部匹配，但方向有效性有6次有效→无效、1次反向变化，不能判定全部几何数值验收通过。最终冻结模型需分别报告浮点和KModel的完整合成test指标；方向近圆退化和量化影响保留独立分母。[转换报告](../reports/PILOT_CONVERSION_A02.json)。
 - 正式训练已准备64个真实train背景裁片，针对机械夹具/线缆误检。它们仅在仿真目标框之外增强背景；真实图的中心/椭圆仍为UNKNOWN。此策略已验证数据隔离及目标像素/标签保持，改善误检的效果尚未训练验证。[策略与证据](../training/REAL_BACKGROUND_POLICY.json)。
 - 2026-11-15 的 Pilot 开发序列复测中，浮点模型在顶面完全出框、较大底座仍露出画面的4帧全部误检为顶面；同组28个可见顶面全部检出且颜色正确。此诊断序列仅175mm/90°/蓝黑两色，已用于开发评估，不能再称未见盲测；最终 Full 的独立合成test仍另行冻结。保留底座误检问题，不能假定增加训练轮数会自动消除。[原始记录](../reports/pilot-accuracy-20261115-a01/SEQUENCE_ONNX.json)。
+- 对Full原布局的独立检查发现0个顶面完全离框样本。已在本机用原CAD生成120张训练负例，全部mask/几何审计通过；只在同相机组的原空train槽位以25%概率替换，保留1world/0observable实例，val/test不变。实际584次数据集配对读取和train-only PTQ资格通过，改善质量仍待正式训练后验证。[负例来源、策略与证据](../training/body-negatives-a01/README.md)。
 - 正式训练的CUDA双线性插值反向存在上游非确定性；epoch边界记录RNG/optimizer不等于已验证bitwise CUDA无损恢复。计划单会话100epochs，实际停止/续接时必须保留此限制。
 - 旧Kaggle v8完成Drive115字节读回后在BlenderProc matplotlib backend安装冒烟失败；0渲染、0updates。用户已停止该旧运行，后续用新的run身份。
 - 用户已授权同范围独立私有GitHub发布器：仅临时短时Drive access token、签名源URL及单文件上传会话，终态删除Secret；不发送refresh token/client secret/Kaggle凭据。Full04原上传中断后已在相同文件ID/会话续传并完整读回，不重渲染；原失败记录保留在attempts目录。所有完整过程档案留云，主机收取受限报告及最终模型文件。

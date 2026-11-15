@@ -115,6 +115,7 @@ def formal_evidence(frozen, collected, publication):
             any(trace[key]!=experiment[key] for key in ('width','height','batch_size','max_epochs','ellipse_shape_loss')) or
             trace['seed']!=experiment['training_seed'] or
             trace['real_background_augmentation']!=(config.get('real_background_bank') or {}).get('identity') or
+            trace.get('body_only_augmentation')!=(config.get('body_negative_bank') or {}).get('identity') or
             trace['best_checkpoint_sha256']!=best['sha256'] or not 1<=trace['best_epoch']<=completed or
             schedule['epoch_batches']!=batches or schedule['target_updates']!=experiment['max_epochs']*batches or
             result['optimizer_updates']!=completed*batches or
@@ -145,6 +146,7 @@ def accept_formal_session(frozen, collected, publication, output, model_output):
         'checkpoint_sha256':last['sha256'],'last_checkpoint':last,'best_checkpoint':best,
         'dataset_index_sha256':config['dataset_acceptance']['dataset_index_sha256'],
         'real_background_bank':config.get('real_background_bank'),
+        'body_negative_bank':config.get('body_negative_bank'),
         'training_source_sha256':config['training_source_sha256'],
         'schedule':trace['schedule'],'runtime':trace['runtime'],
         'training_input':{'ref':intent['dataset'],'version':intent['dataset_version'],
@@ -180,6 +182,7 @@ def accept_formal(frozen, collected, publication, output, model_output):
         'training_input':{'ref':intent['dataset'],'version':intent['dataset_version'],
                           'manifest_sha256':intent['input_manifest_sha256']},
         'real_background_bank':config.get('real_background_bank'),
+        'body_negative_bank':config.get('body_negative_bank'),
         'archive':result['archive'], 'publication':durable})
     atomic_json(output, value)
     return value

@@ -1,0 +1,64 @@
+{
+  "status": "BODY_ONLY_TRAIN_BANK_MASK_AND_GEOMETRY_QUALIFIED",
+  "identity": {
+    "manifest_sha256": "7cbb603863f5c185497585ec33990e74891b4da762b230c2ea6e200d95a6cb79",
+    "source_audit_sha256": "30861406c4303f6c26ffefb3ce94921b6cd989cbf6908c4f8af5dee51c1891dd",
+    "source_scope": "AUDITED_SYNTHETIC_TRAIN_ONLY",
+    "policy": {
+      "probability": 0.25,
+      "eligibility": "ORIGINAL_WORLD_COUNT_ZERO_ONLY",
+      "camera_group_match": "EXACT",
+      "real_patch_after_replacement": false
+    },
+    "members": 120,
+    "camera_groups": [
+      "H100-P100-F65",
+      "H100-P85-F65",
+      "H100-P90-F68",
+      "H175-P100-F62",
+      "H175-P85-F62",
+      "H175-P90-F65",
+      "H175-P95-F68",
+      "H250-P100-F68",
+      "H250-P80-F65",
+      "H250-P85-F68",
+      "H250-P90-F62",
+      "H250-P95-F65",
+      "H325-P100-F65",
+      "H325-P80-F62",
+      "H325-P85-F65",
+      "H325-P90-F68",
+      "H325-P95-F62",
+      "H400-P80-F68",
+      "H400-P85-F62",
+      "H400-P95-F68"
+    ],
+    "supervision": "One retained world instance; zero observable top GT"
+  },
+  "manifest_sha256": "7cbb603863f5c185497585ec33990e74891b4da762b230c2ea6e200d95a6cb79",
+  "archive": {
+    "bytes": 27035880,
+    "sha256": "0065a34de464018e4e9fb6ea8c845064540b01a1b899c192a61a3fc8b8656fda"
+  },
+  "color_counts": {
+    "1": 20,
+    "2": 20,
+    "3": 20,
+    "4": 20,
+    "5": 20,
+    "6": 20
+  },
+  "edge_counts": {
+    "left": 30,
+    "right": 30,
+    "top": 30,
+    "bottom": 30
+  },
+  "body_mask_pixels": {
+    "min": 823,
+    "max": 21365
+  },
+  "source_audit_sha256": "30861406c4303f6c26ffefb3ce94921b6cd989cbf6908c4f8af5dee51c1891dd",
+  "original_full_archives_changed": false,
+  "training_effect_verified": false
+}

@@ -10,7 +10,7 @@ from cloud_store import atomic_json,sha
 from scene_config import camera_partition
 
 
-def audit(root,require_smoke=False):
+def audit(root,require_smoke=False,allow_body_only=False):
     root=Path(root);rows=[];issues=[];seeds=set();groups=set()
     count_hist={i:0 for i in range(6)};color_hist={i:0 for i in range(1,7)}
     image_hashes={};height_values=[];angle_values=[];max_center_error=0.;camera_splits={}
@@ -27,6 +27,10 @@ def audit(root,require_smoke=False):
         groups.add(raw['scene_group_id']);seeds.add(raw['random_seed'])
         expected=raw['expected_instance_count'];count_hist[expected]+=1
         if len(raw['instances'])!=expected:issue('INSTANCE_COUNT_MISMATCH')
+        body_case=allow_body_only and raw.get('negative_role')=='BODY_ONLY_TOP_OUTSIDE'
+        if allow_body_only and (not body_case or expected!=1 or effective_split!='train' or
+                               raw.get('occluder') or raw.get('hard_negative')):
+            issue('INVALID_BODY_ONLY_SOURCE')
         rgb=cv2.imread(str(directory/'rgb.png'))
         if rgb is None or rgb.shape!=(360,640,3):raise ValueError('Expected RGB 640x360')
         image_digest=sha(directory/'rgb.png')
@@ -72,7 +76,15 @@ def audit(root,require_smoke=False):
             conic_center=tuple(np.round(ellipse['center']).astype(int))
             cv2.ellipse(conic_mask,conic_center,axes,ellipse['orientation_deg'],0,360,1,-1)
             union=int((full|conic_mask).sum())
-            if raw.get('sequence_event')=='exit_and_reentry' and union==0:
+            outside_body=False
+            if body_case:
+                margin={'left':-float(boundary[:,0].max()),'right':float(boundary[:,0].min())-640.,
+                        'top':-float(boundary[:,1].max()),'bottom':float(boundary[:,1].min())-360.}.get(raw.get('negative_edge'),-1.)
+                body=cv2.imread(str(directory/'body-1.png'),0)
+                body_pixels=0 if body is None else int((body>=128).sum())
+                outside_body=margin>=4. and union==0 and visible_area==0 and body_pixels>=512 and body.shape==(360,640)
+                if not outside_body:issue('BODY_ONLY_MASK_OR_OFFSCREEN_GEOMETRY_MISMATCH',body_pixels=body_pixels)
+            if (raw.get('sequence_event')=='exit_and_reentry' or outside_body) and union==0:
                 fit_iou=None
             else:
                 fit_iou=float((full&conic_mask).sum()/max(1,union))
@@ -81,6 +93,7 @@ def audit(root,require_smoke=False):
             bbox=[int(xx.min()),int(yy.min()),int(xx.max()+1),int(yy.max()+1)] if len(xx) else None
             fraction=min(1.,visible_area/max(1.,full_area))
             occlusion=1-min(1.,visible_area/max(1,oncanvas))
+            if outside_body:occlusion=0.
             label={**item,'top_face_full_mask':f'full-{index}.png','bbox_xyxy_visible':bbox,
                 'bbox_xyxy':bbox,'center_xy':physical.tolist(),'center_xy_projected_3d':physical.tolist(),
                 'projected_3d_circle_center':physical.tolist(),'center_visible':center_visible,
@@ -134,5 +147,6 @@ def audit(root,require_smoke=False):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('root',type=Path)
-    parser.add_argument('--require-smoke',action='store_true');args=parser.parse_args()
-    print(json.dumps(audit(args.root,args.require_smoke)))
+    parser.add_argument('--require-smoke',action='store_true')
+    parser.add_argument('--allow-body-only',action='store_true');args=parser.parse_args()
+    print(json.dumps(audit(args.root,args.require_smoke,args.allow_body_only)))
