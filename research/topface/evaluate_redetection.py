@@ -85,7 +85,7 @@ def _measure(export_dir,dataset,output,trained,index,phase,simulator):
     runtime = session(export_dir/'topface.onnx') if simulator is None else None
     width,height = trained['width'],trained['height']
     groups = defaultdict(list)
-    for folder, label in audited_frames:
+    for frame_number, (folder, label) in enumerate(audited_frames, start=1):
         target = label['instances'][0]
         visible = target['visible_area_px']>=16
         image=cv2.imread(str(folder/'rgb.png'))
@@ -113,6 +113,9 @@ def _measure(export_dir,dataset,output,trained,index,phase,simulator):
             'matched':hit,'localized':localized,'target_color':target['color_id'],
             'matched_color':predicted_color,'detections':len(detections),
             'false_positives':len(detections)-int(localized)})
+        if simulator is not None and (frame_number % 32 == 0 or frame_number == len(audited_frames)):
+            print(json.dumps({'simulator_frames_completed': frame_number,
+                              'total_frames': len(audited_frames)}), flush=True)
     records = []
     for name,frames in sorted(groups.items()):
         frames.sort(key=lambda row:row['frame'])

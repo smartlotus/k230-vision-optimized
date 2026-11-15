@@ -21,7 +21,7 @@ def read(path):
     return json.loads(path.read_text(encoding='utf8'))
 
 
-def evaluate(conversion, dataset, sequence_acceptance, output):
+def evaluate(conversion, dataset, sequence_acceptance, output, sequence_candidate=None):
     model_receipt = conversion / 'MODEL_FILES_RECEIPT.json'
     report_receipt = conversion / 'REPORTS_RECEIPT.json'
     models, reports = read(model_receipt), read(report_receipt)
@@ -65,6 +65,7 @@ def evaluate(conversion, dataset, sequence_acceptance, output):
         pass
     try:
         results = {}
+        reused = {}
         for backend, (backend_name, digest_key) in BACKENDS.items():
             for kind, script, extra in (
                 ('historical_real', 'evaluate_real_r4.py', ['--phase', 'formal_historical_test']),
@@ -73,6 +74,18 @@ def evaluate(conversion, dataset, sequence_acceptance, output):
             ):
                 name = f'{kind}_{backend}'
                 target = output / f'{name}.json'
+                if name == 'synthetic_sequence_simulator' and not target.exists() and sequence_candidate is not None:
+                    candidate = read(sequence_candidate)
+                    if (candidate['status'] == SEQUENCE_STATUS and candidate['phase'] == 'formal' and
+                            candidate['backend'] == backend_name and candidate['model_sha256'] == identity[digest_key] and
+                            candidate['reference_onnx_sha256'] == identity['onnx_sha256'] and
+                            candidate['dataset_index_sha256'] == sequence_sha and
+                            candidate['sequence_count'] == accepted['sequences'] and
+                            candidate['denominators']['frames'] == accepted['images']):
+                        atomic_json(target, candidate)
+                        reused[name] = {'source_sha256': sha(sequence_candidate),
+                                        'kmodel_sha256': identity[digest_key],
+                                        'dataset_index_sha256': sequence_sha}
                 if not target.exists():
                     print(f'Running {name}', flush=True)
                     with (output / f'{name}.log').open('ab') as log:
@@ -99,6 +112,7 @@ def evaluate(conversion, dataset, sequence_acceptance, output):
                  'checkpoint_sha256': identity['checkpoint_sha256'], 'model_receipt_sha256': sha(model_receipt),
                  'synthetic_reports_receipt_sha256': sha(report_receipt),
                  'sequence_acceptance_sha256': sha(sequence_acceptance), 'evaluations': results,
+                 'reused_evaluations': reused,
                  'native_K230_test': 'NOT_RUN'}
         atomic_json(receipt, value)
         return value
@@ -110,4 +124,5 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     for argument in ('conversion', 'dataset', 'sequence-acceptance', 'output'):
         parser.add_argument('--' + argument, type=Path, required=True)
+    parser.add_argument('--sequence-candidate', type=Path)
     print(json.dumps(evaluate(**vars(parser.parse_args())), indent=2))

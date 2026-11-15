@@ -21,7 +21,7 @@
   "claimed": true,
   "agent": "codex",
   "session": "topface-20261116-delivery",
-  "revision": 81,
-  "handoff": ".ops/handoffs/topfacenet-sim2real-20261114/20261115T161544-8522954a.json",
-  "updated_at": "2026-11-15T16:16:25+00:00"
+  "revision": 82,
+  "handoff": ".ops/handoffs/topfacenet-sim2real-20261114/20261115T171112-d797bf67.json",
+  "updated_at": "2026-11-15T17:12:02+00:00"
 }
