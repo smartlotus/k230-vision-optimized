@@ -1,0 +1,41 @@
+{
+  "status": "BOUNDED_FORMAL_REPORT_COLLECTION_LOCAL_GATES_QUALIFIED",
+  "observed_utc": "2026-11-15T03:33:19.638796+00:00",
+  "scope": "Source/fixture gates only; actual formal model and934test remain pending",
+  "new_optimizer_updates": 0,
+  "actual_formal_reports_collected": 0,
+  "collection": {
+    "core_json": [
+      "SYNTHETIC_TEST.json",
+      "PAIRED_SYNTHETIC_TEST.json",
+      "exported/RESULT.json",
+      "compiled/RESULT.json"
+    ],
+    "failure_previews_limit": 12,
+    "json_member_max_bytes": 2097152,
+    "jpeg_member_max_bytes": 524288,
+    "total_max_bytes": 12582912,
+    "raw_arrays_or_dataset_allowed": false
+  },
+  "verification": {
+    "unit_tests": 77,
+    "new_report_tests": 7,
+    "syntax_files": 106,
+    "actual_inference_replayed": false,
+    "fixture_exercised": "Two generated fake raw rows,oneGTmiss=>oneJPEGandcompleteEVIDENCE; explicitlynotmodelquality"
+  },
+  "independent_review": "delivery_coverage_audit confirmed expected actualschema/paths/thresholds/denominators;no normalpath blockingfinding",
+  "remaining": [
+    "Execute formal training and frozen evaluation",
+    "Collect exact formal reports only after fullDrive archive acceptance",
+    "NativeKPU paired source/prepared/raw capture pending connectedboard"
+  ],
+  "source_sha256": {
+    "collect_model_files.py": "6347b6a7b1ee2a18e61d0317dbde3719d7cb395c6b8d9ab7d3c698d3bdf3ea52",
+    "collect_model_reports.py": "b396581991e1edf89e3cd05bb38b0617cd6dabb64031ee4969a36d56b452fb04",
+    "failure_previews.py": "b9d764d8f8746bea6e56b1b7d32c11ee5b15c225c3e770a29c752c5c84fc1fc7",
+    "model_artifact_job.py": "c87bf909e95ca4c501e430e3b5a8bf394f06050a1131557af9b24c4e3b92343d",
+    "prepare_model_artifact.py": "dc657399a6ad5ef20b9a027ac274e90779f3ccf823ecdd11c43905bc7ad40e99",
+    "test_model_reports.py": "9dfdb3c4e4db79aae86d6bddae3f668fd7c562ff792be9aca6b90f2a2ab6766a"
+  }
+}

@@ -18,10 +18,10 @@
   ],
   "branch": "ops/topfacenet-sim2real-20261114",
   "state": "paused",
-  "claimed": false,
+  "claimed": true,
   "agent": "codex",
-  "session": "topface-20261115-j",
-  "revision": 33,
-  "handoff": ".ops/handoffs/topfacenet-sim2real-20261114/20261115T031612-b4ce44e8.json",
-  "updated_at": "2026-11-15T03:17:40+00:00"
+  "session": "topface-20261115-k",
+  "revision": 35,
+  "handoff": ".ops/handoffs/topfacenet-sim2real-20261114/20261115T034102-b1d9a08f.json",
+  "updated_at": "2026-11-15T03:41:42+00:00"
 }

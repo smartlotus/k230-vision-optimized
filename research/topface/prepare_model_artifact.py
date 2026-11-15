@@ -80,7 +80,8 @@ def prepare(phase,revision,staging,parent,runtime_receipt,runtime_qualification,
            'scene_config.py','geometry.py','dataset_diagnostics.py','task_geometry.py',
            'nanodet_topface.py','export_nanodet_candidate.py','export_trained_topface.py',
            'compile_trained_topface.py','evaluate_task.py','evaluate_final.py','task_training.py','input_locator.py',
-           'nncase_simulator.py','simulate_dataset.py','evaluate_saved_raw.py','background_augmentation.py','body_negative_bank.py')
+           'nncase_simulator.py','simulate_dataset.py','evaluate_saved_raw.py','background_augmentation.py','body_negative_bank.py',
+           'failure_previews.py')
     for name in names:
         shutil.copy2(HERE/name,staging/name)
     native=read(native_runtime/'NATIVE_EXPORT_RUNTIME.json')

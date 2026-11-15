@@ -12,9 +12,7 @@ from collect_compact import download
 from prepare_full_shard import FOLDER_ID
 
 
-def collect(result, publication, token_file, output, receipt):
-    saved = json.loads(result.read_text(encoding='utf8'))
-    durable = json.loads(publication.read_text(encoding='utf8'))
+def validate_accepted_conversion(saved,durable):
     if (saved['status'] != 'TRAINED_EXPORT_COMPILE_AND_SIMULATOR_COMPLETE' or
             durable['status'] != 'DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED' or
             durable['secret_cleanup'] != 'CONFIRMED_DELETED' or
@@ -22,6 +20,12 @@ def collect(result, publication, token_file, output, receipt):
             durable['folder_id'] != FOLDER_ID or durable['uploaded']['provider_readback'] != 'FULL_BYTE_SHA256_PASS' or
             any(durable['uploaded'][key] != saved['archive'][key] for key in ('bytes', 'sha256'))):
         raise ValueError('Deliverables require the accepted original conversion archive')
+
+
+def collect(result, publication, token_file, output, receipt):
+    saved = json.loads(result.read_text(encoding='utf8'))
+    durable = json.loads(publication.read_text(encoding='utf8'))
+    validate_accepted_conversion(saved,durable)
     rows = saved['model_files']
     allowed = {'topface.onnx', 'topface.kmodel', 'identity.json', 'topface-board-bundle.tar.gz',
                'output_contract.json','topface-best.pt'}

@@ -147,6 +147,11 @@ def run(input_root,runtime_input,run_id,training_input_root=None):
                 raise RuntimeError('Frozen paired synthetic-test inference failed; preserve raw outputs')
             from evaluate_saved_raw import evaluate_raw
             task=evaluate_raw(dataset,paired,exported,output/'PAIRED_SYNTHETIC_TEST.json')
+            from failure_previews import render as render_errors
+            examples=render_errors(dataset,paired,task,output/'failure-previews')
+            state['error_previews']={'images_evaluated':examples['images_evaluated'],
+                'error_images_at_registered_rules':examples['error_images_at_registered_rules'],
+                'example_count':len(examples['examples']),'new_inference_passes':0}
             keys=('images','task_mAP50','task_mAP50_95','class_agnostic_precision50','class_agnostic_recall50',
                   'matched_color_accuracy','denominators','errors','capacity_accuracy','end_to_end_angle_coverage')
             state['paired_synthetic_test']={backend:{key:metrics[key] for key in keys}
@@ -159,6 +164,13 @@ def run(input_root,runtime_input,run_id,training_input_root=None):
                 stdout=subprocess.DEVNULL,stderr=subprocess.STDOUT,timeout=60)
             if process.returncode:
                 raise RuntimeError('Board package construction failed')
+        report_names=['exported/RESULT.json','compiled/RESULT.json']
+        if config['phase']=='formal_conversion':
+            report_names+=['SYNTHETIC_TEST.json','PAIRED_SYNTHETIC_TEST.json']
+            report_names+=['failure-previews/EVIDENCE.json']
+            report_names+=['failure-previews/'+row['name'] for row in examples['examples']]
+        state['evaluation_reports']=[{'path':name,'bytes':(output/name).stat().st_size,'sha256':sha(output/name)}
+                                     for name in report_names]
         models=root/(run_id+'-models')
         models.mkdir()
         delivery_files=(exported/'topface.onnx',output/'compiled/topface.kmodel',
