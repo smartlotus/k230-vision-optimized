@@ -1,0 +1,18 @@
+{
+  "status": "HOST_PACKAGING_FIXTURE_PASS",
+  "observed_utc": "2026-11-15T16:15:44.445398+00:00",
+  "fixture": "Real preview payload with temporary fake result records. Real preview was rejected by the production offline eligibility check.",
+  "fixture_zip_verified_members": 89,
+  "static_evidence_paths_checked": 28,
+  "drive_rows_with_preview_receipt_fixture": 17,
+  "real_full_release": "PENDING_ORIGINAL_CONVERSION_AND_HOST_REPORTS",
+  "native_board_test": "USER_DEFERRED_TEST",
+  "assembler_sha256": "f6feb76f3572abd6347a7544ab0cfb7a1ddfe3fa431802a05a7bace4546f84be",
+  "active_waiter": {
+    "pid": 23532,
+    "stage": "WAITING_FOR_ORIGINAL_HOST_EVALUATION_AND_PACKAGE",
+    "observed_utc": "2026-11-15T16:14:56.398076+00:00"
+  },
+  "waiter_entrypoint": ".ops/local/topface-wait-final-release-a01.py",
+  "expected_output": "C:/Users/28389/Desktop/k230-project/TopFaceNet-V1.1-Complete-a01.zip"
+}
