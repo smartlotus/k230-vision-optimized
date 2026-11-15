@@ -1,0 +1,35 @@
+{
+  "status": "BOUNDED_MODEL_DELIVERABLES_SHA256_PASS",
+  "run_id": "k230-topface-v11-conversion-pilot-a02",
+  "observed_utc": "2026-11-14T19:06:57.633624+00:00",
+  "source": {
+    "ref": "lotus30/k230-topface-v11-07b-pilot-conversion",
+    "kernel_id": 145051007,
+    "version": 2,
+    "provider_status": "COMPLETE",
+    "source_sha256": "2ac836c04f3490f9877ed33180d41b638e5bb8ab418ae84d3f6530d29f40e218"
+  },
+  "source_result_sha256": "4722e21e0a4e9405212804def76bcaf53f46ffc4b0bc8980bfed1f68aa4fc204",
+  "publication_receipt_sha256": "add4862a84c45ca7a680d169a29fac8212f156d3730ed45ba0972c74b051a07f",
+  "local_directory": "C:\\Users\\28389\\Desktop\\k230-vision-optimized\\.ops\\local\\topface-pilot-model-deliverables-a02",
+  "files": [
+    {
+      "path": "k230-topface-v11-conversion-pilot-a02-models/topface.onnx",
+      "bytes": 4758815,
+      "sha256": "52b0c08395714832793ad196dbf2921bcdc1618a402962fedc3a2d1fc88abf3c"
+    },
+    {
+      "path": "k230-topface-v11-conversion-pilot-a02-models/topface.kmodel",
+      "bytes": 1613096,
+      "sha256": "c5ec898ebc7cbd8fb82c3902565c02ab1876f556651ce91e7edbbd43e183ef68"
+    },
+    {
+      "path": "k230-topface-v11-conversion-pilot-a02-models/identity.json",
+      "bytes": 528,
+      "sha256": "9ed613f0c7efcf7d1405237d51f98122c175d357d309f1545244f8d4c402bbc5"
+    }
+  ],
+  "purpose": "User-requested deployable models; complete process archive remains in Drive",
+  "raw_archive_downloaded_to_host": false,
+  "board_test": "NOT_RUN"
+}

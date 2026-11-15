@@ -1,0 +1,14 @@
+{
+  "status": "REVIEWED_AND_HOST_TESTED",
+  "source_commit": "efc283f20ee254db38e37444526d40f6b49422e0",
+  "parent": "617877c4e1ed0878f0d7c1dd741557a9d6187e05",
+  "tree": "8d330db734f7a43b0812fc0a0989dd499773d340",
+  "changed_paths": [
+    "research/topface/publisher/ci_transfer.py"
+  ],
+  "ci_source_sha256": "def44ca5002e860ca4b34084612faeaa3a55ceb896a9e66cfeeb8a6427d56ae7",
+  "workflow_unchanged": true,
+  "tests": 48,
+  "scientific_compute_replayed": false,
+  "authorization": "Existing user approval for same-scope automated private Drive publisher and credential refresh"
+}

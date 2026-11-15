@@ -1,0 +1,17 @@
+{
+  "status": "RESUMABLE_RECOVERY_PREPARED",
+  "run_id": "k230-topface-v11-full-04-a01",
+  "original_github_run_id": 43647667793,
+  "reserved_drive_file_id": "1WPdhEL4-XDVK0HaggBZVXgCI5CJrOnLj",
+  "archive": {
+    "name": "k230-topface-v11-full-04-a01-1a61ec21c750802e.tar.gz",
+    "bytes": 300908968,
+    "sha256": "1a61ec21c750802e9a4cf57621e535347667ab314f34fdcde6250a892271b1a2"
+  },
+  "original_confirmed_bytes": 242221056,
+  "existing_complete_object": false,
+  "same_resumable_session": true,
+  "new_publisher_source_commit": "efc283f20ee254db38e37444526d40f6b49422e0",
+  "science_replayed": false,
+  "new_drive_object_allocated": false
+}

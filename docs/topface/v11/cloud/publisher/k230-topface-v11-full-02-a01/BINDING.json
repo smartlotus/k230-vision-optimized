@@ -1,0 +1,25 @@
+{
+  "schema": "topface-cloud-transfer-binding-v1.1",
+  "run_id": "k230-topface-v11-full-02-a01",
+  "archive": {
+    "name": "k230-topface-v11-full-02-a01-c89808a757e91243.tar.gz",
+    "bytes": 301046635,
+    "sha256": "c89808a757e91243a99cc7fe5aa916c776bc5633d80a6ffb241009b9cb357d5a"
+  },
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-04-full-shard-02",
+    "kernel_id": 145055100,
+    "version": 1,
+    "provider_status": "COMPLETE",
+    "source_sha256": "5fb272bdeb548372e1e3e71afacee491b01665ee6daa4120a520762f32237c48"
+  },
+  "drive_file_id": "1JZedVGL0jk1YrAs1VZAH-_ltDIdFjBb9",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "head": "9bcc8838056cc7c67fa839cebf1f625d4f15103e",
+  "branch": "ops/topface-transfer-1794686608653534400",
+  "secret_name": "TOPFACE_TRANSFER_1794686608653534400",
+  "publisher_source_commit": "617877c4e1ed0878f0d7c1dd741557a9d6187e05",
+  "created_utc": "2026-11-14T20:03:28.777503+00:00",
+  "automatic_replay": false,
+  "source_archive_path": "k230-topface-v11-full-02-a01.tar.gz"
+}

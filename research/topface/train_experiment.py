@@ -113,9 +113,11 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
           seed=20261114,batch_size=32,max_epochs=20,max_updates=None,deadline=None,selected_scenes=None,
           initial_checkpoint=None,initial_checkpoint_sha256=None,use_amp=False,
           formal_identity=None,resume_directory=None,resume_sha256=None,session_epochs=None,
-          ellipse_shape_loss=False):
+          ellipse_shape_loss=False,background_bank=None):
     if kind not in ('overfit','pilot_pretrained','pilot_random_control','pilot_geometry_refine','formal_full'):
         raise ValueError('Unknown finite experiment')
+    if background_bank is not None and kind!='formal_full':
+        raise ValueError('The qualified real background policy belongs to the frozen formal experiment')
     if not torch.cuda.is_available():raise RuntimeError('Kaggle GPU training admission requires CUDA; no silent CPU full training')
     if max_epochs<1 or max_epochs>200 or (max_updates is not None and not 1<=max_updates<=1000):
         raise ValueError('Training budget outside registered limits')
@@ -152,7 +154,8 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
             'parent_project_updates':parent['state']['optimizer_updates'],'new_optimizer_updates':0}
     # Overfit starts fresh from original features; Pilot does not inherit its
     # fitted sixteen-image weights. Both Pilot controls start with the same RNG.
-    dataset=TopFaceDataset(root,'train',width,height,scene_names=selected_scenes,augment=kind!='overfit',seed=seed)
+    dataset=TopFaceDataset(root,'train',width,height,scene_names=selected_scenes,augment=kind!='overfit',seed=seed,
+                          background_bank=background_bank)
     validation=TopFaceDataset(root,'train' if kind=='overfit' else 'val',width,height,
                               scene_names=selected_scenes if kind=='overfit' else None)
     criterion=TopFaceLoss(width,height,ellipse_shape_loss=ellipse_shape_loss).to(device)
@@ -184,6 +187,7 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
         'dataset_audit_sha256':dataset.audit_sha256,'learning_rate':lr,'loss_weights':criterion.weights,
         'mixed_precision':use_amp,
         'ellipse_shape_loss':ellipse_shape_loss,
+        'real_background_augmentation':dataset.backgrounds.identity if dataset.backgrounds is not None else None,
         'validation_selection':('Prefer full Pilot gate, then rank by validation score' if kind=='pilot_geometry_refine'
                                 else 'mAP50_95 +.1color +.1medianEllipseIoU -.01min(medianVisibleCenterPx,20)'),
         'input_contract':output_contract(width,height),'test_evaluation':False,'real_evaluation':False,
@@ -212,7 +216,7 @@ def train(root,output,checkpoint,kind='pilot_pretrained',width=320,height=192,
         recorded=previous['state']
         for key in ('formal_identity','schedule','runtime','dataset_audit_sha256','training_scenes',
                     'validation_scenes','width','height','batch_size','max_epochs','seed','learning_rate',
-                    'loss_weights','mixed_precision'):
+                    'loss_weights','mixed_precision','real_background_augmentation'):
             if recorded[key]!=state[key]:raise ValueError(f'Formal checkpoint differs in {key}')
         first_epoch=recorded['completed_epochs']
         steps=recorded['optimizer_updates']

@@ -1,0 +1,67 @@
+{
+  "status": "PILOT_REAL_VALIDATION_EVALUATED",
+  "phase": "pilot_validation",
+  "evaluation_split": "val",
+  "model_sha256": "52b0c08395714832793ad196dbf2921bcdc1618a402962fedc3a2d1fc88abf3c",
+  "manifest_sha256": "6d21a2e9d0a251c1161ee3b63345909d64ad1f8cda6d3f9be0e0c0454843e198",
+  "camera_id": 2,
+  "score_threshold": 0.25,
+  "matching_iou": 0.5,
+  "denominators": {
+    "color_labeled_matches": 2,
+    "correct_color": 2,
+    "images": 2,
+    "gt": 2,
+    "predictions": 5,
+    "tp": 2,
+    "fp": 3,
+    "fn": 0
+  },
+  "recall": 1.0,
+  "precision": 0.4,
+  "matched_color_accuracy": 1.0,
+  "colors": {
+    "1": {
+      "gt": 2,
+      "predictions": 2,
+      "correct": 2
+    },
+    "2": {},
+    "3": {},
+    "4": {},
+    "5": {
+      "predictions": 3
+    },
+    "6": {}
+  },
+  "rows": [
+    {
+      "image_id": "48b365d9c5ff60085a0f835f974986f91321e91a752b5593bca9a2d57f662b35",
+      "scene_group": "operator-confirmed-red-bench",
+      "gt": 1,
+      "predictions": 3,
+      "matched": [
+        {
+          "bbox_iou": 0.8979538306109897,
+          "approved_color": 1,
+          "predicted_color": 1
+        }
+      ]
+    },
+    {
+      "image_id": "86d28d9912c476108454dad00cfaefb1bc4926d295188153fa58d8d034ed88dd",
+      "scene_group": "operator-confirmed-red-bench",
+      "gt": 1,
+      "predictions": 2,
+      "matched": [
+        {
+          "bbox_iou": 0.9101307690827659,
+          "approved_color": 1,
+          "predicted_color": 1
+        }
+      ]
+    }
+  ],
+  "center_ellipse_source_truth": "UNAVAILABLE",
+  "fresh_real_blind_test": "NOT_RUN"
+}

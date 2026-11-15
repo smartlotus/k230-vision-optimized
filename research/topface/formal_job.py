@@ -38,7 +38,7 @@ def run(input_root, run_id, max_seconds):
     if not work.is_dir() or not mount.is_dir():
         raise ValueError('Formal session requires Kaggle input and output mounts')
     input_root = Path(input_root).resolve()
-    verify_inputs(input_root)
+    input_manifest=verify_inputs(input_root)
     config = json.loads((input_root/'FORMAL_CONFIG.json').read_text(encoding='utf8'))
     if config['run_id'] != run_id or config['max_seconds'] != max_seconds:
         raise ValueError('Formal session identity differs from the notebook')
@@ -52,6 +52,11 @@ def run(input_root, run_id, max_seconds):
     root.mkdir(exist_ok=False)
     output = root/'result'
     output.mkdir()
+    frozen_source=output/'source'
+    frozen_source.mkdir()
+    for member in input_manifest['files']:
+        shutil.copy2(input_root/member['path'],frozen_source/member['path'])
+    shutil.copy2(input_root/'INPUT_MANIFEST.json',frozen_source/'INPUT_MANIFEST.json')
     started = time.monotonic()
     deadline = started + max_seconds
     state = {'schema': 'topface-formal-session-v1.1', 'run_id': run_id,
@@ -83,6 +88,12 @@ def run(input_root, run_id, max_seconds):
             raise ValueError('Accepted parent checkpoint digest differs')
         mount_training_source(input_root, root/'code')
         from train_experiment import train
+        backgrounds=None
+        if config.get('real_background_bank') is not None:
+            from background_augmentation import unpack
+            frozen_bank=config['real_background_bank']
+            backgrounds=unpack(input_root/'real-background-bank.bin',root/'real-backgrounds',
+                               frozen_bank['archive_sha256'],frozen_bank['manifest_sha256'])
 
         stage('FORMAL_TRAINING')
         kwargs = ({'resume_directory': source, 'resume_sha256': parent['checkpoint_sha256']} if resume else {
@@ -95,6 +106,7 @@ def run(input_root, run_id, max_seconds):
                        max_epochs=immutable['max_epochs'], deadline=deadline-600,
                        formal_identity=immutable['experiment_id'], session_epochs=config['session_epochs'],
                        ellipse_shape_loss=immutable['ellipse_shape_loss'],
+                       background_bank=backgrounds,
                        **kwargs)
         state.update({key: result[key] for key in (
             'status', 'completed_epochs', 'optimizer_updates', 'checkpoints', 'best_epoch',

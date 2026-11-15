@@ -1,0 +1,11 @@
+{
+  "run_id": "k230-topface-v11-full-04-a01",
+  "reserved_drive_file_id": "1WPdhEL4-XDVK0HaggBZVXgCI5CJrOnLj",
+  "expected_bytes": 300908968,
+  "science_replayed": false,
+  "metadata_exists": false,
+  "metadata_http_status": 404,
+  "metadata_error_type": "HTTPError",
+  "session_http_status": 308,
+  "confirmed_bytes": 242221056
+}

@@ -123,7 +123,7 @@ def folder_for(run_id):
     return ROOT/'docs/topface/v11/cloud/publisher'/run_id
 
 
-def validate_binding(binding,spec=None):
+def validate_binding(binding,spec=None,compare_local_source=True):
     if binding.get('folder_id')!=FOLDER:raise ValueError('Binding destination differs')
     suffix=binding['secret_name'].removeprefix('TOPFACE_TRANSFER_')
     if not re.fullmatch(r'\d{8,30}',suffix) or binding['branch']!='ops/topface-transfer-'+suffix:
@@ -142,7 +142,7 @@ def validate_binding(binding,spec=None):
     # git show is decoded/re-encoded by command(text), so compare canonical
     # source lines here; the actual checkout retains source Git blob bytes.
     local=(ROOT/'research/topface/publisher/ci_transfer.py').read_text(encoding='utf8').strip()
-    if code!=local:raise ValueError('Installed publisher differs from reviewed implementation')
+    if compare_local_source and code!=local:raise ValueError('Installed publisher differs from reviewed implementation')
     workflow=command('git','show',source+':'+WORKFLOW)
     if workflow!=(ROOT/'research/topface/publisher/workflow.yml').read_text(encoding='utf8').strip():
         raise ValueError('Installed workflow differs from reviewed template')

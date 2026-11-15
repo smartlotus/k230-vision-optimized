@@ -1,0 +1,12 @@
+{
+  "status": "HOST_VERIFICATION_PASS",
+  "tests": 52,
+  "suite_command": "python -m unittest discover -s research/topface -p test_*.py",
+  "suite_log_local": ".ops/local/topface-current-verification.log",
+  "syntax_command": "python -m compileall -q research/topface",
+  "syntax_exit_code": 0,
+  "real_background_qualification": "../training/REAL_BACKGROUND_POLICY.json",
+  "actual_cloud_recovery": "../cloud/publisher/k230-topface-v11-full-04-a01/TRANSFER_RECEIPT.json",
+  "formal_cloud_training": "NOT_STARTED",
+  "board_measurements": "NOT_RUN"
+}

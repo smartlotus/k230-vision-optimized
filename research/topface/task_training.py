@@ -20,9 +20,16 @@ from cloud_store import sha
 
 
 class TopFaceDataset(Dataset):
-    def __init__(self,root,split='train',width=320,height=192,scene_names=None,augment=False,seed=20261114):
+    def __init__(self,root,split='train',width=320,height=192,scene_names=None,augment=False,seed=20261114,
+                 background_bank=None):
         self.root=Path(root);self.width=width;self.height=height
         self.augment=augment;self.seed=seed;self.epoch=0;self.rows=[]
+        self.backgrounds=None
+        if background_bank is not None:
+            if split!='train' or not augment:
+                raise ValueError('Real background augmentation is restricted to augmented training')
+            from background_augmentation import BackgroundBank
+            self.backgrounds=BackgroundBank(background_bank)
         audit=json.loads((self.root/'AUDIT_V11.json').read_text(encoding='utf8'))
         if audit['status']!='PASS':raise ValueError('Dataset QA must pass before training')
         requested=None if scene_names is None else set(scene_names)
@@ -55,6 +62,9 @@ class TopFaceDataset(Dataset):
         if label['split']!=row['split']:raise ValueError('Split identity changed')
         image=cv2.imread(str(directory/'rgb.png'))
         if self.augment:
+            if self.backgrounds is not None:
+                background_rng=np.random.default_rng(np.random.SeedSequence([self.seed,self.epoch,index,0xB6]))
+                image,_=self.backgrounds.apply(image,label['instances'],background_rng)
             # No hue shift/channel swap; only small photometric degradation.
             rng=np.random.default_rng(np.random.SeedSequence([self.seed,self.epoch,index]))
             image=np.clip(image.astype(np.float32)*rng.uniform(.9,1.1)+rng.normal(0,rng.uniform(0,2),image.shape),0,255).astype(np.uint8)

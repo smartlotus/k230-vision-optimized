@@ -1,0 +1,29 @@
+{
+  "run_id": "k230-topface-v11-full-03-a01",
+  "prep": {
+    "ref": "lotus30/k230-topface-v11-04-full-shard-03",
+    "kernel_id": 145063269,
+    "version": 1,
+    "provider_status": "COMPLETE",
+    "source_sha256": "07cf5ad5c950bf079e3ac2603912fd439b7ba8f16010d1670680596acb8f5c4e"
+  },
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "uploaded": {
+    "name": "k230-topface-v11-full-03-a01-84281a0fc72d1f9e.tar.gz",
+    "bytes": 302357243,
+    "sha256": "84281a0fc72d1f9ebb918491b177f9208d09d18174bc4e2257637caddf6a72c6",
+    "file_id": "1YWlqOhtTBrtKQ54fIEgySwmgo0NEqG1v",
+    "provider_readback": "FULL_BYTE_SHA256_PASS"
+  },
+  "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+  "automatic_replay": false,
+  "provider_mutations": 1,
+  "github": {
+    "run_id": 43640744177,
+    "head": "1aca42c987675e16989974ce5935f21335b5fa06",
+    "branch": "ops/topface-transfer-1794690192572543100"
+  },
+  "secret_cleanup": "CONFIRMED_DELETED",
+  "independent_metadata_match": true,
+  "raw_archive_downloaded_to_host": false
+}

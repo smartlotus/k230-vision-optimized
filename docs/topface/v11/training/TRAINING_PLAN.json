@@ -1,11 +1,11 @@
 {
   "schema": "topface-training-sequence-v1.1",
-  "status": "FULL_RENDER_SHARD_01_RUNNING",
+  "status": "FULL_RENDER_SERIES_IN_PROGRESS",
   "authorization": "User requested end-to-end V1.1 execution and approved Smoke -> Pilot; routine finite implementation budgets selected by agent",
   "current_optimizer_updates": 1506,
   "planned_logical_training_runs": 5,
   "planned_formal_full_training_runs": 1,
-  "candidate": "NanoDet-Plus-m task-head prototype first; final choice pending paired numerics and Pilot",
+  "candidate": "NanoDet-Plus-m TopFaceNet50-channel,320x192; selected trained Pilot and actual export/compile contract; final geometry and board measurements pending",
   "steps": [
     {
       "id": "overfit",
@@ -75,9 +75,10 @@
     "Five logical training experiments are planned including the focused geometry refinement and one formal Full experiment.",
     "Compatibility/export/PTQ/Simulator and data rendering are not optimizer training runs.",
     "No full training of both NanoDet and PicoDet. Pico original graph is a compatibility alternative.",
-    "GPU hours remain UNKNOWN until actual training throughput is measured. Provider quotas are observations, not a promised resource budget.",
+    "Full budget estimate uses measured Pilot epoch wall time; actual formal runtime and board FPS are pending.",
     "Failures preserve original attempts; no automatic replay of completed scientific work. Full generation is gated by Pilot, not by Smoke approval alone.",
-    "Post-generation conditional audit detected legacy color/count confounding before optimizer work.240new scenes supplement the accepted original1000; no original render replay and no extra logical model-training run."
+    "Post-generation conditional audit detected legacy color/count confounding before optimizer work.240new scenes supplement the accepted original1000; no original render replay and no extra logical model-training run.",
+    "After the fixed Pilot model produced3 background false positives on2 approved real-val frames, a64crop real-train-only background bank was qualified. It will augment the same single formal experiment outside protected synthetic target boxes; val/test images do not enter training."
   ],
   "gate_implementation": "research/topface/train_experiment.py; all finite ellipse/angle/empty/count denominators checked",
   "implementation_review": "IMPLEMENTATION_REVIEW.md",
@@ -111,5 +112,16 @@
     "numerical_direction_gate_passed": false
   },
   "actual_completed_logical_training_runs": 4,
-  "g4_readiness": "G4_READINESS.json"
+  "g4_readiness": "G4_READINESS.json",
+  "full_inventory": "FULL_INVENTORY.json",
+  "accepted_full_scenes_at_checkpoint": 4000,
+  "full_inventory_checkpoint_observed_utc": "2026-11-15T00:38:04.639324+00:00",
+  "formal_real_background_augmentation": {
+    "qualification": "REAL_BACKGROUND_POLICY.json",
+    "source": "Approved real train only;64 safe crops from4 frames",
+    "training_geometry": "Original synthetic CAD truth only; source real geometry remains UNKNOWN",
+    "no_extra_logical_training_run": true
+  },
+  "pilot_real_validation_report": "../reports/PILOT_REAL_VAL_A02.json",
+  "trained_conversion_report": "../reports/PILOT_CONVERSION_A02.json"
 }

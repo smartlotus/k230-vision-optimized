@@ -8,7 +8,9 @@ import zipfile
 
 from cloud_store import atomic_json, sha
 from prepare_full_shard import FOLDER_ID, SEED, TOTAL_SCENES
-from nanodet_topface import CHECKPOINT_SHA256
+# Same immutable official checkpoint pin as nanodet_topface, without importing
+# Torch into the isolated host control process.
+CHECKPOINT_SHA256 = 'f4c6080f3ef35a64c3030d559438b436462f227ce29700bca71327203e42dea2'
 
 
 HERE = Path(__file__).resolve().parent
@@ -29,7 +31,8 @@ def source_ref(receipt):
 
 
 def prepare(phase, revision, staging, shard_inventory, pilot_acceptance, publisher_receipt,
-            dataset_acceptance=None, parent=None, session=1, session_epochs=100, max_epochs=100):
+            dataset_acceptance=None, parent=None, session=1, session_epochs=100, max_epochs=100,
+            real_background_bank=None,real_background_qualification=None):
     if not revision.isalnum() or phase not in ('full-audit', 'formal'):
         raise ValueError('Explicit Full audit or formal revision required')
     pilot = read(pilot_acceptance)
@@ -86,7 +89,20 @@ def prepare(phase, revision, staging, shard_inventory, pilot_acceptance, publish
                   'dataset_acceptance': audit, 'pilot_admission': pilot}
         mounts.append(source_ref(previous['publication']))
         files += ['formal_job.py', 'downstream_job.py', 'task_geometry.py', 'task_training.py',
-                  'evaluate_task.py', 'train_experiment.py', 'nanodet_topface.py']
+                  'evaluate_task.py', 'train_experiment.py', 'nanodet_topface.py','background_augmentation.py']
+        if real_background_bank is not None:
+            if real_background_qualification is None:
+                raise ValueError('Real background augmentation needs its actual qualification record')
+            background=read(real_background_qualification)
+            if (background['status']!='REAL_TRAIN_BACKGROUND_BANK_QUALIFIED' or
+                    background['source_scope']!='APPROVED_REAL_TRAIN_ONLY' or
+                    background['real_val_or_test_used_for_training'] or
+                    sha(real_background_bank)!=background['archive']['sha256']):
+                raise ValueError('Real background inputs differ from the qualified train-only bank')
+            config['real_background_bank']={'archive_sha256':sha(real_background_bank),
+                'manifest_sha256':background['manifest_sha256'],'identity':background['identity'],
+                'qualification_sha256':sha(real_background_qualification)}
+            experiment['real_background_augmentation']=config['real_background_bank']
     staging = staging.resolve()
     kernel_dir = staging.with_name(staging.name+'-kernel')
     frozen = ROOT/'docs/topface/v11/cloud'/f'{phase}-{revision}'
@@ -98,6 +114,9 @@ def prepare(phase, revision, staging, shard_inventory, pilot_acceptance, publish
     for name in files:
         shutil.copy2(HERE/name, staging/name)
     if phase == 'formal':
+        if real_background_bank is not None:
+            shutil.copy2(real_background_bank,staging/'real-background-bank.bin')
+            shutil.copy2(real_background_qualification,staging/'REAL_BACKGROUND_QUALIFICATION.json')
         checkpoint = ROOT/'.ops/local/topface-g3-models/nanodet-plus-m_320_checkpoint.ckpt'
         if sha(checkpoint) != CHECKPOINT_SHA256:
             raise ValueError('Pretrained checkpoint identity changed')
@@ -159,6 +178,8 @@ if __name__ == '__main__':
         parser.add_argument('--'+name, type=Path, required=True)
     for name in ('dataset-acceptance', 'parent'):
         parser.add_argument('--'+name, type=Path)
+    parser.add_argument('--real-background-bank',type=Path)
+    parser.add_argument('--real-background-qualification',type=Path)
     parser.add_argument('--session', type=int, default=1)
     parser.add_argument('--session-epochs', type=int, default=100)
     parser.add_argument('--max-epochs', type=int, default=100)

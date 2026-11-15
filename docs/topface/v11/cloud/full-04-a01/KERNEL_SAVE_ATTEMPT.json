@@ -1,0 +1,9 @@
+{
+  "operation": "SAVE_AND_RUN_ALL",
+  "observed_utc": "2026-11-14T21:05:29.999737+00:00",
+  "ref": "lotus30/k230-topface-v11-04-full-shard-04",
+  "source_sha256": "e47c2aeef38f4a6c8929750f02173b84bfd1e1600c318f30c3bac3424949da02",
+  "session_timeout_seconds": 8100,
+  "scientific_execution": true,
+  "automatic_retry": false
+}

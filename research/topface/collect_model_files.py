@@ -9,6 +9,7 @@ from pathlib import Path
 
 from cloud_store import atomic_json, sha
 from collect_compact import download
+from prepare_full_shard import FOLDER_ID
 
 
 def collect(result, publication, token_file, output, receipt):
@@ -18,6 +19,7 @@ def collect(result, publication, token_file, output, receipt):
             durable['status'] != 'DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED' or
             durable['secret_cleanup'] != 'CONFIRMED_DELETED' or
             not durable['independent_metadata_match'] or durable['run_id'] != saved['run_id'] or
+            durable['folder_id'] != FOLDER_ID or durable['uploaded']['provider_readback'] != 'FULL_BYTE_SHA256_PASS' or
             any(durable['uploaded'][key] != saved['archive'][key] for key in ('bytes', 'sha256'))):
         raise ValueError('Deliverables require the accepted original conversion archive')
     rows = saved['model_files']

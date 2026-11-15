@@ -1,0 +1,1286 @@
+{
+  "schema": "topface-reviewed-background-bank-v1.1",
+  "source_scope": "APPROVED_REAL_TRAIN_ONLY",
+  "source_manifest_sha256": "6d21a2e9d0a251c1161ee3b63345909d64ad1f8cda6d3f9be0e0c0454843e198",
+  "source_exclusion_margin_px": 12,
+  "sources": [
+    {
+      "image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "split": "train",
+      "scene_group": "operator-confirmed-ygb-series-20261109-g",
+      "native_sha256": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "pixel_sha256": "c02799e09b804e932c7e499cc8b532e45294348e9ed56cf58d43643af375cc0b",
+      "approved_top_boxes_xyxy": [
+        [
+          382.206572769953,
+          86.18153364632234,
+          439.1705790297339,
+          143.77151799687007
+        ],
+        [
+          433.5367762128325,
+          165.6807511737089,
+          489.56181533646316,
+          222.33176838810633
+        ],
+        [
+          498.0125195618153,
+          251.1267605633803,
+          549.0297339593113,
+          311.8466353677621
+        ]
+      ],
+      "review_status": "APPROVED_ALL_VISIBLE_TOPS_CHECKED"
+    },
+    {
+      "image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "split": "train",
+      "scene_group": "operator-confirmed-ygb-series-20261109-g",
+      "native_sha256": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "pixel_sha256": "867945e064ea8d8e675184d6bb2323b3306299b966080a546d511942dcee45ed",
+      "approved_top_boxes_xyxy": [
+        [
+          386.2754303599374,
+          88.99843505477304,
+          437.6056338028169,
+          142.51956181533643
+        ],
+        [
+          436.0406885758998,
+          166.61971830985914,
+          489.2488262910798,
+          222.64475743348973
+        ],
+        [
+          500.20344287949916,
+          257.69953051643193,
+          549.0297339593113,
+          313.09859154929575
+        ]
+      ],
+      "review_status": "APPROVED_ALL_VISIBLE_TOPS_CHECKED"
+    },
+    {
+      "image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "split": "train",
+      "scene_group": "operator-confirmed-ygb-series-20261109-g",
+      "native_sha256": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "pixel_sha256": "1087ba59449bdd1e86532c8b7bf2b0585fbf625edb274bdd602e3d60bf52a779",
+      "approved_top_boxes_xyxy": [
+        [
+          380.95461658841936,
+          87.74647887323941,
+          439.1705790297339,
+          144.0845070422535
+        ],
+        [
+          437.29264475743344,
+          168.18466353677618,
+          488.3098591549296,
+          222.95774647887322
+        ],
+        [
+          502.70735524256645,
+          261.76838810641624,
+          548.716744913928,
+          312.78560250391234
+        ]
+      ],
+      "review_status": "APPROVED_ALL_VISIBLE_TOPS_CHECKED"
+    },
+    {
+      "image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "split": "train",
+      "scene_group": "operator-confirmed-ygb-series-20261109-g",
+      "native_sha256": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "pixel_sha256": "33f07ef26cd2264b2aab13814a6e76d9192fc84f46d5475369130d9ebeaf52d5",
+      "approved_top_boxes_xyxy": [
+        [
+          385.3364632237871,
+          87.12050078247256,
+          438.2316118935837,
+          140.95461658841938
+        ],
+        [
+          438.8575899843505,
+          165.05477308294206,
+          488.6228482003129,
+          220.14084507042253
+        ],
+        [
+          500.82942097026597,
+          262.3943661971831,
+          549.9687010954616,
+          314.037558685446
+        ]
+      ],
+      "review_status": "APPROVED_ALL_VISIBLE_TOPS_CHECKED"
+    }
+  ],
+  "members": [
+    {
+      "name": "patch-001.png",
+      "bytes": 5916,
+      "sha256": "381ddf0a5499997bcf72c136d8e0f4ac2445254d19711a6b0667414beffc3217",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "source_xyxy": [
+        320,
+        264,
+        416,
+        360
+      ],
+      "texture_std": 54.75138919699438
+    },
+    {
+      "name": "patch-002.png",
+      "bytes": 5663,
+      "sha256": "3e40e52eb5dc0a914150052af5b5c9d174bd4071f37adda127852a0596a3515b",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "source_xyxy": [
+        384,
+        264,
+        480,
+        360
+      ],
+      "texture_std": 51.00616927210327
+    },
+    {
+      "name": "patch-003.png",
+      "bytes": 5744,
+      "sha256": "b126a369f56d213c4bcdd16e1520912f6b077c00f433bea2072757f75a6672f7",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "source_xyxy": [
+        320,
+        256,
+        416,
+        352
+      ],
+      "texture_std": 49.652796851734685
+    },
+    {
+      "name": "patch-004.png",
+      "bytes": 5846,
+      "sha256": "001407afd014dfa1e6694a557416de3a94f83883ac141eaa93eaa5bd00bacbf7",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "source_xyxy": [
+        256,
+        256,
+        352,
+        352
+      ],
+      "texture_std": 47.4316436766879
+    },
+    {
+      "name": "patch-005.png",
+      "bytes": 5978,
+      "sha256": "c66e7ae7e7092f799766463b81620a2cda71c1da6547f806753e096766c802e8",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "source_xyxy": [
+        256,
+        264,
+        352,
+        360
+      ],
+      "texture_std": 47.047223338750584
+    },
+    {
+      "name": "patch-006.png",
+      "bytes": 5684,
+      "sha256": "ccbec577ef007ef37f67631c3dc9b26e341c5e44db5da2e32f2f4ff46a803801",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "source_xyxy": [
+        384,
+        256,
+        480,
+        352
+      ],
+      "texture_std": 46.55930359157535
+    },
+    {
+      "name": "patch-007.png",
+      "bytes": 8284,
+      "sha256": "63562b93b11a398ed9664feac9db7b4a269274570b67b15b5506e8e6f0d2c8fd",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "source_xyxy": [
+        64,
+        128,
+        160,
+        224
+      ],
+      "texture_std": 41.17161504863729
+    },
+    {
+      "name": "patch-008.png",
+      "bytes": 6172,
+      "sha256": "b727431345dacc0e13d2e8cea2e3e7da692d51fe7f6f39aadc62b0ad485efc7e",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "source_xyxy": [
+        192,
+        192,
+        288,
+        288
+      ],
+      "texture_std": 40.3468600179727
+    },
+    {
+      "name": "patch-009.png",
+      "bytes": 8752,
+      "sha256": "ae51c707ff478585bce12dc6e2a52b65f81f1ba3f8d62e380089aa21fe59f4b9",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "source_xyxy": [
+        128,
+        192,
+        224,
+        288
+      ],
+      "texture_std": 39.37277045825388
+    },
+    {
+      "name": "patch-010.png",
+      "bytes": 8749,
+      "sha256": "3f899ad621d2386f8336923437b2c83b3d6341a22d3da62375b15734f3631ca4",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "source_xyxy": [
+        544,
+        0,
+        640,
+        96
+      ],
+      "texture_std": 35.91033591659558
+    },
+    {
+      "name": "patch-011.png",
+      "bytes": 10113,
+      "sha256": "b78a3fa0ae0497f7c5a1027cbc6b1f0fbf836dc4deec17984c3b0df75cd32fa0",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "source_xyxy": [
+        64,
+        192,
+        160,
+        288
+      ],
+      "texture_std": 35.57388604686799
+    },
+    {
+      "name": "patch-012.png",
+      "bytes": 6575,
+      "sha256": "3ee97dac152e3c2a6226219fa8cfd203c75f61478820957363b5581428d21fe4",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "source_xyxy": [
+        192,
+        256,
+        288,
+        352
+      ],
+      "texture_std": 35.06830804676948
+    },
+    {
+      "name": "patch-013.png",
+      "bytes": 6661,
+      "sha256": "8404e16c526ca2eda9c5df5281f96c99721409fe90ab784ea465dd237efe7793",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "source_xyxy": [
+        192,
+        264,
+        288,
+        360
+      ],
+      "texture_std": 31.72257528481585
+    },
+    {
+      "name": "patch-014.png",
+      "bytes": 5179,
+      "sha256": "940a27fde41f42d7e7ae066d9f357295d0ac1e398b06cc05c5e082a76e0986af",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "source_xyxy": [
+        0,
+        128,
+        96,
+        224
+      ],
+      "texture_std": 31.572253944568534
+    },
+    {
+      "name": "patch-015.png",
+      "bytes": 7924,
+      "sha256": "9ec23a0e55488bae0d946594d63f9eb4f000cd276cbaa254667e27ef671787cf",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "source_xyxy": [
+        0,
+        192,
+        96,
+        288
+      ],
+      "texture_std": 30.953950673947638
+    },
+    {
+      "name": "patch-016.png",
+      "bytes": 7744,
+      "sha256": "824e0aafc1c50b3a7fa6f4e9d151830d3e238b91411d31108995fb47cb988bac",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "source_xyxy": [
+        64,
+        256,
+        160,
+        352
+      ],
+      "texture_std": 30.836306499447165
+    },
+    {
+      "name": "patch-017.png",
+      "bytes": 5739,
+      "sha256": "f48bc597d9bf87a741562b95f6a517724907e2e414d2ab5ae5a7ce77d8effe47",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "source_xyxy": [
+        320,
+        264,
+        416,
+        360
+      ],
+      "texture_std": 55.19508532596954
+    },
+    {
+      "name": "patch-018.png",
+      "bytes": 5463,
+      "sha256": "97caf9ca7e7327cc3ad1380f9d6a2bc5a381614a371bb0c9201559a1e966475a",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "source_xyxy": [
+        384,
+        264,
+        480,
+        360
+      ],
+      "texture_std": 51.138449361306265
+    },
+    {
+      "name": "patch-019.png",
+      "bytes": 5491,
+      "sha256": "bbf4ee1e8a8002e182c7de0c6862f9187e4cd0f26d5b986497cad2b33a637525",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "source_xyxy": [
+        320,
+        256,
+        416,
+        352
+      ],
+      "texture_std": 50.07247087606018
+    },
+    {
+      "name": "patch-020.png",
+      "bytes": 5746,
+      "sha256": "28c6dd2c20349d9a512d8c699aeff22df8f7bdb8b38ece39a569c9eb85812e15",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "source_xyxy": [
+        256,
+        256,
+        352,
+        352
+      ],
+      "texture_std": 47.792575497792924
+    },
+    {
+      "name": "patch-021.png",
+      "bytes": 5886,
+      "sha256": "278529773b128827adaa9b4559d19a64bad54e0a70ca98817a6d79e87aa9e77b",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "source_xyxy": [
+        256,
+        264,
+        352,
+        360
+      ],
+      "texture_std": 47.445125505337145
+    },
+    {
+      "name": "patch-022.png",
+      "bytes": 5434,
+      "sha256": "dfd4d61deffb1ffece39af560d64d556485cb122b112bf4b38fad5d76ae51e17",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "source_xyxy": [
+        384,
+        256,
+        480,
+        352
+      ],
+      "texture_std": 46.64322173322956
+    },
+    {
+      "name": "patch-023.png",
+      "bytes": 8209,
+      "sha256": "4196be1b18a0e73c771ab79b61a379ab5db26a5968ba2d438264312d66e06cf9",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "source_xyxy": [
+        64,
+        128,
+        160,
+        224
+      ],
+      "texture_std": 41.3776949030154
+    },
+    {
+      "name": "patch-024.png",
+      "bytes": 6061,
+      "sha256": "a01765940a6220728aea5eeefa69359c71367b57a1237c9ab8f469fcba085206",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "source_xyxy": [
+        192,
+        192,
+        288,
+        288
+      ],
+      "texture_std": 40.232719032751575
+    },
+    {
+      "name": "patch-025.png",
+      "bytes": 8760,
+      "sha256": "71247992dedba8ec30de1b9def3da2383cd620e13f7323d6ddac8fd455518399",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "source_xyxy": [
+        128,
+        192,
+        224,
+        288
+      ],
+      "texture_std": 39.39000487723182
+    },
+    {
+      "name": "patch-026.png",
+      "bytes": 8894,
+      "sha256": "da68119fead20c7c8e5bde28f76b61193904908603799e304caa607074161b07",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "source_xyxy": [
+        544,
+        0,
+        640,
+        96
+      ],
+      "texture_std": 36.402511308983556
+    },
+    {
+      "name": "patch-027.png",
+      "bytes": 10083,
+      "sha256": "1a00b4dc7c67c58208a64a89ad352f8c05e67bdba1994b3fa6dcd1a479b778c2",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "source_xyxy": [
+        64,
+        192,
+        160,
+        288
+      ],
+      "texture_std": 35.38097395684333
+    },
+    {
+      "name": "patch-028.png",
+      "bytes": 6453,
+      "sha256": "624a09fa60d0daf3e1f609d0162052837c2221c654ee7ef9bb29fad71bf0b6a1",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "source_xyxy": [
+        192,
+        256,
+        288,
+        352
+      ],
+      "texture_std": 35.30723737046914
+    },
+    {
+      "name": "patch-029.png",
+      "bytes": 6528,
+      "sha256": "37095f82686b79b694f6a790208aa5f4e2a98eebd3e383a358b8e949145a5f43",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "source_xyxy": [
+        192,
+        264,
+        288,
+        360
+      ],
+      "texture_std": 31.88094845767579
+    },
+    {
+      "name": "patch-030.png",
+      "bytes": 5076,
+      "sha256": "273566e59941f111ea5baf6e6cabfc98267e60244682d0a3fdddef483721aca8",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "source_xyxy": [
+        0,
+        128,
+        96,
+        224
+      ],
+      "texture_std": 31.75291966978995
+    },
+    {
+      "name": "patch-031.png",
+      "bytes": 7688,
+      "sha256": "46e1245cc765b38f7ff35f9a7cd0d307197bd7264a3327ee2546612495c7eff3",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "source_xyxy": [
+        64,
+        256,
+        160,
+        352
+      ],
+      "texture_std": 30.95025819702584
+    },
+    {
+      "name": "patch-032.png",
+      "bytes": 7697,
+      "sha256": "af70cf8c065778f63259e790f76c7bc06562e5c0bafb28f0f7403f913ffcf6a8",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "source_xyxy": [
+        0,
+        192,
+        96,
+        288
+      ],
+      "texture_std": 30.823307200993252
+    },
+    {
+      "name": "patch-033.png",
+      "bytes": 5775,
+      "sha256": "a25c30dd675147e0ca736d7332aaa029b6bf1f8a1b7b4c0d40d82f991839781b",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "source_xyxy": [
+        320,
+        264,
+        416,
+        360
+      ],
+      "texture_std": 55.003982327418115
+    },
+    {
+      "name": "patch-034.png",
+      "bytes": 5533,
+      "sha256": "9d992fc5727995589920ecd19fe7287f16436457072cc2aa8743b9477817c7a2",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "source_xyxy": [
+        384,
+        264,
+        480,
+        360
+      ],
+      "texture_std": 51.05575254870666
+    },
+    {
+      "name": "patch-035.png",
+      "bytes": 5709,
+      "sha256": "39246f0f0880da2b936e95e18e17b5390b00d2a87e8f492451b7a072db1071c2",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "source_xyxy": [
+        320,
+        256,
+        416,
+        352
+      ],
+      "texture_std": 49.76678515292857
+    },
+    {
+      "name": "patch-036.png",
+      "bytes": 5798,
+      "sha256": "df3f597d491f11171a84ff16b357c0e9891e106034ff1a3dec8931d00dcb44c5",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "source_xyxy": [
+        256,
+        256,
+        352,
+        352
+      ],
+      "texture_std": 47.33897529252635
+    },
+    {
+      "name": "patch-037.png",
+      "bytes": 5812,
+      "sha256": "6e84ca9cbf4f82b07c28365360c6a19b1e7744e703ad0974d78fa635dd92fbcb",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "source_xyxy": [
+        256,
+        264,
+        352,
+        360
+      ],
+      "texture_std": 47.10881329464317
+    },
+    {
+      "name": "patch-038.png",
+      "bytes": 5596,
+      "sha256": "aa80d695bb4a90d2ea0a852db53a7037f7383eacad69d4b7a1bd3ae577fdd6a7",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "source_xyxy": [
+        384,
+        256,
+        480,
+        352
+      ],
+      "texture_std": 46.53323486298578
+    },
+    {
+      "name": "patch-039.png",
+      "bytes": 8238,
+      "sha256": "0a143563ecc05a8817193c15a107062526f0f82c91449da43531cfe35eb7589f",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "source_xyxy": [
+        64,
+        128,
+        160,
+        224
+      ],
+      "texture_std": 41.173599008965994
+    },
+    {
+      "name": "patch-040.png",
+      "bytes": 6272,
+      "sha256": "6bc0c15b2d4daecc4a3f288269b074e06cc26e1a30a8495710ba2462085f5309",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "source_xyxy": [
+        192,
+        192,
+        288,
+        288
+      ],
+      "texture_std": 40.091987805107564
+    },
+    {
+      "name": "patch-041.png",
+      "bytes": 8819,
+      "sha256": "4d4108c431813edbf61a948f42d4f6930c58612b3d36f1023385518910be1004",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "source_xyxy": [
+        128,
+        192,
+        224,
+        288
+      ],
+      "texture_std": 39.368784896097836
+    },
+    {
+      "name": "patch-042.png",
+      "bytes": 8752,
+      "sha256": "ef81a0938db87c29f03c0d3a8b5770a20e74973f78b5afe62fb3af4c040c019a",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "source_xyxy": [
+        544,
+        0,
+        640,
+        96
+      ],
+      "texture_std": 35.604316727809135
+    },
+    {
+      "name": "patch-043.png",
+      "bytes": 10104,
+      "sha256": "f72ccd8e74d7cb136f026f6478111a17910159239af791bb209258ac0d79a28d",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "source_xyxy": [
+        64,
+        192,
+        160,
+        288
+      ],
+      "texture_std": 35.379069734190644
+    },
+    {
+      "name": "patch-044.png",
+      "bytes": 6570,
+      "sha256": "dd13166c541f062152f1a237e860d6af62c633f04f596123f37344be1262d672",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "source_xyxy": [
+        192,
+        256,
+        288,
+        352
+      ],
+      "texture_std": 34.94094154912297
+    },
+    {
+      "name": "patch-045.png",
+      "bytes": 5067,
+      "sha256": "399b099119fc72f8b76e56e76c71b8dfb051738c85bfe242681bbfec1b251ed8",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "source_xyxy": [
+        0,
+        128,
+        96,
+        224
+      ],
+      "texture_std": 31.660534337248777
+    },
+    {
+      "name": "patch-046.png",
+      "bytes": 6571,
+      "sha256": "7a2ae215806bc47ce77e869120cb7d06c774d95650ac4c7dc17d3139593d4231",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "source_xyxy": [
+        192,
+        264,
+        288,
+        360
+      ],
+      "texture_std": 31.624301974549493
+    },
+    {
+      "name": "patch-047.png",
+      "bytes": 7936,
+      "sha256": "204288eec388a938044de495033417b7ce566a0fb0dfbd861382804e1046ff83",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "source_xyxy": [
+        0,
+        192,
+        96,
+        288
+      ],
+      "texture_std": 30.91879678219858
+    },
+    {
+      "name": "patch-048.png",
+      "bytes": 7725,
+      "sha256": "f1c624b2fd2d7d61ed28dbce6b8f2aec626ee1e1e941571e03f77ade857820af",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "source_xyxy": [
+        64,
+        256,
+        160,
+        352
+      ],
+      "texture_std": 30.77640964666826
+    },
+    {
+      "name": "patch-049.png",
+      "bytes": 5859,
+      "sha256": "9ebaf83707aa2a31be2bd0b68e3fc0546d1782cd1f76d05b7354f75933e71df5",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "source_xyxy": [
+        320,
+        264,
+        416,
+        360
+      ],
+      "texture_std": 54.67526135513452
+    },
+    {
+      "name": "patch-050.png",
+      "bytes": 5650,
+      "sha256": "ad7476261a2b6a83e3ed05dbdbd05b03dff867661ab5bff248a593f22383d3df",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "source_xyxy": [
+        384,
+        264,
+        480,
+        360
+      ],
+      "texture_std": 50.9227908730932
+    },
+    {
+      "name": "patch-051.png",
+      "bytes": 5695,
+      "sha256": "e93a668e90563259da2fd90b1ffe827b15b4bad44b1f50fa9aff0a01f93fc913",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "source_xyxy": [
+        320,
+        256,
+        416,
+        352
+      ],
+      "texture_std": 49.57128775844245
+    },
+    {
+      "name": "patch-052.png",
+      "bytes": 5682,
+      "sha256": "27212ac95ded645e1eb0577e8be99520949ba6cbddfce98fb2c25a6e681c5142",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "source_xyxy": [
+        256,
+        256,
+        352,
+        352
+      ],
+      "texture_std": 47.37948806324124
+    },
+    {
+      "name": "patch-053.png",
+      "bytes": 5905,
+      "sha256": "cc6159346f1570e8c7ff01c63f5d72ad8983fb67d876cf9082e08a738e4b464c",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "source_xyxy": [
+        256,
+        264,
+        352,
+        360
+      ],
+      "texture_std": 46.9828665110436
+    },
+    {
+      "name": "patch-054.png",
+      "bytes": 5701,
+      "sha256": "ba26e970b7f62504bbf83cea93fdc7101b3ebf60d1b4fd283d3bcfbb9f97e177",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "source_xyxy": [
+        384,
+        256,
+        480,
+        352
+      ],
+      "texture_std": 46.49162806550431
+    },
+    {
+      "name": "patch-055.png",
+      "bytes": 8298,
+      "sha256": "2777a7b9661b5f311a4e9ae59a21f4ca2cde2e2c6767f5cd79df9d24c60b0679",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "source_xyxy": [
+        64,
+        128,
+        160,
+        224
+      ],
+      "texture_std": 41.2618786760766
+    },
+    {
+      "name": "patch-056.png",
+      "bytes": 6122,
+      "sha256": "f260df7e396839f3c988196fdcf8b3ace302a66d05b7e909e345f3f038b10b51",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "source_xyxy": [
+        192,
+        192,
+        288,
+        288
+      ],
+      "texture_std": 40.29358355604751
+    },
+    {
+      "name": "patch-057.png",
+      "bytes": 8827,
+      "sha256": "4809881ffa321867a8b4897a5e1caf3efc4332c9a50dacbee45a58d79677355b",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "source_xyxy": [
+        128,
+        192,
+        224,
+        288
+      ],
+      "texture_std": 39.34455183199994
+    },
+    {
+      "name": "patch-058.png",
+      "bytes": 8830,
+      "sha256": "7f34781892f35904531f284ef38dfa1da636e2038dddfaae00a93ba6b7dbae41",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "source_xyxy": [
+        544,
+        0,
+        640,
+        96
+      ],
+      "texture_std": 35.610810905932865
+    },
+    {
+      "name": "patch-059.png",
+      "bytes": 10162,
+      "sha256": "cca64e54e50d103093adaea5094dc0cc07697d83cded5c0acd3043777f915599",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "source_xyxy": [
+        64,
+        192,
+        160,
+        288
+      ],
+      "texture_std": 35.52589007318577
+    },
+    {
+      "name": "patch-060.png",
+      "bytes": 6487,
+      "sha256": "95f7eb53a8a7f5c02644c48ab8eeda96e4e1d3b3338a21abfd5f11b57ad86c47",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "source_xyxy": [
+        192,
+        256,
+        288,
+        352
+      ],
+      "texture_std": 35.0632550489085
+    },
+    {
+      "name": "patch-061.png",
+      "bytes": 6608,
+      "sha256": "28d094b9f21ee5388a7d34b85e77ec43a0eb93bc5461bf8c13bfbd26ac010125",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "source_xyxy": [
+        192,
+        264,
+        288,
+        360
+      ],
+      "texture_std": 31.672462759825883
+    },
+    {
+      "name": "patch-062.png",
+      "bytes": 5004,
+      "sha256": "4142a2d02b1740f6095d2f96c549faaeaee23302381c5bd0550dfa9586804abe",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "source_xyxy": [
+        0,
+        128,
+        96,
+        224
+      ],
+      "texture_std": 31.60212883213837
+    },
+    {
+      "name": "patch-063.png",
+      "bytes": 7901,
+      "sha256": "0f9d7c799c2fbf7971348829699268ba35243f2a901a5f5740cd59cc0bcfeab4",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "source_xyxy": [
+        0,
+        192,
+        96,
+        288
+      ],
+      "texture_std": 30.92450957524699
+    },
+    {
+      "name": "patch-064.png",
+      "bytes": 7739,
+      "sha256": "53b54d9a55353c68b288ec8ee1f7bd6a48da553b51743418038373982bb12379",
+      "shape_hwc": [
+        96,
+        96,
+        3
+      ],
+      "source_image_id": "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d",
+      "source_xyxy": [
+        64,
+        256,
+        160,
+        352
+      ],
+      "texture_std": 30.879419666635368
+    }
+  ],
+  "augmentation_policy": {
+    "probability": 0.35,
+    "max_patches": 2,
+    "scale_range": [
+      0.75,
+      1.25
+    ],
+    "target_exclusion_margin_px": 12,
+    "placement_attempts": 24,
+    "feather_border_px": 6
+  },
+  "geometry_supervision": "Original synthetic CAD labels only; source real center/ellipse remain UNKNOWN"
+}

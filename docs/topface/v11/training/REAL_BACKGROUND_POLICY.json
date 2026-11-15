@@ -1,0 +1,57 @@
+{
+  "status": "REAL_TRAIN_BACKGROUND_BANK_QUALIFIED",
+  "source_images": 4,
+  "source_crops": 64,
+  "source_scope": "APPROVED_REAL_TRAIN_ONLY",
+  "source_manifest_sha256": "6d21a2e9d0a251c1161ee3b63345909d64ad1f8cda6d3f9be0e0c0454843e198",
+  "archive": {
+    "name": "topface-real-backgrounds-a01.bin",
+    "bytes": 437725,
+    "sha256": "e1cf0a92d4de8bc6f914c6341f1e9b42bda3de234f241c2597fac66d188b9471"
+  },
+  "manifest_sha256": "852f5851b4708c9582a5c8145dcd1e55adf4d20a6a6e3af7bec1011dd966c3c5",
+  "identity": {
+    "manifest_sha256": "852f5851b4708c9582a5c8145dcd1e55adf4d20a6a6e3af7bec1011dd966c3c5",
+    "source_manifest_sha256": "6d21a2e9d0a251c1161ee3b63345909d64ad1f8cda6d3f9be0e0c0454843e198",
+    "source_scope": "APPROVED_REAL_TRAIN_ONLY",
+    "sources": [
+      "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d"
+    ],
+    "patch_count": 64,
+    "policy": {
+      "probability": 0.35,
+      "max_patches": 2,
+      "scale_range": [
+        0.75,
+        1.25
+      ],
+      "target_exclusion_margin_px": 12,
+      "placement_attempts": 24,
+      "feather_border_px": 6
+    },
+    "supervision": "Existing synthetic labels only; no real geometric truth inferred"
+  },
+  "qualification": {
+    "seeds": 100,
+    "protected_target_pixels_unchanged": true,
+    "deterministic": true,
+    "images_with_paste": 27,
+    "patches_pasted": 43,
+    "actual_synthetic_dataset_fixture": {
+      "audit_sha256": "35f418eca99431668e65968c2a93a9e72e8545593cc9745698c6507c0b9be8e2",
+      "dataset_items": 5,
+      "epochs": 4,
+      "paired_image_reads": 20,
+      "images_augmented": 4,
+      "target_pixel_tensors_unchanged": true,
+      "all_targets_and_metadata_unchanged": true,
+      "optimizer_updates": 0
+    }
+  },
+  "reason": "Pilot real-val false positives occurred on mechanical fixtures/cables. Train-only reviewed background crops supply targeted negative textures.",
+  "real_val_or_test_used_for_training": false,
+  "optimizer_updates": 0
+}
