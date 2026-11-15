@@ -157,7 +157,9 @@ def upload_archive(opener, spec, path):
     """Recover within the same session after an ambiguous or partial PUT."""
     size = spec['archive']['bytes']
     offset = recoveries = 0
-    query = False
+    # A transport retry keeps the reserved Drive object and resumable session.
+    # Ask Drive for the committed offset before sending any archive bytes.
+    query = True
     with path.open('rb') as stream:
         while offset < size or query:
             require_access(spec)
@@ -187,6 +189,8 @@ def upload_archive(opener, spec, path):
                         require(offset <= confirmed <= (size if query else end) and confirmed < size,
                                 'drive_upload_range_mismatch')
                         if query or confirmed > offset:
+                            if confirmed > offset:
+                                recoveries = 0
                             offset, query = confirmed, False
                             continue
                     else:
@@ -224,7 +228,16 @@ def transfer(spec, opener):
         path = Path(temporary) / 'archive.tar.gz'
         with source_response(opener, spec['source_url']) as response, path.open('xb') as target:
             verify_body(response, archive, target)
-        upload_archive(opener, spec, path)
+        # A previous attempt may have committed the file before losing its
+        # response. Never replace it: verify the same object in that case.
+        base = f'https://{DRIVE_HOST}/drive/v3/files/{spec["drive_file_id"]}'
+        require_access(spec)
+        with request(opener, base+'?fields=id',
+                     headers={'Authorization':'Bearer '+spec['drive_access_token']}) as response:
+            existing_status = response.status
+        require(existing_status in (200,404), f'drive_reconcile_http_{existing_status}')
+        if existing_status == 404:
+            upload_archive(opener, spec, path)
         readback(opener, spec)
     uploaded = {key: archive[key] for key in ('name', 'bytes', 'sha256')}
     uploaded.update(file_id=spec['drive_file_id'], provider_readback='FULL_BYTE_SHA256_PASS')
