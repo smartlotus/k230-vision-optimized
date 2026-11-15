@@ -1,6 +1,6 @@
 {
   "schema": "topface-v1.1-requirement-evidence-v1",
-  "observed_utc": "2026-11-14T14:54:13.309622+00:00",
+  "observed_utc": "2026-11-15T07:27:32.057519+00:00",
   "goal_complete": false,
   "authority": "V1.1 plan/prompt SHA in docs/topface/execution_contract.json; user operating envelope and Smoke approval retained",
   "items": [
@@ -76,15 +76,18 @@
     },
     {
       "requirement": "One forward bbox/sixcolors/physicalcenter/flags/ellipse/coniccenter",
-      "status": "UNTRAINED_NANO_HEAD_PT_ORT_AND_COMPILE_SIM_EXECUTED",
+      "status": "PILOT_TRAINED_AND_CONVERTED_FORMAL_TRAINING_RUNNING",
       "evidence": [
         "g3/nanodet-taskhead-224x128/RESULT.json",
         "g3/nanodet-taskhead-320x192/RESULT.json",
-        "g3/nanodet-taskhead-384x224/RESULT.json"
+        "g3/nanodet-taskhead-384x224/RESULT.json",
+        "cloud/training-a01/ACCEPTANCE-v1.json",
+        "cloud/conversion-pilot-a02/MODEL_FILES_RECEIPT.json",
+        "training/FORMAL_START_EVIDENCE.json"
       ],
       "remaining": [
-        "train/validate/freeze one formal model",
-        "final output contract/board preprocessing paired proof"
+        "complete one formal model and final output contract",
+        "same-input final ONNX/Simulator/KPU preprocessing and raw/decoded proof"
       ]
     },
     {
@@ -97,84 +100,135 @@
     },
     {
       "requirement": "02 independent dataset diagnostics",
-      "status": "PREPARED_PRIVATE_NOTEBOOK_V1_READBACK_PASS_NEEDS_RUNTIME_SECRET",
+      "status": "COMPOSITE_1240_AND_FULL_10000_AUDITS_ACCEPTED",
       "evidence": [
         "reports/smoke_diagnostics.json",
-        "cloud/audit-a01/READBACK.json"
-      ],
-      "remaining": [
-        "1000-scene02 run and acceptance"
+        "cloud/audit-a01/READBACK.json",
+        "cloud/audit-a02/ACCEPTANCE-v4.json",
+        "training/FULL_DATASET_ACCEPTANCE.json",
+        "cloud/full-audit-a01/compact-v1/SIMILARITY_REVIEW.json"
       ]
     },
     {
       "requirement": "03 overfit/Pilot/control training and metrics",
-      "status": "IMPLEMENTED_REVIEWED_HOST_INTEGRATION_ONLY_ZERO_UPDATES",
+      "status": "ACTUAL_PILOT_OVERFIT_PRETRAINED_RANDOM_AND_REFINEMENT_ARCHIVED",
       "evidence": [
         "training/TRAINING_PLAN.json",
         "training/IMPLEMENTATION_REVIEW.md",
         "reports/TRAINING_INTEGRATION_NO_UPDATES.json",
-        "reports/host_all_tests.log"
+        "reports/host_all_tests.log",
+        "cloud/training-a01/ACCEPTANCE-v1.json",
+        "cloud/training-a02/ACCEPTANCE-v1.json",
+        "reports/PILOT_METRICS.md"
       ],
       "remaining": [
-        "actual Kaggle optimizer runs",
-        "checkpoints/TensorBoard",
-        "Pilot gates"
-      ]
+        "Pilot near-round direction validity/angle gate did not pass; preserve explicit diagnostics in final evaluation"
+      ],
+      "actual_optimizer_updates": {
+        "original_sequence": 1170,
+        "geometry_refinement": 336,
+        "sum": 1506
+      },
+      "qualification": "Overfit passed its train-only sanity gate. Original pretrained Pilot selected. Synthetic direction limitations retained."
     },
     {
       "requirement": "10000-20000 Full synthetic data",
-      "status": "NOT_ADMITTED_BEFORE_PILOT_GATE",
-      "remaining": [
-        "measured render throughput/budget",
-        "finite shard identities and archive acceptance",
-        "coverage failure-directed augmentation"
-      ]
+      "status": "FULL_10000_SCENES_24996_INSTANCES_ACCEPTED_AND_DRIVE_VERIFIED",
+      "evidence": [
+        "training/FULL_INVENTORY.json",
+        "training/FULL_DATASET_ACCEPTANCE.json",
+        "training/REAL_BACKGROUND_POLICY.json",
+        "training/body-negatives-a01/DATAFLOW_QUALIFICATION.json"
+      ],
+      "split_images": {
+        "train": 7465,
+        "val": 1601,
+        "synthetic_test": 934
+      },
+      "audit_scope": "Exact duplicate and split camera/scene groups exhaustive. Human near-similarity inspection covers 30 bounded pairs. Original candidate counts retained."
     },
     {
       "requirement": "One formal TopFaceNet 100-200epoch validation-early-stop",
-      "status": "NOT_RUN",
+      "status": "ORIGINAL_FORMAL_A01_V1_RUNNING_FIRST_EPOCH_VERIFIED",
       "remaining": [
-        "selected architecture/init/size",
-        "Full data accepted",
-        "actual training/best/last/hash"
-      ]
+        "complete original100epoch experiment or exact accepted epoch-boundary continuation",
+        "full-byte Drive acceptance of final best/last checkpoints",
+        "validate selected formal checkpoint SHA against final source and validation selection"
+      ],
+      "evidence": [
+        "cloud/formal-a01/KERNEL_SAVE_RESPONSE.json",
+        "cloud/formal-a01/FORMAL_CONFIG.json",
+        "training/FORMAL_START_EVIDENCE.json",
+        "training/FORMAL_SESSION_PROTOCOL.md"
+      ],
+      "scope": "FORMAL_START_EVIDENCE records the first actual optimizer epoch. Subsequent live telemetry is preliminary until exact terminal archive acceptance."
     },
     {
       "requirement": "Separate synthetic and approved real assessment/active learning",
-      "status": "NOT_RUN",
+      "status": "PILOT_HISTORICAL_REAL_VAL_AND_DIAGNOSTIC_SEQUENCE_EXECUTED_FORMAL_PENDING",
       "remaining": [
-        "frozen selected model/threshold",
-        "synthetic test once",
-        "r4 reliable bbox/color evaluation",
-        "fresh blind scene/session truth",
-        "real center/ellipse labels or explicit UNKNOWN"
-      ]
+        "freeze selected formal weights and existing thresholds",
+        "formal934scene independent synthetic evaluation with color/geometric/occlusion/angle/size/capacity slices",
+        "formal historical r4 assessment and independent synthetic redetection sequence",
+        "fresh blinded real scene/session truth after final model freeze",
+        "real physical-center/ellipse truth and calibration for corresponding metrics"
+      ],
+      "evidence": [
+        "reports/PILOT_METRICS.md",
+        "reports/pilot-accuracy-20261115-a01/SUMMARY.json",
+        "reports/pilot-accuracy-20261115-a01/REAL_ONNX.json",
+        "reports/pilot-accuracy-20261115-a01/REAL_SIMULATOR.json",
+        "reports/pilot-accuracy-20261115-a01/SEQUENCE_ONNX.json",
+        "reports/pilot-accuracy-20261115-a01/SEQUENCE_SIMULATOR.json",
+        "reports/BOARD_TEST_PLAN.md"
+      ],
+      "scope": "Pilot real val has2images/2redGT. It showed false positives. Existing36frame sequence is development diagnostics at175mm/90deg in blue/black. Both scopes are insufficient for full real acceptance."
     },
     {
       "requirement": "PT->ORT->Simulator->KPU paired final export",
-      "status": "EARLY_ENGINEERING_ONLY_FINAL_NOT_RUN",
+      "status": "PILOT_ONNX_COMPILED_AND_SIMULATOR_PAIRED_FORMAL_NOT_EXECUTED",
       "evidence": [
-        "g3/RGB_UINT8_PREPROCESS_FIXTURE.json"
+        "g3/RGB_UINT8_PREPROCESS_FIXTURE.json",
+        "cloud/conversion-pilot-a02/MODEL_FILES_RECEIPT.json",
+        "reports/PILOT_CONVERSION_A02.json",
+        "reports/PREPARED_INPUT_ROUTE_QUALIFICATION.json",
+        "reports/BOARD_PAIR_HOST_QUALIFICATION.json",
+        "reports/BOARD_PAIR_PROTOCOL.md"
       ],
       "remaining": [
-        "final trained ONNX",
-        "train-only final PTQ",
-        "per-channel/raw/decoded numerical comparison",
-        "actual KPU paired data"
+        "actual final trained ONNX/KModel and train-only final PTQ",
+        "formal held-out per-channel/raw/decoded numerical comparison",
+        "actual native KPU paired capture and equivalent output contract"
       ]
     },
     {
       "requirement": "Executable K230 package / lifecycle / UART off / complete25FPS benchmark",
-      "status": "PORTABLE_DECODE_HOST_PARITY_PASS_BOARD_PACKAGE_AND_RUNTIME_NOT_RUN",
+      "status": "BOARD_BUNDLE_AND_PAIR_ROUTE_HOST_QUALIFIED_NATIVE_NOT_RUN",
       "remaining": [
-        "independent install package",
-        "fresh runtime pairing",
-        "camera/buffer/AI2D proof",
-        "P50/P95/P99 droppedframes memory stability",
-        "full camera-to-display measurement"
+        "build final board trial bundle from exact formal model",
+        "fresh runtime/channel/stride/AI2D/lifecycle pairing",
+        "independent-directory bounded installation and native same-input capture",
+        "actual native accuracy and per-stage P50/P95/P99 dropped frames memory stability",
+        "complete camera-to-display measurement and0to5target/empty/occluded/tilted/reentry safety tests"
       ],
       "evidence": [
-        "reports/portable_decoder_tests.log"
+        "reports/portable_decoder_tests.log",
+        "reports/BOARD_PAIR_HOST_QUALIFICATION.json",
+        "reports/BOARD_PAIR_PROTOCOL.md",
+        "reports/BOARD_TEST_PLAN.md",
+        "reports/BOARD_AVAILABILITY_20261115.json"
+      ]
+    },
+    {
+      "requirement": "Final requested deliverable index, reports and complete SHA256SUMS.json",
+      "status": "FINAL_MODEL_DEPENDENT_DELIVERY_PENDING",
+      "evidence": [],
+      "remaining": [
+        "final user-accessible file index covering original plan deliverables1to17",
+        "formal checkpoints/ONNX/KModel/outputcontract/boardbundle with SHA256",
+        "final training, host evaluation, native acceptance and unresolved issues reports",
+        "verify private source checkpoint and exact Drive artifact references",
+        "requirement-by-requirement completion audit with actual evidence"
       ]
     }
   ]
