@@ -1,0 +1,95 @@
+{
+  "schema": "topface-full-data-acceptance-v1.1",
+  "status": "FULL_DATASET_ACCEPTED",
+  "run_id": "k230-topface-v11-full-audit-a01",
+  "shard_inventory_sha256": "295b2d67b13b82309e72f95f6268c3e37990634b78f6ad3b595d35f17b85366c",
+  "dataset_index_sha256": "0555f5e7dd9b372c51108f4482f0ca3ed8816c790eb3572266956403e645dc49",
+  "images": 10000,
+  "instances": 24996,
+  "split_images": {
+    "synthetic_test": 934,
+    "val": 1601,
+    "train": 7465
+  },
+  "source_shards": [
+    {
+      "start_index": 0,
+      "count": 1000,
+      "archive_sha256": "720e0d04fa2c6214cae43d96563598ea39b7275dc76ffe5f31aa03da6c082082",
+      "member_manifest_sha256": "cf42ca215c88d3e46c2d4e351501fb7fb69e134b8e6163855a8ae944a8f24693"
+    },
+    {
+      "start_index": 1000,
+      "count": 1000,
+      "archive_sha256": "c89808a757e91243a99cc7fe5aa916c776bc5633d80a6ffb241009b9cb357d5a",
+      "member_manifest_sha256": "29c89d0d302a46354f32d960a4c707390c7f81d5ef8b3a6bf2cb021d26d8fdbc"
+    },
+    {
+      "start_index": 2000,
+      "count": 1000,
+      "archive_sha256": "84281a0fc72d1f9ebb918491b177f9208d09d18174bc4e2257637caddf6a72c6",
+      "member_manifest_sha256": "28858d878052071f5693eac9d8a43687edbd5d02e99afa0933aa9bd1c0254ee2"
+    },
+    {
+      "start_index": 3000,
+      "count": 1000,
+      "archive_sha256": "1a61ec21c750802e9a4cf57621e535347667ab314f34fdcde6250a892271b1a2",
+      "member_manifest_sha256": "67a8722e600fe10c0c03a14bb611cffb5c1946f961b9099b62ce47dc3b1011f9"
+    },
+    {
+      "start_index": 4000,
+      "count": 1000,
+      "archive_sha256": "51ca7d5261585e5dde1452c17cf4a523487c0575528715665a7a043456c20b6b",
+      "member_manifest_sha256": "d7699438de6b0e735d8dfca02be3c7ec947abd1e278db8a42684e9609adbaa4e"
+    },
+    {
+      "start_index": 5000,
+      "count": 1000,
+      "archive_sha256": "e086cf699fe221cbfb6c0fbd90c4df8a0f4320d0c7fef5c9ecf7f2ad3e888315",
+      "member_manifest_sha256": "f4bbf57a6bf431db3b2a0e5646ec4ce68bf78d36357c74b027ef9de217d5555f"
+    },
+    {
+      "start_index": 6000,
+      "count": 1000,
+      "archive_sha256": "aeb572c7c9378617d4ee400ec525907268032374ef5101cbd986a2ebcde53e85",
+      "member_manifest_sha256": "293532d249f8f41cbf579e50891d097ae324fef10c7e98456ef787f2b8b83cb3"
+    },
+    {
+      "start_index": 7000,
+      "count": 1000,
+      "archive_sha256": "796d8b4ee6b728fc925f60358af785a71ba73666d89b8a5bb58640b99b91b525",
+      "member_manifest_sha256": "61e40c4afd18d8bbe3be79b058835e6b9535db017f0bb72c06a4adbec1d39286"
+    },
+    {
+      "start_index": 8000,
+      "count": 1000,
+      "archive_sha256": "a2e9c4de836ae6fc56de6a7fef6661a8d195c324670db6322a3fd266138adc73",
+      "member_manifest_sha256": "dd821c0704acc98a97475b4fd4f70fda1d8e4625e161c13f6ad1a48a22d10708"
+    },
+    {
+      "start_index": 9000,
+      "count": 1000,
+      "archive_sha256": "683d04746b4d58d5d29e354a57ca896355443402e6a9bd39ece09ac08388807c",
+      "member_manifest_sha256": "299ca39dd2898d954a343b776ac45085c5140090eb6cae23db0b37a42eb83fd5"
+    }
+  ],
+  "color_coverage": {
+    "all_counts_have_all_six": true,
+    "all_split_count_pairs_have_all_six": true,
+    "all_split_count_pairs_have_observable_six": true
+  },
+  "similarity_review_sha256": "7916d6fb6a677f0a6144f9dc1a1a0de5873e7ad0891e5cfc586bd700b7d093de",
+  "archive": {
+    "name": "k230-topface-v11-full-audit-a01.tar.gz",
+    "bytes": 585412,
+    "sha256": "e13140ee3823c8662e5f756466a31b86153b370233ced4dd1d5412d64216b1e6"
+  },
+  "publication_receipt_sha256": "d004fa12d46b10a0ecce91c789f849b0998253b6844cdb19b405c291deb0a3f1",
+  "provider": {
+    "ref": "lotus30/k230-topface-v11-05-full-audit",
+    "kernel_id": 145143437,
+    "version": 1,
+    "provider_status": "COMPLETE",
+    "source_sha256": "90183bb2ce780ea106b41c3ae9eda9da06667d9c95e7cc821ddcf1647573ec75"
+  }
+}

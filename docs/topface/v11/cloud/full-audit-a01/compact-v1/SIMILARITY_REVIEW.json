@@ -1,0 +1,209 @@
+{
+  "status": "REVIEWED_INDEPENDENT_SCENES",
+  "evidence_sha256": "4aeb8c0eef614c37963690cc3bd251a22dbd880984b278ffcdee1638321c6e9c",
+  "previews": [
+    {
+      "name": "near-similarity-01.jpg",
+      "bytes": 78616,
+      "sha256": "e8ad6e5765a3f57d3d8dc3e99328ac81b54c16c856219c953f9af07748f47119"
+    },
+    {
+      "name": "near-similarity-02.jpg",
+      "bytes": 76763,
+      "sha256": "f7321487a1d6224ff3277a373cf0185d5789cbee29180409ef3ea0876725e8ad"
+    },
+    {
+      "name": "near-similarity-03.jpg",
+      "bytes": 77860,
+      "sha256": "364cc490d1d761e6a199a86249a771019ef7165807e79ad2311e96d471c7ebe0"
+    },
+    {
+      "name": "near-similarity-04.jpg",
+      "bytes": 61023,
+      "sha256": "69521debf2a0db876a90785bef5352bdddac04170eb493295f9a5e86894686d7"
+    }
+  ],
+  "scope": "Visually inspected all four bounded contact sheets. These 30 candidates are a sample of pHash matches. The full-set exact duplicate and split-group checks are recorded separately.",
+  "pairs": [
+    {
+      "a": "shard-00000/pilot/scene-00001",
+      "b": "shard-04000/pilot/scene-04231",
+      "kind": "contains_target",
+      "finding": "Blue versus red block and distinct background."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00030",
+      "b": "shard-07000/pilot/scene-07590",
+      "kind": "both_empty",
+      "finding": "Edge-cropped rings on distinct illuminated backgrounds."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00031",
+      "b": "shard-01000/pilot/scene-01561",
+      "kind": "contains_target",
+      "finding": "Different color, occluder angle and background."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00037",
+      "b": "shard-06000/pilot/scene-06367",
+      "kind": "contains_target",
+      "finding": "Black unobstructed versus red occluded block."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00073",
+      "b": "shard-04000/pilot/scene-04363",
+      "kind": "contains_target",
+      "finding": "Green versus light blue block and distinct background."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00073",
+      "b": "shard-05000/pilot/scene-05263",
+      "kind": "contains_target",
+      "finding": "Similar green block, different lighting, scale and background."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00073",
+      "b": "shard-06000/pilot/scene-06763",
+      "kind": "contains_target",
+      "finding": "Green clear top versus dark yellow obscured top."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00097",
+      "b": "shard-00000/pilot/scene-00217",
+      "kind": "contains_target",
+      "finding": "Light blue versus green block and distinct background."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00097",
+      "b": "shard-09000/pilot/scene-09967",
+      "kind": "contains_target",
+      "finding": "Light blue unobstructed versus yellow occluded top."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00103",
+      "b": "shard-00000/pilot/scene-00163",
+      "kind": "contains_target",
+      "finding": "Blue occluded versus black unobstructed top."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00103",
+      "b": "shard-05000/pilot/scene-05413",
+      "kind": "contains_target",
+      "finding": "Occluder orientation and background differ."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00163",
+      "b": "shard-01000/pilot/scene-01483",
+      "kind": "contains_target",
+      "finding": "Black versus green block and distinct background."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00163",
+      "b": "shard-01000/pilot/scene-01783",
+      "kind": "contains_target",
+      "finding": "Black versus red block and distinct background."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00163",
+      "b": "shard-02000/pilot/scene-02383",
+      "kind": "contains_target",
+      "finding": "Black versus blue block and distinct background."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00163",
+      "b": "shard-03000/pilot/scene-03703",
+      "kind": "contains_target",
+      "finding": "Similar black block, different occluder and illumination."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00163",
+      "b": "shard-04000/pilot/scene-04393",
+      "kind": "contains_target",
+      "finding": "Black versus blue block; size and background differ."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00163",
+      "b": "shard-04000/pilot/scene-04453",
+      "kind": "contains_target",
+      "finding": "Similar dark block, different position, scale and background."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00163",
+      "b": "shard-07000/pilot/scene-07183",
+      "kind": "contains_target",
+      "finding": "Black versus bright blue block and distinct background."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00163",
+      "b": "shard-07000/pilot/scene-07693",
+      "kind": "contains_target",
+      "finding": "Black versus red block and distinct background."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00163",
+      "b": "shard-07000/pilot/scene-07933",
+      "kind": "contains_target",
+      "finding": "Dark unobstructed versus red occluded top."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00180",
+      "b": "shard-08000/pilot/scene-08940",
+      "kind": "both_empty",
+      "finding": "Similar edge rings, different background, lighting and scale."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00204",
+      "b": "shard-05000/pilot/scene-05724",
+      "kind": "both_empty",
+      "finding": "Similar centered rings, different background and surface appearance."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00211",
+      "b": "shard-00000/pilot/scene-00541",
+      "kind": "contains_target",
+      "finding": "Similar dark blocks, occluder only in the first and background differs."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00211",
+      "b": "shard-00000/pilot/scene-00781",
+      "kind": "contains_target",
+      "finding": "Dark occluded versus blue unobstructed block."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00211",
+      "b": "shard-01000/pilot/scene-01081",
+      "kind": "contains_target",
+      "finding": "Occluder in first, ring distractor in second."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00211",
+      "b": "shard-01000/pilot/scene-01531",
+      "kind": "contains_target",
+      "finding": "Occluder only in first, different background and block framing."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00211",
+      "b": "shard-02000/pilot/scene-02131",
+      "kind": "contains_target",
+      "finding": "Occluder only in first, different scene illumination."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00211",
+      "b": "shard-02000/pilot/scene-02581",
+      "kind": "contains_target",
+      "finding": "Dark occluded versus blue unobstructed block on yellow."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00211",
+      "b": "shard-03000/pilot/scene-03481",
+      "kind": "contains_target",
+      "finding": "Occluder only in first, brighter blue background in second."
+    },
+    {
+      "a": "shard-00000/pilot/scene-00211",
+      "b": "shard-06000/pilot/scene-06781",
+      "kind": "contains_target",
+      "finding": "Both occluded, distinct block color, framing and background."
+    }
+  ]
+}

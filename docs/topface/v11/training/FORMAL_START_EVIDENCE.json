@@ -1,0 +1,40 @@
+{
+  "status": "FIRST_FORMAL_EPOCH_OBSERVED",
+  "observed_utc": "2026-11-15T07:08:57.044819+00:00",
+  "scope": "Live training and validation telemetry. Independent test and final training archive acceptance are pending.",
+  "provider_save": {
+    "ref": "/code/lotus30/k230-topface-v11-06-formal-training",
+    "id": 145144940,
+    "version": 1
+  },
+  "training_input_manifest_sha256": "2d5c2be9e135d8d890895b767d605c4877652cbdbd5776a51ccbe8dd1efb9930",
+  "planned_epochs": 100,
+  "first_epoch": {
+    "epoch": 1,
+    "updates": 234,
+    "loss_mean": 0.4438841519956915,
+    "validation_score": 1.1054788287243447,
+    "task_mAP50": 0.9869632704469379,
+    "task_mAP50_95": 0.9357983093969026,
+    "recall50": 0.9894712213383248,
+    "matched_color_accuracy": 0.9973989122724048,
+    "training_wall_seconds": 248.740487325,
+    "validation_wall_seconds": 65.04362090399991,
+    "assignment_counts": {
+      "world_instances": 18604,
+      "observable_eligible_gt": 18259,
+      "assigned_gt": 18259,
+      "positive_priors": 54774,
+      "assigned_fifth_instance": 1133,
+      "unobservable_or_under16px": 345
+    },
+    "body_only_augmentation": {
+      "read_slots": 7465,
+      "world_empty_slots": 1334,
+      "replacements": 345,
+      "distinct_source_members": 113
+    },
+    "epoch_wall_seconds": 313.96864123699993
+  },
+  "source_log": ".ops/local/topface-formal-a01-stream.log"
+}

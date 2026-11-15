@@ -1,0 +1,9 @@
+{
+  "ref": "lotus30/k230-topface-v11-full-audit-input-a01",
+  "version": 1,
+  "private": true,
+  "manifest_sha256": "07214d48b801022e6e20f8839efb31d23ae055dc1b60d9e6deefac8a184d0c05",
+  "observed_utc": "2026-11-15T06:42:31.743226+00:00",
+  "status": "CREATING",
+  "exit_code": 0
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "topface-exact-compact-collection-v1.1",
+  "ref": "lotus30/k230-topface-v11-05-full-audit",
+  "version": 1,
+  "run_id": "k230-topface-v11-full-audit-a01",
+  "observed_utc": "2026-11-15T06:48:45.264068+00:00",
+  "members": [
+    {
+      "name": "k230-topface-v11-full-audit-a01-RESULT.json",
+      "status": "COLLECTED",
+      "bytes": 4616,
+      "sha256": "c720dabe63a7e64ad97a495c0ad2d2c49bb4ddf5341071085bd911d51b394043"
+    },
+    {
+      "name": "near-similarity-01.jpg",
+      "status": "COLLECTED",
+      "bytes": 78616,
+      "sha256": "e8ad6e5765a3f57d3d8dc3e99328ac81b54c16c856219c953f9af07748f47119"
+    },
+    {
+      "name": "near-similarity-02.jpg",
+      "status": "COLLECTED",
+      "bytes": 76763,
+      "sha256": "f7321487a1d6224ff3277a373cf0185d5789cbee29180409ef3ea0876725e8ad"
+    },
+    {
+      "name": "near-similarity-03.jpg",
+      "status": "COLLECTED",
+      "bytes": 77860,
+      "sha256": "364cc490d1d761e6a199a86249a771019ef7165807e79ad2311e96d471c7ebe0"
+    },
+    {
+      "name": "near-similarity-04.jpg",
+      "status": "COLLECTED",
+      "bytes": 61023,
+      "sha256": "69521debf2a0db876a90785bef5352bdddac04170eb493295f9a5e86894686d7"
+    }
+  ],
+  "raw_archive_downloaded_to_host": false,
+  "automatic_replay": false
+}

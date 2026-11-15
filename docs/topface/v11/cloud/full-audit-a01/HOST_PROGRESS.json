@@ -1,0 +1,11 @@
+{
+  "run_id": "k230-topface-v11-full-audit-a01",
+  "status": "COMPUTE_AND_PUBLICATION_VERIFIED",
+  "pid": 45660,
+  "automatic_replay": false,
+  "stage": "COMPLETE",
+  "observed_utc": "2026-11-15T06:50:21.126788+00:00",
+  "ref": "lotus30/k230-topface-v11-05-full-audit",
+  "version": 1,
+  "kernel_id": 145143437
+}

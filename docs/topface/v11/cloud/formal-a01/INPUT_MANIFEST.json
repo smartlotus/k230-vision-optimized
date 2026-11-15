@@ -1,0 +1,127 @@
+{
+  "schema": "topface-full-downstream-input-v1.1",
+  "run_id": "k230-topface-v11-formal-a01",
+  "created_utc": "2026-11-15T06:51:09.633892+00:00",
+  "files": [
+    {
+      "path": "background_augmentation.py",
+      "bytes": 5277,
+      "sha256": "c7442af0f34e0974ecd34ae29e5cb7e75341c6448b5117999171c0c9c2b58f2c"
+    },
+    {
+      "path": "body-negative-bank.bin",
+      "bytes": 27035880,
+      "sha256": "0065a34de464018e4e9fb6ea8c845064540b01a1b899c192a61a3fc8b8656fda"
+    },
+    {
+      "path": "body_negative_bank.py",
+      "bytes": 9383,
+      "sha256": "893d5d7a3bb08517dea9c7807ceac19783b82e9e4795ed81138942cec7e9890b"
+    },
+    {
+      "path": "BODY_NEGATIVE_QUALIFICATION.json",
+      "bytes": 1781,
+      "sha256": "d6ce2f40befa78887f838ec9c95510619950a87f01dd1c5d48b58826edd26a00"
+    },
+    {
+      "path": "cloud_artifacts.py",
+      "bytes": 3782,
+      "sha256": "6025ffde705583553039224de4343ba27eda3968c8e1f9818dd0df0d6e7ba761"
+    },
+    {
+      "path": "cloud_store.py",
+      "bytes": 10870,
+      "sha256": "1f764499ce2098139a57cbcfd7406000c98f4a8ca914bb8d96e9e4656148cf34"
+    },
+    {
+      "path": "dataset_diagnostics.py",
+      "bytes": 9565,
+      "sha256": "afb0244bd8094393086e0f7c3cf357e6f806064bda5bda4c0e183796e3ceb46d"
+    },
+    {
+      "path": "downstream_job.py",
+      "bytes": 15699,
+      "sha256": "c5579a1bc8a9c24fb209093fe521a89d2c5d8506a44120213e634119e3b416d9"
+    },
+    {
+      "path": "evaluate_task.py",
+      "bytes": 13944,
+      "sha256": "94d4a319e8017a51b3ad47ff537893e7ca3ec6c5e0e53a4c25a2dc9704ba5ef1"
+    },
+    {
+      "path": "FORMAL_CONFIG.json",
+      "bytes": 37468,
+      "sha256": "fca20a9f3f997818daa88c1d5b7e26353d1fe9080242e15c866854eb7d62c49d"
+    },
+    {
+      "path": "formal_job.py",
+      "bytes": 9430,
+      "sha256": "e216fa6493a2f6e6714c928f1d4308b4d2cf411350bbe05fd85f9a23e5e01bf8"
+    },
+    {
+      "path": "full_dataset.py",
+      "bytes": 4881,
+      "sha256": "e2b09c9af5930d21b8b4502a595ffec311ca8a689b84b24f8a71f54370305ffc"
+    },
+    {
+      "path": "geometry.py",
+      "bytes": 2996,
+      "sha256": "de5c6055507a76ad5656bf8b3f554139bd154bf581b7196722e308a3a3985cc4"
+    },
+    {
+      "path": "input_locator.py",
+      "bytes": 941,
+      "sha256": "2a1f79933d67272996993a01ab8ad5da6b2d00710884456d9112f02ee00e0011"
+    },
+    {
+      "path": "nanodet-pretrained.bin",
+      "bytes": 35470891,
+      "sha256": "f4c6080f3ef35a64c3030d559438b436462f227ce29700bca71327203e42dea2"
+    },
+    {
+      "path": "nanodet-source.bin",
+      "bytes": 19158,
+      "sha256": "c647ad120fe48a987b5fb012fe360620b525865f063eb340bb9470d7faf94be3"
+    },
+    {
+      "path": "nanodet_topface.py",
+      "bytes": 8288,
+      "sha256": "fca1d5091eeddd86763a8ff61bf26dbc547277c8d37e3bf26f3fef5663cea2cc"
+    },
+    {
+      "path": "native_job.py",
+      "bytes": 16439,
+      "sha256": "5e4662e912da8bd919d596db1f05c504f53ae7853566de3e48e2ae2deabea2f1"
+    },
+    {
+      "path": "real-background-bank.bin",
+      "bytes": 437725,
+      "sha256": "e1cf0a92d4de8bc6f914c6341f1e9b42bda3de234f241c2597fac66d188b9471"
+    },
+    {
+      "path": "REAL_BACKGROUND_QUALIFICATION.json",
+      "bytes": 2250,
+      "sha256": "dba6f9c81f7a583df08c417fe78242c7f0d2e0b8806b65c649aea7a8f9391078"
+    },
+    {
+      "path": "scene_config.py",
+      "bytes": 4820,
+      "sha256": "2d7c8abcbb930ac2b857729d90dd86e91544b0672cccadcd457dd4db1b415b62"
+    },
+    {
+      "path": "task_geometry.py",
+      "bytes": 7397,
+      "sha256": "5a2773816cc2f52c1e8058b410ed842c9f0e958d5b830ce3d6c4931be1dfd1de"
+    },
+    {
+      "path": "task_training.py",
+      "bytes": 17115,
+      "sha256": "e03d46d22d8ac919df9f40d9c4b2bee10525d85d1fd8bf74e9ce2f5e11dd677a"
+    },
+    {
+      "path": "train_experiment.py",
+      "bytes": 25709,
+      "sha256": "285c7bc9480c510b7524f7330c3f6d4019824ef499624dd72f9b5c2242294b1d"
+    }
+  ]
+}

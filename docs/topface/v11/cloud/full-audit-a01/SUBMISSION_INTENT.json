@@ -1,0 +1,15 @@
+{
+  "status": "PREPARED_NOT_SUBMITTED",
+  "phase": "full-audit",
+  "run_id": "k230-topface-v11-full-audit-a01",
+  "kernel": "lotus30/k230-topface-v11-05-full-audit",
+  "dataset": "lotus30/k230-topface-v11-full-audit-input-a01",
+  "dataset_version": 1,
+  "notebook_file": "05_full-audit.ipynb",
+  "notebook_sha256": "90183bb2ce780ea106b41c3ae9eda9da06667d9c95e7cc821ddcf1647573ec75",
+  "input_manifest_sha256": "07214d48b801022e6e20f8839efb31d23ae055dc1b60d9e6deefac8a184d0c05",
+  "provider_max_seconds": 6300,
+  "execution_mode": "API_SAVE_AND_RUN_ALL",
+  "publisher_admission_status": "QUALIFIED_AND_AUTHORIZED",
+  "automatic_replay": false
+}

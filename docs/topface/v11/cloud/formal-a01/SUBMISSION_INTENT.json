@@ -1,0 +1,15 @@
+{
+  "status": "PREPARED_NOT_SUBMITTED",
+  "phase": "formal",
+  "run_id": "k230-topface-v11-formal-a01",
+  "kernel": "lotus30/k230-topface-v11-06-formal-training",
+  "dataset": "lotus30/k230-topface-v11-formal-input-a01",
+  "dataset_version": 1,
+  "notebook_file": "06_formal.ipynb",
+  "notebook_sha256": "7b07ecceb419e6eb385afd38e5dbdf09eaecb29a8755867f01e87cb5308c2e21",
+  "input_manifest_sha256": "2d5c2be9e135d8d890895b767d605c4877652cbdbd5776a51ccbe8dd1efb9930",
+  "provider_max_seconds": 36900,
+  "execution_mode": "API_SAVE_AND_RUN_ALL",
+  "publisher_admission_status": "QUALIFIED_AND_AUTHORIZED",
+  "automatic_replay": false
+}
