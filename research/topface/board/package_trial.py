@@ -21,7 +21,7 @@ def package(compiled, export, output):
     if sha(model) != identity['kmodel_sha256'] or pt['onnx_sha256'] != identity['onnx_sha256']:
         raise ValueError('Compiled model and floating-point reference differ')
     output.mkdir(parents=True,exist_ok=False)
-    for source in (HERE/'topface_trial.py', HERE/'topface_decode.py', model):
+    for source in (HERE/'topface_trial.py', HERE/'topface_decode.py',HERE/'topface_pair_capture.py', model):
         shutil.copy2(source, output/source.name)
     atomic_json(output/'identity.json', identity)
     atomic_json(output/'output_contract.json', contract)
@@ -39,6 +39,11 @@ def package(compiled, export, output):
         'The serial report records KPU, AI2D and full camera-to-display timing, capture timeouts and sampled memory. '
         'Use the recorded runtime version and compare the model SHA-256 before interpreting a run. '
         'For the longer stability run, call `run(frames=18000, display=True)`.\n\n'
+        'For a separate numerical capture run in a fresh copy of the trial directory, call '
+        '`run(frames=15, display=False, paired_samples=3)`. It preserves same-frame source RGB888P, actual AI2D '
+        'prepared RGB888P and KPU float32 little-endian raw tensors plus hashes/decoded JSON. '
+        'This mode includes disk I/O and reports no FPS. Existing pair files are preserved. '
+        'Actual planar layout and host ORT/Simulator/KPU numerical parity still require hardware qualification.\n\n'
         'References: [CanMV AI manual](https://www.kendryte.com/k230_canmv/en/main/ai_dev_doc.html), '
         '[nncase toolchain](https://github.com/kendryte/nncase/blob/master/docs/USAGE_v2.md).\n',
         encoding='utf8')

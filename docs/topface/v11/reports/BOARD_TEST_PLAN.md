@@ -12,4 +12,6 @@
 
 性能按capture、AI2D、KPU、decode、display和完整链路分别记录P50/P95/P99；完整FPS包含取帧失败等待时间。保留capture losses、内存及清理结果，Simulator主机延迟不当作原生KPU性能。
 
+数值配对按 [BOARD_PAIR_PROTOCOL.md](BOARD_PAIR_PROTOCOL.md) 收取同一source/prepared/KPU raw及原生decoded，小样本落盘模式与FPS基准分开。
+
 当前未连接板、未采集新盲测。实际日期、设备状态和验收结论以届时运行记录为准。

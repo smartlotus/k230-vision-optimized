@@ -1,0 +1,32 @@
+{
+  "status": "HOST_FORMAT_AND_PREPARED_ROUTE_QUALIFIED; NATIVE_NOT_RUN",
+  "observed_utc": "2026-11-15T03:53:59.323452+00:00",
+  "unit_tests": 83,
+  "new_board_pair_tests": 6,
+  "syntax_files": 109,
+  "native_KPU_execution": "NOT_RUN",
+  "native_accuracy": "NOT_RUN",
+  "native_FPS": "NOT_RUN",
+  "actual_simulator_qualification": "PREPARED_INPUT_ROUTE_QUALIFICATION.json",
+  "actual_route_scope": "OneactualPilotKModeltraininput;preparedandoldsourcepathoutputsbyteidentical",
+  "protocol": "BOARD_PAIR_PROTOCOL.md",
+  "independent_review_findings_resolved": [
+    "Existingpairindexcannotbeoverwrittenonfailedrerun;startupandresultrejectoldfiles",
+    "CapturednativeDecodedcomparedwithsameRawhostDecodeincludinggeometryflagsandcapacity"
+  ],
+  "limits": {
+    "samples_max": 3,
+    "attempt_frames_min": 5,
+    "attempt_frames_max": 30,
+    "disk_mode_reports_FPS": false
+  },
+  "source_sha256": {
+    "board/topface_trial.py": "2615e63f9eaa35a0df8226f7156ce6287599ee52e85dd1ea401c7acd6c727e7a",
+    "board/topface_pair_capture.py": "1e2eabd2a40ec208d281693c7e846d829a9204f497fb630443523c378f45b5ef",
+    "board/package_trial.py": "56a39cce796c1fe6038c50a70bb49b8d67f76c977ec2d29144af7581349e50c4",
+    "evaluate_board_pairs.py": "30e550d1d9579eb8d2ce672f925ca6c63e6723908c968f25679002deb5d9d7e8",
+    "nncase_simulator.py": "760d2b6e179263e43caa90b19644f47d6824cefedfc5ed943f7a5d19c0cf465a",
+    "prepare_model_artifact.py": "a5685233c504a51a956a6262ac49365a1a6de02f6b831c7dfba0cd89fe6745b3",
+    "test_board_pairs.py": "76416caf19df7fd6fa845a7f585af46163293c88ecf81b09a0e2182482e8a85f"
+  }
+}

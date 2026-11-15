@@ -45,13 +45,17 @@ def digest(path):
     return binascii.hexlify(h.digest()).decode()
 
 
-def run(root='/sdcard/topface_trial', frames=600, display=True):
+def run(root='/sdcard/topface_trial', frames=600, display=True,paired_samples=0):
     import os
     import sys
     if sys.implementation.name != 'micropython':
         raise RuntimeError('Run on CanMV K230')
     if type(frames) is not int or not 5 <= frames <= 18000:
         raise ValueError('Frame count must be 5 to 18,000')
+    if type(paired_samples) is not int or not 0<=paired_samples<=3:
+        raise ValueError('Pair capture count must be0to3; separate it from performance benchmarking')
+    if paired_samples and frames>30:
+        raise ValueError('Tensor capture requires an explicit5to30frame attempt budget')
     from media.sensor import Sensor, CAM_CHN_ID_0
     from media.media import MediaManager
     from media.display import Display
@@ -81,6 +85,7 @@ def run(root='/sdcard/topface_trial', frames=600, display=True):
     initialized_media = False
     initialized_display = False
     kpu = builder = ai2d = destination = backing = overlay = None
+    frozen_source=prepared_copy=None;pair_capture=None;pair_result=None
     frame = raw = output = source = None
     last_observation = None
     stage_names = ('capture', 'ai2d', 'kpu', 'decode', 'display', 'ai2d_kpu', 'through_postprocess', 'total')
@@ -94,6 +99,9 @@ def run(root='/sdcard/topface_trial', frames=600, display=True):
     measurement_start = measurement_end = None
     measured_attempts = 0
     try:
+        if paired_samples:
+            from topface_pair_capture import PairCapture
+            pair_capture=PairCapture(root,identity,nn.version(),paired_samples)
         kpu = nn.kpu()
         kpu.load_kmodel(path)
         backing = np.zeros((1, 3, height, width), dtype=np.uint8)
@@ -138,9 +146,19 @@ def run(root='/sdcard/topface_trial', frames=600, display=True):
             if frame.width()!=640 or frame.height()!=360:
                 raise ValueError('CSI2 frame dimensions differ from the model contract')
             captured = time.ticks_us()
-            source = nn.from_numpy(frame.to_numpy_ref())
+            should_pair=pair_capture is not None and step>=5 and len(pair_capture.records)<paired_samples
+            if should_pair:
+                frozen_source=frame.to_numpy_ref().copy()
+                source=nn.from_numpy(frozen_source)
+            else:
+                source = nn.from_numpy(frame.to_numpy_ref())
             builder.run(source, destination)
             prepared = time.ticks_us()
+            pending_pair=None
+            if should_pair:
+                prepared_copy=destination.to_numpy()
+                pending_pair=pair_capture.start(frozen_source,prepared_copy,step,captured)
+                prepared_copy=None
             kpu.run()
             inferred = time.ticks_us()
             output = kpu.get_output_tensor(0)
@@ -152,6 +170,8 @@ def run(root='/sdcard/topface_trial', frames=600, display=True):
                                 score_threshold=identity['score_threshold'], nms_iou=identity['nms_iou'])
             last_observation = detections
             decoded = time.ticks_us()
+            if pending_pair is not None:pair_capture.finish(pending_pair,raw,detections)
+            frozen_source=None
             raw = output = source = None
             if display:
                 overlay.draw_image(frame.to_rgb565(), 0, 0)
@@ -188,6 +208,7 @@ def run(root='/sdcard/topface_trial', frames=600, display=True):
                 for key, used in memory().items():
                     memory_peak[key] = max(used, memory_peak.get(key, 0))
             frame = None
+            if pair_capture is not None and len(pair_capture.records)==paired_samples:break
         status = ('RUN_COMPLETE' if not dropped else 'RUN_COMPLETE_WITH_CAPTURE_LOSSES') if samples['total'] else 'NO_SUCCESSFUL_MEASUREMENTS'
     except Exception as error:
         status = 'RUN_FAILED'
@@ -195,7 +216,10 @@ def run(root='/sdcard/topface_trial', frames=600, display=True):
     finally:
         if measurement_start is not None:
             measurement_end = time.ticks_ms()
-        raw = output = source = frame = None
+        raw = output = source = frame = frozen_source = prepared_copy = None
+        if pair_capture is not None:
+            try:pair_result=pair_capture.result()
+            except Exception as error:cleanup_errors.append('pair-result: '+str(error))
         for label, cleanup in (('sensor', sensor.stop if sensor is not None else None),
                                ('display', Display.deinit if initialized_display else None),
                                ('media', MediaManager.deinit if initialized_media else None)):
@@ -227,5 +251,12 @@ def run(root='/sdcard/topface_trial', frames=600, display=True):
               'cleanup_errors': cleanup_errors, 'last_observation': last_observation}
     if samples['total']:
         report['successful_frame_active_time_fps'] = 1000000*len(samples['total'])/sum(samples['total'])
+    if paired_samples:
+        report['run_mode']='SAME_FRAME_TENSOR_CAPTURE_WITH_DISK_IO'
+        report['pair_capture']=pair_result
+        report['performance_measurement']=False
+        report['effective_camera_to_result_fps']=None
+        report.pop('successful_frame_active_time_fps',None)
+        report['timing']={}
     print('TOPFACE_BOARD_RESULT '+json.dumps(report))
     return report

@@ -91,7 +91,7 @@ def prepare(phase,revision,staging,parent,runtime_receipt,runtime_qualification,
             raise ValueError('Native export runtime differs from its frozen wheel manifest')
         shutil.copy2(path,staging/path.name)
     shutil.copy2(native_runtime/'NATIVE_EXPORT_RUNTIME.json',staging/'NATIVE_EXPORT_RUNTIME.json')
-    for name in ('package_trial.py','topface_trial.py','topface_decode.py'):
+    for name in ('package_trial.py','topface_trial.py','topface_decode.py','topface_pair_capture.py'):
         shutil.copy2(HERE/'board'/name,staging/name)
     with zipfile.ZipFile(staging/'nanodet-source.bin','w',zipfile.ZIP_DEFLATED) as archive:
         for path in sorted((HERE/'vendor/nanodet_core').rglob('*')):

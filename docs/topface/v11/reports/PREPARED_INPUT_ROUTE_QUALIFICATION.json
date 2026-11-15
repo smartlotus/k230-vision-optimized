@@ -1,0 +1,21 @@
+{
+  "status": "PREPARED_INPUT_HOST_SIMULATOR_ROUTE_IDENTICAL",
+  "observed_utc": "2026-11-15T03:49:31.952145+00:00",
+  "scope": "Actual selected Pilot KModel ononeauditedsyntheticTRAINframe;notKPUexecution",
+  "source_scene": "scene-00002",
+  "source_rgb_sha256": "1f14f1c3b8ea5494b3dde9ee809e3875e94216d8148a0831259c3717fea81f2b",
+  "model_sha256": "c5ec898ebc7cbd8fb82c3902565c02ab1876f556651ce91e7edbbd43e183ef68",
+  "simulator_outputs_byte_identical": true,
+  "host_prepared_RGB_to_model_BGR_normalization_byte_identical": true,
+  "inference_seconds": [
+    9.132329400003073,
+    9.168849099994986
+  ],
+  "elapsed_seconds": 19.447574200006784,
+  "native_KPU_test": "NOT_RUN",
+  "native_capture_serializer": "HOST_FIXTURE_QUALIFIED_ONLY",
+  "source_sha256": {
+    "nncase_simulator.py": "760d2b6e179263e43caa90b19644f47d6824cefedfc5ed943f7a5d19c0cf465a",
+    "evaluate_board_pairs.py": "7fcfe35bb39da9061e471faea65ac0bce63aca0d4518e3421ea5aa00e03fc465"
+  }
+}

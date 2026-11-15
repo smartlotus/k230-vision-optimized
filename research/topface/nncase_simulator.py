@@ -46,6 +46,11 @@ class KModelRuntime:
     def raw_from_bgr(self,image):
         canvas,_=letterbox_bgr(image,self.width,self.height)
         rgb=canvas[:,:,::-1].transpose(2,0,1)[None].copy()
+        return self.raw_from_rgb_nchw(rgb)
+
+    def raw_from_rgb_nchw(self,rgb):
+        if rgb.dtype!=np.uint8 or list(rgb.shape)!=[1,3,self.height,self.width]:
+            raise ValueError('Prepared Simulator input must be exact uint8 NCHW RGB')
         started=time.perf_counter()
         self.simulator.set_input_tensor(0,self.nncase.RuntimeTensor.from_numpy(rgb))
         self.simulator.run()
