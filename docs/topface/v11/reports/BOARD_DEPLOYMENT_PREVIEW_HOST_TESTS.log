@@ -1,0 +1,20 @@
+test_connected_idle_and_new_directory_required (test_board_deployment.BoardDeploymentTests.test_connected_idle_and_new_directory_required) ... ok
+test_default_preflight_has_no_board_mutations (test_board_deployment.BoardDeploymentTests.test_default_preflight_has_no_board_mutations) ... ok
+test_existing_receipt_and_production_paths_are_preserved (test_board_deployment.BoardDeploymentTests.test_existing_receipt_and_production_paths_are_preserved) ... ok
+test_explicit_config_initializes_existing_single_send_client (test_board_deployment.BoardDeploymentTests.test_explicit_config_initializes_existing_single_send_client) ... ok
+test_explicit_config_rejects_remote_or_disabled_service (test_board_deployment.BoardDeploymentTests.test_explicit_config_rejects_remote_or_disabled_service) ... ok
+test_explicit_config_requires_authentication (test_board_deployment.BoardDeploymentTests.test_explicit_config_requires_authentication) ... ok
+test_inventory_traversal_is_rejected_before_rpc (test_board_deployment.BoardDeploymentTests.test_inventory_traversal_is_rejected_before_rpc) ... ok
+test_join_timeout_preserves_running_script_without_resubmission (test_board_deployment.BoardDeploymentTests.test_join_timeout_preserves_running_script_without_resubmission) ... ok
+test_missing_board_inventory_stops_before_rpc (test_board_deployment.BoardDeploymentTests.test_missing_board_inventory_stops_before_rpc) ... ok
+test_part_corruption_prevents_join_and_is_not_retried (test_board_deployment.BoardDeploymentTests.test_part_corruption_prevents_join_and_is_not_retried) ... ok
+test_preview_requires_explicit_scope_and_completed_training (test_board_deployment.BoardDeploymentTests.test_preview_requires_explicit_scope_and_completed_training) ... ok
+test_real_join_roundtrip_and_multichunk_model (test_board_deployment.BoardDeploymentTests.test_real_join_roundtrip_and_multichunk_model) ... ok
+test_stored_target_is_reopened_and_verified (test_board_deployment.BoardDeploymentTests.test_stored_target_is_reopened_and_verified) ... ok
+test_tampered_model_stops_before_rpc (test_board_deployment.BoardDeploymentTests.test_tampered_model_stops_before_rpc) ... ok
+test_uncertain_write_retains_receipt_without_retry (test_board_deployment.BoardDeploymentTests.test_uncertain_write_retains_receipt_without_retry) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 1.346s
+
+OK

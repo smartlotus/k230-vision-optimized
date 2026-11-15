@@ -1,0 +1,67 @@
+{
+  "status": "PREVIEW_HOST_FIXTURES_AND_REVIEW_PASS_CLOUD_NOT_RUN",
+  "observed_utc": "2026-11-15T14:37:12.414440+00:00",
+  "authorization": "User explicitly chose to wait for original formal weights and prioritize a usable KModel trial package without changing training or the original plan.",
+  "preview_tests": 9,
+  "deployment_tests": 15,
+  "independent_review": "board_handoff_review PASS after original-provider binding correction",
+  "original_pipeline_byte_unchanged": {
+    "research/topface/train_experiment.py": true,
+    "research/topface/formal_job.py": true,
+    "research/topface/model_artifact_job.py": true,
+    "research/topface/prepare_model_artifact.py": true,
+    "research/topface/continue_formal_conversion.py": true,
+    "research/topface/evaluate_formal_host.py": true,
+    "research/topface/package_formal_delivery.py": true
+  },
+  "readme_local_links": 44,
+  "cloud_preview": "NOT_SUBMITTED",
+  "physical_board": "NOT_RUN",
+  "numeric_quantization_acceptance": "PENDING_ACTUAL_PAIRED_MEASUREMENTS",
+  "files": [
+    {
+      "path": "research/topface/model_board_preview_job.py",
+      "sha256": "5fbb02ff1c92e1a7e19a14df4db046ecd8ba6a0d0bbd1933c2e3069d27684559"
+    },
+    {
+      "path": "research/topface/prepare_board_preview.py",
+      "sha256": "f5b1905fb4a01cfb37d7cc7b14232eb757e8f0f93b5a6e6e50ba9887dd147641"
+    },
+    {
+      "path": "research/topface/package_board_preview.py",
+      "sha256": "ac8d61d5a043801c0144d0bc5651f2b88ea3e52f0f99de2f8b8513d15f05ff2a"
+    },
+    {
+      "path": "research/topface/continue_board_preview.py",
+      "sha256": "729c0cf6f85ca65344a3ccaccf05df286f3f177414aa0088ede97380ab3ed310"
+    },
+    {
+      "path": "research/topface/deploy_board_trial.py",
+      "sha256": "1613013bd50f849cc755e09921004afedc937d86c3d90fbac952c96343a2ea15"
+    },
+    {
+      "path": "research/topface/test_board_preview.py",
+      "sha256": "328d6b0f9dd8737d44b8082cc371a6e10b0d41d61f8233474f4df1ccbae7fb4c"
+    },
+    {
+      "path": "research/topface/test_board_deployment.py",
+      "sha256": "7759224c3ea8ae38751aaa484c0b06aa2e07d5984898cd50f8a74163c99d878a"
+    },
+    {
+      "path": "docs/topface/v11/reports/BOARD_PREVIEW_HOST_TESTS.log",
+      "sha256": "80427f9a348d7efa340fa6fd61c065546348f39aaa363784b112fa3fb43d382d"
+    },
+    {
+      "path": "docs/topface/v11/reports/BOARD_DEPLOYMENT_PREVIEW_HOST_TESTS.log",
+      "sha256": "07901a4cd0ab8167b638523e55966977e75873c28a884adb29f7147afdbc15f6"
+    },
+    {
+      "path": "docs/topface/v11/reports/BOARD_PREVIEW_PROTOCOL.md",
+      "sha256": "9d4ed2372f71491ffff7603945baec3ae48c5c91b43ff2a8638d26d94654267a"
+    },
+    {
+      "path": "docs/topface/README.md",
+      "sha256": "d82f0a0a61b0e294c245e40db71f1ff8d7c303007792cbacfd436d77c4be3630"
+    }
+  ]
+}

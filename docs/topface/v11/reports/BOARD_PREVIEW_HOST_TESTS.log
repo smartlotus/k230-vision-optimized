@@ -1,0 +1,14 @@
+test_actual_board_archive_roundtrip_and_complete_hashes (test_board_preview.PreviewPackageTests.test_actual_board_archive_roundtrip_and_complete_hashes) ... ok
+test_existing_package_is_preserved (test_board_preview.PreviewPackageTests.test_existing_package_is_preserved) ... ok
+test_missing_pair_denominator_is_rejected (test_board_preview.PreviewPackageTests.test_missing_pair_denominator_is_rejected) ... ok
+test_model_tamper_fails_atomically (test_board_preview.PreviewPackageTests.test_model_tamper_fails_atomically) ... ok
+test_report_tamper_fails_without_publishing_partial_package (test_board_preview.PreviewPackageTests.test_report_tamper_fails_without_publishing_partial_package) ... ok
+test_test_calibration_is_rejected (test_board_preview.PreviewPackageTests.test_test_calibration_is_rejected) ... ok
+test_undertrained_parent_is_rejected (test_board_preview.PreviewPackageTests.test_undertrained_parent_is_rejected) ... ok
+test_binding_changes_only_separate_unsubmitted_job (test_board_preview.PreviewPreparationTests.test_binding_changes_only_separate_unsubmitted_job) ... ok
+test_original_selection_rejects_another_formal_session (test_board_preview.PreviewPreparationTests.test_original_selection_rejects_another_formal_session) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.788s
+
+OK

@@ -31,9 +31,14 @@ def verified_assets(delivery):
     delivery = delivery.resolve()
     checksum_path = delivery / 'SHA256SUMS.json'
     inventory = read(checksum_path)
-    if (inventory['status'] != 'FORMAL_BOARD_TEST_PACKAGE_VERIFIED' or
+    if (inventory['status'] not in ('FORMAL_BOARD_TEST_PACKAGE_VERIFIED', 'FORMAL_BOARD_PREVIEW_PACKAGE_VERIFIED') or
             inventory['native_board_test'] != 'NOT_RUN' or not 1 <= len(inventory['files']) <= 64):
         raise ValueError('Expected the verified, unmodified formal board-test package')
+    if inventory['status'] == 'FORMAL_BOARD_PREVIEW_PACKAGE_VERIFIED' and (
+            inventory.get('scope') != 'FORMAL_BOARD_PREVIEW_ONLY' or
+            inventory.get('full_934_test') != 'PENDING_ORIGINAL_07B' or
+            inventory.get('training_completed_epochs', 0) < 100):
+        raise ValueError('Preview requires completed formal training and explicit independent-test scope')
     seen = set()
     for row in inventory['files']:
         name = row['path']

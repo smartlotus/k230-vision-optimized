@@ -229,6 +229,20 @@ class BoardDeploymentTests(unittest.TestCase):
             self.run_deploy()
         self.assertEqual(self.client.calls, [])
 
+    def test_preview_requires_explicit_scope_and_completed_training(self):
+        self.fixture.inventory.update(status='FORMAL_BOARD_PREVIEW_PACKAGE_VERIFIED',
+                                      scope='FORMAL_BOARD_PREVIEW_ONLY', full_934_test='PENDING_ORIGINAL_07B',
+                                      training_completed_epochs=100)
+        self.fixture.rehash()
+        self.assertEqual(self.run_deploy(install=False)['status'], 'PREFLIGHT_PASS')
+        self.receipt.unlink()
+        self.fixture.inventory['training_completed_epochs'] = 99
+        self.fixture.rehash()
+        self.client.calls.clear()
+        with self.assertRaises(ValueError):
+            self.run_deploy()
+        self.assertEqual(self.client.calls, [])
+
     def test_explicit_config_rejects_remote_or_disabled_service(self):
         for url, enabled in (('https://127.0.0.1:1234/mcp', True),
                              ('http://example.invalid/mcp', True),

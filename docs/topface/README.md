@@ -35,7 +35,7 @@ Smoke 用户抽查、Pilot、颜色补充、组合审计及 Full 生成均已推
 | 13 | [仿真/真实评估覆盖](v11/reports/REQUIREMENT_COVERAGE.json)、[正式主机评估入口](../../research/topface/evaluate_formal_host.py) | 正式 934 张及四路 host 报告待模型产出；新真实盲测未执行 |
 | 14 | [自动转换接续](../../research/topface/continue_formal_conversion.py) | 最终 ONNX/KModel 尚待实际导出、编译与数值测试 |
 | 15 | [契约实现](../../research/topface/nanodet_topface.py) | 最终 output_contract.json 与同一转换模型一起交付 |
-| 16 | [板测包组装](../../research/topface/package_formal_delivery.py)、[安装流程](v11/reports/BOARD_INSTALL_PROTOCOL.md)、[板测计划](v11/reports/BOARD_TEST_PLAN.md)、[数值配对](v11/reports/BOARD_PAIR_PROTOCOL.md) | 包依赖最终模型；原生配对、FPS 与稳定性尚未运行 |
+| 16 | [板测包组装](../../research/topface/package_formal_delivery.py)、[优先试用包](v11/reports/BOARD_PREVIEW_PROTOCOL.md)、[安装流程](v11/reports/BOARD_INSTALL_PROTOCOL.md)、[板测计划](v11/reports/BOARD_TEST_PLAN.md)、[数值配对](v11/reports/BOARD_PAIR_PROTOCOL.md) | 包依赖最终模型；原生配对、FPS 与稳定性尚未运行 |
 | 17 | [当前未完成项](v11/reports/REQUIREMENT_COVERAGE.json)、[相机差距](v11/camera/calibration_gap_report.md)、[板测计划](v11/reports/BOARD_TEST_PLAN.md) | 最终结论须结合正式测试与板端证据更新 |
 
 ## 云存储与不重放原则
