@@ -1,6 +1,6 @@
 {
   "schema": "topface-v1.1-requirement-evidence-v1",
-  "observed_utc": "2026-11-15T07:27:32.057519+00:00",
+  "observed_utc": "2026-11-15T09:24:04.190710+00:00",
   "goal_complete": false,
   "authority": "V1.1 plan/prompt SHA in docs/topface/execution_contract.json; user operating envelope and Smoke approval retained",
   "items": [
@@ -169,7 +169,7 @@
       "remaining": [
         "freeze selected formal weights and existing thresholds",
         "formal934scene independent synthetic evaluation with color/geometric/occlusion/angle/size/capacity slices",
-        "formal historical r4 assessment and independent synthetic redetection sequence",
+        "formal historical r4 assessment and accepted1872frame synthetic sequence on final ONNX and Simulator",
         "fresh blinded real scene/session truth after final model freeze",
         "real physical-center/ellipse truth and calibration for corresponding metrics"
       ],
@@ -180,9 +180,13 @@
         "reports/pilot-accuracy-20261115-a01/REAL_SIMULATOR.json",
         "reports/pilot-accuracy-20261115-a01/SEQUENCE_ONNX.json",
         "reports/pilot-accuracy-20261115-a01/SEQUENCE_SIMULATOR.json",
-        "reports/BOARD_TEST_PLAN.md"
+        "reports/BOARD_TEST_PLAN.md",
+        "reports/REDETECTION_SWEEP_ACCEPTANCE_A01.json",
+        "reports/REDETECTION_SWEEP_DRIVE_A01.json",
+        "reports/redetection-sweep-a01/VISUAL_REVIEW.json"
       ],
-      "scope": "Pilot real val has2images/2redGT. It showed false positives. Existing36frame sequence is development diagnostics at175mm/90deg in blue/black. Both scopes are insufficient for full real acceptance."
+      "scope": "Pilot real val has2images/2redGT. It showed false positives. Existing36frame sequence is development diagnostics at175mm/90deg in blue/black. Both scopes are insufficient for full real acceptance.",
+      "sequence_fixture": "Accepted1872frames/156sequences/20testcamera groups, sixcolors, occlusion/reentry/continuous motion and vertical camera rise/fall. Final formal model inference pending."
     },
     {
       "requirement": "PT->ORT->Simulator->KPU paired final export",

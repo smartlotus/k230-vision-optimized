@@ -1,0 +1,16 @@
+{
+  "status": "INDEPENDENT_DRIVE_METADATA_MATCH",
+  "run_id": "k230-topface-v11-sequence-sweep-a01",
+  "publication_receipt_sha256": "98f36c69f87de3f86cc3e7174c8b423e7cd7082c1353bd019b5abe65b11983fc",
+  "metadata": {
+    "id": "1oW0SFbB1R65Vtuw-pFEMZblhnV8VNi_8",
+    "name": "k230-topface-v11-sequence-sweep-a01-52a7bbf09e5b5097.tar.gz",
+    "trashed": false,
+    "parents": [
+      "1MwltNmaI24HjvcxnG1w608qui42RAPKf"
+    ],
+    "sha256Checksum": "52a7bbf09e5b5097b91b8bde59ffbff66b4d5ac97b265561d9020ac4b2c88fd8",
+    "size": "491229923"
+  },
+  "full_byte_readback_evidence": "REDETECTION_SWEEP_DRIVE_A01.json"
+}

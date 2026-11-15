@@ -1,0 +1,49 @@
+{
+  "status": "SYNTHETIC_SEQUENCE_RENDER_QA_AND_DRIVE_ACCEPTED",
+  "observed_utc": "2026-11-15T09:24:04.190710+00:00",
+  "run_id": "k230-topface-v11-sequence-sweep-a01",
+  "producer": "LOCAL_NATIVE_BLENDER4.2.9_OPTIX",
+  "images": 1872,
+  "sequences": 156,
+  "instances": 1872,
+  "split": "synthetic_test",
+  "camera_groups": 20,
+  "frames_per_color": 312,
+  "actual_new_training_updates": 0,
+  "scope": "Independent six-color discrete recovery and vertical-camera fixture; final model evaluation pending",
+  "qa": {
+    "status": "PASS",
+    "issues": [],
+    "unique_scene_groups": 1872,
+    "unique_scene_seeds": 1872,
+    "camera_configuration_groups": 20,
+    "camera_group_cross_split_count": 0,
+    "height_mm_range": [
+      100,
+      400
+    ],
+    "plane_angle_deg_range": [
+      80,
+      100
+    ],
+    "max_center_reprojection_error_px": 1.1368683772161603e-13
+  },
+  "source_freeze_sha256": "70b4a5b243a315e9976ab30e3fa2dd10bbffca05baa8ed256376bfcc1f67ab50",
+  "plan_sha256": "40c2690b87603b80732a58cf1f46f2e442f2d9c81852cbec17210f75d7c7b55c",
+  "dataset_index_sha256": "7aae7cd75909fb080c6800c95ea0117334bd2a550bd0174a03a2873bf23d45f2",
+  "drive": {
+    "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+    "file_id": "1oW0SFbB1R65Vtuw-pFEMZblhnV8VNi_8",
+    "name": "k230-topface-v11-sequence-sweep-a01-52a7bbf09e5b5097.tar.gz",
+    "bytes": 491229923,
+    "sha256": "52a7bbf09e5b5097b91b8bde59ffbff66b4d5ac97b265561d9020ac4b2c88fd8",
+    "provider_readback": "FULL_BYTE_SHA256_PASS",
+    "member_manifest_sha256": "f1fd7b03823b187ec5d9ac6ea97d0e236a83c08ca21f7aac2d9a8d87e225e846"
+  },
+  "publication_receipt_sha256": "98f36c69f87de3f86cc3e7174c8b423e7cd7082c1353bd019b5abe65b11983fc",
+  "independent_metadata_sha256": "89fb9f866f97b832fac50564964c0de0c82314be16ceb800961b2ceb9bfcc49f",
+  "visual_review": "redetection-sweep-a01/VISUAL_REVIEW.json",
+  "formal_model_evaluation": "NOT_RUN",
+  "real_accuracy": "NOT_RUN",
+  "native_KPU": "NOT_RUN"
+}

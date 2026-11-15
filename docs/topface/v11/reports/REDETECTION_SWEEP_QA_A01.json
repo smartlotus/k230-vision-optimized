@@ -1,0 +1,51 @@
+{
+  "status": "LOCAL_SEQUENCE_SWEEP_RENDER_AND_QA_PASS",
+  "run_id": "k230-topface-v11-sequence-sweep-a01",
+  "observed_utc": "2026-11-15T09:15:17.085894+00:00",
+  "images": 1872,
+  "instances": 1872,
+  "sequences": 156,
+  "source_freeze_sha256": "70b4a5b243a315e9976ab30e3fa2dd10bbffca05baa8ed256376bfcc1f67ab50",
+  "plan_sha256": "40c2690b87603b80732a58cf1f46f2e442f2d9c81852cbec17210f75d7c7b55c",
+  "audit_sha256": "7aae7cd75909fb080c6800c95ea0117334bd2a550bd0174a03a2873bf23d45f2",
+  "camera_groups": 20,
+  "split": "synthetic_test",
+  "height_mm": [
+    100,
+    102.0,
+    127.0,
+    154.3,
+    175,
+    183.0,
+    208.7,
+    236.1,
+    250,
+    264.3,
+    291.9,
+    318.9,
+    325,
+    345.5,
+    372.8,
+    397.6,
+    400
+  ],
+  "plane_angle_deg": [
+    80,
+    85,
+    90,
+    95,
+    100
+  ],
+  "colors": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "actual_model_evaluation": "PENDING_FORMAL_MODEL",
+  "producer": "LOCAL_NATIVE_BLENDER",
+  "durable_archive": "PENDING",
+  "new_training_updates": 0
+}

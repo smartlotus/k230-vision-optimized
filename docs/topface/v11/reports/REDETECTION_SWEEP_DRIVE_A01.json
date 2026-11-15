@@ -1,0 +1,22 @@
+{
+  "schema": "k230-cloud-direct-write-v1",
+  "run_id": "k230-topface-v11-sequence-sweep-a01",
+  "status": "FULL_BYTE_SHA256_PASS",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "file_id": "1oW0SFbB1R65Vtuw-pFEMZblhnV8VNi_8",
+  "name": "k230-topface-v11-sequence-sweep-a01-52a7bbf09e5b5097.tar.gz",
+  "bytes": 491229923,
+  "sha256": "52a7bbf09e5b5097b91b8bde59ffbff66b4d5ac97b265561d9020ac4b2c88fd8",
+  "automatic_replay": false,
+  "producer": "LOCAL_NATIVE_BLENDER; not Kaggle generated",
+  "images": 1872,
+  "sequences": 156,
+  "instances": 1872,
+  "audit_sha256": "7aae7cd75909fb080c6800c95ea0117334bd2a550bd0174a03a2873bf23d45f2",
+  "source_freeze_sha256": "70b4a5b243a315e9976ab30e3fa2dd10bbffca05baa8ed256376bfcc1f67ab50",
+  "member_manifest_sha256": "f1fd7b03823b187ec5d9ac6ea97d0e236a83c08ca21f7aac2d9a8d87e225e846",
+  "provider_readback": "FULL_BYTE_SHA256_PASS",
+  "evaluation_scope": "FROZEN_SYNTHETIC_TEST_SEQUENCE; formal model inference pending",
+  "new_training_updates": 0,
+  "observed_utc": "2026-11-15T09:22:43.706768+00:00"
+}
