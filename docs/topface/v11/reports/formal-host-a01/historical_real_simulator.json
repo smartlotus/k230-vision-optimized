@@ -1,0 +1,210 @@
+{
+  "status": "HISTORICAL_REAL_TEST_EVALUATED",
+  "phase": "formal_historical_test",
+  "evaluation_split": "test",
+  "backend": "NNCASE_SIMULATOR",
+  "model_sha256": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88",
+  "reference_onnx_sha256": "833e5786d3a0385b75ee38638993c56adbcce30165e5f67a02f26ebebd7b0ad4",
+  "manifest_sha256": "6d21a2e9d0a251c1161ee3b63345909d64ad1f8cda6d3f9be0e0c0454843e198",
+  "camera_id": 2,
+  "score_threshold": 0.25,
+  "matching_iou": 0.5,
+  "denominators": {
+    "color_labeled_matches": 3,
+    "correct_color": 3,
+    "images": 1,
+    "gt": 3,
+    "predictions": 3,
+    "tp": 3,
+    "fp": 0,
+    "fn": 0
+  },
+  "recall": 1.0,
+  "precision": 1.0,
+  "matched_color_accuracy": 1.0,
+  "colors": {
+    "1": {},
+    "2": {
+      "gt": 1,
+      "predictions": 1,
+      "correct": 1
+    },
+    "3": {
+      "gt": 1,
+      "predictions": 1,
+      "correct": 1
+    },
+    "4": {},
+    "5": {},
+    "6": {
+      "gt": 1,
+      "predictions": 1,
+      "correct": 1
+    }
+  },
+  "rows": [
+    {
+      "image_id": "cfa68398650971a91353d320bed5516cb0ba704e55ee565d456abbb76ba19ab2",
+      "scene_group": "operator-confirmed-ybc-layout",
+      "gt": 3,
+      "predictions": 3,
+      "matched": [
+        {
+          "bbox_iou": 0.9050774747653219,
+          "approved_color": 6,
+          "predicted_color": 6
+        },
+        {
+          "bbox_iou": 0.8912193616698931,
+          "approved_color": 2,
+          "predicted_color": 2
+        },
+        {
+          "bbox_iou": 0.9430490594599291,
+          "approved_color": 3,
+          "predicted_color": 3
+        }
+      ],
+      "detections": [
+        {
+          "score": 0.9916841983795166,
+          "color_id": 6,
+          "color_probabilities": [
+            7.265816748258658e-08,
+            0.006388320587575436,
+            0.00341627886518836,
+            0.0007096704212017357,
+            0.004962942097336054,
+            0.9916841983795166
+          ],
+          "bbox_xyxy_visible": [
+            398.9690246582031,
+            163.8177490234375,
+            455.14141845703125,
+            222.16993713378906
+          ],
+          "bbox_xyxy_unclipped": [
+            398.9690246582031,
+            163.8177490234375,
+            455.14141845703125,
+            222.16993713378906
+          ],
+          "center_xy_projected_3d": [
+            426.359375,
+            192.859375
+          ],
+          "center_valid_probability": 1.0,
+          "center_visible_probability": 0.9999850988388062,
+          "ellipse": {
+            "conic_center_xy": [
+              426.4296875,
+              192.83203125
+            ],
+            "semi_major": 29.442876712019817,
+            "semi_minor": 28.802994206455274,
+            "orientation_deg": -51.25002019692847,
+            "orientation_valid": true,
+            "geometry_confidence": 0.9999920129776001
+          },
+          "visibility_quality": 0.9985104203224182,
+          "boundary_candidate": false
+        },
+        {
+          "score": 0.9549844264984131,
+          "color_id": 2,
+          "color_probabilities": [
+            0.0010322310263291001,
+            0.9549844264984131,
+            4.5563993467112596e-07,
+            0.000666702282615006,
+            0.004264634568244219,
+            0.009196552447974682
+          ],
+          "bbox_xyxy_visible": [
+            335.2962341308594,
+            58.880088806152344,
+            391.0413513183594,
+            115.70225524902344
+          ],
+          "bbox_xyxy_unclipped": [
+            335.2962341308594,
+            58.880088806152344,
+            391.0413513183594,
+            115.70225524902344
+          ],
+          "center_xy_projected_3d": [
+            363.1015625,
+            87.048828125
+          ],
+          "center_valid_probability": 1.0,
+          "center_visible_probability": 0.999992847442627,
+          "ellipse": {
+            "conic_center_xy": [
+              363.23828125,
+              87.1015625
+            ],
+            "semi_major": 28.2321052947382,
+            "semi_minor": 27.916819237326045,
+            "orientation_deg": 83.10196453006967,
+            "orientation_valid": false,
+            "geometry_confidence": 0.9999809265136719
+          },
+          "visibility_quality": 0.9991573095321655,
+          "boundary_candidate": false
+        },
+        {
+          "score": 0.9375547766685486,
+          "color_id": 3,
+          "color_probabilities": [
+            0.0018821858102455735,
+            1.0429695294078556e-06,
+            0.9375547766685486,
+            0.006050397641956806,
+            0.0013096056645736098,
+            0.004591683857142925
+          ],
+          "bbox_xyxy_visible": [
+            491.7868347167969,
+            288.46929931640625,
+            549.148681640625,
+            346.66815185546875
+          ],
+          "bbox_xyxy_unclipped": [
+            491.7868347167969,
+            288.46929931640625,
+            549.148681640625,
+            346.66815185546875
+          ],
+          "center_xy_projected_3d": [
+            520.109375,
+            317.33984375
+          ],
+          "center_valid_probability": 1.0,
+          "center_visible_probability": 0.9999992847442627,
+          "ellipse": {
+            "conic_center_xy": [
+              519.9921875,
+              317.22265625
+            ],
+            "semi_major": 28.080874511364776,
+            "semi_minor": 27.15055032548449,
+            "orientation_deg": -53.11690443293355,
+            "orientation_valid": true,
+            "geometry_confidence": 0.9999614953994751
+          },
+          "visibility_quality": 0.9992875456809998,
+          "boundary_candidate": false
+        }
+      ]
+    }
+  ],
+  "center_ellipse_source_truth": "UNAVAILABLE",
+  "fresh_real_blind_test": "NOT_RUN",
+  "simulator_timing_seconds": {
+    "model_load": 1.239165500010131,
+    "inference": [
+      8.378295900009107
+    ],
+    "scope": "HOST_SIMULATOR; not native KPU latency"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "status": "HISTORICAL_REAL_TEST_EVALUATED",
+  "phase": "formal_historical_test",
+  "evaluation_split": "test",
+  "backend": "ONNX_RUNTIME",
+  "model_sha256": "833e5786d3a0385b75ee38638993c56adbcce30165e5f67a02f26ebebd7b0ad4",
+  "reference_onnx_sha256": "833e5786d3a0385b75ee38638993c56adbcce30165e5f67a02f26ebebd7b0ad4",
+  "manifest_sha256": "6d21a2e9d0a251c1161ee3b63345909d64ad1f8cda6d3f9be0e0c0454843e198",
+  "camera_id": 2,
+  "score_threshold": 0.25,
+  "matching_iou": 0.5,
+  "denominators": {
+    "color_labeled_matches": 3,
+    "correct_color": 3,
+    "images": 1,
+    "gt": 3,
+    "predictions": 3,
+    "tp": 3,
+    "fp": 0,
+    "fn": 0
+  },
+  "recall": 1.0,
+  "precision": 1.0,
+  "matched_color_accuracy": 1.0,
+  "colors": {
+    "1": {},
+    "2": {
+      "gt": 1,
+      "predictions": 1,
+      "correct": 1
+    },
+    "3": {
+      "gt": 1,
+      "predictions": 1,
+      "correct": 1
+    },
+    "4": {},
+    "5": {},
+    "6": {
+      "gt": 1,
+      "predictions": 1,
+      "correct": 1
+    }
+  },
+  "rows": [
+    {
+      "image_id": "cfa68398650971a91353d320bed5516cb0ba704e55ee565d456abbb76ba19ab2",
+      "scene_group": "operator-confirmed-ybc-layout",
+      "gt": 3,
+      "predictions": 3,
+      "matched": [
+        {
+          "bbox_iou": 0.9139575149353024,
+          "approved_color": 6,
+          "predicted_color": 6
+        },
+        {
+          "bbox_iou": 0.9103591239066002,
+          "approved_color": 3,
+          "predicted_color": 3
+        },
+        {
+          "bbox_iou": 0.8897189513824142,
+          "approved_color": 2,
+          "predicted_color": 2
+        }
+      ],
+      "detections": [
+        {
+          "score": 0.9893763065338135,
+          "color_id": 6,
+          "color_probabilities": [
+            1.4256281133384618e-07,
+            0.004762201104313135,
+            0.006838027387857437,
+            0.0014026738936081529,
+            0.0052849724888801575,
+            0.9893763065338135
+          ],
+          "bbox_xyxy_visible": [
+            398.6605224609375,
+            164.1320037841797,
+            455.5914611816406,
+            221.9256591796875
+          ],
+          "bbox_xyxy_unclipped": [
+            398.6605224609375,
+            164.1320037841797,
+            455.5914611816406,
+            221.9256591796875
+          ],
+          "center_xy_projected_3d": [
+            426.19647216796875,
+            192.9984130859375
+          ],
+          "center_valid_probability": 1.0,
+          "center_visible_probability": 0.9999364614486694,
+          "ellipse": {
+            "conic_center_xy": [
+              426.2940368652344,
+              193.08628845214844
+            ],
+            "semi_major": 29.16607842548338,
+            "semi_minor": 28.802879181604997,
+            "orientation_deg": -51.21063755650689,
+            "orientation_valid": false,
+            "geometry_confidence": 0.9999912977218628
+          },
+          "visibility_quality": 0.9977250695228577,
+          "boundary_candidate": false
+        },
+        {
+          "score": 0.96825110912323,
+          "color_id": 3,
+          "color_probabilities": [
+            0.001156285754404962,
+            5.798551114821748e-07,
+            0.96825110912323,
+            0.00747119402512908,
+            0.0016054721781983972,
+            0.006342574954032898
+          ],
+          "bbox_xyxy_visible": [
+            492.1968994140625,
+            289.6012268066406,
+            548.7300415039062,
+            347.43255615234375
+          ],
+          "bbox_xyxy_unclipped": [
+            492.1968994140625,
+            289.6012268066406,
+            548.7300415039062,
+            347.43255615234375
+          ],
+          "center_xy_projected_3d": [
+            520.2102661132812,
+            318.42852783203125
+          ],
+          "center_valid_probability": 1.0,
+          "center_visible_probability": 0.9999991655349731,
+          "ellipse": {
+            "conic_center_xy": [
+              520.160888671875,
+              318.3848571777344
+            ],
+            "semi_major": 28.622217416938852,
+            "semi_minor": 27.583460314037453,
+            "orientation_deg": -54.55820511623601,
+            "orientation_valid": true,
+            "geometry_confidence": 0.9999839067459106
+          },
+          "visibility_quality": 0.999308705329895,
+          "boundary_candidate": false
+        },
+        {
+          "score": 0.9479994177818298,
+          "color_id": 2,
+          "color_probabilities": [
+            0.0013514283346012235,
+            0.9479994177818298,
+            5.466405923471029e-07,
+            0.0007678358815610409,
+            0.003874965477734804,
+            0.006660101469606161
+          ],
+          "bbox_xyxy_visible": [
+            335.02825927734375,
+            58.70280456542969,
+            391.1326599121094,
+            115.4027099609375
+          ],
+          "bbox_xyxy_unclipped": [
+            335.02825927734375,
+            58.70280456542969,
+            391.1326599121094,
+            115.4027099609375
+          ],
+          "center_xy_projected_3d": [
+            363.3194274902344,
+            87.34803771972656
+          ],
+          "center_valid_probability": 1.0,
+          "center_visible_probability": 0.9999620914459229,
+          "ellipse": {
+            "conic_center_xy": [
+              363.41302490234375,
+              87.46297454833984
+            ],
+            "semi_major": 28.061806926699106,
+            "semi_minor": 27.560340776556135,
+            "orientation_deg": 72.33640701857911,
+            "orientation_valid": false,
+            "geometry_confidence": 0.9999630451202393
+          },
+          "visibility_quality": 0.9983322024345398,
+          "boundary_candidate": false
+        }
+      ]
+    }
+  ],
+  "center_ellipse_source_truth": "UNAVAILABLE",
+  "fresh_real_blind_test": "NOT_RUN"
+}

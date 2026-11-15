@@ -1,6 +1,6 @@
 {
   "schema": "topface-v1.1-requirement-evidence-v1",
-  "observed_utc": "2026-11-15T19:07:42.455281+00:00",
+  "observed_utc": "2026-11-15T21:24:25.585714+00:00",
   "goal_complete": false,
   "authority": "V1.1 plan/prompt SHA in docs/topface/execution_contract.json; user operating envelope and Smoke approval retained",
   "items": [
@@ -76,7 +76,7 @@
     },
     {
       "requirement": "One forward bbox/sixcolors/physicalcenter/flags/ellipse/coniccenter",
-      "status": "FORMAL_TRAINED_AND_DRIVE_ACCEPTED_EXPORT_NOT_YET_EXECUTED",
+      "status": "FORMAL_EXPORT_IO_CONTRACT_AND_HOST_STATIC_PAIR_VERIFIED_NATIVE_PENDING",
       "evidence": [
         "g3/nanodet-taskhead-224x128/RESULT.json",
         "g3/nanodet-taskhead-320x192/RESULT.json",
@@ -84,11 +84,13 @@
         "cloud/training-a01/ACCEPTANCE-v1.json",
         "cloud/conversion-pilot-a02/MODEL_FILES_RECEIPT.json",
         "training/FORMAL_START_EVIDENCE.json",
-        "cloud/formal-a01/ACCEPTANCE.json"
+        "cloud/formal-a01/ACCEPTANCE.json",
+        "cloud/conversion-formal-a01/MODEL_FILES_RECEIPT.json",
+        "cloud/conversion-formal-a01/REPORTS_RECEIPT.json",
+        "cloud/conversion-formal-a01/compact-v1/evaluation/PAIRED_SYNTHETIC_TEST.json"
       ],
       "remaining": [
-        "complete actual formal export and bind final input/output contract",
-        "same-input final ONNX/Simulator/KPU preprocessing and raw/decoded proof"
+        "same-input target KPU preprocessing, raw tensor and decoded output pairing"
       ]
     },
     {
@@ -162,7 +164,7 @@
         "cloud/publisher/k230-topface-v11-formal-a01/TRANSFER_RECEIPT.json",
         "training/FORMAL_TRAINING_A01.md"
       ],
-      "scope": "OriginalKaggle145144940v1, exact savedsource/inputs/trace verified; completed training and durable acceptance. Independent synthetic test, quantization and real/native qualification remain separate.",
+      "scope": "Original Kaggle kernel 145144940 v1, with exact saved source, inputs, trace and Drive acceptance verified. Independent static testing and quantization are covered by the formal conversion receipts.",
       "completed_epochs": 100,
       "optimizer_updates": 23400,
       "best_epoch": 92,
@@ -170,9 +172,8 @@
     },
     {
       "requirement": "Separate synthetic and approved real assessment/active learning",
-      "status": "FORMAL_934_STATIC_COMPLETE_HOST_SEQUENCE_AND_NATIVE_PENDING",
+      "status": "FORMAL_STATIC_SEQUENCE_AND_HISTORICAL_HOST_EVALUATED_FRESH_REAL_PENDING",
       "remaining": [
-        "formal historical r4 assessment and accepted1872frame synthetic sequence on final ONNX and Simulator",
         "fresh blinded real scene/session truth after final model freeze",
         "real physical-center/ellipse truth and calibration for corresponding metrics"
       ],
@@ -191,10 +192,33 @@
         "cloud/conversion-formal-a01/REPORTS_RECEIPT.json",
         "cloud/conversion-formal-a01/compact-v1/evaluation/SYNTHETIC_TEST.json",
         "cloud/conversion-formal-a01/compact-v1/evaluation/PAIRED_SYNTHETIC_TEST.json",
-        "cloud/publisher/k230-topface-v11-conversion-formal-a01/TRANSFER_RECEIPT.json"
+        "cloud/publisher/k230-topface-v11-conversion-formal-a01/TRANSFER_RECEIPT.json",
+        "reports/formal-host-a01/HOST_EVALUATION_RECEIPT.json",
+        "reports/formal-host-a01/synthetic_sequence_onnx.json",
+        "reports/formal-host-a01/synthetic_sequence_simulator.json",
+        "reports/formal-host-a01/historical_real_onnx.json",
+        "reports/formal-host-a01/historical_real_simulator.json"
       ],
-      "scope": "Pilot real val has2images/2redGT. It showed false positives. Existing36frame sequence is development diagnostics at175mm/90deg in blue/black. Both scopes are insufficient for full real acceptance.",
-      "sequence_fixture": "Accepted 1872 frames, 156 sequences, and 20 test camera groups. Quantized evaluation is running using byte-identical KModel and ONNX."
+      "scope": "The formal historical test has one approved image and three targets. Both host backends detected and classified all three. The 934 static scenes and 1872 motion frames are synthetic.",
+      "sequence_fixture": "Accepted 1872 frames, 156 sequences and 20 camera groups. ONNX and nncase Simulator results are bound to final model and dataset hashes.",
+      "formal_simulator_motion": {
+        "precision": 0.9827814569536424,
+        "recall": 0.9973118279569892,
+        "denominators": {
+          "frames": 1872,
+          "visible_gt": 1488,
+          "hidden_frames": 384,
+          "predictions": 1510,
+          "tp": 1484,
+          "fp": 26,
+          "fn": 4,
+          "correct_color": 1484,
+          "color_labeled_matches": 1484
+        },
+        "first_visible_frame_recovery": 96,
+        "recovery_sequences": 96,
+        "hidden_false_positives": 26
+      }
     },
     {
       "requirement": "PT->ORT->Simulator->KPU paired final export",
@@ -239,7 +263,7 @@
     },
     {
       "requirement": "Final requested deliverable index, reports and complete SHA256SUMS.json",
-      "status": "FORMAL_MODEL_AND_STATIC_REPORTS_VERIFIED_COMPLETE_ZIP_PENDING",
+      "status": "FORMAL_MODEL_AND_OFFLINE_EVALUATION_RELEASE_VERIFIED_NATIVE_DEFERRED",
       "evidence": [
         "../README.md",
         "training/FORMAL_TRAINING_A01.md",
@@ -249,14 +273,22 @@
         "cloud/conversion-formal-a01/REPORTS_RECEIPT.json",
         "cloud/conversion-formal-a01/compact-v1/evaluation/SYNTHETIC_TEST.json",
         "cloud/conversion-formal-a01/compact-v1/evaluation/PAIRED_SYNTHETIC_TEST.json",
-        "cloud/publisher/k230-topface-v11-conversion-formal-a01/TRANSFER_RECEIPT.json"
+        "cloud/publisher/k230-topface-v11-conversion-formal-a01/TRANSFER_RECEIPT.json",
+        "reports/formal-host-a01/HOST_EVALUATION_RECEIPT.json",
+        "reports/FORMAL_COMPLETE_RELEASE_A01.json",
+        "reports/FORMAL_COMPLETE_RELEASE_DRIVE_A01.json"
       ],
       "remaining": [
-        "final user-accessible file index covering original plan deliverables1to17",
-        "final training, host evaluation, native acceptance and unresolved issues reports",
-        "verify private source checkpoint and exact Drive artifact references",
-        "requirement-by-requirement completion audit with actual evidence"
+        "append native camera-to-display benchmark and fresh real acceptance after board trial"
       ]
     }
-  ]
+  ],
+  "scope": "Repository coverage after the offline release. The copy inside the archive records the pre-release progress snapshot.",
+  "offline_release": {
+    "archive_name": "TopFaceNet-V1.1-Complete-a01.zip",
+    "sha256": "783d2616972bd5b0aad5a154cefdda7bb17e08bea16c065e98dcc3fea522ef9d",
+    "verified_members": 106,
+    "source_commit": "486e0faf806ee78e25ebd9e53d87c66b81abb157",
+    "drive_file_id": "1-1HJ0-PwbAQCPtSInzfq06cdIZ6mkarz"
+  }
 }

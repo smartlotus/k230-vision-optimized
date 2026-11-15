@@ -10,8 +10,8 @@
 - [Full 数据接受](v11/training/FULL_DATASET_ACCEPTANCE.json)：10,000 场景、24,996 个世界实例；train 7,465、val 1,601、独立 synthetic_test 934。数据索引与分片哈希见该记录及 [分片清单](v11/training/FULL_INVENTORY.json)。
 - [正式训练运行记录](v11/cloud/formal-a01/HOST_PROGRESS.json) 和 [精确 v1 观察](v11/cloud/formal-a01/OBSERVATION-v1.json)：当前任务为 `lotus30/k230-topface-v11-06-formal-training`，ID 145144940、v1。查看记录的实际时间与原始会话；不要因观察连接中断重启训练。
 - [正式训练配置](v11/cloud/formal-a01/FORMAL_CONFIG.json)、[完成报告](v11/training/FORMAL_TRAINING_A01.md) 和 [接受记录](v11/cloud/formal-a01/ACCEPTANCE.json)：原 v1 已完成 100 轮、23,400 次更新，第 92 轮 best 已在 Drive 全字节校验接受。实际导出、独立测试和实机验收另行核对。
-- [独立运动测试接受](v11/reports/REDETECTION_SWEEP_ACCEPTANCE_A01.json)：1,872 帧、156 序列，覆盖六色、遮挡恢复、出入画和相机升降。数据生成与归档已接受，正式模型推理结果另行核对。
-- 正式转换 07b v1 已完成 934 张独立仿真测试。[模型文件收据](v11/cloud/conversion-formal-a01/MODEL_FILES_RECEIPT.json)、[评估收据](v11/cloud/conversion-formal-a01/REPORTS_RECEIPT.json)及 [Drive 全字节校验](v11/cloud/publisher/k230-topface-v11-conversion-formal-a01/TRANSFER_RECEIPT.json)均已取得。KModel、ONNX 和训练权重的 SHA-256 与先前交付的试用包一致。完整 ZIP 等待 1,872 帧运动测试和正式主机评估，实机测试由用户择期安排。
+- [独立运动测试接受](v11/reports/REDETECTION_SWEEP_ACCEPTANCE_A01.json)：1,872 帧、156 序列，覆盖六色、遮挡恢复、出入画和相机升降。正式模型在 ONNX 和 Simulator 上均已完成测试，见[主机评估回执](v11/reports/formal-host-a01/HOST_EVALUATION_RECEIPT.json)。Simulator 召回 99.73%，96 段均首帧找回，完全不可见时有 26 次误报。
+- 正式转换 07b v1 已完成 934 张独立仿真测试。[模型文件收据](v11/cloud/conversion-formal-a01/MODEL_FILES_RECEIPT.json)、[评估收据](v11/cloud/conversion-formal-a01/REPORTS_RECEIPT.json)及 [Drive 全字节校验](v11/cloud/publisher/k230-topface-v11-conversion-formal-a01/TRANSFER_RECEIPT.json)均已取得。KModel、ONNX 和训练权重的 SHA-256 与先前交付的试用包一致。正式主机评估和完整 ZIP 已校验。[交付回执](v11/reports/FORMAL_COMPLETE_RELEASE_A01.json)记录 106 个成员及 SHA-256。[Drive 副本](https://drive.google.com/file/d/1-1HJ0-PwbAQCPtSInzfq06cdIZ6mkarz/view)已完成全字节读回校验。实机测试由用户择期安排。
 
 Smoke 用户抽查、Pilot、颜色补充、组合审计及 Full 生成均已推进完成；旧版“optimizer updates=0”“等待用户启动旧审计”不再是接续指令。历史状态保留在各原始运行目录和 Git 历史。
 
@@ -33,7 +33,7 @@ Smoke 用户抽查、Pilot、颜色补充、组合审计及 Full 生成均已推
 | 10 | [Full 接受](v11/training/FULL_DATASET_ACCEPTANCE.json)、[清单](v11/training/FULL_INVENTORY.json) | 10,000 场景，完整分片在 Drive |
 | 11 | [训练实现](../../research/topface/train_experiment.py)、[正式配置](v11/cloud/formal-a01/FORMAL_CONFIG.json)、[选定权重](v11/cloud/formal-a01/SELECTED_MODEL.json) | 100 轮完成，第 92 轮 best 已接受 |
 | 12 | [正式训练报告](v11/training/FORMAL_TRAINING_A01.md)、[原归档接受](v11/cloud/formal-a01/ACCEPTANCE.json)、[归档与源码校验](../../research/topface/accept_full_downstream.py) | 配置、完整日志、TensorBoard、best/last 与 SHA 在已接受原归档内 |
-| 13 | [934 张仿真评估](v11/cloud/conversion-formal-a01/compact-v1/evaluation/PAIRED_SYNTHETIC_TEST.json)、[仿真/真实评估覆盖](v11/reports/REQUIREMENT_COVERAGE.json) | 独立静态结果齐全，历史实拍及运动序列主机汇总待完成，新真实盲测未执行 |
+| 13 | [独立静态仿真](v11/cloud/conversion-formal-a01/compact-v1/evaluation/PAIRED_SYNTHETIC_TEST.json)、[运动和历史实拍](v11/reports/formal-host-a01/HOST_EVALUATION_RECEIPT.json) | 934 张静态图、1,872 帧仿真运动、1 张历史实拍。新拍盲测待做 |
 | 14 | [正式模型文件收据](v11/cloud/conversion-formal-a01/MODEL_FILES_RECEIPT.json) | 正式 ONNX 和 KModel 已导出、编译、测量并归档 |
 | 15 | [契约实现](../../research/topface/nanodet_topface.py) | 最终 output_contract.json 与同一转换模型一起交付 |
 | 16 | [板测包组装](../../research/topface/package_formal_delivery.py)、[优先试用包](v11/reports/BOARD_PREVIEW_PROTOCOL.md)、[安装流程](v11/reports/BOARD_INSTALL_PROTOCOL.md)、[板测计划](v11/reports/BOARD_TEST_PLAN.md)、[数值配对](v11/reports/BOARD_PAIR_PROTOCOL.md) | 正式板测包已校验，待原生配对、FPS 和稳定性测试 |

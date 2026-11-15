@@ -1,0 +1,12 @@
+{
+  "status": "FULL_BYTE_SHA256_PASS",
+  "observed_utc": "2026-11-15T21:23:57.978769+00:00",
+  "scope": "Exact independently verified a01 model release with offline reports",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "file_id": "1-1HJ0-PwbAQCPtSInzfq06cdIZ6mkarz",
+  "name": "TopFaceNet-V1.1-Complete-a01-783d2616972bd5b0.zip",
+  "bytes": 23610866,
+  "sha256": "783d2616972bd5b0aad5a154cefdda7bb17e08bea16c065e98dcc3fea522ef9d",
+  "members": 106,
+  "native_board_test": "USER_DEFERRED_TEST"
+}

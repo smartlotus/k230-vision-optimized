@@ -1,0 +1,77 @@
+{
+  "status": "FORMAL_HOST_EVALUATION_COMPLETE",
+  "observed_utc": "2026-11-15T21:22:16.526423+00:00",
+  "run_id": "k230-topface-v11-conversion-formal-a01",
+  "checkpoint_sha256": "7d7b9a332e2b30d3d09e85245d6e39fd5f9a9d52b694f4bdb0d203585b0346d7",
+  "model_receipt_sha256": "636bfe18a2ffce9bb0fb64573bd610b1dc48fde91630c5c1422a40924b73994d",
+  "synthetic_reports_receipt_sha256": "f242f3b322b4b8ced2248acae294ac4d544dccb90dcf3e74c5b76e8ea26c23fd",
+  "sequence_acceptance_sha256": "cc6b48b442527c5503d09e51487e9f2b6d8c114596b4da3e438d7434a633c647",
+  "evaluations": {
+    "historical_real_onnx": {
+      "name": "historical_real_onnx.json",
+      "sha256": "791ae9a9a1faa83b5c2821dd3babe0d3e7d94899204218b578429cbd8e7d0c4e",
+      "denominators": {
+        "color_labeled_matches": 3,
+        "correct_color": 3,
+        "images": 1,
+        "gt": 3,
+        "predictions": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "synthetic_sequence_onnx": {
+      "name": "synthetic_sequence_onnx.json",
+      "sha256": "7e464866d64638d465f4cef38274e9ded5aeec55091d984d314944d43cefc613",
+      "denominators": {
+        "frames": 1872,
+        "visible_gt": 1488,
+        "hidden_frames": 384,
+        "predictions": 1515,
+        "tp": 1486,
+        "fp": 29,
+        "fn": 2,
+        "correct_color": 1486,
+        "color_labeled_matches": 1486
+      }
+    },
+    "historical_real_simulator": {
+      "name": "historical_real_simulator.json",
+      "sha256": "c2785c4640f8e4ef3338029bfc2f09fd2e64f2ac40057768a110194d87368c83",
+      "denominators": {
+        "color_labeled_matches": 3,
+        "correct_color": 3,
+        "images": 1,
+        "gt": 3,
+        "predictions": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "synthetic_sequence_simulator": {
+      "name": "synthetic_sequence_simulator.json",
+      "sha256": "2c6227af3e1f6ccab6560e5dc9d62a304b6e54dba6f6299d76f11a193495057d",
+      "denominators": {
+        "frames": 1872,
+        "visible_gt": 1488,
+        "hidden_frames": 384,
+        "predictions": 1510,
+        "tp": 1484,
+        "fp": 26,
+        "fn": 4,
+        "correct_color": 1484,
+        "color_labeled_matches": 1484
+      }
+    }
+  },
+  "reused_evaluations": {
+    "synthetic_sequence_simulator": {
+      "source_sha256": "2c6227af3e1f6ccab6560e5dc9d62a304b6e54dba6f6299d76f11a193495057d",
+      "kmodel_sha256": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88",
+      "dataset_index_sha256": "7aae7cd75909fb080c6800c95ea0117334bd2a550bd0174a03a2873bf23d45f2"
+    }
+  },
+  "native_K230_test": "NOT_RUN"
+}
