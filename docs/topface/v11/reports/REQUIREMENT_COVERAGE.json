@@ -1,6 +1,6 @@
 {
   "schema": "topface-v1.1-requirement-evidence-v1",
-  "observed_utc": "2026-11-15T16:08:19.271190+00:00",
+  "observed_utc": "2026-11-15T19:07:42.455281+00:00",
   "goal_complete": false,
   "authority": "V1.1 plan/prompt SHA in docs/topface/execution_contract.json; user operating envelope and Smoke approval retained",
   "items": [
@@ -170,9 +170,8 @@
     },
     {
       "requirement": "Separate synthetic and approved real assessment/active learning",
-      "status": "FORMAL_WEIGHTS_FROZEN_INDEPENDENT_TEST_RUNNING_NATIVE_DEFERRED",
+      "status": "FORMAL_934_STATIC_COMPLETE_HOST_SEQUENCE_AND_NATIVE_PENDING",
       "remaining": [
-        "formal934scene independent synthetic evaluation with color/geometric/occlusion/angle/size/capacity slices",
         "formal historical r4 assessment and accepted1872frame synthetic sequence on final ONNX and Simulator",
         "fresh blinded real scene/session truth after final model freeze",
         "real physical-center/ellipse truth and calibration for corresponding metrics"
@@ -187,14 +186,19 @@
         "reports/BOARD_TEST_PLAN.md",
         "reports/REDETECTION_SWEEP_ACCEPTANCE_A01.json",
         "reports/REDETECTION_SWEEP_DRIVE_A01.json",
-        "reports/redetection-sweep-a01/VISUAL_REVIEW.json"
+        "reports/redetection-sweep-a01/VISUAL_REVIEW.json",
+        "cloud/conversion-formal-a01/MODEL_FILES_RECEIPT.json",
+        "cloud/conversion-formal-a01/REPORTS_RECEIPT.json",
+        "cloud/conversion-formal-a01/compact-v1/evaluation/SYNTHETIC_TEST.json",
+        "cloud/conversion-formal-a01/compact-v1/evaluation/PAIRED_SYNTHETIC_TEST.json",
+        "cloud/publisher/k230-topface-v11-conversion-formal-a01/TRANSFER_RECEIPT.json"
       ],
       "scope": "Pilot real val has2images/2redGT. It showed false positives. Existing36frame sequence is development diagnostics at175mm/90deg in blue/black. Both scopes are insufficient for full real acceptance.",
-      "sequence_fixture": "Accepted1872frames/156sequences/20testcamera groups, sixcolors, occlusion/reentry/continuous motion and vertical camera rise/fall. Final formal model inference pending."
+      "sequence_fixture": "Accepted 1872 frames, 156 sequences, and 20 test camera groups. Quantized evaluation is running using byte-identical KModel and ONNX."
     },
     {
       "requirement": "PT->ORT->Simulator->KPU paired final export",
-      "status": "FORMAL_PREVIEW_ONNX_KMODEL_AND_TRAIN_PAIR_DONE_HELDOUT_NATIVE_PENDING",
+      "status": "FORMAL_PT_ORT_SIMULATOR_PAIR_COMPLETE_NATIVE_PENDING",
       "evidence": [
         "g3/RGB_UINT8_PREPROCESS_FIXTURE.json",
         "cloud/conversion-pilot-a02/MODEL_FILES_RECEIPT.json",
@@ -202,18 +206,21 @@
         "reports/PREPARED_INPUT_ROUTE_QUALIFICATION.json",
         "reports/BOARD_PAIR_HOST_QUALIFICATION.json",
         "reports/BOARD_PAIR_PROTOCOL.md",
-        "reports/BOARD_PREVIEW_A01_ACCEPTANCE.json"
+        "reports/BOARD_PREVIEW_A01_ACCEPTANCE.json",
+        "cloud/conversion-formal-a01/MODEL_FILES_RECEIPT.json",
+        "cloud/conversion-formal-a01/REPORTS_RECEIPT.json",
+        "cloud/conversion-formal-a01/compact-v1/evaluation/SYNTHETIC_TEST.json",
+        "cloud/conversion-formal-a01/compact-v1/evaluation/PAIRED_SYNTHETIC_TEST.json",
+        "cloud/publisher/k230-topface-v11-conversion-formal-a01/TRANSFER_RECEIPT.json"
       ],
       "remaining": [
-        "formal held-out per-channel/raw/decoded numerical comparison",
         "actual native KPU paired capture and equivalent output contract"
       ]
     },
     {
       "requirement": "Executable K230 package / lifecycle / UART off / complete25FPS benchmark",
-      "status": "FORMAL_PREVIEW_BOARD_BUNDLE_DELIVERED_FULL_BUNDLE_AND_NATIVE_PENDING",
+      "status": "FORMAL_BOARD_TEST_PACKAGE_VERIFIED_NATIVE_PENDING",
       "remaining": [
-        "build final board trial bundle from exact formal model",
         "fresh runtime/channel/stride/AI2D/lifecycle pairing",
         "independent-directory bounded installation and native same-input capture",
         "actual native accuracy and per-stage P50/P95/P99 dropped frames memory stability",
@@ -225,21 +232,27 @@
         "reports/BOARD_PAIR_PROTOCOL.md",
         "reports/BOARD_TEST_PLAN.md",
         "reports/BOARD_AVAILABILITY_20261115.json",
-        "reports/BOARD_PREVIEW_A01_ACCEPTANCE.json"
+        "reports/BOARD_PREVIEW_A01_ACCEPTANCE.json",
+        "cloud/conversion-formal-a01/MODEL_FILES_RECEIPT.json",
+        "cloud/conversion-formal-a01/REPORTS_RECEIPT.json"
       ]
     },
     {
       "requirement": "Final requested deliverable index, reports and complete SHA256SUMS.json",
-      "status": "SEVENTEEN_ITEM_INDEX_PRESENT_FINAL_MODEL_REPORTS_AND_COMPREHENSIVE_SHA_PENDING",
+      "status": "FORMAL_MODEL_AND_STATIC_REPORTS_VERIFIED_COMPLETE_ZIP_PENDING",
       "evidence": [
         "../README.md",
         "training/FORMAL_TRAINING_A01.md",
         "reports/BOARD_PREVIEW_PROTOCOL.md",
-        "reports/BOARD_PREVIEW_A01_ACCEPTANCE.json"
+        "reports/BOARD_PREVIEW_A01_ACCEPTANCE.json",
+        "cloud/conversion-formal-a01/MODEL_FILES_RECEIPT.json",
+        "cloud/conversion-formal-a01/REPORTS_RECEIPT.json",
+        "cloud/conversion-formal-a01/compact-v1/evaluation/SYNTHETIC_TEST.json",
+        "cloud/conversion-formal-a01/compact-v1/evaluation/PAIRED_SYNTHETIC_TEST.json",
+        "cloud/publisher/k230-topface-v11-conversion-formal-a01/TRANSFER_RECEIPT.json"
       ],
       "remaining": [
         "final user-accessible file index covering original plan deliverables1to17",
-        "formal checkpoints/ONNX/KModel/outputcontract/boardbundle with SHA256",
         "final training, host evaluation, native acceptance and unresolved issues reports",
         "verify private source checkpoint and exact Drive artifact references",
         "requirement-by-requirement completion audit with actual evidence"

@@ -1,0 +1,16 @@
+{
+  "schema": "topface-exact-compact-collection-v1.1",
+  "ref": "lotus30/k230-topface-v11-07b-formal-conversion",
+  "version": 1,
+  "run_id": "k230-topface-v11-conversion-formal-a01",
+  "observed_utc": "2026-11-15T19:03:52.664460+00:00",
+  "members": [
+    {
+      "name": "k230-topface-v11-conversion-formal-a01-RESULT.json",
+      "status": "ALREADY_COLLECTED",
+      "sha256": "d1cd0e48c812db2a6c30d37ec1681f3d38c1ae135c2614eb3453e23aac17235c"
+    }
+  ],
+  "raw_archive_downloaded_to_host": false,
+  "automatic_replay": false
+}

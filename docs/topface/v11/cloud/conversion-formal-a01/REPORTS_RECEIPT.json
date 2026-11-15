@@ -1,0 +1,102 @@
+{
+  "status": "BOUNDED_COMPLETE_MODEL_REPORTS_SHA256_PASS",
+  "run_id": "k230-topface-v11-conversion-formal-a01",
+  "observed_utc": "2026-11-15T19:06:01.364692+00:00",
+  "source": {
+    "ref": "lotus30/k230-topface-v11-07b-formal-conversion",
+    "kernel_id": 145221325,
+    "version": 1,
+    "provider_status": "COMPLETE",
+    "source_sha256": "8161d1b55377d039a2b6b07e4be8d314ff2592a665d618b481f95d08377ce3eb"
+  },
+  "source_result_sha256": "d1cd0e48c812db2a6c30d37ec1681f3d38c1ae135c2614eb3453e23aac17235c",
+  "publication_receipt_sha256": "2093f89089c60596a9d9aac73b7fb2530b2bc392bae80a8aff7f3e2f5f4f616c",
+  "files": [
+    {
+      "path": "exported/RESULT.json",
+      "bytes": 46380,
+      "sha256": "f386e1da7860681997da88a8cc690bce25885aea7b13ffbb3efb28bf88924a28"
+    },
+    {
+      "path": "compiled/RESULT.json",
+      "bytes": 137752,
+      "sha256": "31f0507ebfb781388fd33bd89d10aa225e2852b8eb5c0c1a5e31dafc994c1efe"
+    },
+    {
+      "path": "SYNTHETIC_TEST.json",
+      "bytes": 90864,
+      "sha256": "b5f052429e31dc18c4a365c540f6dd262736d31774b1bebb8c4566421b6d1d96"
+    },
+    {
+      "path": "PAIRED_SYNTHETIC_TEST.json",
+      "bytes": 207362,
+      "sha256": "9547336820bee1bf7066e0bbb5111bdd9744d0d1add0d5fccceeb5732c128ab9"
+    },
+    {
+      "path": "failure-previews/EVIDENCE.json",
+      "bytes": 13393,
+      "sha256": "057a228aaa061196412fbfe5baf9f78aca845e8329710832c70ef129fcf65609"
+    },
+    {
+      "path": "failure-previews/case-01.jpg",
+      "bytes": 49613,
+      "sha256": "ff369da1c34d74ac3f8b9525b66de1fd7e5b7d7eac564fc33c9f41df9b600d34"
+    },
+    {
+      "path": "failure-previews/case-02.jpg",
+      "bytes": 47631,
+      "sha256": "bd2955e423f94fde1f4dbb82152b15e99178665d0aaeeec5d6783d3f0fd4742a"
+    },
+    {
+      "path": "failure-previews/case-03.jpg",
+      "bytes": 33726,
+      "sha256": "b7b501d8bcc1d43754074420955a3cbc8368d12262684e684ff789ffe0e86304"
+    },
+    {
+      "path": "failure-previews/case-04.jpg",
+      "bytes": 28418,
+      "sha256": "3be5b9299fa3b4dd92448818f222d9b386302e645a57b0b037b6f0a27d60295a"
+    },
+    {
+      "path": "failure-previews/case-05.jpg",
+      "bytes": 56485,
+      "sha256": "158012aa1478c1a0f964a87e52a292c38d9e1928e8dd90cecf55e87f73f066b0"
+    },
+    {
+      "path": "failure-previews/case-06.jpg",
+      "bytes": 51232,
+      "sha256": "fc3d7e2892d8bbeb6e70b00739bb9cea819bbf11d26062dc974d7a1b36c1bd08"
+    },
+    {
+      "path": "failure-previews/case-07.jpg",
+      "bytes": 38139,
+      "sha256": "cc2a068342c5486143abe3aefb4123a8e027afd1072af2fc40b7623f1527be7f"
+    },
+    {
+      "path": "failure-previews/case-08.jpg",
+      "bytes": 51955,
+      "sha256": "603ca89f1f95e2297c627994fa81fe08475be330202bad02da94a6fc3d281b91"
+    },
+    {
+      "path": "failure-previews/case-09.jpg",
+      "bytes": 28851,
+      "sha256": "3082f49ce9bad47d42a877bd9cb76627c8d6b735a3232acb96e962ad9a1e1964"
+    },
+    {
+      "path": "failure-previews/case-10.jpg",
+      "bytes": 50825,
+      "sha256": "00baef6f6b7a9bdc1cb4fadbc9cd7883f8b05904e32fd725171b98e5859faf93"
+    },
+    {
+      "path": "failure-previews/case-11.jpg",
+      "bytes": 35702,
+      "sha256": "75ba919655febca0f604468babc1cb1f1041d9d2f44d620af6a7a56f5da4dc70"
+    },
+    {
+      "path": "failure-previews/case-12.jpg",
+      "bytes": 46695,
+      "sha256": "758b1defa5fc9dcae2ae0c5aed85a78de4b59859616550a5805260b7886ebc0c"
+    }
+  ],
+  "raw_arrays_or_dataset_downloaded_to_host": false
+}

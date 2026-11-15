@@ -1,0 +1,423 @@
+{
+  "status": "BOUNDED_FORMAL_TEST_ERROR_EXAMPLES_SELECTED",
+  "scope": "HELD_OUT_SYNTHETIC_TEST",
+  "identity": {
+    "kmodel_sha256": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88",
+    "onnx_sha256": "833e5786d3a0385b75ee38638993c56adbcce30165e5f67a02f26ebebd7b0ad4",
+    "checkpoint_sha256": "7d7b9a332e2b30d3d09e85245d6e39fd5f9a9d52b694f4bdb0d203585b0346d7",
+    "model_wh": [
+      320,
+      192
+    ],
+    "output_shape": [
+      1,
+      1275,
+      50
+    ],
+    "input": "NCHW_RGB_UINT8",
+    "score_threshold": 0.25,
+    "nms_iou": 0.5,
+    "compiler": {
+      "nncase": "2.11.0",
+      "nncase-kpu": "2.11.0"
+    },
+    "board_status": "NOT_RUN"
+  },
+  "dataset_index_sha256": "0555f5e7dd9b372c51108f4482f0ca3ed8816c790eb3572266956403e645dc49",
+  "images_evaluated": 934,
+  "error_images_at_registered_rules": 63,
+  "examples": [
+    {
+      "scene": "shard-03000/pilot/scene-03910",
+      "row": 365,
+      "priority": 40,
+      "measurements": {
+        "ort": {
+          "observable_gt": 4,
+          "predictions": 4,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        },
+        "simulator": {
+          "observable_gt": 4,
+          "predictions": 4,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        }
+      },
+      "name": "case-01.jpg",
+      "bytes": 49613,
+      "sha256": "ff369da1c34d74ac3f8b9525b66de1fd7e5b7d7eac564fc33c9f41df9b600d34",
+      "source_rgb_sha256": "72021c5c1e8256c3b2c4c35b23739c408b91c8d82f542d8f33bfe50f55c82b8c",
+      "source_label_sha256": "36fd9d9fe3bce350f91c7010c5ca740cc990b01bda6350822f8d335716ff094a"
+    },
+    {
+      "scene": "shard-06000/pilot/scene-06160",
+      "row": 575,
+      "priority": 40,
+      "measurements": {
+        "ort": {
+          "observable_gt": 4,
+          "predictions": 4,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        },
+        "simulator": {
+          "observable_gt": 4,
+          "predictions": 4,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        }
+      },
+      "name": "case-02.jpg",
+      "bytes": 47631,
+      "sha256": "bd2955e423f94fde1f4dbb82152b15e99178665d0aaeeec5d6783d3f0fd4742a",
+      "source_rgb_sha256": "f34567d380c5ab2ed9ca989353fee43c257044b7cdc61450e00fd8ae3d381d19",
+      "source_label_sha256": "e52c4873e79d5a92c395ee35266881e4e3a6fdf0f8484677abb59349948bf223"
+    },
+    {
+      "scene": "shard-00000/pilot/scene-00535",
+      "row": 50,
+      "priority": 20,
+      "measurements": {
+        "ort": {
+          "observable_gt": 1,
+          "predictions": 2,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        },
+        "simulator": {
+          "observable_gt": 1,
+          "predictions": 2,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        }
+      },
+      "name": "case-03.jpg",
+      "bytes": 33726,
+      "sha256": "b7b501d8bcc1d43754074420955a3cbc8368d12262684e684ff789ffe0e86304",
+      "source_rgb_sha256": "44b035ff96643b84cfa4834e0ae713efa924ab7cde2a83ebd69ab4e906e8de5c",
+      "source_label_sha256": "d7e7d2a3f7d912f4fdae056c1e1cd3984a9cf5d008c472578c345a84e4d0325d"
+    },
+    {
+      "scene": "shard-01000/pilot/scene-01285",
+      "row": 120,
+      "priority": 20,
+      "measurements": {
+        "ort": {
+          "observable_gt": 1,
+          "predictions": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        },
+        "simulator": {
+          "observable_gt": 1,
+          "predictions": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        }
+      },
+      "name": "case-04.jpg",
+      "bytes": 28418,
+      "sha256": "3be5b9299fa3b4dd92448818f222d9b386302e645a57b0b037b6f0a27d60295a",
+      "source_rgb_sha256": "fbaab6346260407ef91b5d7af92ed87b6d6547b14d42c55463230c901b186c43",
+      "source_label_sha256": "166b27b7b7a8c834137f1124bc968ad38e1f1e1fd7f24d0642cdf3549b1e04a4"
+    },
+    {
+      "scene": "shard-03000/pilot/scene-03460",
+      "row": 323,
+      "priority": 20,
+      "measurements": {
+        "ort": {
+          "observable_gt": 4,
+          "predictions": 3,
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        },
+        "simulator": {
+          "observable_gt": 4,
+          "predictions": 3,
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        }
+      },
+      "name": "case-05.jpg",
+      "bytes": 56485,
+      "sha256": "158012aa1478c1a0f964a87e52a292c38d9e1928e8dd90cecf55e87f73f066b0",
+      "source_rgb_sha256": "9bec91a4be14cd104e6e0ad270805c43b69d45e31f3de9d076fe6d944d6dd5da",
+      "source_label_sha256": "8c24a55eedffaa1ae057c20861c6c3200529ecc1d3a3f77cbd74436581b281c0"
+    },
+    {
+      "scene": "shard-04000/pilot/scene-04360",
+      "row": 407,
+      "priority": 20,
+      "measurements": {
+        "ort": {
+          "observable_gt": 4,
+          "predictions": 5,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        },
+        "simulator": {
+          "observable_gt": 4,
+          "predictions": 5,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        }
+      },
+      "name": "case-06.jpg",
+      "bytes": 51232,
+      "sha256": "fc3d7e2892d8bbeb6e70b00739bb9cea819bbf11d26062dc974d7a1b36c1bd08",
+      "source_rgb_sha256": "3de0e0c93de62c326ba1753c39bd1e2ef7b86968a27a02ed83a10bda30a65b31",
+      "source_label_sha256": "c1ff9157ae149039d60e108ce12806376590dd8a3dcd03d3c5a93715ed938064"
+    },
+    {
+      "scene": "shard-04000/pilot/scene-04585",
+      "row": 428,
+      "priority": 20,
+      "measurements": {
+        "ort": {
+          "observable_gt": 1,
+          "predictions": 1,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        },
+        "simulator": {
+          "observable_gt": 1,
+          "predictions": 3,
+          "tp": 1,
+          "fp": 2,
+          "fn": 0,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        }
+      },
+      "name": "case-07.jpg",
+      "bytes": 38139,
+      "sha256": "cc2a068342c5486143abe3aefb4123a8e027afd1072af2fc40b7623f1527be7f",
+      "source_rgb_sha256": "d1ad8cf99e86aa5bb316d70ad470221e6dda85920b11ed76f0e4355e0554fee4",
+      "source_label_sha256": "d58f4369828260b79dc349ea36bdb3efd8dddabf01243a0135e3dd480ed1270b"
+    },
+    {
+      "scene": "shard-08000/pilot/scene-08410",
+      "row": 785,
+      "priority": 20,
+      "measurements": {
+        "ort": {
+          "observable_gt": 4,
+          "predictions": 5,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        },
+        "simulator": {
+          "observable_gt": 4,
+          "predictions": 5,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        }
+      },
+      "name": "case-08.jpg",
+      "bytes": 51955,
+      "sha256": "603ca89f1f95e2297c627994fa81fe08475be330202bad02da94a6fc3d281b91",
+      "source_rgb_sha256": "2832f4ad269a1186b75a85bb4225d0513e5fc3c7c695a04ec086760d6ff0f47e",
+      "source_label_sha256": "30dc5915e8e548d2eabddad0937a92cfa7afb18d3cd9a916fbe806f0a399a4e5"
+    },
+    {
+      "scene": "shard-08000/pilot/scene-08785",
+      "row": 820,
+      "priority": 20,
+      "measurements": {
+        "ort": {
+          "observable_gt": 1,
+          "predictions": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        },
+        "simulator": {
+          "observable_gt": 1,
+          "predictions": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        }
+      },
+      "name": "case-09.jpg",
+      "bytes": 28851,
+      "sha256": "3082f49ce9bad47d42a877bd9cb76627c8d6b735a3232acb96e962ad9a1e1964",
+      "source_rgb_sha256": "ca13050d8638767d1a84abecb49c03b52cad0de69cd75484971130759cd467ca",
+      "source_label_sha256": "88745d78cf61715362096b5f17956e0402e7b4a9b400dddeff9382e32f816e76"
+    },
+    {
+      "scene": "shard-09000/pilot/scene-09310",
+      "row": 869,
+      "priority": 20,
+      "measurements": {
+        "ort": {
+          "observable_gt": 4,
+          "predictions": 5,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        },
+        "simulator": {
+          "observable_gt": 4,
+          "predictions": 5,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        }
+      },
+      "name": "case-10.jpg",
+      "bytes": 50825,
+      "sha256": "00baef6f6b7a9bdc1cb4fadbc9cd7883f8b05904e32fd725171b98e5859faf93",
+      "source_rgb_sha256": "ada365d0c4b5ab7fe209b4a88d6a0ca7d181e87ed92f827cfdabb02b74b621d1",
+      "source_label_sha256": "a5732ea2d0318632980698ff413f2e06a73e349588584bea7e8af6fa8ddbc2f0"
+    },
+    {
+      "scene": "shard-09000/pilot/scene-09899",
+      "row": 923,
+      "priority": 20,
+      "measurements": {
+        "ort": {
+          "observable_gt": 5,
+          "predictions": 4,
+          "tp": 4,
+          "fp": 0,
+          "fn": 1,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        },
+        "simulator": {
+          "observable_gt": 5,
+          "predictions": 4,
+          "tp": 4,
+          "fp": 0,
+          "fn": 1,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        }
+      },
+      "name": "case-11.jpg",
+      "bytes": 35702,
+      "sha256": "75ba919655febca0f604468babc1cb1f1041d9d2f44d620af6a7a56f5da4dc70",
+      "source_rgb_sha256": "725625cc3755316532e8b6a45ab535e817fbaad9cb60571817fdc119861a7382",
+      "source_label_sha256": "6fa51fb4add5f0f80d33690ab3d3b4cadc40ba70434e0fc413cd14a1ebd8328d"
+    },
+    {
+      "scene": "shard-00000/pilot/scene-00975",
+      "row": 91,
+      "priority": 11,
+      "measurements": {
+        "ort": {
+          "observable_gt": 3,
+          "predictions": 3,
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 0,
+          "matched_valid_gt_missing_ellipse": 0
+        },
+        "simulator": {
+          "observable_gt": 3,
+          "predictions": 4,
+          "tp": 3,
+          "fp": 1,
+          "fn": 0,
+          "wrong_color": 0,
+          "matched_visible_center_over10_source_px": 1,
+          "matched_valid_gt_missing_ellipse": 0
+        }
+      },
+      "name": "case-12.jpg",
+      "bytes": 46695,
+      "sha256": "758b1defa5fc9dcae2ae0c5aed85a78de4b59859616550a5805260b7886ebc0c",
+      "source_rgb_sha256": "df22535997d7396b93467bff9b3fa54ecbc2b5e9207ca990533dc8137d2808b8",
+      "source_label_sha256": "3b99e05b8f4d5f3bb20f8331350a2d1917c937015339f8e5490d416e0b8c97d3"
+    }
+  ],
+  "selection": "Highest10*(FP+FN)+5*wrongColor+centerError>10px+missingEllipse; deterministic scene tie break",
+  "thresholds": {
+    "score": 0.25,
+    "nms_iou": 0.5,
+    "matching_iou": 0.5
+  },
+  "note": "Diagnostic selection after frozen testing; no tuning, inference replay or claim of all geometric failures.",
+  "new_inference_passes": 0
+}
