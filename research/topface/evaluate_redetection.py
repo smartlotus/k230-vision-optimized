@@ -14,6 +14,46 @@ from export_nanodet_candidate import session
 from task_geometry import box_iou, decode, preprocess_bgr
 
 
+RECOVERY_EVENTS = {'occlusion', 'exit_and_reentry'}
+
+
+def load_sequence_frames(dataset, index):
+    frames = []
+    groups = defaultdict(list)
+    for row in index['scenes']:
+        folder = dataset / row['scene']
+        if sha(folder / 'rgb.png') != row['rgb_sha256'] or sha(folder / 'labels.json') != row['label_sha256']:
+            raise ValueError('Sequence frame changed after the audit')
+        label = json.loads((folder / 'labels.json').read_text(encoding='utf8'))
+        if label['split'] != 'synthetic_test' or len(label['instances']) != 1:
+            raise ValueError('Redetection fixtures require a single audited test target')
+        if (label['instances'][0]['visible_area_px'] >= 16) != label['expected_visible']:
+            raise ValueError('Observed sequence visibility differs from the event labels')
+        groups[label['sequence_group_id']].append(label)
+        frames.append((folder, label))
+    if not groups:
+        raise ValueError('Recovery fixture has no audited sequences')
+    for labels in groups.values():
+        labels.sort(key=lambda label: label['sequence_frame'])
+        first = labels[0]
+        length = first.get('sequence_length', 12)
+        if [label['sequence_frame'] for label in labels] != list(range(length)):
+            raise ValueError('Recovery sequence has missing, duplicate, or unexpected frames')
+        for label in labels:
+            if (label['sequence_event'], label['recovery_window_start'], label['instances'][0]['color_id'],
+                    label.get('sequence_length', 12)) != (
+                    first['sequence_event'], first['recovery_window_start'],
+                    first['instances'][0]['color_id'], length):
+                raise ValueError('Recovery sequence metadata changes between frames')
+            hidden = label['sequence_event'] in RECOVERY_EVENTS and 4 <= label['sequence_frame'] < 8
+            if label['expected_visible'] == hidden:
+                raise ValueError('Recovery event visibility schedule differs from its protocol')
+        start = first['recovery_window_start']
+        if not 0 <= start < length or not labels[start]['expected_visible']:
+            raise ValueError('Recovery interval starts without a visible target')
+    return frames
+
+
 def measure(export_dir, dataset, output, phase='formal', backend='onnx'):
     export_dir,dataset,output=export_dir.resolve(),dataset.resolve(),output.resolve()
     if output.exists():
@@ -41,20 +81,13 @@ def measure(export_dir, dataset, output, phase='formal', backend='onnx'):
 
 
 def _measure(export_dir,dataset,output,trained,index,phase,simulator):
+    audited_frames = load_sequence_frames(dataset, index)
     runtime = session(export_dir/'topface.onnx') if simulator is None else None
     width,height = trained['width'],trained['height']
     groups = defaultdict(list)
-    for row in index['scenes']:
-        folder = dataset/row['scene']
-        if sha(folder/'rgb.png')!=row['rgb_sha256'] or sha(folder/'labels.json')!=row['label_sha256']:
-            raise ValueError('Sequence frame changed after the audit')
-        label = json.loads((folder/'labels.json').read_text(encoding='utf8'))
-        if label['split']!='synthetic_test' or len(label['instances'])!=1:
-            raise ValueError('Redetection fixtures require a single audited test target')
+    for folder, label in audited_frames:
         target = label['instances'][0]
         visible = target['visible_area_px']>=16
-        if visible!=label['expected_visible']:
-            raise ValueError('Observed sequence visibility differs from the event labels')
         image=cv2.imread(str(folder/'rgb.png'))
         if simulator is None:
             tensor,_ = preprocess_bgr(image,width,height)
@@ -75,6 +108,8 @@ def _measure(export_dir,dataset,output,trained,index,phase,simulator):
                     break
         groups[label['sequence_group_id']].append({'frame':label['sequence_frame'],'visible':visible,
             'event':label['sequence_event'],'recovery_window_start':label['recovery_window_start'],
+            'height_mm':label['camera_height_above_top_mm'], 'plane_angle_deg':label['plane_angle_deg'],
+            'hfov_deg':label['hfov_deg'], 'camera_group_id':label['camera_group_id'],
             'matched':hit,'localized':localized,'target_color':target['color_id'],
             'matched_color':predicted_color,'detections':len(detections),
             'false_positives':len(detections)-int(localized)})
@@ -94,6 +129,14 @@ def _measure(export_dir,dataset,output,trained,index,phase,simulator):
     gt=sum(row['visible'] for row in frames);tp=sum(row['localized'] for row in frames)
     predictions=sum(row['detections'] for row in frames)
     correct_color=sum(row['matched'] for row in frames)
+    recovery_records = [row for row in records if row['event'] in RECOVERY_EVENTS]
+    continuity_frames = [frame for row in records if row['event'] not in RECOVERY_EVENTS for frame in row['frames']]
+    coverage = {'height_mm': sorted({frame['height_mm'] for frame in frames}),
+                'plane_angle_deg': sorted({frame['plane_angle_deg'] for frame in frames}),
+                'hfov_deg': sorted({frame['hfov_deg'] for frame in frames}),
+                'colors': sorted({frame['target_color'] for frame in frames}),
+                'camera_groups': sorted({frame['camera_group_id'] for frame in frames}),
+                'events': sorted({row['event'] for row in records})}
     result = {'status':'SYNTHETIC_REDETECTION_MEASURED' if phase=='formal' else 'PILOT_PRELIMINARY_SYNTHETIC_REDETECTION_MEASURED',
               'phase':phase,'model_experiment':trained['experiment'],'final_acceptance':False,
               'eligible_for_formal_acceptance':phase=='formal',
@@ -101,13 +144,28 @@ def _measure(export_dir,dataset,output,trained,index,phase,simulator):
               'model_sha256':trained['onnx_sha256'] if simulator is None else simulator.identity['kmodel_sha256'],
               'reference_onnx_sha256':trained['onnx_sha256'],
               'dataset_index_sha256':sha(dataset/'AUDIT_V11.json'),'sequence_count':len(records),
-              'recoveries':sum(row['recovered'] for row in records),'records':records,
+              'recoveries':sum(row['recovered'] for row in recovery_records),'records':records,
+              'recovery_events': {'sequences': len(recovery_records),
+                  'recovered': sum(row['recovered'] for row in recovery_records),
+                  'first_visible_frame_detected': sum(row['first_visible_frame_detected'] for row in recovery_records),
+                  'frames_to_recovery': [row['frames_to_recovery'] for row in recovery_records]},
+              'recovery_by_event': {event: {
+                  'sequences': sum(row['event'] == event for row in recovery_records),
+                  'recovered': sum(row['event'] == event and row['recovered'] for row in recovery_records),
+                  'first_visible_frame_detected': sum(row['event'] == event and row['first_visible_frame_detected']
+                                                      for row in recovery_records)}
+                  for event in sorted(RECOVERY_EVENTS)},
+              'continuous_visibility': {'sequences': len(records) - len(recovery_records),
+                  'visible_frames': sum(frame['visible'] for frame in continuity_frames),
+                  'localized_frames': sum(frame['localized'] for frame in continuity_frames),
+                  'correct_color_frames': sum(frame['matched'] for frame in continuity_frames)},
+              'coverage': coverage,
               'denominators':{'frames':len(frames),'visible_gt':gt,'hidden_frames':len(frames)-gt,
                   'predictions':predictions,'tp':tp,'fp':predictions-tp,'fn':gt-tp,
                   'correct_color':correct_color,'color_labeled_matches':tp},
               'precision':tp/predictions if predictions else None,'recall':tp/gt if gt else None,
               'matched_color_accuracy':correct_color/tp if tp else None,
-              'scope':'SYNTHETIC_SEQUENCE_FIXTURE; 175 mm, 90 degrees; blue and black only; not full-range or real accuracy',
+              'scope':'SYNTHETIC_SEQUENCE_FIXTURE; discrete inferred conditions listed in coverage; real accuracy unmeasured',
               'matching':{'iou':.5,'score':.25,'nms_iou':.5,
                   'localization_color_match':False,'recovery_color_match':True},'tracking_enabled':False}
     if simulator is not None:

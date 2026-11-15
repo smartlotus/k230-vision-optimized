@@ -1,0 +1,125 @@
+{
+  "status": "LIVE_FORMAL_TRAINING_OBSERVATION",
+  "observed_utc": "2026-11-15T08:26:52.427297+00:00",
+  "provider": {
+    "ref": "lotus30/k230-topface-v11-06-formal-training",
+    "version": 1,
+    "kernel_id": 145144940,
+    "status": "RUNNING",
+    "observed_utc": "2026-11-15T08:26:25.938034+00:00"
+  },
+  "environment": {
+    "observed_utc": "2026-11-15T08:25:31.093711+00:00",
+    "kernel_id": 145144940,
+    "version": 1,
+    "gpu_enabled": true,
+    "machine_shape": "NvidiaTeslaT4",
+    "docker_image": "gcr.io/kaggle-private-byod/python@sha256:de153e6d303881930c51286216393d56f56b26458d0661350305a1e8144eea01",
+    "internet_enabled": false,
+    "training_device": "cuda:0; CUDA admission mandatory in frozen training code"
+  },
+  "latest_complete_epoch": {
+    "epoch": 16,
+    "updates": 3744,
+    "loss_mean": 0.2375319399512731,
+    "validation_score": 1.1574240997112395,
+    "task_mAP50": 0.9962875300509736,
+    "task_mAP50_95": 0.9786089941002709,
+    "recall50": 0.9992980814225549,
+    "matched_color_accuracy": 0.9997658627955982,
+    "training_wall_seconds": 242.74738911900022,
+    "validation_wall_seconds": 67.89003984800001,
+    "assignment_counts": {
+      "world_instances": 18626,
+      "observable_eligible_gt": 18259,
+      "assigned_gt": 18259,
+      "assigned_fifth_instance": 1133,
+      "positive_priors": 54774,
+      "unobservable_or_under16px": 367
+    },
+    "body_only_augmentation": {
+      "read_slots": 7465,
+      "world_empty_slots": 1334,
+      "replacements": 367,
+      "distinct_source_members": 115
+    },
+    "epoch_wall_seconds": 310.6388000630004
+  },
+  "latest_batch_progress": {
+    "kind": "formal_full",
+    "updates": 3700,
+    "epoch": 16,
+    "loss": 0.22712962329387665
+  },
+  "loss_history": [
+    {
+      "epoch": 1,
+      "mean_loss": 0.4438841519956915
+    },
+    {
+      "epoch": 2,
+      "mean_loss": 0.35060817181554615
+    },
+    {
+      "epoch": 3,
+      "mean_loss": 0.30506157110898924
+    },
+    {
+      "epoch": 4,
+      "mean_loss": 0.2863396826462868
+    },
+    {
+      "epoch": 5,
+      "mean_loss": 0.27915917502509224
+    },
+    {
+      "epoch": 6,
+      "mean_loss": 0.2723381975904489
+    },
+    {
+      "epoch": 7,
+      "mean_loss": 0.26122590409130114
+    },
+    {
+      "epoch": 8,
+      "mean_loss": 0.2616938835917375
+    },
+    {
+      "epoch": 9,
+      "mean_loss": 0.25828985143930483
+    },
+    {
+      "epoch": 10,
+      "mean_loss": 0.25071840580457294
+    },
+    {
+      "epoch": 11,
+      "mean_loss": 0.2502968903535452
+    },
+    {
+      "epoch": 12,
+      "mean_loss": 0.2470268111071016
+    },
+    {
+      "epoch": 13,
+      "mean_loss": 0.24375511890547907
+    },
+    {
+      "epoch": 14,
+      "mean_loss": 0.24294002042112187
+    },
+    {
+      "epoch": 15,
+      "mean_loss": 0.24327952510271317
+    },
+    {
+      "epoch": 16,
+      "mean_loss": 0.2375319399512731
+    }
+  ],
+  "mean_epoch_seconds": 310.24484290712496,
+  "independent_synthetic_test": "PENDING_FINAL_MODEL",
+  "formal_real_image_test": "NOT_RUN",
+  "native_K230_test": "NOT_RUN",
+  "scope": "Preliminary synthetic validation telemetry; terminal training/archive acceptance pending"
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "topface-local-sequence-source-freeze-v1.1",
+  "run_id": "k230-topface-v11-sequence-sweep-a01",
+  "created_utc": "2026-11-15T08:19:47.721002+00:00",
+  "producer": "LOCAL_NATIVE_BLENDER",
+  "seed": 20261119,
+  "frames": 1872,
+  "sequences": 156,
+  "render_samples": 24,
+  "render_budget_seconds": 7200,
+  "automatic_replay": false,
+  "new_training_updates": 0,
+  "files": [
+    {
+      "path": "research\\topface\\render_native.py",
+      "bytes": 13385,
+      "sha256": "5add03d805f30be8dff39876a47bccbe9af8d8d8ed98bca642777125da10252c"
+    },
+    {
+      "path": "research\\topface\\native_cad.py",
+      "bytes": 4624,
+      "sha256": "0d58d5ded69f85cb320ea4781d17c4abccffd170f733d0edd798794bc15e2e75"
+    },
+    {
+      "path": "research\\topface\\geometry.py",
+      "bytes": 2996,
+      "sha256": "de5c6055507a76ad5656bf8b3f554139bd154bf581b7196722e308a3a3985cc4"
+    },
+    {
+      "path": "research\\topface\\scene_config.py",
+      "bytes": 4820,
+      "sha256": "2d7c8abcbb930ac2b857729d90dd86e91544b0672cccadcd457dd4db1b415b62"
+    },
+    {
+      "path": "research\\topface\\sequence_config.py",
+      "bytes": 1896,
+      "sha256": "7ab8fe3efbb1977ba1d7930ec25d175d6c792367828b07281d42316c3b6d4674"
+    },
+    {
+      "path": "research\\topface\\sequence_sweep.py",
+      "bytes": 5100,
+      "sha256": "793bfc73311b6ac3fda5dda74c61c83b52445659ea0c62d18781b24687bb23f6"
+    },
+    {
+      "path": "research\\topface\\audit_v11.py",
+      "bytes": 10831,
+      "sha256": "7a43bcc8e5d7f3498a03559022612a764ec52204281430a249cfff62eef9c786"
+    },
+    {
+      "path": "research\\topface\\evaluate_redetection.py",
+      "bytes": 11645,
+      "sha256": "4a3a3f4ed4c8b4da5ae4666e201d9d0cf6f42849de10931473cca0ad323126bb"
+    },
+    {
+      "path": "docs\\topface\\v11\\reports\\REDETECTION_SWEEP_PLAN_A01.json",
+      "bytes": 127619,
+      "sha256": "40c2690b87603b80732a58cf1f46f2e442f2d9c81852cbec17210f75d7c7b55c"
+    },
+    {
+      "path": ".ops\\local\\topface-cad-assets\\material_block.glb",
+      "bytes": 391660,
+      "sha256": "99c4fa89054623b3d870d594ceb735cd78515389e58dd6339d9b59e97a381858"
+    },
+    {
+      "path": ".ops\\local\\topface-cad-assets\\material_block.step",
+      "bytes": 10703,
+      "sha256": "5518ce20556dc0cfe16583fd73cb3635de379bf806b34ef88fb9eaa3d2e630d6"
+    },
+    {
+      "path": ".ops\\local\\topface-cad-assets\\material_block.stl",
+      "bytes": 975984,
+      "sha256": "d929281151e225a1b71e47a8951641f842c4a9751618e7e560d12f895b95cc1a"
+    },
+    {
+      "path": ".ops\\local\\topface-cad-assets\\material_block_parametric.scad",
+      "bytes": 1048,
+      "sha256": "92c645bff02ba045d840a49649965b34e19cf2695701a3be915f570743914d48"
+    },
+    {
+      "path": ".ops\\local\\topface-cad-assets\\material_block_preview.png",
+      "bytes": 235322,
+      "sha256": "163cec81a78467001722142ec7facbfb2fc55941afa65b37ac78803b28d5a985"
+    },
+    {
+      "path": ".ops\\local\\topface-cad-assets\\model_validation.json",
+      "bytes": 1652,
+      "sha256": "611bf39e083cccb31ac79e29f593d64f9fcd22f94a3756a4e2cdbd02916fb5bb"
+    },
+    {
+      "path": ".ops\\local\\topface-cad-assets\\README.md",
+      "bytes": 1572,
+      "sha256": "79b7fa5f44980e46de1611cebefb1f24155c6992158c85b8052ece5601b03d31"
+    },
+    {
+      "path": ".ops\\local\\topface-cad-assets\\SHA256SUMS.json",
+      "bytes": 661,
+      "sha256": "04ff355086ab33ddee354199baf4e399b2ede4320590a50e1440369dd6bc65f5"
+    },
+    {
+      "path": "C:\\Users\\28389\\blender_429\\blender-4.2.9-windows-x64\\blender.exe",
+      "bytes": 82775696,
+      "sha256": "0d4ad9f1442eea7ea2fd41ea3dabe7602f421968f3604f9dc72a35c932b0eeb2"
+    }
+  ],
+  "review": "Independent source and all1872analytic projection configurations checked. Real mask QA pending."
+}

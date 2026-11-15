@@ -93,6 +93,9 @@ def main():
             from body_negative_plan import planned_config
             body_only=True
             if args.seed!=scene_plan['base_seed']:raise ValueError('Negative plan seed differs from render identity')
+        elif scene_plan.get('schema')=='topface-redetection-sweep-plan-v1.1':
+            from sequence_sweep import planned_config
+            if args.seed!=scene_plan['base_seed']:raise ValueError('Sequence plan seed differs from render identity')
         if scene_plan['count']!=args.count or len(scene_plan['scenes'])!=args.count:
             raise ValueError('Explicit scene plan count differs from registered run')
     args.assets=args.assets.resolve();args.output=args.output.resolve()

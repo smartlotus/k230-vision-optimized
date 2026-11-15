@@ -1,0 +1,55 @@
+{
+  "status": "SEQUENCE_SWEEP_IMPLEMENTATION_AND_EARLY_RENDER_QUALIFIED",
+  "observed_utc": "2026-11-15T08:28:01.171181+00:00",
+  "source_freeze": "REDETECTION_SWEEP_SOURCE_A01.json",
+  "plan": "REDETECTION_SWEEP_PLAN_A01.json",
+  "planned_frames": 1872,
+  "planned_sequences": 156,
+  "tests": {
+    "passed": 18,
+    "command": "python -m unittest test_sequence_sweep test_v11 test_color_sampling test_body_negative_bank",
+    "local_log": ".ops/local/topface-r-sequence-tests.log"
+  },
+  "independent_read_only_review": {
+    "configurations_checked": 1872,
+    "seeds_unique": true,
+    "all_camera_groups_synthetic_test": true,
+    "minimum_visible_top_boundary_margin_px": 71.71,
+    "hidden_exit_top_maximum_x_px": -2.33,
+    "scope": "Analytic projection only. Actual full rendered masks still pending."
+  },
+  "legacy_actual_onnx_regression": {
+    "frames": 36,
+    "tp": 28,
+    "fp": 4,
+    "fn": 0,
+    "denominators_equal_original": true,
+    "recovery_events": 2,
+    "recovered": 2,
+    "first_visible_frame_detected": 2,
+    "continuous_visible_frames": 12,
+    "continuous_localized_frames": 12,
+    "scope": "Previously frozen Pilot development fixture; independent formal accuracy pending"
+  },
+  "early_actual_render_mask_check": {
+    "frames_checked": 23,
+    "expected_visibility_pass": true,
+    "first_occlusion_sequence_mask_pixels": [
+      19165,
+      19165,
+      19165,
+      19165,
+      0,
+      0,
+      0,
+      0,
+      19165,
+      19165,
+      19165,
+      19165
+    ]
+  },
+  "complete1872_frame_QA": "PENDING",
+  "durable_archive": "PENDING",
+  "formal_model_inference": "PENDING"
+}
