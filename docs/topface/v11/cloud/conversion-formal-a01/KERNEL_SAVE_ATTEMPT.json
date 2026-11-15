@@ -1,0 +1,9 @@
+{
+  "operation": "SAVE_AND_RUN_ALL",
+  "observed_utc": "2026-11-15T15:41:27.679324+00:00",
+  "ref": "lotus30/k230-topface-v11-07b-formal-conversion",
+  "source_sha256": "8161d1b55377d039a2b6b07e4be8d314ff2592a665d618b481f95d08377ce3eb",
+  "session_timeout_seconds": 22500,
+  "scientific_execution": true,
+  "automatic_retry": false
+}

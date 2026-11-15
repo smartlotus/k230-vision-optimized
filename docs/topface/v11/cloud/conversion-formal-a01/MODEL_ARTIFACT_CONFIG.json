@@ -1,0 +1,630 @@
+{
+  "run_id": "k230-topface-v11-conversion-formal-a01",
+  "phase": "formal_conversion",
+  "parent": {
+    "kind": "formal_model",
+    "experiment": "formal_full",
+    "experiment_id": "k230-topface-v11-formal-a01",
+    "session": 1,
+    "completed_epochs": 100,
+    "checkpoint_sha256": "7d7b9a332e2b30d3d09e85245d6e39fd5f9a9d52b694f4bdb0d203585b0346d7",
+    "training_input": {
+      "ref": "lotus30/k230-topface-v11-formal-input-a01",
+      "version": 1,
+      "manifest_sha256": "2d5c2be9e135d8d890895b767d605c4877652cbdbd5776a51ccbe8dd1efb9930"
+    },
+    "real_background_bank": {
+      "archive_sha256": "e1cf0a92d4de8bc6f914c6341f1e9b42bda3de234f241c2597fac66d188b9471",
+      "manifest_sha256": "852f5851b4708c9582a5c8145dcd1e55adf4d20a6a6e3af7bec1011dd966c3c5",
+      "identity": {
+        "manifest_sha256": "852f5851b4708c9582a5c8145dcd1e55adf4d20a6a6e3af7bec1011dd966c3c5",
+        "source_manifest_sha256": "6d21a2e9d0a251c1161ee3b63345909d64ad1f8cda6d3f9be0e0c0454843e198",
+        "source_scope": "APPROVED_REAL_TRAIN_ONLY",
+        "sources": [
+          "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+          "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+          "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+          "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d"
+        ],
+        "patch_count": 64,
+        "policy": {
+          "probability": 0.35,
+          "max_patches": 2,
+          "scale_range": [
+            0.75,
+            1.25
+          ],
+          "target_exclusion_margin_px": 12,
+          "placement_attempts": 24,
+          "feather_border_px": 6
+        },
+        "supervision": "Existing synthetic labels only; no real geometric truth inferred"
+      },
+      "qualification_sha256": "dba6f9c81f7a583df08c417fe78242c7f0d2e0b8806b65c649aea7a8f9391078"
+    },
+    "body_negative_bank": {
+      "archive_sha256": "0065a34de464018e4e9fb6ea8c845064540b01a1b899c192a61a3fc8b8656fda",
+      "manifest_sha256": "7cbb603863f5c185497585ec33990e74891b4da762b230c2ea6e200d95a6cb79",
+      "identity": {
+        "manifest_sha256": "7cbb603863f5c185497585ec33990e74891b4da762b230c2ea6e200d95a6cb79",
+        "source_audit_sha256": "30861406c4303f6c26ffefb3ce94921b6cd989cbf6908c4f8af5dee51c1891dd",
+        "source_scope": "AUDITED_SYNTHETIC_TRAIN_ONLY",
+        "policy": {
+          "probability": 0.25,
+          "eligibility": "ORIGINAL_WORLD_COUNT_ZERO_ONLY",
+          "camera_group_match": "EXACT",
+          "real_patch_after_replacement": false
+        },
+        "members": 120,
+        "camera_groups": [
+          "H100-P100-F65",
+          "H100-P85-F65",
+          "H100-P90-F68",
+          "H175-P100-F62",
+          "H175-P85-F62",
+          "H175-P90-F65",
+          "H175-P95-F68",
+          "H250-P100-F68",
+          "H250-P80-F65",
+          "H250-P85-F68",
+          "H250-P90-F62",
+          "H250-P95-F65",
+          "H325-P100-F65",
+          "H325-P80-F62",
+          "H325-P85-F65",
+          "H325-P90-F68",
+          "H325-P95-F62",
+          "H400-P80-F68",
+          "H400-P85-F62",
+          "H400-P95-F68"
+        ],
+        "supervision": "One retained world instance; zero observable top GT"
+      },
+      "qualification_sha256": "d6ce2f40befa78887f838ec9c95510619950a87f01dd1c5d48b58826edd26a00"
+    },
+    "archive": {
+      "name": "k230-topface-v11-formal-a01.tar.gz",
+      "bytes": 94167738,
+      "sha256": "692be0b4b88f5c8a3a8fca634bc5511d846696a2314b8d32341c6fd4ae99700f"
+    },
+    "publication": {
+      "run_id": "k230-topface-v11-formal-a01",
+      "prep": {
+        "ref": "lotus30/k230-topface-v11-06-formal-training",
+        "kernel_id": 145144940,
+        "version": 1,
+        "provider_status": "COMPLETE",
+        "source_sha256": "7b07ecceb419e6eb385afd38e5dbdf09eaecb29a8755867f01e87cb5308c2e21"
+      },
+      "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+      "uploaded": {
+        "name": "k230-topface-v11-formal-a01-692be0b4b88f5c8a.tar.gz",
+        "bytes": 94167738,
+        "sha256": "692be0b4b88f5c8a3a8fca634bc5511d846696a2314b8d32341c6fd4ae99700f",
+        "file_id": "1OQp9H_ZhqKPhDUm_DbZZwXjo0aWqSi29",
+        "provider_readback": "FULL_BYTE_SHA256_PASS"
+      },
+      "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+      "automatic_replay": false,
+      "provider_mutations": 1,
+      "github": {
+        "run_id": 43730880311,
+        "head": "2795a0864de932f8e53ad09df32f9679d5a8c0a9",
+        "branch": "ops/topface-transfer-1794757011711305900"
+      },
+      "secret_cleanup": "CONFIRMED_DELETED",
+      "independent_metadata_match": true,
+      "raw_archive_downloaded_to_host": false
+    }
+  },
+  "max_seconds": 21600,
+  "shards": [
+    {
+      "run_id": "k230-topface-v11-full-01-a01",
+      "start_index": 0,
+      "count": 1000,
+      "seed": 20261117,
+      "archive": {
+        "name": "k230-topface-v11-full-01-a01.tar.gz",
+        "bytes": 300700147,
+        "sha256": "720e0d04fa2c6214cae43d96563598ea39b7275dc76ffe5f31aa03da6c082082"
+      },
+      "publication": {
+        "run_id": "k230-topface-v11-full-01-a01",
+        "prep": {
+          "ref": "lotus30/k230-topface-v11-04-full-shard-01",
+          "kernel_id": 145046919,
+          "version": 1,
+          "provider_status": "COMPLETE",
+          "source_sha256": "ed6e3b36aec1a3fafb72087eb40b686d624b04fb748b34eeda81df80559b168f"
+        },
+        "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+        "uploaded": {
+          "name": "k230-topface-v11-full-01-a01-720e0d04fa2c6214.tar.gz",
+          "bytes": 300700147,
+          "sha256": "720e0d04fa2c6214cae43d96563598ea39b7275dc76ffe5f31aa03da6c082082",
+          "file_id": "1FYUgaBEv7MyICNbLMMHtUKWN_CWdQ6Ux",
+          "provider_readback": "FULL_BYTE_SHA256_PASS"
+        },
+        "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+        "automatic_replay": false,
+        "provider_mutations": 1,
+        "github": {
+          "run_id": 43629844406,
+          "head": "30d3c68a1b40b9da1bfedab68b6a54b4ae2fc158",
+          "branch": "ops/topface-transfer-1794682904020950300"
+        },
+        "secret_cleanup": "CONFIRMED_DELETED",
+        "independent_metadata_match": true,
+        "raw_archive_downloaded_to_host": false
+      },
+      "saved_result_sha256": "e9acff72b55d6024c185915e3b911403d0f2bb92e17bcbd212b1ea875ffc38b7",
+      "instances": 2496,
+      "elapsed_seconds": 3410.418699789
+    },
+    {
+      "run_id": "k230-topface-v11-full-02-a01",
+      "start_index": 1000,
+      "count": 1000,
+      "seed": 20261117,
+      "archive": {
+        "name": "k230-topface-v11-full-02-a01.tar.gz",
+        "bytes": 301046635,
+        "sha256": "c89808a757e91243a99cc7fe5aa916c776bc5633d80a6ffb241009b9cb357d5a"
+      },
+      "publication": {
+        "run_id": "k230-topface-v11-full-02-a01",
+        "prep": {
+          "ref": "lotus30/k230-topface-v11-04-full-shard-02",
+          "kernel_id": 145055100,
+          "version": 1,
+          "provider_status": "COMPLETE",
+          "source_sha256": "5fb272bdeb548372e1e3e71afacee491b01665ee6daa4120a520762f32237c48"
+        },
+        "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+        "uploaded": {
+          "name": "k230-topface-v11-full-02-a01-c89808a757e91243.tar.gz",
+          "bytes": 301046635,
+          "sha256": "c89808a757e91243a99cc7fe5aa916c776bc5633d80a6ffb241009b9cb357d5a",
+          "file_id": "1JZedVGL0jk1YrAs1VZAH-_ltDIdFjBb9",
+          "provider_readback": "FULL_BYTE_SHA256_PASS"
+        },
+        "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+        "automatic_replay": false,
+        "provider_mutations": 1,
+        "github": {
+          "run_id": 43635439169,
+          "head": "9bcc8838056cc7c67fa839cebf1f625d4f15103e",
+          "branch": "ops/topface-transfer-1794686608653534400"
+        },
+        "secret_cleanup": "CONFIRMED_DELETED",
+        "independent_metadata_match": true,
+        "raw_archive_downloaded_to_host": false
+      },
+      "saved_result_sha256": "651140668d020103334491358d6c982c27091aedd3e79781717da5d8c46a9183",
+      "instances": 2500,
+      "elapsed_seconds": 3471.591534512
+    },
+    {
+      "run_id": "k230-topface-v11-full-03-a01",
+      "start_index": 2000,
+      "count": 1000,
+      "seed": 20261117,
+      "archive": {
+        "name": "k230-topface-v11-full-03-a01.tar.gz",
+        "bytes": 302357243,
+        "sha256": "84281a0fc72d1f9ebb918491b177f9208d09d18174bc4e2257637caddf6a72c6"
+      },
+      "publication": {
+        "run_id": "k230-topface-v11-full-03-a01",
+        "prep": {
+          "ref": "lotus30/k230-topface-v11-04-full-shard-03",
+          "kernel_id": 145063269,
+          "version": 1,
+          "provider_status": "COMPLETE",
+          "source_sha256": "07cf5ad5c950bf079e3ac2603912fd439b7ba8f16010d1670680596acb8f5c4e"
+        },
+        "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+        "uploaded": {
+          "name": "k230-topface-v11-full-03-a01-84281a0fc72d1f9e.tar.gz",
+          "bytes": 302357243,
+          "sha256": "84281a0fc72d1f9ebb918491b177f9208d09d18174bc4e2257637caddf6a72c6",
+          "file_id": "1YWlqOhtTBrtKQ54fIEgySwmgo0NEqG1v",
+          "provider_readback": "FULL_BYTE_SHA256_PASS"
+        },
+        "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+        "automatic_replay": false,
+        "provider_mutations": 1,
+        "github": {
+          "run_id": 43640744177,
+          "head": "1aca42c987675e16989974ce5935f21335b5fa06",
+          "branch": "ops/topface-transfer-1794690192572543100"
+        },
+        "secret_cleanup": "CONFIRMED_DELETED",
+        "independent_metadata_match": true,
+        "raw_archive_downloaded_to_host": false
+      },
+      "saved_result_sha256": "84ddae925454c1ec9681223f652333ba4d89e1ea958d3de26ba49f99ccb96916",
+      "instances": 2504,
+      "elapsed_seconds": 3390.524039675
+    },
+    {
+      "run_id": "k230-topface-v11-full-04-a01",
+      "start_index": 3000,
+      "count": 1000,
+      "seed": 20261117,
+      "archive": {
+        "name": "k230-topface-v11-full-04-a01.tar.gz",
+        "bytes": 300908968,
+        "sha256": "1a61ec21c750802e9a4cf57621e535347667ab314f34fdcde6250a892271b1a2"
+      },
+      "publication": {
+        "run_id": "k230-topface-v11-full-04-a01",
+        "prep": {
+          "ref": "lotus30/k230-topface-v11-04-full-shard-04",
+          "kernel_id": 145071563,
+          "version": 1,
+          "provider_status": "COMPLETE",
+          "source_sha256": "e47c2aeef38f4a6c8929750f02173b84bfd1e1600c318f30c3bac3424949da02"
+        },
+        "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+        "uploaded": {
+          "name": "k230-topface-v11-full-04-a01-1a61ec21c750802e.tar.gz",
+          "bytes": 300908968,
+          "sha256": "1a61ec21c750802e9a4cf57621e535347667ab314f34fdcde6250a892271b1a2",
+          "file_id": "1WPdhEL4-XDVK0HaggBZVXgCI5CJrOnLj",
+          "provider_readback": "FULL_BYTE_SHA256_PASS"
+        },
+        "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+        "automatic_replay": false,
+        "provider_mutations": 1,
+        "github": {
+          "run_id": 43658249709,
+          "head": "de511246b2fbe68bf9efab826ed515549d2c93f8",
+          "branch": "ops/topface-transfer-1794702392200974300"
+        },
+        "secret_cleanup": "CONFIRMED_DELETED",
+        "independent_metadata_match": true,
+        "raw_archive_downloaded_to_host": false
+      },
+      "saved_result_sha256": "b9e74521db8f3f5720de0c08ca91b6b28521732cadb57fda69f40fdbbe0d0da4",
+      "instances": 2496,
+      "elapsed_seconds": 3607.864744149
+    },
+    {
+      "run_id": "k230-topface-v11-full-05-a01",
+      "start_index": 4000,
+      "count": 1000,
+      "seed": 20261117,
+      "archive": {
+        "name": "k230-topface-v11-full-05-a01.tar.gz",
+        "bytes": 301516383,
+        "sha256": "51ca7d5261585e5dde1452c17cf4a523487c0575528715665a7a043456c20b6b"
+      },
+      "publication": {
+        "run_id": "k230-topface-v11-full-05-a01",
+        "prep": {
+          "ref": "lotus30/k230-topface-v11-04-full-shard-05",
+          "kernel_id": 145098636,
+          "version": 1,
+          "provider_status": "COMPLETE",
+          "source_sha256": "530345c43924a7ac252715995dc38fb52c21a4be7b7bf6e2d2f41519f28b7c89"
+        },
+        "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+        "uploaded": {
+          "name": "k230-topface-v11-full-05-a01-51ca7d5261585e5d.tar.gz",
+          "bytes": 301516383,
+          "sha256": "51ca7d5261585e5dde1452c17cf4a523487c0575528715665a7a043456c20b6b",
+          "file_id": "1B1WqrrCrdTg16dkwCNkLZkezgM9VK2Ot",
+          "provider_readback": "FULL_BYTE_SHA256_PASS"
+        },
+        "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+        "automatic_replay": false,
+        "provider_mutations": 1,
+        "github": {
+          "run_id": 43663644188,
+          "head": "96468ee791380c9b4d08cb24bcec778a523eabe9",
+          "branch": "ops/topface-transfer-1794706394971093400"
+        },
+        "secret_cleanup": "CONFIRMED_DELETED",
+        "independent_metadata_match": true,
+        "raw_archive_downloaded_to_host": false
+      },
+      "saved_result_sha256": "1e900dbbfe0d0cdb9e25159f71913c98e6a42e9c18bcd09c3d51da0cb22409e4",
+      "instances": 2500,
+      "elapsed_seconds": 3757.103222717
+    },
+    {
+      "run_id": "k230-topface-v11-full-06-a01",
+      "start_index": 5000,
+      "count": 1000,
+      "seed": 20261117,
+      "archive": {
+        "name": "k230-topface-v11-full-06-a01.tar.gz",
+        "bytes": 300657747,
+        "sha256": "e086cf699fe221cbfb6c0fbd90c4df8a0f4320d0c7fef5c9ecf7f2ad3e888315"
+      },
+      "publication": {
+        "run_id": "k230-topface-v11-full-06-a01",
+        "prep": {
+          "ref": "lotus30/k230-topface-v11-04-full-shard-06",
+          "kernel_id": 145106086,
+          "version": 1,
+          "provider_status": "COMPLETE",
+          "source_sha256": "68ed5090a3211424ba6f04f9990ec3015f36905bf88ee609943134f667f888e0"
+        },
+        "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+        "uploaded": {
+          "name": "k230-topface-v11-full-06-a01-e086cf699fe221cb.tar.gz",
+          "bytes": 300657747,
+          "sha256": "e086cf699fe221cbfb6c0fbd90c4df8a0f4320d0c7fef5c9ecf7f2ad3e888315",
+          "file_id": "1MO-pSP5mnM7MbPDstnig56w6l61u-Tno",
+          "provider_readback": "FULL_BYTE_SHA256_PASS"
+        },
+        "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+        "automatic_replay": false,
+        "provider_mutations": 1,
+        "github": {
+          "run_id": 43668490171,
+          "head": "4783ba1792c6a49ce2aac6d6d5c83f885d1b485f",
+          "branch": "ops/topface-transfer-1794710106390294400"
+        },
+        "secret_cleanup": "CONFIRMED_DELETED",
+        "independent_metadata_match": true,
+        "raw_archive_downloaded_to_host": false
+      },
+      "saved_result_sha256": "65e72a6cc58d7a80544108d2815393a9e7cb53f19cc61b95b9665e5b7fdc6f85",
+      "instances": 2504,
+      "elapsed_seconds": 3492.754148633
+    },
+    {
+      "run_id": "k230-topface-v11-full-07-a01",
+      "start_index": 6000,
+      "count": 1000,
+      "seed": 20261117,
+      "archive": {
+        "name": "k230-topface-v11-full-07-a01.tar.gz",
+        "bytes": 301312136,
+        "sha256": "aeb572c7c9378617d4ee400ec525907268032374ef5101cbd986a2ebcde53e85"
+      },
+      "publication": {
+        "run_id": "k230-topface-v11-full-07-a01",
+        "prep": {
+          "ref": "lotus30/k230-topface-v11-04-full-shard-07",
+          "kernel_id": 145113001,
+          "version": 1,
+          "provider_status": "COMPLETE",
+          "source_sha256": "00e1373fe00769efbc27e8329c9a94eb33be632d5670766ec7161b46513d1f98"
+        },
+        "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+        "uploaded": {
+          "name": "k230-topface-v11-full-07-a01-aeb572c7c9378617.tar.gz",
+          "bytes": 301312136,
+          "sha256": "aeb572c7c9378617d4ee400ec525907268032374ef5101cbd986a2ebcde53e85",
+          "file_id": "1P-okljcFbo2nN_p-ZPXQfCxT79lmJYmv",
+          "provider_readback": "FULL_BYTE_SHA256_PASS"
+        },
+        "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+        "automatic_replay": false,
+        "provider_mutations": 1,
+        "github": {
+          "run_id": 43673212211,
+          "head": "50fc4e8510765400e50ecc64468a8e50d3c2bb42",
+          "branch": "ops/topface-transfer-1794713844313806600"
+        },
+        "secret_cleanup": "CONFIRMED_DELETED",
+        "independent_metadata_match": true,
+        "raw_archive_downloaded_to_host": false
+      },
+      "saved_result_sha256": "ac9cc09aa7df4c5a09b6b790597ac089cc43a8223f724437b60da36fb2c16cf4",
+      "instances": 2496,
+      "elapsed_seconds": 3539.276556053
+    },
+    {
+      "run_id": "k230-topface-v11-full-08-a01",
+      "start_index": 7000,
+      "count": 1000,
+      "seed": 20261117,
+      "archive": {
+        "name": "k230-topface-v11-full-08-a01.tar.gz",
+        "bytes": 302339129,
+        "sha256": "796d8b4ee6b728fc925f60358af785a71ba73666d89b8a5bb58640b99b91b525"
+      },
+      "publication": {
+        "run_id": "k230-topface-v11-full-08-a01",
+        "prep": {
+          "ref": "lotus30/k230-topface-v11-04-full-shard-08",
+          "kernel_id": 145119643,
+          "version": 1,
+          "provider_status": "COMPLETE",
+          "source_sha256": "3d35215fa8dd13fd5cfd7681aacd5278eb587ec9ebd08adeef79b2a521471bec"
+        },
+        "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+        "uploaded": {
+          "name": "k230-topface-v11-full-08-a01-796d8b4ee6b728fc.tar.gz",
+          "bytes": 302339129,
+          "sha256": "796d8b4ee6b728fc925f60358af785a71ba73666d89b8a5bb58640b99b91b525",
+          "file_id": "1_rv4jGAHFhgMUds6sSbCgBa_Zo7kNXjb",
+          "provider_readback": "FULL_BYTE_SHA256_PASS"
+        },
+        "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+        "automatic_replay": false,
+        "provider_mutations": 1,
+        "github": {
+          "run_id": 43677711465,
+          "head": "294d706b8281c4532c22981c04a4aba58eff9a4b",
+          "branch": "ops/topface-transfer-1794717552218354900"
+        },
+        "secret_cleanup": "CONFIRMED_DELETED",
+        "independent_metadata_match": true,
+        "raw_archive_downloaded_to_host": false
+      },
+      "saved_result_sha256": "7b83ad82b771a76f1c289a45d38c8404b7e597e11dda43d250ad13235c21b76c",
+      "instances": 2500,
+      "elapsed_seconds": 3472.5979266669997
+    },
+    {
+      "run_id": "k230-topface-v11-full-09-a01",
+      "start_index": 8000,
+      "count": 1000,
+      "seed": 20261117,
+      "archive": {
+        "name": "k230-topface-v11-full-09-a01.tar.gz",
+        "bytes": 302029353,
+        "sha256": "a2e9c4de836ae6fc56de6a7fef6661a8d195c324670db6322a3fd266138adc73"
+      },
+      "publication": {
+        "run_id": "k230-topface-v11-full-09-a01",
+        "prep": {
+          "ref": "lotus30/k230-topface-v11-04-full-shard-09",
+          "kernel_id": 145127787,
+          "version": 1,
+          "provider_status": "COMPLETE",
+          "source_sha256": "6d8aad805e420abdcd5a996309a266520df0d70f76e095c319f76a7c009a9bae"
+        },
+        "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+        "uploaded": {
+          "name": "k230-topface-v11-full-09-a01-a2e9c4de836ae6fc.tar.gz",
+          "bytes": 302029353,
+          "sha256": "a2e9c4de836ae6fc56de6a7fef6661a8d195c324670db6322a3fd266138adc73",
+          "file_id": "1OPiW3cmKgNA7X1roIhOGq6qEzFRWjjbU",
+          "provider_readback": "FULL_BYTE_SHA256_PASS"
+        },
+        "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+        "automatic_replay": false,
+        "provider_mutations": 1,
+        "github": {
+          "run_id": 43682127349,
+          "head": "281c5d1aa3d640e9afef4169dabfe0d9e3c3f6b1",
+          "branch": "ops/topface-transfer-1794721248473950200"
+        },
+        "secret_cleanup": "CONFIRMED_DELETED",
+        "independent_metadata_match": true,
+        "raw_archive_downloaded_to_host": false
+      },
+      "saved_result_sha256": "b811db0b57f2c45cdae9b037599fd7040ccba23a21719090d770d50efc7dfa44",
+      "instances": 2504,
+      "elapsed_seconds": 3467.900442073
+    },
+    {
+      "run_id": "k230-topface-v11-full-10-a01",
+      "start_index": 9000,
+      "count": 1000,
+      "seed": 20261117,
+      "archive": {
+        "name": "k230-topface-v11-full-10-a01.tar.gz",
+        "bytes": 301512023,
+        "sha256": "683d04746b4d58d5d29e354a57ca896355443402e6a9bd39ece09ac08388807c"
+      },
+      "publication": {
+        "run_id": "k230-topface-v11-full-10-a01",
+        "prep": {
+          "ref": "lotus30/k230-topface-v11-04-full-shard-10",
+          "kernel_id": 145135659,
+          "version": 1,
+          "provider_status": "COMPLETE",
+          "source_sha256": "1da7d84d2aa55b5d73162810b5d0c0ea778e5c6443a01803568762e769f0e037"
+        },
+        "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+        "uploaded": {
+          "name": "k230-topface-v11-full-10-a01-683d04746b4d58d5.tar.gz",
+          "bytes": 301512023,
+          "sha256": "683d04746b4d58d5d29e354a57ca896355443402e6a9bd39ece09ac08388807c",
+          "file_id": "1axEc6zkCunMmwT8Yk9IOS4078zPDYEjL",
+          "provider_readback": "FULL_BYTE_SHA256_PASS"
+        },
+        "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+        "automatic_replay": false,
+        "provider_mutations": 1,
+        "github": {
+          "run_id": 43686548698,
+          "head": "3978cf8f01492392e79f1776acc8a75335fbb45f",
+          "branch": "ops/topface-transfer-1794724842209745800"
+        },
+        "secret_cleanup": "CONFIRMED_DELETED",
+        "independent_metadata_match": true,
+        "raw_archive_downloaded_to_host": false
+      },
+      "saved_result_sha256": "2be0b29b2f26a566289794f6b072defc7334ae538b9bf653c670ddea608e0b38",
+      "instances": 2496,
+      "elapsed_seconds": 3248.78732083
+    }
+  ],
+  "total_scenes": 10000,
+  "data_seed": 20261117,
+  "dataset_index_sha256": "0555f5e7dd9b372c51108f4482f0ca3ed8816c790eb3572266956403e645dc49",
+  "ptq_background_bank": {
+    "archive_sha256": "e1cf0a92d4de8bc6f914c6341f1e9b42bda3de234f241c2597fac66d188b9471",
+    "manifest_sha256": "852f5851b4708c9582a5c8145dcd1e55adf4d20a6a6e3af7bec1011dd966c3c5",
+    "identity": {
+      "manifest_sha256": "852f5851b4708c9582a5c8145dcd1e55adf4d20a6a6e3af7bec1011dd966c3c5",
+      "source_manifest_sha256": "6d21a2e9d0a251c1161ee3b63345909d64ad1f8cda6d3f9be0e0c0454843e198",
+      "source_scope": "APPROVED_REAL_TRAIN_ONLY",
+      "sources": [
+        "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+        "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+        "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+        "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d"
+      ],
+      "patch_count": 64,
+      "policy": {
+        "probability": 0.35,
+        "max_patches": 2,
+        "scale_range": [
+          0.75,
+          1.25
+        ],
+        "target_exclusion_margin_px": 12,
+        "placement_attempts": 24,
+        "feather_border_px": 6
+      },
+      "supervision": "Existing synthetic labels only; no real geometric truth inferred"
+    },
+    "qualification_sha256": "dba6f9c81f7a583df08c417fe78242c7f0d2e0b8806b65c649aea7a8f9391078"
+  },
+  "training_input": {
+    "ref": "lotus30/k230-topface-v11-formal-input-a01",
+    "version": 1,
+    "manifest_sha256": "2d5c2be9e135d8d890895b767d605c4877652cbdbd5776a51ccbe8dd1efb9930"
+  },
+  "ptq_body_negative_bank": {
+    "archive_sha256": "0065a34de464018e4e9fb6ea8c845064540b01a1b899c192a61a3fc8b8656fda",
+    "manifest_sha256": "7cbb603863f5c185497585ec33990e74891b4da762b230c2ea6e200d95a6cb79",
+    "identity": {
+      "manifest_sha256": "7cbb603863f5c185497585ec33990e74891b4da762b230c2ea6e200d95a6cb79",
+      "source_audit_sha256": "30861406c4303f6c26ffefb3ce94921b6cd989cbf6908c4f8af5dee51c1891dd",
+      "source_scope": "AUDITED_SYNTHETIC_TRAIN_ONLY",
+      "policy": {
+        "probability": 0.25,
+        "eligibility": "ORIGINAL_WORLD_COUNT_ZERO_ONLY",
+        "camera_group_match": "EXACT",
+        "real_patch_after_replacement": false
+      },
+      "members": 120,
+      "camera_groups": [
+        "H100-P100-F65",
+        "H100-P85-F65",
+        "H100-P90-F68",
+        "H175-P100-F62",
+        "H175-P85-F62",
+        "H175-P90-F65",
+        "H175-P95-F68",
+        "H250-P100-F68",
+        "H250-P80-F65",
+        "H250-P85-F68",
+        "H250-P90-F62",
+        "H250-P95-F65",
+        "H325-P100-F65",
+        "H325-P80-F62",
+        "H325-P85-F65",
+        "H325-P90-F68",
+        "H325-P95-F62",
+        "H400-P80-F68",
+        "H400-P85-F62",
+        "H400-P95-F68"
+      ],
+      "supervision": "One retained world instance; zero observable top GT"
+    },
+    "qualification_sha256": "d6ce2f40befa78887f838ec9c95510619950a87f01dd1c5d48b58826edd26a00"
+  }
+}

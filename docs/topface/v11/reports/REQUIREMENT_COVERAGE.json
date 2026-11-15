@@ -1,6 +1,6 @@
 {
   "schema": "topface-v1.1-requirement-evidence-v1",
-  "observed_utc": "2026-11-15T09:24:04.190710+00:00",
+  "observed_utc": "2026-11-15T15:42:16.701480+00:00",
   "goal_complete": false,
   "authority": "V1.1 plan/prompt SHA in docs/topface/execution_contract.json; user operating envelope and Smoke approval retained",
   "items": [
@@ -76,17 +76,18 @@
     },
     {
       "requirement": "One forward bbox/sixcolors/physicalcenter/flags/ellipse/coniccenter",
-      "status": "PILOT_TRAINED_AND_CONVERTED_FORMAL_TRAINING_RUNNING",
+      "status": "FORMAL_TRAINED_AND_DRIVE_ACCEPTED_EXPORT_NOT_YET_EXECUTED",
       "evidence": [
         "g3/nanodet-taskhead-224x128/RESULT.json",
         "g3/nanodet-taskhead-320x192/RESULT.json",
         "g3/nanodet-taskhead-384x224/RESULT.json",
         "cloud/training-a01/ACCEPTANCE-v1.json",
         "cloud/conversion-pilot-a02/MODEL_FILES_RECEIPT.json",
-        "training/FORMAL_START_EVIDENCE.json"
+        "training/FORMAL_START_EVIDENCE.json",
+        "cloud/formal-a01/ACCEPTANCE.json"
       ],
       "remaining": [
-        "complete one formal model and final output contract",
+        "complete actual formal export and bind final input/output contract",
         "same-input final ONNX/Simulator/KPU preprocessing and raw/decoded proof"
       ]
     },
@@ -149,19 +150,23 @@
     },
     {
       "requirement": "One formal TopFaceNet 100-200epoch validation-early-stop",
-      "status": "ORIGINAL_FORMAL_A01_V1_RUNNING_FIRST_EPOCH_VERIFIED",
-      "remaining": [
-        "complete original100epoch experiment or exact accepted epoch-boundary continuation",
-        "full-byte Drive acceptance of final best/last checkpoints",
-        "validate selected formal checkpoint SHA against final source and validation selection"
-      ],
+      "status": "FORMAL_A01_V1_100_EPOCHS_AND_FULL_BYTE_DRIVE_ACCEPTED",
+      "remaining": [],
       "evidence": [
         "cloud/formal-a01/KERNEL_SAVE_RESPONSE.json",
         "cloud/formal-a01/FORMAL_CONFIG.json",
         "training/FORMAL_START_EVIDENCE.json",
-        "training/FORMAL_SESSION_PROTOCOL.md"
+        "training/FORMAL_SESSION_PROTOCOL.md",
+        "cloud/formal-a01/ACCEPTANCE.json",
+        "cloud/formal-a01/SELECTED_MODEL.json",
+        "cloud/publisher/k230-topface-v11-formal-a01/TRANSFER_RECEIPT.json",
+        "training/FORMAL_TRAINING_A01.md"
       ],
-      "scope": "FORMAL_START_EVIDENCE records the first actual optimizer epoch. Subsequent live telemetry is preliminary until exact terminal archive acceptance."
+      "scope": "OriginalKaggle145144940v1, exact savedsource/inputs/trace verified; completed training and durable acceptance. Independent synthetic test, quantization and real/native qualification remain separate.",
+      "completed_epochs": 100,
+      "optimizer_updates": 23400,
+      "best_epoch": 92,
+      "checkpoint_sha256": "7d7b9a332e2b30d3d09e85245d6e39fd5f9a9d52b694f4bdb0d203585b0346d7"
     },
     {
       "requirement": "Separate synthetic and approved real assessment/active learning",
@@ -225,8 +230,12 @@
     },
     {
       "requirement": "Final requested deliverable index, reports and complete SHA256SUMS.json",
-      "status": "FINAL_MODEL_DEPENDENT_DELIVERY_PENDING",
-      "evidence": [],
+      "status": "SEVENTEEN_ITEM_INDEX_PRESENT_FINAL_MODEL_REPORTS_AND_COMPREHENSIVE_SHA_PENDING",
+      "evidence": [
+        "../README.md",
+        "training/FORMAL_TRAINING_A01.md",
+        "reports/BOARD_PREVIEW_PROTOCOL.md"
+      ],
       "remaining": [
         "final user-accessible file index covering original plan deliverables1to17",
         "formal checkpoints/ONNX/KModel/outputcontract/boardbundle with SHA256",

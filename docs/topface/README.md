@@ -9,7 +9,7 @@
 - [要求与证据覆盖](v11/reports/REQUIREMENT_COVERAGE.json)：明确已接受、待执行和 UNKNOWN，整个项目尚未完成。
 - [Full 数据接受](v11/training/FULL_DATASET_ACCEPTANCE.json)：10,000 场景、24,996 个世界实例；train 7,465、val 1,601、独立 synthetic_test 934。数据索引与分片哈希见该记录及 [分片清单](v11/training/FULL_INVENTORY.json)。
 - [正式训练运行记录](v11/cloud/formal-a01/HOST_PROGRESS.json) 和 [精确 v1 观察](v11/cloud/formal-a01/OBSERVATION-v1.json)：当前任务为 `lotus30/k230-topface-v11-06-formal-training`，ID 145144940、v1。查看记录的实际时间与原始会话；不要因观察连接中断重启训练。
-- [正式训练配置](v11/cloud/formal-a01/FORMAL_CONFIG.json)、[启动证据](v11/training/FORMAL_START_EVIDENCE.json) 和 [会话恢复协议](v11/training/FORMAL_SESSION_PROTOCOL.md)：唯一正式模型从已选 Pilot 权重继续，目标 100 轮。实时 epoch/loss 不是最终归档接受记录。
+- [正式训练配置](v11/cloud/formal-a01/FORMAL_CONFIG.json)、[完成报告](v11/training/FORMAL_TRAINING_A01.md) 和 [接受记录](v11/cloud/formal-a01/ACCEPTANCE.json)：原 v1 已完成 100 轮、23,400 次更新，第 92 轮 best 已在 Drive 全字节校验接受。实际导出、独立测试和实机验收另行核对。
 - [独立运动测试接受](v11/reports/REDETECTION_SWEEP_ACCEPTANCE_A01.json)：1,872 帧、156 序列，覆盖六色、遮挡恢复、出入画和相机升降。数据生成与归档已接受，正式模型推理结果另行核对。
 
 Smoke 用户抽查、Pilot、颜色补充、组合审计及 Full 生成均已推进完成；旧版“optimizer updates=0”“等待用户启动旧审计”不再是接续指令。历史状态保留在各原始运行目录和 Git 历史。
@@ -30,8 +30,8 @@ Smoke 用户抽查、Pilot、颜色补充、组合审计及 Full 生成均已推
 | 8 | [Smoke QA](v11/reports/SIMULATION_QA.md)、[人工抽查](v11/reports/SMOKE_HUMAN_REVIEW.json)、[预览](v11/previews/index.html)、[Drive 接受](v11/reports/SMOKE_DRIVE_ACCEPTANCE.json) | 100 场景与 overlay |
 | 9 | [Pilot 接受](v11/cloud/pilot-a02/ACCEPTANCE.json)、[1,240 场景组合审计](v11/cloud/audit-a02/ACCEPTANCE-v4.json)、[Pilot 指标](v11/reports/PILOT_METRICS.md) | 原 1,000 场景加颜色反例，原归档保留 |
 | 10 | [Full 接受](v11/training/FULL_DATASET_ACCEPTANCE.json)、[清单](v11/training/FULL_INVENTORY.json) | 10,000 场景，完整分片在 Drive |
-| 11 | [训练实现](../../research/topface/train_experiment.py)、[正式配置](v11/cloud/formal-a01/FORMAL_CONFIG.json) | 最终正式 checkpoint 等待原会话完成及接受 |
-| 12 | [正式训练目录](v11/cloud/formal-a01/)、[归档与源码校验](../../research/topface/accept_full_downstream.py) | 最终配置、日志、指标、SHA 等待接受 |
+| 11 | [训练实现](../../research/topface/train_experiment.py)、[正式配置](v11/cloud/formal-a01/FORMAL_CONFIG.json)、[选定权重](v11/cloud/formal-a01/SELECTED_MODEL.json) | 100 轮完成，第 92 轮 best 已接受 |
+| 12 | [正式训练报告](v11/training/FORMAL_TRAINING_A01.md)、[原归档接受](v11/cloud/formal-a01/ACCEPTANCE.json)、[归档与源码校验](../../research/topface/accept_full_downstream.py) | 配置、完整日志、TensorBoard、best/last 与 SHA 在已接受原归档内 |
 | 13 | [仿真/真实评估覆盖](v11/reports/REQUIREMENT_COVERAGE.json)、[正式主机评估入口](../../research/topface/evaluate_formal_host.py) | 正式 934 张及四路 host 报告待模型产出；新真实盲测未执行 |
 | 14 | [自动转换接续](../../research/topface/continue_formal_conversion.py) | 最终 ONNX/KModel 尚待实际导出、编译与数值测试 |
 | 15 | [契约实现](../../research/topface/nanodet_topface.py) | 最终 output_contract.json 与同一转换模型一起交付 |

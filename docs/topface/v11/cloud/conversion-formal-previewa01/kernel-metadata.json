@@ -1,0 +1,28 @@
+{
+  "id": "lotus30/k230-topface-v11-07c-formal-board-preview",
+  "title": "K230 Topface V11 07c Formal Board Preview",
+  "code_file": "07b_model_conversion.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "lotus30/k230-topface-v11-board-preview-input-a01/1",
+    "lotus30/k230-topface-v11-compiler-linux-input-a01/1"
+  ],
+  "kernel_sources": [
+    "lotus30/k230-topface-v11-06-formal-training/1",
+    "lotus30/k230-topface-v11-04-full-shard-01/1",
+    "lotus30/k230-topface-v11-04-full-shard-02/1",
+    "lotus30/k230-topface-v11-04-full-shard-03/1",
+    "lotus30/k230-topface-v11-04-full-shard-04/1",
+    "lotus30/k230-topface-v11-04-full-shard-05/1",
+    "lotus30/k230-topface-v11-04-full-shard-06/1",
+    "lotus30/k230-topface-v11-04-full-shard-07/1",
+    "lotus30/k230-topface-v11-04-full-shard-08/1",
+    "lotus30/k230-topface-v11-04-full-shard-09/1",
+    "lotus30/k230-topface-v11-04-full-shard-10/1"
+  ],
+  "competition_sources": []
+}

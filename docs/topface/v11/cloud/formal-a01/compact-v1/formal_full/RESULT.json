@@ -1,0 +1,288 @@
+{
+  "schema": "topface-logical-training-v1.1",
+  "kind": "formal_full",
+  "status": "FINITE_TRAINING_COMPLETE",
+  "started_utc": "2026-11-15T07:01:44.631639+00:00",
+  "seed": 20261114,
+  "width": 320,
+  "height": 192,
+  "batch_size": 32,
+  "max_epochs": 100,
+  "max_updates": null,
+  "optimizer_updates": 23400,
+  "epoch": 100,
+  "initialization": {
+    "initialization": "selected frozen Pilot best",
+    "parent_sha256": "b2aa039f15f015b497c700c34eb1c0f7cd5d91b0f042c67f41db9b4642a7f1aa",
+    "parent_project_updates": 560,
+    "new_optimizer_updates": 0
+  },
+  "preflight_assignment": {
+    "world_instances": 18604,
+    "observable_eligible_gt": 18259,
+    "assigned_gt": 18259,
+    "positive_priors": 54774,
+    "assigned_fifth_instance": 1133,
+    "unobservable_or_under16px": 345
+  },
+  "dataset_audit_sha256": "0555f5e7dd9b372c51108f4482f0ca3ed8816c790eb3572266956403e645dc49",
+  "learning_rate": 0.001,
+  "loss_weights": {
+    "color": 1.0,
+    "dfl": 0.25,
+    "bbox": 2.0,
+    "physical": 1.0,
+    "conic": 1.0,
+    "axes": 0.5,
+    "orientation": 0.2,
+    "center_flags": 0.2,
+    "geometry_confidence": 0.2,
+    "visibility_quality": 0.2
+  },
+  "mixed_precision": false,
+  "ellipse_shape_loss": false,
+  "real_background_augmentation": {
+    "manifest_sha256": "852f5851b4708c9582a5c8145dcd1e55adf4d20a6a6e3af7bec1011dd966c3c5",
+    "source_manifest_sha256": "6d21a2e9d0a251c1161ee3b63345909d64ad1f8cda6d3f9be0e0c0454843e198",
+    "source_scope": "APPROVED_REAL_TRAIN_ONLY",
+    "sources": [
+      "273f133ef53bc10c952c8278f99910245c6e8b728ce6633825a8b59d4ef67bc3",
+      "9517e3ecb1c9940604243b9b51b0a6f10ff4ca30328127004c2d428f01b42494",
+      "c8f3f5f4237ac87cd67ca11a92344919713b4eb4474a024c9cca5f98098a8c17",
+      "fbe4c51218bc08da210119b5fcfb1e8c33f352528d04950e9296c0a91c3bd86d"
+    ],
+    "patch_count": 64,
+    "policy": {
+      "probability": 0.35,
+      "max_patches": 2,
+      "scale_range": [
+        0.75,
+        1.25
+      ],
+      "target_exclusion_margin_px": 12,
+      "placement_attempts": 24,
+      "feather_border_px": 6
+    },
+    "supervision": "Existing synthetic labels only; no real geometric truth inferred"
+  },
+  "body_only_augmentation": {
+    "manifest_sha256": "7cbb603863f5c185497585ec33990e74891b4da762b230c2ea6e200d95a6cb79",
+    "source_audit_sha256": "30861406c4303f6c26ffefb3ce94921b6cd989cbf6908c4f8af5dee51c1891dd",
+    "source_scope": "AUDITED_SYNTHETIC_TRAIN_ONLY",
+    "policy": {
+      "probability": 0.25,
+      "eligibility": "ORIGINAL_WORLD_COUNT_ZERO_ONLY",
+      "camera_group_match": "EXACT",
+      "real_patch_after_replacement": false
+    },
+    "members": 120,
+    "camera_groups": [
+      "H100-P100-F65",
+      "H100-P85-F65",
+      "H100-P90-F68",
+      "H175-P100-F62",
+      "H175-P85-F62",
+      "H175-P90-F65",
+      "H175-P95-F68",
+      "H250-P100-F68",
+      "H250-P80-F65",
+      "H250-P85-F68",
+      "H250-P90-F62",
+      "H250-P95-F65",
+      "H325-P100-F65",
+      "H325-P80-F62",
+      "H325-P85-F65",
+      "H325-P90-F68",
+      "H325-P95-F62",
+      "H400-P80-F68",
+      "H400-P85-F62",
+      "H400-P95-F68"
+    ],
+    "supervision": "One retained world instance; zero observable top GT"
+  },
+  "validation_selection": "mAP50_95 +.1color +.1medianEllipseIoU -.01min(medianVisibleCenterPx,20)",
+  "input_contract": {
+    "schema": "topface-nanodet-candidate-output-v1.1",
+    "candidate_not_final": true,
+    "input": {
+      "shape": [
+        1,
+        3,
+        192,
+        320
+      ],
+      "dtype": "float32",
+      "layout": "NCHW",
+      "color": "BGR",
+      "normalization": "(uint8-[103.53,116.28,123.675])/[57.375,57.12,58.395] exactly once",
+      "source_wh": [
+        640,
+        360
+      ],
+      "resize": "aspect-preserving bilinear; centered letterbox pad114",
+      "letterbox": {
+        "source_wh": [
+          640,
+          360
+        ],
+        "model_wh": [
+          320,
+          192
+        ],
+        "gain": 0.5,
+        "resized_wh": [
+          320,
+          180
+        ],
+        "padding_tblr": [
+          6,
+          6,
+          0,
+          0
+        ],
+        "pad_value": 114,
+        "coordinate_origin": "continuous top-left image edge",
+        "point_forward": "source_xy*gain+[left,top]",
+        "point_inverse": "(model_xy-[left,top])/gain",
+        "axis_forward": "source_length*gain",
+        "axis_inverse": "model_length/gain",
+        "orientation": "theta in radians encoded sin(2theta),cos(2theta); unchanged by isotropic resize"
+      }
+    },
+    "output": {
+      "name": "topface_raw",
+      "shape": [
+        1,
+        1275,
+        50
+      ],
+      "dtype": "float32",
+      "channels": {
+        "color_presence_logits": [
+          0,
+          6
+        ],
+        "box_ltrb_dfl_logits": [
+          6,
+          38
+        ],
+        "physical_center_xy_stride_offsets": [
+          38,
+          40
+        ],
+        "center_valid_visible_logits": [
+          40,
+          42
+        ],
+        "ellipse_log_semiaxes_stride": [
+          42,
+          44
+        ],
+        "orientation_sin2_cos2": [
+          44,
+          46
+        ],
+        "geometry_confidence_logit": 46,
+        "visibility_quality_logit": 47,
+        "ellipse_conic_center_xy_stride_offsets": [
+          48,
+          50
+        ]
+      },
+      "grid": "p=(column*stride,row*stride), no0.5 bias; row-major; levels8,16,32,64",
+      "class_id_mapping": "approved color_id1..6 maps to channels0..5",
+      "class_loss": "hard-label sigmoid focal BCE gamma2 alpha0.25; background all6zero",
+      "score": "max sigmoid(class_presence_logits), exactly once; no additional objectness",
+      "bbox_decode": "softmax each8-bin DFL then expectation0..7 times stride; ltrb around grid",
+      "center_decode": "grid + raw offset * stride; physical CAD center, not conic center",
+      "ellipse_decode": "conic center=grid+channels48:50*stride; exp(log semiaxes)*stride; orientation atan2(sin2,cos2)/2",
+      "nms": "host after declared sigmoid of class logits; class-agnostic top-face box NMS",
+      "maximum_returned_instances": 5,
+      "capacity": "0 EMPTY,1..3 OK,4..5 OVER_CAPACITY; boundary ambiguity with<4 -> UNCERTAIN",
+      "loss_masks": {
+        "physical_center": "center_valid AND center_visible; hidden truth retained",
+        "center_flags": "both flags always supervised for positive priors, including hidden center=false",
+        "axes_conic": "geometry_valid",
+        "orientation": "geometry_valid AND orientation_valid",
+        "geometry_confidence": "BCE geometry_valid",
+        "visibility_quality": "BCE continuous visible_fraction"
+      },
+      "geometry_safety": "reject nonfinite raw output; reject exp-overflow geometry; normalize angle vector; canonicalize major>=minor and theta in[-90,90)deg"
+    },
+    "training_status": "NOT_TRAINED",
+    "ptq_status": "NOT_FINAL_CALIBRATION",
+    "board_status": "NOT_RUN"
+  },
+  "test_evaluation": false,
+  "real_evaluation": false,
+  "automatic_replay": false,
+  "torch": "2.11.0+cu130",
+  "gpu": "Tesla T4",
+  "formal_identity": "k230-topface-v11-formal-a01",
+  "schedule": {
+    "target_updates": 23400,
+    "warmup_updates": 100,
+    "epoch_batches": 234
+  },
+  "runtime": {
+    "torch": "2.11.0+cu130",
+    "cuda": "13.0",
+    "device": "Tesla T4",
+    "cudnn": 92700,
+    "python": "3.13.16",
+    "numpy": "2.1.3",
+    "opencv": "4.14.0"
+  },
+  "checkpoint_boundary": "epoch",
+  "completed_epochs": 100,
+  "reproducibility": {
+    "data_order_rng_and_optimizer_restored": true,
+    "bitwise_cuda_resume_verified": false,
+    "deterministic_algorithms": "warn_only",
+    "limitation": "Upstream bilinear GhostPAN CUDA backward may be nondeterministic."
+  },
+  "tensorboard": "ENABLED",
+  "effective_epoch_limit": 100,
+  "best_epoch": 92,
+  "best_checkpoint_sha256": "7d7b9a332e2b30d3d09e85245d6e39fd5f9a9d52b694f4bdb0d203585b0346d7",
+  "best_validation_score": 1.17233341107001,
+  "stale_epochs": 8,
+  "gate": {
+    "pass": true,
+    "checks": {
+      "recall50_at_least80pct": true,
+      "color_at_least90pct": true,
+      "task_map50_at_least75pct": true,
+      "visible_center_median_at_most5_source_px": true,
+      "ellipse_iou_median_at_least60pct": true,
+      "finite_ellipse_coverage_at_least90pct": true,
+      "empty_fp_per_image_at_most_point1": true,
+      "valid_angle_prediction_coverage_at_least90pct": true,
+      "angle_median_at_most15deg": true,
+      "all_observable_4_recapture_at_least80pct": true,
+      "all_observable_5_recapture_at_least80pct": true
+    },
+    "scope": "registered synthetic Pilot gate, not real acceptance"
+  },
+  "step_seconds": {
+    "n": 23400,
+    "median": 0.22179944249955952,
+    "p95": 0.24803446425001993
+  },
+  "peak_cuda_allocated_bytes": 1248334848,
+  "elapsed_seconds": 31022.505440158,
+  "checkpoints": [
+    {
+      "name": "best.pt",
+      "bytes": 15093373,
+      "sha256": "7d7b9a332e2b30d3d09e85245d6e39fd5f9a9d52b694f4bdb0d203585b0346d7"
+    },
+    {
+      "name": "last.pt",
+      "bytes": 15095421,
+      "sha256": "68078bab4f8ff2c64b2931a27896f8048ec0c87243cc6595d1654a1723f4fd84"
+    }
+  ],
+  "training_scene_count": 7465,
+  "validation_scene_count": 1601
+}
