@@ -1,0 +1,9 @@
+{
+  "scope": "USB trial deferred by user after one probe",
+  "uvc_probe": {
+    "connected": false,
+    "device": null
+  },
+  "windows_external_camera_enumeration": [],
+  "conclusion": "NOT_QUALIFIED_DEVICE_NOT_ENUMERATED; hardware compatibility not determined"
+}

@@ -45,7 +45,25 @@ def digest(path):
     return binascii.hexlify(h.digest()).decode()
 
 
-def run(root='/sdcard/topface_trial', frames=600, display=True,paired_samples=0):
+def interleave_rgb(planar, height, width):
+    """Own packed RGB bytes without using the firmware's planar draw path."""
+    if tuple(planar.shape) != (3, height, width):
+        raise ValueError('Expected camera RGB planar CHW array')
+    return planar.reshape((3, height*width)).transpose().copy().reshape((height, width, 3))
+
+
+def preview_rgb565(frame):
+    import image
+    height, width = frame.height(), frame.width()
+    packed = interleave_rgb(frame.to_numpy_ref(), height, width)
+    # Keep packed alive until the allocating conversion completes. The pinned
+    # v1.8-36 draw implementation has no RGBP888 conversion branch.
+    rgb = image.Image(width, height, image.RGB888, alloc=image.ALLOC_REF, data=packed)
+    return rgb.to_rgb565()
+
+
+def run(root='/sdcard/topface_trial', frames=600, display=True,paired_samples=0,
+        ide_preview=False):
     import os
     import sys
     if sys.implementation.name != 'micropython':
@@ -113,7 +131,7 @@ def run(root='/sdcard/topface_trial', frames=600, display=True,paired_samples=0)
         ai2d.set_resize_param(True, nn.interp_method.tf_bilinear, nn.interp_mode.half_pixel)
         builder = ai2d.build([1, 3, 360, 640], [1, 3, height, width])
         if display:
-            Display.init(Display.ST7701, width=800, height=480, fps=30, to_ide=False)
+            Display.init(Display.ST7701, width=800, height=480, fps=30, to_ide=ide_preview)
             initialized_display = True
             overlay = image.Image(640, 360, image.RGB565)
         sensor = Sensor(id=2, width=1920, height=1080, fps=30)
@@ -174,8 +192,8 @@ def run(root='/sdcard/topface_trial', frames=600, display=True,paired_samples=0)
             frozen_source=None
             raw = output = source = None
             if display:
-                overlay.draw_image(frame.to_rgb565(), 0, 0)
-                overlay.draw_string(8,8,detections['capacity_state'],color=(255,255,255))
+                overlay.draw_image(preview_rgb565(frame), 0, 0)
+                overlay.draw_string_advanced(8,8,20,detections['capacity_state'],color=(255,255,255))
                 for target in detections['detections']:
                     x1, y1, x2, y2 = target['bbox_xyxy_visible']
                     overlay.draw_rectangle(int(x1), int(y1), int(x2-x1), int(y2-y1), color=(0,255,0), thickness=2)
@@ -239,6 +257,7 @@ def run(root='/sdcard/topface_trial', frames=600, display=True,paired_samples=0)
     measurement_seconds = (time.ticks_diff(measurement_end, measurement_start)/1000
                            if measurement_start is not None else None)
     report = {'status': status, 'error': error_text, 'runtime': str(nn.version()), 'display': display,
+              'ide_preview': ide_preview, 'preview_conversion': 'EXPLICIT_CHW_TO_HWC_RGB888_TO_RGB565',
               'model_sha256': identity['kmodel_sha256'], 'capture_timeouts': dropped,
               'displayed_frames': len(samples['total']) if display else 0,
               'requested_measurement_frames': frames, 'elapsed_seconds_including_setup': seconds,

@@ -1,0 +1,8 @@
+{
+  "required_check": "python -B -m unittest test_camera_diagnostics test_portable_decode -v",
+  "required_passed": 5,
+  "extra_board_pair_checks": "UNAVAILABLE_ONNX_NOT_INSTALLED; alternative isolated environment lacks numpy; no dependencies installed",
+  "board_script_import_issue": "Corrected sys.path to include immutable decoder directory",
+  "syntax": "3_PASS",
+  "scope": "Host layout ownership and portable decoder; not camera accuracy"
+}

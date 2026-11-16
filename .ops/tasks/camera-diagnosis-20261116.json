@@ -18,11 +18,11 @@
     "Stage captures and hashes distinguish code, host transmission and camera paths; bounded CSI and UVC tests with cleanup; no startup or production parameter changes"
   ],
   "branch": "ops/camera-diagnosis-20261116",
-  "state": "active",
+  "state": "paused",
   "claimed": true,
   "agent": "codex",
   "session": "camera-diag-20261116-a",
-  "revision": 2,
-  "handoff": null,
-  "updated_at": "2026-11-16T02:24:47+00:00"
+  "revision": 3,
+  "handoff": ".ops/handoffs/camera-diagnosis-20261116/20261116T024713-3b37c829.json",
+  "updated_at": "2026-11-16T02:47:16+00:00"
 }

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "pattern.bmp",
+    "bytes": 768066,
+    "sha256": "a04fce55fc008098c83ede94da4919a8f1fa6045da45ad5729bcff42d57811e8",
+    "match": true
+  },
+  {
+    "name": "csi_planar-source.raw",
+    "bytes": 691200,
+    "sha256": "e59a3d162209b3817d4a1243901e8447e6f16c00612f9d8a970a56d0671ae303",
+    "match": true
+  },
+  {
+    "name": "csi_planar-converted.bmp",
+    "bytes": 460866,
+    "sha256": "8c97b739cbe83118e21af5f9318a560e3a55e65c922704c67bd3425d6bf6687f",
+    "match": true
+  },
+  {
+    "name": "csi_rgb565-source.raw",
+    "bytes": 460800,
+    "sha256": "f5f7973cbe85af5e58ebb13a95cfc4e9f6af78ce68e5410836e2577f659ec3b8",
+    "match": true
+  },
+  {
+    "name": "csi_rgb565-converted.bmp",
+    "bytes": 460866,
+    "sha256": "8ee7fa397c80b612bb2dda7d615305bf2e7d6d15679ba1b0166e47675c22742b",
+    "match": true
+  }
+]
