@@ -4,7 +4,7 @@ import json
 import math
 import time
 
-from topface_decode import decode
+from topface_decode import decode, decode_tensor
 
 
 def summarize(samples):
@@ -52,13 +52,16 @@ def interleave_rgb(planar, height, width):
     return planar.reshape((3, height*width)).transpose().copy().reshape((height, width, 3))
 
 
-def preview_rgb565(frame):
+def preview_rgb565(frame,fast=False):
     import image
     height, width = frame.height(), frame.width()
     packed = interleave_rgb(frame.to_numpy_ref(), height, width)
     # Keep packed alive until the allocating conversion completes. The pinned
     # v1.8-36 draw implementation has no RGBP888 conversion branch.
-    rgb = image.Image(width, height, image.RGB888, alloc=image.ALLOC_REF, data=packed)
+    if fast:
+        rgb=image.Image(width,height,image.RGB888,alloc=image.ALLOC_REF,data=packed,cvt_565=True)
+        return rgb,packed
+    rgb=image.Image(width,height,image.RGB888,alloc=image.ALLOC_REF,data=packed)
     return rgb.to_rgb565()
 
 
@@ -211,16 +214,16 @@ def run(root='/sdcard/topface_trial', frames=600, display=True,paired_samples=0,
             raw = output.to_numpy()
             if tuple(raw.shape) != (1, positions, 50):
                 raise ValueError('KPU output shape differs from the contract')
-            detections = decode(lambda point, channel: raw[0, point, channel],
-                                width=width, height=height, positions=positions,
-                                score_threshold=identity['score_threshold'], nms_iou=identity['nms_iou'])
+            detections = decode_tensor(raw,width,height,identity['score_threshold'],identity['nms_iou'])
             last_observation = detections
             decoded = time.ticks_us()
             if pending_pair is not None:pair_capture.finish(pending_pair,raw,detections)
             frozen_source=None
             raw = output = source = None
             if display:
-                overlay.draw_image(preview_rgb565(frame), 0, 0)
+                preview_image,preview_backing=preview_rgb565(frame,fast=True)
+                overlay.draw_image(preview_image, 0, 0)
+                preview_image=preview_backing=None
                 overlay.draw_string_advanced(8,8,20,detections['capacity_state'],color=(255,255,255))
                 for target in detections['detections']:
                     x1, y1, x2, y2 = target['bbox_xyxy_visible']
@@ -289,7 +292,7 @@ def run(root='/sdcard/topface_trial', frames=600, display=True,paired_samples=0,
     measurement_seconds = (time.ticks_diff(measurement_end, measurement_start)/1000
                            if measurement_start is not None else None)
     report = {'status': status, 'error': error_text, 'runtime': str(nn.version()), 'display': display,
-              'ide_preview': ide_preview, 'preview_conversion': 'EXPLICIT_CHW_TO_HWC_RGB888_TO_RGB565',
+              'ide_preview': ide_preview, 'preview_conversion': 'EXPLICIT_CHW_TO_HWC_RVV_RGB565',
               'model_sha256': identity['kmodel_sha256'], 'capture_timeouts': capture_errors['timeout'],
               'capture_failures': dropped, 'capture_error_counts': capture_errors,
               'capture_error_events_first_eight': capture_error_events,

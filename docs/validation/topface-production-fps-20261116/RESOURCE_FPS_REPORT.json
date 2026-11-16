@@ -1,0 +1,36 @@
+{
+  "scope": "Trial model pipeline, 1000frames, full inference+display, not final integrated service",
+  "fps": 10.84199,
+  "peak_mib": {
+    "python_heap_used_bytes": 1.742,
+    "sys_heap_used_bytes": 4.45,
+    "sys_page_used_bytes": 31.434,
+    "sys_mmz_used_bytes": 18.547
+  },
+  "kpu_ms": 20.665,
+  "decode_ms": 18.71188,
+  "display_ms": 27.97806,
+  "kpu_time_fraction_estimate": 0.22404972334999995,
+  "kpu_time_fraction_is_hardware_utilization": false,
+  "cpu_utilization": null,
+  "kpu_utilization": null,
+  "capacities": {
+    "sys_mmz": [
+      535822336,
+      0,
+      535822336
+    ],
+    "sys_page": [
+      460189696,
+      28737536,
+      431452160
+    ],
+    "heap_used": 157120,
+    "heap_free": 3988544,
+    "sys_heap": [
+      67108864,
+      3151104,
+      63957760
+    ]
+  }
+}

@@ -10,7 +10,7 @@ from .camera_roles import MODE_CAMERA
 
 
 class VisionAdapter:
-    def __init__(self, config=None):
+    def __init__(self, config=None, topface_backend=None):
         if config is None:
             from . import config as defaults
             config = defaults
@@ -24,6 +24,8 @@ class VisionAdapter:
         self.blocks = {}
         self.last_block_candidates = []
         self.last_top_circles = []
+        self.topface_backend=topface_backend
+        self.last_topface=None
 
     def reset_session(self):
         self.qr.reset_session()
@@ -32,6 +34,7 @@ class VisionAdapter:
         self.context = None
         self.blocks = {}
         self.last_block_candidates = []
+        self.last_topface=None
 
     def mark_consumed(self, station, target_id, u_px, v_px, radius_px):
         """Call only after a confirmed physical pickup, not after command acceptance."""
@@ -108,7 +111,9 @@ class VisionAdapter:
                                "raw_payload": update["payload"], "stable": update["submitted"],
                                "score_hint": 100 if update["submitted"] else 0})
                 return result
-            if mode in ("COLOR", "TOP"):
+            if mode == 'TOP' and self.topface_backend is not None:
+                result=self._topface(result,image,target_id,station)
+            elif mode in ("COLOR", "TOP"):
                 result = self._color(result, image, target_id, station, mode)
             elif mode == "RING":
                 result = self._ring(result, image, target_id, station, profile)
@@ -133,6 +138,41 @@ class VisionAdapter:
             result.update({"status": "ERROR", "reason": "DETECTOR_ERROR: " + str(error), "stable": False,
                            "x_mm": None, "y_mm": None, "calibration_id": None, "target_pose_valid": False})
             return result
+
+    def close(self):
+        if self.topface_backend is not None:self.topface_backend.close()
+
+    def _topface(self,result,image,target_id,station):
+        if type(target_id) is not int or target_id not in (1,2,3,4,5,6):
+            result.update(status='ERROR',reason='COLOR_ID_REQUIRED');return result
+        decoded=self.topface_backend.infer(image);self.last_topface=decoded
+        result.update(detector_backend='TOPFACE_KPU',model_sha256=self.topface_backend.identity['kmodel_sha256'],
+                      topface_detections=decoded['detections'],capacity_state=decoded['capacity_state'])
+        if decoded['capacity_state'] in ('OVER_CAPACITY','UNCERTAIN'):
+            result.update(status=decoded['capacity_state'],reason='TOPFACE_CAPACITY_OR_BOUNDARY');return result
+        cfg=setting(self.config,'TOP_CONFIG',{}).get(station)
+        if not cfg or cfg.get('roi') is None or cfg.get('reference') is None:
+            result.update(status='UNCALIBRATED',reason='TOP_PARAMETERS_REQUIRED');return result
+        roi=cfg['roi'];ref=cfg['reference'];eligible=[]
+        for target in decoded['detections']:
+            if target['color_id']!=target_id or target['boundary_candidate']:continue
+            if target['center_valid_probability']<.5 or target['center_visible_probability']<.5:continue
+            if target['ellipse'] is None or target['ellipse']['geometry_confidence']<.5:continue
+            x1,y1,x2,y2=target['bbox_xyxy_visible'];cx,cy=target['center_xy_projected_3d']
+            if not all(finite(v) for v in (x1,y1,x2,y2,cx,cy)):continue
+            if not (roi[0]<x1<x2<roi[0]+roi[2] and roi[1]<y1<y2<roi[1]+roi[3]):continue
+            if not (roi[0]<=cx<roi[0]+roi[2] and roi[1]<=cy<roi[1]+roi[3]):continue
+            area=(x2-x1)*(y2-y1)
+            if not cfg.get('min_area',0)<=area<=cfg.get('max_area',640*360):continue
+            if any((cx-p[0])**2+(cy-p[1])**2<=p[2]**2 for p in self.excluded.get((station,target_id),[])):continue
+            eligible.append(((cx-ref[0])**2+(cy-ref[1])**2,target))
+        if not eligible:
+            result.update(status='NOT_FOUND',reason='NO_VISIBLE_COMPLETE_TOPFACE');return result
+        eligible.sort(key=lambda item:item[0]);chosen=eligible[0][1]
+        x1,y1,x2,y2=chosen['bbox_xyxy_visible']
+        result.update(status='OK',bbox=[x1,y1,x2-x1,y2-y1],ellipse=chosen['ellipse'],
+                      model_confidence=chosen['score'],reason=None)
+        return pixels(result,*chosen['center_xy_projected_3d'],score=round(chosen['score']*100))
 
     def _color(self, result, image, target_id, station, mode):
         if type(target_id) is not int or target_id not in (1, 2, 3, 4, 5, 6):

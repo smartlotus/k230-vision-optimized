@@ -1,0 +1,19 @@
+{
+  "source": "User message 2026-11-16",
+  "acceptance": "USER_QUALITATIVE_RECOGNITION_ACCEPTED",
+  "quote": "我已经人工做完了检查和观察，现在识别准确率不错，但是现在帧率很低。这个kmodel模型可以正式部署了，可以部署到原有的代码里面了。同时要进行优化帧率",
+  "quantitative_accuracy": "NOT_MEASURED",
+  "authorization": [
+    "Integrate trained model into existing code",
+    "Deploy this model",
+    "Optimize real frame rate"
+  ],
+  "model_sha256": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88",
+  "retained_boundaries": [
+    "CSI2 TOP",
+    "CSI1 QR/LANE",
+    "CSI0 quarantine",
+    "no UART/motion",
+    "preserve active/draft and startup files"
+  ]
+}

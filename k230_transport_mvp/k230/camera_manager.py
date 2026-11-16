@@ -72,6 +72,9 @@ class CameraManager:
                 sensor.set_framesize(width=setting(self.config, "WIDTH", 640),
                     height=setting(self.config, "HEIGHT", 480), crop=setting(self.config, "CROP", False))
                 sensor.set_pixformat(self.sensor_factory.RGB565)
+                if camera_id==2 and setting(self.config,'TOPFACE_MODEL_ROOT'):
+                    sensor.set_framesize(width=640,height=360,crop=False,chn=2)
+                    sensor.set_pixformat(self.sensor_factory.RGBP888,chn=2)
                 sensor.set_hmirror(setting(self.config, "HMIRROR", False))
                 sensor.set_vflip(setting(self.config, "VFLIP", False))
             if setting(self.config, "PREVIEW", False):
@@ -88,7 +91,7 @@ class CameraManager:
             self.close()
             raise
 
-    def get_frame(self, camera_id):
+    def get_frame(self, camera_id, mode=None):
         if not self.started:
             return None
         if camera_id not in (0, 1, 2):
@@ -103,7 +106,9 @@ class CameraManager:
         timeout_key = "SNAPSHOT_TIMEOUT_MS" if camera_id in self.successful_cameras else "FIRST_FRAME_TIMEOUT_MS"
         timeout_default = 100 if camera_id in self.successful_cameras else 2000
         # Give sensor startup a bounded first-frame window; never enable driver reboot.
-        image = self.sensors[camera_id].snapshot(timeout=setting(self.config, timeout_key, timeout_default), auto_reboot=False)
+        kwargs={'timeout':setting(self.config,timeout_key,timeout_default),'auto_reboot':False}
+        if camera_id==2 and mode=='TOP' and setting(self.config,'TOPFACE_MODEL_ROOT'):kwargs['chn']=2
+        image = self.sensors[camera_id].snapshot(**kwargs)
         if image is None:
             return None
         width, height = image.width(), image.height()

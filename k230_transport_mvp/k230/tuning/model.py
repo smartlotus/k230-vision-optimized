@@ -4,7 +4,7 @@ from vision.common import elapsed_ms
 
 
 class TuningSession:
-    def __init__(self,store,slot=None,demo=False):
+    def __init__(self,store,slot=None,demo=False,topface_backend=None):
         slot=store.selected_slot() if slot is None else slot
         self.store=store;self.slot=slot;self.demo=demo;self.running=False
         self.mode='TOP';self.station='BUFFER';self.target_id=5
@@ -13,6 +13,7 @@ class TuningSession:
         self.active=clone(self.draft);self.dirty=False;self.adapter=None
         self.observation=None;self.last_error=None;self.last_commit=self.saved
         self.apply_serial=0;self.countdown_started=None
+        self.topface_backend=topface_backend
         self.apply()
 
     def editable(self):
@@ -73,7 +74,7 @@ class TuningSession:
         if self.running:raise ValueError('Controller running; apply forbidden')
         cfg=compile_config(self.draft)
         from k230.vision_adapter import VisionAdapter
-        adapter=VisionAdapter(cfg)
+        adapter=VisionAdapter(cfg,topface_backend=self.topface_backend)
         self.active=clone(self.draft);self.view=clone(self.draft['display'])
         self.adapter=adapter;self.observation=None;self.apply_serial+=1
         return cfg

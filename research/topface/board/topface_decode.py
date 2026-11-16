@@ -1,8 +1,7 @@
 """Portable MicroPython/CPython 50-channel decoder; no hardware side effects.
 
-No model/threshold is production-approved. read_value(position,channel) must
-read the declared [1,N,50] float32 tensor. Caller validates shape/provenance.
-CPU latency and target ulab tensor access remain unmeasured.
+read_value(position,channel) must read the declared [1,N,50] float32 tensor.
+Model acceptance and native measurements are bound to deployment receipts.
 """
 import math
 
@@ -28,7 +27,8 @@ def _decode_dfl(values,stride):
     return output
 
 
-def decode(read_value,width=320,height=192,positions=1275,channels=50,score_threshold=.25,nms_iou=.5):
+def decode(read_value,width=320,height=192,positions=1275,channels=50,score_threshold=.25,nms_iou=.5,
+           _finite_class_maxima=None):
     if channels!=50 or (width,height) not in ((224,128),(320,192),(384,224)):
         raise ValueError('Unregistered50-channel task contract')
     expected=sum(((width+s-1)//s)*((height+s-1)//s) for s in (8,16,32,64))
@@ -40,6 +40,9 @@ def decode(read_value,width=320,height=192,positions=1275,channels=50,score_thre
     for stride in (8,16,32,64):
         for row in range((height+stride-1)//stride):
             for col in range((width+stride-1)//stride):
+                if _finite_class_maxima is not None and _finite_class_maxima[index]<logit_threshold:
+                    index+=1
+                    continue
                 classes=[float(read_value(index,c)) for c in range(6)]
                 if not all(math.isfinite(x) for x in classes):raise ValueError('Nonfinite declared class logits')
                 best=max(classes)
@@ -87,3 +90,20 @@ def decode(read_value,width=320,height=192,positions=1275,channels=50,score_thre
     return {'detections':detections,'count':count,'post_nms_total_before_five_limit':len(selected),
         'observed_capacity_state':capacity,'capacity_state':'UNCERTAIN' if uncertain and count<4 else capacity,
         'uncertain':uncertain,'thresholds':{'score':score_threshold,'class_agnostic_nms_iou':nms_iou}}
+
+
+def decode_tensor(raw, width=320, height=192, score_threshold=.25, nms_iou=.5):
+    """Validate all class logits in native array code before sparse decoding."""
+    try:
+        from ulab import numpy as np
+    except ImportError:
+        import numpy as np
+    positions=sum(((width+s-1)//s)*((height+s-1)//s) for s in (8,16,32,64))
+    if tuple(raw.shape)!=(1,positions,50):
+        raise ValueError('KPU output shape differs from the contract')
+    classes=raw[0,:,:6]
+    if int(np.sum(np.isfinite(classes)))!=positions*6:
+        raise ValueError('Nonfinite declared class logits')
+    maxima=np.max(classes,axis=1)
+    return decode(lambda point,channel:raw[0,point,channel],width,height,positions,50,
+                  score_threshold,nms_iou,_finite_class_maxima=maxima)

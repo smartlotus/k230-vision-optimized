@@ -1,0 +1,10 @@
+{
+  "pixels": 230400,
+  "different_pixels": 0,
+  "max_abs_channel_error": 0,
+  "timing": {
+    "old_us": 23202,
+    "fast_us": 20235,
+    "status": "CAPTURED"
+  }
+}
