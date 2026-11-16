@@ -43,7 +43,8 @@ class IntegrationTests(unittest.TestCase):
     def test_capacity_boundary_hidden_center_and_geometry_never_return_coordinates(self):
         for state in ('OVER_CAPACITY','UNCERTAIN'):
             self.backend.result['capacity_state']=state
-            out=self.detect();self.assertEqual(out['status'],state);self.assertIsNone(out['u_px'])
+            out=self.detect();self.assertEqual(out['status'],'UNAVAILABLE')
+            self.assertEqual(out['capacity_state'],state);self.assertIsNone(out['u_px'])
         self.backend.result['capacity_state']='OK'
         for key,value in [('boundary_candidate',True),('center_visible_probability',.1),
                           ('center_valid_probability',.1),('ellipse',None)]:

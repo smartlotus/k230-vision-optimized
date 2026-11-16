@@ -1,0 +1,19 @@
+{
+  "status": "INTEGRATED_DEPLOYMENT_AND_BOUNDED_TESTS_VERIFIED",
+  "current_source": "USB_UVC",
+  "current_device": "openaicam#openaicam",
+  "current_script": "/sdcard/tfp1116/usb_topface_trial.py",
+  "current_report_after_end": "/sdcard/tfp1116/usb-live01.json",
+  "current_preview": {
+    "running": true,
+    "frame_id": 1230,
+    "age_ms": 0
+  },
+  "source_camera_calibration": "UNKNOWN_USB_CAMERA",
+  "csi_test_fps": 10.81502,
+  "usb_test_fps": 8.417508,
+  "quantitative_accuracy": "NOT_MEASURED",
+  "user_qualitative_model_acceptance": true,
+  "model_sha256": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88",
+  "no_startup_or_profile_writes": true
+}

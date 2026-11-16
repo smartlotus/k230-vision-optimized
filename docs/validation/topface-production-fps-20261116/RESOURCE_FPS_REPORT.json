@@ -1,36 +1,105 @@
 {
-  "scope": "Trial model pipeline, 1000frames, full inference+display, not final integrated service",
-  "fps": 10.84199,
-  "peak_mib": {
-    "python_heap_used_bytes": 1.742,
-    "sys_heap_used_bytes": 4.45,
-    "sys_page_used_bytes": 31.434,
-    "sys_mmz_used_bytes": 18.547
+  "status": "INTEGRATED_NATIVE_SHORT_TEST_PASS",
+  "fps": 10.81502,
+  "successful": 1000,
+  "attempted": 1000,
+  "failures": 0,
+  "wall_seconds": 92.464,
+  "timing": {
+    "display": {
+      "mean_ms": 31.74882,
+      "p50_ms": 30.71,
+      "p95_ms": 39.081,
+      "n": 1000
+    },
+    "gc": {
+      "mean_ms": 18.06209,
+      "p50_ms": 3.705,
+      "p95_ms": 66.09,
+      "n": 1000
+    },
+    "capture": {
+      "mean_ms": 0.7825084,
+      "p50_ms": 0.604,
+      "p95_ms": 1.763,
+      "n": 1000
+    },
+    "kpu": {
+      "mean_ms": 23.89224,
+      "p50_ms": 24.08,
+      "p95_ms": 26.612,
+      "n": 1000
+    },
+    "ai2d": {
+      "mean_ms": 1.062395,
+      "p50_ms": 0.922,
+      "p95_ms": 2.182,
+      "n": 1000
+    },
+    "cycle": {
+      "mean_ms": 92.21159,
+      "p50_ms": 79.408,
+      "p95_ms": 147.526,
+      "n": 1000
+    },
+    "decode": {
+      "mean_ms": 16.09011,
+      "p50_ms": 12.909,
+      "p95_ms": 24.744,
+      "n": 1000
+    },
+    "inference": {
+      "mean_ms": 41.61821,
+      "p50_ms": 38.268,
+      "p95_ms": 50.748,
+      "n": 1000
+    }
   },
-  "kpu_ms": 20.665,
-  "decode_ms": 18.71188,
-  "display_ms": 27.97806,
-  "kpu_time_fraction_estimate": 0.22404972334999995,
-  "kpu_time_fraction_is_hardware_utilization": false,
+  "peak": {
+    "sys_page": {
+      "free": 422137856,
+      "used": 38051840,
+      "total": 460189696
+    },
+    "sys_mmz": {
+      "free": 471379968,
+      "used": 64442368,
+      "total": 535822336
+    },
+    "python_heap_used": {
+      "used": 3134944
+    },
+    "sys_heap": {
+      "free": 58672448,
+      "used": 8436416,
+      "total": 67108864
+    }
+  },
+  "peak_mib": {
+    "sys_page": 36.289,
+    "sys_mmz": 61.457,
+    "python_heap_used": 2.99,
+    "sys_heap": 8.046
+  },
+  "percent_of_measured_pool": {
+    "sys_page": 8.27,
+    "sys_mmz": 12.03,
+    "sys_heap": 12.57
+  },
   "cpu_utilization": null,
-  "kpu_utilization": null,
-  "capacities": {
-    "sys_mmz": [
-      535822336,
-      0,
-      535822336
-    ],
-    "sys_page": [
-      460189696,
-      28737536,
-      431452160
-    ],
-    "heap_used": 157120,
-    "heap_free": 3988544,
-    "sys_heap": [
-      67108864,
-      3151104,
-      63957760
-    ]
-  }
+  "kpu_hardware_utilization": null,
+  "kpu_elapsed_time_fraction": 0.2583950534448,
+  "time_fraction_is_hardware_counter": false,
+  "cleanup_errors": [],
+  "same_input_native_decode_parity": {
+    "capacity": "EMPTY",
+    "model_sha256": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88",
+    "status": "PASS",
+    "positions": 1275,
+    "same_kpu_output": true,
+    "channels": 50,
+    "detected": 0
+  },
+  "current_source_status_adjustment": "Capacity mapped to existing UNAVAILABLE status; final-smoke20 validates final source, performance metrics refer to preceding gc4 source",
+  "acceptance": "User qualitative; quantitative accuracy not measured"
 }

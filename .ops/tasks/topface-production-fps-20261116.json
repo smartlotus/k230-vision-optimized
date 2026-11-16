@@ -27,11 +27,11 @@
     "Same frozen model and thresholds integrated into original TOP interface with rejection and calibration guards; preserved QR/LANE and active/draft; source-bound native deployment and full recognition/preview FPS measured; exact private backup"
   ],
   "branch": "ops/topface-production-fps-20261116",
-  "state": "paused",
+  "state": "ready",
   "claimed": true,
   "agent": "codex",
   "session": "topface-prod-fps-20261116-a",
-  "revision": 3,
-  "handoff": ".ops/handoffs/topface-production-fps-20261116/20261116T034231-3df7f562.json",
-  "updated_at": "2026-11-16T03:42:37+00:00"
+  "revision": 4,
+  "handoff": ".ops/handoffs/topface-production-fps-20261116/20261116T035749-1dc3316a.json",
+  "updated_at": "2026-11-16T03:57:58+00:00"
 }

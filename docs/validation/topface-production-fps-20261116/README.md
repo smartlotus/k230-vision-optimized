@@ -11,7 +11,10 @@
 - 试验版本1000帧为10.84199FPS，1000/1000、无采集失败、cleanup=[]，[fast1000.json](fast1000.json)。它是单相机试验，不当作集成后的双相机性能。
 - [资源报告](RESOURCE_FPS_REPORT.json)：Python heap峰值1.742MiB、sysheap4.45MiB/64、MMZ18.547MiB/511；sys_page与MMZ不可相加为整机占用。CPU/KPU硬件利用率未测，KPU耗时×FPS仅为整帧时间占比估计。
 - 完整640×360 RVV与原修复路径的230400个像素一致，[逐像素结果](fast-conversion-parity.json)。vector class gate只跳过已验证全部6类finite且低于原阈值的background；NaN/Inf、tie、容量、边界和NMS规则不变。
-- 当前集成1000帧在运行，最终收据尚未取得，正式集成/长期稳定性不提前标通过。禁止用preview帧计数冒充识别帧数。
+- 原代码双相机集成[1000帧基线](integrated1000.json)为9.32FPS；[gc_interval4版](integrated-gc4-1000.json)1000/1000、10.815FPS，采集失败0、cleanup=[]。最终协议状态调整用[20帧短测](final-smoke20.json)验证。真实KPU输出的优化解码与原decoder一致，见[native-decoder-parity.json](native-decoder-parity.json)。
+- 生产会话[production-session01.json](production-session01.json)在用户要求切换USB时人为停止，1268成功帧、墙钟12.71FPS，但status=RUN_FAILED/IDEinterrupt，不标长稳通过。不同场景/目标数影响decode，12.71与10.82不是严格同场景对照。
+- USB已枚举并协商1280x720MJPEG30FPS，显示同一模型。[600帧实测](usb-model600.json)600/600、8.4175FPS、采集错误0、cleanup=[]；输入保持16:9缩放到640x360，再转独立CHW。原600报告的device/modes受locals内省影响缺失，另存probe与actual_mode证据；最终脚本改直接变量并通过[5帧设备身份短测](usb-final-smoke5.json)。[USB实时状态](USB_PREVIEW_STATUS.json)与CSI分开，USB没有使用原CSI标定。
+- 当前持续预览为USB，18,000帧上限，最终报告计划`/sdcard/tfp1116/usb-live01.json`；启动和fresh帧不算长稳通过。CPU、KPU硬件利用率未测，不能用时间份额冒充。
 
 读取最新OPS交接和[经验总账](../../LESSONS_LEARNED.md)后再恢复。
 

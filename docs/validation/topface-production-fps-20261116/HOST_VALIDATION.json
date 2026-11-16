@@ -1,0 +1,12 @@
+{
+  "tests": {
+    "legacy_vision": 23,
+    "camera_manager": 12,
+    "tuning_system": 20,
+    "topface_integration": 5,
+    "vector_decode_portable_and_preview": 9
+  },
+  "total_passed": 69,
+  "skip": 0,
+  "scope": "Affected existing interfaces plus layout/decode parity; not global full suite or actual target accuracy"
+}

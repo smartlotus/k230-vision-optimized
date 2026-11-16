@@ -110,6 +110,24 @@
 
 已保留原manual-gc18000.json，确认idle后启动独立r2会话，报告目标为 `/sdcard/cdiag1116/manual-gc18000-r2.json`。验收时保持当前IDE/扩展运行；若重启、切换控制端或更换缓存资源版本，重新查询脚本与fresh帧，保留旧attempt。公开发布最新stub的自动更新也不代表板端固件跟随升级。
 
+## F14：正式TOP接入和资源优化必须绑定实际配置
+
+2026-11-16用户人工观察后认可模型效果，并明确授权接入原代码和优化帧率。记录为定性接受，不编造准确率百分比。接入原CameraManager与VisionAdapter，模型TOP使用CSI2通道2的640x360 RGBP888，原RGB565通道0及CSI1 QR/LANE保留；模型结果经过原稳定跟踪、已抓取排除和标定门。OVER_CAPACITY/UNCERTAIN通过原协议UNAVAILABLE状态表达，原容量保留在capacity_state中，禁止把新状态直接塞进旧协议。
+
+固定模型和阈值下，原生向量化先验证全部6类finite，再筛低于原阈值的背景，未改变DFL/NMS/容量/边界规则。显示端显式CHW->HWC，RVV cvt_565=True只覆盖独立packed显示内存，不改模型源。640x360共230400像素与原修复逐点一致，合成回归及同KPU输出原生空场解码一致。三通道strided预分配资格测得42.76ms，比现用路径慢，未采用；不能因为叫预分配就假设更快。
+
+原有双相机代码集成后的1000/1000帧为10.815FPS，零采集错误、cleanup=[]。MMZ峰值61.46/511MiB，sys_heap8.05/64MiB，Pythonheap2.99MiB；sys_page和MMZ不相加。CPU/KPU硬件利用率未测，KPU23.89ms×FPS约25.84%只是整帧时间份额。逐帧GC对照9.32FPS，gc_interval4与1MB低堆触发版10.82FPS；场景在变，不能当严格同场景加速比。原来7.28FPS短测及全部失败记录保留。
+
+原生部署目录`/sdcard/tfp1116`，显式入口run_topface_service.py。70份源码+流式复制模型均校验；后续服务/协议状态更改独立回读。没有写startup或生产profile，也未合并Git主线。详见[正式接入证据](validation/topface-production-fps-20261116/README.md)及[资源报告](validation/topface-production-fps-20261116/RESOURCE_FPS_REPORT.json)。
+
+## F15：USB摄像头要重新枚举、协商和建立独立输入身份
+
+此前probe=false不能永久代表不兼容。用户再次连接后，UVC.probe返回openaicam#openaicam，枚举到1280x720与1920x1080 MJPEG30FPS，及较低帧率YUY2。设备名不能独立证明传感器芯片，OV2735 A是用户提供的硬件身份。
+
+先停止CSI脚本并确认idle，再协商1280x720 MJPEG30FPS；保持16:9缩放到640x360 RGB888，显式交错为独立CHW模型副本，再走同一固定NCHW模型。显示转换只改packed副本，USB从未冒充CSI2来源，原标定不套用于USB。已取得新鲜USB模型画面，底部标USB1280x720MJPEG；数量超过3显示OVER_CAPACITY是容量拒绝，不是摄像头故障。600帧性能和完整性待最终收据，不以预览frameId代替推理数。详见[USB预览记录](validation/topface-production-fps-20261116/USB_PREVIEW_STATUS.json)。
+
+更新：USB600/600帧完整结束，0采集错误，8.4175FPS、cleanup=[]；JPEG解码/缩放48.43ms，推理与后处理29.36ms，不能把USB约30FPS协商值写成模型FPS。第一版报告使用locals判断变量存在导致device/modes缺失，原件保留，probe和actual_mode能核对；已改为显式初始化/读取变量，5帧原生复验设备openaicam#openaicam及5种模式记录完整。最新USB长预览独立usb-live01，不再复用原CSI或旧USB报告文件名。
+
 ## 历史经验入口
 
 - [KPU 管线与连接故障](validation/kpu-pipeline-20261112/README.md)：旧模型/旧运行的失败和恢复证据，不覆盖为本轮结果。

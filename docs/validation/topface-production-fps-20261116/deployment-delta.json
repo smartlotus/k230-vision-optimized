@@ -1,0 +1,7 @@
+{
+  "path": "k230/topface_service.py",
+  "bytes": 7413,
+  "sha256": "f322928a5596377279e9cf750840441ffee6477f372f8465c334b8b162c7ab12",
+  "readback": "EXACT",
+  "change": "gc_interval4 with 1MB free-heap trigger; per-stage inference and GC timing"
+}

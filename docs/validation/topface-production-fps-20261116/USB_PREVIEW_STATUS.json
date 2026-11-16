@@ -1,0 +1,29 @@
+{
+  "status": "UVC_NEGOTIATED_AND_FRESH_MODEL_PREVIEW_VERIFIED",
+  "device": "openaicam#openaicam",
+  "user_identified_hardware": "Waveshare OV2735 2MP USB Camera A",
+  "native_device_name_does_not_expose_sensor_identity": true,
+  "mode": "1280x720 MJPEG 30fps",
+  "model_sha256": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88",
+  "source": "USB_UVC",
+  "camera_id": "USB; not CSI2",
+  "source_sha256": "e97902575c7b2405e683b299d769abf454e89bb819c5311761268bbc8df2f66a",
+  "readback": "EXACT",
+  "fresh_frame": {
+    "frame_id": 432,
+    "age_ms": 0
+  },
+  "preview": "usb-model-preview.jpg",
+  "quantitative_accuracy": "NOT_MEASURED",
+  "calibration": "UNKNOWN_USB_CAMERA",
+  "requested_frames": 600,
+  "final_receipt": "usb-model600.json",
+  "capture_run_completion": "COMPLETE",
+  "csi_session": "production-session01.json interrupted intentionally to switch source; failed IDEinterrupt preserved",
+  "successful": 600,
+  "attempted": 600,
+  "capture_failures": 0,
+  "fps": 8.417508,
+  "cleanup_errors": [],
+  "metadata_note": "Original600 receipt device/modes missing due locals-introspection; separate probe and actual_mode verified; direct variables used in final script"
+}

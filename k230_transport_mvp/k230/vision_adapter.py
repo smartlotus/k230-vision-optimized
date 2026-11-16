@@ -149,7 +149,7 @@ class VisionAdapter:
         result.update(detector_backend='TOPFACE_KPU',model_sha256=self.topface_backend.identity['kmodel_sha256'],
                       topface_detections=decoded['detections'],capacity_state=decoded['capacity_state'])
         if decoded['capacity_state'] in ('OVER_CAPACITY','UNCERTAIN'):
-            result.update(status=decoded['capacity_state'],reason='TOPFACE_CAPACITY_OR_BOUNDARY');return result
+            result.update(status='UNAVAILABLE',reason='TOPFACE_'+decoded['capacity_state']);return result
         cfg=setting(self.config,'TOP_CONFIG',{}).get(station)
         if not cfg or cfg.get('roi') is None or cfg.get('reference') is None:
             result.update(status='UNCALIBRATED',reason='TOP_PARAMETERS_REQUIRED');return result

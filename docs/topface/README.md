@@ -4,6 +4,8 @@
 
 ## 当前权威记录
 
+2026-11-16 用户人工观察接受识别效果，授权接入原代码并优化FPS；同一模型已部署至`/sdcard/tfp1116`，保留原标定和坐标拒绝门。双相机集成1000/1000帧、10.82FPS，USB600/600帧、8.42FPS；[原始运行、资源与部署记录](../validation/topface-production-fps-20261116/README.md)。当前实时预览按用户要求切换为USB。定性接受不换算为准确率百分比，旧失败记录保留。
+
 板端经验见 [项目经验总账](../LESSONS_LEARNED.md)；2026-11-16 的 RGBP888 显示转换修复见 [fixed600.json](../validation/camera-diagnosis-20261116/fixed600.json)，逐帧释放修复的1000/1000帧、7.28FPS、零采集错误见 [gc1000.json](../validation/camera-diagnosis-20261116/gc1000.json)。此前长跑和有界恢复曾采集失败，原记录保留。预览和短测运行已验证，长期稳定性、六色准确率、数值配对与标定仍需分别验收。此前“实机测试待安排”属于该段历史交付状态，以新交接和运行收据为准。
 
 本页是入口索引，不替代任务控制器或接受记录。接手前读取仓库 `AGENTS.md`、`.ops/PROJECT.md`、`.ops/PROTOCOL.md` 和 OPS 当前认领，避免与现有单 writer 同时操作。

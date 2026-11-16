@@ -3,7 +3,9 @@
 项目经验与故障预防统一记录在 [经验总账](docs/LESSONS_LEARNED.md)。涉及板端、传输或部署前先读相关条目；确认新问题或验证修复后，随证据和 OPS checkpoint 更新。
 
 K230视觉算法与资源优化的独立项目。新旧实现并存，可在电脑端比较结果，后续再做板端验收。
-**约25FPS仍是待实机验证目标。2026-11-16 显示转换与逐帧释放修复后的1000帧板测为7.28FPS、零采集错误；真实准确率、数值配对与长期稳定性分别验收。**
+**约25FPS仍是待实机验证目标。2026-11-16 用户认可模型的人工识别效果后，已接入原TOP接口并完成双相机1000/1000帧、10.82FPS测试；USB模型600/600帧为8.42FPS。真实定量精度、完整数值配对与长期稳定性分别验收。**
+
+当前显式板端入口为 `k230_transport_mvp/run_topface_service.py`，部署目录 `/sdcard/tfp1116`；资源、源码校验及USB结果见 [本轮记录](docs/validation/topface-production-fps-20261116/README.md)。不替换main.py/boot.py，也不写生产profile。
 
 来源提交、311份原样导入文件及SHA256见 [docs/UPSTREAM_IMPORT.json](docs/UPSTREAM_IMPORT.json)。
 本项目使用独立Git历史与OPS项目ID，原仓库保留。

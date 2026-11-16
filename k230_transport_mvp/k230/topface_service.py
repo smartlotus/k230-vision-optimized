@@ -32,14 +32,16 @@ def configuration(model_root,overrides=None):
 
 
 def run(model_root,frames=1000,mode='TOP',target_id=1,station='BUFFER',
-        display=True,ide_preview=True,report_path=None,config_override=None):
+        display=True,ide_preview=True,report_path=None,config_override=None,gc_interval=4):
     if type(frames) is not int or not 5<=frames<=18000:raise ValueError('Bounded 5..18000 frames required')
     if mode not in ('TOP','COLOR','RING','QR','LANE'):raise ValueError('Unsupported mode')
+    if type(gc_interval) is not int or not 1<=gc_interval<=4:raise ValueError('GC interval1..4 required')
     from media.display import Display
     import image
     cfg=configuration(model_root,config_override)
     backend=vision=camera=None;preview=TopFacePreview();canvas=None
-    counts={'capture':[],'inference':[],'display':[],'gc':[],'cycle':[]}
+    counts={'capture':[],'inference':[],'display':[],'gc':[],'cycle':[],
+            'ai2d':[],'kpu':[],'decode':[]}
     attempts=successful=failures=consecutive=displayed=0;errors=[];last=None
     state='STARTED';error_text=None;cleanup=[];started=None
     peak={};initial=resources()
@@ -66,6 +68,8 @@ def run(model_root,frames=1000,mode='TOP',target_id=1,station='BUFFER',
             captured=time.ticks_us();consecutive=0
             last=vision.detect(mode,packet,target_id,station)
             if last['status']=='ERROR':raise RuntimeError(last['reason'])
+            if mode=='TOP':
+                for key in ('ai2d','kpu','decode'):counts[key].append(backend.timing[key+'_ms'])
             inferred=time.ticks_us()
             if display:
                 frame=packet['image']
@@ -76,7 +80,9 @@ def run(model_root,frames=1000,mode='TOP',target_id=1,station='BUFFER',
                 Display.show_image(canvas,x=80,y=60);displayed+=1
                 shown=frame=None;preview.clear()
             rendered=time.ticks_us()
-            packet=None;gc.collect();collected=time.ticks_us()
+            packet=None
+            if (index+1)%gc_interval==0 or gc.mem_free()<1000000:gc.collect()
+            collected=time.ticks_us()
             for key,end,begin in (('capture',captured,before),('inference',inferred,captured),
                                   ('display',rendered,inferred),('gc',collected,rendered),
                                   ('cycle',collected,before)):
@@ -117,6 +123,7 @@ def run(model_root,frames=1000,mode='TOP',target_id=1,station='BUFFER',
             'model_sha256':backend.identity['kmodel_sha256'] if backend else None,
             'cleanup_errors':cleanup,'mode':mode,'target_id':target_id,'camera_ids':[2,1],
             'resource_initial':initial,'resource_peak_sampled':peak,'resource_after_cleanup':resources(),
+            'gc_interval':gc_interval,'gc_heap_free_trigger_bytes':1000000,
             'cpu_utilization_percent':None,'kpu_hardware_utilization_percent':None,
             'uart_enabled':False,'motors_enabled':False,'profile_saved':False}
     if report_path:
