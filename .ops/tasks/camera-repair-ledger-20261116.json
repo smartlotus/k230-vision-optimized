@@ -24,10 +24,10 @@
   ],
   "branch": "ops/camera-diagnosis-20261116",
   "state": "ready",
-  "claimed": true,
+  "claimed": false,
   "agent": "codex",
   "session": "camera-ledger-20261116-a",
-  "revision": 3,
+  "revision": 4,
   "handoff": ".ops/handoffs/camera-repair-ledger-20261116/20261116T031515-b7dfce16.json",
-  "updated_at": "2026-11-16T03:15:54+00:00"
+  "updated_at": "2026-11-16T03:23:38+00:00"
 }
