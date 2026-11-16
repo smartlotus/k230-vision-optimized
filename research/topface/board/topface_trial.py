@@ -62,6 +62,15 @@ def preview_rgb565(frame):
     return rgb.to_rgb565()
 
 
+def capture_failure_kind(error):
+    text = str(error).lower()
+    if 'timeout' in text:
+        return 'timeout'
+    if text.startswith('sensor(') and ' snapshot chn(' in text and text.endswith(' failed(3)'):
+        return 'native_dump_failed_3'
+    return None
+
+
 def run(root='/sdcard/topface_trial', frames=600, display=True,paired_samples=0,
         ide_preview=False):
     import os
@@ -109,6 +118,9 @@ def run(root='/sdcard/topface_trial', frames=600, display=True,paired_samples=0,
     stage_names = ('capture', 'ai2d', 'kpu', 'decode', 'display', 'ai2d_kpu', 'through_postprocess', 'total')
     samples = {name: [] for name in stage_names}
     dropped = 0
+    capture_errors = {'timeout': 0, 'native_dump_failed_3': 0, 'no_frame': 0}
+    capture_error_events = []
+    consecutive_capture_failures = 0
     memory_peak = memory()
     cleanup_errors = []
     status = 'STARTED'
@@ -154,13 +166,29 @@ def run(root='/sdcard/topface_trial', frames=600, display=True,paired_samples=0,
             try:
                 frame = sensor.snapshot(chn=CAM_CHN_ID_0, timeout=1000 if step == 0 else 150, auto_reboot=False)
             except RuntimeError as error:
-                if 'timeout' not in str(error).lower():
+                kind = capture_failure_kind(error)
+                if kind is None:
                     raise
                 dropped += int(step >= 5)
+                capture_errors[kind] += int(step >= 5)
+                if len(capture_error_events) < 8:
+                    capture_error_events.append({'step': step, 'kind': kind, 'error': str(error)})
+                consecutive_capture_failures += 1
+                if consecutive_capture_failures >= 3:
+                    raise
+                time.sleep_ms(100)
                 continue
             if frame is None:
                 dropped += int(step >= 5)
+                capture_errors['no_frame'] += int(step >= 5)
+                consecutive_capture_failures += 1
+                if len(capture_error_events) < 8:
+                    capture_error_events.append({'step': step, 'kind': 'no_frame', 'error': None})
+                if consecutive_capture_failures >= 3:
+                    raise RuntimeError('Three consecutive capture failures; last frame unavailable')
+                time.sleep_ms(100)
                 continue
+            consecutive_capture_failures = 0
             if frame.width()!=640 or frame.height()!=360:
                 raise ValueError('CSI2 frame dimensions differ from the model contract')
             captured = time.ticks_us()
@@ -226,6 +254,10 @@ def run(root='/sdcard/topface_trial', frames=600, display=True,paired_samples=0,
                 for key, used in memory().items():
                     memory_peak[key] = max(used, memory_peak.get(key, 0))
             frame = None
+            # Native camera/display buffers are released by their Python owners.
+            # Collect before the next snapshot, rather than retaining dead
+            # conversion wrappers until the heap happens to trigger a cycle.
+            gc.collect()
             if pair_capture is not None and len(pair_capture.records)==paired_samples:break
         status = ('RUN_COMPLETE' if not dropped else 'RUN_COMPLETE_WITH_CAPTURE_LOSSES') if samples['total'] else 'NO_SUCCESSFUL_MEASUREMENTS'
     except Exception as error:
@@ -258,7 +290,10 @@ def run(root='/sdcard/topface_trial', frames=600, display=True,paired_samples=0,
                            if measurement_start is not None else None)
     report = {'status': status, 'error': error_text, 'runtime': str(nn.version()), 'display': display,
               'ide_preview': ide_preview, 'preview_conversion': 'EXPLICIT_CHW_TO_HWC_RGB888_TO_RGB565',
-              'model_sha256': identity['kmodel_sha256'], 'capture_timeouts': dropped,
+              'model_sha256': identity['kmodel_sha256'], 'capture_timeouts': capture_errors['timeout'],
+              'capture_failures': dropped, 'capture_error_counts': capture_errors,
+              'capture_error_events_first_eight': capture_error_events,
+              'capture_consecutive_failure_limit': 3, 'capture_failure_backoff_ms': 100,
               'displayed_frames': len(samples['total']) if display else 0,
               'requested_measurement_frames': frames, 'elapsed_seconds_including_setup': seconds,
               'measurement_attempts': measured_attempts, 'successful_measurement_frames':len(samples['total']),

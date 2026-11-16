@@ -1,0 +1,7 @@
+{
+  "path": "C:\\Users\\28389\\.agents\\skills\\pipeline-ops\\references\\failure-playbook.md",
+  "sha256": "2cba3c25f77e1d8a6e2254f64db126c4eaefb04fd32d2ca7a1c74d042769e09e",
+  "change": "Generic shared-device ownership, existing-installer reuse, artifact transport/execution/quality distinction, same-frame stage hashes, preview freshness and pinned runtime API checks",
+  "credentials_included": false,
+  "skill_frontmatter_changed": false
+}

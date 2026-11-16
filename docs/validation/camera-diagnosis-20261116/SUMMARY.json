@@ -1,0 +1,77 @@
+{
+  "observed_utc": "2026-11-16 03:14:43 UTC",
+  "development_status": "SOURCE_AND_SHORT_NATIVE_VERIFICATION_COMPLETE",
+  "hardware_scope": "CSI2 only; UART, motion and startup changes disabled",
+  "model_sha256": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88",
+  "source_sha256": "43d2653e099943295a30421614a9ff8a969717e2a5762c25fe617f1ce254ea76",
+  "short_run": {
+    "receipt": "gc1000.json",
+    "status": "RUN_COMPLETE",
+    "successful": 1000,
+    "attempted": 1000,
+    "capture_failures": 0,
+    "cleanup_errors": [],
+    "wall_seconds": 137.285,
+    "effective_fps": 7.284117
+  },
+  "preserved_failures": [
+    {
+      "receipt": "manual18000.json",
+      "status": "RUN_FAILED",
+      "successful": 732,
+      "attempted": 733,
+      "error": "native dump failed(3)"
+    },
+    {
+      "receipt": "bounded1000.json",
+      "status": "RUN_FAILED",
+      "successful": 468,
+      "attempted": 471,
+      "capture_failures": 3
+    },
+    {
+      "receipt": "manual-gc18000.json",
+      "status": "RUN_FAILED",
+      "successful": 0,
+      "error": "IDE interrupt; host extension deactivated/SIGTERM"
+    }
+  ],
+  "active_preview": {
+    "session": "manual-gc18000-r2",
+    "script": "/sdcard/cdiag1116/topface_trial_gc.py",
+    "root": "/sdcard/topface_formal_a01_20261116",
+    "bounded_frames": 18000,
+    "future_receipt": "/sdcard/cdiag1116/manual-gc18000-r2.json",
+    "script_running": true,
+    "frame_id": 920,
+    "frame_age_ms": 2,
+    "source": "fresh frame and running queried",
+    "scene": "Blurred close yellow/white scene, EMPTY; operator asked to position target"
+  },
+  "remaining": [
+    "Fresh real six-color/target robustness test and labels",
+    "Same-input source/prepared/KPU numerical pairing",
+    "Long stability run completion",
+    "Optical scene/focus adjustment by operator",
+    "OV2735 USB deferred by user"
+  ],
+  "host_checks": {
+    "passed": 6,
+    "local_doc_links": 83,
+    "missing_links": 0,
+    "source_readback": "PASS",
+    "native_report_hash_readbacks": "PASS"
+  },
+  "lessons": {
+    "path": "docs/LESSONS_LEARNED.md",
+    "entries": 13,
+    "entrypoints": [
+      "README.md",
+      "AGENTS.md",
+      "docs/topface/README.md",
+      "k230-project/README.md"
+    ],
+    "generic_skill_reference": "pipeline-ops/references/failure-playbook.md"
+  },
+  "com3_ownership": "Retained by this conversation while manual preview is running; subagents read only"
+}

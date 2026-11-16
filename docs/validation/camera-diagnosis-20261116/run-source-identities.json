@@ -1,0 +1,27 @@
+[
+  {
+    "file": "research\\topface\\board\\topface_trial.py",
+    "bytes": 15315,
+    "sha256": "43d2653e099943295a30421614a9ff8a969717e2a5762c25fe617f1ce254ea76"
+  },
+  {
+    "file": "docs\\validation\\camera-diagnosis-20261116\\topface_trial_gc-readback.py",
+    "bytes": 15315,
+    "sha256": "43d2653e099943295a30421614a9ff8a969717e2a5762c25fe617f1ce254ea76"
+  },
+  {
+    "file": "docs\\validation\\camera-diagnosis-20261116\\fixed600.json",
+    "bytes": 1975,
+    "sha256": "2a1c045108e1e16c0511d9764a9b0842cf259bc151c8a9e4774bec2f1385d573"
+  },
+  {
+    "file": "docs\\validation\\camera-diagnosis-20261116\\manual18000.json",
+    "bytes": 2013,
+    "sha256": "51217df0a003a78b618facb807f00ce6d3ab5aaa4daa06df44a06e9e537891a5"
+  },
+  {
+    "file": "docs\\validation\\camera-diagnosis-20261116\\bounded1000.json",
+    "bytes": 2506,
+    "sha256": "ee82cfce73294798de0c4a62d6539ef61696adb057a5434b5f02aae355b41563"
+  }
+]

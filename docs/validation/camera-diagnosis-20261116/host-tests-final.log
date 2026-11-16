@@ -1,0 +1,11 @@
+﻿test_interleave_preserves_channels_coordinates_and_owns_memory (test_camera_diagnostics.CameraLayoutTests.test_interleave_preserves_channels_coordinates_and_owns_memory) ... ok
+test_native_dump_failure_is_separate_from_timeout_and_unknown_errors (test_camera_diagnostics.CameraLayoutTests.test_native_dump_failure_is_separate_from_timeout_and_unknown_errors) ... ok
+test_preview_wraps_packed_bytes_and_never_converts_planar_frame (test_camera_diagnostics.CameraLayoutTests.test_preview_wraps_packed_bytes_and_never_converts_planar_frame) ... ok
+test_wrong_camera_layout_is_rejected (test_camera_diagnostics.CameraLayoutTests.test_wrong_camera_layout_is_rejected) ... ok
+test_export_shapes_seeded_five_object_and_empty_cases_match_host (test_portable_decode.PortableDecoderTests.test_export_shapes_seeded_five_object_and_empty_cases_match_host) ... ok
+test_portable_contract_rejects_wrong_shape_and_nonfinite_logit (test_portable_decode.PortableDecoderTests.test_portable_contract_rejects_wrong_shape_and_nonfinite_logit) ... ok
+System.Management.Automation.RemoteException
+----------------------------------------------------------------------
+Ran 6 tests in 0.139s
+System.Management.Automation.RemoteException
+OK

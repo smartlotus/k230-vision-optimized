@@ -1,0 +1,6 @@
+{
+  "command": "python -B -m unittest test_camera_diagnostics test_portable_decode -v",
+  "exit_code": 0,
+  "passed": 6,
+  "scope": "Host layout, ownership, error classification and portable decode; no native accuracy claim"
+}

@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).parent/'board'))
-from topface_trial import interleave_rgb, preview_rgb565
+from topface_trial import interleave_rgb, preview_rgb565, capture_failure_kind
 
 
 class CameraLayoutTests(unittest.TestCase):
@@ -44,6 +44,13 @@ class CameraLayoutTests(unittest.TestCase):
     def test_wrong_camera_layout_is_rejected(self):
         with self.assertRaisesRegex(ValueError, 'CHW'):
             interleave_rgb(np.zeros((4, 6, 3), dtype=np.uint8), 4, 6)
+
+    def test_native_dump_failure_is_separate_from_timeout_and_unknown_errors(self):
+        self.assertEqual(capture_failure_kind(RuntimeError('sensor(0) snapshot chn(0) failed(3)')),
+                         'native_dump_failed_3')
+        self.assertEqual(capture_failure_kind(RuntimeError('capture timeout')), 'timeout')
+        for message in ('sensor(0) snapshot chn(0) failed(2)', 'KPU failed(3)', 'bad tensor'):
+            self.assertIsNone(capture_failure_kind(RuntimeError(message)))
 
 
 if __name__ == '__main__':

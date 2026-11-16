@@ -1,0 +1,35 @@
+﻿[03:02:16] [INFO] [Preview] Frame 1700 delivered (24301B)
+[03:02:20] [INFO] [Preview] Frame 1800 delivered (24130B)
+[03:02:23] [INFO] [Preview] Frame 1900 delivered (24216B)
+[03:02:27] [INFO] [Preview] Frame 2000 delivered (24288B)
+[03:02:30] [INFO] [Preview] Frame 2100 delivered (24210B)
+[03:02:33] [INFO] [Preview] Frame 2200 delivered (24183B)
+[03:02:37] [INFO] [Preview] Frame 2300 delivered (23901B)
+[03:02:40] [INFO] [Preview] Frame 2400 delivered (23770B)
+[03:02:43] [INFO] [Preview] Frame 2500 delivered (23933B)
+[03:02:47] [INFO] [Preview] Frame 2600 delivered (23907B)
+[03:02:50] [INFO] [Preview] Frame 2700 delivered (23874B)
+[03:02:54] [INFO] [Preview] Frame 2800 delivered (23791B)
+[03:02:57] [INFO] [Preview] Frame 2900 delivered (23896B)
+[03:03:00] [INFO] [Preview] Frame 3000 delivered (23831B)
+[03:03:04] [INFO] [Preview] Frame 3100 delivered (23933B)
+[03:03:07] [INFO] [Preview] Frame 3200 delivered (23815B)
+[03:03:10] [INFO] [Preview] Frame 3300 delivered (23828B)
+[03:03:14] [INFO] [Preview] Frame 3400 delivered (23851B)
+[03:03:17] [INFO] [Preview] Frame 3500 delivered (23859B)
+[03:03:21] [INFO] [Preview] Frame 3600 delivered (23936B)
+[03:03:24] [INFO] [Preview] Frame 3700 delivered (23860B)
+[03:03:27] [INFO] [Preview] Frame 3800 delivered (23842B)
+[03:03:31] [INFO] [Preview] Frame 3900 delivered (23914B)
+[03:03:34] [INFO] [Preview] Frame 4000 delivered (23854B)
+[03:03:37] [INFO] [Preview] Stopping
+[03:03:37] [INFO] [Session] State: streaming -> connected
+[03:03:37] [INFO] [Preview] Stopped
+[03:05:28] [ERROR] [Preview] Start failed: No script is running
+[03:05:40] [INFO] [Preview] Started
+[03:05:40] [INFO] [Session] State: connected -> streaming
+[03:05:40] [DEBUG] [Backend] [canmv-backend] preview frame_size unavailable size=0 running=true valid_frames=0
+[03:05:41] [INFO] [Preview] Frame 1 delivered (6627B)
+[03:05:41] [DEBUG] [Backend] [canmv-backend] preview first frame bytes=6627
+[03:05:41] [INFO] [Extension] Deactivated
+[03:05:41] [DEBUG] [Backend] Previous backend exited (code=null, signal=SIGTERM)

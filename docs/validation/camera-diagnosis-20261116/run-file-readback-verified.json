@@ -1,0 +1,27 @@
+[
+  {
+    "name": "fixed600.json",
+    "bytes": 1975,
+    "match": true
+  },
+  {
+    "name": "manual18000.json",
+    "bytes": 2013,
+    "match": true
+  },
+  {
+    "name": "bounded1000.json",
+    "bytes": 2506,
+    "match": true
+  },
+  {
+    "name": "gc1000.json",
+    "bytes": 2199,
+    "match": true
+  },
+  {
+    "name": "topface_trial_gc.py",
+    "bytes": 15315,
+    "match": true
+  }
+]

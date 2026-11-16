@@ -4,11 +4,13 @@
 
 ## 当前权威记录
 
+板端经验见 [项目经验总账](../LESSONS_LEARNED.md)；2026-11-16 的 RGBP888 显示转换修复见 [fixed600.json](../validation/camera-diagnosis-20261116/fixed600.json)，逐帧释放修复的1000/1000帧、7.28FPS、零采集错误见 [gc1000.json](../validation/camera-diagnosis-20261116/gc1000.json)。此前长跑和有界恢复曾采集失败，原记录保留。预览和短测运行已验证，长期稳定性、六色准确率、数值配对与标定仍需分别验收。此前“实机测试待安排”属于该段历史交付状态，以新交接和运行收据为准。
+
 本页是入口索引，不替代任务控制器或接受记录。接手前读取仓库 `AGENTS.md`、`.ops/PROJECT.md`、`.ops/PROTOCOL.md` 和 OPS 当前认领，避免与现有单 writer 同时操作。
 
 - [要求与证据覆盖](v11/reports/REQUIREMENT_COVERAGE.json)：明确已接受、待执行和 UNKNOWN，整个项目尚未完成。
 - [Full 数据接受](v11/training/FULL_DATASET_ACCEPTANCE.json)：10,000 场景、24,996 个世界实例；train 7,465、val 1,601、独立 synthetic_test 934。数据索引与分片哈希见该记录及 [分片清单](v11/training/FULL_INVENTORY.json)。
-- [正式训练运行记录](v11/cloud/formal-a01/HOST_PROGRESS.json) 和 [精确 v1 观察](v11/cloud/formal-a01/OBSERVATION-v1.json)：当前任务为 `lotus30/k230-topface-v11-06-formal-training`，ID 145144940、v1。查看记录的实际时间与原始会话；不要因观察连接中断重启训练。
+- [正式训练接受记录](v11/cloud/formal-a01/ACCEPTANCE.json) 与 [选定模型](v11/cloud/formal-a01/SELECTED_MODEL.json)绑定 `lotus30/k230-topface-v11-06-formal-training`、ID 145144940、v1。旧 HOST_PROGRESS/OBSERVATION 文件在本工作树缺失，不作为可访问入口；不要因观察连接中断重启训练。
 - [正式训练配置](v11/cloud/formal-a01/FORMAL_CONFIG.json)、[完成报告](v11/training/FORMAL_TRAINING_A01.md) 和 [接受记录](v11/cloud/formal-a01/ACCEPTANCE.json)：原 v1 已完成 100 轮、23,400 次更新，第 92 轮 best 已在 Drive 全字节校验接受。实际导出、独立测试和实机验收另行核对。
 - [独立运动测试接受](v11/reports/REDETECTION_SWEEP_ACCEPTANCE_A01.json)：1,872 帧、156 序列，覆盖六色、遮挡恢复、出入画和相机升降。正式模型在 ONNX 和 Simulator 上均已完成测试，见[主机评估回执](v11/reports/formal-host-a01/HOST_EVALUATION_RECEIPT.json)。Simulator 召回 99.73%，96 段均首帧找回，完全不可见时有 26 次误报。
 - 正式转换 07b v1 已完成 934 张独立仿真测试。[模型文件收据](v11/cloud/conversion-formal-a01/MODEL_FILES_RECEIPT.json)、[评估收据](v11/cloud/conversion-formal-a01/REPORTS_RECEIPT.json)及 [Drive 全字节校验](v11/cloud/publisher/k230-topface-v11-conversion-formal-a01/TRANSFER_RECEIPT.json)均已取得。KModel、ONNX 和训练权重的 SHA-256 与先前交付的试用包一致。正式主机评估和完整 ZIP 已校验。[交付回执](v11/reports/FORMAL_COMPLETE_RELEASE_A01.json)记录 106 个成员及 SHA-256。[Drive 副本](https://drive.google.com/file/d/1-1HJ0-PwbAQCPtSInzfq06cdIZ6mkarz/view)已完成全字节读回校验。实机测试由用户择期安排。
@@ -36,7 +38,7 @@ Smoke 用户抽查、Pilot、颜色补充、组合审计及 Full 生成均已推
 | 13 | [独立静态仿真](v11/cloud/conversion-formal-a01/compact-v1/evaluation/PAIRED_SYNTHETIC_TEST.json)、[运动和历史实拍](v11/reports/formal-host-a01/HOST_EVALUATION_RECEIPT.json) | 934 张静态图、1,872 帧仿真运动、1 张历史实拍。新拍盲测待做 |
 | 14 | [正式模型文件收据](v11/cloud/conversion-formal-a01/MODEL_FILES_RECEIPT.json) | 正式 ONNX 和 KModel 已导出、编译、测量并归档 |
 | 15 | [契约实现](../../research/topface/nanodet_topface.py) | 最终 output_contract.json 与同一转换模型一起交付 |
-| 16 | [板测包组装](../../research/topface/package_formal_delivery.py)、[优先试用包](v11/reports/BOARD_PREVIEW_PROTOCOL.md)、[安装流程](v11/reports/BOARD_INSTALL_PROTOCOL.md)、[板测计划](v11/reports/BOARD_TEST_PLAN.md)、[数值配对](v11/reports/BOARD_PAIR_PROTOCOL.md) | 正式板测包已校验，待原生配对、FPS 和稳定性测试 |
+| 16 | [板测包组装](../../research/topface/package_formal_delivery.py)、[优先试用包](v11/reports/BOARD_PREVIEW_PROTOCOL.md)、[安装流程](v11/reports/BOARD_INSTALL_PROTOCOL.md)、[板测计划](v11/reports/BOARD_TEST_PLAN.md)、[数值配对](v11/reports/BOARD_PAIR_PROTOCOL.md) | 最新逐帧释放版1000/1000帧、7.28FPS；旧长跑失败保留，原生配对和长期稳定性待验 |
 | 17 | [当前未完成项](v11/reports/REQUIREMENT_COVERAGE.json)、[相机差距](v11/camera/calibration_gap_report.md)、[板测计划](v11/reports/BOARD_TEST_PLAN.md) | 最终结论须结合正式测试与板端证据更新 |
 
 ## 云存储与不重放原则

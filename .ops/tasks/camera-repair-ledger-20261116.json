@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "camera-repair-ledger-20261116",
+  "title": "Verify display repair and maintain project lessons ledger",
+  "paths": [
+    "research/topface/board",
+    "research/topface/test_camera_diagnostics.py",
+    "docs/validation/camera-diagnosis-20261116",
+    "docs/LESSONS_LEARNED.md",
+    "docs/topface/README.md",
+    "docs/topface/v11/reports/BOARD_INSTALL_PROTOCOL.md",
+    "README.md",
+    "AGENTS.md"
+  ],
+  "lane": "serial",
+  "resources": [
+    "COM3",
+    "K230-media"
+  ],
+  "depends": [],
+  "acceptance": [
+    "Fixed preview current-source readback and 600-frame native evidence preserved; project lessons ledger and entry links updated; no claims of six-color accuracy or long-soak completion"
+  ],
+  "branch": "ops/camera-diagnosis-20261116",
+  "state": "ready",
+  "claimed": true,
+  "agent": "codex",
+  "session": "camera-ledger-20261116-a",
+  "revision": 3,
+  "handoff": ".ops/handoffs/camera-repair-ledger-20261116/20261116T031515-b7dfce16.json",
+  "updated_at": "2026-11-16T03:15:54+00:00"
+}

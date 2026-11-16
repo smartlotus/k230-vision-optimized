@@ -1,0 +1,20 @@
+{
+  "status": "NATIVE_DIAGNOSIS_VERIFIED",
+  "firmware_commit": "ae2f20da0467a8e70659f032b240aae50272c49a",
+  "sources": {
+    "image": "https://github.com/kendryte/canmv_k230/blob/ae2f20da0467a8e70659f032b240aae50272c49a/port/omv/modules/py_image.c",
+    "draw": "https://github.com/kendryte/canmv_k230/blob/ae2f20da0467a8e70659f032b240aae50272c49a/port/omv/imlib/draw.c",
+    "capture": "https://github.com/kendryte/canmv_k230/blob/ae2f20da0467a8e70659f032b240aae50272c49a/port/core/mpp_vb_mgmt.c"
+  },
+  "conclusions": [
+    "RGBP888 does not have a supported conversion branch in the pinned draw path; raw and packed image A/B corroborates this.",
+    "Code 3 is the wrapper for any nonzero kd_mpi_vicap_dump_frame return, not specifically timeout or allocation failure; native detail is discarded.",
+    "Use independent same-frame CPU interleave for display; unchanged model input.",
+    "Bounded new capture handling backs off 100 ms at most twice consecutively; no camera reset; all losses counted and status kept distinct."
+  ],
+  "unknown": [
+    "Native cause of intermittent capture failures",
+    "Cause of RGB_packed diagnostic disconnect",
+    "Real six-color accuracy, same-input numerical parity and long-soak stability"
+  ]
+}

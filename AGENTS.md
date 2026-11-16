@@ -8,6 +8,8 @@
 
 ## 项目边界
 
+开发或板端操作前阅读 `docs/LESSONS_LEARNED.md` 的相关条目和当前任务交接。新根因、修复及复验结论及时补入该总账，并链接原始证据；保留失败和 UNKNOWN，不用工具 success 或 RUN_COMPLETE 代替画面、识别和标定验收。
+
 先读README.md和.ops/PROJECT.md；使用python .ops/tools/ops.py status确认当前任务。
 新仓库独立管理源码；原始实现与*_optimized.py并存。来源身份见docs/UPSTREAM_IMPORT.json。
 2026-11-12用户已授权实际板端测试：允许检查COM3、独立目录安装和有界运行，保护现有草稿和旧SD配置。

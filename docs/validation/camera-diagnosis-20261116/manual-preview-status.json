@@ -1,0 +1,17 @@
+{
+  "status": "CAMERA_PREVIEW_STOPPED_AFTER_CAPTURE_ERROR",
+  "source": "manual18000.json",
+  "requested": 18000,
+  "attempted": 733,
+  "successful": 732,
+  "error": "sensor(0) snapshot chn(0) failed(3)",
+  "last_cached_preview": {
+    "frameId": 2944,
+    "ageMs": 124961,
+    "available": true,
+    "live": false
+  },
+  "six_color_acceptance": "NOT_RUN",
+  "numerical_pairing": "NOT_RUN",
+  "startup_files_written": false
+}
