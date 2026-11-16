@@ -1,0 +1,108 @@
+{
+  "schema": "k230-project-status-refresh-v1",
+  "observed_utc": "2026-11-16T04:12:32Z",
+  "observed_local": "2026-11-16T12:12:32+08:00",
+  "evidence_saved_utc": "2026-11-16 04:14:40 UTC",
+  "worktree": "C:/Users/28389/Desktop/k230-topface-production",
+  "branch": "ops/topface-production-fps-20261116",
+  "implementation_commit": "62c62edd942cd8adff1c420f4828d83a6dcabc91",
+  "pre_refresh_head": "c09562e0922bb0f6d6481c714d54188311d4b492",
+  "change_scope": "Status, handoff and entrypoint documentation only; no runtime code or board files changed",
+  "board": {
+    "connected": true,
+    "ready": true,
+    "port": "COM3",
+    "name": "LCKFB-LSPI-K230-1G-CanMV",
+    "firmware": "K230-v1.8-36-gae2f20da0467a8e70659f032b240aae50272c49a",
+    "running": true,
+    "source": "USB_UVC verified by fresh preview with USB1280x720MJPEG overlay",
+    "last_known_device_from_qualified_probe": "openaicam#openaicam",
+    "active_report": "/sdcard/tfp1116/usb-live01.json",
+    "active_report_exists": false,
+    "frame_query": {
+      "available": true,
+      "frame_id": 29262,
+      "age_ms": 0,
+      "received_at_unix_ms": 1794802352910
+    },
+    "saved_preview": "docs/validation/topface-production-fps-20261116/status-20261116T041232Z-preview.jpg",
+    "current_preview_observation": "Dark/blurred view; overlay EMPTY. This sample has no target ground truth.",
+    "interference": "No stop/start/reset/upload/probe or camera changes performed in this refresh"
+  },
+  "model": {
+    "training_epochs": 100,
+    "training_optimizer_updates": 23400,
+    "selected_epoch": 92,
+    "checkpoint_sha256": "7d7b9a332e2b30d3d09e85245d6e39fd5f9a9d52b694f4bdb0d203585b0346d7",
+    "kmodel_sha256": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88",
+    "onnx_sha256": "833e5786d3a0385b75ee38638993c56adbcce30165e5f67a02f26ebebd7b0ad4",
+    "input": "uint8 RGB NCHW [1,3,192,320]",
+    "source_wh": [
+      640,
+      360
+    ],
+    "score_threshold": 0.25,
+    "nms_iou": 0.5
+  },
+  "accepted_gates": {
+    "source_deployment": "70source files current local SHA match FINAL_SOURCE_MANIFEST; original native exact-byte deployment + final deltas preserved",
+    "usb_source": "Current source matches final stored native readback",
+    "recognition": "User qualitative acceptance only; no accuracy percentage",
+    "csi": {
+      "receipt": "docs/validation/topface-production-fps-20261116/integrated-gc4-1000.json",
+      "successful": 1000,
+      "attempted": 1000,
+      "failures": 0,
+      "wall_seconds": 92.464,
+      "fps": 10.81502
+    },
+    "usb": {
+      "receipt": "docs/validation/topface-production-fps-20261116/usb-model600.json",
+      "successful": 600,
+      "attempted": 600,
+      "failures": 0,
+      "wall_seconds": 71.28,
+      "fps": 8.417508,
+      "device_metadata": "Original600device/modes missing; probe/actualmode and final5frame identity qualify metadata separately"
+    },
+    "host_regressions": {
+      "passed": 69,
+      "skipped": 0,
+      "scope": "Affected tests at implementation commit; not rerun during docs-only refresh"
+    },
+    "native_decoder_parity": "Same KPU EMPTY tensor reference/vector parity only; not full backend qualification",
+    "display_parity": "230400same-source pixels exact"
+  },
+  "in_progress": [
+    "USB live01 bounded18000 attempts; final result not present; do not infer inference counts from previewframeIds"
+  ],
+  "remaining": [
+    "Measured quantitative six-color accuracy and robustness",
+    "Full same-source/prepared/KPU/ORT/Simulator numerical pairing",
+    "Actual intrinsics/distortion/pose and mm coordinate validation",
+    "18000frame long-run acceptance",
+    "Higher FPS:25FPS target not achieved",
+    "Unify default legacy workbench model selection",
+    "UART/STM32, motion and robot workflow acceptance"
+  ],
+  "known_followups": [
+    "Existing fixed run_topface_service.py reports to already-used production-session01.json; restart only with a new explicit report_path after confirmingidle",
+    "Currentreportfile guards run at end; choose new names before executing any run",
+    "CPU/KPU hardware utilization not measured",
+    "USB has its own uncalibrated camera identity; do not apply CSI2calibration"
+  ],
+  "synchronization": "Final documentation commit and remote SHA verification recorded by OPS checkpoint/release; previous implementation remote62c62edd verified before refresh",
+  "final_readonly_recheck": {
+    "observed_utc": "2026-11-16T04:21:31Z",
+    "observed_local": "2026-11-16T12:21:31+08:00",
+    "script_running": true,
+    "usb_live01_report_exists": false,
+    "existing_fixed_CSI_report": {
+      "path": "/sdcard/tfp1116/production-session01.json",
+      "exists": true,
+      "bytes": 6026,
+      "observed_local": "2026-11-16T12:18:14+08:00"
+    },
+    "stopped_or_restarted": false
+  }
+}

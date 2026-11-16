@@ -1,0 +1,40 @@
+{
+  "scope": "Local immutable evidence identity; no new rawboard SHA computed while preview active",
+  "files": [
+    {
+      "path": "status-refresh-20261116T041232Z.json",
+      "bytes": 4927,
+      "sha256": "94c914d58e1bedfeda4885f8485d20f63786cce363807a4e5c78baf820d439c0"
+    },
+    {
+      "path": "status-20261116T041232Z-preview.jpg",
+      "bytes": 24014,
+      "sha256": "37840d1201212094d346ac16a512a48752290c6d155be3680292351388a967eb"
+    },
+    {
+      "path": "FINAL_SOURCE_MANIFEST.json",
+      "bytes": 11698,
+      "sha256": "e3da7373a92074cb05f9b850669de72de4629bcab5261d470dfda12427037816"
+    },
+    {
+      "path": "integrated-gc4-1000.json",
+      "bytes": 4398,
+      "sha256": "d82b76ffbfc4daa5e31554bf76edab36fade4f2d879e6ca80b4c7bbb384eedf2"
+    },
+    {
+      "path": "usb-model600.json",
+      "bytes": 3047,
+      "sha256": "f999d42fd1ea7c9ad83d0ee2316c647173f2c48e1e487b789d56a123e007b112"
+    },
+    {
+      "path": "usb-final-smoke5.json",
+      "bytes": 1372,
+      "sha256": "fa1aeb9ed5ceb2446d097d3ccca188fcc21b841e5aa7f95c53d48512d3ffd7dc"
+    },
+    {
+      "path": "native-decoder-parity.json",
+      "bytes": 198,
+      "sha256": "4e245829f57a374bc7efc3716d9849e6d7bebfd10c1a661c1d0b7dcbe0ee214b"
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "task": "status-handoff-20261116",
+  "created_at": "2026-11-16T04:22:32+00:00",
+  "agent": "codex",
+  "session": "status-handoff-20261116-a",
+  "branch": "ops/topface-production-fps-20261116",
+  "head": "c09562e0922bb0f6d6481c714d54188311d4b492",
+  "state": "ready",
+  "files": {
+    ".ops/PROJECT.md": "d925e58b93be49e67c370552d42d0e161cb9d02d657757097815e07e02f16327",
+    "README.md": "b785e38e1757abad2e13a1f48484872aeff6a098dfbbcdba69b91fb9cf494cf5",
+    "docs/HANDOFF.md": "fc355b9606d1578d7e4b19ba75ac686078b12e1bdef2f08b4010a785649baf1b",
+    "docs/LESSONS_LEARNED.md": "8326f8f44f88e6c63f11a9794157814d269f56f8ac242987b1d2b99aaa0f630c",
+    "docs/STATUS.md": "1309d281fe667653ca175369b11e173f7488f39839378421f24274abddf007fc",
+    "docs/topface/README.md": "280a6cd767471741e6183c7a2f4048829d7bf3414395a519e4d88622765f4af1",
+    "docs/validation/topface-production-fps-20261116/README.md": "5d8982cfc3b4d62ef00a95fab09c4aa1194ee25b7255f829cecf7c86fb846d97",
+    "docs/validation/topface-production-fps-20261116/project-before-status-refresh-20261116.md": "a5fb821ce505f75cb60ee7c01a9ebc63efdc11513d8deb2d2b5f84690ec05012",
+    "docs/validation/topface-production-fps-20261116/status-20261116T041232Z-preview.jpg": "37840d1201212094d346ac16a512a48752290c6d155be3680292351388a967eb",
+    "docs/validation/topface-production-fps-20261116/status-refresh-20261116T041232Z.json": "94c914d58e1bedfeda4885f8485d20f63786cce363807a4e5c78baf820d439c0",
+    "docs/validation/topface-production-fps-20261116/status-refresh-evidence-20261116T041232Z.json": "2e9bdf45ff32189e523a1fbe25ae613beb86d423724a0dc845592d9654854916",
+    "docs/validation/topface-production-fps-20261116/status-refresh-hub-entrypoints-20261116.json": "1819a2d8bb3ca47fdbe341eea780baa40b2b3883cb67afc85b7f8b69a8269fa4",
+    "docs/validation/topface-production-fps-20261116/status-refresh-hub-map-20261116.json": "52074378dca7c996984baeacbdbd20692fc03f89e3149faaf3c85cfff703f203",
+    "docs/validation/topface-production-fps-20261116/status-refresh-hub-readme-20261116.md": "0dd8176b429e0f65323a3de68a3b9104385094f82bd105fb600ce5629846aae0",
+    "docs/validation/topface-production-fps-20261116/status-refresh-skill-failure-playbook-20261116.md": "69da7b3eb35c5149a602e8fd71c3fc9427568777642bedf3bdf322074e847ca5",
+    "docs/validation/topface-production-fps-20261116/status-refresh-skill-maintenance-20261116.json": "fbba0ad5b4a04c39cfec008bce38020c30afb05fa6dff8c5560cfdfc295e45db",
+    "docs/validation/topface-production-fps-20261116/status-refresh-validation-20261116.json": "272afe1defd68156b01a6dd34247d3ef53e17bd19811eeae42e331ab04d0fa3c"
+  },
+  "git_blob_oids": {
+    ".ops/PROJECT.md": "b672769b4982dd54e5149446362aca6cb0aae58b",
+    "README.md": "db104ab748172aa07a8f77a6e51fff1afbb8f800",
+    "docs/HANDOFF.md": "0f7079f343a8838b0ecbb13ebbd5ab90a86ee899",
+    "docs/LESSONS_LEARNED.md": "4673521232d26f82c2c85c8605b2f8800c4228a8",
+    "docs/STATUS.md": "a6a1faa892e2cf97a66bcef13e97bcc1ac616485",
+    "docs/topface/README.md": "6a09ae30850e986e11713dbd22c8bd7806f967e9",
+    "docs/validation/topface-production-fps-20261116/README.md": "5514d810ba15530865f7b299d6549fcc44b09165",
+    "docs/validation/topface-production-fps-20261116/project-before-status-refresh-20261116.md": "419f88129d29460270a78f56ac6ebc12b19c0859",
+    "docs/validation/topface-production-fps-20261116/status-20261116T041232Z-preview.jpg": "642d37b133f0f4e604963eb0b82c54e139c78af5",
+    "docs/validation/topface-production-fps-20261116/status-refresh-20261116T041232Z.json": "88b5f2727f1fb831b3c5e024cd8a3527c7c6f9ec",
+    "docs/validation/topface-production-fps-20261116/status-refresh-evidence-20261116T041232Z.json": "fae5ff47dd531ec7b53a6012673481b76995d3d6",
+    "docs/validation/topface-production-fps-20261116/status-refresh-hub-entrypoints-20261116.json": "1eee843c3ec16829d67130c219bc56edc077dd5d",
+    "docs/validation/topface-production-fps-20261116/status-refresh-hub-map-20261116.json": "98e46c66d328c392b41023d9a0b68d3f7c31719c",
+    "docs/validation/topface-production-fps-20261116/status-refresh-hub-readme-20261116.md": "db210254b1003f5208f9a3aba16f5de042a17699",
+    "docs/validation/topface-production-fps-20261116/status-refresh-skill-failure-playbook-20261116.md": "afef2acb368f0152b961e95960588b6688a8567e",
+    "docs/validation/topface-production-fps-20261116/status-refresh-skill-maintenance-20261116.json": "72304c8405b1854c1fe47021a9d63ce9a36eb00c",
+    "docs/validation/topface-production-fps-20261116/status-refresh-validation-20261116.json": "8579e1890ea2e7d27210af7712f93d583034b8ee"
+  },
+  "scope_git_blob_oids": {
+    ".ops/PROJECT.md": "b672769b4982dd54e5149446362aca6cb0aae58b",
+    "README.md": "db104ab748172aa07a8f77a6e51fff1afbb8f800",
+    "docs/HANDOFF.md": "0f7079f343a8838b0ecbb13ebbd5ab90a86ee899",
+    "docs/LESSONS_LEARNED.md": "4673521232d26f82c2c85c8605b2f8800c4228a8",
+    "docs/STATUS.md": "a6a1faa892e2cf97a66bcef13e97bcc1ac616485",
+    "docs/topface/README.md": "6a09ae30850e986e11713dbd22c8bd7806f967e9",
+    "docs/validation/topface-production-fps-20261116/DOC_VALIDATION.json": "8d9ea575235075b4b9d79cecff08f6d7dea625e4",
+    "docs/validation/topface-production-fps-20261116/FINAL_SOURCE_MANIFEST.json": "beed3be4ad359ee1171e0e60474de6df7c9100ac",
+    "docs/validation/topface-production-fps-20261116/FINAL_STATUS.json": "07a6baa624a91b7b2c7ed36063d037620d2cbc93",
+    "docs/validation/topface-production-fps-20261116/HOST_VALIDATION.json": "ebfd324368a53cf4192a23bb9b229b066c203e03",
+    "docs/validation/topface-production-fps-20261116/README.md": "5514d810ba15530865f7b299d6549fcc44b09165",
+    "docs/validation/topface-production-fps-20261116/RESOURCE_FPS_REPORT.json": "d743583daa30262bf26f468d73eb4c6fd545a5ee",
+    "docs/validation/topface-production-fps-20261116/USB_PREVIEW_STATUS.json": "5a9c43af704bbbe34a7e0a171b1095b662fd8d30",
+    "docs/validation/topface-production-fps-20261116/USER_ACCEPTANCE.json": "ee57e241e87d155cb8de49a8229a8698dd2b696b",
+    "docs/validation/topface-production-fps-20261116/deployment-delta.json": "72fe7106da34d3f3891308b0aed9784d90977fea",
+    "docs/validation/topface-production-fps-20261116/fast-conversion-parity.json": "b0003a5af951311bd0ccae37010589a9daad3764",
+    "docs/validation/topface-production-fps-20261116/fast-output.bmp": "766cd6e1f842e521aacb300bb0935e329c3e9d28",
+    "docs/validation/topface-production-fps-20261116/fast-qual.json": "f4e7aab484fc8db32c0235772b933ea58e580a2a",
+    "docs/validation/topface-production-fps-20261116/fast-reference.bmp": "766cd6e1f842e521aacb300bb0935e329c3e9d28",
+    "docs/validation/topface-production-fps-20261116/fast1000.json": "05b0633cae83316a4f6d81736b1b6e0802e35b43",
+    "docs/validation/topface-production-fps-20261116/final-smoke20.json": "9a6768a33d41f047f0e5c71c2e307a08a976add2",
+    "docs/validation/topface-production-fps-20261116/integrated-gc4-1000.json": "5796eac4ca934f1c86a53943c6afb6571d6545b9",
+    "docs/validation/topface-production-fps-20261116/integrated1000.json": "838a971da5c4c9023a0afa5d9e6b11a168a82d88",
+    "docs/validation/topface-production-fps-20261116/native-decoder-parity.json": "1cdefec8feede90c087541f77c228f012e4fe8ec",
+    "docs/validation/topface-production-fps-20261116/production-deployment.json": "e56d228a8462dbd82e09795e64f316cb8d3be1dc",
+    "docs/validation/topface-production-fps-20261116/production-session01.json": "19829edb209b029379123f9de74d1941bd8ca9d0",
+    "docs/validation/topface-production-fps-20261116/project-before-status-refresh-20261116.md": "419f88129d29460270a78f56ac6ebc12b19c0859",
+    "docs/validation/topface-production-fps-20261116/resource-capacities.json": "d47402903e6591822a52f11b82732484357f9153",
+    "docs/validation/topface-production-fps-20261116/status-20261116T041232Z-preview.jpg": "642d37b133f0f4e604963eb0b82c54e139c78af5",
+    "docs/validation/topface-production-fps-20261116/status-refresh-20261116T041232Z.json": "88b5f2727f1fb831b3c5e024cd8a3527c7c6f9ec",
+    "docs/validation/topface-production-fps-20261116/status-refresh-evidence-20261116T041232Z.json": "fae5ff47dd531ec7b53a6012673481b76995d3d6",
+    "docs/validation/topface-production-fps-20261116/status-refresh-hub-entrypoints-20261116.json": "1eee843c3ec16829d67130c219bc56edc077dd5d",
+    "docs/validation/topface-production-fps-20261116/status-refresh-hub-map-20261116.json": "98e46c66d328c392b41023d9a0b68d3f7c31719c",
+    "docs/validation/topface-production-fps-20261116/status-refresh-hub-readme-20261116.md": "db210254b1003f5208f9a3aba16f5de042a17699",
+    "docs/validation/topface-production-fps-20261116/status-refresh-skill-failure-playbook-20261116.md": "afef2acb368f0152b961e95960588b6688a8567e",
+    "docs/validation/topface-production-fps-20261116/status-refresh-skill-maintenance-20261116.json": "72304c8405b1854c1fe47021a9d63ce9a36eb00c",
+    "docs/validation/topface-production-fps-20261116/status-refresh-validation-20261116.json": "8579e1890ea2e7d27210af7712f93d583034b8ee",
+    "docs/validation/topface-production-fps-20261116/topface_service-final-readback.py": "45664a6a29b9915521bbd4d8212e2fe8169028e0",
+    "docs/validation/topface-production-fps-20261116/usb-final-smoke5.json": "309598560e8303565f48d3a11ec900a46969476d",
+    "docs/validation/topface-production-fps-20261116/usb-live-preview.jpg": "90fa0bd5f55e55a8d7511207cf0f7301ea05ea24",
+    "docs/validation/topface-production-fps-20261116/usb-model-preview.jpg": "acdd86120bb31bc34e4005ea1af28f1c64c607cd",
+    "docs/validation/topface-production-fps-20261116/usb-model600.json": "4483b71abf37fc5b919a2c83f7878ea29ac9e6b3",
+    "docs/validation/topface-production-fps-20261116/usb-probe-now.json": "14a34b59d04b5abefa46b24bcefee62377979305",
+    "docs/validation/topface-production-fps-20261116/usb_topface_trial-final-readback.py": "c09940c1d2789536fc82fc660031c8928cbd4023",
+    "docs/validation/topface-production-fps-20261116/usb_topface_trial-readback.py": "52c7c8ae1c6fa6dd1a583cbeab062a12b6742401",
+    "docs/validation/topface-production-fps-20261116/user-acceptance-session.json": "c908f61abbe0fe2d9bef7fa4a991461a3f808dc5",
+    "docs/validation/topface-production-fps-20261116/vision_adapter-final-readback.py": "13035d54c71dd00898d8d201b32c59d53980cce4"
+  },
+  "scope_fingerprints": {
+    ".ops/PROJECT.md": "d925e58b93be49e67c370552d42d0e161cb9d02d657757097815e07e02f16327",
+    "README.md": "b785e38e1757abad2e13a1f48484872aeff6a098dfbbcdba69b91fb9cf494cf5",
+    "docs/HANDOFF.md": "fc355b9606d1578d7e4b19ba75ac686078b12e1bdef2f08b4010a785649baf1b",
+    "docs/LESSONS_LEARNED.md": "8326f8f44f88e6c63f11a9794157814d269f56f8ac242987b1d2b99aaa0f630c",
+    "docs/STATUS.md": "1309d281fe667653ca175369b11e173f7488f39839378421f24274abddf007fc",
+    "docs/topface/README.md": "280a6cd767471741e6183c7a2f4048829d7bf3414395a519e4d88622765f4af1",
+    "docs/validation/topface-production-fps-20261116/DOC_VALIDATION.json": "28a87bc22f1a69a2cc5a3b16f1af12ba821ff85b2802f9c050754263ad3dab1c",
+    "docs/validation/topface-production-fps-20261116/FINAL_SOURCE_MANIFEST.json": "e3da7373a92074cb05f9b850669de72de4629bcab5261d470dfda12427037816",
+    "docs/validation/topface-production-fps-20261116/FINAL_STATUS.json": "0651177ad85a5018bfe3bead5bf95a2cbcee98d115bfc3c8532b8a43f2abeb22",
+    "docs/validation/topface-production-fps-20261116/HOST_VALIDATION.json": "74403c8d747e3b5d4078ace559a7659d3f2f2fc77c8256a803678b08a7af2355",
+    "docs/validation/topface-production-fps-20261116/README.md": "5d8982cfc3b4d62ef00a95fab09c4aa1194ee25b7255f829cecf7c86fb846d97",
+    "docs/validation/topface-production-fps-20261116/RESOURCE_FPS_REPORT.json": "b0c3fc437293a4a314bb4fa23178114ea30b7ad8ec6199139c4810e43ed0cc66",
+    "docs/validation/topface-production-fps-20261116/USB_PREVIEW_STATUS.json": "94c341322e5ba21d70203fd90de7f47c0714b9bb035e2f5ccadcae5993ccc840",
+    "docs/validation/topface-production-fps-20261116/USER_ACCEPTANCE.json": "2ee0768dddefbbfec003844ed8d8b0e7054acf5fcd78158f33a48062d5e95ad3",
+    "docs/validation/topface-production-fps-20261116/deployment-delta.json": "3beab1cc32f8586b2341b6521bddf61061e8db63abf92df1f7ea0580fec475b0",
+    "docs/validation/topface-production-fps-20261116/fast-conversion-parity.json": "fbbc1faff69badad6466d2b4c29aa5c41e8ec7957ea2dd44825cd01e99ac7f0f",
+    "docs/validation/topface-production-fps-20261116/fast-output.bmp": "f7164037996d316289cc70b7d4720af878488774c2deaa85731bc6ae9f7b4d79",
+    "docs/validation/topface-production-fps-20261116/fast-qual.json": "36918cdbb57c887baccfab6ef5a3c78938b2033223a1906f2023cc29e18567df",
+    "docs/validation/topface-production-fps-20261116/fast-reference.bmp": "f7164037996d316289cc70b7d4720af878488774c2deaa85731bc6ae9f7b4d79",
+    "docs/validation/topface-production-fps-20261116/fast1000.json": "4cde0af1ccf6dad90ee470d529b057ed1d5a0d1d3db23603548716a0dfdaadf5",
+    "docs/validation/topface-production-fps-20261116/final-smoke20.json": "8a169ac1f1093b1487a004fcaf9339e5438e358c505db84c92a1fd6e1006a7db",
+    "docs/validation/topface-production-fps-20261116/integrated-gc4-1000.json": "d82b76ffbfc4daa5e31554bf76edab36fade4f2d879e6ca80b4c7bbb384eedf2",
+    "docs/validation/topface-production-fps-20261116/integrated1000.json": "bf10102ef1466ed8e9b4950c59b313010a4a8940f5437a00dce44696151e1b5d",
+    "docs/validation/topface-production-fps-20261116/native-decoder-parity.json": "4e245829f57a374bc7efc3716d9849e6d7bebfd10c1a661c1d0b7dcbe0ee214b",
+    "docs/validation/topface-production-fps-20261116/production-deployment.json": "12a1846eb9ac4bf39a8ea3a4c9d6e3bab751194023a30357f9fcca310a0169d5",
+    "docs/validation/topface-production-fps-20261116/production-session01.json": "3c74a7878c34867ab185814bc05dd40d8eacd430682d5f0f053c7e4bc7a7e01b",
+    "docs/validation/topface-production-fps-20261116/project-before-status-refresh-20261116.md": "a5fb821ce505f75cb60ee7c01a9ebc63efdc11513d8deb2d2b5f84690ec05012",
+    "docs/validation/topface-production-fps-20261116/resource-capacities.json": "6db6d6095d25eb1a77b022a050fb5739430490b540b518a7bdb0aa2267c4b8d3",
+    "docs/validation/topface-production-fps-20261116/status-20261116T041232Z-preview.jpg": "37840d1201212094d346ac16a512a48752290c6d155be3680292351388a967eb",
+    "docs/validation/topface-production-fps-20261116/status-refresh-20261116T041232Z.json": "94c914d58e1bedfeda4885f8485d20f63786cce363807a4e5c78baf820d439c0",
+    "docs/validation/topface-production-fps-20261116/status-refresh-evidence-20261116T041232Z.json": "2e9bdf45ff32189e523a1fbe25ae613beb86d423724a0dc845592d9654854916",
+    "docs/validation/topface-production-fps-20261116/status-refresh-hub-entrypoints-20261116.json": "1819a2d8bb3ca47fdbe341eea780baa40b2b3883cb67afc85b7f8b69a8269fa4",
+    "docs/validation/topface-production-fps-20261116/status-refresh-hub-map-20261116.json": "52074378dca7c996984baeacbdbd20692fc03f89e3149faaf3c85cfff703f203",
+    "docs/validation/topface-production-fps-20261116/status-refresh-hub-readme-20261116.md": "0dd8176b429e0f65323a3de68a3b9104385094f82bd105fb600ce5629846aae0",
+    "docs/validation/topface-production-fps-20261116/status-refresh-skill-failure-playbook-20261116.md": "69da7b3eb35c5149a602e8fd71c3fc9427568777642bedf3bdf322074e847ca5",
+    "docs/validation/topface-production-fps-20261116/status-refresh-skill-maintenance-20261116.json": "fbba0ad5b4a04c39cfec008bce38020c30afb05fa6dff8c5560cfdfc295e45db",
+    "docs/validation/topface-production-fps-20261116/status-refresh-validation-20261116.json": "272afe1defd68156b01a6dd34247d3ef53e17bd19811eeae42e331ab04d0fa3c",
+    "docs/validation/topface-production-fps-20261116/topface_service-final-readback.py": "f322928a5596377279e9cf750840441ffee6477f372f8465c334b8b162c7ab12",
+    "docs/validation/topface-production-fps-20261116/usb-final-smoke5.json": "fa1aeb9ed5ceb2446d097d3ccca188fcc21b841e5aa7f95c53d48512d3ffd7dc",
+    "docs/validation/topface-production-fps-20261116/usb-live-preview.jpg": "d2e28f976ccef41be637ea26eb5f28c993ea2911e2452984cb6a81a0da70db39",
+    "docs/validation/topface-production-fps-20261116/usb-model-preview.jpg": "92aa56abdb106d71ac4774266920164c5a36ff6594a780d62027f07df0e6505f",
+    "docs/validation/topface-production-fps-20261116/usb-model600.json": "f999d42fd1ea7c9ad83d0ee2316c647173f2c48e1e487b789d56a123e007b112",
+    "docs/validation/topface-production-fps-20261116/usb-probe-now.json": "c6dad56be83984b38d542ba2cb6fa32b810f0d775e7d8e82f0f69595e95aa9ed",
+    "docs/validation/topface-production-fps-20261116/usb_topface_trial-final-readback.py": "67c20636906c04bb12b09e746e6e7acc08bf1f6992c61bc99a835a9328543cd2",
+    "docs/validation/topface-production-fps-20261116/usb_topface_trial-readback.py": "e97902575c7b2405e683b299d769abf454e89bb819c5311761268bbc8df2f66a",
+    "docs/validation/topface-production-fps-20261116/user-acceptance-session.json": "396137b30c97c7d96cf332606038f344b55c1d17248b0f52dbafa8706a64c250",
+    "docs/validation/topface-production-fps-20261116/vision_adapter-final-readback.py": "b0de624382e6bd94a6e61d1c2110e10ac66a1cc5436ecfe0bb2fb4ad80a4cd77"
+  },
+  "report": {
+    "completed": [
+      "Created portable docs/STATUS.md and docs/HANDOFF.md with verified implementation/model identities, current USB ownership and exact next-step collection/start instructions.",
+      "Read-only board checks confirmed connected/ready/running and fresh USB preview; final USB live01 receipt absent through2026-11-16 12:21:31+08:00. Active hardware was never stopped, restarted, probed, or written during this refresh.",
+      "Replaced obsolete/garbled .ops/PROJECT.md with current context and preserved its original bytes as evidence. Root/TopFace/validation README and local aggregate workspace links updated.",
+      "Current70source files match the preserved final deployment manifest; USB source equals stored native finalreadback. Reused69unchanged relevant host results without rerunning algorithms or closed native experiments.",
+      "Project lessonsF16 records fixedreportname late-check risk; generic pipeline-ops failure reference now requires preflight immutableoutput paths, archived with hash in project evidence."
+    ],
+    "remaining": [
+      "USB live01 bounded18000 final report is not yet present; success counts and long-run stability unaccepted.",
+      "Fresh quantitative accuracy, complete source/prepared/KPU/ORT/Simulator pairing, measured camera geometry/mm, defaultworkbench unification,25FPS and fullrobot workflow remain separate."
+    ],
+    "decisions": [
+      "Only projectdocumentation and immutable observation artifacts changed; preserve runtime source, original receipts and currentUSB preview.",
+      "Resume by read-only attachment and collect final USB receipt; do not launch fixed CSIentry with existingproduction-session01.json. Newrun requires explicit fresh reportpath and idle/exclusiveboard.",
+      "Current state task is ready for documentation handoff; release it after checkpoint, while clearly retaining the board-running fact in docs. No mainintegration."
+    ],
+    "risks": [
+      "running/freshpreview are live snapshots, not proof of18000model iterations; previewframeIds never used as inference denominator.",
+      "Fixedentry reportconflict is a confirmed code-level issue recorded without causing a rerun; code fix remains followup.",
+      "CPU/KPU percentages and quantitative accuracy remainUNKNOWN. Priorfailed3/IDEinterrupt receipts stay unchanged."
+    ],
+    "next_steps": [
+      "Next executor reads docs/STATUS.md, docs/HANDOFF.md, .ops/PROJECT.md, OPSstatus and latesthandoff; claims its own scopedtask before changes.",
+      "If USB live01 receipt appears, download to new immutableevidencepath, inspectstatus/counts/errors/FPS/cleanup and refresh records. If stoppedwithno receipt, retainUNKNOWN and diagnose withoutreplay."
+    ],
+    "verification": [
+      {
+        "command": "Official CanMV read-only boardinfo/script_running/freshpreview/statfile",
+        "exit_code": 0,
+        "summary": "Snapshot12:12–12:13, readonlyrecheck12:21:31 runningtrue, USB finalreceipt absent, existingCSIreport6026bytes confirmed; no device mutations",
+        "evidence": [
+          "docs/validation/topface-production-fps-20261116/status-refresh-20261116T041232Z.json",
+          "docs/validation/topface-production-fps-20261116/status-20261116T041232Z-preview.jpg"
+        ]
+      },
+      {
+        "command": "Parse updated localMarkdown links, JSON and handoffPython examples; git diff --check",
+        "exit_code": 0,
+        "summary": "138local links no missing,2example ASTs valid, all refreshedJSON parsed; syntax and whitespace clean",
+        "evidence": [
+          "docs/validation/topface-production-fps-20261116/status-refresh-validation-20261116.json"
+        ]
+      },
+      {
+        "command": "SHA256 current70source files against finalmanifest and USB storednative readback",
+        "exit_code": 0,
+        "summary": "70/70 unchanged source identities match; USB source readbackexact; no nativealgorithm reruns",
+        "evidence": [
+          "docs/validation/topface-production-fps-20261116/status-refresh-validation-20261116.json",
+          "docs/validation/topface-production-fps-20261116/FINAL_SOURCE_MANIFEST.json"
+        ]
+      },
+      {
+        "command": "Workspacehub paths and maintainedskillreference validation",
+        "exit_code": 0,
+        "summary": "Currentstatus/handoff links resolve; generic outputpreflight rule present, existingmetadataunchanged, archivedreferencehash",
+        "evidence": [
+          "docs/validation/topface-production-fps-20261116/status-refresh-hub-entrypoints-20261116.json",
+          "docs/validation/topface-production-fps-20261116/status-refresh-skill-maintenance-20261116.json"
+        ]
+      }
+    ]
+  }
+}

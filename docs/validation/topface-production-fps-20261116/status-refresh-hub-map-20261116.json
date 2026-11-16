@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "created_local": "2026-11-14T18:53:09",
+  "hub": "C:\\Users\\28389\\Desktop\\k230-project",
+  "operation": "JUNCTION_HUB_ONLY",
+  "files_moved": false,
+  "git_worktrees_modified": false,
+  "entries": [
+    {
+      "Group": "repos",
+      "Name": "k230worker",
+      "Target": "C:\\Users\\28389\\Desktop\\k230worker",
+      "Role": "主仓库 / 原始 K230 项目"
+    },
+    {
+      "Group": "repos",
+      "Name": "k230-vision-optimized",
+      "Target": "C:\\Users\\28389\\Desktop\\k230-vision-optimized",
+      "Role": "当前优化与 KPU 验证仓库"
+    },
+    {
+      "Group": "worktrees",
+      "Name": "ops-selftest",
+      "Target": "C:\\Users\\28389\\Desktop\\k230worker",
+      "Role": "ops/selftest"
+    },
+    {
+      "Group": "worktrees",
+      "Name": "ops-k230-fps",
+      "Target": "C:\\Users\\28389\\Desktop\\k230worker-board-optimize",
+      "Role": "ops/k230-fps"
+    },
+    {
+      "Group": "worktrees",
+      "Name": "ops-ellipse-fit",
+      "Target": "C:\\Users\\28389\\Desktop\\k230worker-ellipse",
+      "Role": "ops/ellipse-fit"
+    },
+    {
+      "Group": "worktrees",
+      "Name": "ops-live-tuning",
+      "Target": "C:\\Users\\28389\\Desktop\\k230worker-live",
+      "Role": "ops/live-tuning"
+    },
+    {
+      "Group": "worktrees",
+      "Name": "ops-transport-mvp",
+      "Target": "C:\\Users\\28389\\Desktop\\k230worker-mvp",
+      "Role": "ops/transport-mvp"
+    },
+    {
+      "Group": "worktrees",
+      "Name": "ops-host-hashing",
+      "Target": "C:\\Users\\28389\\Desktop\\k230worker-optimize",
+      "Role": "ops/host-hashing"
+    },
+    {
+      "Group": "worktrees",
+      "Name": "ops-scene-stability",
+      "Target": "C:\\Users\\28389\\Desktop\\k230worker-scene",
+      "Role": "ops/scene-stability"
+    },
+    {
+      "Group": "worktrees",
+      "Name": "ops-workbench",
+      "Target": "C:\\Users\\28389\\Desktop\\k230worker-workbench",
+      "Role": "ops/workbench"
+    },
+    {
+      "Group": "worktrees",
+      "Name": "ops-workbench-v2",
+      "Target": "C:\\Users\\28389\\Desktop\\k230worker-workbench-v2",
+      "Role": "ops/workbench-v2"
+    },
+    {
+      "Group": "archives",
+      "Name": "github-export-20261108",
+      "Target": "C:\\Users\\28389\\Desktop\\k230worker-github-export-20261108",
+      "Role": "GitHub 导出快照"
+    },
+    {
+      "Group": "archives",
+      "Name": "unified-snapshot",
+      "Target": "C:\\Users\\28389\\Desktop\\k230worker-unified",
+      "Role": "统一快照/归档"
+    },
+    {
+      "Group": "worktrees",
+      "Name": "ops-camera-diagnosis",
+      "Target": "C:/Users/28389/Desktop/k230-camera-diagnosis",
+      "Role": "当前顶面显示修复、板端验收与经验总账"
+    },
+    {
+      "Group": "worktrees",
+      "Name": "ops-topface-production",
+      "Target": "C:/Users/28389/Desktop/k230-topface-production",
+      "Role": "当前正式TopFace接入、FPS与USB试验"
+    }
+  ],
+  "current_topface_entry": "worktrees/ops-topface-production",
+  "current_status_entry": "worktrees/ops-topface-production/docs/STATUS.md",
+  "current_handoff_entry": "worktrees/ops-topface-production/docs/HANDOFF.md"
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "status-handoff-20261116",
+  "title": "Refresh verified K230 project status and portable handoff",
+  "paths": [
+    ".ops/PROJECT.md",
+    "README.md",
+    "docs/STATUS.md",
+    "docs/HANDOFF.md",
+    "docs/LESSONS_LEARNED.md",
+    "docs/topface/README.md",
+    "docs/validation/topface-production-fps-20261116"
+  ],
+  "lane": "serial",
+  "resources": [
+    "COM3"
+  ],
+  "depends": [],
+  "acceptance": [
+    "Timestamped read-only board state, immutable evidence and exact current code/Git identities recorded; clear continuation commands and acceptance gaps; active hardware preview preserved; private remote SHA verified"
+  ],
+  "branch": "ops/topface-production-fps-20261116",
+  "state": "ready",
+  "claimed": true,
+  "agent": "codex",
+  "session": "status-handoff-20261116-a",
+  "revision": 3,
+  "handoff": ".ops/handoffs/status-handoff-20261116/20261116T042232-a13fead9.json",
+  "updated_at": "2026-11-16T04:22:34+00:00"
+}

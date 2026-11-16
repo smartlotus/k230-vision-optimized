@@ -1,0 +1,8 @@
+{
+  "workspace": "C:\\Users\\28389\\Desktop\\k230-project",
+  "topface_entry": "worktrees/ops-topface-production",
+  "status_entry": "worktrees/ops-topface-production/docs/STATUS.md",
+  "handoff_entry": "worktrees/ops-topface-production/docs/HANDOFF.md",
+  "links_verified": true,
+  "hub_is_git_repo": false
+}

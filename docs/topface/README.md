@@ -1,5 +1,7 @@
 # TopFaceNet V1.1 执行入口
 
+2026-11-16最新接续入口：[项目状态](../STATUS.md)、[交接文档](../HANDOFF.md)。板端运行与USB长跑收据以其中的现场快照和最新OPS交接为准；下方模型/数据接受记录继续保留原身份。
+
 权威计划为 `K230_TopFaceNet_Sim2Real_Project_Plan_V1.1_2026-11-14.md` 和配套 Execution AI Prompt。原文 SHA、用户相机约定及保护边界见 [execution_contract.json](execution_contract.json)。实现位于仓库 `research/topface/`，证据位于 `docs/topface/v11/`；原始工程与 CAD 保留。
 
 ## 当前权威记录

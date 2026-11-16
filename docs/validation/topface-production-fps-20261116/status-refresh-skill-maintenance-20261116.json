@@ -1,0 +1,7 @@
+{
+  "source": "C:\\Users\\28389\\.agents\\skills\\pipeline-ops\\references\\failure-playbook.md",
+  "sha256": "69da7b3eb35c5149a602e8fd71c3fc9427568777642bedf3bdf322074e847ca5",
+  "scope": "Generic immutable-output path preflight added; project paths/run identities stay in project evidence",
+  "metadata_changed": false,
+  "reason": "Verified existing fixed report path is checked only at run completion in project entrypoint"
+}

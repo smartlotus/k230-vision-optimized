@@ -1,6 +1,7 @@
 # K230 项目经验与故障总账
 
-更新时间：2026-11-16（北京时间）。当前维护分支：`ops/camera-diagnosis-20261116`。
+更新时间：2026-11-16（北京时间）。当前维护分支：`ops/topface-production-fps-20261116`；初次建账分支为`ops/camera-diagnosis-20261116`。
+接续请先读[最新状态](STATUS.md)和[交接](HANDOFF.md)，不要把历史快照当实时状态。
 
 此前经验分散在板端验证目录及 TopFace 安装规程，没有独立的统一总账。本文件作为入口，原始失败、运行身份和校验收据仍保存在各证据目录，不回写历史结果。
 
@@ -124,9 +125,15 @@
 
 此前probe=false不能永久代表不兼容。用户再次连接后，UVC.probe返回openaicam#openaicam，枚举到1280x720与1920x1080 MJPEG30FPS，及较低帧率YUY2。设备名不能独立证明传感器芯片，OV2735 A是用户提供的硬件身份。
 
-先停止CSI脚本并确认idle，再协商1280x720 MJPEG30FPS；保持16:9缩放到640x360 RGB888，显式交错为独立CHW模型副本，再走同一固定NCHW模型。显示转换只改packed副本，USB从未冒充CSI2来源，原标定不套用于USB。已取得新鲜USB模型画面，底部标USB1280x720MJPEG；数量超过3显示OVER_CAPACITY是容量拒绝，不是摄像头故障。600帧性能和完整性待最终收据，不以预览frameId代替推理数。详见[USB预览记录](validation/topface-production-fps-20261116/USB_PREVIEW_STATUS.json)。
+先停止CSI脚本并确认idle，再协商1280x720 MJPEG30FPS；保持16:9缩放到640x360 RGB888，显式交错为独立CHW模型副本，再走同一固定NCHW模型。显示转换只改packed副本，USB从未冒充CSI2来源，原标定不套用于USB。已取得新鲜USB模型画面，底部标USB1280x720MJPEG；数量超过3显示OVER_CAPACITY是容量拒绝，不是摄像头故障。600帧最终收据已完成，结果见下一段；当前长跑另有usb-live01.json，不能用预览frameId代替推理数。详见[USB预览记录](validation/topface-production-fps-20261116/USB_PREVIEW_STATUS.json)。
 
 更新：USB600/600帧完整结束，0采集错误，8.4175FPS、cleanup=[]；JPEG解码/缩放48.43ms，推理与后处理29.36ms，不能把USB约30FPS协商值写成模型FPS。第一版报告使用locals判断变量存在导致device/modes缺失，原件保留，probe和actual_mode能核对；已改为显式初始化/读取变量，5帧原生复验设备openaicam#openaicam及5种模式记录完整。最新USB长预览独立usb-live01，不再复用原CSI或旧USB报告文件名。
+
+## F16：不可覆盖报告的冲突检查必须放在运行前
+
+2026-11-16状态刷新读到`run_topface_service.py`固定写`/sdcard/tfp1116/production-session01.json`，该旧报告已存在；`topface_service.run()`和USB试验的保护检查在运行结束才执行。直接重用固定入口可能先执行整个预算，最后才因目标存在报错。本次没有重放或改代码，原件保持。
+
+接续方式：执行前核对idle和输出路径，显式传全新的report_path；[交接文档](HANDOFF.md)提供随机新后缀示例。不要删除旧报告来让入口“可用”，不要用另一次长跑验证一个已从源代码确认的路径冲突。将检查前移到代码是后续工程改进；目前文档中已明确这个已知限制。
 
 ## 历史经验入口
 
