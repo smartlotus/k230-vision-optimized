@@ -22,10 +22,10 @@
   ],
   "branch": "ops/topface-production-fps-20261116",
   "state": "ready",
-  "claimed": true,
+  "claimed": false,
   "agent": "codex",
   "session": "status-handoff-20261116-a",
-  "revision": 3,
+  "revision": 4,
   "handoff": ".ops/handoffs/status-handoff-20261116/20261116T042232-a13fead9.json",
-  "updated_at": "2026-11-16T04:22:34+00:00"
+  "updated_at": "2026-11-16T04:23:38+00:00"
 }
