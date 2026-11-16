@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "topface-production-fps-20261116",
+  "title": "Integrate accepted TopFace model into original runtime and optimize real FPS",
+  "paths": [
+    "k230_transport_mvp/k230",
+    "k230_transport_mvp/vision",
+    "k230_transport_mvp/tests",
+    "k230_transport_mvp/tools/deploy_topface.py",
+    "k230_transport_mvp/run_topface_service.py",
+    "research/topface/board",
+    "research/topface/test_portable_decode.py",
+    "research/topface/test_topface_performance.py",
+    "docs/validation/topface-production-fps-20261116",
+    "docs/LESSONS_LEARNED.md",
+    "docs/topface/README.md",
+    "README.md"
+  ],
+  "lane": "serial",
+  "resources": [
+    "COM3",
+    "K230-media"
+  ],
+  "depends": [],
+  "acceptance": [
+    "Same frozen model and thresholds integrated into original TOP interface with rejection and calibration guards; preserved QR/LANE and active/draft; source-bound native deployment and full recognition/preview FPS measured; exact private backup"
+  ],
+  "branch": "ops/topface-production-fps-20261116",
+  "state": "active",
+  "claimed": true,
+  "agent": "codex",
+  "session": "topface-prod-fps-20261116-a",
+  "revision": 2,
+  "handoff": null,
+  "updated_at": "2026-11-16T03:25:32+00:00"
+}
