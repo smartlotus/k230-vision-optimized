@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "camera-diagnosis-20261116",
+  "title": "Diagnose CSI2 banding and qualify OV2735 UVC preview",
+  "paths": [
+    "research/topface/board",
+    "research/topface/test_camera_diagnostics.py",
+    "docs/validation/camera-diagnosis-20261116"
+  ],
+  "lane": "serial",
+  "resources": [
+    "COM3",
+    "K230-media"
+  ],
+  "depends": [],
+  "acceptance": [
+    "Stage captures and hashes distinguish code, host transmission and camera paths; bounded CSI and UVC tests with cleanup; no startup or production parameter changes"
+  ],
+  "branch": "ops/camera-diagnosis-20261116",
+  "state": "active",
+  "claimed": true,
+  "agent": "codex",
+  "session": "camera-diag-20261116-a",
+  "revision": 2,
+  "handoff": null,
+  "updated_at": "2026-11-16T02:24:47+00:00"
+}
