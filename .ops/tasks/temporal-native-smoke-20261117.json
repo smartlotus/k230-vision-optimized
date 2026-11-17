@@ -19,10 +19,10 @@
   ],
   "branch": "ops/temporal-camera-v1-20261117",
   "state": "ready",
-  "claimed": true,
+  "claimed": false,
   "agent": "codex",
   "session": "temporal-native-smoke-20261117-b",
-  "revision": 7,
+  "revision": 8,
   "handoff": ".ops/handoffs/temporal-native-smoke-20261117/20261117T112756-38cc1b8d.json",
-  "updated_at": "2026-11-17T11:28:10+00:00"
+  "updated_at": "2026-11-17T11:28:57+00:00"
 }
