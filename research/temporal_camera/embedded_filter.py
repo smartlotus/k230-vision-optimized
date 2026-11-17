@@ -104,6 +104,28 @@ class SoftGridFilter:
         for i,valid in enumerate(self.valid):
             self.prior[i]=retain*max(0.,self.prior[i])+(1-retain)*self.uniform[i] if valid else 0.
 
+    def _top_cells(self):
+        limit = min(self.k, self.n)
+        if not isinstance(limit, int) or limit > 5:
+            return sorted((index for index, valid in enumerate(self.valid) if valid),
+                          key=lambda index: (self.belief[index], index), reverse=True)[:limit]
+        best = []
+        belief, valid = self.belief, self.valid
+        # Descending index breaks ties the same way as (probability, index).
+        for index in range(len(belief) - 1, -1, -1):
+            if not valid[index]:
+                continue
+            probability = belief[index]
+            if len(best) == limit and probability <= belief[best[-1]]:
+                continue
+            position = len(best)
+            while position and probability > belief[best[position - 1]]:
+                position -= 1
+            best.insert(position, index)
+            if len(best) > limit:
+                best.pop()
+        return best
+
     def update(self, likelihood, timestamp_s, visual_quality=1.):
         ts=float(timestamp_s);quality=float(visual_quality)
         if not math.isfinite(ts) or not math.isfinite(quality) or not 0<=quality<=1:
@@ -116,8 +138,10 @@ class SoftGridFilter:
         mass=0.;usable=True
         for i in range(len(self.visual)):
             v=float(flat[i])
-            if not math.isfinite(v) or v<0:usable=False
-            self.visual[i]=v if self.valid[i] and math.isfinite(v) and v>=0 else 0.
+            valid_value = math.isfinite(v) and v >= 0
+            if not valid_value:
+                usable = False
+            self.visual[i] = v if self.valid[i] and valid_value else 0.
             mass+=self.visual[i]
         usable=usable and mass>1e-15
         if usable:
@@ -146,9 +170,8 @@ class SoftGridFilter:
             self.bad=0;self.state='TRACKING' if quality>=.5 else 'DEGRADED'
         self.last_ts=ts
         self._pending_prior=False
-        ids=sorted((i for i in range(len(self.belief)) if self.valid[i]),key=lambda i:(self.belief[i],i),reverse=True)[:min(self.k,self.n)]
         top=[]
-        for i in ids:
+        for i in self._top_cells():
             y,x=divmod(i,self.w)
             top.append({'camera_x_mm':self.origin[0]+(x+.5)*self.cell,
                         'camera_y_mm':self.origin[1]+(y+.5)*self.cell,'probability':self.belief[i]})

@@ -18,6 +18,7 @@ class CameraXYTracker:
                 raise ValueError('Invalid acceptance thresholds')
         self.grid_size = grid_size
         self.cell = 2400./grid_size
+        self._cell_axis = [(index + .5) * self.cell - 1200 for index in range(grid_size)]
         self.temperature = temperature
         self.acceptance = acceptance
         self.cells = []
@@ -46,17 +47,24 @@ class CameraXYTracker:
                     self.likelihood[cell]+=math.exp((value-peak)/self.temperature)
         update=self.filter.update(self.likelihood,timestamp_s,visual_quality=visual_quality)
         x,y=update['camera_x_mm'],update['camera_y_mm']
-        local_mass=0.
-        far_mass=0.
-        for i,value in enumerate(self.filter.belief):
-            row,col=divmod(i,self.grid_size)
-            dx=(col+.5)*self.cell-1200-x
-            dy=(row+.5)*self.cell-1200-y
-            d2=dx*dx+dy*dy
-            if d2<=150**2:
-                local_mass+=value
-            if d2>=500**2:
-                far_mass+=value
+        dx_squared = []
+        for center in self._cell_axis:
+            dx = center - x
+            dx_squared.append(dx * dx)
+        local_mass = 0.
+        far_mass = 0.
+        belief = self.filter.belief
+        index = 0
+        for center in self._cell_axis:
+            dy = center - y
+            dy_squared = dy * dy
+            for col_distance in dx_squared:
+                distance_squared = col_distance + dy_squared
+                if distance_squared <= 150**2:
+                    local_mass += belief[index]
+                if distance_squared >= 500**2:
+                    far_mass += belief[index]
+                index += 1
         accepted=(self.acceptance is not None and update['state']=='TRACKING'
                   and local_mass>=self.acceptance['min_local_mass']
                   and far_mass<=self.acceptance['max_far_mass'])

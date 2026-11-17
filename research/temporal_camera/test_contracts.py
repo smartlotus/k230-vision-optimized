@@ -105,6 +105,31 @@ class DatasetTests(unittest.TestCase):
 
 
 class EmbeddedParityTests(unittest.TestCase):
+    def test_top_k_preserves_probability_and_descending_cell_index(self):
+        mask = [[True, False, True, True], [True, True, True, True]]
+        likelihood = [4., 99., 3., 0., 4., 1., 2., 3.]
+        centers = [(x + .5, y + .5) for y in range(2) for x in range(4)]
+        for count in (1, 5, 8):
+            filt = SoftGridFilter(mask, cell_mm=1., origin=(0., 0.), top_k=count)
+            result = filt.update(likelihood, 0.)
+            expected = sorted(
+                (i for i, valid in enumerate(filt.valid) if valid),
+                key=lambda i: (likelihood[i], i),
+                reverse=True,
+            )[:count]
+            self.assertEqual([(cell['camera_x_mm'], cell['camera_y_mm'])
+                              for cell in result['top_k']],
+                             [centers[i] for i in expected])
+
+    def test_confidence_masses_include_exact_distance_boundaries(self):
+        anchors = [(-25., -25.), (125., -25.), (475., -25.)]
+        tracker = CameraXYTracker(anchors, startup='global')
+        result = tracker.update([2., 1., 0.], 0.)
+        self.assertAlmostEqual(result['confidence_local_mass'],
+                               sum(tracker.filter.belief[index] for index in tracker.cells[:2]))
+        self.assertEqual(result['confidence_far_mass'], tracker.filter.belief[tracker.cells[2]])
+        self.assertFalse(result['position_valid'])
+
     def test_time_scaled_soft_support_matches_masked_scatter(self):
         mask=np.ones((5,8),bool);mask[1:3,2:6]=False
         f=SoftGridFilter(mask.tolist(),process_scale_mm_s=800)

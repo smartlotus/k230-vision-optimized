@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "task": "temporal-cpu-budget-20261117",
+  "created_at": "2026-11-17T11:40:30+00:00",
+  "agent": "codex",
+  "session": "temporal-cpu-budget-20261117-a",
+  "branch": "ops/temporal-camera-v1-20261117",
+  "head": "ca4cd7e836db62680be3051f0423bee4014c4162",
+  "state": "ready",
+  "files": {
+    "docs/temporal_camera/CPU_TRACKER_PROFILE.md": "349dd6fe7b4a0619b6f50afae06b12c173e6e1802c38918befca2149cfc0ae2a",
+    "research/temporal_camera/embedded_filter.py": "e6fb4fa6fb3961fc5aca91228152d32097973094ecd0d8d17ae16bb597b5e858",
+    "research/temporal_camera/localization_runtime.py": "1ddc278e480cd96905cf8916a58e43d15cd852d4ae69140ede1e0a0f02f6fcce",
+    "research/temporal_camera/test_contracts.py": "03e43c172b37390b9c29bc67706b23ca20d5088c84d1043fe87e2aade79cdfa5"
+  },
+  "git_blob_oids": {
+    "docs/temporal_camera/CPU_TRACKER_PROFILE.md": "c72510847e3b9e47ac531cfca336ba001b0490b4",
+    "research/temporal_camera/embedded_filter.py": "2bf882e930c58cd8261d3f136d21c613e5e93055",
+    "research/temporal_camera/localization_runtime.py": "cb6ac0fcf67ae887e4439f50661751835e7fbb39",
+    "research/temporal_camera/test_contracts.py": "062d1c3cf910af6b2a17fe8d3bc8ce40837231b4"
+  },
+  "scope_git_blob_oids": {
+    "docs/temporal_camera/CPU_TRACKER_PROFILE.md": "c72510847e3b9e47ac531cfca336ba001b0490b4",
+    "research/temporal_camera/embedded_filter.py": "2bf882e930c58cd8261d3f136d21c613e5e93055",
+    "research/temporal_camera/localization_runtime.py": "cb6ac0fcf67ae887e4439f50661751835e7fbb39",
+    "research/temporal_camera/test_contracts.py": "062d1c3cf910af6b2a17fe8d3bc8ce40837231b4"
+  },
+  "scope_fingerprints": {
+    "docs/temporal_camera/CPU_TRACKER_PROFILE.md": "349dd6fe7b4a0619b6f50afae06b12c173e6e1802c38918befca2149cfc0ae2a",
+    "research/temporal_camera/embedded_filter.py": "e6fb4fa6fb3961fc5aca91228152d32097973094ecd0d8d17ae16bb597b5e858",
+    "research/temporal_camera/localization_runtime.py": "1ddc278e480cd96905cf8916a58e43d15cd852d4ae69140ede1e0a0f02f6fcce",
+    "research/temporal_camera/test_contracts.py": "03e43c172b37390b9c29bc67706b23ca20d5088c84d1043fe87e2aade79cdfa5"
+  },
+  "report": {
+    "completed": [
+      "Added bounded default top-k and reduced repeated validation and confidence distance work.",
+      "Matched old and new return fields and posterior arrays over 245 tracker updates; verified 4 LOST recoveries.",
+      "Updated the host pipeline-ops development reference with the verified Windows system proxy recovery for the same remote."
+    ],
+    "remaining": [
+      "Optimized MicroPython latency, memory and sustained native runs.",
+      "Real-image accuracy, native B/C comparison and 10,000–20,000 expansion remain unverified."
+    ],
+    "decisions": [
+      "Retained row-major floating-point sums and exact candidate ordering. Kept the prior code path for larger or nonstandard top-k limits.",
+      "Benchmarked the same a06 model and settings on CPython as an isolated source change."
+    ],
+    "risks": [
+      "Host latency improvement does not establish K230 latency or field accuracy."
+    ],
+    "next_steps": [
+      "When the device is available, compare the same logits and timestamps on K230 and repeat the full acquisition chain."
+    ],
+    "verification": [
+      {
+        "command": "python -m unittest discover -s research/temporal_camera -p test_*.py",
+        "exit_code": 0,
+        "summary": "28 tests passed, including sparse top-k and confidence circle boundary regressions.",
+        "evidence": [
+          "research/temporal_camera/test_contracts.py"
+        ]
+      },
+      {
+        "command": "python .ops/local/temporal-cpu-profile-20261117.py",
+        "exit_code": 0,
+        "summary": "245 exact replay updates and four recoveries. 4.479 to 3.602 ms on host. Harness and raw local timing remain under .ops/local.",
+        "evidence": [
+          "docs/temporal_camera/CPU_TRACKER_PROFILE.md"
+        ]
+      },
+      {
+        "command": "git diff --check",
+        "exit_code": 0,
+        "summary": "No whitespace errors.",
+        "evidence": []
+      }
+    ]
+  }
+}
