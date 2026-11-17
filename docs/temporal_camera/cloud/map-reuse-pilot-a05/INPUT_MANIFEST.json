@@ -1,0 +1,5117 @@
+[
+  {
+    "name": "cloud_store.py",
+    "bytes": 10870,
+    "sha256": "1f764499ce2098139a57cbcfd7406000c98f4a8ca914bb8d96e9e4656148cf34"
+  },
+  {
+    "name": "cloud_worker.py",
+    "bytes": 2600,
+    "sha256": "d2eef4e8777dd51b637a242ff430131ad6358c528742b075eca4c2c7f4c7df02"
+  },
+  {
+    "name": "data/manifest.jsonl",
+    "bytes": 1402147,
+    "sha256": "e75ab14a8741077cf22e1c72acee0440bdb4969de337d3a1525aa342da546b83"
+  },
+  {
+    "name": "data/QA.json",
+    "bytes": 692,
+    "sha256": "e0f1c8b7e6891ffd3c902788445881d435b391b497c92fb9d51636e1e6439837"
+  },
+  {
+    "name": "data/RENDER_IDENTITY.json",
+    "bytes": 958,
+    "sha256": "2db5e5cf1437f175713fe5e7da8241f9b4dfe9b80ae58187eaa2ecc9523bcce2"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-000.png",
+    "bytes": 54393,
+    "sha256": "034702a0e3633e479ebc5b1ae556f25927aab2c7c2f467273762fdf4bd9c10ab"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-001.png",
+    "bytes": 54353,
+    "sha256": "32bd8bb3279b93e981d95535a5fcb516f72439f8681ffa2762d4f99eca3397e5"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-002.png",
+    "bytes": 54442,
+    "sha256": "6f2ab6e139f1c29ed4d3deaf07c918dba8ec4680e7c053f262fc095846fba749"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-003.png",
+    "bytes": 54617,
+    "sha256": "cffc4728130047c2327232c3f94f5a396e6159652be67cc5b87c5049717fc5c4"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-004.png",
+    "bytes": 54774,
+    "sha256": "f8edb35c612602351d8a3da614a2e200f8931426f7640ec56a5c6f6b386b640c"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-005.png",
+    "bytes": 54765,
+    "sha256": "2a5709de8bcc74638bd2dc3d969e3b8c5f249a937362975186175329ca8a90fb"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-006.png",
+    "bytes": 55178,
+    "sha256": "d2e9c92eda141970ee594d0c21bac07caa5c2d7db13fb323106ca13ab114bfb9"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-007.png",
+    "bytes": 55474,
+    "sha256": "5c99abf9e933b5b501f3b811c653a1783bc4f5bd55358d06435d1d9d0c91a6ef"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-008.png",
+    "bytes": 55870,
+    "sha256": "69ea65645b2e11ebebcdd175d07df29d5171b35c2ee29dc9c5013f149ace02f3"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-009.png",
+    "bytes": 56039,
+    "sha256": "b2ac40f7918a0c5693b43fad184d778617ef16764d5a6a66005eb1fdfb00c5b2"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-010.png",
+    "bytes": 56580,
+    "sha256": "9c0f2af62d9dfda44c903947d5d2ae69aa9e95a70fdbb03c1402879968943576"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-011.png",
+    "bytes": 56857,
+    "sha256": "2393f59e8f58165da59ed8cefa87196ab3860847df5d3ad7d96773a230abfeab"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-012.png",
+    "bytes": 57197,
+    "sha256": "ce2d3ed6cae05d21612857c1de2623ea7df709774b4e840d0787c6271e91542b"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-013.png",
+    "bytes": 57523,
+    "sha256": "cc70909007c6da87db86c129e95b6053ba26420b65de9b4d1adfa6f6da245b13"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-014.png",
+    "bytes": 57977,
+    "sha256": "42088b91ce00b3f690c5774dc94a28a382cf435b5225a053f8e77bc6fdf55685"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-015.png",
+    "bytes": 58457,
+    "sha256": "100f78c19e0176e06e28a8c5a9e171d707a55219ce1d345722b09c484e5ab52f"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-016.png",
+    "bytes": 58566,
+    "sha256": "8cb09d69f97e8c7ed00f7d3aa5e99851b65de3ba755582d2ca8e6ef678af0466"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-017.png",
+    "bytes": 58664,
+    "sha256": "219aee75e1fc6163f393b7e72fb93764e0456d16493939dfe0494666be50dc84"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-018.png",
+    "bytes": 58531,
+    "sha256": "37fa04dd832889a29f28a1672f57876fc64146d3646f44a20ebd046f3e9030a6"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-019.png",
+    "bytes": 58835,
+    "sha256": "0f82c15c6e090e77201e0c897073846db9cd7dd68b01f90adec4ad9697f54651"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-020.png",
+    "bytes": 59299,
+    "sha256": "0aada96abbe47ab283e5422ad7146db7aa96797ba7d4bc4cbccd4bece82a3b59"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-021.png",
+    "bytes": 59566,
+    "sha256": "bd6686875ad3ebc2c133a4889bab43d6d51e373601fe7e7de8679e84e4c96f21"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-022.png",
+    "bytes": 59792,
+    "sha256": "bc19908710699ea9d58ececbd6e96aa2ea06f1730eb91dbd38bda6e999039acf"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-023.png",
+    "bytes": 60292,
+    "sha256": "01d03da30e49f5344749b274f72637c93a24e00ed0181e05d245f5446196422b"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-0-024.png",
+    "bytes": 60295,
+    "sha256": "30a27e8b07211c6119e462f431ab9bbafa645993697c1e54d8897a35e8a921e0"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-000.png",
+    "bytes": 55023,
+    "sha256": "789f29b3b1c7fab6f182744548ee5a21ff51c5250e1429336aee5b76446c2509"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-001.png",
+    "bytes": 54837,
+    "sha256": "ca620bf9ce3ec2ebb7900286f8269469b8b868297193f7b10a5a331a4ce3d03c"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-002.png",
+    "bytes": 54824,
+    "sha256": "5787fc12915fb0a2b2c68d40808bbc08ea25b0aea0e60399e9d24dd732f9d2f2"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-003.png",
+    "bytes": 54947,
+    "sha256": "0e84f2167e080b4465910adac0da7eff2a010644c7446c4a79d0b48e8bee369f"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-004.png",
+    "bytes": 54869,
+    "sha256": "3dd26719f85f4f8e5073a4767790210bff15f2d2c1577b1c71bc83058485e643"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-005.png",
+    "bytes": 54833,
+    "sha256": "659562801b9f7b7880f6e1b01f47d6e4426bc51532cb2f432be9f842fe5a1158"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-006.png",
+    "bytes": 55031,
+    "sha256": "28efc88ef182c8efc4c1fcfd53cdcd845adf2293d4bb265bc121e817fd2ca759"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-007.png",
+    "bytes": 54844,
+    "sha256": "7a6ed3ece88efc7419002b9b48078ae0f591466557f7ba0c7f8755f3fcb687da"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-008.png",
+    "bytes": 54974,
+    "sha256": "12fd6aaf8bde3feef76a157b5cfa6f68fe6618877c82a237e083257d3c86d270"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-009.png",
+    "bytes": 54977,
+    "sha256": "0897cf8b84cb02a17085bce138bb0fcce0526fe114e53a569d5089152136ce18"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-010.png",
+    "bytes": 54904,
+    "sha256": "6fc74bab3502dc4a558feccf14a7094057e15ec9c4e688cf22f080f5fdd7fd9e"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-011.png",
+    "bytes": 54973,
+    "sha256": "4186802a26bf2452e7deed300ee2bdfeec6c6906ae7156e29f26257db12fcc05"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-012.png",
+    "bytes": 54765,
+    "sha256": "2a3c306c7e68c694276fba608c3ac7778b9ced4e9b6ba5e259cd771ca9f21f13"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-013.png",
+    "bytes": 54723,
+    "sha256": "232b54d2dde95beabbfd43ad0b8e8552b3f9fb57fe2dad86d0d8a3faaadaea2b"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-014.png",
+    "bytes": 54760,
+    "sha256": "d517ce64055889c0412583e3cdd851ae94fba11ebf260fe13774b1d705daea3e"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-015.png",
+    "bytes": 54452,
+    "sha256": "e70817e25456893d74a194b87b7c477f3f536880d52ff587d81f054fef7c987d"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-016.png",
+    "bytes": 54503,
+    "sha256": "450522aef313784b3d87b7ba5d3c1444d5911af5749806151635a426caad6d8c"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-017.png",
+    "bytes": 54230,
+    "sha256": "3baaaf829b9474533c6ee4edb0c85085bd4f00f969267745c41f80edb7c0c865"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-018.png",
+    "bytes": 54195,
+    "sha256": "77dc712c00de98bfe3bf829c73255d186b72c34ba3ef9fc1856a567ad3e6cebd"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-019.png",
+    "bytes": 54255,
+    "sha256": "04fd8df2ad230ff846c9a1c3db376b5cb34a17297f06a8340379d23564fe71ca"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-020.png",
+    "bytes": 53915,
+    "sha256": "9cd3e0d676419700f64137232603ab29bc9fd28b186551f0990db90146ad8a73"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-021.png",
+    "bytes": 53982,
+    "sha256": "239c19e9380de284a70ba00f9870fc75a91571d6d2b1b20ae9ee5acfa8248879"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-022.png",
+    "bytes": 53875,
+    "sha256": "967c7cdc8780353932a4e45e366df4a09efbc4742b44860e85cdb0d54a37bf8d"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-023.png",
+    "bytes": 53587,
+    "sha256": "114318aaefda52a5b5a6a46f38f88ed75b2c4dfe37fff7c1ca830fe00e659abe"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-1-024.png",
+    "bytes": 53623,
+    "sha256": "b32aefac0514386097db8f02e8cda59567f47a27e9750091539084266c16599a"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-000.png",
+    "bytes": 63216,
+    "sha256": "72dab6f9481e8617f6c238f9273f8e32ef44589ec307072f050bf3f615a456f0"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-001.png",
+    "bytes": 63293,
+    "sha256": "a22dea2ab274a5633acec28cc38dcf7d8b26038784f0e2066f70ef40d4743ca8"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-002.png",
+    "bytes": 63944,
+    "sha256": "95397e7e25753c11e27c4488532c2f899bfc4a78666d4c3f64bd7e10490f31ca"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-003.png",
+    "bytes": 63406,
+    "sha256": "fc57bc6143a5d8cb029de4fe94a0efb1cac340b2f2a49c16a4a1eea2ce988339"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-004.png",
+    "bytes": 63171,
+    "sha256": "2ed6ee359ed7addadfc2d342bf289a8bda9e19ac2e4f25cba7c005b8376a2233"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-005.png",
+    "bytes": 63284,
+    "sha256": "73acfdea635343e914c4c9a98c2594010bf4aed79d4a97b8fb64ccf4f3dad0bc"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-006.png",
+    "bytes": 63169,
+    "sha256": "ff88b3122133c05cc1657c35d458903e53830fa060b1a21662fa23ee62513e04"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-007.png",
+    "bytes": 63233,
+    "sha256": "8c9da6dc4636eb3d95b21b3d7154512df9c7006bc7b557e0b4ac128ed88d3af3"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-008.png",
+    "bytes": 63291,
+    "sha256": "8546fc82b4b0e19cc968cfc54c2678575179090e395ffe82cd0291bf2a898d8b"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-009.png",
+    "bytes": 63304,
+    "sha256": "0d57e49dfcbe415cc79a09ab516c9ac56df98d10896c619da174211cbcaefaf9"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-010.png",
+    "bytes": 63307,
+    "sha256": "c545c435a3d7ba3d0e7cd6c53f2e3a5b156f08997fa532cde8fbffba6fea1421"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-011.png",
+    "bytes": 62882,
+    "sha256": "957ba90f05e8839b44d7a8f6dc08aa1e623e35ac1d2537a69fbba5b4f477adce"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-012.png",
+    "bytes": 63063,
+    "sha256": "2c074d28ee8b3f00d95778995185b216fd657263d4ea72fb152d448aba8b7424"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-013.png",
+    "bytes": 62724,
+    "sha256": "9dda8ceca0f0bde3ef24f89816e970271a1160f510eb234986100e9cef1ed8d7"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-014.png",
+    "bytes": 62462,
+    "sha256": "871ff2b501cd6aaaf6d4eb61632411e6c2f9f81cecbd3a9afd892c103f60acdc"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-015.png",
+    "bytes": 62095,
+    "sha256": "27d876fda343a475d8ca290865436fcbbf69ee4e461a2e2f6a3b6a3842d03083"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-016.png",
+    "bytes": 61893,
+    "sha256": "806ae5973ea7f3e47579789177c8a54d3d666181947ed5ce0e29703352c3c021"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-017.png",
+    "bytes": 61745,
+    "sha256": "9eb4a39f5b7cd4c0289d4303af2ad7eadb897c2a016c7cb8ef636a0f36517cd3"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-018.png",
+    "bytes": 61741,
+    "sha256": "d06d1acc4190beed8dfd427a66204762af63d8b166ba7ea4bdf643489ce3d954"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-019.png",
+    "bytes": 61867,
+    "sha256": "3c05652fa570c2be4cd0a9fd4f575a61870124d21da9bbe45692341099333922"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-020.png",
+    "bytes": 61441,
+    "sha256": "2704d8760cd92c56470fe02f15be777ddbbbeee6af1b79a56f11f99d8269e90c"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-021.png",
+    "bytes": 61350,
+    "sha256": "87036eaeba88c3ad8613a50b02da0b55b5516d5afb77e6259e1b470d879b5442"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-022.png",
+    "bytes": 61048,
+    "sha256": "8533ec45fef6397d683b3b574f28fe9a4b358a05538aafba0dc917e5c25d8256"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-023.png",
+    "bytes": 61047,
+    "sha256": "7c0b64fb85a69f42bce3c9b0c8f667966c4b2c0d2a7f2b846168ef6fb63bd799"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-2-024.png",
+    "bytes": 60897,
+    "sha256": "63cfa303c9f097cdb05ec887ea6d02d3a19ffc0629eafdcdac1c6a0b4fd397ef"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-000.png",
+    "bytes": 58247,
+    "sha256": "ffe8aaa95b6b74741896cdfea55fce8bccfa502159755e214012cbc468b8a608"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-001.png",
+    "bytes": 58086,
+    "sha256": "1e8d642a66c8bf29267ebe823e8653d1439f37502d23beb7ba3d3b7a2c5101f9"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-002.png",
+    "bytes": 58024,
+    "sha256": "65496db642f7923429e94cb4f28eaf6661e147663e49e06d3ca5f5ba818a2d6a"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-003.png",
+    "bytes": 57970,
+    "sha256": "7db7f8ea99e81e98de6dbceb0fd92c2677bdb5f893d8b0677a1edf5907eeb325"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-004.png",
+    "bytes": 57989,
+    "sha256": "be83aed6def17ab0d83f47395dcda45458d1123ffc02f610d947498c687cc23d"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-005.png",
+    "bytes": 58005,
+    "sha256": "cb1425a0e244c1ab492118beefca11549ebf11e0eb7ebc763cc0e6620e4ca25a"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-006.png",
+    "bytes": 58101,
+    "sha256": "8237a64ce41ba7437f6fae4d2c3a312bcb5c264cb0bfe9186c4d8114811913f5"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-007.png",
+    "bytes": 58019,
+    "sha256": "35e01a36c3f1f1ef41ad404fd91769bae22d12042709f6036e7656177aac3de7"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-008.png",
+    "bytes": 57963,
+    "sha256": "5a61b62a73aa5a77639f73217938720822661733bb8bbffd743608df04a6568a"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-009.png",
+    "bytes": 58075,
+    "sha256": "527f892b6703fa9a060865b62a3ba8d7cf85e08c9cba8ad8bda7bfc3d4f0f753"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-010.png",
+    "bytes": 57748,
+    "sha256": "ef4afb961b89adee8f3ea7b0def808c419f4e95db45ebce0db8acaf7893a7ff0"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-011.png",
+    "bytes": 57647,
+    "sha256": "8d6e14e1212242b5a99df6c4ece31bb21c5969607c77d92139c204c01e839360"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-012.png",
+    "bytes": 57733,
+    "sha256": "a8fb5f68b4ea4782224dbb255a2b363e1234081f9ea9ab739fef6e5c33d80637"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-013.png",
+    "bytes": 57506,
+    "sha256": "f95fc878d521732e950603d2f979c47d17a9464ee0314bef2a1d40772f88768d"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-014.png",
+    "bytes": 57607,
+    "sha256": "2bd1b9d14a81b7d2ed8731dfdb3fa9424e399ea58cf43120620644efba4f1b68"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-015.png",
+    "bytes": 57425,
+    "sha256": "5e0efabecd52365043c65e181d7ad4e25973c1375ec4fd58b407d42411a795bc"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-016.png",
+    "bytes": 57178,
+    "sha256": "c3d407eb3d50d66557b1a71e4622e0ec050c90de7592d776e39e8e239bbe30bd"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-017.png",
+    "bytes": 57046,
+    "sha256": "d85dc73e5bfcfe6ae65cb36cadd657996ac184510c9ed622a5d292397d2a924d"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-018.png",
+    "bytes": 57282,
+    "sha256": "18e0d14106befe99f13762e9cab4f6f708440bfe4b97b81ded1b50ee9337d3b4"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-019.png",
+    "bytes": 57131,
+    "sha256": "57b824fd1e8052b9ddb80fd0c1e3499d79df06308eb5910e02ac495ae674dd02"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-020.png",
+    "bytes": 56920,
+    "sha256": "ffcfbbc2faacf1a95cf4863f65015d72c765f85f07c415883f05d946742daf9c"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-021.png",
+    "bytes": 56867,
+    "sha256": "dd2dada7e33da0e993aa8410ff35f221d2603326cbf76cc7bc5d456c516dbb92"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-022.png",
+    "bytes": 56998,
+    "sha256": "02b7011a3f0d5b9a1bf7615b3449bb90d65165765758445be1791579c09a4069"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-023.png",
+    "bytes": 56813,
+    "sha256": "0d6b2085e87a70a94e6411bc1602c8032b321b66269180265a961bcb5a05e83a"
+  },
+  {
+    "name": "data/rgb/pilot-dropout-3-024.png",
+    "bytes": 56759,
+    "sha256": "c7824a65841711c26b43b7f67fe917a030b057b1147f4c0acf04fdc27b907596"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-000.png",
+    "bytes": 52169,
+    "sha256": "ba11b63ee5855b4efa65b97b4c50cba416567ab8124f6d51f73a9327ef30faab"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-001.png",
+    "bytes": 52115,
+    "sha256": "f1311f5cb50ee978bbbb16dc2bfe2178c99d74838f236291b0bb61ae129c6be7"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-002.png",
+    "bytes": 52088,
+    "sha256": "0b07c0634f6dba7b5012cf71cf177504b23285d885391ca2ad2719509e91de68"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-003.png",
+    "bytes": 52100,
+    "sha256": "0edfb8f6ee013560c67ad81270edca7f156dcade60658841bbb0457ff05e3c9b"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-004.png",
+    "bytes": 52026,
+    "sha256": "86be348ca01189c2405fd15ea67d093463f4bfdc7b7b58c981d306eb5a12daae"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-005.png",
+    "bytes": 52169,
+    "sha256": "9a9a459a5630bd8ae98f36f4d6a2cdcc6ec7a4893242af0ee02efecb54edbfcd"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-006.png",
+    "bytes": 52543,
+    "sha256": "abad33ece5134951e93a0fc97e41ad1887f8ffad21d6020dfb4e8e0edac28189"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-007.png",
+    "bytes": 52394,
+    "sha256": "eb86d4f3900fb2357eb9a3b389d6d27b382b96bb1b70e5211a355a5049dc5391"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-008.png",
+    "bytes": 52557,
+    "sha256": "c91ac6b540cec21dfb5b6ef6ccd538485e87f98051a5264e78f3d3de42c285c0"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-009.png",
+    "bytes": 52547,
+    "sha256": "04fe806aaf4eca05307b3148c6ee1edc0449f201ca9483e94370b02f0fa7ceb2"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-010.png",
+    "bytes": 52648,
+    "sha256": "2dffbff308a40ffe1fe59368a9b160f56d5b35b813eca96dea968a354819987d"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-011.png",
+    "bytes": 52850,
+    "sha256": "87e5bb3f8f7afbd5d966eaf8c241f86bff672610e16a45c0136829dd93f6a671"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-012.png",
+    "bytes": 52877,
+    "sha256": "7e83ed94015b0cc23111f14e8345684104ee5609cb057e497641bfe89bda5c3f"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-013.png",
+    "bytes": 52949,
+    "sha256": "14a2f4a0d96c24d826d6062e056edf80f3a693869661038b38dbf2c09011bb0c"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-014.png",
+    "bytes": 53020,
+    "sha256": "0b194f6493d9296f98e4bd952aa206fa769f047f23c70e20dabca9c0751d2d30"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-015.png",
+    "bytes": 53111,
+    "sha256": "71632d864d3503fa53a2f8af3bfaf134401da15b1e2e6c4a4d6780f58c027aea"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-016.png",
+    "bytes": 53238,
+    "sha256": "32655b731134626c7fbd195e68a4c95a08c528bd5589b0383692022c08acc8d0"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-017.png",
+    "bytes": 53245,
+    "sha256": "0188ffa38fbee0ff334a7e5d340bfa6320de8bd297871ddb31d62875848a6eb9"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-018.png",
+    "bytes": 53330,
+    "sha256": "e6638fac1be8b7f33ff0607e96b532027e3cfb74faf462a2f5746050f94fbb1c"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-019.png",
+    "bytes": 53666,
+    "sha256": "aafe89eec51415ac28a34f7bbe7f202f70071387f34260e81e3bd28dcdcc8a5e"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-020.png",
+    "bytes": 53802,
+    "sha256": "97aa8a5ab867040321f1f6822cd907447769adb02ffc07ad9f380e6dc6813b5f"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-021.png",
+    "bytes": 53844,
+    "sha256": "4e55964610d164cbf0e6c8e97e6d993acace53b2f164a271325cb0f1a61e2e71"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-022.png",
+    "bytes": 53941,
+    "sha256": "fa5bbe255e26ddc4dc7df450dd2d70fecaa8871d6580c7110c4fe61f7ae78788"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-023.png",
+    "bytes": 54054,
+    "sha256": "6b17399e248d941fa8aed76df237672b7eeab3aada0367fdee388f9b56250ddd"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-0-024.png",
+    "bytes": 54356,
+    "sha256": "2d9a55937714017eac08147c13d462a525a4263fb21d13368f2257f4b41716ed"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-000.png",
+    "bytes": 61275,
+    "sha256": "af63f3610bc87a39bd79ba9fa6dcb1ea95dc5d05f5a8e9979d260f1860b2476f"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-001.png",
+    "bytes": 61342,
+    "sha256": "434b94180df0417887d7f566534271f5200d22411d74aeccb9472c0591f59ce0"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-002.png",
+    "bytes": 61275,
+    "sha256": "c7362e242548530ab964275f6ba628076275c65c1695a795d6ee4adfec71b8dd"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-003.png",
+    "bytes": 61002,
+    "sha256": "3f8bfd52374f2f032bc9dfcfa75341899972febf9dba89dbf0b9133c7a9909d2"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-004.png",
+    "bytes": 61220,
+    "sha256": "12db479329a854a7d7303bc5fcda695d95f598d1ba187dd01095da7e3f8e0999"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-005.png",
+    "bytes": 61394,
+    "sha256": "7befba7cc43cff368ae176773b9611c12c29f415683c0384839e003f90a3d3db"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-006.png",
+    "bytes": 61361,
+    "sha256": "d6a642c8dd8bc21d69574fc6f40536047420fd1f6bf15df42cf510c1d260fe6e"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-007.png",
+    "bytes": 61222,
+    "sha256": "b50c561a9d03c7c2bcf4a25822cf58a31721ddbb6ad8668199bd42a8541b3cb4"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-008.png",
+    "bytes": 61269,
+    "sha256": "ea67e2158c62c2c6462868dd9a2b2ff405f6e7c1250fa6e75dcedb853d1ad9b1"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-009.png",
+    "bytes": 61230,
+    "sha256": "9b0b951a547669e7dec8f503c301b4c4f567206b94c1a41373de20bd637d5ffe"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-010.png",
+    "bytes": 60989,
+    "sha256": "2152044d81bb930d910f381d56b8f5a57f9ae203c5c4fdabbaaabdd55be60672"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-011.png",
+    "bytes": 60923,
+    "sha256": "4c8183c94c0b1f73319b1fa07e2e8ba5d36da885c457d47309b284271ced582d"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-012.png",
+    "bytes": 60611,
+    "sha256": "a14f4b86373307dcd48388a34824015c492b10226177f842f46d44f775502438"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-013.png",
+    "bytes": 60522,
+    "sha256": "2f72cb92c32c75e035606c6474173f6275004f8173463b00e2a89433cdae45b9"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-014.png",
+    "bytes": 60422,
+    "sha256": "4ff355261d39857325444d62edc7452fc96939174a3d9fb05c0d8a312aec4036"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-015.png",
+    "bytes": 60001,
+    "sha256": "368fc736886317635acc5f1ec113a54f852fd489fa1a52983ea9a9fa7ba0ad85"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-016.png",
+    "bytes": 59716,
+    "sha256": "3416949654ec2c0e3c77ffffe15d8e8e798e5aaef95ed3e30663c1c373e627a2"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-017.png",
+    "bytes": 59835,
+    "sha256": "4368cdc186c3440e0b6ddeea38c8ce7f4938e0c616ad7816aeb73d2cf3d1002d"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-018.png",
+    "bytes": 59502,
+    "sha256": "552eca35fe1866b4cc28bc87ff98142bb7437c7c81ebe57cc9de1036c787ef5a"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-019.png",
+    "bytes": 59496,
+    "sha256": "51185addc94eeb87afa1bea6fad8b1d558cd6a56208228c09ccc23db533ac9a3"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-020.png",
+    "bytes": 59485,
+    "sha256": "518e1182190bd6f03df70fd4aff99ef676801ce19323da0da47a504109a05fa5"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-021.png",
+    "bytes": 59300,
+    "sha256": "885002e2f67b85b695f32a41353442ec6dc4ba0afb4ff66559bb4150ee23f5df"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-022.png",
+    "bytes": 59264,
+    "sha256": "56e59e0d67ae99fdd502c652e1cbf76cea765e48fd8b3e802b0541982b6b0fd8"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-023.png",
+    "bytes": 59132,
+    "sha256": "4a729fa83bdefce0499fa36fac8cd2d2d5b569910416a89d42af02577d0820b5"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-1-024.png",
+    "bytes": 59130,
+    "sha256": "57cedc3656562ab84e19b256de5e9d30a2dd8eafa98aba1b3e4fefe3ad92cafc"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-000.png",
+    "bytes": 59115,
+    "sha256": "046c992125565e33457290ccf8b0115c09853827453fb677424b4bbe4af465a8"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-001.png",
+    "bytes": 59338,
+    "sha256": "45f9ae964fa18c0d53bf90e081c7d09130486cf5c8eaf79853b6cad73889ea34"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-002.png",
+    "bytes": 59538,
+    "sha256": "0d4a23b98431ded758b467a1ed1e8ee12c5732f45c22f20ffdaafa3b0fbb2933"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-003.png",
+    "bytes": 59654,
+    "sha256": "db8b074dfaf3aa28ae2849558758f062a846ba2faca23876cae87465b2680581"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-004.png",
+    "bytes": 59999,
+    "sha256": "2021f89170012daad2e8a3b4b290488fe47e1921b9f86dfd1c9ffc8dd9b244f1"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-005.png",
+    "bytes": 60103,
+    "sha256": "4ed514ddfd451f83a1d689b92225b0b0ae0a5202b5a38c13372e07c94c66a3ee"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-006.png",
+    "bytes": 60204,
+    "sha256": "b8ff54d8437f352e85981066aff3bb851afdfae3f63d18dc430f24825ccd1c6d"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-007.png",
+    "bytes": 60417,
+    "sha256": "62b31f9372727774e59985fb2e422181ef0cabf4a37b204dae360f481970b9a2"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-008.png",
+    "bytes": 60522,
+    "sha256": "cdd425e05b1b03dd194745cc6ac5a7e8f89d4ee30c7853c93a22f8997a2762b3"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-009.png",
+    "bytes": 60580,
+    "sha256": "685729d2bbf00cac437475f4bade065b2ff26d19191a884b6c53c5b16eb93757"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-010.png",
+    "bytes": 60873,
+    "sha256": "138be6ba49086b9e19dafc5829066b0054e790f8c635c74296b8b605cbd73d5e"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-011.png",
+    "bytes": 60964,
+    "sha256": "131373a0560996e33d38947fbee183e383d97155c187aee68c37c39a16d2bee4"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-012.png",
+    "bytes": 61143,
+    "sha256": "bdafedd77c129f04d485222ef893a4e51214484709d6143aa7025c17f574030c"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-013.png",
+    "bytes": 61426,
+    "sha256": "562d723d281a474e9af562c4e909ce9250c35dde3169cc445ec302aee4b60ce8"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-014.png",
+    "bytes": 61299,
+    "sha256": "4ac7d785ab4b5072be5055607509058ab79fdfc8615885e1d14418cc4a50e5d3"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-015.png",
+    "bytes": 61829,
+    "sha256": "1375c3885fad4a8ae2aa3e10b6dfbe12e3561f2e8517a202a89457a8a7e5a749"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-016.png",
+    "bytes": 61883,
+    "sha256": "ab610db7035266b063c81f0e3cbdc9fdc6424c2e7dcce44b71d1a05316c55177"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-017.png",
+    "bytes": 61698,
+    "sha256": "6171046a842651adc42ea75cdd30fc8def3dbf6253860fdc2ae99ff403809288"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-018.png",
+    "bytes": 61682,
+    "sha256": "29c785e1520f1f52113bfddbce59d6368ab653a22892ec5a890b56d8cfc8a2f9"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-019.png",
+    "bytes": 61985,
+    "sha256": "640ca0261055e677fd1c99e566ddc14ef82af38f13ef4fe799287117e2ea2e35"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-020.png",
+    "bytes": 61991,
+    "sha256": "bc3377910c451ecd12312bda9b9e9ff3abf686ff7b183bdf82262eaf5ce25750"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-021.png",
+    "bytes": 62131,
+    "sha256": "1d62a1a6906c45c077c73d51e6472d6b309f6671f6e770cb5d6b15d71fb6e10a"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-022.png",
+    "bytes": 62271,
+    "sha256": "999dbd77b6f261d3d5b7df66134c482a7a3a69a2d656a0851abb945149fcbcbf"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-023.png",
+    "bytes": 62702,
+    "sha256": "2564dc0e60ff0f667cd485a98e34ab4f0c7410809a49e6a1cfe619e5f9af4c51"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-2-024.png",
+    "bytes": 63520,
+    "sha256": "abe30adeb6e6c4943dff539dccab07c8d2a02d02144324d869679b7953bd4e7b"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-000.png",
+    "bytes": 54979,
+    "sha256": "96e5bb6565a980f4cfdaf60eec6c933294382ddc763a42be8ceaba6b55592ee9"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-001.png",
+    "bytes": 54662,
+    "sha256": "4e0c0bd0c771a59838fd9ede6ed304ca50fb13c21dd85037e4ccd18cc1d29665"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-002.png",
+    "bytes": 54539,
+    "sha256": "482db3bc5a3e9a07f5be17aeb861d14561a3e0ece6df9b585960500d2a568728"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-003.png",
+    "bytes": 54792,
+    "sha256": "fce07fd6b3670f5fee6129f5cdadeaa72b30bb49b12cde9a4c866b78ac3466c9"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-004.png",
+    "bytes": 54643,
+    "sha256": "e1fd516a7cae184908363ca369facab0cd9872bcb0092ff78ea8b18260e90403"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-005.png",
+    "bytes": 54530,
+    "sha256": "46544226fa5a7c44daa04cebf83562fcd5d3dbbc93c811773b8bda0f48105559"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-006.png",
+    "bytes": 54568,
+    "sha256": "6b2a3ee6bc774ea34af975043aa14ae1f7c1ccc1f9ae29401f1338a95ff29862"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-007.png",
+    "bytes": 54506,
+    "sha256": "53cd5dced59fe17eb87ef21549a20cd98015dae4d4406d446ed038b9c6f504b6"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-008.png",
+    "bytes": 54286,
+    "sha256": "581e974f8636dc5157005e24f66ee7f1154f6fb62986168f25e0151f9c0d69b0"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-009.png",
+    "bytes": 54595,
+    "sha256": "940c6d5a993c170e4b2d381b4f5358c522a5b2222e90ca886002ac1aa24a1770"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-010.png",
+    "bytes": 54345,
+    "sha256": "b069a91ca9d827c3a8d69b911ffb275201a28fdc6b114a87eddb925a72bf4a23"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-011.png",
+    "bytes": 54376,
+    "sha256": "265128601e07004967969b7ecaa002dce6c0a32c6b8f1a06c76214fa7ad2d5e8"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-012.png",
+    "bytes": 54318,
+    "sha256": "e41346cd8358c3dd5f9f330d98ca349748c3da14b7de139d27235bf8714346b7"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-013.png",
+    "bytes": 54533,
+    "sha256": "6225a855dee08f7eebc7a2f46ec0f3d87ad310dd04b19e4f464808995f95e25a"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-014.png",
+    "bytes": 54656,
+    "sha256": "32001febaa1a24ba208f86b198bbb54c892bc8b7d153187c689ad553401456fc"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-015.png",
+    "bytes": 54552,
+    "sha256": "a2b3e0dcfdfec2135ca2cd7ff67895888375b384ecbffaead78d0ad27f37bef3"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-016.png",
+    "bytes": 54584,
+    "sha256": "a80cc66eb86a876a63568a20af3cecd4a615e8b0eb2d32a81152a62d002361b6"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-017.png",
+    "bytes": 54646,
+    "sha256": "4e5cf2d8a67220f394946cc647276d5e76511e01d7a499532114037b76dede38"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-018.png",
+    "bytes": 54447,
+    "sha256": "13fce1882ef287df62386ec62e828471a9b612daa7fbd8723ef0cf354e5e40d9"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-019.png",
+    "bytes": 54659,
+    "sha256": "5b70c59456ce06a5eb4d3f6da5fd5c503a60d52899abf8647357733d39c2a2c1"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-020.png",
+    "bytes": 54679,
+    "sha256": "a8ac558fe87accf6a73d85b43e5eae69aa9e3a12cec945b8223e870ab713023e"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-021.png",
+    "bytes": 54370,
+    "sha256": "b37037edb9560c667f55332316c15aded005440ea9e765442b0d51d79a996674"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-022.png",
+    "bytes": 54700,
+    "sha256": "23f7078c72065c31b5b7119b59438c33f365312fca80ed88b10a6515287edf9a"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-023.png",
+    "bytes": 54750,
+    "sha256": "7d6e9f0d7e112f3608bd6aad4778a6a3214b63ac4aef46a836eccea6dd6d8478"
+  },
+  {
+    "name": "data/rgb/pilot-intersection-3-024.png",
+    "bytes": 54762,
+    "sha256": "2e704a6a03113e3a5bf5a7fa6b92be9558898d669445aab8cc70b5b5a23f9c17"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-000.png",
+    "bytes": 58398,
+    "sha256": "a57fe87738dd9ccb70803bc7e0e5496707f127a367f4a8704ec53d73e800e77a"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-001.png",
+    "bytes": 58472,
+    "sha256": "1c2a3f3624184223393a5a863a83e8f4836f97c62d51a04b0e7e2c039633249c"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-002.png",
+    "bytes": 58293,
+    "sha256": "fc0c2b5318fd9fdc557502371f2222e284038aecf90549cc1f11a7df6664513c"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-003.png",
+    "bytes": 58225,
+    "sha256": "5fe72e48123aed2a827a4af59a0dac66c43be76080df30f888de23d18b286459"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-004.png",
+    "bytes": 58396,
+    "sha256": "750534ccabca4858628260f0add3af4c82b7d0170afa7f0584f9c2d096d00fb4"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-005.png",
+    "bytes": 58372,
+    "sha256": "499ff564e3bb85d1876a5446281021234fea261e4041d6f4fa66a91b0b5b0a10"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-006.png",
+    "bytes": 58132,
+    "sha256": "4ac8e833681cb43ac8096f1456d9366260d7b5a9d74ef77faac23ffa5316feda"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-007.png",
+    "bytes": 57953,
+    "sha256": "235e1421b414dd3cd3ee45c09ed70d9dcd672a630c311f12f5c61f191caf4411"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-008.png",
+    "bytes": 58012,
+    "sha256": "72eb844acbcaf779f1455f6787afaf2caa55631d78f3531920c6622fe977bc3f"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-009.png",
+    "bytes": 57848,
+    "sha256": "7631b514a8f00ea7dcf268faf6253c07cc8fdf7303d05d3e27cbef310c77de08"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-010.png",
+    "bytes": 57915,
+    "sha256": "d0f002eada99f6296c07d1b577b18a8c5e4abcd96add13561741abe9d993303b"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-011.png",
+    "bytes": 58251,
+    "sha256": "a9c8123038b95067a1f8510a770817267efe1000a5dab23afb2898c8d6179fd5"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-012.png",
+    "bytes": 60046,
+    "sha256": "74d82e09988583da59ba3eba86992f7a911f68b194eaebf1c70f2aa4e0db5d48"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-013.png",
+    "bytes": 60105,
+    "sha256": "a01937e3434e12153076ab649ce938d4a3873c06af21700fe2b3d91e83c8d815"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-014.png",
+    "bytes": 60030,
+    "sha256": "d3c63fb429dacf976c78ce93135e6581914e1d9df7f4926bfc713208fb076878"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-015.png",
+    "bytes": 60033,
+    "sha256": "14187bb1b8be2f05e78b4a65eb44b95ccfabe43c35301b9fa2b67cfc2e39b042"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-016.png",
+    "bytes": 60379,
+    "sha256": "74944980ff7412348a7cd8910b6aca9d7ee1c3e92fe92fc3a562cfa54cdcd8e4"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-017.png",
+    "bytes": 60465,
+    "sha256": "e078f5075136606113f0798f08b60efd954777cd65290df32bdabc7ebe058128"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-018.png",
+    "bytes": 60553,
+    "sha256": "afb32c9d9d29b50465e4aa4557fd803572c06fe3aeabbc22293bafb31202c9ab"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-019.png",
+    "bytes": 60660,
+    "sha256": "9343eb286e19c98fbfa10f13db96fcb7871b7a6bd26da0d5c69eda102a3bfb11"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-020.png",
+    "bytes": 60571,
+    "sha256": "a9d712b21979d65dcb0066884890b399b73495d9c5978620f641d75ddf364c7d"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-021.png",
+    "bytes": 60933,
+    "sha256": "0e9a6bada50fb1563493d6311039071935217a5b400780050f7fa22f41a04a7e"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-022.png",
+    "bytes": 61030,
+    "sha256": "793221163e9d78fae9599e4857adae6d5eb5598dd4008914ed96d61f12b9b9d5"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-023.png",
+    "bytes": 61237,
+    "sha256": "c8078a7a3bc0ceb55d806237c68481478e69dac1d927c0efffaf545e34902512"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-0-024.png",
+    "bytes": 61124,
+    "sha256": "e3119cef2e4e6d40d117c63d35769e145e2592029a6c90d4cc4a4fcdc564c677"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-000.png",
+    "bytes": 61648,
+    "sha256": "6a09ae671d17f2e7844f86406097e650a4d1ea8385b8ca92fd64e3ef233e0cc6"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-001.png",
+    "bytes": 61489,
+    "sha256": "63f7706249f997ec4419378d702a60df25b434cb41bc36fd1196ac147ac2bbe3"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-002.png",
+    "bytes": 61526,
+    "sha256": "eecffbcde02c16b48ad27f27df0f4902969390d74cd0cc7ab244fcb4c2b7c36d"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-003.png",
+    "bytes": 61305,
+    "sha256": "5b28df9c2fd488240fa448c070c285546f4b77a4567440520e2417bc2ccb2e36"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-004.png",
+    "bytes": 61365,
+    "sha256": "e4c5a377895a6b619e8c14868fa6794596121bce087d3e5d148b95bffb3826d5"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-005.png",
+    "bytes": 60995,
+    "sha256": "b17074a4348f5df2c3d58822ec9ccfbbf32e2c294d8c1d61d87b95d10025580f"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-006.png",
+    "bytes": 60798,
+    "sha256": "d018bffaec55166e4d140533ee6b4a60cdc10e723a243f18098f486b2371b0e7"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-007.png",
+    "bytes": 60657,
+    "sha256": "6fa3f901208ba13b2d646bc8afe8dda9ceaa9bbd8bb1f56d724409129483a152"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-008.png",
+    "bytes": 60474,
+    "sha256": "72102c2e8625e59515aac23ef7613f48643e67b9c8d2f7c4e390948c7f962576"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-009.png",
+    "bytes": 60236,
+    "sha256": "7082dd59b5234e8da8188345a8b57a9cfbd750e8714c50fa5927042258a06349"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-010.png",
+    "bytes": 60142,
+    "sha256": "4c90babd6f62f116c1b40384622bf66cede86d95e1a2f7ae1ad593816f7c79e1"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-011.png",
+    "bytes": 59835,
+    "sha256": "67de2a886c67f83144082992b9dc2ba19afbd0ee4179a3e4c4b9c5c7d74ec3a0"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-012.png",
+    "bytes": 64201,
+    "sha256": "eb7731c6fff338ec3c55d0a66a2d2a4b249a20ece473ad7b53635b004fdd36b6"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-013.png",
+    "bytes": 63940,
+    "sha256": "0b79723b210aa2b4f0ba1a9e772f5437e6cbb31de9faa4a69c680835422dc73d"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-014.png",
+    "bytes": 64009,
+    "sha256": "b38c07917115c4b013a8663c37361a5701d2f42c0d442a2682ddc3726f8fa135"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-015.png",
+    "bytes": 63513,
+    "sha256": "2309b2ba2f3779375b8bda15d0327ff1c227a15ea5bfd629eef86d4507c29b67"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-016.png",
+    "bytes": 63419,
+    "sha256": "b7dda4518cb17e8cc202bd6a021d1324bde03df324bc544c365c66210b24ebd9"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-017.png",
+    "bytes": 63081,
+    "sha256": "048d8ec7b5ef8782fd65611eeaf33480dc3279d21e373dd01f6b7eec3cf45b7a"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-018.png",
+    "bytes": 63186,
+    "sha256": "deb655e997c29d4c01b831f1b217d48af6215899bc2ca5db5330bc77a7cbea5c"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-019.png",
+    "bytes": 63249,
+    "sha256": "191557df403e8ba5318af83c02851738eea80f0bca66fc6ebf41259567464c1f"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-020.png",
+    "bytes": 63266,
+    "sha256": "0a939fbafc8b6e95bab4fd46f99453f9097b15647ed6ff3029e1c358626c8142"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-021.png",
+    "bytes": 63042,
+    "sha256": "25521dd494b14fe8e8b33aea2a375dadc626d323631adc127284e8d0ab933723"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-022.png",
+    "bytes": 63182,
+    "sha256": "052fa330de94ade23e286756308b4211fd91922cb0a480395f1f624df7992420"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-023.png",
+    "bytes": 63227,
+    "sha256": "544a5996ac492f5dae58b013b1c7128b4445f5b5a9d751d2c362601b11c0004d"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-1-024.png",
+    "bytes": 63047,
+    "sha256": "03d017f5b3f842d99bcc635dfaafa119bb0727ac6875d3f7013455864571e93d"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-000.png",
+    "bytes": 57737,
+    "sha256": "bec046ef62c60b45e689b940eefda323d6847f5963797317fc883d8594842830"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-001.png",
+    "bytes": 57665,
+    "sha256": "eaf1dc299d654a8c7cd887722f934b5115ba501fc17782cd72f05f071ce6ae18"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-002.png",
+    "bytes": 57741,
+    "sha256": "eb7170314c5baabd7c606174fcd9a5286f02759bc375a53e1b70bb554dbba458"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-003.png",
+    "bytes": 57664,
+    "sha256": "2afb68f6d91de392138d446962b4e0d6c84d1a7ef976d555269cb09566ea8585"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-004.png",
+    "bytes": 57542,
+    "sha256": "64715a59f4d96d00340103c8449d9b9120ec99d282472c5c2e86e7e52619b76b"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-005.png",
+    "bytes": 57425,
+    "sha256": "1031f4139745b344bb6e3db86e3a93c013f987ee8169f864c59d8f9c8905b8ca"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-006.png",
+    "bytes": 57525,
+    "sha256": "821989defa38bcbe1ee695d5ecfd21d04ea8d8a2ba5c9685a751c5ea3782f57c"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-007.png",
+    "bytes": 57512,
+    "sha256": "c46df36664a823fab10ae1244de330012a705ef85ef5157fc8dc7509a16d77a0"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-008.png",
+    "bytes": 57599,
+    "sha256": "4deee4cd9edee078a58db16702ac4cd620727ef6c77745e9b4c23ec0e4ffec49"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-009.png",
+    "bytes": 57503,
+    "sha256": "ad4788dfa222531350afc28f0c015f6504a049bae07863ee66bc37c21c4b5987"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-010.png",
+    "bytes": 57418,
+    "sha256": "f66612831b44418c3ca13bb88d4162e6df0823733ff60b030f368055ebc47896"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-011.png",
+    "bytes": 57436,
+    "sha256": "3353d9f11b8ae788bfb6ea06d682a085b965eb33c5b280c389910ae65bb86143"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-012.png",
+    "bytes": 59206,
+    "sha256": "16517c5ec5a6cc05e039bbb461231c1dd97e6849c7dfe873c6d6835ade3c67fb"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-013.png",
+    "bytes": 59036,
+    "sha256": "486d5e337858dad32e32ac6d514dd09afa5c162ed5b911718c9d2fe5159f0997"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-014.png",
+    "bytes": 58811,
+    "sha256": "df4303d976389063dedd44bdd78ffc28f7406f1b4782c6061675a604be2d78b3"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-015.png",
+    "bytes": 58786,
+    "sha256": "25caa202a4d52d0ad0ee82c3921bd0ff502142393d204593966b1e8aa2fef253"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-016.png",
+    "bytes": 58632,
+    "sha256": "eaa6682c801f97ab35f8caa489cbb2edd9ed34673d242e7ae497ef8749dabf7e"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-017.png",
+    "bytes": 58537,
+    "sha256": "8fffbb3dc64c14ae42d7997981ebbfd9f493b26dc0f13ff39fcae68886df853f"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-018.png",
+    "bytes": 58538,
+    "sha256": "72d55688b048d272c3db97ce5bf8be467e872556e1bfd57d1b7fa46c943db766"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-019.png",
+    "bytes": 58535,
+    "sha256": "4ebcc73c3c35c9626ae28938110c97bd1da054786fe231f64e4a153132cae053"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-020.png",
+    "bytes": 58156,
+    "sha256": "d28e57769c0279659d701fae2e5d2141c882d6d75e722f3ec1531617712ea390"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-021.png",
+    "bytes": 58205,
+    "sha256": "d763698eb9604b49839611cd51bf82689bbab0ef706b4b999bebe0f5d7af682f"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-022.png",
+    "bytes": 58040,
+    "sha256": "bb484ae0ce79e22d0326e1ede02f425f44704e3b32241a32c4180373b48125fc"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-023.png",
+    "bytes": 57941,
+    "sha256": "62f788bac2ee8ce17e56fc41abd038dfb5efb6d3583e9b8e095dac4ba77bfc15"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-2-024.png",
+    "bytes": 57798,
+    "sha256": "b7f03ef186a935bfd8284ecd60ee4086455deeefda417ce9fe430172a1f7287c"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-000.png",
+    "bytes": 62618,
+    "sha256": "34e74293523d550cd9b3632732af329e0f30974350e16c393432999bd5f14825"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-001.png",
+    "bytes": 62478,
+    "sha256": "170398e9632e85c1508c6a39fe7726a3042166e9b39bed13bd01ff290bfa0ab6"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-002.png",
+    "bytes": 62234,
+    "sha256": "38c37217e49872dd50ff8f605ae2d3c82b20d65808f9d5622de538e5b831bec1"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-003.png",
+    "bytes": 62087,
+    "sha256": "7b9e69abfbdc0e4c419e07916ea8c71fc746aed7f8c24191d351db36bc208889"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-004.png",
+    "bytes": 62097,
+    "sha256": "ba25155a876138879cfe9db672adc07fa04fa8f729f3eed09a9dbf00bb8b9e6a"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-005.png",
+    "bytes": 61837,
+    "sha256": "149e1e56aa874b67e8abb5bb0423f605c71cf0a53d2192d8efe2a11b9134afbe"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-006.png",
+    "bytes": 61802,
+    "sha256": "1d7bf61e8cb03ea3a34244d4d1f8eb1ab2f87a9860f80e1a524a470006e68e10"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-007.png",
+    "bytes": 61700,
+    "sha256": "65145f6663f29a56768707b4ca9ea2f47bae0573e4e04c710bfc56324c7dec49"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-008.png",
+    "bytes": 61613,
+    "sha256": "6a6e1a1e3b56a55750fe9a284cb29fc8996b841bb76baeb5b06ef1b09086c7fc"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-009.png",
+    "bytes": 61429,
+    "sha256": "3b4f0a7dfe6ce4a60f853494a5ace05a313feeaaddc06569d4870aa2592e85a4"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-010.png",
+    "bytes": 61410,
+    "sha256": "9717767a90575506c21a8387ff9156a7341dc53b4568fafc6debb34b7dce3f8f"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-011.png",
+    "bytes": 61427,
+    "sha256": "f0084ced15a7343aa2d9b27e71588835301e11c9a5ff3a7e8fd37d1353edd684"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-012.png",
+    "bytes": 60991,
+    "sha256": "e6c19747be22f342b7c241fdc066770d201d5ddd7b1ad61b8d212a877e97c3b8"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-013.png",
+    "bytes": 61170,
+    "sha256": "efa7c9880b5f3e1ed9b9859065f06dfd8069e00252e36088891aaefc89e62d85"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-014.png",
+    "bytes": 61150,
+    "sha256": "eaba710abd350dc45378234006496537a692d3f85b9eadbbfaa207c8c8273b6e"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-015.png",
+    "bytes": 61054,
+    "sha256": "0c44ea102a6d31b376161674de87dc4fc2a25af99b9aca39be699ddd123ed042"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-016.png",
+    "bytes": 61033,
+    "sha256": "64314a006f36433c3b1b385ee0bc4f4454da60a80df27f5c118817e4ece26582"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-017.png",
+    "bytes": 61256,
+    "sha256": "fcfd6a679ac32add3b335fe84c9f3683871764f12b65f14a51691ff5f1e2296b"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-018.png",
+    "bytes": 61185,
+    "sha256": "f5d6638f1a126fe96e7e74c9cfcf3687ba513be1328a74e130f38f7e6d0f2abf"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-019.png",
+    "bytes": 61282,
+    "sha256": "b2853c5c2a7e516ccd8d4f91aa9cf6ce2fb6d9f6827e668d4c714b78a08a911d"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-020.png",
+    "bytes": 61150,
+    "sha256": "490b0779e22d21a44ec8281c75e7f36f252ce3a77d6bffa26932ba9d4e0481cb"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-021.png",
+    "bytes": 61076,
+    "sha256": "3e3e6b85b4c58d8096027d6d6cd667a5c43371c35d5af6c0c2f9841cdcf8d4e1"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-022.png",
+    "bytes": 60877,
+    "sha256": "5e985fabe656f5feebf86b374681f7addf571f31ae1781a14620dcb9a93df088"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-023.png",
+    "bytes": 60666,
+    "sha256": "f0156f12d9b8233cf11a183612f4e72d809c4edc56fa705e336876c8483a3518"
+  },
+  {
+    "name": "data/rgb/pilot-lighting-3-024.png",
+    "bytes": 60733,
+    "sha256": "569381a2bc5c5c327d74346f13bbd171d685dc07e31351b0c8f766d59497bc3f"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-000.png",
+    "bytes": 62040,
+    "sha256": "5b8394d3d80fb12a11c44b3d24730ef3da672816def34ca47db7f0589ade5bf1"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-001.png",
+    "bytes": 61834,
+    "sha256": "377e7addece5b0327df1e0c31799afec579a43dbb27fe1c64710b65f7d415264"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-002.png",
+    "bytes": 61654,
+    "sha256": "b98f51e74828284581e448439553589461b1c93ec1e47da913bb7628c90ab805"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-003.png",
+    "bytes": 61519,
+    "sha256": "d2bcfb09bb1abd1de23f1eff0f1d41fb465194b05667f0222f857802ac4a5c65"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-004.png",
+    "bytes": 61818,
+    "sha256": "9c61b0ff9e39b266f3d93916dc226c164c901d7994ffe0ca018c06cf08022a3f"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-005.png",
+    "bytes": 61859,
+    "sha256": "fab576b0c76f82e00edef3bc18fd750613be3821afcd56a76c976b0244f05f1d"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-006.png",
+    "bytes": 61718,
+    "sha256": "a7f56f1cfaff8c6015142b4db3dc6eca165d409c2ea4009aac96150442734e45"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-007.png",
+    "bytes": 61830,
+    "sha256": "9ee3133f94ec9287e5e1ce81689c6115505233966d34261a35085fbb9b17dcc1"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-008.png",
+    "bytes": 62038,
+    "sha256": "54b5266a270538271447f015be543e6552cc13f9ed104f26b588cc7d35d7cd71"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-009.png",
+    "bytes": 61892,
+    "sha256": "39895094417cf6febd55c7e1eefe6dfcbbd7a060a3c49c4a0aeee7ea3e1bf87a"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-010.png",
+    "bytes": 61656,
+    "sha256": "a362ec64f89af02422041279ae73bad97e5787636e0c3fb8831e20a29d835eac"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-011.png",
+    "bytes": 62076,
+    "sha256": "a6cf1c6401ff0000b7aaf2941baed5b65e18d75ca49c6825bc3007896f400752"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-012.png",
+    "bytes": 61873,
+    "sha256": "b796e7ce4e6cad1e76a6a875c0fce11eecddf1062a7df9a793edb27aebda5271"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-013.png",
+    "bytes": 61676,
+    "sha256": "b9e0c54252182855102997a0a28b86198f1e914a2e7ce8bcc064878ba1128316"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-014.png",
+    "bytes": 61910,
+    "sha256": "e517e0fb94ee5c64f223fb08ac42798da1854509ed2d70eac796eb363bacf46d"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-015.png",
+    "bytes": 61747,
+    "sha256": "86235059f994ffce93068f4d13029fbd3958e13a263a4776d655e14bc8978913"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-016.png",
+    "bytes": 61582,
+    "sha256": "fd11a68733566e4afabbdc7c3fc82dc0dc0a1a9f67e6ec3e0249639d8505657f"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-017.png",
+    "bytes": 61787,
+    "sha256": "49fb37ca986ed1fe6d3fe94e4dd9b9e509614e234100207c6b6bd8ffa3f40a59"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-018.png",
+    "bytes": 61489,
+    "sha256": "90996a9b8dfa524f6701c3f6db006776531379c45722e368feda49a49847bd72"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-019.png",
+    "bytes": 61454,
+    "sha256": "0df77b5eb7e964649a2727658e07f109e263b0e8eed45db6d876f0508aabe1d9"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-020.png",
+    "bytes": 61373,
+    "sha256": "0b5167ec289df73d1565e55e8105a65f52d677ace54e35446edfb1063cacb524"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-021.png",
+    "bytes": 61792,
+    "sha256": "6e3b026f8dd4acf582975c086012dcf12a1f6ccdf259ce367f3f69b28477687e"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-022.png",
+    "bytes": 61686,
+    "sha256": "93d1266e6cf4680af7156638f87e79276dc188aef3ae7c0f37848421cacb649b"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-023.png",
+    "bytes": 61473,
+    "sha256": "c069f070d583d2a1b9f4e99dfa69ddf8286f9a7ffef8575ef9b468e1fc42cabd"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-0-024.png",
+    "bytes": 61525,
+    "sha256": "e1c04199fc0a57190dcfabf122d62684d0ac88bcbddb7b09f235b71f56601737"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-000.png",
+    "bytes": 62359,
+    "sha256": "1436e7d1ad9cfed5cbb4fbe5b2b7e1e6afc2e1778836708e59fbb217eddf7098"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-001.png",
+    "bytes": 62279,
+    "sha256": "55acf621142b3cd411af35471f700f9d4118402430c0fe74366421069ca50eb7"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-002.png",
+    "bytes": 62331,
+    "sha256": "4848e891b030e75303f44b15946ccd33ebd283350945d41927e72092cf6929ae"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-003.png",
+    "bytes": 62165,
+    "sha256": "52e77a7c9ac0bec36b8199bbf6dc05213361605125eb6c2de2699ef5db2d5263"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-004.png",
+    "bytes": 62202,
+    "sha256": "51b19b82e42912bec7c40fda2480b323cd60c05173d2e8896ea0b011a48ae7b4"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-005.png",
+    "bytes": 62227,
+    "sha256": "5677271f5ea03be25315c0f70277232eb8b1cced2f7add1e557ecd18c6bd925d"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-006.png",
+    "bytes": 62170,
+    "sha256": "80cfa50b3991554c26b4d4b54d73edd55b6cfae2fd38bebcb02a9cc402f2524f"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-007.png",
+    "bytes": 61894,
+    "sha256": "5ec281a7475e19101b317de7a25d2e2f0726bd2aaa2fce875ff43a487f8dcadd"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-008.png",
+    "bytes": 61835,
+    "sha256": "6a2c643effb95b0a4901c031e9c346df7ba838d849199b9db2feb07b877fe1c3"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-009.png",
+    "bytes": 61862,
+    "sha256": "2da358bae07584386ed659de9cb66927be296eb461d55e05c137bf7382f3c992"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-010.png",
+    "bytes": 61869,
+    "sha256": "10e6dd8be119edd219c2d052c0078eb4345e885c88d057ea475a66eebde46724"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-011.png",
+    "bytes": 61819,
+    "sha256": "3dfefaf57bb3a7531200152bce7cc1a3c39cf1bb5271b266175b3ae88a2008fd"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-012.png",
+    "bytes": 61787,
+    "sha256": "7b1c5c6326ad90e11d3582df5d16276d12b6791c68a543405b19d04eb096cf25"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-013.png",
+    "bytes": 61760,
+    "sha256": "b849b9d1866f7698dbb35cd8f6fd26d52c255d4a01a130891abb241f40a6e996"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-014.png",
+    "bytes": 61565,
+    "sha256": "ec82e0ee582775363ce2f59909fcada93feba55456b0d0c7352bb2d5d83518a3"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-015.png",
+    "bytes": 61629,
+    "sha256": "010d47f9b9a7970e1134bf8a1219ff55e531ccf29fe72d04dfcacf862e0507e7"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-016.png",
+    "bytes": 61649,
+    "sha256": "6c4425962499607171afb83a71a8f668a0e87ca223415d4d709c712edfb7f746"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-017.png",
+    "bytes": 61528,
+    "sha256": "33422cd0e1a7a0fa7c3d9cc3182babebc11e26e359a1a19cc854c2baedc83c43"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-018.png",
+    "bytes": 61658,
+    "sha256": "1cb1ee28291b5ec2b4c1abd06d1554388394d8c1852752b33020c5e9bf18b66a"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-019.png",
+    "bytes": 61991,
+    "sha256": "354d9697727e02608ae8cf15d7356a95ee0bb0ca102c57505f4f93f12b60aa68"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-020.png",
+    "bytes": 61534,
+    "sha256": "6651c728fdd79d22ea3432675f0f3f5966ae1aefb697a6ff72dd205ec1c2432c"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-021.png",
+    "bytes": 61632,
+    "sha256": "da648cd40b197ba248d31950907488cfdf3da4eeb13e6ee66df17323ecfa4e5a"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-022.png",
+    "bytes": 61475,
+    "sha256": "cd4989388f9e01c21e34c6cb6b215c333eb5ae42773cb65236152f69cc482328"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-023.png",
+    "bytes": 61500,
+    "sha256": "751ab894a0427a0b1ad5169738b59578aa07cea511586217713cc37712800845"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-1-024.png",
+    "bytes": 61426,
+    "sha256": "569cd3420b172ccdd64c2733c571b01b23ddea4825b2c8a780e8744a182bdb71"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-000.png",
+    "bytes": 63022,
+    "sha256": "92ddbb7e9fef3775703a589bb847177ec0f53bcb9b3d6c96117e99f2e5d84fe4"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-001.png",
+    "bytes": 62972,
+    "sha256": "ce89a35ba0f86fcb511e5ef1c6674c71a1e9d963e1560c3511e9412d632d422e"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-002.png",
+    "bytes": 62646,
+    "sha256": "f681f81715f755992f452db66330b36ac76511fa2610977090ad984be16b9695"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-003.png",
+    "bytes": 62703,
+    "sha256": "7fcc9c5b5373c67c5d3ad8c5af915fdcb0b849ff3a814b7e16f282fbe3c07a9e"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-004.png",
+    "bytes": 62897,
+    "sha256": "87eea5c4e566cee4c2f8813c60193f096292a25667b039420c6ad234406ffdc4"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-005.png",
+    "bytes": 62839,
+    "sha256": "de6ecfb60d5329daad65359c3ef8bc22ac938a711a886a21a1cae8e06c6ca860"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-006.png",
+    "bytes": 62863,
+    "sha256": "cccb93731a32abf7505a4b6a2602c88f7c577e68580fda280914d4cbb6ab68bf"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-007.png",
+    "bytes": 63179,
+    "sha256": "9b3cbe41d60b28a1cde919eae30b04bacff494d4af1c294c3ab1d999e8a751e7"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-008.png",
+    "bytes": 63207,
+    "sha256": "888ab6ce662edbacf72c43004affecedbcbdfe616ac8c35c04cb6ca3c15450ac"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-009.png",
+    "bytes": 63100,
+    "sha256": "c93d5dcf41208ce9e6aba200077f24b0e20a974b80a7cd052886889b4f63ac89"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-010.png",
+    "bytes": 63206,
+    "sha256": "8391a85cd270b5e58288f340e3851a0c422198ece9754b6dd294b981346e17ec"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-011.png",
+    "bytes": 63353,
+    "sha256": "eaf0c4abf73c85322cc659523dfaa7d6bea65907b02efe2c741312b3beb1fea5"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-012.png",
+    "bytes": 63160,
+    "sha256": "e5dbd09be236cfe11dfb11004f6298e87c32ce6e48c69ee5cdd7460e44e576f1"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-013.png",
+    "bytes": 63509,
+    "sha256": "90180e5b6a704e3ffcbfbfa1c106060345599bc12d05cdaea30c3a20aaceb1b3"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-014.png",
+    "bytes": 63374,
+    "sha256": "3b132f9360e8dd412c4507d31772ba09e8caa08b2cc5eb53a5d8e60671ffc203"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-015.png",
+    "bytes": 63427,
+    "sha256": "7165cb2e1ca14b1624debc65e684ba2ea88230b4c686f84a1e5d26322587394a"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-016.png",
+    "bytes": 63360,
+    "sha256": "4a6565bb2b405c595d304b7142533562dcfb121ae73449627f6b095c0f04af48"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-017.png",
+    "bytes": 63241,
+    "sha256": "3c678daeeceaf5101ae356313611ca7cb46120b2453a438afdf96ac4071442a2"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-018.png",
+    "bytes": 63356,
+    "sha256": "ed5eef2d453d3ce38c1e62edcbdc363431aaded1768f43031506743f129c2edc"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-019.png",
+    "bytes": 63208,
+    "sha256": "3d15943123de8c967f994ca8eb8f5a2eede825475f6ccdeba14eca81d487498c"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-020.png",
+    "bytes": 63232,
+    "sha256": "10081de9738bbf68846150115d3c8b582491ca82fc1ec0076bb60f23fae41532"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-021.png",
+    "bytes": 63308,
+    "sha256": "c23bd2d51a0ad2eb22acfd4d24b3b79e86c9c9584b42f619109adb27c3a4a511"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-022.png",
+    "bytes": 63254,
+    "sha256": "ef8435ba22508cfdad421249c32ac877108cf835588b5c4b3aa138ebbcd40036"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-023.png",
+    "bytes": 63139,
+    "sha256": "da6d89c173b3fee3a9b7693ba2e03e3f9f9395236d4f0396ffee43434dc9eeef"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-2-024.png",
+    "bytes": 63340,
+    "sha256": "4123be681a2f073c8027c3c8553ecd9de418bd7cca1951ae735677eda229d3c4"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-000.png",
+    "bytes": 59302,
+    "sha256": "def0140d62df080e40f53981501cf7fde3da2c4e2ea433522f3032d4b04238cc"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-001.png",
+    "bytes": 59237,
+    "sha256": "a4c3679b6599c3442411ffb203acb0eddcb267d4d42dc7b5d021e3f462d7d579"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-002.png",
+    "bytes": 59374,
+    "sha256": "538db5062ec94656f84d7762bf68e34d3315563f9ce1786f0129a1765a265ee8"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-003.png",
+    "bytes": 59327,
+    "sha256": "f1010a885a159337f8f51bf7393c606bb2b182dfa60e94f3bb2176876ae5f065"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-004.png",
+    "bytes": 59487,
+    "sha256": "91ada67f17dbe1c53e444c276b3acc6bd787fa972a826d6309726f1ac1333830"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-005.png",
+    "bytes": 59642,
+    "sha256": "51a889aae5a07cdca0b1d6e2c2f806c729506a41bace35efd8e8000760aad5ba"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-006.png",
+    "bytes": 59491,
+    "sha256": "feea5c0190a7cec57cc75b1d47ddd493b2b2b80f81ad67ab24bb536fdeb57bcb"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-007.png",
+    "bytes": 59584,
+    "sha256": "badd0361ce387593f7544c233dc2c3bb1ae80b9c185bda73c97b9de498502ce6"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-008.png",
+    "bytes": 59428,
+    "sha256": "7f4a21349e9e7324edc70d5dd4b7815cf6297d6a2232576a59a97137cc7cafce"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-009.png",
+    "bytes": 59481,
+    "sha256": "c0738fdbfd184a7cd05cd58d03c6507af0b192ec5dcd1b07f378bc969afc4eb8"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-010.png",
+    "bytes": 59669,
+    "sha256": "7bfdaa2d2eb7b5eee37c7eb0932961068c18b670d281ff80ab85a9eb1d6d801c"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-011.png",
+    "bytes": 59774,
+    "sha256": "2946767330a2ed6caf9338d42ddfdf2d73119c2e6c3a17978a819b6a3623f9a5"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-012.png",
+    "bytes": 59754,
+    "sha256": "963af58bfe6a6fbd992dd78d206f86647a2810559d4bbeb129290ad8b30bc7f4"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-013.png",
+    "bytes": 59584,
+    "sha256": "04bcb0e300fe96c0dd81851d555428cc694204f09ce686d8b80bc9d479816e06"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-014.png",
+    "bytes": 59669,
+    "sha256": "560914136b101d761848864d554b835bff0985c7425410feaf3ad0d308629ed8"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-015.png",
+    "bytes": 59878,
+    "sha256": "8c033dbc1170307f893ca2ca2514d5f518de2f9cd62b90c118f323a0497ba882"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-016.png",
+    "bytes": 59919,
+    "sha256": "1929c9381b5dcd74a4e265588a74baf3ebd6f6e9f1a60acaa927ab86a5af1ac0"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-017.png",
+    "bytes": 59790,
+    "sha256": "3b347c66b6593dcda21105c809d2f67f22a94ce661cc931d09e6beb405955051"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-018.png",
+    "bytes": 59942,
+    "sha256": "d11751308a578ad70882856b68338c94e855e1bfdb8e87910fbac99ddc3c1bc0"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-019.png",
+    "bytes": 59747,
+    "sha256": "30a61abd367ae107cf19ef99e2a5dfafa4fb7dea9b034c338339e968c382076d"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-020.png",
+    "bytes": 59911,
+    "sha256": "cc14a7943899cb728257a355db8336c5c367030b4286274131c1a9a1d1426538"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-021.png",
+    "bytes": 59934,
+    "sha256": "2a543b8511a3502bc4df583bcd832e4239fe81004cef140e4146a3687f45bbc2"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-022.png",
+    "bytes": 59834,
+    "sha256": "6c63fe036521f71e029c1587c21ca018d147a5a1518d8295e21dee207011c7c3"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-023.png",
+    "bytes": 59857,
+    "sha256": "b75ba9b2b7a34e3fa152d78cbcbe8aa7c20b666c6c0a5e5c085a2499a84379c2"
+  },
+  {
+    "name": "data/rgb/pilot-obstacle-3-024.png",
+    "bytes": 59839,
+    "sha256": "af729b06696479919ddb11f2ba4292344a2bfa5c0e4d8ccf78568c1dbb9b0163"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-000.png",
+    "bytes": 65950,
+    "sha256": "dff165ea2f3b99f1c206a7cde564c99e1d5f442ea6dfb2f9f832efb3f258cda8"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-001.png",
+    "bytes": 65739,
+    "sha256": "572059ab6f6bb286ccc09fa9fc809b2f4da985e9cb77c156b44c5d2f1c458bb0"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-002.png",
+    "bytes": 65816,
+    "sha256": "04d98d9ee937b9465f6a4dec131065c1608a219ab423735387f4ac50e441fbd2"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-003.png",
+    "bytes": 65338,
+    "sha256": "c9cd5523d67db5573f6797b6a65298be42001b32865e93c0acd5175b0fb0a4bb"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-004.png",
+    "bytes": 64899,
+    "sha256": "c2c42d20c0a15d927fe6059f58e5026b4ded925cd41bb100da009dcd4855df80"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-005.png",
+    "bytes": 64551,
+    "sha256": "9da363995b0fb65caa2c4953d95a55fb8d0b111de4ee9c374420adc41062d059"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-006.png",
+    "bytes": 63556,
+    "sha256": "10e49b1f9ab85a02ce15c4ed670f629bb695db0d5f4d8d07dfffe2d0bfebde91"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-007.png",
+    "bytes": 63388,
+    "sha256": "8700ed4391f34a7593906e4bc204193c507a47385b4e27d872a9841b4db07e5a"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-008.png",
+    "bytes": 63121,
+    "sha256": "35845521e8ef09e69ba5abc905836dfba24b47746fea39ce7743a61ca870222b"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-009.png",
+    "bytes": 62505,
+    "sha256": "34afae4df2bf28a70c7f6c9ef35fe9ad13bea99c55b874373702314a39c13006"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-010.png",
+    "bytes": 61944,
+    "sha256": "a006afe4f4a61ea30e91ae53c4bc8073338af7d590e32733230d4834146c226a"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-011.png",
+    "bytes": 61373,
+    "sha256": "d5d63bbc1f038f4d984de29b1d9d5bffad4fff84556436201229314e2519a72f"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-012.png",
+    "bytes": 61083,
+    "sha256": "63749d08567db7216416d38c637805b1b1142de0b66f418c5e03232e461093aa"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-013.png",
+    "bytes": 61072,
+    "sha256": "32a4d47798ff7e09a814924c5f7488f2b68e8ff4b34a25fd350b835d6c22192d"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-014.png",
+    "bytes": 60971,
+    "sha256": "335c232a0b8cb0ea1c7b59fad03c88ebc234fb46b733502d9d26cedca97f1177"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-015.png",
+    "bytes": 60599,
+    "sha256": "cb13886b9f0b881cbb934eac49aec430c5b67195b71f098ca594b20860ff22b9"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-016.png",
+    "bytes": 60177,
+    "sha256": "3a9dad6bbe6833856b8823e8aa511fde3ddf55c9f6ddf2c40c905ed933498c3a"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-017.png",
+    "bytes": 60050,
+    "sha256": "e634cd918b6fcda021d5a69d5c7d0bce0b3f6699146b247857f87ec402c93025"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-018.png",
+    "bytes": 60214,
+    "sha256": "cde5851b03b727f402c5559276abd7900e4fc367214a2c9abff68428d3744cb8"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-019.png",
+    "bytes": 60124,
+    "sha256": "eecf0d0e1b0917e5875efe8da8855b029e6a65cd881f7f2874d2cdfd3822ed92"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-020.png",
+    "bytes": 60184,
+    "sha256": "e68beb5635f5872ceed935c320806eedfa01cd490908c2ebf7e23a33b743e599"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-021.png",
+    "bytes": 60160,
+    "sha256": "82e9d37f18162bc76fa6d487b3613e6caaabc14ea8657e690ba395569ed85118"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-022.png",
+    "bytes": 60115,
+    "sha256": "7ffd18a15296c41b81b531b98f594522256470e6993eff73853b7bc84ab14e4d"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-023.png",
+    "bytes": 60142,
+    "sha256": "5fe81cbb7adbf4ded63812c5cc9ed96ceb9ebb5d43ddf2c2b8e29efab517809e"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-0-024.png",
+    "bytes": 60211,
+    "sha256": "94d2f2c1bd4c73bdd6e420e61d7dfe3c9143b097b4caa5a40d920814f16365bc"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-000.png",
+    "bytes": 55356,
+    "sha256": "7e7c2962cdd81c18e658c0a618881b1c2e4d837c5c096a1290ffd3c64378918b"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-001.png",
+    "bytes": 55745,
+    "sha256": "ec02f405f57ac0de6429446d953caeeb962f1aaf9b22e17a5837db58ebd16460"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-002.png",
+    "bytes": 55626,
+    "sha256": "812aa0ff2274fc250e8b221355375fb79c77718e545a2e645519ca5642ee6aad"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-003.png",
+    "bytes": 55559,
+    "sha256": "52d8406f622007a64ede6a4017638a3da04fb781528736fe1be981f68498982d"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-004.png",
+    "bytes": 55485,
+    "sha256": "9134e832767fadee3f3e32e465cbbcbab521e57e3fdf6d34041b72a20c4da6e0"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-005.png",
+    "bytes": 55718,
+    "sha256": "5b521db1af9a893fae71e12f90c6f77a91642ec8ff97f61d9315d8d16f9ce7b4"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-006.png",
+    "bytes": 55671,
+    "sha256": "a26b6cbd9ea6fa6d26e5d4dbc7b08152d5ff68c5e037edbdc85c572812767261"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-007.png",
+    "bytes": 55292,
+    "sha256": "b3cc9951334cf40cae281843d0ea58a876303e4d2e2f37621a608e7c55ede7a8"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-008.png",
+    "bytes": 55249,
+    "sha256": "72b257ac21bb24fe07b1cac1bd9181e361b840600c2e2a2bbff3af5bc75b8c5c"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-009.png",
+    "bytes": 55516,
+    "sha256": "e13b8fd2b77dc847dfdccdd6aa4250358fe5708b6e7b235a1cd22b0a507304a5"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-010.png",
+    "bytes": 55585,
+    "sha256": "9d267c12596a4d839d92acac999ef41576a5994100f46615fc319727acb6c9bd"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-011.png",
+    "bytes": 55705,
+    "sha256": "cef1abed6160fe418b62e383aa0baf82a3a2a5cabf4989723c7334c977004557"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-012.png",
+    "bytes": 55695,
+    "sha256": "ea73b8bc051f8cd187736329ffe6a4469fa6d31a40a735b5ad70583889a28cea"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-013.png",
+    "bytes": 55675,
+    "sha256": "21d28688497ca389a1e655be0af7862cfb9896e910b3174089d908fb146df85f"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-014.png",
+    "bytes": 55619,
+    "sha256": "82a667749d697a40f26ce4eb110aa5e8d9f53ebb0bbeb49b2209ea98062e3635"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-015.png",
+    "bytes": 55647,
+    "sha256": "7445ebb5ff1afadddb3ff89bdee8cd06672e0961a6eee0854255eb3b1f5fc116"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-016.png",
+    "bytes": 56058,
+    "sha256": "8ac54c8047d5b4f0cfa3bd6a7909a42e24f92da4c07fe7d6abf3c1c673072114"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-017.png",
+    "bytes": 55935,
+    "sha256": "e591a108c2ba9f0cc6a60ced8ada55fefeb34347a2e0dda6fd2d0ea560e47e17"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-018.png",
+    "bytes": 56113,
+    "sha256": "68f7616f3eee2f3545e01d01e88bab65d440b2bcef4e3804142dfce210d6ee66"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-019.png",
+    "bytes": 55892,
+    "sha256": "412842dfb275d9ed84c46748fd7b0459cb4f17cef117d5723d91a75a61f66b92"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-020.png",
+    "bytes": 55930,
+    "sha256": "de4069358490c4a51f06fc320a6546e15fa0b71d6667ccc85706944ae365054d"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-021.png",
+    "bytes": 56177,
+    "sha256": "a9e85014ce4b146fcb10b70fd19b8223f1c40dc4cf5421ae82433adba3eb38d2"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-022.png",
+    "bytes": 56350,
+    "sha256": "ed8d09c173fbc8b044c870165a393f07e441f4dcc77d79b32972459f7cebdde1"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-023.png",
+    "bytes": 56217,
+    "sha256": "5b3d8ff2983f66ceb58d90471e1a36afae444b2d3f612919cf989869044e3746"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-1-024.png",
+    "bytes": 56193,
+    "sha256": "56287bcb74d02c01649ef0c205b8b28a6ceee75c8b4ead08efc5d523d569886c"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-000.png",
+    "bytes": 59722,
+    "sha256": "751bd94d2f7eb4a18a6cf7a25b061bc7719c88e7cb843292578409a5bd7f72ab"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-001.png",
+    "bytes": 59720,
+    "sha256": "136ab94bec69fd71a8195bbbca064ceb2e58e6d247aa0e81d02cc8aabc168f37"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-002.png",
+    "bytes": 59599,
+    "sha256": "68513c32171ad6da829fa2faafb2ac2230cda4f44f70aee397bccc52cfb3b645"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-003.png",
+    "bytes": 59535,
+    "sha256": "7d468018afd8dbb2e54767781730c15e93049495f5dcd8fef1018112c0c18008"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-004.png",
+    "bytes": 59353,
+    "sha256": "f8e4457de6dd995ce592834b205bb6b9653de96804df150c0e15437a16bdb435"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-005.png",
+    "bytes": 59317,
+    "sha256": "b44ff718552abc5173366eff22cd694669345617e0606633a74ad5725f3c32ae"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-006.png",
+    "bytes": 59396,
+    "sha256": "5e6dec424740b555a8ec17a398aca40e0b4c05ca8284a82f0341a438053a283d"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-007.png",
+    "bytes": 59374,
+    "sha256": "e91f4c6c66568f574e32e49bf92f19962cfa8ba4b0b1105f22830d578e1394f5"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-008.png",
+    "bytes": 59395,
+    "sha256": "ca124c670105c226b17962f6d65a5e0f45cf71ab797d178bfc2e10b8414db366"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-009.png",
+    "bytes": 59300,
+    "sha256": "719e1a114367fd2ab1393502c652c4973b9c1e5b7d1cf822e7d172b4e3f3d358"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-010.png",
+    "bytes": 59398,
+    "sha256": "d2054999b42a32a2f41fd695691f95f5b53a149560986ace58317f101e470c0a"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-011.png",
+    "bytes": 59142,
+    "sha256": "729753f4742025ea958c7972d22e3c4c657050902d9e1ee045f18cdf2220e653"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-012.png",
+    "bytes": 59247,
+    "sha256": "c14fc6ef3b17b8c106bdcab06f22033ccf35547889de399cc557e41ae6cb1ab3"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-013.png",
+    "bytes": 59100,
+    "sha256": "11fa030f9af720c30a04c96802d42ff71aa61ef641662d6306e42daf911d8f52"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-014.png",
+    "bytes": 58842,
+    "sha256": "5ac8023e14d7ee268ae082e898f8b8fe2dd2c316912b51dfa418aee8db67ed86"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-015.png",
+    "bytes": 59096,
+    "sha256": "a496cc5cd56d3672238743b4346e689f91d8057a543a6f990bc811a065a42d76"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-016.png",
+    "bytes": 58937,
+    "sha256": "40b944f3294d18463210013d027439360e87d031186a3285f91265f31b1a3852"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-017.png",
+    "bytes": 58900,
+    "sha256": "98ffb90f97d9d971ebad0bf2ea1ff5c68e214aee6629b13c9805b7583e9547df"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-018.png",
+    "bytes": 58970,
+    "sha256": "cf40420ed39cdaaa0da06f39543f57f4d25235bc030214193145c3e6627f9009"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-019.png",
+    "bytes": 58772,
+    "sha256": "b3d0226f79b7b11985de13d8756d0a105b24f52174e5a4faa5b4bae39da7a1b5"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-020.png",
+    "bytes": 58923,
+    "sha256": "fe66fc8cb304b163d8a38bf86e439fb0e94b349ff55f0bd314be1314e90a79d4"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-021.png",
+    "bytes": 58824,
+    "sha256": "e9bddbf53c9d41f7fa5176b1c318cfc7ae9a1e7436f93eacad0860d704b88e76"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-022.png",
+    "bytes": 58647,
+    "sha256": "5933efe81b8af29e41494f6b71b41d27efdde98742343b1987803efac1ec7323"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-023.png",
+    "bytes": 58588,
+    "sha256": "eb114f39f1849ac5e8f5e594c025799a6f7457ec31fd0bfc6ad5e3464081d867"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-2-024.png",
+    "bytes": 58551,
+    "sha256": "22f739b63699d5b85c1484e5d72da9d27335f318942153cc27a6955ceeba2ec2"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-000.png",
+    "bytes": 64120,
+    "sha256": "58b79eb9277b16bfd8d674d248903b6e1a509865e1ba6624b68a512941510995"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-001.png",
+    "bytes": 64250,
+    "sha256": "32a4d44ab4b8b54ba5bf68a5fb7f9593a0da6f6e91e63144b4fabf054968a70a"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-002.png",
+    "bytes": 64134,
+    "sha256": "19aea4864ed96b234b204202cb96d63cfaa8527543994f1008f1b1fdb89ab257"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-003.png",
+    "bytes": 63753,
+    "sha256": "f7e1e215f2c18f726deba6d17acbf14662079dbee1da1d7a8bc5ce0da5ded588"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-004.png",
+    "bytes": 63941,
+    "sha256": "50ba6bd8aeac3d3b5824cc21aca89c57a53ab8e3dc7f5ffab2a50a5719a2abc1"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-005.png",
+    "bytes": 64012,
+    "sha256": "398625b7342905e6fe8f80696765f39332cd841cf77a9fc410c6ad8472ececb5"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-006.png",
+    "bytes": 63658,
+    "sha256": "aff1707561f2efd88492cdeb6b97f45200e85b4a099d71d0b0e39329d52709f5"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-007.png",
+    "bytes": 63851,
+    "sha256": "1ab5b5b162879f74fd8773ffbb7cabfcb3f5f6d59f897554f65d9d796b4fa11c"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-008.png",
+    "bytes": 63577,
+    "sha256": "75f90cb2acdc52fc84535732018290ef127ce5db6a138c8f34112eda90488bab"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-009.png",
+    "bytes": 63286,
+    "sha256": "2154e39e1d1b9b1e99aa563ba8da42a5282957fca04787de6ed3ed477b3d3ba9"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-010.png",
+    "bytes": 63530,
+    "sha256": "a05d7900938376c0bce86e086472cfc120d1430024b856ec3197d5d0d64af3c0"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-011.png",
+    "bytes": 62993,
+    "sha256": "bd789c01e446632895f300908ddc0697349d8eea6d3c4d203f0e831fa7288084"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-012.png",
+    "bytes": 63092,
+    "sha256": "9d8165c260b10576f5866bd75061c98312c739198ad08020cca0596e772858a2"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-013.png",
+    "bytes": 63081,
+    "sha256": "545a90f9abf81f4add097cc82b6b807a0732a510936d81de7af7db55434e2527"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-014.png",
+    "bytes": 62394,
+    "sha256": "1505dd7aebc2bd40eb716ce52dfbc24345ce03e919d71a0bbe05b4a304d72439"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-015.png",
+    "bytes": 62503,
+    "sha256": "31ca0b8d62f5559245cba5ff60d710819ed34808e9ce15e3db90a3e976f852d8"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-016.png",
+    "bytes": 62548,
+    "sha256": "daf85275a740d58ca8a1138b8f953361513fbddce59463e259388cf2405900af"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-017.png",
+    "bytes": 62235,
+    "sha256": "2bbe93bf6eee43e259baca6c74e79dfe89612f30f074839ec181fd7daa8e5bf5"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-018.png",
+    "bytes": 62510,
+    "sha256": "a847d2ad6de837db5f97ec8ac112a135ba822130700a549120c27f43de7fa466"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-019.png",
+    "bytes": 61912,
+    "sha256": "7a680959880c3e243abbfbdd41f23d48bf8c2d240984cc367b28b9b8fd0a8f30"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-020.png",
+    "bytes": 61899,
+    "sha256": "daf6434f1bb2d6b28c94be6204c854f9ec5c5db7d85f85aac4bfc589798a44a6"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-021.png",
+    "bytes": 61741,
+    "sha256": "95956da95c031b8e87f5290fc97d1680fa13d411af020d5e2acd4b9762d3c867"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-022.png",
+    "bytes": 61730,
+    "sha256": "7e1f6607865488e1f6f6d8731fe951676adf2e2ee4d39fab7895fcb2f3eac6b6"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-023.png",
+    "bytes": 61319,
+    "sha256": "bb4004d096d882a0c8be6cd077a300f7da7c4acd8a346d7bdb5c6f6cdc93e3a5"
+  },
+  {
+    "name": "data/rgb/pilot-repeated_straight-3-024.png",
+    "bytes": 61386,
+    "sha256": "97204910cc1d14b5c3ae21a7a3f3375460bd4c0b15db32180a528ac225942244"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-000.png",
+    "bytes": 58905,
+    "sha256": "aa572b5242a52b6784ba6fbb79a74e8080789b40e505b30efc289a19d3529909"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-001.png",
+    "bytes": 58911,
+    "sha256": "1b2788073aa12c9ea737c3b580846bf19812a344106ac185fb6b8e9876e64992"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-002.png",
+    "bytes": 58742,
+    "sha256": "e6bce73ad440520cc96fedc82b7dad1e2a4d6b9ddc63bd176ec7598e53f55ead"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-003.png",
+    "bytes": 58623,
+    "sha256": "1b1696cc18fc332bfb24adc84000a399a2db908c4c52fe27a0788c9c98acd5e9"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-004.png",
+    "bytes": 58772,
+    "sha256": "d8db7d32f7812b65223727cca17b53319496ac4a5c0cab4f8bc3c7497cbd230c"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-005.png",
+    "bytes": 58714,
+    "sha256": "3116fcbb39521451b2fa226919189b678a202a693d00b6fdf79ffc95b2ba0101"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-006.png",
+    "bytes": 58255,
+    "sha256": "35509ee1484caa78d1d0277843917db53140c51ebf48260f917212ef9d3c27fb"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-007.png",
+    "bytes": 58103,
+    "sha256": "cc9c577ddd1945af40e4ef3f9a76a11b557e5d6bb8502e7e873dbcc67e251b9f"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-008.png",
+    "bytes": 58207,
+    "sha256": "75f0d83c1ec0294e8c966c95f32f8bc0025a3b328dd91d0099d2688a3447f71d"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-009.png",
+    "bytes": 58207,
+    "sha256": "75f0d83c1ec0294e8c966c95f32f8bc0025a3b328dd91d0099d2688a3447f71d"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-010.png",
+    "bytes": 58207,
+    "sha256": "75f0d83c1ec0294e8c966c95f32f8bc0025a3b328dd91d0099d2688a3447f71d"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-011.png",
+    "bytes": 58207,
+    "sha256": "75f0d83c1ec0294e8c966c95f32f8bc0025a3b328dd91d0099d2688a3447f71d"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-012.png",
+    "bytes": 58207,
+    "sha256": "75f0d83c1ec0294e8c966c95f32f8bc0025a3b328dd91d0099d2688a3447f71d"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-013.png",
+    "bytes": 58207,
+    "sha256": "75f0d83c1ec0294e8c966c95f32f8bc0025a3b328dd91d0099d2688a3447f71d"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-014.png",
+    "bytes": 58207,
+    "sha256": "75f0d83c1ec0294e8c966c95f32f8bc0025a3b328dd91d0099d2688a3447f71d"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-015.png",
+    "bytes": 58207,
+    "sha256": "75f0d83c1ec0294e8c966c95f32f8bc0025a3b328dd91d0099d2688a3447f71d"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-016.png",
+    "bytes": 58207,
+    "sha256": "75f0d83c1ec0294e8c966c95f32f8bc0025a3b328dd91d0099d2688a3447f71d"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-017.png",
+    "bytes": 58016,
+    "sha256": "f33c2635921fb75ff97fdf2a7a76b12c809e5a8dde641ffc49927b48e4f87592"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-018.png",
+    "bytes": 57682,
+    "sha256": "01afc7d74eccd9fffeb228e013710f7b7c612188b6f4c60b7275df6d7bab0dbe"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-019.png",
+    "bytes": 57056,
+    "sha256": "b1627befcaa67d233fb9e6a0849ce46733cfc822ea1c6603e5231319837d716e"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-020.png",
+    "bytes": 56727,
+    "sha256": "10c025b215e80d94bb0012277c8cea37f67b2fd6e51e1974437af1396c924515"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-021.png",
+    "bytes": 56225,
+    "sha256": "e996b9a85e368085bb05105a3ec1817099e8f06d2e71b1803c3497abc8224449"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-022.png",
+    "bytes": 55785,
+    "sha256": "c20ef464b1775d9f8db4bd5e8a90b0a79b3cf1ce60abba78874d75b43cee9c44"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-023.png",
+    "bytes": 55082,
+    "sha256": "905314e230c81dd79d6b0bebf945950ec4aa3fe5464b7a379a71e84fcd5c15aa"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-0-024.png",
+    "bytes": 54476,
+    "sha256": "2347954900c118c3c91a12d127dc7cfa02580608bc156a834e06ee4abd77350b"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-000.png",
+    "bytes": 61602,
+    "sha256": "d56bc2b889ba0edba449ae59ebd5d7c7061b08f955299ccfbc6b602e245cbb70"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-001.png",
+    "bytes": 61487,
+    "sha256": "e21b38a7d6eaae25f02e3978cd4b208dbb2617833b4fa7f526b5a19dc3d6f03d"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-002.png",
+    "bytes": 61558,
+    "sha256": "151d4c2a22db836d11e1f48e23f56c3062480d455cf382678376fb9d669341b7"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-003.png",
+    "bytes": 61560,
+    "sha256": "1cdf8c5de43597972b2d3d4fb1ff474e1beabc59053376f34aea7e47fd11fcac"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-004.png",
+    "bytes": 61359,
+    "sha256": "c2bbcc3c4b064f1381baab184cc9e011febe51ded6c92e15c3a53c33f176801d"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-005.png",
+    "bytes": 61532,
+    "sha256": "57f5619d0b93c6c588278ef364a1336844fea37f7468eb5d8ae959d0ce014adf"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-006.png",
+    "bytes": 61533,
+    "sha256": "ee3ebece05035d1cb5e841e14c3b257ddc8fd72949cf5eefa1a85bbd0715dacd"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-007.png",
+    "bytes": 61750,
+    "sha256": "6b9d34d842d881f60b15634e83b7156f548706325773c1dc2c79177ec6721509"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-008.png",
+    "bytes": 61800,
+    "sha256": "6e94159b86f35f9bafdf652990fc06f961e6dfd962b614ba223232b8254701c1"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-009.png",
+    "bytes": 61800,
+    "sha256": "6e94159b86f35f9bafdf652990fc06f961e6dfd962b614ba223232b8254701c1"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-010.png",
+    "bytes": 61800,
+    "sha256": "6e94159b86f35f9bafdf652990fc06f961e6dfd962b614ba223232b8254701c1"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-011.png",
+    "bytes": 61800,
+    "sha256": "6e94159b86f35f9bafdf652990fc06f961e6dfd962b614ba223232b8254701c1"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-012.png",
+    "bytes": 61800,
+    "sha256": "6e94159b86f35f9bafdf652990fc06f961e6dfd962b614ba223232b8254701c1"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-013.png",
+    "bytes": 61800,
+    "sha256": "6e94159b86f35f9bafdf652990fc06f961e6dfd962b614ba223232b8254701c1"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-014.png",
+    "bytes": 61800,
+    "sha256": "6e94159b86f35f9bafdf652990fc06f961e6dfd962b614ba223232b8254701c1"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-015.png",
+    "bytes": 61800,
+    "sha256": "6e94159b86f35f9bafdf652990fc06f961e6dfd962b614ba223232b8254701c1"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-016.png",
+    "bytes": 61800,
+    "sha256": "6e94159b86f35f9bafdf652990fc06f961e6dfd962b614ba223232b8254701c1"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-017.png",
+    "bytes": 61831,
+    "sha256": "5bcd8e08ec1ff2591c7e92150a53dd99d3c54f97f88dae3205b8b972c6910344"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-018.png",
+    "bytes": 61861,
+    "sha256": "a52e2f74015eae17ca8796f0b4c734a574f58ed84e1a6fc3491fe02c2ff43dd7"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-019.png",
+    "bytes": 62110,
+    "sha256": "063cf13866f25c4cc5f667b65c513b76f6403e8710c4f83e9f0bf3b9531b0266"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-020.png",
+    "bytes": 61940,
+    "sha256": "f370cfb338901d551902d7510709dad7c9027841d5bf7fe26574be5127215420"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-021.png",
+    "bytes": 61681,
+    "sha256": "bb3de37a36ee62de68307d96bd7493683d66918295b4e4e95b9a567646d6c7a9"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-022.png",
+    "bytes": 61541,
+    "sha256": "70d199e2da15ae206d1cb1686f4da01e65e0f43f2c1b6a2dfd77f5390530bafb"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-023.png",
+    "bytes": 62036,
+    "sha256": "50ed3cfa99142a750d340b3e9b457e0dad321e1d5216542afadda21ce9c70b7b"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-1-024.png",
+    "bytes": 60780,
+    "sha256": "09e569dc85596630f233ce9bc6ba07423fd7d7849a9031401bd94ed3ac5ef3f6"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-000.png",
+    "bytes": 61611,
+    "sha256": "0d9783e58114cc3c6b5b097becd0eb83f9fd26c2efeef55bdf8d7d5b2184bc86"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-001.png",
+    "bytes": 62492,
+    "sha256": "8218cc7c5a504da55ad499cc167b1e1803f69cba66ee785711f1f6c4fc1d9e4c"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-002.png",
+    "bytes": 63076,
+    "sha256": "5f984b6e90f75228ec9aa6483c9b9d280d5959c6ad3089e86bf4252362f3b920"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-003.png",
+    "bytes": 63553,
+    "sha256": "7374d10bd6ea8c8d9874111141c5647dc864e854b5f9452e6f0af2a7efb02c4d"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-004.png",
+    "bytes": 64135,
+    "sha256": "1b1a274ab78a1602dbf7e0dbe7c710dfd10f2c67414e0254c39c514f168552dc"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-005.png",
+    "bytes": 64654,
+    "sha256": "c040cece11ca35cb369721faed2007aa0d5628d9c7297807bd7c17bc5469aa97"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-006.png",
+    "bytes": 64987,
+    "sha256": "e1bb2adfc7ddb925d1ba9806a397f148e28dea5080596e2f86614f66baacff17"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-007.png",
+    "bytes": 65298,
+    "sha256": "2184e6107e6ed559d9277842318a89cadc0dce106d8bd4ed05f1d9206d901bd0"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-008.png",
+    "bytes": 65157,
+    "sha256": "767b7dd5226dc41cf0794f77a254f2c4a76ee47a99e24301dcf363e82efa8a6e"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-009.png",
+    "bytes": 65157,
+    "sha256": "767b7dd5226dc41cf0794f77a254f2c4a76ee47a99e24301dcf363e82efa8a6e"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-010.png",
+    "bytes": 65157,
+    "sha256": "767b7dd5226dc41cf0794f77a254f2c4a76ee47a99e24301dcf363e82efa8a6e"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-011.png",
+    "bytes": 65157,
+    "sha256": "767b7dd5226dc41cf0794f77a254f2c4a76ee47a99e24301dcf363e82efa8a6e"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-012.png",
+    "bytes": 65157,
+    "sha256": "767b7dd5226dc41cf0794f77a254f2c4a76ee47a99e24301dcf363e82efa8a6e"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-013.png",
+    "bytes": 65157,
+    "sha256": "767b7dd5226dc41cf0794f77a254f2c4a76ee47a99e24301dcf363e82efa8a6e"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-014.png",
+    "bytes": 65157,
+    "sha256": "767b7dd5226dc41cf0794f77a254f2c4a76ee47a99e24301dcf363e82efa8a6e"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-015.png",
+    "bytes": 65157,
+    "sha256": "767b7dd5226dc41cf0794f77a254f2c4a76ee47a99e24301dcf363e82efa8a6e"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-016.png",
+    "bytes": 65157,
+    "sha256": "767b7dd5226dc41cf0794f77a254f2c4a76ee47a99e24301dcf363e82efa8a6e"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-017.png",
+    "bytes": 65324,
+    "sha256": "8f19e318e94e12d1447540fccca492370998d369c434f02c2052e8b7a1cf30c0"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-018.png",
+    "bytes": 65375,
+    "sha256": "904b50d39fc14a14c93c684434202d83d7cdfbf5118a1f6b93b29de841166f7d"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-019.png",
+    "bytes": 65353,
+    "sha256": "8da7c923312e05593b3ecb6845fb5702d79e2573ef0270ece57b295c619d4d31"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-020.png",
+    "bytes": 65632,
+    "sha256": "9f6b5e1746d32174e60a596a50997ba9e7f9123204d909636cab7eab04ea5367"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-021.png",
+    "bytes": 65264,
+    "sha256": "212f9fedfd12068e2e1a291cd1ddc74607b4d7cc941bf79a963b3c421183b8e8"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-022.png",
+    "bytes": 65190,
+    "sha256": "18e194e92732ecfa24a8b028bc581ea9c69596c4992ca6acc0195318fc1edea2"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-023.png",
+    "bytes": 65168,
+    "sha256": "79a23ad9d70510ce5b983f3e64a7d50ea3bee87aaba3ee9459a00f8c5b7cfbe5"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-2-024.png",
+    "bytes": 65203,
+    "sha256": "4bd854ea4a17707f5c2f7af7a2e926ca1dc9d417ae33aa586decfe3d0cdf0db6"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-000.png",
+    "bytes": 56581,
+    "sha256": "528bc8b46a8ff6c09c4761586c2bcdbf4a69a87b1c3c4bedfc8c92b294173493"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-001.png",
+    "bytes": 57000,
+    "sha256": "ecd1e8e0bbb0026a5b94d658b2ec4ce6181bc571d82dee3de2d9062606d7d1ab"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-002.png",
+    "bytes": 57228,
+    "sha256": "ba54a00a1366081607576f9824ab6e3868bfbbfc2bc6e608128e44e993e17da1"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-003.png",
+    "bytes": 57157,
+    "sha256": "f01549f0172eebc94432fa91411f5dc487b326cac8c6efe73c8f72939112ac43"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-004.png",
+    "bytes": 57485,
+    "sha256": "fe4022792d7b73f2bf3d73a04939bce8ba7af9e94d876056332b3621014dcf3d"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-005.png",
+    "bytes": 57280,
+    "sha256": "dafc85375ec29dd5108a90aeccd0306ec014117a44cb77bdcd1196af7e23e002"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-006.png",
+    "bytes": 57514,
+    "sha256": "8b3ce748f10345031cb4e49a27de56c8c3c9ef0254888eef9f91f41605084e40"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-007.png",
+    "bytes": 57418,
+    "sha256": "79255b9f56691456945ddc895a491f60948297609d1f51e278785a867a8e2618"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-008.png",
+    "bytes": 57364,
+    "sha256": "1d246d547824af99c4b4c929a73c88682847660255a384b75130d2cfbd3be797"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-009.png",
+    "bytes": 57364,
+    "sha256": "1d246d547824af99c4b4c929a73c88682847660255a384b75130d2cfbd3be797"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-010.png",
+    "bytes": 57364,
+    "sha256": "1d246d547824af99c4b4c929a73c88682847660255a384b75130d2cfbd3be797"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-011.png",
+    "bytes": 57364,
+    "sha256": "1d246d547824af99c4b4c929a73c88682847660255a384b75130d2cfbd3be797"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-012.png",
+    "bytes": 57364,
+    "sha256": "1d246d547824af99c4b4c929a73c88682847660255a384b75130d2cfbd3be797"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-013.png",
+    "bytes": 57364,
+    "sha256": "1d246d547824af99c4b4c929a73c88682847660255a384b75130d2cfbd3be797"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-014.png",
+    "bytes": 57364,
+    "sha256": "1d246d547824af99c4b4c929a73c88682847660255a384b75130d2cfbd3be797"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-015.png",
+    "bytes": 57364,
+    "sha256": "1d246d547824af99c4b4c929a73c88682847660255a384b75130d2cfbd3be797"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-016.png",
+    "bytes": 57364,
+    "sha256": "1d246d547824af99c4b4c929a73c88682847660255a384b75130d2cfbd3be797"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-017.png",
+    "bytes": 57372,
+    "sha256": "e9de3610d605513947667167fc484f94a038b7c98c6249ffce676979042798f5"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-018.png",
+    "bytes": 57614,
+    "sha256": "1c28202c51050ee61673f99cfcf1e66b9a52cfc07cd45f225eeb989dafd99f86"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-019.png",
+    "bytes": 57446,
+    "sha256": "5fb9f610a283460a070c1d337a9b643bcf21d9077e8cf90abd36106e356b4ecb"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-020.png",
+    "bytes": 57455,
+    "sha256": "2cd45fc2885f2f8579ba2f6b4c2ff00e309c95d9794764a5050cbd56e37ef6c3"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-021.png",
+    "bytes": 57506,
+    "sha256": "4df8b1a25a5724cc55898c6140057edf195a96015adc9d220971d152275d21d2"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-022.png",
+    "bytes": 57702,
+    "sha256": "1623ff8472fa1ffdcbdfe460ffc0724a4e78df8d23d8946ea5534d3c3cb126ad"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-023.png",
+    "bytes": 57599,
+    "sha256": "09e5d37dddadf50902c27d3f25dd735f6f084d2b404ec1e65c58893f3bd741c2"
+  },
+  {
+    "name": "data/rgb/pilot-stop_start-3-024.png",
+    "bytes": 57713,
+    "sha256": "fcaf3d812cbe5c0bec19f214b25f7569b0c9b830a53d5e15c7bde5514c0c4d7a"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-000.png",
+    "bytes": 64259,
+    "sha256": "02cb52be42a7868b11b80dcb032b29478300de45f717c6e9263ec37e003a0b02"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-001.png",
+    "bytes": 64234,
+    "sha256": "7b28aa091c26487004f82ca26bdb3727c7cfeaf8fea3b5fc0814d58d948050ae"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-002.png",
+    "bytes": 64501,
+    "sha256": "cac400adc2d3a9defad7f024ea8a155655921011ea4e8a51dea049c6e66d2442"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-003.png",
+    "bytes": 64532,
+    "sha256": "93436249af3855e1f03f7594fc817ec84f6a285b326a04542ea730303a818fd5"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-004.png",
+    "bytes": 64481,
+    "sha256": "c26d259fd6c7bf25c56ee2ec5098d7a89041449d07cc215a7203a68ff4e4cdd6"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-005.png",
+    "bytes": 64719,
+    "sha256": "cda7911101430cb7d3b0e62763a46634efa57b0183a54bcc65983aef2967e4d3"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-006.png",
+    "bytes": 64534,
+    "sha256": "df3ae0fbbca2c2f9be565cbf46ef18ef1194d83ac31b3aca3a5926d31addb629"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-007.png",
+    "bytes": 64596,
+    "sha256": "6b0c75273a490f4112ea479f6b07c1aa5d37033dd94ffc32d3bb33100569a382"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-008.png",
+    "bytes": 64614,
+    "sha256": "16e962da32b8b8ab3af122f84edd53327fc9240763df14ff5c0f3db9341a99d0"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-009.png",
+    "bytes": 64871,
+    "sha256": "4027cf3fc3b26d25d9c01e138bfb2fce76407061d0d63c80936ff6bac1917968"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-010.png",
+    "bytes": 64660,
+    "sha256": "044d6b4c7166f6824d07e46b14eb6fe98e86a08fa1e45d908375e0494e23f306"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-011.png",
+    "bytes": 64837,
+    "sha256": "b6ba51c37a92de8b2d468c0cc6b814516545b52c1ff74a1d483bcda29a956319"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-012.png",
+    "bytes": 64607,
+    "sha256": "62fa7deb81489700557a46637b4b7cfa3a7d9b186f6c40d2ff08e1961d39ded6"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-013.png",
+    "bytes": 64581,
+    "sha256": "e672726d1cc175f5786c05e42902abed8b5e874992fe0ce1cf39da1a497f33d7"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-014.png",
+    "bytes": 64584,
+    "sha256": "2049ebf96e43eac78f2d9de15688915b93f498dc0af3501b3c1c7e6fea3a7092"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-015.png",
+    "bytes": 64739,
+    "sha256": "e7a5dca2f2f8b0680f8263b5f321c42d900e54253852f4c183b7d49de0db1f1a"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-016.png",
+    "bytes": 64590,
+    "sha256": "498a600314ea17d5240fce476fe5b9f8d0b2d5f454c9b2e7081e922a121f835e"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-017.png",
+    "bytes": 64592,
+    "sha256": "d6d68e09e460a0a7ff928bb7eb11fc5e104ad1992b552571432ed9e6f458e53e"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-018.png",
+    "bytes": 64774,
+    "sha256": "af3cc01ae2565063e8d515fb9b46b7d388c44dd5cd2aae829be415c5456c1bd5"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-019.png",
+    "bytes": 64288,
+    "sha256": "364f39c2918802a5bed801c99eba131186c46722b4dc99845fac3aafa9182dd4"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-020.png",
+    "bytes": 64181,
+    "sha256": "0c28c5548e4d4f5bcfccb16b0293f8790177b5ae7d97f9b5e9def057bad57c5b"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-021.png",
+    "bytes": 64208,
+    "sha256": "57d5af0d47ac8f4cd02d0b2312c5b4bd889a2fa2fe2d269651cb97d945661035"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-022.png",
+    "bytes": 64145,
+    "sha256": "482f923c224fee44b113578d46085a6ce8f1671fe01852fa3bffcc725cb546bf"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-023.png",
+    "bytes": 64189,
+    "sha256": "624f8fe865623e675ab9ddfc2a396b08a2522e66af863cb39651a85a370a8c6a"
+  },
+  {
+    "name": "data/rgb/pilot-straight-0-024.png",
+    "bytes": 63724,
+    "sha256": "0dccd91264d7d3a26055d51bec14aa3f41fa7ee23201c4b334642c8bcca1a5e1"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-000.png",
+    "bytes": 56801,
+    "sha256": "6a3c46b2394e6c6429d8a2b51071ee4539aa877faf77296d8a36af6bdf96a682"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-001.png",
+    "bytes": 56680,
+    "sha256": "ef0fa2fb40703625e21c70adf1c198fa9362717e8d1bea709753bc8a58bacedc"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-002.png",
+    "bytes": 56546,
+    "sha256": "c25cef93f3a0fd97a00e5f9d36321f763c8536ba629a0f2881fdc1b168840f07"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-003.png",
+    "bytes": 56601,
+    "sha256": "58171f97a11f82d6044382e11fb76fe33630c94714c29f7dbf183c7707b65793"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-004.png",
+    "bytes": 56468,
+    "sha256": "0f05e758724b0742a366eccedf33580654155eb8f106d1d34bef33470139d7ed"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-005.png",
+    "bytes": 56635,
+    "sha256": "d066cbb9075807ad47255c20947ac7891af4f23184f47d7dae217e59e0dc7242"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-006.png",
+    "bytes": 56525,
+    "sha256": "6af918cddf8b4eaa8ad0da90f3c90b5ef0f0f07eb6de449211ec69009f35d93e"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-007.png",
+    "bytes": 56416,
+    "sha256": "4fafba4ef87e87831a5ce7fb06e1925a663c8de5bd026cb41376bf68306296f4"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-008.png",
+    "bytes": 56201,
+    "sha256": "5ad4fb17240fd9687d99c146551e4718b8fb9aa888b0f114413e850991ab981a"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-009.png",
+    "bytes": 56261,
+    "sha256": "70f212ff3874e68ebecb4aa6ac2c84bc2fbcf341e6f6fabb8b310e5e12c8214c"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-010.png",
+    "bytes": 56242,
+    "sha256": "457279673d872ac390f218419bd46644412cd8c0d3182eb7966d9b0bcda5739a"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-011.png",
+    "bytes": 56217,
+    "sha256": "692cf2b55371508a91b7b2db148a2a7f99ffeaf12ad7f0063a45dd96668cb24b"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-012.png",
+    "bytes": 56245,
+    "sha256": "223d4c8d1ec5cd4a82467cb73ad9d03d5df185def0eaa481182077acd4fe8851"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-013.png",
+    "bytes": 56242,
+    "sha256": "14b036083213b8703a6e5fdf9d3fd25efa608652a91b3f089f5c339a67a98ab2"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-014.png",
+    "bytes": 56401,
+    "sha256": "278e8c4f5cf17052f0b7abcb9de2cac8f4051e9f5d778cc3193c982e644cfeda"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-015.png",
+    "bytes": 56331,
+    "sha256": "d1a908baa49a3bde94aaa8ec7e953208b8773be00cee4393d9a453c079dfc0aa"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-016.png",
+    "bytes": 56631,
+    "sha256": "81541a85f560c93f7685985fd354b6b5619bcc2fa62e180481f8765a8c928870"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-017.png",
+    "bytes": 56399,
+    "sha256": "0498ed44cde270321868fb2aaec74735725bc63f8413950e09561e80f6d001de"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-018.png",
+    "bytes": 56930,
+    "sha256": "a13b5b5eea6b9261ce4375e550abd7fceff381a5c9763a755dc273992d5c2ba1"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-019.png",
+    "bytes": 56799,
+    "sha256": "84bcfad269ea9e370e62c4340b616dd22a6598404d388573f2bf10d4923496a8"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-020.png",
+    "bytes": 57014,
+    "sha256": "74522f58e5f191a87a1adc5fd225574faa182bd06033650bee4c24d5b74f7f48"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-021.png",
+    "bytes": 57257,
+    "sha256": "c6fb877430f35366d6b80eaab32a4e5c0cbdcb7638321872b9077c7b01b6cc02"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-022.png",
+    "bytes": 57045,
+    "sha256": "fbbb90ba75882054c2b6b62c13987df6976011c4f54d951546920a04cf2d5e21"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-023.png",
+    "bytes": 57387,
+    "sha256": "a9e302f48ff8495942277031ee76a4c4bd9f0cc81a0f748b1419c5452e5b5c2f"
+  },
+  {
+    "name": "data/rgb/pilot-straight-1-024.png",
+    "bytes": 57556,
+    "sha256": "a793cd6644575d5ae901b2835058effce230215000af0e39a33f08a31265a967"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-000.png",
+    "bytes": 65483,
+    "sha256": "c0b64c57a3b8e09a4a17216aed06e9a1a63de06810b22be16a9590eb7bd229ec"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-001.png",
+    "bytes": 65608,
+    "sha256": "aa5bd1f8ab68f9c7e6d6a9e4f2710d4c99f30671be0d22aaca0c529cba14179e"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-002.png",
+    "bytes": 65386,
+    "sha256": "517bb5f20df908b0871ff5ff28ac552afab954958cb39cbb65c88922c5af3b05"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-003.png",
+    "bytes": 65708,
+    "sha256": "887b7972aa361b44ed9c169d257240ac2f04905a0a5c434fa8b351c2766c51e3"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-004.png",
+    "bytes": 65779,
+    "sha256": "73a205f51d68fdd9d73877d50f07b8ec0358aa0e7713ca97c9eadfe7187cbfbf"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-005.png",
+    "bytes": 66108,
+    "sha256": "21f1d35be145f663e2e4d590b27af67332b11f13e36f65a2d761d5e09df165f8"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-006.png",
+    "bytes": 66093,
+    "sha256": "a0d84edf01ec69fff0175f9019db5f09e502faccea399c2ab4d4538e1ce180c8"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-007.png",
+    "bytes": 66179,
+    "sha256": "ee29f441f36cea87d34032d7088d12bb7ed18aa72c8cb093df70761c5df28f7b"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-008.png",
+    "bytes": 65876,
+    "sha256": "67889df2b7328c94d1805f33a027ff6b12c5e032f2bd731cdc0c3e7d48f09ae5"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-009.png",
+    "bytes": 65922,
+    "sha256": "189bdb68f451b96c5ab6056c1254382289ea04daee3f6daabb6f42b80f011ff9"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-010.png",
+    "bytes": 66017,
+    "sha256": "50074cd8c2ce7f15e3f51dec8700079af65ecb34a66fc73988fcb7859e9f1bc4"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-011.png",
+    "bytes": 65911,
+    "sha256": "9a4cf0c55b5953532efd620ae124b62aed5479f5af4a6ab43c1ca910a9698700"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-012.png",
+    "bytes": 66088,
+    "sha256": "0219f1585e91313b5016d4e53ed5592ffb5a1f31557cc2724de87dfd4575300e"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-013.png",
+    "bytes": 66007,
+    "sha256": "aeec6ae90c577dc4aae5bb87d9f874fc11047b27792454184d2957acabb15ab7"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-014.png",
+    "bytes": 66022,
+    "sha256": "06fb70207934d5ded376b21419ca34870e2a4fe59a4d133a4ea6038147f278ce"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-015.png",
+    "bytes": 65971,
+    "sha256": "04863e8ca578b371862a32923f90f8ae737f93c271d757168773d1512159c823"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-016.png",
+    "bytes": 65854,
+    "sha256": "d54e6cc7bba19c24af3d2b4b75860015f8c0be50b6df30c285fa1712c4196a75"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-017.png",
+    "bytes": 66065,
+    "sha256": "4597d6879c42f370a57ea49a3c883d558536f84184cd849c20736610b107cf7f"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-018.png",
+    "bytes": 66188,
+    "sha256": "8162206cef7b9b0b45e7f6844ce23e607add61480c26f37ac13062bb1f578d35"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-019.png",
+    "bytes": 66192,
+    "sha256": "e00830db723e8bdbd3e96209c5cc2507a044f14ad5e4139fc953b366bdb8353a"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-020.png",
+    "bytes": 66478,
+    "sha256": "4874788a00e8ddfa33b97caa29a2232588de785556e8af4a6e05e6979d1b9252"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-021.png",
+    "bytes": 66642,
+    "sha256": "4fb215d3d73d07dfa24fbf948061b6ce2f1d9c8b1df3df29746d3ad0272a7716"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-022.png",
+    "bytes": 66504,
+    "sha256": "b54a449b8d546f4c2a1ef320251ee1a434d307e57a11c7004e1d6c822624a2ac"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-023.png",
+    "bytes": 66487,
+    "sha256": "d3001b2864ab282bf0ca4dd01feee77cb251a076d9141927353b045b61c19276"
+  },
+  {
+    "name": "data/rgb/pilot-straight-2-024.png",
+    "bytes": 66080,
+    "sha256": "607808a767606348cf006e00b60ea8bc0c9448b8b51a5c6a629d3e9aa01b6250"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-000.png",
+    "bytes": 56695,
+    "sha256": "bd416ac9ff9606cef2272ab20f765b70376b524b1b124aeaecc61bfd24dc7085"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-001.png",
+    "bytes": 56824,
+    "sha256": "18e10d42ff6af44a830c920ff24bf311f6f880cfaa8b4d6b641d8ad4a8b44b11"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-002.png",
+    "bytes": 56657,
+    "sha256": "9ea5004b22d3e6c121d12e72b96f91b9b0504d7ac5abf2803d1328fc088ae281"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-003.png",
+    "bytes": 56500,
+    "sha256": "71f75c7ca4e04436b7d2e30460b4feb68a6dfcd7940d2f0c90e4b788149428c1"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-004.png",
+    "bytes": 56618,
+    "sha256": "cf4f8aac696c3c058f17bf7830cb0bb8018ffa074dcab80910573b7fa656e2db"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-005.png",
+    "bytes": 56495,
+    "sha256": "af8770573ce442b316077f57b26b0471ca0a969dba02e06f99e683b701f26737"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-006.png",
+    "bytes": 56367,
+    "sha256": "98fe3ea3931fc49cd8d119667a4e986cc99ba525c6478d0b9f0f0b4b3946b3af"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-007.png",
+    "bytes": 56297,
+    "sha256": "8ec2382f9cbc100a4596734e372ace086084ec4421eba9a18cbc9eeab913bf57"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-008.png",
+    "bytes": 56476,
+    "sha256": "d907baf742cb0296c032ed2b2f455c8cdf2418a71f8bd57d5ebda1b0dc8c828d"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-009.png",
+    "bytes": 56430,
+    "sha256": "5407cf273d62b0d0ce9479fa886618cba089717ec72b40da35ee01281d3cd784"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-010.png",
+    "bytes": 56425,
+    "sha256": "2bd02064c822584b6749a46e77ad9744831ea53dcfe21e072a430f2d7cbbe86e"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-011.png",
+    "bytes": 56147,
+    "sha256": "91df7d46f1a60f98395e335fcd2221a1ecf07b64baa82693abc7637c4d60ae37"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-012.png",
+    "bytes": 56142,
+    "sha256": "1d97391364224749005e4108e3a2a82b22643ea062b27d031f229d77e28579b7"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-013.png",
+    "bytes": 55862,
+    "sha256": "adc63415ef01b8dbea927afb65a6c19701156fc247fcbda14c8f42c1cb06ceb3"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-014.png",
+    "bytes": 55964,
+    "sha256": "602cd5ac799d7a7310b70372840862388ea24d27a8b0a5f76670b4c6028bd457"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-015.png",
+    "bytes": 55949,
+    "sha256": "47964be05289ccbd7e6456ef09edb727d26528a16a5d4e88b956ad34e5ec42fa"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-016.png",
+    "bytes": 55808,
+    "sha256": "06b5bbb3599c72f39f61a1220d3a0a7295842c02f513fe9be56ad036850ff85b"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-017.png",
+    "bytes": 55622,
+    "sha256": "83ca9a7c957c46ea749f36c69edfe85226b633ffb20a2b7161451a949201b43a"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-018.png",
+    "bytes": 55526,
+    "sha256": "e4168f93aa612808625afbe97b9694042b544ffa3a57bf8350e63a526510117d"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-019.png",
+    "bytes": 55692,
+    "sha256": "c4d981cca254436f6681de867e2f726f547f95c32b3ab0c06c41f21bb1d4495d"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-020.png",
+    "bytes": 56017,
+    "sha256": "b7e7dea6bd6ec3c4e3eb0673e7ec39a2267a0a8f88efd04df215b195d259411d"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-021.png",
+    "bytes": 55974,
+    "sha256": "953e60279c4bd267f407912292137a9d44147d2b941990896592a6719a067ab9"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-022.png",
+    "bytes": 55856,
+    "sha256": "ec41de3729b18f05bd90d6dc0b909c65fe4ad8af511f7d0408208307d6b6e96a"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-023.png",
+    "bytes": 56069,
+    "sha256": "c7f3866abd6cdad6bb82db848a9abbd2374fc7b889c624dbf24bd83c4dbe24f3"
+  },
+  {
+    "name": "data/rgb/pilot-straight-3-024.png",
+    "bytes": 55683,
+    "sha256": "2d7744318ec22e85574efa17293d52554e183346d145db2ca37d8ba99ab4a973"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-000.png",
+    "bytes": 56280,
+    "sha256": "c459aaa3f4f9828739df790e5d20020b946669fbe7f5c03049b74fa9026d2587"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-001.png",
+    "bytes": 56207,
+    "sha256": "4cef616f2ca3e5b19349eae9a263646e5ead1f38ae41498a33a2afb564533707"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-002.png",
+    "bytes": 56261,
+    "sha256": "2deeffccdcd594470ad2ea9381ef3acff078d23f9fe89b3ce025c5e91e8e9ec8"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-003.png",
+    "bytes": 56359,
+    "sha256": "91a3c39d1e5294ae368c294660343b8ee980e2f03bc79efa7c78eb5ebdbf0fe8"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-004.png",
+    "bytes": 56276,
+    "sha256": "f93a26bc9c7a61a2b15268b9c15e609aefa555a2c12cb756b2a83d2b58b28d60"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-005.png",
+    "bytes": 56326,
+    "sha256": "9f2556bc81404270da467b98b351e4fd08836cb682deef5889e04a61cc70ee61"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-006.png",
+    "bytes": 56098,
+    "sha256": "1fb999ef91ca7dc437bddb219f3145d54a3b31165ffa45973e78cb511e42bcae"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-007.png",
+    "bytes": 56125,
+    "sha256": "77bf2ed36e685dc91172edf17fdc15c1c789867728b38b4a8ff884e0710910ad"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-008.png",
+    "bytes": 56042,
+    "sha256": "5bf79c10669e12e086f7f3dd3cafe5e3ff49af235b7b38d34e408b59782bd3cb"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-009.png",
+    "bytes": 55855,
+    "sha256": "04f3840829ffb66aad35e846832e88d10a2c0514404fd3e0db6b484b5002ba2e"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-010.png",
+    "bytes": 55898,
+    "sha256": "ce32ecfce0c518206c5888667361670261e9275ee2fa6766f0b4920b6f8200ec"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-011.png",
+    "bytes": 55757,
+    "sha256": "2c02e1d8727d4034827f08b7f90ca4eb6f68136a0549aba1b5a20213ddcbad66"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-012.png",
+    "bytes": 55622,
+    "sha256": "2a724a54535bf04870c6b14b0da046448648d14ec53865e43fb79518e802bc0c"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-013.png",
+    "bytes": 55579,
+    "sha256": "b2ffa1612724acee173a0fb0880ad331fb010c0931facb0b913ebe4c0b2aaf38"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-014.png",
+    "bytes": 55576,
+    "sha256": "eadc938104e57e74410dcd34361d3270a4e66e3fa7033b93756f0eb496a9c199"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-015.png",
+    "bytes": 55538,
+    "sha256": "2ac4ce9ce7a6728d366c9a1387b80754175cfda6fac755f18f9798e1b2866a45"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-016.png",
+    "bytes": 55599,
+    "sha256": "5b6da568b2b1e3faae593a2da536565561abe6c0d0ad100e858ef279ec75df18"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-017.png",
+    "bytes": 55535,
+    "sha256": "15d9848f2d8e347c76c494c273f0d617aa6945addb0ee71a667e13f1866124c5"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-018.png",
+    "bytes": 55732,
+    "sha256": "62741bf6e6da2961307800e05555748f219100abc4dd9b28444a466e1f3055ac"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-019.png",
+    "bytes": 55583,
+    "sha256": "7ebd11fc06076a2bd05dcce0f6de511c9cc3e09fd52d00c3f3a9d4337daa3891"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-020.png",
+    "bytes": 55500,
+    "sha256": "7003e0906e65fe00890f29604121b7f509e8699a2361738e567274e57c067438"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-021.png",
+    "bytes": 55492,
+    "sha256": "779e2333957f8c47831799634c0baf5cfad8b907cbac223aaece89935468fd71"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-022.png",
+    "bytes": 55650,
+    "sha256": "5036dd0e8243105bc0e9e10524d8509c5abdf86f46d286154c415b6e78c07b23"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-023.png",
+    "bytes": 55451,
+    "sha256": "a616d4fbb5c1aad7cbe57d21f9b522401342376accff826f34ea351bae11d1b8"
+  },
+  {
+    "name": "data/rgb/pilot-turn-0-024.png",
+    "bytes": 55517,
+    "sha256": "6c97d62778dfe653d245d613660d89af3fa639f3e9b9539b62c9dd5682406a2b"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-000.png",
+    "bytes": 60364,
+    "sha256": "811062a2c648dd0ae30eebada1ffe5856a732b54673f823edcea01ace1b97112"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-001.png",
+    "bytes": 60301,
+    "sha256": "7e2abdc1d3aa8d85a28eb04aa983b6404d68f3ade96409bf55f6aacd059ab7a3"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-002.png",
+    "bytes": 60435,
+    "sha256": "0934fd6c17364aba816efe19e38a73ee81530080954b0bee0eab324e24abf74e"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-003.png",
+    "bytes": 60461,
+    "sha256": "549ab372bbc2508d9267cc66357670792bf09c96bbb50acfd536d8afd8bc2c67"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-004.png",
+    "bytes": 60645,
+    "sha256": "e4cf830f46dc0d3b561e82538e3e76099f4d5d90fe974d2ab97f3e80757db12f"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-005.png",
+    "bytes": 60664,
+    "sha256": "7b8f2ac52ed6c4464da7fdca94d54158189d92e53039dfdd28084a0812a30edb"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-006.png",
+    "bytes": 60613,
+    "sha256": "6417b686d5540fda205b31fa912077b80d42229068556224dd332e995c82204f"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-007.png",
+    "bytes": 60768,
+    "sha256": "5a5cbe3c0bb247a8606f463d4cf81a299922ace4f3b8670f6d11f781b37367c9"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-008.png",
+    "bytes": 60814,
+    "sha256": "1b8556f03243f2aeaa6871a4d175ec46e39552337c971017c2d702fce3874b51"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-009.png",
+    "bytes": 60517,
+    "sha256": "d0b8cce31fe8dfe8d5b2769ea203e3bd594a66bdbdf3d175f41e7879f5d1495b"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-010.png",
+    "bytes": 60807,
+    "sha256": "4876f5a1fc50c7710bfa6e9fdad1919b1ca8a340d08d335499e718c24a2a9e85"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-011.png",
+    "bytes": 60772,
+    "sha256": "bff9be3a44e91ba51edd404dd2ba0a0a46b92ba8829580651b263ae4fa7633c3"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-012.png",
+    "bytes": 60853,
+    "sha256": "0e60127ad38ae390fc58b87b7af902c1bbc213f4ef9b1648a5935edf19d969d3"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-013.png",
+    "bytes": 60847,
+    "sha256": "f0002b434ec369f3f7cd81e76db15608714c128a0260ca96ec28c96000f42f6e"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-014.png",
+    "bytes": 60694,
+    "sha256": "5e0dde4766ab35c04c82fae6b78047d84c94c920253000bbfde252ecd3a0e085"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-015.png",
+    "bytes": 60958,
+    "sha256": "d6b0381fb3bb65542843b2c7f5bf84ac8420164896922ce71138093f650ee8d1"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-016.png",
+    "bytes": 60723,
+    "sha256": "2843ad57074463f6d5d3dc25f6250e1698282d1e67d88fc39c088cb144a11044"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-017.png",
+    "bytes": 60538,
+    "sha256": "ecc1b61155a7599c6c58bd1e77f9260aa551974ff5b860952cf31d20c6a5cb62"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-018.png",
+    "bytes": 60468,
+    "sha256": "7bb6b20514ee63a60c1f7fa7276a82e8e3e1b3bcb0ece57c489523a0977bfec2"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-019.png",
+    "bytes": 60343,
+    "sha256": "8992286d731313939fe2393570385f9fbec11cf3ca9a4cecab77093cde595625"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-020.png",
+    "bytes": 60696,
+    "sha256": "f0a0d569d8d15879eebe05d399ca7daaaffeb864d6a2833c3236094621eea5fa"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-021.png",
+    "bytes": 60402,
+    "sha256": "65538a051d2d4da15bc162c04ee7e8606c8175c271a2800c93410c1237b20c12"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-022.png",
+    "bytes": 59987,
+    "sha256": "cd81a361d22e59c74947f04034f85826d8017f890244401f0eac20843d7f571b"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-023.png",
+    "bytes": 59464,
+    "sha256": "c8d70c5d68cbaa53db032b770358290048c5b8c429b53221335d14a3bc0d1d62"
+  },
+  {
+    "name": "data/rgb/pilot-turn-1-024.png",
+    "bytes": 59619,
+    "sha256": "6b65d0b09f553edc7fb3bf54d0ee86d868e3aac00b96f787578639c43f0f1a24"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-000.png",
+    "bytes": 60087,
+    "sha256": "bcf511c60e189c124bd3ebd4b92498098a3a6d22073a561dd5d0a2bdc7fc5a36"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-001.png",
+    "bytes": 60082,
+    "sha256": "44268894de01edf36102906bf1c188a18ecc407f734e71e485077a533044fdd2"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-002.png",
+    "bytes": 60267,
+    "sha256": "93f75513761e9297d87bd3d1bbcd17fb17d01b242006b7ab6d79c2b03e99654d"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-003.png",
+    "bytes": 60185,
+    "sha256": "6322e70ce9451ee761994015f7dd08b3c59ce596ac82244974f094fb9a9b6240"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-004.png",
+    "bytes": 60113,
+    "sha256": "2cc1effcb1094c929265557d60296624ee3ed85e3cc554cb38b0abc9ebc64a21"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-005.png",
+    "bytes": 60528,
+    "sha256": "89894ad5cfa1c419bb3d97b2dcee2dd5efef95b47df5a96ba3edbf3f28f15222"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-006.png",
+    "bytes": 60258,
+    "sha256": "3ba4d34bb49b1c865b0b6dd0dde8bf22ba1acd2d57a4a398c92e2b92cc56b0c8"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-007.png",
+    "bytes": 60083,
+    "sha256": "d7772d7c191422871bbe19f694c1b52d602dd90b04514719f44b1c71d388de44"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-008.png",
+    "bytes": 59989,
+    "sha256": "83785eb8c195666696f0251bbff59eda7e16f3c2068c1c6a49f775fd04da6c66"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-009.png",
+    "bytes": 59979,
+    "sha256": "b856c3d2edfeea86843837ee2da08a9178351789cc40dc9aafd843c994b5a025"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-010.png",
+    "bytes": 60445,
+    "sha256": "9e39f61032720bbbaae8875e884e7a4a3907bd5d87ff425682133d2638850f24"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-011.png",
+    "bytes": 60369,
+    "sha256": "97874eab9a9601fc35a30f49ae97a0797eec60fc1b6b936b101f88947e717c39"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-012.png",
+    "bytes": 60491,
+    "sha256": "d8c78183ef2b682d54e56cee3d542c8af73c4113c3480b54bb51b1fefa5b088d"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-013.png",
+    "bytes": 60499,
+    "sha256": "62aae001f36fbe757fbeb53c2bbf19b6a31d22b86cec70aba36d74b3fd97b1d0"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-014.png",
+    "bytes": 60756,
+    "sha256": "0b30c5c8db93e9f4a0934a1edcb5e9ffd2d2561677d6e1f974d6bfb6fe449803"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-015.png",
+    "bytes": 60987,
+    "sha256": "621b0f0c7f4719f4932b280e2f34851fe1ea36607579be3935c436a44a2386bc"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-016.png",
+    "bytes": 61276,
+    "sha256": "5ab140651431cab0e1acbf32880af0d5b2b6e03a997a917910d9d925b4b4aee8"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-017.png",
+    "bytes": 61308,
+    "sha256": "61b83c6edc35262cde9f2c6b0ea3da485e2b760d215f60a48751bc43fb27078e"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-018.png",
+    "bytes": 61832,
+    "sha256": "49a5a78a31e1b0877e1f8603b9144c0c340270fe15f55ee05048662543371595"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-019.png",
+    "bytes": 61941,
+    "sha256": "9048643b0e3bdcc482da2288170684a748891a46fa8d89c91e03e52b31aa81c7"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-020.png",
+    "bytes": 61991,
+    "sha256": "34eaf671676b687f6b987a340cfeaba0c1c5733c22666f269a755f0f8c1a3de2"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-021.png",
+    "bytes": 62149,
+    "sha256": "e61f62db1974c1d6bc78923e86831ebef7e9b10a8c745ff9d3981d92dc716b70"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-022.png",
+    "bytes": 61882,
+    "sha256": "2db426de6f4866309df00a6dd313b61861539869fa7f9a025d1b4ac564bc02c6"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-023.png",
+    "bytes": 61970,
+    "sha256": "317497cecfca92cc4774ad18284e77ea46d0a4213171b289e75597e701888d62"
+  },
+  {
+    "name": "data/rgb/pilot-turn-2-024.png",
+    "bytes": 61947,
+    "sha256": "d568cb7e68bee06eac8c9864eeedca7a51f0236a3a0ff216af6d017492919f14"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-000.png",
+    "bytes": 52511,
+    "sha256": "53862c580ffdc56924d5dbda0800a2912bbcf0a539a056bb4db10ee330eee457"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-001.png",
+    "bytes": 52450,
+    "sha256": "d6ddb01e1ab82cf97087a99b5d7e66ebb9dc1e7d5324f82542b5c72e5b6edb53"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-002.png",
+    "bytes": 52274,
+    "sha256": "1db257266db7db52654f095cc08ec11510af0a886c419b7e3531463cb30cdb30"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-003.png",
+    "bytes": 52627,
+    "sha256": "12c00da4f988ec740c0db3fe860d18a7ee489f7ddd206fc92733e659d46525ef"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-004.png",
+    "bytes": 51797,
+    "sha256": "d0a3c987e5badeb67eff14a1cc3e3f09f85d763eb415164e3f9201556746491b"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-005.png",
+    "bytes": 52110,
+    "sha256": "afaacb725c4e2b66fb28fdf02853113260c1919d7be50778813c923c4ca5dfa4"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-006.png",
+    "bytes": 52135,
+    "sha256": "efb7feb3317d026d505198fedf09f30f7fd86679b5b0cf2cd35d7a587c3b553b"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-007.png",
+    "bytes": 51715,
+    "sha256": "59141426bf2d3ac18678c9c425ad6f457e45c1764f06fe60f69402bfda6ec995"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-008.png",
+    "bytes": 51586,
+    "sha256": "adaf5bc15441423e5bdee35340cc6579ae309cdbee0f5dd2a0881ba22d5bb407"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-009.png",
+    "bytes": 51707,
+    "sha256": "e892c649b55f385bb19c530ecdc38b1d3da1b559f7ecc26693589d0184193e3e"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-010.png",
+    "bytes": 51634,
+    "sha256": "21afae0b197ea92ce0472a9438702139853092bfe8d3733bf11233a887647591"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-011.png",
+    "bytes": 51209,
+    "sha256": "edd1e21426c378f9355305ac975c602fe91fae26e0d3c44001c81a9bac1d4323"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-012.png",
+    "bytes": 51174,
+    "sha256": "0973e2fd952ae9c8d3a7055336a8e58c1845aca5ab838b7e582649e61ba44006"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-013.png",
+    "bytes": 50895,
+    "sha256": "c512f6d5b52987b0c6a0a84158d262dcf8541c37c400b9b8e942c81017e4771c"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-014.png",
+    "bytes": 50348,
+    "sha256": "f34922ee8c8a8d863977ad99a199f0374bb750af77d45dad3cf3a977d4cf7428"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-015.png",
+    "bytes": 50205,
+    "sha256": "c961869a2bece4ecd9286e109629baf3b89b079e36ee55292554a179cc0cda50"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-016.png",
+    "bytes": 50010,
+    "sha256": "f5cdda44f22565afec05bea3cc74adf101b4cea72449b3690fe60084483480bf"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-017.png",
+    "bytes": 49549,
+    "sha256": "31c31c7b51947de21790b941c36d24a9a6017e02d0870971957627b2d8d027f6"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-018.png",
+    "bytes": 49421,
+    "sha256": "2c27a24be67988aa5976366f53c909798174836b34b815fc08730c5a533803c9"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-019.png",
+    "bytes": 48767,
+    "sha256": "3a3fabb2aad62ebd665af31674dcb1bc1d88ba2aa47db4513cbb0a05f3921bec"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-020.png",
+    "bytes": 48268,
+    "sha256": "81e16fec71afd00e6264e9118f1eaa3e6ddbe76d2b9c87716da0910376f0ec70"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-021.png",
+    "bytes": 47834,
+    "sha256": "436a30e0fa37f18ea105fe0606157cbca22b4d098be34d083e806d4b934d3372"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-022.png",
+    "bytes": 47074,
+    "sha256": "e44483a14b9cbea72c44de9df7f49de5914e643dfdd7f11c5e008132c8f9c4a8"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-023.png",
+    "bytes": 46637,
+    "sha256": "c3e4aacc59fe3f96f00dc98284d4077377639bbc0623a596c08e40c8f814069a"
+  },
+  {
+    "name": "data/rgb/pilot-turn-3-024.png",
+    "bytes": 46213,
+    "sha256": "7f2f78449d015ec7d0f2bb89d64b5701fbcaf41c7ff197a577703c5193228696"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-000.png",
+    "bytes": 62003,
+    "sha256": "a084b0fcfc61030e1efad1c35c54111501ba5398126fc84ae66647ae98bcb31b"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-001.png",
+    "bytes": 61780,
+    "sha256": "90e6b5280927d9a41cd4073432f6a50e8ffbc961c09590cfed76f1db432ef6fc"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-002.png",
+    "bytes": 62036,
+    "sha256": "da4ae5714dd262360a25a80ee39f2032ff882b2c939e55cb9a4e6bac19b34fb7"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-003.png",
+    "bytes": 61935,
+    "sha256": "156fd6dda9b9658ddc083d7889744246fc7aa10205daf8323d02d2683062e8fb"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-004.png",
+    "bytes": 62036,
+    "sha256": "8bbcfc92adceda9527400582aff6a294b5c91a05ad7820036c17297540461927"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-005.png",
+    "bytes": 62011,
+    "sha256": "656579dcebfb65cfcad9782d1e5a95ebdb917143ed0682517e214fe51db7c50c"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-006.png",
+    "bytes": 61739,
+    "sha256": "b96b87d2040c3847ef7cd65ef476f1415657937027e3ce66f4d727d9e2bc9f22"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-007.png",
+    "bytes": 61948,
+    "sha256": "155fdf50f3718bb51081a5e69346b888389909246b3e710f4ad59ccef26c38e1"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-008.png",
+    "bytes": 61601,
+    "sha256": "00e54bf7d6a30bcafb49ad6bd810cff11c1af0c2f351251962c041fd6f202e39"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-009.png",
+    "bytes": 61444,
+    "sha256": "79b699327b8b2e014976c9aff227d084f6e817a5bef32411e5f2ad786b5daa98"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-010.png",
+    "bytes": 61260,
+    "sha256": "80eb2dcf8eb4140f88f36ea52fe1fc260d4f2aa698a9a823408f2a5463c38734"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-011.png",
+    "bytes": 61005,
+    "sha256": "8a3c920a41045160b0af08f3b23a03336079524b22732d266aa161bd889a2adf"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-012.png",
+    "bytes": 60927,
+    "sha256": "03488d0969b1537b4576d985f184b63f95ff871583b8918bb0d1eda3aca2b569"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-013.png",
+    "bytes": 60577,
+    "sha256": "52d940ed07d09624c2b3c5d3409a5d31cf07c9d7db75b99a3204efd3f4235fa0"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-014.png",
+    "bytes": 60238,
+    "sha256": "27bf784506c34562a6817dae9c61e822f86e7d5879db634b5ac420bd95be278f"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-015.png",
+    "bytes": 60050,
+    "sha256": "3c1b833ff00fa1fbcc71cfc5eb0db348e3618736c7f6a283d4735d9f669dbf60"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-016.png",
+    "bytes": 59798,
+    "sha256": "65a26def882f2be9cd1063467d6a37497335ffe61313b48cf2011e8845c1856f"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-017.png",
+    "bytes": 59086,
+    "sha256": "39bb52062e0c1471e0589de427fb878e99a3214792e2d9cff21d10c08243ba8a"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-018.png",
+    "bytes": 59130,
+    "sha256": "1c7c8f0fb693a5ac6d075a1c6f2cef6ee1c8efcd9837d02bd70e5109bcfc3d5c"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-019.png",
+    "bytes": 58542,
+    "sha256": "28f1c6b2c92a3098ada85f0815bbd964d4751b141e103ab6262891214b7605c3"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-020.png",
+    "bytes": 58168,
+    "sha256": "1d25fad4e6707f2d96e3dcdce4bbefaed1c411cc8352a29eda32eab49c266d9a"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-021.png",
+    "bytes": 57495,
+    "sha256": "6235c973d161653293ed7a7365c7f7e20cf635cfce0f52302898116b1b3bb2e5"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-022.png",
+    "bytes": 56665,
+    "sha256": "2c8ed22cb695400e87e8ec9c2e899490b0b15fd81e29de52c19afcbe2b7cbc58"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-023.png",
+    "bytes": 56138,
+    "sha256": "534a1c400dcd4d8d8216d3293ebd1c2a54d75d31d0617924f09e5040e713f52b"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-0-024.png",
+    "bytes": 55023,
+    "sha256": "2cc1d963d1a95bbb3b1cc6259e7b28856eb3cb93a926277820b3a998ad7c6c44"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-000.png",
+    "bytes": 52719,
+    "sha256": "fcd39220727be3c79f05f42562b7c61abaf37e96831e9494be1f6093dfd82c35"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-001.png",
+    "bytes": 52872,
+    "sha256": "262b525b21cedac2ac035fa34d0e340c2fcac3891a43ce63e89138d74046e34e"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-002.png",
+    "bytes": 52873,
+    "sha256": "dbdff6d881498b43175e43150f851c2eebb9437082d657fbe55c38ae6e039bba"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-003.png",
+    "bytes": 52936,
+    "sha256": "f260961e2b74805eb6205ea6a05ee61e45c5bbcacf0c4a58c35388c181227c9e"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-004.png",
+    "bytes": 53228,
+    "sha256": "60def280b39563d8a1a23dca02ed44b6f5a8a90b89b44d4448b6eb329c54f974"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-005.png",
+    "bytes": 53515,
+    "sha256": "3b1081425d9cc0fa70ff965456a4a8b6b075674d7d800833d291c0e626e43754"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-006.png",
+    "bytes": 54011,
+    "sha256": "268e3f5a7641a270cded189f5bd975bedbe3163949586fad6a743b5242ae7d8b"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-007.png",
+    "bytes": 54134,
+    "sha256": "1596faea0367859b49d6bc81a6c40fe381e57d77e69d8695d9be5664de56596b"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-008.png",
+    "bytes": 54556,
+    "sha256": "39469e5d4806925a3177a13b49bf68e90f94faec73ea0b25f5ca55682098ed0a"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-009.png",
+    "bytes": 55081,
+    "sha256": "fcbbbc3ba02fd21ca8b7f61fa3d7bcca594f5f5f62208400f8099721d1fb4dd3"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-010.png",
+    "bytes": 55681,
+    "sha256": "681e33786292221b23a0c196b83624d8d4d90f154665be0c5c12e3c21d7958b3"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-011.png",
+    "bytes": 56443,
+    "sha256": "aa4b12921c961c275dde85af7be7a9e0cb48d22de6440aebde1294842d5f682f"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-012.png",
+    "bytes": 57208,
+    "sha256": "fd024563ae5294657d2a34a16a03137e809bb1a6dc1f95fddfdb1d04cac29e8c"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-013.png",
+    "bytes": 57864,
+    "sha256": "59811a3c69b3847440071a2093014cff19f573caba9de74d67e71308e4646722"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-014.png",
+    "bytes": 58420,
+    "sha256": "1018dc160c9dd089323420ea5b421d32390b98bf818e77f65e1a28cbe85de6cc"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-015.png",
+    "bytes": 58365,
+    "sha256": "c96b0e7911fd9754b13c54932b79f44d78a95c56ae243a79de1015643a3113e8"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-016.png",
+    "bytes": 59150,
+    "sha256": "7f5dc6c401260c6e1f51a0d46e7155d46220b84dba6a9ba588ca84d17684edc1"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-017.png",
+    "bytes": 58998,
+    "sha256": "06dd385c3b0f41bce021127d8ab2a43aba5d9a47e19811559a3a5ea29459c7e7"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-018.png",
+    "bytes": 58896,
+    "sha256": "7efba7c85398bed92593985ac4db23c46e0440035caa80738e0d23edbfa9ac9c"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-019.png",
+    "bytes": 58091,
+    "sha256": "84af49258a883779f5e468bfa0dbce917db6c87525f28c3a10c281d38aac0c64"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-020.png",
+    "bytes": 57388,
+    "sha256": "38ba7134c47cbe25403f3aed9f623989bf40e4abba6dc9a0f0ded7830b807527"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-021.png",
+    "bytes": 56200,
+    "sha256": "a643110a8198d104aaa8a6d810512b9dc3164549344e920ec6ab5c3c673d19d4"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-022.png",
+    "bytes": 54403,
+    "sha256": "fa6887e5de8c5bc53decbda76463cd6c420c100ec7b715ddf1fefb2c501781b6"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-023.png",
+    "bytes": 52293,
+    "sha256": "dc1f0be986a759ea52a0e66e74add3c11ea28a66fc1d58e393e55308a41bb830"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-1-024.png",
+    "bytes": 50236,
+    "sha256": "9c6d55ce41cdee1a423edf6371f92ca68a027b1762f1161c70525bf92d7e420b"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-000.png",
+    "bytes": 61980,
+    "sha256": "f429f9caed37d265e8a223573011d11c4e26fcd5bfbce0edf9356be8361a3df6"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-001.png",
+    "bytes": 62240,
+    "sha256": "a60655e1b338b8a21d42da62d9b78c9e42a1642932670093acc8f2969d635143"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-002.png",
+    "bytes": 62230,
+    "sha256": "56db212148a1cb2c6c17f9ae18280296c806d58df92de7f8c536acc2b24c8a77"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-003.png",
+    "bytes": 62295,
+    "sha256": "760cb582ecd7f3775284bb3b709e62f9900965f31461e1723f9c4e152a480b17"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-004.png",
+    "bytes": 62092,
+    "sha256": "1be77e0ced1b9b2883202528d2f76df4dd415dc8525725808115843fe979e7e4"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-005.png",
+    "bytes": 61977,
+    "sha256": "50abaf6ded8b69b49ca091c23aebf75a25afb269e2dc0382611c25aa3b4e0202"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-006.png",
+    "bytes": 62197,
+    "sha256": "b71c52eb28db8c4f4ea4964d05ee5f77d49d1662d179defcfdad571669d00bcf"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-007.png",
+    "bytes": 61953,
+    "sha256": "0afdcac1a208b800293596830f7d277816408b2e9943da31088d50941f77377b"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-008.png",
+    "bytes": 62187,
+    "sha256": "d29213ec871c4ec749dfc54eb675466759d51f8a9d30368f4d1d2e2b7a4ae9cd"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-009.png",
+    "bytes": 61880,
+    "sha256": "b9cd89fc2a91833e895f80103cbd8c5c7717ee1a9a3aa2150cf5feb7327e1d14"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-010.png",
+    "bytes": 61561,
+    "sha256": "e7da4c35a469236fa3d6eb92f2b6a406c2648a56a13b3a4ab02e0a0bfbff64f8"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-011.png",
+    "bytes": 61522,
+    "sha256": "8be7fea51b8335048db7fb5b5a427dafe6d81cc6f1c9af76ecca63ba9f74fdaa"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-012.png",
+    "bytes": 61473,
+    "sha256": "c93b15c4962e65b57f18f9c2aa2abae10137dd55fb7b4ba9aed64dd5ece91aa0"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-013.png",
+    "bytes": 61316,
+    "sha256": "2a2a61cd54316eed5a14a676f27b02e382b887c2fe42c762f1bb5f5c0940a764"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-014.png",
+    "bytes": 61009,
+    "sha256": "bbf4db0f1fd0f70b229f19d72a095c7f4b8e3dded6d9165c60fce0989b6a4717"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-015.png",
+    "bytes": 60811,
+    "sha256": "dc87251118518b0c47816a360f747fb21a471c4f8102a59c8a2e9b3be7d0258b"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-016.png",
+    "bytes": 60530,
+    "sha256": "abda1ac4dafbab041a76ab72f33d4c5c9ef156116d236dcff46febb3ac48b127"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-017.png",
+    "bytes": 60223,
+    "sha256": "b0b0921a679ee03205a807473ee65ed227adce40d71ac7b53158b095af30541c"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-018.png",
+    "bytes": 59982,
+    "sha256": "d3992c1f8bb45a90e5c92e8f708940d221c8d0617dd80b528358570042090523"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-019.png",
+    "bytes": 59816,
+    "sha256": "e89e4c83392fe3d8bd4034d403de626673beaa2ea2a378ce62bddabaa2bc9af0"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-020.png",
+    "bytes": 59430,
+    "sha256": "c622f50ebc00fcc68999a30c6080166b31167e44035d6d4cf3569ad751ded75e"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-021.png",
+    "bytes": 59098,
+    "sha256": "2fa82ad46d4915b90974d82b53a3c0f2037ff294ba97378d42c9efe9b1348305"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-022.png",
+    "bytes": 58755,
+    "sha256": "e1b8c9fe65fcb3a1e14620414d450f5075cfb3bbe676de7b6aa8a26f94910a82"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-023.png",
+    "bytes": 58629,
+    "sha256": "2608265f1a7fbaf9d9c1ac0e8565d0e99168c9cb3ee4ce5a32fd479a7a7e6594"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-2-024.png",
+    "bytes": 58558,
+    "sha256": "6667f687a7966948be1e33448c2c05eaa0c34d0d2ba41ebc89644868490af0d3"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-000.png",
+    "bytes": 60905,
+    "sha256": "e729c455a6d60bd58a4645046f2801804643e8b69cc657e37bc550efa6fd70c3"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-001.png",
+    "bytes": 60630,
+    "sha256": "24e41ee10cf6167acb339db9e956be54ae1c35b8e57bc4e9d666f9466855bb5a"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-002.png",
+    "bytes": 60880,
+    "sha256": "470281623bd4cfedac27417901a85009111522d092540ba97dc3933999d0d628"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-003.png",
+    "bytes": 60666,
+    "sha256": "95e89a057a0949031d63bfa6a6342223a80f2c06cb31475a6dee71af11196894"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-004.png",
+    "bytes": 60590,
+    "sha256": "ccfe7db303be024083db77bbdab39a5f711af8ef58c4a1bab72c137ab0fe7828"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-005.png",
+    "bytes": 60937,
+    "sha256": "935c6307a34a9a2d04883ad5cdf7633ac82b4261cfed9c605b9d2bf8fde17e8e"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-006.png",
+    "bytes": 60702,
+    "sha256": "f741ba8e0dd64e14fd556a21e6a4d7093b9517b8426e71584694baa37a079ab0"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-007.png",
+    "bytes": 60862,
+    "sha256": "1614cd6a1d97d8177686a8622fcb16feb3a016e79bd183937c91149d57086cdb"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-008.png",
+    "bytes": 60831,
+    "sha256": "6104eb0137ecd7d8ad89b4d95b881042dde3376f159eb886b505a52fc0fb1178"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-009.png",
+    "bytes": 60647,
+    "sha256": "fcdf9b9aff95ab8bee67939d06daac5ed6f4c67f4227470550cc323388e60fc3"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-010.png",
+    "bytes": 60528,
+    "sha256": "07243418d42ce937a646f6c66b34551f3eaaccdb62c88c31ca9fc6a9020c6407"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-011.png",
+    "bytes": 60471,
+    "sha256": "3021c5bba47c9d776e41719f447a173df03638c7fc1fca45b0580366b53dd22e"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-012.png",
+    "bytes": 60446,
+    "sha256": "51bc060ab731fae57a0d4dc86b1b10eec56e73eb415144472958187dfb8c36ad"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-013.png",
+    "bytes": 60150,
+    "sha256": "d17fdfb4cf64df0ca9e64c1e2f403e4ceeffb8a27b1c0f25df89528e14ee6489"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-014.png",
+    "bytes": 60011,
+    "sha256": "54658a3886ca82a8b6858217e15a1f1c7d27210607099f5268742a43f4aef00a"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-015.png",
+    "bytes": 60087,
+    "sha256": "a4d875e8c466cabc77e782bb8b1d536eb9d933aa597b96f8c0b732d390952db5"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-016.png",
+    "bytes": 60168,
+    "sha256": "57c3a40de24fbba90ef4770d639f82183d572d104d5bc2b9d2e62b2bc7a9fa1c"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-017.png",
+    "bytes": 60018,
+    "sha256": "169a6a24287a936964014164af26c91352baa96e0f8bf1d382a880c479105a99"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-018.png",
+    "bytes": 59981,
+    "sha256": "cb8696c91bb3c203944f5267ac31a9baa7bf1eb34b3d58e92ffaeebe8a612562"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-019.png",
+    "bytes": 59852,
+    "sha256": "b0ca9480ceac5a43493047c839724a4145b186dfb48d6d9789fa070b46cf2d92"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-020.png",
+    "bytes": 59850,
+    "sha256": "738d952ab11d46b0f5a802067c24c31076375d5916dd987f02e11fac3a1837bf"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-021.png",
+    "bytes": 59677,
+    "sha256": "1b044a069183d793b00e2e4e2c1b5dfa2090cf393c84f506ea70ea72ee72d350"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-022.png",
+    "bytes": 59497,
+    "sha256": "55f21e1d5d293f16956bb57e70a42515f4ddfc9ded824dd985debf59ec16e7a2"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-023.png",
+    "bytes": 58949,
+    "sha256": "67571f5b2ea60b2ad7180befa4cfeab64c09c20217282b481146c26028f1c5cd"
+  },
+  {
+    "name": "data/rgb/pilot-variable_speed-3-024.png",
+    "bytes": 58592,
+    "sha256": "6f78e9cb8993dea7d7bfd7620938869307fbfcc990b9db0b040ed5a0da29cdec"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-000.png",
+    "bytes": 63051,
+    "sha256": "58c75f70e694208f6742cd45ea33a2b45d56dd1c9ddab0c42cca972885c39b28"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-001.png",
+    "bytes": 63049,
+    "sha256": "32e9400307a80db66ff468dcc758a17be98e52c5ed37700a71aa3ef8790fa6a7"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-002.png",
+    "bytes": 63195,
+    "sha256": "d78402ced169435835f1d5d3505bcb725e3b3358ca74218a64c0b6dbef798386"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-003.png",
+    "bytes": 63235,
+    "sha256": "d205fc7fe0d37a9e437e23774788255f2acd1e48aea9dbe905e50981b2e56dc7"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-004.png",
+    "bytes": 62886,
+    "sha256": "dd146b631ffcdd729ac7f0215ca761fcd76aea43440e5b294c431bc0ba19adcb"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-005.png",
+    "bytes": 62724,
+    "sha256": "3bbec20d0f3be009c0e911eb933f9c5e09c5eeda5a32dbd023258b5291236ce5"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-006.png",
+    "bytes": 62352,
+    "sha256": "cb75b339995d90f73d64e0589781d5a3587e47cd4c3b5accd2bc8e733736074c"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-007.png",
+    "bytes": 61915,
+    "sha256": "b21354520df87b7cc7d5f9d6868588a31922677bdf97abb392d35f1ba2b56595"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-008.png",
+    "bytes": 61850,
+    "sha256": "60b6ad4146c8fd8c841149d2fab50116cf4cd4324b81c99f74b30e5506b881c8"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-009.png",
+    "bytes": 61210,
+    "sha256": "5f1f7a0bcfab81250e54192b09c9d740b87da69653b4c115d3d3ddc1d8ee3d75"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-010.png",
+    "bytes": 61169,
+    "sha256": "fa599751647754a024e5d26a888274e41d4810623463b6cbe405329221ea1a05"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-011.png",
+    "bytes": 61726,
+    "sha256": "ac5ee5866a5eb0821f12c306c4862dd24cc5823bd71a126c90a0beebb59f217b"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-012.png",
+    "bytes": 62233,
+    "sha256": "5dca13a6b4fd0dbd93c5af0e20ffbdbe0dd87a299cb9dc6b4496cc2723732ee5"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-013.png",
+    "bytes": 62475,
+    "sha256": "5bc0104e8cbf4aec00f634ee86167d80c4c0dee6dbdd0e11a9dee45b487b844b"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-014.png",
+    "bytes": 62452,
+    "sha256": "8cbdc24a9436ed6204493777598a7732df766dbaa8f32ad1f4b2189eb6b9ef87"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-015.png",
+    "bytes": 62649,
+    "sha256": "2f330b5336de4f50434d952ed8827a94261410ca4fd28dd0dc1fc533be9da608"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-016.png",
+    "bytes": 62958,
+    "sha256": "13c33eac35ffffd557b383a4fa86cae7044337c93a752e62c3379b0b88112dc3"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-017.png",
+    "bytes": 63038,
+    "sha256": "97024cfcc1427badf6e772ce16656afa91890a60cb39153600ae4f97bfd0834a"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-018.png",
+    "bytes": 62788,
+    "sha256": "372386b5af3a115e620bfd99144ff3c03470918cb4f46f3b85360ef4b2032ac5"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-019.png",
+    "bytes": 62742,
+    "sha256": "6cd2d6ff1903ce0c5a1c637437630db5af27772a325eeb4b34f7f23b1c7fd48b"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-020.png",
+    "bytes": 62799,
+    "sha256": "36f6f603bddb4338a1d0cb5f816a9cbfcbea908d9a677ed17819f263659dacab"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-021.png",
+    "bytes": 62895,
+    "sha256": "ac567d19272a95d3dd45b4a11402bbb5d17967269e577023075a35203671819e"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-022.png",
+    "bytes": 62914,
+    "sha256": "948eb9f341c9d4e9d8c849de24beddb7b7020d677ef4e6c5aa4b37177a3c3eba"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-023.png",
+    "bytes": 62762,
+    "sha256": "8612bbfede6d4d33574bb76ac512dc41abafadf68dd1dfe520fd44fb33dfa21e"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-0-024.png",
+    "bytes": 62695,
+    "sha256": "4617f90eb805b703b398809cbc14d521fa5f3d0ab5f55a2a024d2d79fd919fe3"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-000.png",
+    "bytes": 60365,
+    "sha256": "9d32ec347c15fb8c7c5a205f26d76a45ff753390e1f4395d61fb5fc1b6ffe263"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-001.png",
+    "bytes": 60447,
+    "sha256": "6655eb8c40a85e03247a9f32429ae8b75c2267a0e7975685c16c592de54e2fc9"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-002.png",
+    "bytes": 59930,
+    "sha256": "00bfbbbd8a8077e096433b48ee13c52a755cb5d449edf490267934d4b29d85cc"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-003.png",
+    "bytes": 59591,
+    "sha256": "29db69b68376bd45bcad536a48837253aea2247b571c04aa98e360a2da138e19"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-004.png",
+    "bytes": 59434,
+    "sha256": "3a45eb94a2ecb33f74142576af2be57ebfcb4fd16e6d2380301c1b4dfd9d48c5"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-005.png",
+    "bytes": 58979,
+    "sha256": "89dd86cb12c83c03282ed3a7c5cac8b20ca5f574c86788589fa5ae4096ed14af"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-006.png",
+    "bytes": 58695,
+    "sha256": "bb805973824a0c64d0dbf4858ed36a62c8303fdb9b5457436c8e25966378b426"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-007.png",
+    "bytes": 58041,
+    "sha256": "264787ed58a6048de6ca2bb233cb9bdd82200861d60e21f8dda3eaac40df8c0c"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-008.png",
+    "bytes": 58485,
+    "sha256": "197446dd5e9e65a080d4ce514ffb7b64cb61a6caf598bea6897a56700191d5c9"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-009.png",
+    "bytes": 59007,
+    "sha256": "53a34dbe2a98a1f92081ad5372ca4f0da503863e7a03ecf75e2e2bbcd32b2228"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-010.png",
+    "bytes": 59058,
+    "sha256": "1cd784aaa994ae0a214123134d5c89dd572abff2d347de5d0ea55a5cc6e6477a"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-011.png",
+    "bytes": 59429,
+    "sha256": "0acdbe4b49bb205cb63be52e0f788d42df77567d121396fe1317a0e3d94318e4"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-012.png",
+    "bytes": 59438,
+    "sha256": "24a03883b0ac70fcdffe43e20635db1d254f8bcfe8da19d855064496d7802208"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-013.png",
+    "bytes": 59433,
+    "sha256": "3f45b73af439a142df983b0ba1e8eafadcaeb5a2e5e5e13904c4c3d16a595743"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-014.png",
+    "bytes": 59390,
+    "sha256": "0a04ed660c70a4d88e84f8f5820b3d858d33c6683f822e85678d5354715570e1"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-015.png",
+    "bytes": 59421,
+    "sha256": "7ea6d37aae2ed3db47115fabd34404121da528383c2ececff5764395a45e8685"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-016.png",
+    "bytes": 59308,
+    "sha256": "bd2151bf37b0d509afd41fcebdbd0c36e626ccd75e530bfbcc746a1ab484e284"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-017.png",
+    "bytes": 60293,
+    "sha256": "4b2836d0ec0c8ebaf202ba45ebc43e77d82dca0f9e320a491412461abd57a6cb"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-018.png",
+    "bytes": 60652,
+    "sha256": "928248a364d6562e3635af9a0a3cba8f22795813d174c4dc12688090a9cf4a07"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-019.png",
+    "bytes": 61226,
+    "sha256": "4bd1ac44fc286da69d052ffca2984f56bb5ed31b095b234d78f51e1c73aabc3d"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-020.png",
+    "bytes": 61085,
+    "sha256": "a597228463ad6f9065e050e1053ba90260168f35a04aa938da5acc8dff22387c"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-021.png",
+    "bytes": 61524,
+    "sha256": "02d45116b5d4f721b9d13eb3da5ee56cda451f78508b8eb336b2ff2165198426"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-022.png",
+    "bytes": 61483,
+    "sha256": "01f40241f3fc69346acd123fae9225e41cd4dc2717acd28a3029e7c4fd7db70b"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-023.png",
+    "bytes": 61553,
+    "sha256": "061c259f10f9b1e9d425d0d882a13df5b15d523c2d953df7711c0232370f9b37"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-1-024.png",
+    "bytes": 61176,
+    "sha256": "0a695778ec5d8833faf9fe901b5294c37eab76a3703b234f32f2cd387286cf8e"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-000.png",
+    "bytes": 51881,
+    "sha256": "4142bba8b80aed3a3663b6ddd7f1000c70d47715836ee29d5e2ea7ecb1deb00d"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-001.png",
+    "bytes": 52581,
+    "sha256": "623a5e6de959574ad727a36f0bef43bfcce92f0b808fa26339a5faf4aba05ba4"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-002.png",
+    "bytes": 52952,
+    "sha256": "d5d947b7ebcbac62bcdfd4c9906c5a198cdd4df28fd854af578e62a5e36d11f8"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-003.png",
+    "bytes": 53839,
+    "sha256": "e789578fa240b41f3aa430912c321650ea5cbabf1bf2480aec1e744ec2be4f6a"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-004.png",
+    "bytes": 53906,
+    "sha256": "6a7a0227496f71f4cccce3b5fe67aa65fcf9b8114120d8c5013dae64be56b83f"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-005.png",
+    "bytes": 53887,
+    "sha256": "2b75dd7c6df9668628d38c436b846db0d3cd80e069ac80f713ddaf591b385d4d"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-006.png",
+    "bytes": 53877,
+    "sha256": "645fecec6db9a42b685b40969a30d1888c805c2a75105955f293173b1fc2dcc6"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-007.png",
+    "bytes": 53927,
+    "sha256": "ed2e6886d315fdf9c392ec4ab90be962d980e043cc34e3bef359138f481d8c5e"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-008.png",
+    "bytes": 53993,
+    "sha256": "4efb5887ab6ba6575b0a464072fa39e435e90899089f95fe3c5673efd0878ea2"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-009.png",
+    "bytes": 54390,
+    "sha256": "ab854a598b85c47f917d1210c3fc496bc89235ffaecca7ec8bc8ede9820ea5e2"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-010.png",
+    "bytes": 54227,
+    "sha256": "5c3b058e74d7d72e3584dd7aed1b4b9de71d0cc0d4e437922a4694a297fd4737"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-011.png",
+    "bytes": 54420,
+    "sha256": "edd1c522b2d0891172633f44e86fb5f74527580096c2642824a5213bbeecc435"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-012.png",
+    "bytes": 53510,
+    "sha256": "468d928070254174b8c1b9b4f50bc3037dab3f53f52de3ca289f33e98eae7444"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-013.png",
+    "bytes": 53162,
+    "sha256": "aac5832ace485d3a6cce045c1f13b4c27c7a1625dc4a50ad69b9ad1024a66963"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-014.png",
+    "bytes": 53181,
+    "sha256": "bcd784d96f276cc4dbde8fade2129dd20ae17fe21ca698c3808f25a6013b6069"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-015.png",
+    "bytes": 52507,
+    "sha256": "3ae4681ec7d32cf203519c046d8f084558c1575bae61f4d09e0346106a05a075"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-016.png",
+    "bytes": 52540,
+    "sha256": "48a66f75dd9b543dded4a77b9b79cc79de70d7e7642cfca493c6e3ae57aa0d9d"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-017.png",
+    "bytes": 52504,
+    "sha256": "fe2bb2a5b3a2a2c9d3a494e2407c56f893e2556008729a8b483405d6ff640b74"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-018.png",
+    "bytes": 52674,
+    "sha256": "3cfc8ef2a02319bb17c4418838ad987ba3dd8be28f3a077806da977b205e5b89"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-019.png",
+    "bytes": 52522,
+    "sha256": "ed1da3fa219670814d6b636b9d6bd2e37faeda270d2c1495f06059a14d2c1919"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-020.png",
+    "bytes": 52748,
+    "sha256": "6a3049aa951883daa8b9951439beb23867eb9a65a5ba1ccf51713d49ca011eda"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-021.png",
+    "bytes": 53383,
+    "sha256": "8fc2569f196f3b70ea9a2e361dc31a495893a647de54bcde58299627dd5b8550"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-022.png",
+    "bytes": 54012,
+    "sha256": "818fcab61eb6b74fa098a10dd318611a4f828a89e511b44b8899205ac07aaaf7"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-023.png",
+    "bytes": 54204,
+    "sha256": "f20f7d81baf18b55c4875de97a00f4b6d2160d0bcd7859c0b2621750bdeac73b"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-2-024.png",
+    "bytes": 54243,
+    "sha256": "65f382d3147f0495060169383291e2c64057b6ad04bd1fc79212a3ed04e252a0"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-000.png",
+    "bytes": 64672,
+    "sha256": "672b3f2a152af06d1d50b02562bced062aab42d75bddf1435c12617cef4ce60b"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-001.png",
+    "bytes": 64381,
+    "sha256": "dcf05bfcd4c3a727eb86a62666bcca7e981bae0b37102dba0fa737514c1aea04"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-002.png",
+    "bytes": 63860,
+    "sha256": "8d6163f8f89e711cf2ce0e8b2574ff64f8f8707cccf57c60db717e60fd2b8436"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-003.png",
+    "bytes": 63122,
+    "sha256": "20281a407b704dec238b559b027c3053ab1f051948f470255b7fa3976bb87fc2"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-004.png",
+    "bytes": 63552,
+    "sha256": "806857563a1740b2a09e5f35fc2d4db153382ad982d542f5b13e43871c0e2688"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-005.png",
+    "bytes": 63625,
+    "sha256": "e3c0f7a774320a929b06b1844be233f100d539c9025d683d8ff0259baa44cb62"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-006.png",
+    "bytes": 63905,
+    "sha256": "0201b43a693ea9c0ca04145394bf831b116835a563f6a62467ed3c67445d0de3"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-007.png",
+    "bytes": 64013,
+    "sha256": "d4028f205f7443d90d431ced74181360fb8de3aa38b84cb4f2cc74c4add37dbe"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-008.png",
+    "bytes": 63704,
+    "sha256": "c4ab0b6169f99fdbf25be86ccd7354c5e28072c8210b03a09bd614158618a3c4"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-009.png",
+    "bytes": 63387,
+    "sha256": "50116206c74c6815d60591305d1794f173cad2b1a98b853d4d35d8b676e9e9ff"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-010.png",
+    "bytes": 62974,
+    "sha256": "32d22aad1ed9dedec5d00de39f2c99b1c4806055e33af0bd6fba0a6236881ee0"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-011.png",
+    "bytes": 62773,
+    "sha256": "12becd566f728f69f58fc60629ecc7b928c7f385c5beac8cc05443d822d05120"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-012.png",
+    "bytes": 62357,
+    "sha256": "58b67361c84c774167623770bd38e4be2d140edab614caaac376903c5ca4ddc1"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-013.png",
+    "bytes": 62961,
+    "sha256": "9715b3931385502117d589cbf58f69ae4eff253456d9f33e8b6837539ebc1a98"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-014.png",
+    "bytes": 63479,
+    "sha256": "0202a609d3bdd3f9091da9f750cc97972dccb45ad09bfda3bce032cbe965bffc"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-015.png",
+    "bytes": 63484,
+    "sha256": "f34a498415dcb93d95ee7ef081d3a5b3e9ad856e1c3f79c753a6e4f029615741"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-016.png",
+    "bytes": 63956,
+    "sha256": "0cc61bc0d2809c3484ba78996cf48f3eead9343c5e4d620e65459ec7c3c6b2ce"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-017.png",
+    "bytes": 64130,
+    "sha256": "f38f55cc391f58cd77100b38cfdb603e074f3613539456f0631201f886f5967d"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-018.png",
+    "bytes": 63816,
+    "sha256": "308d3d26e353382bf670e1805ad7d3d359069c1facde513d9a15e8840cc27a4b"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-019.png",
+    "bytes": 63768,
+    "sha256": "2a0e9a9aea5cf4ba8b7628750719f3988edb1900aef0a23165184d2011c54aa7"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-020.png",
+    "bytes": 63487,
+    "sha256": "97d4b7bd40249d4ada87cbc9b6f711691e2727ccfe5a2b68c8c7d7928c39c159"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-021.png",
+    "bytes": 62394,
+    "sha256": "1725c1da8cd4b409c369a7c80ba0e5bdc80efd045e61f19951ea838a84440a88"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-022.png",
+    "bytes": 62544,
+    "sha256": "a59e2c65a589c245b15870bcfada75766f871872ef4b23b0f8c1e4abc0921bf7"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-023.png",
+    "bytes": 62655,
+    "sha256": "4afd4d996a9f49d95772f126fd3d9bb85693ba12af44d6bf95e78a4e3c2dd79b"
+  },
+  {
+    "name": "data/rgb/pilot-yaw-3-024.png",
+    "bytes": 62912,
+    "sha256": "01609b393ea48b414065b1ffbd6978bd3ab97a25082a2b91045d6093d8e45847"
+  },
+  {
+    "name": "data/sequences-T4.jsonl",
+    "bytes": 358692,
+    "sha256": "5b8e4f57ad81aba7ab655ae973902abf5994f873796ea06db01c8fb04f07bded"
+  },
+  {
+    "name": "data/sequences-T8.jsonl",
+    "bytes": 411479,
+    "sha256": "8a35b545815223315c06780a7ea3ea7cc014c71a72d1dcbd37dee73e72137dfa"
+  },
+  {
+    "name": "data/SOURCE_MANIFEST.jsonl",
+    "bytes": 3245069,
+    "sha256": "ca2d839c34659fee39d676a50e27ae0c78142625d6e577642ffef13589e11840"
+  },
+  {
+    "name": "data/SOURCE_QA.json",
+    "bytes": 389,
+    "sha256": "676538621399d9bb163e90de95c5ef79bb48ae0c8587488e83269d01de596754"
+  },
+  {
+    "name": "dataset.py",
+    "bytes": 7201,
+    "sha256": "4fc120628729da51dccb16339e120a21368313f0208f81716a6290bfe3845ba9"
+  },
+  {
+    "name": "deps/onnxruntime-1.24.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "bytes": 17222993,
+    "sha256": "e54ad52e61d2d4618dcff8fa1480ac66b24ee2eab73331322db1049f11ccf330"
+  },
+  {
+    "name": "deps/onnxruntime-1.24.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "bytes": 17244912,
+    "sha256": "0d640eb9f3782689b55cfa715094474cd5662f2f137be6a6f847a594b6e9705c"
+  },
+  {
+    "name": "deps/onnxruntime-1.24.4-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "bytes": 17244738,
+    "sha256": "e30c972bc02e072911aabb6891453ec73795386c0af2b761b65444b8a4c4745f"
+  },
+  {
+    "name": "deps/WHEELS.json",
+    "bytes": 791,
+    "sha256": "e578f2a18966f24adac1287d1e7e5513aca61042b5872b732a474fdd31bda515"
+  },
+  {
+    "name": "embedded_filter.py",
+    "bytes": 4676,
+    "sha256": "70f69bdf42f26c65a9f67925078cc9f400fd544f91dbe2f7ef823ade9c242c60"
+  },
+  {
+    "name": "filter.py",
+    "bytes": 5439,
+    "sha256": "6ae75953b73402c392caf9a3095fb9c6cda6d39ac88e30a2e30c2c8be3d9bfa1"
+  },
+  {
+    "name": "map_models.py",
+    "bytes": 2473,
+    "sha256": "f6fd6651a9f0135afb9baef051fad0cadc22eb4d6c0396a2da6be8661f31e8c8"
+  },
+  {
+    "name": "models.py",
+    "bytes": 2054,
+    "sha256": "902f4ee1e27f52ee8c13ac85d8ac715e24c401838181d0df29ad53b09e348186"
+  },
+  {
+    "name": "models_spatial.py",
+    "bytes": 845,
+    "sha256": "49075013d8552e04ebd9107aec0b73bd8a49158e36b8b0b3c036511f332b9732"
+  },
+  {
+    "name": "parent.pt",
+    "bytes": 6062366,
+    "sha256": "c16e0ddf9f458fb7dfbcda5902f60c09b4a9e0426bb55a7e9b3ebea3d486d989"
+  },
+  {
+    "name": "PARENT_SOURCE.json",
+    "bytes": 633,
+    "sha256": "4fe383b1b22b6a5adc633be6874dc0c89d2066a533962eb43430962385c18464"
+  },
+  {
+    "name": "RECOVERED.json",
+    "bytes": 933,
+    "sha256": "d5dc4ac5586629643dcaa1ff256b5ffdcead415cb54c71b560c7f76f0f1b20c8"
+  },
+  {
+    "name": "train.py",
+    "bytes": 14150,
+    "sha256": "31ad395a2e357e2c5c21a7b817fd48a2628c501019a7c4af9097bef5c2b3bc4f"
+  }
+]

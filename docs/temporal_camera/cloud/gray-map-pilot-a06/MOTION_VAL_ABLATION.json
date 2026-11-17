@@ -1,0 +1,68 @@
+{
+  "status": "HOST_ONLY_VAL_TIMESTEP_ABLATION",
+  "test_split": "NOT RUN",
+  "model_sha256": "ab1cd063f6c2695e35a345e1c82af17e6ef6f6c43f71fa6f4bba6930a2b146b2",
+  "dataset_manifest_sha256": "ec2e617bb3b15df10c80f666aa2166f29d7231741026dc187ddc582887609042",
+  "temperature": 2,
+  "wide_process_scale_mm_per_s": [
+    500,
+    800,
+    1200
+  ],
+  "baseline": "one 50mm grid cell per axis",
+  "motion": "Global floor 0.01 always retained, no hard gate, speed scales simulation-only",
+  "results": {
+    "0": {
+      "error": {
+        "n": 250,
+        "mean_mm": 902.5293532183692,
+        "median_mm": 785.0604432883312,
+        "p95_mm": 2060.6410538135992,
+        "max_mm": 2471.623506474533,
+        "within50_rate": 0.032,
+        "within200_rate": 0.204
+      },
+      "correct_start_zones": 5,
+      "start_trials": 10
+    },
+    "500": {
+      "error": {
+        "n": 250,
+        "mean_mm": 821.2695014676428,
+        "median_mm": 668.9536966175743,
+        "p95_mm": 2031.0144001215892,
+        "max_mm": 2428.4400610441257,
+        "within50_rate": 0.104,
+        "within200_rate": 0.288
+      },
+      "correct_start_zones": 5,
+      "start_trials": 10
+    },
+    "800": {
+      "error": {
+        "n": 250,
+        "mean_mm": 811.6710165040572,
+        "median_mm": 644.8193101828823,
+        "p95_mm": 1963.1088778640878,
+        "max_mm": 2214.2437173413264,
+        "within50_rate": 0.12,
+        "within200_rate": 0.296
+      },
+      "correct_start_zones": 5,
+      "start_trials": 10
+    },
+    "1200": {
+      "error": {
+        "n": 250,
+        "mean_mm": 840.7124725244146,
+        "median_mm": 714.5386261419064,
+        "p95_mm": 1987.0466873733144,
+        "max_mm": 2278.1612916115705,
+        "within50_rate": 0.116,
+        "within200_rate": 0.296
+      },
+      "correct_start_zones": 5,
+      "start_trials": 10
+    }
+  }
+}

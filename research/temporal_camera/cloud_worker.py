@@ -16,6 +16,9 @@ def main():
     ap.add_argument('--run-id',required=True);ap.add_argument('--input-sha',required=True)
     ap.add_argument('--wall-seconds',type=int,default=2400)
     ap.add_argument('--encoder',default='baseline');ap.add_argument('--all-endpoints',action='store_true')
+    ap.add_argument('--learning',default='ce')
+    ap.add_argument('--settings',default='cnn1,gru4,gru8,tcn4,tcn8')
+    ap.add_argument('--epochs',type=int,default=60)
     args=ap.parse_args()
     if Path.cwd()!=Path('/kaggle/working'):raise ValueError('Cloud working directory required')
     outputs=Path('/kaggle/working')/args.run_id;outputs.mkdir(exist_ok=False)
@@ -27,8 +30,10 @@ def main():
     begin=time.monotonic()
     with (outputs/'train.log').open('x') as log:
         command=[sys.executable,str(args.root/'train.py'),'--data',str(args.root/'data'),
-              '--out',str(outputs/'models'),'--run-id',args.run_id,'--epochs','60','--max-seconds',str(args.wall_seconds)]
+              '--out',str(outputs/'models'),'--run-id',args.run_id,'--epochs',str(args.epochs),'--max-seconds',str(args.wall_seconds)]
         command.extend(['--encoder',args.encoder])
+        command.extend(['--learning',args.learning])
+        command.extend(['--settings',args.settings])
         if args.all_endpoints:command.append('--all-endpoints')
         result=subprocess.run(command,stdout=log,stderr=subprocess.STDOUT,timeout=args.wall_seconds+100)
     state={'run_id':args.run_id,'input_manifest_sha256':args.input_sha,

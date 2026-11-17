@@ -1,0 +1,5097 @@
+[
+  {
+    "name": "cloud_store.py",
+    "bytes": 10870,
+    "sha256": "1f764499ce2098139a57cbcfd7406000c98f4a8ca914bb8d96e9e4656148cf34"
+  },
+  {
+    "name": "cloud_worker.py",
+    "bytes": 2536,
+    "sha256": "a29055df7726df578487abc61af641ae9a25f5bafd650ca9f91dbb1b25276c2f"
+  },
+  {
+    "name": "data/manifest.incomplete.jsonl",
+    "bytes": 1202588,
+    "sha256": "76cb06230eb6675ec17f3e2f0861ae48921b7607490af23d1635428b04bf6532"
+  },
+  {
+    "name": "data/manifest.jsonl",
+    "bytes": 1202588,
+    "sha256": "76cb06230eb6675ec17f3e2f0861ae48921b7607490af23d1635428b04bf6532"
+  },
+  {
+    "name": "data/QA.json",
+    "bytes": 705,
+    "sha256": "0759c4a52917f249eda8eb27b9d4b216a321931676028231d2061f47143aac05"
+  },
+  {
+    "name": "data/RENDER_IDENTITY.json",
+    "bytes": 355,
+    "sha256": "7b9cbcebc9df754f7b91c9f7d4cb2d46d17aad2ceae7a6a90db0c6612025999a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00000-000.png",
+    "bytes": 17625,
+    "sha256": "d4b1ad6745746b49bc10949a91fcb2f1eb338bee96528afe3833c8b4ac01e688"
+  },
+  {
+    "name": "data/rgb/pilot-tr00000-001.png",
+    "bytes": 17816,
+    "sha256": "7fdb15be3ce57f55031e0e451c5086d13e8f67ed0d97dadecad7fa38d90d8618"
+  },
+  {
+    "name": "data/rgb/pilot-tr00000-002.png",
+    "bytes": 17673,
+    "sha256": "fe62fe5f1409ae578a3f416ac1c1f6e34ed11fef8c9d78336787f44e987086e6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00000-003.png",
+    "bytes": 17705,
+    "sha256": "c479c31bfb9c47290cd9cd849d0c9b90a91a2a5a5ce2ac2d5df0f7e9489cae29"
+  },
+  {
+    "name": "data/rgb/pilot-tr00000-004.png",
+    "bytes": 17771,
+    "sha256": "2d45a0aa3fa5cff84c9e78ce9744dbf91e66d7ea4cdce1e8e7d3b3deb3ba0c78"
+  },
+  {
+    "name": "data/rgb/pilot-tr00000-005.png",
+    "bytes": 17740,
+    "sha256": "26653661545b4a09df84fa51e4f715de6f2179489cc787b9db9258b113aaf82a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00000-006.png",
+    "bytes": 17731,
+    "sha256": "df6e0cba6014b953deea742cea0284929d245aa755425beeb1989f0edc35bfd0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00000-007.png",
+    "bytes": 17552,
+    "sha256": "373e5ebc12182e3f291fc76503a5424dab9d8654b74ed45b9bc86351a1fce13b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00000-008.png",
+    "bytes": 17530,
+    "sha256": "eb70416c45c3c9c5ece201d2206e64dc75329df7c64528b69744adb35dba0097"
+  },
+  {
+    "name": "data/rgb/pilot-tr00000-009.png",
+    "bytes": 17551,
+    "sha256": "fd01551151c4f755e74e0b40cea025e07642209cf92bb9ced7a6e0e02208358a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00001-000.png",
+    "bytes": 17032,
+    "sha256": "bcf24f4b61c65924d5076661bf1e2259b3adbbe838f75533672fc5ea27461ee6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00001-001.png",
+    "bytes": 17161,
+    "sha256": "40e14f28245a8aa1f5c7395807a436a88570c6a7dc43ad46ab386ec2aee5514b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00001-002.png",
+    "bytes": 17503,
+    "sha256": "ee7f125a6cd18eb9c20e2d7129b5f1305764ac4601ca6a4453b560035e21c6b0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00001-003.png",
+    "bytes": 17303,
+    "sha256": "dc5abe57c5d6a76740fd85932f4c8884b3e32406a87088b01184001f29b8c2f4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00001-004.png",
+    "bytes": 16976,
+    "sha256": "a14348b1c70cdb230236dae3f231a3015e598c4a234598de8a48ca1ae1047ca0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00001-005.png",
+    "bytes": 17224,
+    "sha256": "750a4893f53d0d94f714d86fbfa37844d3ee8be878221264ec6a0b7eee2674d4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00001-006.png",
+    "bytes": 17610,
+    "sha256": "467764201650b45d340fd83910a34982d22c9f8beb08040425c16dbf42865869"
+  },
+  {
+    "name": "data/rgb/pilot-tr00001-007.png",
+    "bytes": 17372,
+    "sha256": "6e4ccdd58a09e796e96184b3619fe7bbb912ca6eead863154e43ca6c39712767"
+  },
+  {
+    "name": "data/rgb/pilot-tr00001-008.png",
+    "bytes": 17097,
+    "sha256": "5271e5b508c1a6a4f3646c0d50ecce96c40a43a2c9abf9e12a06b3428d390359"
+  },
+  {
+    "name": "data/rgb/pilot-tr00001-009.png",
+    "bytes": 17081,
+    "sha256": "dd55d3edd195707a2a5621506398780af3daf2f8dddbf74ea42947e0545f653a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00002-000.png",
+    "bytes": 18326,
+    "sha256": "b855bfe3f77fab5764203bfb1c39f0f7d11324eb560453136a99d61bc7500846"
+  },
+  {
+    "name": "data/rgb/pilot-tr00002-001.png",
+    "bytes": 18087,
+    "sha256": "27948f639bbdce900333b32007a294eafbcc3e4d74a858e073f99994e62f6691"
+  },
+  {
+    "name": "data/rgb/pilot-tr00002-002.png",
+    "bytes": 18019,
+    "sha256": "caa97316c66a43c4323393878a417b4728c011127aa69604bbfe1102c3896d1e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00002-003.png",
+    "bytes": 18018,
+    "sha256": "168e5411e70b6403c7a816a54a266e4df28d4588b1b3a8c809f1a7eefe080157"
+  },
+  {
+    "name": "data/rgb/pilot-tr00002-004.png",
+    "bytes": 17952,
+    "sha256": "4e2ed32f33a9d1605319b0a28a33c1af4625f49e4ba7847621aa39c0626f23f5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00002-005.png",
+    "bytes": 17856,
+    "sha256": "d00e557bcae4a5d4c763ec2020b457d1260bd2d1a1006b5abdf1b841d56a78aa"
+  },
+  {
+    "name": "data/rgb/pilot-tr00002-006.png",
+    "bytes": 17990,
+    "sha256": "f6b703b1cf3f2f345a59873466398ec817188519e190872675f769b4ce03dd18"
+  },
+  {
+    "name": "data/rgb/pilot-tr00002-007.png",
+    "bytes": 17990,
+    "sha256": "a496515335c55e8dd578231a6619b4c92301a88baceb4f453b7a2dfa4c5b1bbe"
+  },
+  {
+    "name": "data/rgb/pilot-tr00002-008.png",
+    "bytes": 17947,
+    "sha256": "f47b889a50d7c4bd621451a19329b55dc1164c2bfac51c5e86fb5dfb04c2c3f4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00002-009.png",
+    "bytes": 17946,
+    "sha256": "dab9bc6c83b9c315f98a056ba85133d03910f8744d3efaa8fd831357ad8a50c2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00003-000.png",
+    "bytes": 17863,
+    "sha256": "f2b216a00ec84f7e5474749f5b2fd466091bec15a48a23de787c33566a4289c6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00003-001.png",
+    "bytes": 17812,
+    "sha256": "11c748485f9d1b5b919e6683a8a65a636b7a0915f9d99bfb3c2a37a05dcb2691"
+  },
+  {
+    "name": "data/rgb/pilot-tr00003-002.png",
+    "bytes": 17846,
+    "sha256": "421590d4e8e39812241c2a533832db0e1b83bf8acaa28972db5f8930fc3b2b3f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00003-003.png",
+    "bytes": 17910,
+    "sha256": "20827856a3029cb91ad2ede60f0c81cb103ca53291e8f9fa764c1b69eba67bb2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00003-004.png",
+    "bytes": 17992,
+    "sha256": "ec1967493e839668fa7b1c193ea8e7bc7360ae00babf4218150bff24e935ba9c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00003-005.png",
+    "bytes": 17939,
+    "sha256": "c0a1d8c77f72b44ff869a6b9872c9cb86783626e015c615f16e7efa06969ecfa"
+  },
+  {
+    "name": "data/rgb/pilot-tr00003-006.png",
+    "bytes": 17915,
+    "sha256": "593c2ae16d8f8577e3872bf6d623095e8bd7b1b40f34011641945b8875c95f6b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00003-007.png",
+    "bytes": 18024,
+    "sha256": "0923044d95a5b5fa1cda2641452c6aed146d8e7f8786f1a54eca0ac2321e920d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00003-008.png",
+    "bytes": 17938,
+    "sha256": "a6b99939028a27dc2e5fe4f2eb1ca1fc7f016fc3225859ba6a23b4b2fcba5d13"
+  },
+  {
+    "name": "data/rgb/pilot-tr00003-009.png",
+    "bytes": 17862,
+    "sha256": "0cd6ebf113162b66e74aa75e34c4ca36acabfbbd309dacd1978ab0bf2cba7518"
+  },
+  {
+    "name": "data/rgb/pilot-tr00004-000.png",
+    "bytes": 17531,
+    "sha256": "cd1a188f37648dc9c90de628ac71cb4da57ff02531a336595325ae3fccfb6994"
+  },
+  {
+    "name": "data/rgb/pilot-tr00004-001.png",
+    "bytes": 17474,
+    "sha256": "aa3d6d473a59525c568ea2557777b1da991aba6634331c9dbe7ca9d8ce4a5ad3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00004-002.png",
+    "bytes": 17446,
+    "sha256": "cab4242dd7f9390349e18b5fa08e5d1c28f916f711e80a5050ea7fb5d5cbb569"
+  },
+  {
+    "name": "data/rgb/pilot-tr00004-003.png",
+    "bytes": 17464,
+    "sha256": "fa996ea1ddda3d7b75a3b160acad64e99771735a20fc497fca26a12013f8d455"
+  },
+  {
+    "name": "data/rgb/pilot-tr00004-004.png",
+    "bytes": 17401,
+    "sha256": "7e8aa4a4f8300d563b4f3c2b4f0fc36356146dc72e2b2a8d9501510b3b6099ef"
+  },
+  {
+    "name": "data/rgb/pilot-tr00004-005.png",
+    "bytes": 17437,
+    "sha256": "8c56284eb533bfc042e8d82b91d2a476b35d8187d37313326f7281af688c77d5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00004-006.png",
+    "bytes": 17530,
+    "sha256": "e1eb0ad88653c07101e3fa108303d60f00f979fe6baf2602ea6b2a54aa0c4ff3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00004-007.png",
+    "bytes": 17666,
+    "sha256": "23e46dd7011df8dcf42a0c4b16bc3f4ee465159f8dd8de99153d081c1a1f62e5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00004-008.png",
+    "bytes": 17728,
+    "sha256": "54b35adbdad70ba9644465ea00dd046c5d4405d13ae4b2ce2837c90f8ef5f842"
+  },
+  {
+    "name": "data/rgb/pilot-tr00004-009.png",
+    "bytes": 17876,
+    "sha256": "59c9e0f27d58c281ef4359cfc8e140f3347acec2b4485a5623963af853a35677"
+  },
+  {
+    "name": "data/rgb/pilot-tr00005-000.png",
+    "bytes": 16980,
+    "sha256": "765468ec1139086234b6028a9c4676807a74a0d942cc27a96aafe79d946ae0a1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00005-001.png",
+    "bytes": 16837,
+    "sha256": "79ad1cc57e992199d7e1eb8b7ef602f010920c52f836208653dc8e0fa2480a00"
+  },
+  {
+    "name": "data/rgb/pilot-tr00005-002.png",
+    "bytes": 16819,
+    "sha256": "99a8e2cb70d1470b3abb47d1e94a2df759967356ba63ba475a941b4011bff53e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00005-003.png",
+    "bytes": 16819,
+    "sha256": "4752396d5e2177cfe4e5f0f9eca5cbf2ae9c1c0428c14a17688e986bfe9daf60"
+  },
+  {
+    "name": "data/rgb/pilot-tr00005-004.png",
+    "bytes": 16676,
+    "sha256": "5804fab6574862c98166cc6d5e054878107e36bf970d786991dec8e1d130370a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00005-005.png",
+    "bytes": 16523,
+    "sha256": "005c74b6d4dd39f212711d91f71294ff66cb4643fb57b28ecbec64a6cb7e4900"
+  },
+  {
+    "name": "data/rgb/pilot-tr00005-006.png",
+    "bytes": 16327,
+    "sha256": "336ba9f70dbb261204e624b4c26c6696240d18041afc500461fbaba7279639e3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00005-007.png",
+    "bytes": 15950,
+    "sha256": "6b3f33f9bb4ecc2fc29a1ea6b7ebc0494f288a471fc467d1f1078a83670b4cc7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00005-008.png",
+    "bytes": 15626,
+    "sha256": "48f303ad780fc7e63a75da14c785642b2d6561d52bf455fe52cdb9624a3bc0e1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00005-009.png",
+    "bytes": 15282,
+    "sha256": "d167fb5653cc23f978ab969edfa73b4325bce1fb866c6218c99e8c156ad7f898"
+  },
+  {
+    "name": "data/rgb/pilot-tr00006-000.png",
+    "bytes": 16044,
+    "sha256": "e708617953a4d0c67d565cf3187d1eab44dffa35b449e4bcf6abf32040a6bcf5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00006-001.png",
+    "bytes": 16087,
+    "sha256": "c7c038e7f01868da0d20dc9c2afd8473233ae318e9298b40b6f311e6a2398d44"
+  },
+  {
+    "name": "data/rgb/pilot-tr00006-002.png",
+    "bytes": 15982,
+    "sha256": "2ea13cb4211c81260d1650207c108ad7f6d3669a142457b0f36d83c796c072bf"
+  },
+  {
+    "name": "data/rgb/pilot-tr00006-003.png",
+    "bytes": 15899,
+    "sha256": "af6ba1d770235587573d7f338986a829cec93088503566e47ad2b5cef4a5be87"
+  },
+  {
+    "name": "data/rgb/pilot-tr00006-004.png",
+    "bytes": 15927,
+    "sha256": "f6a652b7e11583885a7a604dd5a30204ac53bd5808c5c40e1900b142970e8b50"
+  },
+  {
+    "name": "data/rgb/pilot-tr00006-005.png",
+    "bytes": 15875,
+    "sha256": "5da387ec307c3bf08b585f636db5db061c15bcac33e6689fa5ebba752b4001c9"
+  },
+  {
+    "name": "data/rgb/pilot-tr00006-006.png",
+    "bytes": 15988,
+    "sha256": "ebe622bf746b66b52d1b6e1dd3523621e15fa9f33b35d0825525cfbc6cf67b5d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00006-007.png",
+    "bytes": 16067,
+    "sha256": "df64fce0a622a601ebe6e0a6b7f3c285caf18fa8c9912945a3914ff733fc8c6d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00006-008.png",
+    "bytes": 16186,
+    "sha256": "1a273aa78eeb6bd51424010ad014dfa5e1369f1b0343932e370985a2fa4665e9"
+  },
+  {
+    "name": "data/rgb/pilot-tr00006-009.png",
+    "bytes": 16116,
+    "sha256": "c7048df0aa54c5a81e4a1189780a7cc81886e618be0949f308eda223831a0591"
+  },
+  {
+    "name": "data/rgb/pilot-tr00007-000.png",
+    "bytes": 18052,
+    "sha256": "999800d56dce19b479e8c63389c47351d317191b1848fea1bc12b648b8fb2d7b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00007-001.png",
+    "bytes": 17929,
+    "sha256": "18fc5390fdbdfe98b226deb224fd4580ba066566057bbb64e0d46e8b2e4f0cef"
+  },
+  {
+    "name": "data/rgb/pilot-tr00007-002.png",
+    "bytes": 17773,
+    "sha256": "1bb497fae4ef911b28e5fc14628af80b8585334a401e0e157763eabc08c0e660"
+  },
+  {
+    "name": "data/rgb/pilot-tr00007-003.png",
+    "bytes": 17709,
+    "sha256": "c1ee7732a2228dcd54cbc31096547f759a54d35b279d6fdd29fcd72f53bd5b07"
+  },
+  {
+    "name": "data/rgb/pilot-tr00007-004.png",
+    "bytes": 17545,
+    "sha256": "13e37396a5f1fb0b02353245413ad68fde6448b5d16d8fa9704c9c0f3e0badac"
+  },
+  {
+    "name": "data/rgb/pilot-tr00007-005.png",
+    "bytes": 17492,
+    "sha256": "afeeae144331e2d0e7d9421e3bb72750bd094c42a176be7899c8dd62b023795b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00007-006.png",
+    "bytes": 17221,
+    "sha256": "5aad556fdf46fd2eaf8f55db9e38480e7ab1712253aaed7de122c46e2a9e23f4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00007-007.png",
+    "bytes": 17035,
+    "sha256": "cc78aa53d819909c3323f3e3735338f104a9eaeeeddcb2bc02c499a2062d9a67"
+  },
+  {
+    "name": "data/rgb/pilot-tr00007-008.png",
+    "bytes": 16795,
+    "sha256": "72a2870dbe68896b93cf9a10141487043d8022ded9fd32e36b1bdd3218b418ce"
+  },
+  {
+    "name": "data/rgb/pilot-tr00007-009.png",
+    "bytes": 16712,
+    "sha256": "3b7c7a9c6c883c9b1d8ef5e13c256ad3993484becaf12fe7b905fa8b9adeaf2b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00008-000.png",
+    "bytes": 17660,
+    "sha256": "68c65b690e1097682a32ff5c1406019ab5cb6f2e0b13f3a4138bc18dac576396"
+  },
+  {
+    "name": "data/rgb/pilot-tr00008-001.png",
+    "bytes": 17660,
+    "sha256": "68c65b690e1097682a32ff5c1406019ab5cb6f2e0b13f3a4138bc18dac576396"
+  },
+  {
+    "name": "data/rgb/pilot-tr00008-002.png",
+    "bytes": 17660,
+    "sha256": "68c65b690e1097682a32ff5c1406019ab5cb6f2e0b13f3a4138bc18dac576396"
+  },
+  {
+    "name": "data/rgb/pilot-tr00008-003.png",
+    "bytes": 17660,
+    "sha256": "68c65b690e1097682a32ff5c1406019ab5cb6f2e0b13f3a4138bc18dac576396"
+  },
+  {
+    "name": "data/rgb/pilot-tr00008-004.png",
+    "bytes": 17445,
+    "sha256": "a5f41ba16d88648f688e61b498066f550cf32c651ef21e8e570b9653222bece4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00008-005.png",
+    "bytes": 17236,
+    "sha256": "041a7d5d5990b5b00fd74ad4f3ef0b764b9a20e09a71eb39ad3f112202e28160"
+  },
+  {
+    "name": "data/rgb/pilot-tr00008-006.png",
+    "bytes": 17317,
+    "sha256": "6d70faacee3354e9ea93e8b67045edfa432140564542f5e6de78b253a9f9fde2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00008-007.png",
+    "bytes": 17316,
+    "sha256": "821db07b8286b65231294e33ca0c453ff46c80d7bc7238462468e2a2229145ad"
+  },
+  {
+    "name": "data/rgb/pilot-tr00008-008.png",
+    "bytes": 17434,
+    "sha256": "9afd2ab1e44ea1d0305c893ef4bc45f72d47f5efc1446cff5e68fb18964f8f43"
+  },
+  {
+    "name": "data/rgb/pilot-tr00008-009.png",
+    "bytes": 17537,
+    "sha256": "349d6be2a15e315731d91c295bab899be2faceb4f31a235aa5e2878b14d27ecd"
+  },
+  {
+    "name": "data/rgb/pilot-tr00009-000.png",
+    "bytes": 16401,
+    "sha256": "720e0656fb51a9b14e5cae26cdb8f7398c3ebd9d4b21149f30fa69bb9b40a294"
+  },
+  {
+    "name": "data/rgb/pilot-tr00009-001.png",
+    "bytes": 16449,
+    "sha256": "64588a645e14f10bc7a482ed7944e62a0fd9e46ec946ae1c4524fcaa1fd31d70"
+  },
+  {
+    "name": "data/rgb/pilot-tr00009-002.png",
+    "bytes": 16333,
+    "sha256": "77ae1bf6aeda2a2f7d12c4a9f741702c7dbde94d6c9c7676ae32a3ac06dbdd17"
+  },
+  {
+    "name": "data/rgb/pilot-tr00009-003.png",
+    "bytes": 16447,
+    "sha256": "2ae531c650b382be711ad2ed6309cf88bd6a35a836e2dd73f4f21a209e4a31af"
+  },
+  {
+    "name": "data/rgb/pilot-tr00009-004.png",
+    "bytes": 16485,
+    "sha256": "5890be1a510bd0ba2c69c0bcd84509e167941db5bd1310e62a1f607999048e85"
+  },
+  {
+    "name": "data/rgb/pilot-tr00009-005.png",
+    "bytes": 16640,
+    "sha256": "8c95d1ca1d74e2dd52b08d7dcfdc1f4de49dc27794584419334a27a129638e45"
+  },
+  {
+    "name": "data/rgb/pilot-tr00009-006.png",
+    "bytes": 16609,
+    "sha256": "a6c98d8eb6817a36bf8642d0226ef4728675bf279d32a24fd5412bb0f45bae96"
+  },
+  {
+    "name": "data/rgb/pilot-tr00009-007.png",
+    "bytes": 16676,
+    "sha256": "cc851601ce5dbbc0618f02d49a0e3f6b08d9ba7af6a574d9cbc09172f487e2ce"
+  },
+  {
+    "name": "data/rgb/pilot-tr00009-008.png",
+    "bytes": 16698,
+    "sha256": "8b94343e271b96be9f9dcd1dee65f3529a78c341af7c09918066afbbbb6161bf"
+  },
+  {
+    "name": "data/rgb/pilot-tr00009-009.png",
+    "bytes": 16616,
+    "sha256": "7158d4d5601318769616246c780598f35641feff35eb902e2ab67891782d159f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00010-000.png",
+    "bytes": 15306,
+    "sha256": "1045ea4299436db7b797cb81e5fcad5a1c035a2bd110737ec13419f89620c479"
+  },
+  {
+    "name": "data/rgb/pilot-tr00010-001.png",
+    "bytes": 15306,
+    "sha256": "a08dfbe60ee6b799cda0f0957407cd60eabd7e2260b27ae7218c96fee536bcd3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00010-002.png",
+    "bytes": 15140,
+    "sha256": "eaeadf5c3ad1a8516f4b23f1e8f85e458b4199697b97e31beaba797c8ab51c8f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00010-003.png",
+    "bytes": 15180,
+    "sha256": "527c2c2c38cbc1ef40a23525b566e1db06a3809b04ed6b542658962852219dce"
+  },
+  {
+    "name": "data/rgb/pilot-tr00010-004.png",
+    "bytes": 15239,
+    "sha256": "068d81318cb5aaa2f9798636af5b0b36e308afcf4f63e1eb9ec02134de6f93b3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00010-005.png",
+    "bytes": 15203,
+    "sha256": "51b0cc4177f397dcbd97cadbc42cefb7ed0005ede0d62fccf768604a07759990"
+  },
+  {
+    "name": "data/rgb/pilot-tr00010-006.png",
+    "bytes": 15442,
+    "sha256": "4396442befe3a6cb323f39b24677bc18845a28beaa8012b7f8279066da72ae26"
+  },
+  {
+    "name": "data/rgb/pilot-tr00010-007.png",
+    "bytes": 15580,
+    "sha256": "4a5e4122fa8ebd4dfe07a030362d789cf5e9f706ace324b6367225c8540c15e0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00010-008.png",
+    "bytes": 15493,
+    "sha256": "2d6a5de5e1558cb4a733ed385b95a88d938307c05fe923cbefda95d61d5746cc"
+  },
+  {
+    "name": "data/rgb/pilot-tr00010-009.png",
+    "bytes": 15626,
+    "sha256": "c1aaca046b3e475629d2d316b3837dfdea7ee7f418f33a15fc606887035a73cd"
+  },
+  {
+    "name": "data/rgb/pilot-tr00011-000.png",
+    "bytes": 15122,
+    "sha256": "74bd25c27c33ff23706e78c5b27d7a9e09bcddef84ad5c4e2d8a66cc478e1e3e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00011-001.png",
+    "bytes": 15218,
+    "sha256": "3fb210d0d629722c68b1ee4437decffe22bbb490128d550ccd1f3d72ee24fe9f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00011-002.png",
+    "bytes": 15340,
+    "sha256": "89fe91bfe6f2a563466f4543e45cb2c0f4892ecf6f6ca1656f20be9b0fd94d37"
+  },
+  {
+    "name": "data/rgb/pilot-tr00011-003.png",
+    "bytes": 15218,
+    "sha256": "462caa223464ce61ad13367f1c2a8ac147d3f8d19a1f22e3e721c3298e449eb8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00011-004.png",
+    "bytes": 15285,
+    "sha256": "f0a888581fc2395b887fe57482face5088e39dbf183fae11e804c876902cddff"
+  },
+  {
+    "name": "data/rgb/pilot-tr00011-005.png",
+    "bytes": 15183,
+    "sha256": "376fae6a134eb5b1211faea8ca35eb57b872b758058f8657e82395420c342780"
+  },
+  {
+    "name": "data/rgb/pilot-tr00011-006.png",
+    "bytes": 15084,
+    "sha256": "097b9e1f9cbf8c6ae8101119f521c826756b0913b5e1c13ee64ddb6251195bad"
+  },
+  {
+    "name": "data/rgb/pilot-tr00011-007.png",
+    "bytes": 15062,
+    "sha256": "b71961208216962ccf96530977cd9b6acdbd3df2ce76f9bbd57032353507d721"
+  },
+  {
+    "name": "data/rgb/pilot-tr00011-008.png",
+    "bytes": 15182,
+    "sha256": "4289076ccea73e531c4ac061f6ae2c793ecbc98ef71fe1792be95ca17aa7ec8e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00011-009.png",
+    "bytes": 15176,
+    "sha256": "5abc4db060a18473541f96dd7ec23b82beebd1e6ce0b0bb749e9d577e778ede3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00012-000.png",
+    "bytes": 15112,
+    "sha256": "7f28df7257757413fae9cec3bae36ea7d6efc467aa0a62c889623c433d26e925"
+  },
+  {
+    "name": "data/rgb/pilot-tr00012-001.png",
+    "bytes": 15262,
+    "sha256": "69ffb411039246e9ea8aafae016868f8b57313d2b22f8633e42c334d11af4ada"
+  },
+  {
+    "name": "data/rgb/pilot-tr00012-002.png",
+    "bytes": 15199,
+    "sha256": "6fafc7dc64fe4d7acccacae9386a96f2e43e2b5fdbe60c43c95a68b91cf7f225"
+  },
+  {
+    "name": "data/rgb/pilot-tr00012-003.png",
+    "bytes": 14953,
+    "sha256": "9891f3a7a72f56da2b072c56ec76a00b224e6f75f7a99e72a2f3db61848708da"
+  },
+  {
+    "name": "data/rgb/pilot-tr00012-004.png",
+    "bytes": 14923,
+    "sha256": "04428f6d649dd654cdd8400805507261ba49574fbf3402a2d59a07eb90bbe390"
+  },
+  {
+    "name": "data/rgb/pilot-tr00012-005.png",
+    "bytes": 15005,
+    "sha256": "7c53877c667a4635b6423b1f5a31ee3e988f527da800db7e8be1d051c14dc550"
+  },
+  {
+    "name": "data/rgb/pilot-tr00012-006.png",
+    "bytes": 14963,
+    "sha256": "184a5d26b9c5ceac1479f9ebf9430370ef8643c377e9c9cd3ecb58edcf607d7b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00012-007.png",
+    "bytes": 14998,
+    "sha256": "29ded961e06efdef06b050a5873e8fe044e0f7c73ce7c272b75ab7347e945a99"
+  },
+  {
+    "name": "data/rgb/pilot-tr00012-008.png",
+    "bytes": 15007,
+    "sha256": "7083b5cda532130e2878942b6a78630b91fa25d670618b362e3997ee8d9eb9ac"
+  },
+  {
+    "name": "data/rgb/pilot-tr00012-009.png",
+    "bytes": 14926,
+    "sha256": "e6f3dbb647e6ce998e6a15dc02e6d6d063add4097251ef33b7a4392d8df601de"
+  },
+  {
+    "name": "data/rgb/pilot-tr00013-000.png",
+    "bytes": 16365,
+    "sha256": "ceab708fc9bc4e59b19aaac22000c9935d297a9c014f1b84d478ce14744887b1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00013-001.png",
+    "bytes": 15965,
+    "sha256": "703c67cd08e9ffe503b16ba68d6ce7a950772954a68be687fca497e7d6d58c62"
+  },
+  {
+    "name": "data/rgb/pilot-tr00013-002.png",
+    "bytes": 15506,
+    "sha256": "fa66b59c4d05416f41594e8b8541544cef6243d6c0f6f6dcb5b250fc8f5e73e6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00013-003.png",
+    "bytes": 15115,
+    "sha256": "4a0632591404ddeaf4aa2d935d595f10e4bb1f02eaf4d0a2f105add0e1294244"
+  },
+  {
+    "name": "data/rgb/pilot-tr00013-004.png",
+    "bytes": 14812,
+    "sha256": "c53b70a9c27de4650f0da971c519b5a55944f7bb77a0a0d7ee7e54b7f4c03823"
+  },
+  {
+    "name": "data/rgb/pilot-tr00013-005.png",
+    "bytes": 14783,
+    "sha256": "1cf31c5c19a09c0433bc8084d056b8d2fc4afc56f915a072e883e66a82b05ae8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00013-006.png",
+    "bytes": 14729,
+    "sha256": "f6ceb822b83eb0a433fc96a5e08eb765cc2d9b7591893fa85615a6b2a451aaa5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00013-007.png",
+    "bytes": 14698,
+    "sha256": "c8971c794851c37e91520b228470d48dfc2425e7dac21d21238dbff2afdd0fc4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00013-008.png",
+    "bytes": 14742,
+    "sha256": "46759fede4c2c6e002109bf203d986ebf72c10935e9aa521c0d1d58c60ff4337"
+  },
+  {
+    "name": "data/rgb/pilot-tr00013-009.png",
+    "bytes": 14772,
+    "sha256": "ed630280d5d79215f6030cb6555643d59d7f7a8d331489d0913783c5f06e1f36"
+  },
+  {
+    "name": "data/rgb/pilot-tr00014-000.png",
+    "bytes": 15352,
+    "sha256": "5e8d05fd4e882982d53769d9218ae0d93ff6702197ef412b3a8469fd3be72291"
+  },
+  {
+    "name": "data/rgb/pilot-tr00014-001.png",
+    "bytes": 15271,
+    "sha256": "6fe941772a7b3033c3c77c7a19c01590c1c9646e3fab0d39d4382e9911dc9f2c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00014-002.png",
+    "bytes": 15361,
+    "sha256": "68ee2e6523f6f515afbb6fddfe779cab30560179fef22a55a265f770ea27e864"
+  },
+  {
+    "name": "data/rgb/pilot-tr00014-003.png",
+    "bytes": 15076,
+    "sha256": "e039ca2dc3b0890c6e63e9ea1e035414fb244246510919780b6edf491b22587e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00014-004.png",
+    "bytes": 15149,
+    "sha256": "13113ea4dd8b1cdd1dffcfd849ee019949cff20621b924da1bc52c886a3fd884"
+  },
+  {
+    "name": "data/rgb/pilot-tr00014-005.png",
+    "bytes": 15363,
+    "sha256": "a766c5234b74685262c513c3acc05f1ae7b74c5b5aa6b0dd830eb81e7dd83641"
+  },
+  {
+    "name": "data/rgb/pilot-tr00014-006.png",
+    "bytes": 15417,
+    "sha256": "16c7a1c6c87db731a7d5c4b3213e1e9c05adc5c37d34e0954ca8059f2f38e280"
+  },
+  {
+    "name": "data/rgb/pilot-tr00014-007.png",
+    "bytes": 15366,
+    "sha256": "a20b0f8518814aa32cc3e09921364ab238d79d1f4750f479101cf95d20d6816f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00014-008.png",
+    "bytes": 15386,
+    "sha256": "46ee4cedf7c208c83c8cfceff68bdfbf4dc2a4002cafc961decce47c48d3f609"
+  },
+  {
+    "name": "data/rgb/pilot-tr00014-009.png",
+    "bytes": 15362,
+    "sha256": "7bf421a967a679c6499fcd835db96fd05621e3bf5d445c7cb60690075ac09fba"
+  },
+  {
+    "name": "data/rgb/pilot-tr00015-000.png",
+    "bytes": 16994,
+    "sha256": "3483b6a3dc11a8cc7429996910483254be32ce9481e4851c083e2ed1a9a60dc0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00015-001.png",
+    "bytes": 16899,
+    "sha256": "b530d51ab579ccbd9a2b2ba7d6382f48367fff423e000a3dc90174d1ca4ba7f5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00015-002.png",
+    "bytes": 16957,
+    "sha256": "5dd5c099dd5794f673574f549a7068e8fe890e0c45fd34b29f97e3b77499c42c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00015-003.png",
+    "bytes": 17091,
+    "sha256": "7a93f1ecd9fbde6580a341625e97243f24abaa774e16e914bb3641cfe7a4e51c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00015-004.png",
+    "bytes": 17149,
+    "sha256": "55811a01abe892e4edf30939a565078d1d6982a494d73955aab14ec0834fa99c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00015-005.png",
+    "bytes": 17427,
+    "sha256": "f8600cf1921dc2ba9676bd1409961168d315350112d52c118acd573059350da1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00015-006.png",
+    "bytes": 17554,
+    "sha256": "3351ae1f1b0a38f6747f0e139dcf875147a71aeb98e607a3f13dea6d6501cce6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00015-007.png",
+    "bytes": 17738,
+    "sha256": "55856865e03bace79be9466e72603dc1cca690c6ed37bb68a5b2c49e43f7fc8a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00015-008.png",
+    "bytes": 17763,
+    "sha256": "aa6ca72093ac68f32e0b858d7d364899f9984fc81606f914989d4da80b011655"
+  },
+  {
+    "name": "data/rgb/pilot-tr00015-009.png",
+    "bytes": 17886,
+    "sha256": "948d76daf7308b69ab5b9fc92d9ab3b66d0afb1708f872e1b96e8b6496c27ddf"
+  },
+  {
+    "name": "data/rgb/pilot-tr00016-000.png",
+    "bytes": 15003,
+    "sha256": "2bab47a8eadeac8ee5029773736e12bb0511e28a6f2c56d38592da03fc4ea509"
+  },
+  {
+    "name": "data/rgb/pilot-tr00016-001.png",
+    "bytes": 14974,
+    "sha256": "e2c8ddc9e4336382870dccf526d69ff54d3b70d32ef5cf495fbe5fc9c28ea75a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00016-002.png",
+    "bytes": 14976,
+    "sha256": "8741ab694214435dba402f634b995853c43e5ac7fb210e1dcde53c80a73c9925"
+  },
+  {
+    "name": "data/rgb/pilot-tr00016-003.png",
+    "bytes": 14917,
+    "sha256": "e0a0c44bc9f9897fb30c67412e8484035b4c2f5567f139b9cc34a59790233667"
+  },
+  {
+    "name": "data/rgb/pilot-tr00016-004.png",
+    "bytes": 14829,
+    "sha256": "bcaec18db530ca2583f90d2eb0dacce678705508ff7a260cacc2ff4048909c47"
+  },
+  {
+    "name": "data/rgb/pilot-tr00016-005.png",
+    "bytes": 14840,
+    "sha256": "222f7b1f7eca897ee88345e6d14e54997e0180e0ddef12994bb3fd28a3b66920"
+  },
+  {
+    "name": "data/rgb/pilot-tr00016-006.png",
+    "bytes": 14955,
+    "sha256": "52eea42182900e805a73a8f47d4da4fd1fd1e7ab49751eb3da4ecaecef81b381"
+  },
+  {
+    "name": "data/rgb/pilot-tr00016-007.png",
+    "bytes": 15036,
+    "sha256": "c88c73f7c7adbeffa7f1326a9009f82f38483072bc0533612bea9d0c0c153050"
+  },
+  {
+    "name": "data/rgb/pilot-tr00016-008.png",
+    "bytes": 15021,
+    "sha256": "33bd7c2aadb9c27deb50c46970745f18ba8df8eb398172c9f4114ebc8e93c9ea"
+  },
+  {
+    "name": "data/rgb/pilot-tr00016-009.png",
+    "bytes": 15046,
+    "sha256": "de91890ab089647daeabbead5ded12d7ff97ae13a8c31684a1783c1145a22313"
+  },
+  {
+    "name": "data/rgb/pilot-tr00017-000.png",
+    "bytes": 14658,
+    "sha256": "011a6d27ecfb4b93536b789618d5d8369148cb468faa04a11afcc39c6b6b22a8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00017-001.png",
+    "bytes": 14776,
+    "sha256": "1e2c5b3e5b031d8c3edd3c1735a39b09f47711ac9a954f2ea348e6db0cd822ca"
+  },
+  {
+    "name": "data/rgb/pilot-tr00017-002.png",
+    "bytes": 14950,
+    "sha256": "e8f414b1e415cd7dff56a6be97d143588a2c574faadc00b3ecda36acc9bf2070"
+  },
+  {
+    "name": "data/rgb/pilot-tr00017-003.png",
+    "bytes": 15044,
+    "sha256": "817b343babb9f1e25eb5f29bc7a45075125af062a239244ddf01c32c3de6ed11"
+  },
+  {
+    "name": "data/rgb/pilot-tr00017-004.png",
+    "bytes": 15236,
+    "sha256": "d015c432f2e79e2e8f504de80306dd8e8a27dd83219efe88c321f1c605d9290a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00017-005.png",
+    "bytes": 15263,
+    "sha256": "afbc7dab9cb0378d7740a23c6b151fef6a130fcb67d829425507c555311e1cf4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00017-006.png",
+    "bytes": 15265,
+    "sha256": "5c18c2a717b953c33f0d63073feb060384537a2e7dce52741b33c52b249a038a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00017-007.png",
+    "bytes": 15271,
+    "sha256": "d242baf089828a18c6fbe718e244a0fa93213b27f633f8e0aa5733f43cd56538"
+  },
+  {
+    "name": "data/rgb/pilot-tr00017-008.png",
+    "bytes": 15316,
+    "sha256": "14d2f9ab4911b36010eafea23ce64ffb6999645ab89fed2cb6c8c174cc9f2f7d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00017-009.png",
+    "bytes": 15262,
+    "sha256": "92c90fcb0859e9819877305303dc0e8953a470b20225e7cd4837a1e627787f89"
+  },
+  {
+    "name": "data/rgb/pilot-tr00018-000.png",
+    "bytes": 16553,
+    "sha256": "d03afc112b5dc2e70002fbe63c6b12a95dbaa72df13e22512971fa6165b907ec"
+  },
+  {
+    "name": "data/rgb/pilot-tr00018-001.png",
+    "bytes": 16553,
+    "sha256": "d03afc112b5dc2e70002fbe63c6b12a95dbaa72df13e22512971fa6165b907ec"
+  },
+  {
+    "name": "data/rgb/pilot-tr00018-002.png",
+    "bytes": 16553,
+    "sha256": "d03afc112b5dc2e70002fbe63c6b12a95dbaa72df13e22512971fa6165b907ec"
+  },
+  {
+    "name": "data/rgb/pilot-tr00018-003.png",
+    "bytes": 16553,
+    "sha256": "d03afc112b5dc2e70002fbe63c6b12a95dbaa72df13e22512971fa6165b907ec"
+  },
+  {
+    "name": "data/rgb/pilot-tr00018-004.png",
+    "bytes": 16443,
+    "sha256": "d566679864703757efb6c2e53e1743ce3a887f0947c1b3583030a2c5d6343293"
+  },
+  {
+    "name": "data/rgb/pilot-tr00018-005.png",
+    "bytes": 16327,
+    "sha256": "faa7b59c430443260614c6ab2c022f97a9a53045ae48f9bdce6ff7348e1f9e73"
+  },
+  {
+    "name": "data/rgb/pilot-tr00018-006.png",
+    "bytes": 16179,
+    "sha256": "c33709d3bdd5e1507dbf7b8e715aff5fafb9203fe82b85ddee2a1c4f675b9b9f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00018-007.png",
+    "bytes": 16012,
+    "sha256": "3895b164b02ea577255c3562b9b74d3227f255b4f2b067b991db3ec4a65f29b4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00018-008.png",
+    "bytes": 15976,
+    "sha256": "ca9996502b2443e786c19f659f3fb351d5d3385fef84a58df9fd15956ec7b32d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00018-009.png",
+    "bytes": 16089,
+    "sha256": "dc2f7397afda7eaf8e7e53d02f6d68f5e1133168a0b3ee613f8e62e93081485b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00019-000.png",
+    "bytes": 15216,
+    "sha256": "20df6d4fb411dff30e6ff24502a092d108e20e43f46717c9a494f39089645d14"
+  },
+  {
+    "name": "data/rgb/pilot-tr00019-001.png",
+    "bytes": 15082,
+    "sha256": "d91449089165165720c302d3526e5e0088c51e42d5808c0b577e5ef5ba8bf6f4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00019-002.png",
+    "bytes": 15088,
+    "sha256": "d6afa6069ecb8b1828551a05698449ca3744466bcdc52e375a9a201703f92160"
+  },
+  {
+    "name": "data/rgb/pilot-tr00019-003.png",
+    "bytes": 14919,
+    "sha256": "16cb6337bdddff6d014f59d0f50c738e3681b2edd21c970d0d1a45f45ee073a7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00019-004.png",
+    "bytes": 14862,
+    "sha256": "653d19ab6406fa84bfe89542f6ab42aa2bf53ac2f61ac443374deca11d1016dc"
+  },
+  {
+    "name": "data/rgb/pilot-tr00019-005.png",
+    "bytes": 14800,
+    "sha256": "238c70496c39e10075e82eaf50396fa00a125cd99e8dbf76eb1df330830a206f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00019-006.png",
+    "bytes": 14695,
+    "sha256": "d7c5090d117d2aae6e4db420ec133d06510c85fc7339d1a7b1192fd7cef6ea4c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00019-007.png",
+    "bytes": 14497,
+    "sha256": "aa1101d55fd665f9ae1b70f139b209ee1695e153db0d9a47170f3a06fd08befa"
+  },
+  {
+    "name": "data/rgb/pilot-tr00019-008.png",
+    "bytes": 14431,
+    "sha256": "487a0910f6f4eb10aefe0221281e9dc89fd67365a139ed4752b8034d9a77f70f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00019-009.png",
+    "bytes": 14381,
+    "sha256": "30191c9f21bc989464cb1f1b95a5a8a5cb9b9ad6fa91d1ddaafa2cbe70a18450"
+  },
+  {
+    "name": "data/rgb/pilot-tr00020-000.png",
+    "bytes": 16097,
+    "sha256": "bc01c8567855cba846d1cee92bb3a2e4256d4347fb2acac9e4697be71c571597"
+  },
+  {
+    "name": "data/rgb/pilot-tr00020-001.png",
+    "bytes": 15981,
+    "sha256": "b9f167c32bc9f6dfa0d49ffaf57d3452bfaa13cc58bbd0778042e5e7cdb66e2e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00020-002.png",
+    "bytes": 16005,
+    "sha256": "844b487033f1703c4ee8146b7cb87eb51f0d9d9222dd3b1c7a7029c83fff5414"
+  },
+  {
+    "name": "data/rgb/pilot-tr00020-003.png",
+    "bytes": 16005,
+    "sha256": "9e59c486f5ae291e9e1db0f7ef563784ed61e5970e0f9d88022760d3d6b1000a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00020-004.png",
+    "bytes": 15995,
+    "sha256": "c5229dd53d69f2645c6df541a9b8d34b7fcd39d9182f669813063e2170857daf"
+  },
+  {
+    "name": "data/rgb/pilot-tr00020-005.png",
+    "bytes": 16096,
+    "sha256": "dee392e3fb611d8403f0a83dc1e0085134a9ae76e5fe0cb479a6387195a117cc"
+  },
+  {
+    "name": "data/rgb/pilot-tr00020-006.png",
+    "bytes": 16195,
+    "sha256": "dfd8d3998c205dcc4cf5b6d3b5128f65a542eafd2316de2c305918c99f36937d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00020-007.png",
+    "bytes": 16192,
+    "sha256": "bc58b2e1d4c24e3b7db83dcb840146e7dc28f40280982b392b849ded3b74d6e6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00020-008.png",
+    "bytes": 16237,
+    "sha256": "e4f405b51c4ccf6488e2045751cd37b02077c596b6d45bfd5900f34b0f243928"
+  },
+  {
+    "name": "data/rgb/pilot-tr00020-009.png",
+    "bytes": 16294,
+    "sha256": "6bd3dcdefe87c0047b57edc0ff3d4f000fff8977dacdbe2ad30fbfaa8de4ac8d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00021-000.png",
+    "bytes": 16651,
+    "sha256": "a24fca38ca1b10b1761ac743bfcbf754e850a8ada9c5101d5037c072c9bef010"
+  },
+  {
+    "name": "data/rgb/pilot-tr00021-001.png",
+    "bytes": 16595,
+    "sha256": "5131e6a27b2d49ea685b0b2076c78df5e6fa04f1720aa353152d6947713e1472"
+  },
+  {
+    "name": "data/rgb/pilot-tr00021-002.png",
+    "bytes": 16243,
+    "sha256": "55d0bfbdfdbf6c3d9d5f64e673c196e1dc2aad19f1275a15a77e8f90fa6392a7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00021-003.png",
+    "bytes": 16178,
+    "sha256": "39fe1a2001e3ee132b08c9d7c956ca4ecd0a69ad74565b6a1caa1d74e34ef137"
+  },
+  {
+    "name": "data/rgb/pilot-tr00021-004.png",
+    "bytes": 16267,
+    "sha256": "43fdc2ede38fa7e55f3f04d5d3da753a76d91d0f2ec9d12d9b13137e51ffde6e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00021-005.png",
+    "bytes": 16141,
+    "sha256": "730c73d9c3f6da647d804644d0d278aebde3643749bc7d4efdbe6d5e0c4228b4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00021-006.png",
+    "bytes": 15787,
+    "sha256": "2fb1903dd2392c4ef5c6320d98d8f8071aef627aefcefa3934b1e26f5144b3c1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00021-007.png",
+    "bytes": 15916,
+    "sha256": "0c44fb5efd07ec3d2d4bb8c89b34fbba9096e6a67f2ccf9ca295626bc3e77926"
+  },
+  {
+    "name": "data/rgb/pilot-tr00021-008.png",
+    "bytes": 16082,
+    "sha256": "aed435cb27073dd54ae3c2d2e8192e27605e487c79461e1a88d29bc3da4fbf4f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00021-009.png",
+    "bytes": 16231,
+    "sha256": "49bdcf6cd478aca49e566b0813942e6ce59b55c5d4b609f8a7330308342fb719"
+  },
+  {
+    "name": "data/rgb/pilot-tr00022-000.png",
+    "bytes": 15764,
+    "sha256": "570fa63c19f346c2692c5d90391ceccfc5e258449d222035b0462caa9c1e34a6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00022-001.png",
+    "bytes": 15722,
+    "sha256": "183cf63b8960ddb14c57f1ac8ac03ac6a3abe0c599da7afe99c45093289b13ca"
+  },
+  {
+    "name": "data/rgb/pilot-tr00022-002.png",
+    "bytes": 15702,
+    "sha256": "659b729a3c4eabc81f0a0d4ff24aa688719ef9ef1fb55c17ee71539386b96d81"
+  },
+  {
+    "name": "data/rgb/pilot-tr00022-003.png",
+    "bytes": 15769,
+    "sha256": "1d6a119bc66748e69ae257929b0417b5252c2b4ed71d966b782bddc4a17de195"
+  },
+  {
+    "name": "data/rgb/pilot-tr00022-004.png",
+    "bytes": 15775,
+    "sha256": "af6857af774a7dd35a25d9c2a993aab51b668064e4cfc14be548ea7093e66c40"
+  },
+  {
+    "name": "data/rgb/pilot-tr00022-005.png",
+    "bytes": 15911,
+    "sha256": "6f766ff5c44bc0657069103527afbe7a63cdd3d7d7a599722f7cefe24c7daaa6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00022-006.png",
+    "bytes": 16028,
+    "sha256": "611058ae9b89ca0a1dfc637bd691679b7527e5e6882a6033673cc672f561219d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00022-007.png",
+    "bytes": 16204,
+    "sha256": "d895da0d1cb21569103c5dd09b57d78424693d46cccf4fb065340deb71e86c42"
+  },
+  {
+    "name": "data/rgb/pilot-tr00022-008.png",
+    "bytes": 16088,
+    "sha256": "ba09e708758f14c85bf6af282013669fc04b0b54950aa5d1e012acb2facf46e1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00022-009.png",
+    "bytes": 16255,
+    "sha256": "5e68c287b82b2dae19cfdb7d3c929aa5a4bf16faf47360b70c4f1f69852efec6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00023-000.png",
+    "bytes": 17787,
+    "sha256": "ace515e263c2cbea543ebe3849e5e23be7b54e6a087991f2432f65e65404fc85"
+  },
+  {
+    "name": "data/rgb/pilot-tr00023-001.png",
+    "bytes": 17780,
+    "sha256": "0c6a555983417507ac58c805a91a65c628b5677b3f9dfd75b008853e96449bbf"
+  },
+  {
+    "name": "data/rgb/pilot-tr00023-002.png",
+    "bytes": 17910,
+    "sha256": "4a9f276d7f389ee095535b6824a6bce5f069c2093c989da69dc13d2522f2f1b5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00023-003.png",
+    "bytes": 18004,
+    "sha256": "a60fb756e5a89897ac6189d8857418a750538e3f02221860b5550b2e4746a304"
+  },
+  {
+    "name": "data/rgb/pilot-tr00023-004.png",
+    "bytes": 17904,
+    "sha256": "4b4da6f0a712e04c317dad6ed894d7604578906d09a9a446e6779f8a7d1e7653"
+  },
+  {
+    "name": "data/rgb/pilot-tr00023-005.png",
+    "bytes": 17826,
+    "sha256": "11d228a47230e2db0f9dcd8f8dca6194ff91bff856564bb85610f2ff8b052fbb"
+  },
+  {
+    "name": "data/rgb/pilot-tr00023-006.png",
+    "bytes": 17772,
+    "sha256": "625badedb56fe1f3126a63e4b4d2c337aee3cf9bce5e2069e5f5f8a0380a7fa9"
+  },
+  {
+    "name": "data/rgb/pilot-tr00023-007.png",
+    "bytes": 17647,
+    "sha256": "3799d5644c7f5c338224e2a067374810536b7c917ba4cfe9b32ff5632d57e0db"
+  },
+  {
+    "name": "data/rgb/pilot-tr00023-008.png",
+    "bytes": 17542,
+    "sha256": "d2af7e931068a24ae4c202962e64842546cfd8247b93b1b5942eddc88cd59842"
+  },
+  {
+    "name": "data/rgb/pilot-tr00023-009.png",
+    "bytes": 17435,
+    "sha256": "b14eb28be7cc9178005de2c9932e3e6ed9cee604b7ebdf58a40051b7b2b0ef38"
+  },
+  {
+    "name": "data/rgb/pilot-tr00024-000.png",
+    "bytes": 16954,
+    "sha256": "e402e4ff9799f5d7dd09f59f8eb20342dd2b67adb7bba326052b499bb100d486"
+  },
+  {
+    "name": "data/rgb/pilot-tr00024-001.png",
+    "bytes": 16952,
+    "sha256": "ef236dccf7825875b11e39910e2075374e0b452a72ec18a89fa01e63c1e7adff"
+  },
+  {
+    "name": "data/rgb/pilot-tr00024-002.png",
+    "bytes": 16834,
+    "sha256": "833e401232c37f2812db5c3fe3754287deb2d1b2901ef0ee25e90b103fe4465e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00024-003.png",
+    "bytes": 16805,
+    "sha256": "9be72ad7beac28b467fe090a3d714f43684edc30d25e2d1dd9e6883cd8728711"
+  },
+  {
+    "name": "data/rgb/pilot-tr00024-004.png",
+    "bytes": 16654,
+    "sha256": "dbd234f420ac33b05bae419d644556eff31b398ae43d1e0683a5e334ab6b20a1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00024-005.png",
+    "bytes": 16509,
+    "sha256": "cd268656d5216d52b76521dde707f1a59d61a168ec5944d9ba9871ce33b52e57"
+  },
+  {
+    "name": "data/rgb/pilot-tr00024-006.png",
+    "bytes": 16498,
+    "sha256": "54d5e96a7a14ff44fb12a8d2d2bf2575f81c61b9567cd0d49660787de79eb195"
+  },
+  {
+    "name": "data/rgb/pilot-tr00024-007.png",
+    "bytes": 16522,
+    "sha256": "f861547eee24b6d215b1c57c39795bf22ebd3421cfe7795f3900b4964965c4e5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00024-008.png",
+    "bytes": 16668,
+    "sha256": "d5db92e483000fc7c8ff549eff4ab8e6c61486b20cb7c09e878c085105a705a1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00024-009.png",
+    "bytes": 16689,
+    "sha256": "0968ed31744c610d45b8d43dea19ba32f4e93409e52cdde5c82712b75246bdf2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00025-000.png",
+    "bytes": 16098,
+    "sha256": "9ebb63ee6dada5f0ebebe831c336151a1fc8b066b5c8834d2e3fe315d13282d5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00025-001.png",
+    "bytes": 16160,
+    "sha256": "6e104d09645898ddd92cf3ddfdc71f690c45005a108278b1aef46d4dc2b73b6e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00025-002.png",
+    "bytes": 16104,
+    "sha256": "10de7b8a3864de38886c699c7ae5964bb958fb19db786be24f57c4fb4622d77b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00025-003.png",
+    "bytes": 16122,
+    "sha256": "958e5c283935f398cd55aaabd992028844d13432a58e2b7ed3f65c9c9491f943"
+  },
+  {
+    "name": "data/rgb/pilot-tr00025-004.png",
+    "bytes": 15909,
+    "sha256": "9035b357b2bbca446b4644dbf54ddbaac9461b745df93fe174b015123938a604"
+  },
+  {
+    "name": "data/rgb/pilot-tr00025-005.png",
+    "bytes": 15665,
+    "sha256": "dd50b59aa04641ba782ba9a68ba81de4693379bdcd93186c3c47b544f76afe95"
+  },
+  {
+    "name": "data/rgb/pilot-tr00025-006.png",
+    "bytes": 15733,
+    "sha256": "9d549d38ec83b134b0d60fb97bf72300dd7f1d1280420727ee43589d97afbf45"
+  },
+  {
+    "name": "data/rgb/pilot-tr00025-007.png",
+    "bytes": 15752,
+    "sha256": "d0c4c57f5a484b4bc4ce56243dd7a766b373c043c199ece461cb26e0fb4598d4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00025-008.png",
+    "bytes": 15886,
+    "sha256": "ad84b94aa3995ed11dabd4f978eb201a0166de9bdb3375120ac963363d5eb688"
+  },
+  {
+    "name": "data/rgb/pilot-tr00025-009.png",
+    "bytes": 15906,
+    "sha256": "f1195f84fc8a11e99e02a4cfeb32ffead563be6b421919b4df36432cd1c36e34"
+  },
+  {
+    "name": "data/rgb/pilot-tr00026-000.png",
+    "bytes": 16982,
+    "sha256": "39310db0f178b4a0e5dd6e4395ff6b1b56190a67f9cab76277dcbd0aabe91e70"
+  },
+  {
+    "name": "data/rgb/pilot-tr00026-001.png",
+    "bytes": 16856,
+    "sha256": "d4b6e9e42b50e17a57ea5e47bdef67ed92d219245f0bcf6ad4eccd9b6aee5580"
+  },
+  {
+    "name": "data/rgb/pilot-tr00026-002.png",
+    "bytes": 16926,
+    "sha256": "e22bc28d864ceb5c5cb3a8b4808ed68f28301409e8ab166aa02b8e5ea34b61f6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00026-003.png",
+    "bytes": 16943,
+    "sha256": "7f301eba8a4fe231f22a19c42128e323fc28d5ca2d854ae41ff2c19a9089ff6b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00026-004.png",
+    "bytes": 16854,
+    "sha256": "ae89a6f4503f76862332261a07c6748fc2e6ecf375cca8be737bab11d3afa43d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00026-005.png",
+    "bytes": 16768,
+    "sha256": "c1432984eb425aebb5b211282940a2183aea6ff807db8eeb489066e8883e634c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00026-006.png",
+    "bytes": 16927,
+    "sha256": "8ff0e0cc14736c83133dd4ba0616d9f47519b58bf4f9fef8b95384e729a22f3a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00026-007.png",
+    "bytes": 16873,
+    "sha256": "fdd49f3970b93ea7c26ac396f7093bcb89a7a82690ee77940e2e3fdf3f2f8fca"
+  },
+  {
+    "name": "data/rgb/pilot-tr00026-008.png",
+    "bytes": 16742,
+    "sha256": "d4db5cbf542e179c564bdd23e78342ef072d6f96b32e0ebb4767dbc5d49d79df"
+  },
+  {
+    "name": "data/rgb/pilot-tr00026-009.png",
+    "bytes": 16843,
+    "sha256": "43b351f3c9ab0327c55d4942915e72df799ec4a70db9f5e390175fb816b5fc29"
+  },
+  {
+    "name": "data/rgb/pilot-tr00027-000.png",
+    "bytes": 18084,
+    "sha256": "7136b08dc553a8181fe15ac00fa9137174489a8c1cbbf932355c3d73f3b12bdc"
+  },
+  {
+    "name": "data/rgb/pilot-tr00027-001.png",
+    "bytes": 18070,
+    "sha256": "b008963a87fc59a54b5a781859dcd439608a47efceb64ca05dec467caefaa3d4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00027-002.png",
+    "bytes": 17966,
+    "sha256": "36e75bd765d65b39e2d9c1d3d1c2f147e809eeb9855b9f6a3fa0c478191ca479"
+  },
+  {
+    "name": "data/rgb/pilot-tr00027-003.png",
+    "bytes": 18065,
+    "sha256": "ecd50d39fee9ae74a0ea23452e72deadd122342cc2689c2a1bf5af2c12080c94"
+  },
+  {
+    "name": "data/rgb/pilot-tr00027-004.png",
+    "bytes": 17984,
+    "sha256": "786ef266b8bccb1902280874940d2aae474f0a18320688fd6e72b72bc23e15ae"
+  },
+  {
+    "name": "data/rgb/pilot-tr00027-005.png",
+    "bytes": 17912,
+    "sha256": "d64fd04f2bd100e99f6e7c52d9f387f50f35001e8d74c35e1f2996455fc7b81f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00027-006.png",
+    "bytes": 17950,
+    "sha256": "4406fdc4b00e87ecb58c3e8780368ea5fa1189a6a778ec31ee037f5b6bbf26a1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00027-007.png",
+    "bytes": 17906,
+    "sha256": "a328a6316d2cc9af21be684fd7bac8b23dca702885eb83ae4da2e5bbd7ae4bd8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00027-008.png",
+    "bytes": 17987,
+    "sha256": "a92507d5df01a070c43ec3e187fcb6e9040a08639be38e0db909e8a81c17dd4a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00027-009.png",
+    "bytes": 17838,
+    "sha256": "32b1f444a742e6b262e9b124d827f9314f3bcf9a17f7245fb5074df05311eb41"
+  },
+  {
+    "name": "data/rgb/pilot-tr00028-000.png",
+    "bytes": 17589,
+    "sha256": "410d9b51fe8fc0f5292eab39c4b00de999ddf10655136f84fe30db37c36df9d1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00028-001.png",
+    "bytes": 17589,
+    "sha256": "410d9b51fe8fc0f5292eab39c4b00de999ddf10655136f84fe30db37c36df9d1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00028-002.png",
+    "bytes": 17589,
+    "sha256": "410d9b51fe8fc0f5292eab39c4b00de999ddf10655136f84fe30db37c36df9d1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00028-003.png",
+    "bytes": 17589,
+    "sha256": "410d9b51fe8fc0f5292eab39c4b00de999ddf10655136f84fe30db37c36df9d1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00028-004.png",
+    "bytes": 17699,
+    "sha256": "80e530566cb0bee2458d16c51b7d5c49ea863d147ff69c9fdb428f7793d6f61a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00028-005.png",
+    "bytes": 17556,
+    "sha256": "c166853ea0670643e7ad8ef27441cd6b346692d4aa8078fab0446b46a96efc9b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00028-006.png",
+    "bytes": 17585,
+    "sha256": "187cfc8076456e8166e23d4a79a35ace4354e8acb84cdc594ba3d419c85f3cd5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00028-007.png",
+    "bytes": 17662,
+    "sha256": "a5eb458ecd3feaf7278cccb21e07d2de7e071464eec7d1f71d330e3ec14af4ea"
+  },
+  {
+    "name": "data/rgb/pilot-tr00028-008.png",
+    "bytes": 17645,
+    "sha256": "17842396f2822d621bdb6a2fb44b90636849bf01fed877e30c80358d75f8e84a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00028-009.png",
+    "bytes": 17769,
+    "sha256": "d7d6701b407f456b1922f1666af945cfef9f5b621d951a4904c2711658f293f6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00029-000.png",
+    "bytes": 17944,
+    "sha256": "dd006e7878f9a4bd47874f3decd3a0793f52e9278215153d29ed0b4030f3e28a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00029-001.png",
+    "bytes": 17868,
+    "sha256": "a141291c90bb7604a577af94f329d38c20644ab9ae4fe586c26697e235786a25"
+  },
+  {
+    "name": "data/rgb/pilot-tr00029-002.png",
+    "bytes": 17713,
+    "sha256": "6e2038c5048f71a5a63bc6475ad2ba6a200ac7633ba0b7dde1eeddf5abac08b6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00029-003.png",
+    "bytes": 17598,
+    "sha256": "8c4bbeba9e1ac41226435965d3c5ed44fb3723dc1e9b52f6446e8b52bffbe9be"
+  },
+  {
+    "name": "data/rgb/pilot-tr00029-004.png",
+    "bytes": 17576,
+    "sha256": "5cf4671680ac60b30972c32e281e5633f9542dd39d9260950d9ef04ca9806719"
+  },
+  {
+    "name": "data/rgb/pilot-tr00029-005.png",
+    "bytes": 17597,
+    "sha256": "b3872d6e1bee4f5f86df2545cbb3e882d55d8bf8e997d8782a5a72708ad8a7cc"
+  },
+  {
+    "name": "data/rgb/pilot-tr00029-006.png",
+    "bytes": 17564,
+    "sha256": "2b83980e42247f2d3c723543fd7cf6daa60dcb096c84897830ebf2bca7abd1c1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00029-007.png",
+    "bytes": 17382,
+    "sha256": "599342ff1af0488b08fe38aff4e4e6745407e3a86975e77f2e4cff50d1e50c2e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00029-008.png",
+    "bytes": 17084,
+    "sha256": "f6ac6eb1b5f8e9cf98d6000223341a596de4c8bcc49c2132d76c560f39a7f84c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00029-009.png",
+    "bytes": 17003,
+    "sha256": "db21d11d956bcaf3506d5244a1f3f8b3fb18f6ee60011a241aaa384b4d818402"
+  },
+  {
+    "name": "data/rgb/pilot-tr00030-000.png",
+    "bytes": 17259,
+    "sha256": "fc2c9f8356db1088e3971bfaec9f914b395e5b1a69ef140ce85a15a544583af7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00030-001.png",
+    "bytes": 17351,
+    "sha256": "9c1f30a1b2c32c1f3c829e8fcccf27bef9c0dfe6357a678d452247cd7b559a04"
+  },
+  {
+    "name": "data/rgb/pilot-tr00030-002.png",
+    "bytes": 17343,
+    "sha256": "55ded37e3dcd53d29c8091282fa4865bc710d1fffacd20211958c9a2efccf77f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00030-003.png",
+    "bytes": 17432,
+    "sha256": "ddf6fe2b24c6ce031d2f99e13022d7d5d43ee91cba9b62cd6a2a54de8f4e47fb"
+  },
+  {
+    "name": "data/rgb/pilot-tr00030-004.png",
+    "bytes": 17506,
+    "sha256": "c7656300f01ffda44c1f58976996c8d723ae31eb91649ce074b9d8aed83eff18"
+  },
+  {
+    "name": "data/rgb/pilot-tr00030-005.png",
+    "bytes": 17561,
+    "sha256": "2f1d7f64d8766697f70adf7b0a7358389bd6fbd094771712465fda854bae0aa9"
+  },
+  {
+    "name": "data/rgb/pilot-tr00030-006.png",
+    "bytes": 17566,
+    "sha256": "378ccf3542c16af304c68eb1618c28f39b31754f84f51d37b88236aa433861c6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00030-007.png",
+    "bytes": 17619,
+    "sha256": "755d8f7675f8e214afa7948bf6b9a4e73004e8924e2ef36c684707aa46c674aa"
+  },
+  {
+    "name": "data/rgb/pilot-tr00030-008.png",
+    "bytes": 17748,
+    "sha256": "2ca9e46a46f92b2d6a376bcd498f1a688f6414d98d4b2e0d3dc5a7aea1406c2a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00030-009.png",
+    "bytes": 17716,
+    "sha256": "34bb435f52b4fd74d9bd33ab3625a3e7bc089c883b980300161ac72f32413923"
+  },
+  {
+    "name": "data/rgb/pilot-tr00031-000.png",
+    "bytes": 16714,
+    "sha256": "a2a1a55014a0705a175c74204579e48bf343e9b77aa5954ec466e72ea761fd1b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00031-001.png",
+    "bytes": 16904,
+    "sha256": "46ff65937c40f1a7a0d47604412a853e14bfa774c348bd679e24ad1e6e12838a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00031-002.png",
+    "bytes": 16698,
+    "sha256": "91f8462042189b5d814d3512c036f1c05c9f84491d367e82e18bc598ae2b8445"
+  },
+  {
+    "name": "data/rgb/pilot-tr00031-003.png",
+    "bytes": 16733,
+    "sha256": "ac593888ffe3217bd3deabd0de25fed934816eda7dcffe1f23996e293f9f4e90"
+  },
+  {
+    "name": "data/rgb/pilot-tr00031-004.png",
+    "bytes": 16443,
+    "sha256": "a833c724cc92583d10c292a31f8d04ba1eca52a01041c1effaada38957b842fa"
+  },
+  {
+    "name": "data/rgb/pilot-tr00031-005.png",
+    "bytes": 16312,
+    "sha256": "90d26d4d2ccb5807df15a25e8dd6dabed43006629dfac413efbcf3d0224db835"
+  },
+  {
+    "name": "data/rgb/pilot-tr00031-006.png",
+    "bytes": 16035,
+    "sha256": "dac5d01969274cabf2aa9b3bf5deb2c9a9905774705fdc32bf755f99f12c521d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00031-007.png",
+    "bytes": 15718,
+    "sha256": "0d57cd35b5c819ce9a1e2fafd7612bb0152bbc9b74d8f65dedef54ff774a1c10"
+  },
+  {
+    "name": "data/rgb/pilot-tr00031-008.png",
+    "bytes": 16400,
+    "sha256": "676413ea3a27636801e9886e4755eeea6bd2758f227161571fab7fdf6d0a1a7a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00031-009.png",
+    "bytes": 16351,
+    "sha256": "eff2b4488243bf3672b7207bd70c4603e25a7ed56c7348ce3b4cf0bda2ae42d8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00032-000.png",
+    "bytes": 17172,
+    "sha256": "c24bb2cd1549746ab55bcd0f3e2ab36732ff40347dc9e9df6cfd8682d22cd24c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00032-001.png",
+    "bytes": 16970,
+    "sha256": "925a85be0917cdf7d9fa746a9c20340e644be6ee2c41e1600a83ddca1ccbdf40"
+  },
+  {
+    "name": "data/rgb/pilot-tr00032-002.png",
+    "bytes": 16928,
+    "sha256": "ec382ba5a88f07787811ab36f88e11dbc82e62e69a2a5aaf9938bbb75bbfa1c7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00032-003.png",
+    "bytes": 16786,
+    "sha256": "23ec17e5a87abe4ef0a06918a990a7a8e65b46493a45db3174b36e1e8f143463"
+  },
+  {
+    "name": "data/rgb/pilot-tr00032-004.png",
+    "bytes": 16713,
+    "sha256": "c2d425fb1fec2393c4723e750cf49b4700ffc94ef41496d60a0141cc7613eb3a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00032-005.png",
+    "bytes": 16554,
+    "sha256": "f1e7ed192fd9b1b577f707277067d2da3ec5fca454ecd3fc339d9fc7b5f1bd3b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00032-006.png",
+    "bytes": 16629,
+    "sha256": "8ed751480579b7c153d06cfb85b71401c90c10eb257bf1268dcfeea47e6b1a6b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00032-007.png",
+    "bytes": 16807,
+    "sha256": "e7218b9c7036ea6be08d9198c77c3afd63ff60d01d29c609be2be1530b9be7d7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00032-008.png",
+    "bytes": 16981,
+    "sha256": "d6b6f122106b63bbce2b9fa485a7a66490f8d8bd49b76dc1af0f856d6b78b32d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00032-009.png",
+    "bytes": 16891,
+    "sha256": "bfa40da58069055bbee1434042e60c49c2f1b5e24346ed639dfd548aac05c608"
+  },
+  {
+    "name": "data/rgb/pilot-tr00033-000.png",
+    "bytes": 18399,
+    "sha256": "a8112bb7ad9b8b6284f05255696601e6cfcb055399cfec660dcc9224740dd5f7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00033-001.png",
+    "bytes": 18317,
+    "sha256": "7ec3d12aec42f6abef56d8c8743878d366edf0903538ae7cb051926ca1a161d1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00033-002.png",
+    "bytes": 18016,
+    "sha256": "97cab09a8f21eaf1b1f9c42928ef175e3604d1c9a74f7a4b5aa37c5f9138ee09"
+  },
+  {
+    "name": "data/rgb/pilot-tr00033-003.png",
+    "bytes": 17738,
+    "sha256": "c412d158554934b62a64c76b569aab0f7db60418b80bbf4a17085734b4e4f977"
+  },
+  {
+    "name": "data/rgb/pilot-tr00033-004.png",
+    "bytes": 17731,
+    "sha256": "6d2790699d0ed74633c78f7f1366cdd6ddd34e16d9ccd92f98dcb9934e698fa3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00033-005.png",
+    "bytes": 17575,
+    "sha256": "0a9facad5ad257c2e731d28fe3ca2f8b27a62368896c09e048aa4acb9c950949"
+  },
+  {
+    "name": "data/rgb/pilot-tr00033-006.png",
+    "bytes": 17495,
+    "sha256": "d54cd13962d6ee5478e52f624882b9a0935f0c98aa2cb165a839d6c410545b96"
+  },
+  {
+    "name": "data/rgb/pilot-tr00033-007.png",
+    "bytes": 17567,
+    "sha256": "e97fdc736016d09b12f5830ac97e7e1922c086a0c61f9f537c60b69f11e50a89"
+  },
+  {
+    "name": "data/rgb/pilot-tr00033-008.png",
+    "bytes": 17552,
+    "sha256": "b949f597db6f9a95cd5f0e62b0b8f61dce4af6679839d10a58a872505ca6e2d9"
+  },
+  {
+    "name": "data/rgb/pilot-tr00033-009.png",
+    "bytes": 17497,
+    "sha256": "13717ced99d49f790cb414278a6d1a8a37b053cb41e135f77608cb17c56d7923"
+  },
+  {
+    "name": "data/rgb/pilot-tr00034-000.png",
+    "bytes": 16981,
+    "sha256": "6f806dc298e78fdc06df3972ddf30490e13058c9bae665a94fb738c3448e248d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00034-001.png",
+    "bytes": 17178,
+    "sha256": "e57ccc7ba3ad9251458219fc694af1d64024bf99338da1f9fc8feb93b719b824"
+  },
+  {
+    "name": "data/rgb/pilot-tr00034-002.png",
+    "bytes": 17136,
+    "sha256": "5d84f63182ce76b24d433f13379d8364aa445e7a4bbfe1ac8af4eb90289a66f7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00034-003.png",
+    "bytes": 17124,
+    "sha256": "c5c3aa74e2cfa947847e5d846fe7b39f025983ac23479bc1052f844bf29f4f63"
+  },
+  {
+    "name": "data/rgb/pilot-tr00034-004.png",
+    "bytes": 17209,
+    "sha256": "a1714c9e9203bc7cc94fd740f9346fd6161b62e32d858855806d872059025a3c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00034-005.png",
+    "bytes": 17392,
+    "sha256": "de6ad2056591c20fd9b0e94d35e53cceb7d392febe5eec2b494b9c025e535a3b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00034-006.png",
+    "bytes": 17411,
+    "sha256": "d2c5e29f1ce1db7f438b29b2dc433f381f166e71fad922f38eff79b879641e18"
+  },
+  {
+    "name": "data/rgb/pilot-tr00034-007.png",
+    "bytes": 17493,
+    "sha256": "128863a9be3df0b15b1075f36144b9887d09f2ebff28c7a372ee6dafb564250f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00034-008.png",
+    "bytes": 17484,
+    "sha256": "b98b36943ecb73da3896fa82912551b85bea120600427b62c06a168f4115cc66"
+  },
+  {
+    "name": "data/rgb/pilot-tr00034-009.png",
+    "bytes": 17554,
+    "sha256": "37eeb68d765db2964cbc5672cedd5321663d023f891c9f795f6bcf50406f62d7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00035-000.png",
+    "bytes": 17171,
+    "sha256": "7581db6a8d9de827e22281718fae4b4e6c06352968a91e1aea93a597b368761b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00035-001.png",
+    "bytes": 17193,
+    "sha256": "401eae243bca10292b1dce8e142ed166ebc4c4f22282677d53ffc6ad21a32e5e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00035-002.png",
+    "bytes": 17104,
+    "sha256": "9bf8fbb5cf74aea7b963b373046666c65ee4566e45ba71ff7776575db2aeb7c8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00035-003.png",
+    "bytes": 17235,
+    "sha256": "6e092ca8caa26d56f9af644d8b816f513c29ea3801f2234f9f89bb5c8e829c81"
+  },
+  {
+    "name": "data/rgb/pilot-tr00035-004.png",
+    "bytes": 17144,
+    "sha256": "abeb51f939dbcf9657ba6734e80a936f6aca4d49d5e38047d32a1c1125945f17"
+  },
+  {
+    "name": "data/rgb/pilot-tr00035-005.png",
+    "bytes": 17017,
+    "sha256": "b67d7f74d62ca1d3b21c2485469fdaeedd62708d78920811a4fbecd48a237d59"
+  },
+  {
+    "name": "data/rgb/pilot-tr00035-006.png",
+    "bytes": 17092,
+    "sha256": "0b1d5f5dc8860e0d0a40893257bf2a749b07ddbbb82f1ef8327f0d17c322921a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00035-007.png",
+    "bytes": 16970,
+    "sha256": "b4fc906abf5ae526779de7a7f05c9905b1695bd03bcc574968524ab265a4d905"
+  },
+  {
+    "name": "data/rgb/pilot-tr00035-008.png",
+    "bytes": 17136,
+    "sha256": "580c1447de204de639df5a72aab761609ed26ad45f015aa54e0dd0bc1f51b2c7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00035-009.png",
+    "bytes": 17336,
+    "sha256": "70d4d371473e7aa59af4feeb3650a42b7431da7f9d5acaaaaed193b44dde3715"
+  },
+  {
+    "name": "data/rgb/pilot-tr00036-000.png",
+    "bytes": 17048,
+    "sha256": "158b65a9121d5c3a66610c2eedbe3b788ca21f975efe2f4f1c3b3cdb88ac2e54"
+  },
+  {
+    "name": "data/rgb/pilot-tr00036-001.png",
+    "bytes": 17042,
+    "sha256": "39ab7d0653bc6b5b6ab114c0b4faeb5d15a265049f0e450a0ed3535dc41a5453"
+  },
+  {
+    "name": "data/rgb/pilot-tr00036-002.png",
+    "bytes": 16975,
+    "sha256": "6bdf51c6d75dead799794df66f5a540171da2aebae408b310acf2f1b9b04dc48"
+  },
+  {
+    "name": "data/rgb/pilot-tr00036-003.png",
+    "bytes": 16956,
+    "sha256": "a2444b23902b22d73c5fc5389131df0048c49ee66d3be5f969589450f10458a3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00036-004.png",
+    "bytes": 16917,
+    "sha256": "a61515cafdd5ce5a18724b96a0f6c2a0358538252dc3ef27870612ea513ebb18"
+  },
+  {
+    "name": "data/rgb/pilot-tr00036-005.png",
+    "bytes": 16876,
+    "sha256": "9b95286e6f23b5f96fb17a8e0376990107dbfaacae1f47962c708a5a5089b3fc"
+  },
+  {
+    "name": "data/rgb/pilot-tr00036-006.png",
+    "bytes": 16846,
+    "sha256": "6b167af97465dbb8b280e30ae989255770844901d40197bd39ce028a18da29ee"
+  },
+  {
+    "name": "data/rgb/pilot-tr00036-007.png",
+    "bytes": 16777,
+    "sha256": "042107a0d1895a1a2a98df671acceb3b1ddab9667314dff93878026b224de191"
+  },
+  {
+    "name": "data/rgb/pilot-tr00036-008.png",
+    "bytes": 16661,
+    "sha256": "598761de07b8cff113ef0251f6f71b43e5120d7c91beb3836fa704080b726ad4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00036-009.png",
+    "bytes": 16708,
+    "sha256": "eb96db771bea5f9151a7d6e19a633da5af109a3c1b5ba6fb27d841e254ba9027"
+  },
+  {
+    "name": "data/rgb/pilot-tr00037-000.png",
+    "bytes": 17748,
+    "sha256": "3855020b0e58c2324717abc8c36069d649759b373aad435f2af803bd78940338"
+  },
+  {
+    "name": "data/rgb/pilot-tr00037-001.png",
+    "bytes": 17583,
+    "sha256": "e009cc5df77934976825fc092487d9f399022267d3fa8f3e4e2d7b49dd88ad75"
+  },
+  {
+    "name": "data/rgb/pilot-tr00037-002.png",
+    "bytes": 17499,
+    "sha256": "f3fe2b38e2576544a4211e606c1b8c9c926412e7c528bd32d9e0a8d525f4a7b9"
+  },
+  {
+    "name": "data/rgb/pilot-tr00037-003.png",
+    "bytes": 17363,
+    "sha256": "f0fec789604ac0c534183f02459ffddf8e7d5d0c53028b410e19e91c7715ac6b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00037-004.png",
+    "bytes": 17280,
+    "sha256": "2054c1c626fd889ccfae9dec3f9f449baab5cea75f9698daf386611c213dbd8e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00037-005.png",
+    "bytes": 17222,
+    "sha256": "da519ecb8ab2c1de37f53db9b84c0aaa4b8e31411b0bce4c7428e45e6b417e94"
+  },
+  {
+    "name": "data/rgb/pilot-tr00037-006.png",
+    "bytes": 17117,
+    "sha256": "9891bea3f39aa74570143bcec1d68463f6f8b4b069db0501d7fe5d75187c5b2e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00037-007.png",
+    "bytes": 16970,
+    "sha256": "28d7c926e67243f66c583363b35021e3181585dd0b81790a7180c46f62ec4546"
+  },
+  {
+    "name": "data/rgb/pilot-tr00037-008.png",
+    "bytes": 16986,
+    "sha256": "f1f3cf730d340642c0c56a3097c1d9e12b506769fc81744df553bf5c0f98d7f5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00037-009.png",
+    "bytes": 17053,
+    "sha256": "e156d84c2fb7a01695d983270c75dadfb06ae9b3136587329a0413287ade5090"
+  },
+  {
+    "name": "data/rgb/pilot-tr00038-000.png",
+    "bytes": 16833,
+    "sha256": "a1933db0077ed9d76daeddbaba240b3684f9a96c9f93bfbed14d3d9e20ca7d2f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00038-001.png",
+    "bytes": 16833,
+    "sha256": "a1933db0077ed9d76daeddbaba240b3684f9a96c9f93bfbed14d3d9e20ca7d2f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00038-002.png",
+    "bytes": 16833,
+    "sha256": "a1933db0077ed9d76daeddbaba240b3684f9a96c9f93bfbed14d3d9e20ca7d2f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00038-003.png",
+    "bytes": 16833,
+    "sha256": "a1933db0077ed9d76daeddbaba240b3684f9a96c9f93bfbed14d3d9e20ca7d2f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00038-004.png",
+    "bytes": 16869,
+    "sha256": "47148e4ae7a4fc8cd9945c7acce4fad0390597b249f3e9cea6300b76140ea62b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00038-005.png",
+    "bytes": 16824,
+    "sha256": "be4a45df8c33718e34c73d2f53906b806c633542d7db40e9762f5e62925c385b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00038-006.png",
+    "bytes": 16921,
+    "sha256": "92c2cf6df5e8bcfb14a2e4a8c8b0f58a88b8598876de0fc605fbdd01692ce019"
+  },
+  {
+    "name": "data/rgb/pilot-tr00038-007.png",
+    "bytes": 17209,
+    "sha256": "2ed9371b3afe8ff380c62263e794ce1d10898635582f4d1aeb9bbc4b156d9f45"
+  },
+  {
+    "name": "data/rgb/pilot-tr00038-008.png",
+    "bytes": 17208,
+    "sha256": "73e06b389bcda12c6ff1820dda3d441baea038711932b4cad816f38d2d4f37dc"
+  },
+  {
+    "name": "data/rgb/pilot-tr00038-009.png",
+    "bytes": 17297,
+    "sha256": "06be78bab7c348a9b5a072e671668cdcfe3b6673090fb47addedc14b4aae5214"
+  },
+  {
+    "name": "data/rgb/pilot-tr00039-000.png",
+    "bytes": 17238,
+    "sha256": "6431992f6b89092c512d2aaff9441145fdc6061da9f22a5610feae80fcd1ba40"
+  },
+  {
+    "name": "data/rgb/pilot-tr00039-001.png",
+    "bytes": 17172,
+    "sha256": "135ae6a4a53cc727543dd5606d6b8a996a0b7be9aee10da4404ba2cb21bee896"
+  },
+  {
+    "name": "data/rgb/pilot-tr00039-002.png",
+    "bytes": 17039,
+    "sha256": "18f6e35e1f4908b4569b3ea0992d225d73998585a183fa4cf603326d70fb9bd6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00039-003.png",
+    "bytes": 17177,
+    "sha256": "7dd7fbf5fb9c95f3b41f296b5e0d781ac0d24669e91e6be5f7c7b2ee7344ee91"
+  },
+  {
+    "name": "data/rgb/pilot-tr00039-004.png",
+    "bytes": 17314,
+    "sha256": "dbb8f8b403e40d4aaed2dbb0ce835de1ad981f1070400c0d17fc6e9fa61f064c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00039-005.png",
+    "bytes": 17365,
+    "sha256": "2fb3fa86a99854a94a5ea43b7e89bc1bb7c4bc40263085e8b206bf434206e411"
+  },
+  {
+    "name": "data/rgb/pilot-tr00039-006.png",
+    "bytes": 17367,
+    "sha256": "1900bcf39f11b62e25a0d02b649560b2ed9a71cf737746a6898b859fdd142086"
+  },
+  {
+    "name": "data/rgb/pilot-tr00039-007.png",
+    "bytes": 17376,
+    "sha256": "95a7f78a2f88ff7c5b5c18c544999f39d69740ca465f6105063afc97cf080479"
+  },
+  {
+    "name": "data/rgb/pilot-tr00039-008.png",
+    "bytes": 17217,
+    "sha256": "432e45da7395d6198c043acf36ae22ab26108465ec4f744fb89715a7f63cf4ad"
+  },
+  {
+    "name": "data/rgb/pilot-tr00039-009.png",
+    "bytes": 17233,
+    "sha256": "952fe350a7996b7c013c5f9683bff225e90e18ce5ed3605056c0352ac8976fea"
+  },
+  {
+    "name": "data/rgb/pilot-tr00040-000.png",
+    "bytes": 15072,
+    "sha256": "6bd86124503eca32ba682cd2d0e76b04f92c99efe9cf8fd7531daf7bcd204ea4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00040-001.png",
+    "bytes": 15192,
+    "sha256": "e5b9a29ce267c9015b86c783aaa9d33efd2f831cbbc3ff53f0384470e0c5980e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00040-002.png",
+    "bytes": 15171,
+    "sha256": "6fda017097a6b6dab287cc2b23ca8fed81d49f25d08ec9bc0b8d321f9e76b869"
+  },
+  {
+    "name": "data/rgb/pilot-tr00040-003.png",
+    "bytes": 15256,
+    "sha256": "2b8242244c1b14bd244248cb090fb8f40efd2a078089856b83e1063c2e29c400"
+  },
+  {
+    "name": "data/rgb/pilot-tr00040-004.png",
+    "bytes": 15360,
+    "sha256": "1496fb82d7d60a80cc636027f27300bb745f953d3928aa04b87f7fcbec4ce621"
+  },
+  {
+    "name": "data/rgb/pilot-tr00040-005.png",
+    "bytes": 15534,
+    "sha256": "51c2bf4fdf413bf41e204fa71e30abdbe19630ae6ce3e9aef0a6323b083b897b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00040-006.png",
+    "bytes": 15581,
+    "sha256": "5396ad74b284211e6771e84d0ea7c669828bce719bf841ba83cba8cc65ca0d25"
+  },
+  {
+    "name": "data/rgb/pilot-tr00040-007.png",
+    "bytes": 15624,
+    "sha256": "a93c9e8503df96084a9c1170a93e6e1e44641b17afeb8ea8bbe34518dfae6b12"
+  },
+  {
+    "name": "data/rgb/pilot-tr00040-008.png",
+    "bytes": 15721,
+    "sha256": "54fd3d74e7594eb1b83bceadc4e07562576585171de2e8c730bc7fa6faf32540"
+  },
+  {
+    "name": "data/rgb/pilot-tr00040-009.png",
+    "bytes": 15723,
+    "sha256": "9727674f4ff32724cd117d1bdd8898aed4fb840a91918137e542763677dc51cd"
+  },
+  {
+    "name": "data/rgb/pilot-tr00041-000.png",
+    "bytes": 14698,
+    "sha256": "4f2d75f0e318c56a14dcaf60b956398e1b96d704d8ab8625402bce1bd879c883"
+  },
+  {
+    "name": "data/rgb/pilot-tr00041-001.png",
+    "bytes": 14449,
+    "sha256": "e7e7d773bf816745148be2621fcac1fac55accb18b127e5bc62dfb88c925155f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00041-002.png",
+    "bytes": 14451,
+    "sha256": "7adeb40acb4f2e2f753ac64f587aca6c4e63a9c00aff7415df01b77e9f1aa86c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00041-003.png",
+    "bytes": 14486,
+    "sha256": "d6da0a9c179899b1837f90c80bfdd59a9042eacf3403d294c83a01853b26f3be"
+  },
+  {
+    "name": "data/rgb/pilot-tr00041-004.png",
+    "bytes": 14193,
+    "sha256": "236d53591d99af3eec8b9a37fab4fcd0cbf678a30bdea1383de2e1e4fd100b6d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00041-005.png",
+    "bytes": 13917,
+    "sha256": "d6d6960935ff98c30733088ed2cbecef3937a2e62cc4aed36d9e2c965861dda8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00041-006.png",
+    "bytes": 14349,
+    "sha256": "490c1a8c8192cfbfcdb24bbbae0059b820e9a3eedbb447e4113efd6c0873860f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00041-007.png",
+    "bytes": 14554,
+    "sha256": "70dafcfb54c8e31d7009cab1d24b8e00cc8f99758a6aff0b3637002417c7a11d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00041-008.png",
+    "bytes": 14552,
+    "sha256": "4ffbd1080018e165e1cd2ab37d8ef0cf0071dacb10acb8454e5e77b50f31541e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00041-009.png",
+    "bytes": 14357,
+    "sha256": "aa08571350d0b6dce30f093a94b8201ca4e09c662eea053480ad89453504b33e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00042-000.png",
+    "bytes": 15678,
+    "sha256": "04915d17be154e3a516f051a3479e2f0302638ce62116eab2469cbf3c2205b5a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00042-001.png",
+    "bytes": 15636,
+    "sha256": "9477128de40aaa6bccd66a4194f796e2f56731999f066c81f08b799d41719c41"
+  },
+  {
+    "name": "data/rgb/pilot-tr00042-002.png",
+    "bytes": 15456,
+    "sha256": "1c783c359f52e3f767ae8fbca22c15042d4a2027537a2eec8e7a51e3be2c6e4a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00042-003.png",
+    "bytes": 15375,
+    "sha256": "6cc4e2b2d8978e6383288e58c48d32070eee0b42758c71428b313f4b03b282d6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00042-004.png",
+    "bytes": 15380,
+    "sha256": "c1d6495765b6f07f71c5fe9e0a6c9a7c118eec23c8c0eeb9d5557122da76f67c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00042-005.png",
+    "bytes": 15195,
+    "sha256": "c64de6525253be254c278e6c819f5345491a009b6d028be2eb9309a0ee2f0c19"
+  },
+  {
+    "name": "data/rgb/pilot-tr00042-006.png",
+    "bytes": 15293,
+    "sha256": "16aafb3994e67aecbbbc69ffca56dc0ce256319d9c221f766f0664d009b9660f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00042-007.png",
+    "bytes": 15398,
+    "sha256": "489440894d22f7caf4e6bbb46c6fd891bd5b9defcb002ed5120a596363c74eb0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00042-008.png",
+    "bytes": 15475,
+    "sha256": "a7a648fde4b4ba70cc30a96dcc09f31331fcb11dad8b26f8b3a61137da2ebac2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00042-009.png",
+    "bytes": 15499,
+    "sha256": "2a35a5ab4a93240aa8e4eb64a71077c438400d31137ecb5b75b44654ea8eb652"
+  },
+  {
+    "name": "data/rgb/pilot-tr00043-000.png",
+    "bytes": 15677,
+    "sha256": "c3bdd5f3206bbc86d34dfa4599f8a7b9108393df28d47761d4a9bf6d1e725a7f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00043-001.png",
+    "bytes": 15574,
+    "sha256": "074b166014f2c15a41dd8a4e7950b09e2479ab4bf447ffef565d46a4a1883c88"
+  },
+  {
+    "name": "data/rgb/pilot-tr00043-002.png",
+    "bytes": 15589,
+    "sha256": "063c2e55dc82ea67ff7e94ee387363415656e0b69b3b39e64443483f0e2403ff"
+  },
+  {
+    "name": "data/rgb/pilot-tr00043-003.png",
+    "bytes": 15529,
+    "sha256": "1fe4562a6824fac6ef146fbdd6611252f0f925bb45ca443006f1b54cd37c0b05"
+  },
+  {
+    "name": "data/rgb/pilot-tr00043-004.png",
+    "bytes": 15673,
+    "sha256": "5ad0e5ad361b058c8b07a12e2cc43b0fe2e6f5cb891285420035ece2f78d89dd"
+  },
+  {
+    "name": "data/rgb/pilot-tr00043-005.png",
+    "bytes": 15621,
+    "sha256": "b78ab315d08a79e99b6b796b8a6df4fa6947e4fda9283748e823a23e3bb58bff"
+  },
+  {
+    "name": "data/rgb/pilot-tr00043-006.png",
+    "bytes": 15620,
+    "sha256": "cc332fac0490a4100296e7b0c56bf646146ec5797c545693d90d27842cef5d15"
+  },
+  {
+    "name": "data/rgb/pilot-tr00043-007.png",
+    "bytes": 15777,
+    "sha256": "6736bc4b0a8bc41a38061d5dadf2c8ad2d932504819e89436d26d5806bdd1bdd"
+  },
+  {
+    "name": "data/rgb/pilot-tr00043-008.png",
+    "bytes": 15765,
+    "sha256": "bb922a80ddbd965215d76dac9a7213f10a8b571448afd499c1e3983f3c670279"
+  },
+  {
+    "name": "data/rgb/pilot-tr00043-009.png",
+    "bytes": 15722,
+    "sha256": "2f1d6ad98f8cb3ee4bb058caa7d1a4137fe6a85ae704ed16fe06d92309818a17"
+  },
+  {
+    "name": "data/rgb/pilot-tr00044-000.png",
+    "bytes": 16482,
+    "sha256": "03283025bea8dce865121dc1b828a61a1512e4113700ffec83886b6293425e01"
+  },
+  {
+    "name": "data/rgb/pilot-tr00044-001.png",
+    "bytes": 16527,
+    "sha256": "1de060cb475072424c40f86e61a0dcda50e3f82044de8c49ac5bfc64fe753480"
+  },
+  {
+    "name": "data/rgb/pilot-tr00044-002.png",
+    "bytes": 16522,
+    "sha256": "2efbf23c50e1cd5ef65f8df2c4fe485f7aae7e25e04d965c199775b5aadf006a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00044-003.png",
+    "bytes": 16492,
+    "sha256": "9fa389b2db31cd1ad2e6f701aaf660890c273bbabb545001a5ae266db29e06a2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00044-004.png",
+    "bytes": 16685,
+    "sha256": "3a20b37fcaa6ebdda4a68a81e0baf9e851bfea7713cd7e2016e8595654b104aa"
+  },
+  {
+    "name": "data/rgb/pilot-tr00044-005.png",
+    "bytes": 16761,
+    "sha256": "48da6e46524c32ceb881fd3c055ccf1a993595e1058810cb9097b7e3f3e949d0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00044-006.png",
+    "bytes": 16715,
+    "sha256": "020ab69eff5333dcce46d48c451df4dec6981447185a323636a9528589594d09"
+  },
+  {
+    "name": "data/rgb/pilot-tr00044-007.png",
+    "bytes": 16773,
+    "sha256": "0bdd48ca55284d5ca8f6a7c05b03c42c31c3b9dd6dbf6f8499bb8a6ec93b06af"
+  },
+  {
+    "name": "data/rgb/pilot-tr00044-008.png",
+    "bytes": 16757,
+    "sha256": "0bd8d892608d713328d49e2164d4ce67d5b86465f5ed9faaca54eaa44fc494f4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00044-009.png",
+    "bytes": 16836,
+    "sha256": "d2d201f206b71b9020e31b42a8ba99a26ca82e29f2372173ff1a746f8b53783b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00045-000.png",
+    "bytes": 15379,
+    "sha256": "260a3bf304a39e6acefc8cf8d2129f4f259917aaee9af6e4bd8810de4596216c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00045-001.png",
+    "bytes": 15381,
+    "sha256": "fd5d7b4fe186e93b386f8152b5f04766f669415d279dc9aadf2389543ed382f6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00045-002.png",
+    "bytes": 15324,
+    "sha256": "bbcf019a5adeb38614cd2e7c7d4f8580a8def6a6ba3bbe50a7107b2e694e5371"
+  },
+  {
+    "name": "data/rgb/pilot-tr00045-003.png",
+    "bytes": 15332,
+    "sha256": "3275a5798fe62291f529aee54a21412ad703fe583b80e58b48af49f472694b21"
+  },
+  {
+    "name": "data/rgb/pilot-tr00045-004.png",
+    "bytes": 15262,
+    "sha256": "e65dab8b678c7aece02b3e06717c0525202cca85958f7224f970a8a9316d6df4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00045-005.png",
+    "bytes": 15138,
+    "sha256": "2b0b5e47525e3651455ecffc727625738466b8d85463b49fa8d4c2f8ac43d0b0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00045-006.png",
+    "bytes": 15043,
+    "sha256": "949c0ab1e9e0487d909f63e9b73dda557a9fdf9e38a6eb4534743ba7af97d28a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00045-007.png",
+    "bytes": 15134,
+    "sha256": "38c83fd9422541a762dc5448b42eba3f71e6819d91fdf14d1e724c7cb8fd3da0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00045-008.png",
+    "bytes": 14997,
+    "sha256": "f8e6313e7f5d473b646805d9e92f03435e7d16f94ce4a4987a8e81988873bfe2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00045-009.png",
+    "bytes": 14966,
+    "sha256": "beb38144bfbddecca872a3f0c974fc615149520f8d0eda1aec25b8aafd73c4c9"
+  },
+  {
+    "name": "data/rgb/pilot-tr00046-000.png",
+    "bytes": 15596,
+    "sha256": "f9b8369bcb89aa737edca18833215bc31ef8c1298134f4377f111fa9ad8b6b61"
+  },
+  {
+    "name": "data/rgb/pilot-tr00046-001.png",
+    "bytes": 15536,
+    "sha256": "effcdecca868fb037a5bfa875aa9594d1a7e53fc0d1474139a27d6a04a71f889"
+  },
+  {
+    "name": "data/rgb/pilot-tr00046-002.png",
+    "bytes": 15541,
+    "sha256": "7d3f9484aeab1b4223ac289309e8e978ff404d9a20168af90504e48cfbaf8d87"
+  },
+  {
+    "name": "data/rgb/pilot-tr00046-003.png",
+    "bytes": 15552,
+    "sha256": "ae05fb23e5313eb326013724afe5232aa0e770d7875f85a535ef39c9132f52a9"
+  },
+  {
+    "name": "data/rgb/pilot-tr00046-004.png",
+    "bytes": 15557,
+    "sha256": "28ca640b1d92bd425ecb15c5da8adccd608c890caa0e651eb67b2df50761d2f5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00046-005.png",
+    "bytes": 15780,
+    "sha256": "0b1f93a80c77f6c2b890e78cfc743489ea349e951309244bc1a5f8dc6c5c1460"
+  },
+  {
+    "name": "data/rgb/pilot-tr00046-006.png",
+    "bytes": 16098,
+    "sha256": "4a755433b450a26011ed1c85658481f16b69612ffd1dd2b03cf5d1abf5090903"
+  },
+  {
+    "name": "data/rgb/pilot-tr00046-007.png",
+    "bytes": 16098,
+    "sha256": "3d204471863a0e04f8cb07af2625f8ff92339196f902e9887bab99c9d7596471"
+  },
+  {
+    "name": "data/rgb/pilot-tr00046-008.png",
+    "bytes": 16206,
+    "sha256": "b2ae0e89e476332e6e389fea413b1d5cfb85cf0724eed33ac7c9078cc7b211d9"
+  },
+  {
+    "name": "data/rgb/pilot-tr00046-009.png",
+    "bytes": 16142,
+    "sha256": "b315175f439698dac52897ade54f64cc211062b3a527e15149f4691e1739dcb3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00047-000.png",
+    "bytes": 14841,
+    "sha256": "18ca4e187c030403052f34d672b4a3dd58d3fe636bc721cb9eb20e52d6fc87f2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00047-001.png",
+    "bytes": 14797,
+    "sha256": "d3196f30eca00ba717315a62bd3e3a5b6893b684351358115c153d2e665c332e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00047-002.png",
+    "bytes": 14806,
+    "sha256": "0629f1cd7d1d59721c5fba4e3467e2022284caf57bd156817a860d61481a28c2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00047-003.png",
+    "bytes": 14559,
+    "sha256": "73f074c4606bdf263e24ebbb8c2d28a0011f2f22933a254795a45b1a19845dd0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00047-004.png",
+    "bytes": 14457,
+    "sha256": "f93070d631382d75368e0e96b1751c54e8de655869b3304f4da6afd0714407c8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00047-005.png",
+    "bytes": 14671,
+    "sha256": "57009845de97739b75d9203881f03ebf731cfc8c6f971f14169d83ef2fa2bcba"
+  },
+  {
+    "name": "data/rgb/pilot-tr00047-006.png",
+    "bytes": 14803,
+    "sha256": "b39e51e2a97f7249d335bdd382c315238466828496cfe6b3f131d186e156a72d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00047-007.png",
+    "bytes": 14932,
+    "sha256": "b53c71055849600bf1fb6b8fc36ba39f4cc74f68e328c992925dd2dd94797b19"
+  },
+  {
+    "name": "data/rgb/pilot-tr00047-008.png",
+    "bytes": 14926,
+    "sha256": "a5abbda95f81e1eed4e827b15e219f29c6b00926ae51bcaaa01af15463ad31fa"
+  },
+  {
+    "name": "data/rgb/pilot-tr00047-009.png",
+    "bytes": 14959,
+    "sha256": "c664a06fe7e469b354de4d357d49b8a39dd8fc739923b97ede896f4ec70ba741"
+  },
+  {
+    "name": "data/rgb/pilot-tr00048-000.png",
+    "bytes": 15502,
+    "sha256": "26ffaa92846e3d236521fce55bd6b1697dce85cad2d80563b3cbd7b9f18f9754"
+  },
+  {
+    "name": "data/rgb/pilot-tr00048-001.png",
+    "bytes": 15502,
+    "sha256": "26ffaa92846e3d236521fce55bd6b1697dce85cad2d80563b3cbd7b9f18f9754"
+  },
+  {
+    "name": "data/rgb/pilot-tr00048-002.png",
+    "bytes": 15502,
+    "sha256": "26ffaa92846e3d236521fce55bd6b1697dce85cad2d80563b3cbd7b9f18f9754"
+  },
+  {
+    "name": "data/rgb/pilot-tr00048-003.png",
+    "bytes": 15502,
+    "sha256": "26ffaa92846e3d236521fce55bd6b1697dce85cad2d80563b3cbd7b9f18f9754"
+  },
+  {
+    "name": "data/rgb/pilot-tr00048-004.png",
+    "bytes": 15363,
+    "sha256": "5d61f3e6c9dde037e536c230e3df3799a1883c7c82ac2d86ebeea163d919d5de"
+  },
+  {
+    "name": "data/rgb/pilot-tr00048-005.png",
+    "bytes": 15335,
+    "sha256": "42453e13bce946ca5b723fa34e6be14b7c38b02e247e54d3536f1e580fbfda0e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00048-006.png",
+    "bytes": 15011,
+    "sha256": "0dd0157b3363d904c0b2075c0330fa9c2d6bd7bfe971ee19f5114a3347f1e225"
+  },
+  {
+    "name": "data/rgb/pilot-tr00048-007.png",
+    "bytes": 14891,
+    "sha256": "d44cdb9c640529497717d9ef7abc3f9a1f214be9105b3d2952d16138dfad2a25"
+  },
+  {
+    "name": "data/rgb/pilot-tr00048-008.png",
+    "bytes": 14640,
+    "sha256": "e581e4140a4ea491eaf5b576c8e55c95226a1d16cf9d54e9df4dde4b35dda54a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00048-009.png",
+    "bytes": 14501,
+    "sha256": "20149482bcfe98856bad7290134862a50050fcc376ac35b2499c1d8c0f6df232"
+  },
+  {
+    "name": "data/rgb/pilot-tr00049-000.png",
+    "bytes": 16346,
+    "sha256": "2c5432c141d1644f482953e833184c79c8b79c6f0ff4eab9bd71e5f5f99c9188"
+  },
+  {
+    "name": "data/rgb/pilot-tr00049-001.png",
+    "bytes": 16425,
+    "sha256": "c545a354bbd110c3b6801ca6f33cb4d04ac0a3aaf4878b0f7024cac477ca4930"
+  },
+  {
+    "name": "data/rgb/pilot-tr00049-002.png",
+    "bytes": 16407,
+    "sha256": "8bf91c5abd232a469b1c290c6c059f12734e8fd055c10ba3660298790aebd49b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00049-003.png",
+    "bytes": 16198,
+    "sha256": "ef3132d985c5065e9c7e01e4ed2101f1e49ba814904a971d380eb807e70df40c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00049-004.png",
+    "bytes": 16096,
+    "sha256": "d5f9b40c72d6924818f2ca028228844087de1f8b37c2dc9e3301dc5acd0bf3ab"
+  },
+  {
+    "name": "data/rgb/pilot-tr00049-005.png",
+    "bytes": 16075,
+    "sha256": "1fc0786442c78f44a5bdf91df32446c6c756790916feaf1cc804b5e08705e26c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00049-006.png",
+    "bytes": 15904,
+    "sha256": "9a2de1f0d6392332855fa40fa3aef2c568432989dd7d27e68938435e86cd6994"
+  },
+  {
+    "name": "data/rgb/pilot-tr00049-007.png",
+    "bytes": 15824,
+    "sha256": "cc7a11cd0dc747227b25b97b8ce02229375b466584b31222b57e2108957bdf8f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00049-008.png",
+    "bytes": 15635,
+    "sha256": "69f33988d2c05bf5b21a75221fa288c274d2cad6f136156f461aa25856a20c42"
+  },
+  {
+    "name": "data/rgb/pilot-tr00049-009.png",
+    "bytes": 15553,
+    "sha256": "e4a69f3dcc9b61c62124ecb5fd911eaa70fa0d007fc11041d330d1b7a4c9f7bc"
+  },
+  {
+    "name": "data/rgb/pilot-tr00050-000.png",
+    "bytes": 17877,
+    "sha256": "54a4c1f410eb5f717193121ea5301d9f75dfffc33aa50e40254c219e5ff6921c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00050-001.png",
+    "bytes": 17753,
+    "sha256": "81e95ce259e800dcfe4fe2e336bd505d8abf07a1e07b5348c3c80d1dad172a96"
+  },
+  {
+    "name": "data/rgb/pilot-tr00050-002.png",
+    "bytes": 17637,
+    "sha256": "0405a58896aa6f1979df5accbf7f6263a693343a0bfe807ea1cf2862b0f8c189"
+  },
+  {
+    "name": "data/rgb/pilot-tr00050-003.png",
+    "bytes": 17531,
+    "sha256": "a1e325f52471733167016ea4d7c7a97ab3b7a029a235d7c301cb931c9114f68a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00050-004.png",
+    "bytes": 17326,
+    "sha256": "876a1e1a6eb121d6d05355b290072763fc235b03b6ec5eba35b0be0296301f2c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00050-005.png",
+    "bytes": 17215,
+    "sha256": "16ae8354768e8af8c20ce8f5ba0f93538956136688a0e1d2778addde088e3234"
+  },
+  {
+    "name": "data/rgb/pilot-tr00050-006.png",
+    "bytes": 17146,
+    "sha256": "809dc8f4adbaafde83960f23aedaf2d5039266625b7c2a518dd9b5452c562a39"
+  },
+  {
+    "name": "data/rgb/pilot-tr00050-007.png",
+    "bytes": 17121,
+    "sha256": "f6b9c0a6e863011b5ddbcf4840aeb40a70b9909e60bc997676e6fedb7c9c8395"
+  },
+  {
+    "name": "data/rgb/pilot-tr00050-008.png",
+    "bytes": 17036,
+    "sha256": "5ea5634957e1dd7395be8aaa78152f3dbac4453b74e297fa963f96d53a64469f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00050-009.png",
+    "bytes": 17101,
+    "sha256": "f99817c35bf1db54bfff1de48ec8db688050ea86bb97c5d14e7ac7065c6755ff"
+  },
+  {
+    "name": "data/rgb/pilot-tr00051-000.png",
+    "bytes": 16988,
+    "sha256": "3464223264afd9185b3c3ba0960511e444c64146ca08dcf41b389fd12126e2ed"
+  },
+  {
+    "name": "data/rgb/pilot-tr00051-001.png",
+    "bytes": 17034,
+    "sha256": "d83d4cdf07dfdaf390cb7df12113a89274d91124bfc6666f6c64559765edbfd7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00051-002.png",
+    "bytes": 17448,
+    "sha256": "a76c9d27a802efb21e3b88bfa52854fecb377aa374939d1279d6f2eab9890ec5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00051-003.png",
+    "bytes": 17485,
+    "sha256": "ae732ca17d87cfe0b51ff9372008db0340ccde7e4cf6ce493bebb3a95771a0c3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00051-004.png",
+    "bytes": 17117,
+    "sha256": "5886b59450ec929000edf01ebee3d1dfeca34d761b4dc365e5ee967fe5b05263"
+  },
+  {
+    "name": "data/rgb/pilot-tr00051-005.png",
+    "bytes": 16855,
+    "sha256": "71af3b3aa521472a7d136d6f78c3b9d6721418acf5310421d94e22362d9103ee"
+  },
+  {
+    "name": "data/rgb/pilot-tr00051-006.png",
+    "bytes": 17331,
+    "sha256": "1d1352a76818d64008186e8f25f1e03c5446e7f88928ed00c59cfb31f6efa400"
+  },
+  {
+    "name": "data/rgb/pilot-tr00051-007.png",
+    "bytes": 17303,
+    "sha256": "e5ef4fde765b887f09342c47873f3ebc562495b9bdbd828b12189f4ea96d1c5f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00051-008.png",
+    "bytes": 17025,
+    "sha256": "931593c3a15e8d8cc0c6b1b235dc92fd318e12c2334d172754bfef760d8e5b18"
+  },
+  {
+    "name": "data/rgb/pilot-tr00051-009.png",
+    "bytes": 16986,
+    "sha256": "f8c54ba60b79f62adc18f603309026bdc30a4b20b60d417f1cf295a3368a8aaf"
+  },
+  {
+    "name": "data/rgb/pilot-tr00052-000.png",
+    "bytes": 16881,
+    "sha256": "b394a770fef35aa7c1df112741635dff94270eb7b7f35c536e0ae7ffe9b96336"
+  },
+  {
+    "name": "data/rgb/pilot-tr00052-001.png",
+    "bytes": 16749,
+    "sha256": "d9401d1f7940bc17281d0c818f63bb94e7f3c7a1bf0f19934e7a20fe8a3c9cd0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00052-002.png",
+    "bytes": 16632,
+    "sha256": "10b9aa4116fb57972f64d675bf4e76ca4999803afa9852c74d54844ce5803623"
+  },
+  {
+    "name": "data/rgb/pilot-tr00052-003.png",
+    "bytes": 16612,
+    "sha256": "4bd10b8e733a96edca184f4e502caccc6a197592d7a921d1a57e33da1eee265b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00052-004.png",
+    "bytes": 16532,
+    "sha256": "58e03989ca79deff01ada1b9e587b47f5cf3eddefbde01741bb6b818a792b536"
+  },
+  {
+    "name": "data/rgb/pilot-tr00052-005.png",
+    "bytes": 16564,
+    "sha256": "20eb83ab72c093a30e7f7d1b3fe08bf68bd8423364eecb2767013eaa40e8eca6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00052-006.png",
+    "bytes": 16536,
+    "sha256": "696c9c853f596f82d77d0fc53833b2e9297df8f53c29ba36965898cc349da78e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00052-007.png",
+    "bytes": 16563,
+    "sha256": "0711e14c6af4fe2c784139251783a6b8ec010f3697a36ed37d2282886b8e4fc6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00052-008.png",
+    "bytes": 16434,
+    "sha256": "d5a329780bfd595e6ad8243afabfc8f0fed89d787706f99f4eca1fa1cf655bc5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00052-009.png",
+    "bytes": 16402,
+    "sha256": "3522055fceddaa77973d5f518b85dddfc6fdda37638baa1f0b424d26f9fd6907"
+  },
+  {
+    "name": "data/rgb/pilot-tr00053-000.png",
+    "bytes": 17014,
+    "sha256": "dcb1895516ca5f7d66b3ab429e89fb63338271b68c9f716b6912a5e120caa666"
+  },
+  {
+    "name": "data/rgb/pilot-tr00053-001.png",
+    "bytes": 17117,
+    "sha256": "63db0920fccf9c5085851ccac506879d7db51650c72a88d71f5a05dda8dc36b8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00053-002.png",
+    "bytes": 17011,
+    "sha256": "161ecad1cec35d4d9da68f35e019be9ea7f91c88e3fe91fad3c0ee695ccd1456"
+  },
+  {
+    "name": "data/rgb/pilot-tr00053-003.png",
+    "bytes": 17203,
+    "sha256": "65e9688a3a7758f1b98751be2ca65af1a4a2ada0ab0666ec9d05a3bcef277fe1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00053-004.png",
+    "bytes": 17243,
+    "sha256": "e218276839581371cb3735d2caeb5753187827d0efd5534e42f5dfc2dd800a22"
+  },
+  {
+    "name": "data/rgb/pilot-tr00053-005.png",
+    "bytes": 17357,
+    "sha256": "aca1a494c65bf75373e50cb8a2e90915b71eb4fba3a1956c17aa8e373cc86e1d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00053-006.png",
+    "bytes": 17365,
+    "sha256": "4599afa49cc4690438886ae1aa1f0e66cca5c818ef7cf4eb0e2b09b3f131fe07"
+  },
+  {
+    "name": "data/rgb/pilot-tr00053-007.png",
+    "bytes": 17439,
+    "sha256": "befa908030cd9eab901ee1f0b92d1747e2fc4a6b72de4a1f0e6cede378af6f34"
+  },
+  {
+    "name": "data/rgb/pilot-tr00053-008.png",
+    "bytes": 17345,
+    "sha256": "bd5c36cb6b4ac6d510295368b750d393e52f4e3ba54339a81f2d66267f3c3c08"
+  },
+  {
+    "name": "data/rgb/pilot-tr00053-009.png",
+    "bytes": 17373,
+    "sha256": "a8a3b44243f175e6e6431aa5f30aef5fc36b4713dfa01ab704f33b0e1d09eb3c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00054-000.png",
+    "bytes": 18145,
+    "sha256": "9cd0edb6069237ea14427809e35cf5df3e15aebf4db5af5ef053f4567572b7f7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00054-001.png",
+    "bytes": 18032,
+    "sha256": "002e63951c8c0b1a76d79ea269021b0fde9b8684f5cf5f0e79b1411a7c6f6ed4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00054-002.png",
+    "bytes": 17905,
+    "sha256": "60d559d3349cff867868a65cbf0a90776fd5184b9a1b2fb03b1a4d80ca2dfbb5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00054-003.png",
+    "bytes": 17906,
+    "sha256": "f57961dfd21422092595f6972b4e49faee90bbcc560013d807f0befdeddc3b9a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00054-004.png",
+    "bytes": 17791,
+    "sha256": "eb0d1e5422330a26edb25599ae3d46c5f17bd1b0fba18447ecd0091ec8a049ab"
+  },
+  {
+    "name": "data/rgb/pilot-tr00054-005.png",
+    "bytes": 17831,
+    "sha256": "05e57212cf08466e8b19e3cd1b9e505e80ee2d51ed7f602906d97aa7a3cb716b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00054-006.png",
+    "bytes": 17697,
+    "sha256": "3e43b07189e115058fe8e6e6f5317dce2cb614f0f922479b3ae94c95adae00d8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00054-007.png",
+    "bytes": 17683,
+    "sha256": "01d3977f689d09ebfca5181b6dc7d5198f5c7946355df6aa821b98e4250b6cf5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00054-008.png",
+    "bytes": 17785,
+    "sha256": "f5d37cc4295c9994930544ce3edeed7af696affb4ac00a0b78a45803323c7c28"
+  },
+  {
+    "name": "data/rgb/pilot-tr00054-009.png",
+    "bytes": 17914,
+    "sha256": "1f4fef24839622df4250985f13c33799dd5004e9932f85d56be6e39773c5ebc3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00055-000.png",
+    "bytes": 18049,
+    "sha256": "46a1be60b61d3d844e6b4ffdc8551f9980dc0cb114e4e5402b5aea1bfbaa6aca"
+  },
+  {
+    "name": "data/rgb/pilot-tr00055-001.png",
+    "bytes": 18119,
+    "sha256": "fd8a1c6f7116a6e4fc31d67a9de9204122f2e4106101a54eb8a249c904e01f11"
+  },
+  {
+    "name": "data/rgb/pilot-tr00055-002.png",
+    "bytes": 17963,
+    "sha256": "18b4cf727ebfe0aac638170dd65008bbe4ccf755780a68dc347981298376efd2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00055-003.png",
+    "bytes": 17866,
+    "sha256": "75ac523f90bfa2e86f8f869e79978cf5e732351638b36a6c445cc23204582871"
+  },
+  {
+    "name": "data/rgb/pilot-tr00055-004.png",
+    "bytes": 17842,
+    "sha256": "3a2f2147ea6ff55c3d434a3b5a81a20cb709d7c04d974ac731dd529747a9d6e6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00055-005.png",
+    "bytes": 17698,
+    "sha256": "a13e512956688097587eddd4e78cca0b1792708995889b81016cf00b7625f81c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00055-006.png",
+    "bytes": 17782,
+    "sha256": "3af13774565b85ed98925693052117b0e37e283ac0343bd0ea2ea279a83e2a24"
+  },
+  {
+    "name": "data/rgb/pilot-tr00055-007.png",
+    "bytes": 17558,
+    "sha256": "b62698b96cf89cb06b3ead7a8e8e2dce3b10db0e72ce3ab953e150f5a2878984"
+  },
+  {
+    "name": "data/rgb/pilot-tr00055-008.png",
+    "bytes": 17516,
+    "sha256": "c38ffbb6f0fbd9ab1577408a06656de6ad908445db6a7bde6f3f5f01066f7e49"
+  },
+  {
+    "name": "data/rgb/pilot-tr00055-009.png",
+    "bytes": 17322,
+    "sha256": "80a238641215ccd8566169aa1d2af2676a4fb22b351b30aac80a4c99af8dbd65"
+  },
+  {
+    "name": "data/rgb/pilot-tr00056-000.png",
+    "bytes": 16556,
+    "sha256": "6550c49b01a5d718289c08039a82392c5f133cb74a6cadb041cee01e0edf9e00"
+  },
+  {
+    "name": "data/rgb/pilot-tr00056-001.png",
+    "bytes": 16655,
+    "sha256": "7b2d61a91417ee4e95347a5d402b81968e439aeed2df41d06f541dd87773f17b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00056-002.png",
+    "bytes": 16717,
+    "sha256": "d2beb5095ab9ba819b2a2199cdbaf0be77e2cc1016d1be789f216a1d5edfa4b5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00056-003.png",
+    "bytes": 16518,
+    "sha256": "9b2c769e6f7a80fcad9105cbee474de395f5d67e60e90cdd57b11ce52667b815"
+  },
+  {
+    "name": "data/rgb/pilot-tr00056-004.png",
+    "bytes": 16687,
+    "sha256": "92c3022bcf5d63c761184c349b7be56df86d13e60ccb0b4e78dd3f791c53d28a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00056-005.png",
+    "bytes": 16883,
+    "sha256": "52f031e1b32fa9f319e74639a33c661c0d321b8d3e713c7e23fd5e1fdf0f2d0b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00056-006.png",
+    "bytes": 16944,
+    "sha256": "6b636eb2fc1e5667c5ec7ebce0a7aa917b2a5d776d91b20d8ba44eabd371f769"
+  },
+  {
+    "name": "data/rgb/pilot-tr00056-007.png",
+    "bytes": 16962,
+    "sha256": "a1d7aef5759115b16d935bb53e14bf8f5812ae27dc3ce1a6e3d4b2ed926a6682"
+  },
+  {
+    "name": "data/rgb/pilot-tr00056-008.png",
+    "bytes": 17039,
+    "sha256": "3b54137c00b9a043d0ae982c074dd3fe6838194432bbd09bcbc8283579e7c02f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00056-009.png",
+    "bytes": 17054,
+    "sha256": "3bd3c3e9c35ae5e59a14e0d485d68605b363e9e4ab5b82160b445bff61896b19"
+  },
+  {
+    "name": "data/rgb/pilot-tr00057-000.png",
+    "bytes": 17905,
+    "sha256": "5394db1f51973ea35545b167b88a7af9ca4d547ae6589ba6c7c155d9fbdeb901"
+  },
+  {
+    "name": "data/rgb/pilot-tr00057-001.png",
+    "bytes": 17901,
+    "sha256": "b3c90078f043bbaee0905c0676c78a4c61950704a79bd82feb549c23c0ef6d20"
+  },
+  {
+    "name": "data/rgb/pilot-tr00057-002.png",
+    "bytes": 17787,
+    "sha256": "093ad0a89ea8662f6cc419851603a457b8959051136ffa824ac04322597c83d8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00057-003.png",
+    "bytes": 17825,
+    "sha256": "6853da8afe1ebb99b9f7e8fa1cb2f21736c23e89f2fd25490acb6ccce6f5fe7b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00057-004.png",
+    "bytes": 17850,
+    "sha256": "9936ae1fb492b101962b6a86d4ac4150fcb70274eb6e2e1f2bc22bd85072488e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00057-005.png",
+    "bytes": 17740,
+    "sha256": "07af1fee54b1ebe4d0b69c1d7db25e927a118b65e308f14f28d8091cdc4d812c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00057-006.png",
+    "bytes": 17641,
+    "sha256": "13cf10cab08bfb91197127eed3931b81caf3e4badce1fe56aeb67f9dbd83f305"
+  },
+  {
+    "name": "data/rgb/pilot-tr00057-007.png",
+    "bytes": 17639,
+    "sha256": "9b6347974665507ce53a35ce7032b657294393f32db8153b227a0472b287c046"
+  },
+  {
+    "name": "data/rgb/pilot-tr00057-008.png",
+    "bytes": 17623,
+    "sha256": "d498b892d2c5cc10e6cad5d610ebf284e0251cf6d22ea60c5d1d1b912c5e7154"
+  },
+  {
+    "name": "data/rgb/pilot-tr00057-009.png",
+    "bytes": 17613,
+    "sha256": "0f3e4adb8a21ef2d8b4ffacd5cb3a416e8a7105cf85b29ff130e7a1af4335424"
+  },
+  {
+    "name": "data/rgb/pilot-tr00058-000.png",
+    "bytes": 15514,
+    "sha256": "4eaa4351e68f19add4f0407fe9bf341bde3343fb983f3fa5505e12e931f85773"
+  },
+  {
+    "name": "data/rgb/pilot-tr00058-001.png",
+    "bytes": 15514,
+    "sha256": "4eaa4351e68f19add4f0407fe9bf341bde3343fb983f3fa5505e12e931f85773"
+  },
+  {
+    "name": "data/rgb/pilot-tr00058-002.png",
+    "bytes": 15514,
+    "sha256": "4eaa4351e68f19add4f0407fe9bf341bde3343fb983f3fa5505e12e931f85773"
+  },
+  {
+    "name": "data/rgb/pilot-tr00058-003.png",
+    "bytes": 15514,
+    "sha256": "4eaa4351e68f19add4f0407fe9bf341bde3343fb983f3fa5505e12e931f85773"
+  },
+  {
+    "name": "data/rgb/pilot-tr00058-004.png",
+    "bytes": 15335,
+    "sha256": "2b21484c7247ab45997800e8fde3841367a09f52767a00f241252e9bbc969bfc"
+  },
+  {
+    "name": "data/rgb/pilot-tr00058-005.png",
+    "bytes": 15319,
+    "sha256": "13d16a2ad7d48f1aa4ef12bb7dce474f9b8beffb7b246c2e2a98ea2962ee789c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00058-006.png",
+    "bytes": 15439,
+    "sha256": "2be7b067af87a01d4cdb6b1d41a64fb40dc38caf6ead67fa3bfb1ba98b8560b3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00058-007.png",
+    "bytes": 15367,
+    "sha256": "0ee171d64cf2bafa9de161554a6cc2e9e9b9c2fb2e6e9c70441f150e9d0a0936"
+  },
+  {
+    "name": "data/rgb/pilot-tr00058-008.png",
+    "bytes": 15269,
+    "sha256": "89f6545609eb8fbc53be5a5eaf95aa7a816ff50b527ed60f5bc99bbc0e55f4c2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00058-009.png",
+    "bytes": 14882,
+    "sha256": "1f4c67134293ddbf6b3a0779d9918e1d9a2f0ce695fdba068c54ec76f5c90de3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00059-000.png",
+    "bytes": 15413,
+    "sha256": "a762914ea9b64d7961a8022a6c71ea4113d282bab3b885cde51509f73214c13a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00059-001.png",
+    "bytes": 15179,
+    "sha256": "0c900c97759d3d4b60c9709e4bf6ef1c75efda108de69660fceeb3c66fd08cc1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00059-002.png",
+    "bytes": 15004,
+    "sha256": "c0c7aa6ef81752ce9dd04d3c02051278f884baa9a6fa04a98e44fe0f473e81fd"
+  },
+  {
+    "name": "data/rgb/pilot-tr00059-003.png",
+    "bytes": 14986,
+    "sha256": "184737b825e01f20e60e15aa185de61f1bf69c2247a57f61d52431571675fddb"
+  },
+  {
+    "name": "data/rgb/pilot-tr00059-004.png",
+    "bytes": 14808,
+    "sha256": "c22c7365bac7531cbdff2da9776adba94e1c98c0dda9dfe55f7be9ef8dd2f8de"
+  },
+  {
+    "name": "data/rgb/pilot-tr00059-005.png",
+    "bytes": 14649,
+    "sha256": "5011fb34da95c8fb1a2d1e1fbac38bbc237f796d2712ed394a4ce7e990b220fa"
+  },
+  {
+    "name": "data/rgb/pilot-tr00059-006.png",
+    "bytes": 14403,
+    "sha256": "4a2f307a588b2153596a24b4177a418d7d64a426c6cc78b8ffd1b25377877e43"
+  },
+  {
+    "name": "data/rgb/pilot-tr00059-007.png",
+    "bytes": 14218,
+    "sha256": "53cfa8233390b4a5e18c1b1d527a201d63d73b22bf0ede1483bfd0d34a413943"
+  },
+  {
+    "name": "data/rgb/pilot-tr00059-008.png",
+    "bytes": 14081,
+    "sha256": "abccc045dc16082d24a312c95c7973c65b8f9b5406e4f980fcc2bc6c97a79214"
+  },
+  {
+    "name": "data/rgb/pilot-tr00059-009.png",
+    "bytes": 13940,
+    "sha256": "11e7774cf670bb229732e64d870744101485e8a08e13c37129b3634b5bdc66e7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00060-000.png",
+    "bytes": 16913,
+    "sha256": "ed2b0623b87ad8928e2c9e8dd7ff66000d96ee2d5ae53040a03d8366c0c6064b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00060-001.png",
+    "bytes": 16844,
+    "sha256": "7e3f6f47e48760d3691cb358e31a1d34276c0783afb401c3817eefdded42f872"
+  },
+  {
+    "name": "data/rgb/pilot-tr00060-002.png",
+    "bytes": 16770,
+    "sha256": "e37d6d08dc7b9b306da33a9b458b5cca8300727b21c0560bd20d7874e3fa15f5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00060-003.png",
+    "bytes": 16747,
+    "sha256": "bc0a9934a4fc0e457be37620e94e83fb52fcbb727b0be8fa634db3b0b8dcd275"
+  },
+  {
+    "name": "data/rgb/pilot-tr00060-004.png",
+    "bytes": 16726,
+    "sha256": "d4c4eba9cc0225354f49803be553148930153433cd90fc90d73dd96e8bf345cb"
+  },
+  {
+    "name": "data/rgb/pilot-tr00060-005.png",
+    "bytes": 16790,
+    "sha256": "d7c1e56d15fdd2a13833de96f890934ea13db26ef3ba93cea15a4e0c3f8d0467"
+  },
+  {
+    "name": "data/rgb/pilot-tr00060-006.png",
+    "bytes": 16818,
+    "sha256": "093d6d042a28fa9b872dd35e2986a81f7e26a3e5b8332ff5240ad752bbc919b4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00060-007.png",
+    "bytes": 16818,
+    "sha256": "1db52c8b43aaaa3f6e7300c0f9d2f7236cdd03ee2a5cda8756a423fda873cc8a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00060-008.png",
+    "bytes": 16991,
+    "sha256": "80ac0c6a1a32ee65209baa8297cb2b8154aa94b300beee2ca757a860ae89e328"
+  },
+  {
+    "name": "data/rgb/pilot-tr00060-009.png",
+    "bytes": 17156,
+    "sha256": "c91554e0c6ef95749b97e2d1a26f9567e385d0e77420fc295108c40d57c3c178"
+  },
+  {
+    "name": "data/rgb/pilot-tr00061-000.png",
+    "bytes": 16132,
+    "sha256": "698726134c605b46cfbc7904ac8bb537038563da368ea9d6d0ef31464c4cbfdc"
+  },
+  {
+    "name": "data/rgb/pilot-tr00061-001.png",
+    "bytes": 16343,
+    "sha256": "b93db8d5a7a7e4435d7a488fc9b25284dfb45e0eed2787b838abce77c701d3be"
+  },
+  {
+    "name": "data/rgb/pilot-tr00061-002.png",
+    "bytes": 16099,
+    "sha256": "e095ddfb9d66cce1ca6650f4052b7059917dcc85b28f4de2f77cc392488c9120"
+  },
+  {
+    "name": "data/rgb/pilot-tr00061-003.png",
+    "bytes": 16230,
+    "sha256": "b3afdb5436ba702eec9ab8dd2a85ccc95ea265cb81977bb81cccefe793d93a9f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00061-004.png",
+    "bytes": 16362,
+    "sha256": "60c16e6caf7a8149544d4d0f7382741c67b9ef69abd5d622384c9139086c2746"
+  },
+  {
+    "name": "data/rgb/pilot-tr00061-005.png",
+    "bytes": 16426,
+    "sha256": "07161fc05cefedde3351555334890d3bdf18391c32e5c22d149d3993370845ef"
+  },
+  {
+    "name": "data/rgb/pilot-tr00061-006.png",
+    "bytes": 16619,
+    "sha256": "850ca4ab324884c479d5216571118605e6448f4e6be7ab4cf6dd8100c28b32bb"
+  },
+  {
+    "name": "data/rgb/pilot-tr00061-007.png",
+    "bytes": 16421,
+    "sha256": "abe931b032cf43953056ba98dd98f962697aa77d37a40960c5a60f205b2fd0ad"
+  },
+  {
+    "name": "data/rgb/pilot-tr00061-008.png",
+    "bytes": 16147,
+    "sha256": "3a8de28dbf7b502696ed07011c5192d578b56813aef6c22aeba73b0c611245b5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00061-009.png",
+    "bytes": 16087,
+    "sha256": "07e3813a1f60d0781bcde0e42aecce3b6a1a74f9f7f4e778d5aae9eacfd545bf"
+  },
+  {
+    "name": "data/rgb/pilot-tr00062-000.png",
+    "bytes": 16257,
+    "sha256": "e31233e814c43e956725653d60ffeb694e31b740e58773a990589a703bfc905e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00062-001.png",
+    "bytes": 16329,
+    "sha256": "c7e1301755fd744fc5a265771986267135a3cea75aee608b43c315f8d2b6c6db"
+  },
+  {
+    "name": "data/rgb/pilot-tr00062-002.png",
+    "bytes": 16373,
+    "sha256": "190bd4c4040b70b8d724117a933e9a2e4c0e6a4be80988b09c6d5fc2d3d12c97"
+  },
+  {
+    "name": "data/rgb/pilot-tr00062-003.png",
+    "bytes": 16454,
+    "sha256": "a04cf86f15d47081470507ad9800f1935a1748cba80c857bd425bff0c112625c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00062-004.png",
+    "bytes": 16515,
+    "sha256": "4620d086f3bd82c0b16b968d2b0e097fab07a66a6f054845ee6020d07e834e63"
+  },
+  {
+    "name": "data/rgb/pilot-tr00062-005.png",
+    "bytes": 16478,
+    "sha256": "f353b023004aeeeaa33a3a095973fc9823fc783b3bcb7d952497ce883be17b35"
+  },
+  {
+    "name": "data/rgb/pilot-tr00062-006.png",
+    "bytes": 16596,
+    "sha256": "99a43021f0d11ae6ac74cd74fa9f7373319a98066fdf3b6aaa03f6ffe7cc5bef"
+  },
+  {
+    "name": "data/rgb/pilot-tr00062-007.png",
+    "bytes": 16555,
+    "sha256": "a296cf5888af831dcbb583bd06ff54b1b2110d36e356a67d9d02e6827fccef10"
+  },
+  {
+    "name": "data/rgb/pilot-tr00062-008.png",
+    "bytes": 16600,
+    "sha256": "7a97f6e77f287845891c669b993f63bc6d40aef1497be25996ee120553a3940f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00062-009.png",
+    "bytes": 16670,
+    "sha256": "c850794f3de73416f69aeaa1ce9169b45a31bb3bdd3eedfe990e6bb7fd5525f0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00063-000.png",
+    "bytes": 17145,
+    "sha256": "98c3c051b7903b4f3700d1c711811d7330944963f4f482945cc42d5c9a1b695a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00063-001.png",
+    "bytes": 17179,
+    "sha256": "63a53db352a11d79aba88fd07c408bab24c5515d71e58eb062a829daf88c1992"
+  },
+  {
+    "name": "data/rgb/pilot-tr00063-002.png",
+    "bytes": 17143,
+    "sha256": "6f682d1bf25110bed817dca01c07577d8eec18498c69095ec8cf03227f497895"
+  },
+  {
+    "name": "data/rgb/pilot-tr00063-003.png",
+    "bytes": 17218,
+    "sha256": "43392de585d4152a623f923641be75d89ce877f5c1db48b6d058931ad284cc0d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00063-004.png",
+    "bytes": 17433,
+    "sha256": "05ba2b7a3e69ce345d66cdc1a8eebc0b9df2dc5b65b11c6f7bb49aedfaeac1fe"
+  },
+  {
+    "name": "data/rgb/pilot-tr00063-005.png",
+    "bytes": 17384,
+    "sha256": "55ef9867621842fc40afb0f8b0174880df517e7d29bded0d9fee3502b62dd920"
+  },
+  {
+    "name": "data/rgb/pilot-tr00063-006.png",
+    "bytes": 17493,
+    "sha256": "c49ed2bc538a38bc2bed3f314b3cbd3b777a78dc55eba584420cc7235069b68b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00063-007.png",
+    "bytes": 17550,
+    "sha256": "6fa93b94d0d9a27977474ce549e28dba2df99a581c218a3edac9df63a306d29b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00063-008.png",
+    "bytes": 17525,
+    "sha256": "6d9c1504b18aafc8e1885ad3c223cc9ba52d87a05ebba1546c660fb8ec0b3a6a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00063-009.png",
+    "bytes": 17444,
+    "sha256": "b20e3537aa3f374da5dce730aeb8818799695deb75aaeb6c3c72c372c7927d5f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00064-000.png",
+    "bytes": 16568,
+    "sha256": "6a4794770fc8ee0c54d02c204c7520867d1bc96da18150aab5585e9b083194e1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00064-001.png",
+    "bytes": 16462,
+    "sha256": "9651c572c38d33b42a9574de3cf849d2fc3b3d64dd30c9371b62505a86f72960"
+  },
+  {
+    "name": "data/rgb/pilot-tr00064-002.png",
+    "bytes": 16465,
+    "sha256": "22bf1ad7935fd854ca7d2cb31e32cbf8d4d4ec5ad7344260c853d107cd3a39b5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00064-003.png",
+    "bytes": 16331,
+    "sha256": "a6883dce8a2c23d4fb11188c5e3c0542d4cfbb71d37a2bbc2aa0f7ebb048be30"
+  },
+  {
+    "name": "data/rgb/pilot-tr00064-004.png",
+    "bytes": 16187,
+    "sha256": "59c2fe197372f84d121745335bf6ff976439b3ce1b36ffe0b0433eccdbff45ba"
+  },
+  {
+    "name": "data/rgb/pilot-tr00064-005.png",
+    "bytes": 16198,
+    "sha256": "a6e24abfe4aa570414db50cbd051ce8c1ad11f675b8c8bab1d42fdf5c2a901fa"
+  },
+  {
+    "name": "data/rgb/pilot-tr00064-006.png",
+    "bytes": 16303,
+    "sha256": "43ea325385060d95edccfb9eef7a85a2d999c86822964f6ffe45c92f8c1d3b4d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00064-007.png",
+    "bytes": 16145,
+    "sha256": "c85d8500b55edc9ad389232e65bd37f916541d3becbf12c4fc0661486bdeff56"
+  },
+  {
+    "name": "data/rgb/pilot-tr00064-008.png",
+    "bytes": 16286,
+    "sha256": "6442d040d58fc49ab1c470b021e57698ceca107d3a2f7a170ed73b93e150fcb7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00064-009.png",
+    "bytes": 16224,
+    "sha256": "e0d8c4c400626ce04f51bc9c3571d99f039a6e7ff85946a928c5d92ae69367f7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00065-000.png",
+    "bytes": 17082,
+    "sha256": "a1171c55b84ffc47f10b51e3baa893102e78215dea8c22850115e3302369111c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00065-001.png",
+    "bytes": 16992,
+    "sha256": "04d801d4d52d53e071d291396228d6c7f7af4faae81e6904fb6d3d2971d7fb76"
+  },
+  {
+    "name": "data/rgb/pilot-tr00065-002.png",
+    "bytes": 17004,
+    "sha256": "ebe46c072371447c099b4ca9f6c241540120815022d06b0396d47dc06bd9d18c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00065-003.png",
+    "bytes": 16934,
+    "sha256": "c4b2515b06b0ad17d322d9aa4bca2c2897663e776af594b882b7ced04a27f71f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00065-004.png",
+    "bytes": 16871,
+    "sha256": "107dbc6ca45cd09f1619a9b39a9a90277820a19b733cd0dc476e41056b4f0f2f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00065-005.png",
+    "bytes": 16789,
+    "sha256": "f0f2a8716138d84281f8da719178cc3e8d4259b714bf735b769f0baca8868df5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00065-006.png",
+    "bytes": 16610,
+    "sha256": "d64224592b8ff021803484663d1611d33daebe144a4c31e88622768981e8d5c7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00065-007.png",
+    "bytes": 16387,
+    "sha256": "d0cc22896649cd1ccddd2fbce67f1c2e007c3c4ec8c2da3d5815a678cebf9353"
+  },
+  {
+    "name": "data/rgb/pilot-tr00065-008.png",
+    "bytes": 15746,
+    "sha256": "03153bcca03b16f1e50da77ea47169c5be6a1dda784664c028c23b98a5e5a830"
+  },
+  {
+    "name": "data/rgb/pilot-tr00065-009.png",
+    "bytes": 15368,
+    "sha256": "da5061fcc40b3a468fe602543b72e39806a078d0c17a03025abfd11949a00a48"
+  },
+  {
+    "name": "data/rgb/pilot-tr00066-000.png",
+    "bytes": 16981,
+    "sha256": "448ca905128591792bbffd446b8e33f67454dd5bad45dd5167d7942c339380dd"
+  },
+  {
+    "name": "data/rgb/pilot-tr00066-001.png",
+    "bytes": 16935,
+    "sha256": "26865143ac82f581a0e9174de78091e514e97c68fba320b53932d4b4521bc1d5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00066-002.png",
+    "bytes": 16914,
+    "sha256": "5250fbd1b0a999305439a9ddee5a3453a4e837afdbb4452e197a1d13952b3cfa"
+  },
+  {
+    "name": "data/rgb/pilot-tr00066-003.png",
+    "bytes": 16857,
+    "sha256": "266fcbbcf755d4143dee786a4221b4654a78ed2b14b176ba06efebbac69f9c69"
+  },
+  {
+    "name": "data/rgb/pilot-tr00066-004.png",
+    "bytes": 16811,
+    "sha256": "973d61703cc5c357502dc953af00aec152d410766d8924818a879c33885e4b34"
+  },
+  {
+    "name": "data/rgb/pilot-tr00066-005.png",
+    "bytes": 16956,
+    "sha256": "f8820faed468560745de33e0baffddeb32ecdb0b412b1d8da9889180b1129f19"
+  },
+  {
+    "name": "data/rgb/pilot-tr00066-006.png",
+    "bytes": 17039,
+    "sha256": "6658f2b74bf9878982e1283c4efead2edc33c92a9f7fc4b0ad517e17dd194bd6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00066-007.png",
+    "bytes": 16992,
+    "sha256": "b84ac6ea45bce20b3ee2d63aa01e6239b90c746836848d8679daf8b842e594cd"
+  },
+  {
+    "name": "data/rgb/pilot-tr00066-008.png",
+    "bytes": 17244,
+    "sha256": "ea50a36dc2cac226a281956efe6d6a40ac04791659e247547e9b34aa8de310f7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00066-009.png",
+    "bytes": 17413,
+    "sha256": "e4c3a9c56f24a8460732b4700b30c8baee0557103c6cdc058f75e8703a8f9a6e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00067-000.png",
+    "bytes": 18084,
+    "sha256": "4d834b628ec65d1110de805e061258b5c8e8d7ca16fecf2b3450e3e6326eecba"
+  },
+  {
+    "name": "data/rgb/pilot-tr00067-001.png",
+    "bytes": 18089,
+    "sha256": "9c1bf45091049bb6f16f6628f1a17723fe91e8e5bf9917f82340078e66cc642f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00067-002.png",
+    "bytes": 17906,
+    "sha256": "1afa9500533865c8ff340d94449adfd2f21db8844f3e09690dd23cccf75f6c22"
+  },
+  {
+    "name": "data/rgb/pilot-tr00067-003.png",
+    "bytes": 17891,
+    "sha256": "5e252fa31fff56ae89b3df3ac2811823275e817a876b453385d09940c1bc5cb4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00067-004.png",
+    "bytes": 17795,
+    "sha256": "40267b02ba833fde2f646d1e3f20682677dbd73e8d59a2419be2adfde5ed9591"
+  },
+  {
+    "name": "data/rgb/pilot-tr00067-005.png",
+    "bytes": 17705,
+    "sha256": "b4886cfcc641e527bce6455aaec6baca261c0881bb0d773e720960e737ff994a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00067-006.png",
+    "bytes": 17434,
+    "sha256": "eb10e3aab24478167736c519d13a58c7125e1a5e3bf1259f5bd04bc1db22060e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00067-007.png",
+    "bytes": 17391,
+    "sha256": "b57a6c31bd47f683dd413cb26328fb0b5dab66c1c5bab7f790ec5643aca2e2ae"
+  },
+  {
+    "name": "data/rgb/pilot-tr00067-008.png",
+    "bytes": 17214,
+    "sha256": "eb179075fb0bf1c5e8595550914402e5dd2cc36c40b2975c006a0399feb8ccd1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00067-009.png",
+    "bytes": 17180,
+    "sha256": "df9b45d886ca292d71f7b1693de611c7921a3e52ff6fe3d98915010b6501713d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00068-000.png",
+    "bytes": 15907,
+    "sha256": "92566f2e20c1a3506932aca98ddadfd6dfe73338a7f0c5e0da036fd01923a2d7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00068-001.png",
+    "bytes": 15907,
+    "sha256": "92566f2e20c1a3506932aca98ddadfd6dfe73338a7f0c5e0da036fd01923a2d7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00068-002.png",
+    "bytes": 15907,
+    "sha256": "92566f2e20c1a3506932aca98ddadfd6dfe73338a7f0c5e0da036fd01923a2d7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00068-003.png",
+    "bytes": 15907,
+    "sha256": "92566f2e20c1a3506932aca98ddadfd6dfe73338a7f0c5e0da036fd01923a2d7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00068-004.png",
+    "bytes": 15896,
+    "sha256": "ba1860b8c5a4df09997193611b3c1f90b8e8e70759e7aaf05e5f42cd298c33ac"
+  },
+  {
+    "name": "data/rgb/pilot-tr00068-005.png",
+    "bytes": 15826,
+    "sha256": "eaf9468e56ed5cb331df0248ac3685231512ba07992b5c93193ff0112ab3b068"
+  },
+  {
+    "name": "data/rgb/pilot-tr00068-006.png",
+    "bytes": 15838,
+    "sha256": "e649d8210fda59dcf0d9af6167d208dd2ebed54b0849869cf94f8b04ef07af0b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00068-007.png",
+    "bytes": 15860,
+    "sha256": "76c85a9497b91405acf07eae08b0b18032712846afc812c154c4ec75cbdfdb13"
+  },
+  {
+    "name": "data/rgb/pilot-tr00068-008.png",
+    "bytes": 15874,
+    "sha256": "f5d8809edfd1f7f87a0a4f92cfecfa3a9a3794136c33a3503be4ceab3f9b7009"
+  },
+  {
+    "name": "data/rgb/pilot-tr00068-009.png",
+    "bytes": 15742,
+    "sha256": "4cfaba47fbd08ccdba0395033e02d98f8d98e43e43ca6936a28401cb94143ece"
+  },
+  {
+    "name": "data/rgb/pilot-tr00069-000.png",
+    "bytes": 17329,
+    "sha256": "5cc824116e25872b194b960525729f2eb1a58440d57a05a780ec22b4c4a9af25"
+  },
+  {
+    "name": "data/rgb/pilot-tr00069-001.png",
+    "bytes": 17371,
+    "sha256": "3e1dc2b1da6be95fb28556010ccf7f1b88b62d588640f5d3bbe5bf77db6590c7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00069-002.png",
+    "bytes": 17604,
+    "sha256": "d3ea1455ebb733b53bb7695efec33e3b81e2a26854fd900c38703ed5977d523c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00069-003.png",
+    "bytes": 17682,
+    "sha256": "981703fa5c6f5cbd31192662dcf720138a1b0332a3c6f834b808935486c5d1d2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00069-004.png",
+    "bytes": 18023,
+    "sha256": "8bc6a872e5aa238a180cbc97e08b6885a17fc77b5d945b84ffaec49deecaa261"
+  },
+  {
+    "name": "data/rgb/pilot-tr00069-005.png",
+    "bytes": 18089,
+    "sha256": "a04dc4dc536651e5130342e4cd41f617c2b83545c0b8e6e8391cd13da76f3bb0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00069-006.png",
+    "bytes": 18099,
+    "sha256": "f86bb2aace542de2fa35c891723934ce9f9a3270fe3ec266722b282b3ef34c90"
+  },
+  {
+    "name": "data/rgb/pilot-tr00069-007.png",
+    "bytes": 18201,
+    "sha256": "fe7ab0e0d6eded4b306886b88a288437430f8181e0a0b3d9c776360dddd5e0b8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00069-008.png",
+    "bytes": 18353,
+    "sha256": "b53c636505420a9edac3a6ea011afe3a4c072161d17dd5046cec079bca505474"
+  },
+  {
+    "name": "data/rgb/pilot-tr00069-009.png",
+    "bytes": 18307,
+    "sha256": "2b00d6e7637c0ff93808ceb10700a70667e6595c0bdf3ec28f42187528dd232a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00070-000.png",
+    "bytes": 16327,
+    "sha256": "7c0b7e1881791bc10fd56d530be13032d285e12ced5c49903afc552a327fd88f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00070-001.png",
+    "bytes": 16328,
+    "sha256": "2e7916e5432b50d110a13c57d14765690f596f35bfa5865593c0a4f12a403348"
+  },
+  {
+    "name": "data/rgb/pilot-tr00070-002.png",
+    "bytes": 16277,
+    "sha256": "564b3569bf28f1715f25dbc693fab2e4d4135bc948173e3703cf3951e377c102"
+  },
+  {
+    "name": "data/rgb/pilot-tr00070-003.png",
+    "bytes": 16381,
+    "sha256": "e108742d6b271c8ed5fc369a9155869d9c0ae76bceea5f34db3ca7093e1c67e4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00070-004.png",
+    "bytes": 16307,
+    "sha256": "93e87335dec33077165815c43204afd8040d346483ac86266fe5634c341d41ce"
+  },
+  {
+    "name": "data/rgb/pilot-tr00070-005.png",
+    "bytes": 16271,
+    "sha256": "d992532bd0a3bce7eb84fc04350f4cb1ef4ed36b36acb65dbbddbf1197147134"
+  },
+  {
+    "name": "data/rgb/pilot-tr00070-006.png",
+    "bytes": 16380,
+    "sha256": "7e621c316e2ebcd17fd1d600fb012c4bca440f410f68595fb0c52a1aa61ed7b8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00070-007.png",
+    "bytes": 16290,
+    "sha256": "7145f4fdc0e5c97af55da88b94484391ea6b2069dc07bb60d83e1581b695f4bf"
+  },
+  {
+    "name": "data/rgb/pilot-tr00070-008.png",
+    "bytes": 16183,
+    "sha256": "e1a106d4b4ad792196da9a5a039565dc321493fc49a7a25aa663b7830019d066"
+  },
+  {
+    "name": "data/rgb/pilot-tr00070-009.png",
+    "bytes": 15987,
+    "sha256": "06f1a10cdd752c42e9a9002eea2af7337e66d56b462fe6ee7f758ff3e5850953"
+  },
+  {
+    "name": "data/rgb/pilot-tr00071-000.png",
+    "bytes": 14820,
+    "sha256": "311af52a1378dd497b89834c881f7fb7cb33709958a7819e4d18e457c6c59ea7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00071-001.png",
+    "bytes": 14653,
+    "sha256": "402d81045744fa688fb16b83fc76e0b11e97914568a71b963f54f1583aeb53cc"
+  },
+  {
+    "name": "data/rgb/pilot-tr00071-002.png",
+    "bytes": 14664,
+    "sha256": "3b1b4471c0d0174d78603bd334cfe79b2dfd5f39d4fcaa9b76b887f599d97332"
+  },
+  {
+    "name": "data/rgb/pilot-tr00071-003.png",
+    "bytes": 14860,
+    "sha256": "4d0c882e3c94c2b1b1eab81840657e7271fd532c4065cba1d1fe9799384c7b48"
+  },
+  {
+    "name": "data/rgb/pilot-tr00071-004.png",
+    "bytes": 14987,
+    "sha256": "c5accb8c53a4b62d065b7320713e81931c11ff59f947fd7fb2ccfd0e7604658e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00071-005.png",
+    "bytes": 15018,
+    "sha256": "7f8bab01a5808927cf6c006d04d555c58db59acaeb7c9a1917e4fada304bc07e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00071-006.png",
+    "bytes": 14895,
+    "sha256": "4575723816aec22314972e28370483d8bb3b0fd436bb768d5e8fec2139cc6f2f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00071-007.png",
+    "bytes": 14980,
+    "sha256": "e641b6f4a874e43487d761f9656b13bdffde7daf66b40139a9b79dfcc98b8fab"
+  },
+  {
+    "name": "data/rgb/pilot-tr00071-008.png",
+    "bytes": 15066,
+    "sha256": "6168438fed95245e76eddd36cf9aacc1a59161d3083eddcd0c7239b7a9ba8d91"
+  },
+  {
+    "name": "data/rgb/pilot-tr00071-009.png",
+    "bytes": 14677,
+    "sha256": "6c730ff4406ad7789df64ec4b9680a303aac61f7eab52863f2365e93d6b5f2c5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00072-000.png",
+    "bytes": 15201,
+    "sha256": "94b1658a70172e6955b15f27153893ed407ad77d5ba6fabe17031e1df779b71d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00072-001.png",
+    "bytes": 15218,
+    "sha256": "3b9dbf6e43696bfeede76b678698b48770d0ff3c12feab2ec7a12f3f8bc827d6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00072-002.png",
+    "bytes": 15101,
+    "sha256": "b11b78a327871f0bb5f76bbb84aa035d4019bd9973a1884041d7b43de78c9d84"
+  },
+  {
+    "name": "data/rgb/pilot-tr00072-003.png",
+    "bytes": 15207,
+    "sha256": "f8a841af3185f9597f3425fd3d170ade21054d85797dda0ea03facff81c35788"
+  },
+  {
+    "name": "data/rgb/pilot-tr00072-004.png",
+    "bytes": 15205,
+    "sha256": "9dc1ae182be1a5eb2fd7a7cb4dc9a47cdf5c7ae00a402932977acf9f005f1c15"
+  },
+  {
+    "name": "data/rgb/pilot-tr00072-005.png",
+    "bytes": 15216,
+    "sha256": "fa79ed491aa38b556d27c7ecc9ce8a7c5c87ee6d6a34430a3e39109a5f58f7e3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00072-006.png",
+    "bytes": 15164,
+    "sha256": "24d22097345af98c0986b1abc5476ac5cc572ba042327de5eaec863bc6e0959c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00072-007.png",
+    "bytes": 15158,
+    "sha256": "b5df36690b2d2e0d2062ccf5fce200d5ced59fef25494c1af557e5739d955668"
+  },
+  {
+    "name": "data/rgb/pilot-tr00072-008.png",
+    "bytes": 15308,
+    "sha256": "de3a6b98485208ba47968a3523a363b212c617ad57e20091d96d6176b1265980"
+  },
+  {
+    "name": "data/rgb/pilot-tr00072-009.png",
+    "bytes": 15222,
+    "sha256": "3018e5832a0f4dc6997e7bd7f6203ae70a0bdcbcebb3b9a15de379f52475c476"
+  },
+  {
+    "name": "data/rgb/pilot-tr00073-000.png",
+    "bytes": 15490,
+    "sha256": "6c4ec3a4e12fdbdaa8533936d89f8a62c28c12fc372b89129238e554e1e53121"
+  },
+  {
+    "name": "data/rgb/pilot-tr00073-001.png",
+    "bytes": 15355,
+    "sha256": "b9d54a7622667f3a6272324dde2d9a60f300460f73cc7c6135e7e4dd17cca552"
+  },
+  {
+    "name": "data/rgb/pilot-tr00073-002.png",
+    "bytes": 15468,
+    "sha256": "11a9a9267980cdd6f6cbe24eb3e3a591f28f2b36ba99f496d9c395e55137e0ca"
+  },
+  {
+    "name": "data/rgb/pilot-tr00073-003.png",
+    "bytes": 15622,
+    "sha256": "5c898164354bade6ca8906ff0ad146ebbb9bc7e03429b51c094bd08b3d9f441e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00073-004.png",
+    "bytes": 15578,
+    "sha256": "9329eef6d5eca01be3a70e3bf7c76489642899d58d8b40e606681cb9968f2cb3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00073-005.png",
+    "bytes": 15654,
+    "sha256": "8a30e958690e27cb00f4d754236dd138b231a7a5a1475a31e6c5609bc599a4a3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00073-006.png",
+    "bytes": 15603,
+    "sha256": "6adddaf427f1c2962d20e57fa9fa0b11c316c6924f6406ca985f6eff97ee820c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00073-007.png",
+    "bytes": 15588,
+    "sha256": "5848be4b383b18c454e5492a0bf80589ecb2ad269c9f133720f9d744c2574290"
+  },
+  {
+    "name": "data/rgb/pilot-tr00073-008.png",
+    "bytes": 15599,
+    "sha256": "486f6c6766bf0d6f71a25d73cc9997f1d45bdc5934ed0596860c276c3c3738e6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00073-009.png",
+    "bytes": 15732,
+    "sha256": "af35e55b5d92edd274b610ff687e76c5eeaa01f50d76a7eb46fd06e3fc6b7bd5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00074-000.png",
+    "bytes": 15223,
+    "sha256": "d3ad1aff992556284ba3c70e5878cde30e41b9c876106f867361e5418e3876f9"
+  },
+  {
+    "name": "data/rgb/pilot-tr00074-001.png",
+    "bytes": 15230,
+    "sha256": "91123aaa27134e4e49db9134513b89fa1819f87ae16accfcc34ce19de7699fa7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00074-002.png",
+    "bytes": 15171,
+    "sha256": "2b180eaf8683866c7b82b2e6cb33e8dc8481f521afe727ccd351e598f4e0211d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00074-003.png",
+    "bytes": 15247,
+    "sha256": "0c33a6630ecad1ca8f7add94f58c614db545ac263a6805e1425b49b7f9f77fb5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00074-004.png",
+    "bytes": 15097,
+    "sha256": "597c5226228f45e31d438b8fa87c29b2bbd53bf1c2a877a95fb60d7c7ed6639d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00074-005.png",
+    "bytes": 15158,
+    "sha256": "eb11c573335925828869ce5c3d43ea0f76c24920c137200a997d6697fbe13d03"
+  },
+  {
+    "name": "data/rgb/pilot-tr00074-006.png",
+    "bytes": 15171,
+    "sha256": "8b1e79168959f7b4a35b8c2abcf6d9779414d3334780abf0f9a1dc44301b36d3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00074-007.png",
+    "bytes": 15265,
+    "sha256": "7f3def5cd91b64323281a3971e6882844f45556625fbed6aa23decc9413a19c6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00074-008.png",
+    "bytes": 15364,
+    "sha256": "0de7947624bf331d0597e5dc9941de5c66d820a805675f0e45121a918b0809f4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00074-009.png",
+    "bytes": 15404,
+    "sha256": "66e306a08fd3b42267606fd9313f641f3cb3019c052317411b12050db7eb832e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00075-000.png",
+    "bytes": 13699,
+    "sha256": "02cd8aa7544911886a8127c79dea81fe8323840fb6c32fa32c36141944a52b0e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00075-001.png",
+    "bytes": 13759,
+    "sha256": "10f39be6b5ef366ba451f0a53707a4cfd01a7ef3ae6a3b1a324105340f081e67"
+  },
+  {
+    "name": "data/rgb/pilot-tr00075-002.png",
+    "bytes": 13828,
+    "sha256": "d29714acf37a7a8c9c30639015cc94c30744fb4b0adfd6b8c4146a1320258b60"
+  },
+  {
+    "name": "data/rgb/pilot-tr00075-003.png",
+    "bytes": 13708,
+    "sha256": "cab66b589723a21051998a246da8d736299d8c3a2a2d086581b68e96e109b5fe"
+  },
+  {
+    "name": "data/rgb/pilot-tr00075-004.png",
+    "bytes": 13860,
+    "sha256": "25860f597ad04b6d6193b887bd9956d675f99c7048348e308702d24c6c21d450"
+  },
+  {
+    "name": "data/rgb/pilot-tr00075-005.png",
+    "bytes": 14004,
+    "sha256": "231081373d325035531156953e45738bfbaaf20859266573d8cce0390b2e32be"
+  },
+  {
+    "name": "data/rgb/pilot-tr00075-006.png",
+    "bytes": 14073,
+    "sha256": "e9f7b109aa88a8c003332f2df5083ba945fa72584318cbd5f515d561ccc452a1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00075-007.png",
+    "bytes": 14213,
+    "sha256": "7ccab5e70d1afdc2c855d3230711d6a392b9dcc7d02f9e5f9559d2b4a3fb75fa"
+  },
+  {
+    "name": "data/rgb/pilot-tr00075-008.png",
+    "bytes": 14714,
+    "sha256": "be5fe0f5f24eda4ffb702e83a9c505f45883d9b27940a24825cafc7909fa2980"
+  },
+  {
+    "name": "data/rgb/pilot-tr00075-009.png",
+    "bytes": 15108,
+    "sha256": "042277b22dacbe894a067887298eba81e971a1c7b50121baea9ccde7e339f81a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00076-000.png",
+    "bytes": 14752,
+    "sha256": "426fc4897c12bd6875551f63e5b4a4d5fc43fccb4408554aab6d532cc29bdf5c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00076-001.png",
+    "bytes": 14731,
+    "sha256": "6a8e9380f49853ad563e8a166e817a94162a8cf03ab45cec01417909f9239fc3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00076-002.png",
+    "bytes": 14869,
+    "sha256": "1f75c03c55294ca38a5080071d8cf0bfab7d3c18a6d3d6bf72a5d85ac833643b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00076-003.png",
+    "bytes": 14838,
+    "sha256": "71b5f43479444a33a0e857dca2631d2a85ec8ed7f6a04f6339d9fc18c8b8b8c4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00076-004.png",
+    "bytes": 14880,
+    "sha256": "8e1cf89add43f956d1034d645e53f38ce26f4edb1b0a263a653b3ff322e24b05"
+  },
+  {
+    "name": "data/rgb/pilot-tr00076-005.png",
+    "bytes": 14809,
+    "sha256": "d7c2189836c2f49d3cc6b714bea38357703f43318626f52c05da1fbca2d4b43b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00076-006.png",
+    "bytes": 14885,
+    "sha256": "dd94fa6c10798f3b677b542dd8c64b93eab53924d4072497c3c487ce41df2c68"
+  },
+  {
+    "name": "data/rgb/pilot-tr00076-007.png",
+    "bytes": 14885,
+    "sha256": "5c47f1e7e30e292efcf0b4682bac233a7210a9992b8e4cc994135db1c23855b5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00076-008.png",
+    "bytes": 14868,
+    "sha256": "6d8c080014ccaf319a8ba1342865a1ef5ccdd67bb6707fa70b782b99ef66660c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00076-009.png",
+    "bytes": 14926,
+    "sha256": "181e369c1542486967b010b683fde5bd98ec4e71783ad3b6bc531d04a28bffce"
+  },
+  {
+    "name": "data/rgb/pilot-tr00077-000.png",
+    "bytes": 14148,
+    "sha256": "ea6fe2c1ec316f2c44c83d7f4e47b389179bda58cd12f810fe2e1cbef49e1ed0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00077-001.png",
+    "bytes": 14021,
+    "sha256": "082f563e2b9bf0af65388efbc308de14866d33725654decd70a9846b03b9a704"
+  },
+  {
+    "name": "data/rgb/pilot-tr00077-002.png",
+    "bytes": 13979,
+    "sha256": "3446b4bbb9c34c193ddf78b931fc9e5b184745f4f28ad98ae1171a5147dec00b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00077-003.png",
+    "bytes": 14198,
+    "sha256": "17fd3f14ad829d6d400c85c01a437fb42aff6f0fa4ee2d2c03be67b642f173bf"
+  },
+  {
+    "name": "data/rgb/pilot-tr00077-004.png",
+    "bytes": 14182,
+    "sha256": "fb949f63e909f79bd2b1fee03f721f040682aa767fbd02254dcde9650649ace1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00077-005.png",
+    "bytes": 14174,
+    "sha256": "472c176c06922cc85f90d61f76f0c1bbc205c9381f03f43b75d14363b3ded317"
+  },
+  {
+    "name": "data/rgb/pilot-tr00077-006.png",
+    "bytes": 14126,
+    "sha256": "a9e1709040ce4f6059656d9615c704cd0ce386fe25ef5d9349da4c4e07be39f0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00077-007.png",
+    "bytes": 14120,
+    "sha256": "89b81811a9532df3cb5693f70ab556362280f42638d4ccaa085bd3f978abec93"
+  },
+  {
+    "name": "data/rgb/pilot-tr00077-008.png",
+    "bytes": 14261,
+    "sha256": "25519e190ef271162f16fde4a3ed33ac3624de1f5d6466f186fdb791f2b374c4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00077-009.png",
+    "bytes": 14374,
+    "sha256": "773585005b6b17e40184d76b7991140bd52c150848e756d56a83a66944fc28f4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00078-000.png",
+    "bytes": 15740,
+    "sha256": "2db0752c1acf0045edbc192bac4dba80895847e2fa57fe365de302ab9a3748c3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00078-001.png",
+    "bytes": 15740,
+    "sha256": "2db0752c1acf0045edbc192bac4dba80895847e2fa57fe365de302ab9a3748c3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00078-002.png",
+    "bytes": 15740,
+    "sha256": "2db0752c1acf0045edbc192bac4dba80895847e2fa57fe365de302ab9a3748c3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00078-003.png",
+    "bytes": 15740,
+    "sha256": "2db0752c1acf0045edbc192bac4dba80895847e2fa57fe365de302ab9a3748c3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00078-004.png",
+    "bytes": 15969,
+    "sha256": "ab6230522ff1d7946080be6126e4f852f881c7112c014fbb1e8605334e0cc75d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00078-005.png",
+    "bytes": 16008,
+    "sha256": "d2942218f0ca9e162f26225a235d1ac5a70697820d4e544c3e3ecdea0af83acd"
+  },
+  {
+    "name": "data/rgb/pilot-tr00078-006.png",
+    "bytes": 16086,
+    "sha256": "16fdecff000748840c5df325585b6dff212b5b74fbe535d9dc60917c2c1e2a2f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00078-007.png",
+    "bytes": 16088,
+    "sha256": "f80bdd929d43ae8db0f1dc8d1783e7360c992beed0a949c4f215256a82ba1fdf"
+  },
+  {
+    "name": "data/rgb/pilot-tr00078-008.png",
+    "bytes": 16091,
+    "sha256": "8c934c1ea2b38192025dee8734d5a3e7258616eddcc3526736f187366de8e270"
+  },
+  {
+    "name": "data/rgb/pilot-tr00078-009.png",
+    "bytes": 16070,
+    "sha256": "ebb34e4e5163b593150205a57bda478e284b12005ae019724b916d2e2c7f7d4a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00079-000.png",
+    "bytes": 16340,
+    "sha256": "408fa41af09755947e290351b76f080682837d0086e1c0129ad3ac3b09e71187"
+  },
+  {
+    "name": "data/rgb/pilot-tr00079-001.png",
+    "bytes": 16362,
+    "sha256": "783e7f480671072c9b9702141cf2539007f02ec182d992292a38707852887b10"
+  },
+  {
+    "name": "data/rgb/pilot-tr00079-002.png",
+    "bytes": 16334,
+    "sha256": "dac5d3dda49f40085c545eac38be8e98d372041125e4a623a31d1064ea6b2f1f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00079-003.png",
+    "bytes": 16485,
+    "sha256": "b7fdc138556bdd6736a5abd08c160efa2472b93920aa3d051a742bb4427fda78"
+  },
+  {
+    "name": "data/rgb/pilot-tr00079-004.png",
+    "bytes": 16214,
+    "sha256": "efe75827f0508f8cd4673625eeec51f844ce69f9eadf1b0ddd551b5823f2c820"
+  },
+  {
+    "name": "data/rgb/pilot-tr00079-005.png",
+    "bytes": 16323,
+    "sha256": "264d5f43fa9488f2711f235ce700f40c839d70e85dff90da9437981bccb651d6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00079-006.png",
+    "bytes": 16313,
+    "sha256": "3579338aa4737fad6581efd9065e790b69e12ac24c182d39734062e2246778ac"
+  },
+  {
+    "name": "data/rgb/pilot-tr00079-007.png",
+    "bytes": 16332,
+    "sha256": "bc8f66969cdfaa704318703bef8dabec0751d7b5561844bc0438d4490f8f77ef"
+  },
+  {
+    "name": "data/rgb/pilot-tr00079-008.png",
+    "bytes": 16252,
+    "sha256": "fcb67cf80b1f4a4559590f2588a12ee51ff69d9469607181a70ad2ec1fce9b37"
+  },
+  {
+    "name": "data/rgb/pilot-tr00079-009.png",
+    "bytes": 16335,
+    "sha256": "a38a327868c6b28a441eefb5946a1ae652dbcea467be70c1cd207d7e74325405"
+  },
+  {
+    "name": "data/rgb/pilot-tr00080-000.png",
+    "bytes": 17220,
+    "sha256": "771983f4a7532e411d6112e7a55f26e02a9d51f144dec61a511b9b2083345f7d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00080-001.png",
+    "bytes": 17336,
+    "sha256": "6ddeaf41d1f73ba394dc51ee864a84d12fe024c296425621106547cd0ffa1b4e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00080-002.png",
+    "bytes": 17333,
+    "sha256": "7befec985cf1384fe96f3b1d1ae179fa24019b1d989cb1a01c3c27f371ac41c2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00080-003.png",
+    "bytes": 17302,
+    "sha256": "ab58ff12315e4fc6867c505ad757f2c6ba9afc3e48351c0ce29718e3a3621b4f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00080-004.png",
+    "bytes": 17436,
+    "sha256": "f2689aa8dea1fbbe1209d3f830a8e3f492e3efc7ccc055f2b6eb85e31e03990a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00080-005.png",
+    "bytes": 17476,
+    "sha256": "048082b3c161ceac0fae010d195756b277f6110d8ec7dd67720b66f53fecddf6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00080-006.png",
+    "bytes": 17567,
+    "sha256": "60d7cf783cb5150b047e4cfa519cad1709c863f1c8671d1435c99217df155244"
+  },
+  {
+    "name": "data/rgb/pilot-tr00080-007.png",
+    "bytes": 17612,
+    "sha256": "a665af853240fadf7f68d637b842ca8138d767c1e75ca1131da244073b234c06"
+  },
+  {
+    "name": "data/rgb/pilot-tr00080-008.png",
+    "bytes": 17712,
+    "sha256": "608367e0a30827a34ccb6613fdd0642292d309b4ebe91c3c59c19facff628a0e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00080-009.png",
+    "bytes": 17783,
+    "sha256": "605019f8782f0f36b5835fcc17e8be0237a667727895dd5c17693be43ea9ab7c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00081-000.png",
+    "bytes": 15495,
+    "sha256": "ccd343f023e6d6e5f12181faafd761cf64b0091c45233a5157d942515ff9262e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00081-001.png",
+    "bytes": 15589,
+    "sha256": "b7cce18426f080e314a7ce9ce29aa7ae6b0c5b04a89e3aa12a6180fe3889291b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00081-002.png",
+    "bytes": 15764,
+    "sha256": "9ccb0129510ffbf5acc042823d46dad52b8d65bfd985cf2aa1dcdd3a62f8ee90"
+  },
+  {
+    "name": "data/rgb/pilot-tr00081-003.png",
+    "bytes": 15914,
+    "sha256": "cc5fdcb28ec30cca1f143c9e9d4c40751002c8c33a69ecd342bf5f94b0dde755"
+  },
+  {
+    "name": "data/rgb/pilot-tr00081-004.png",
+    "bytes": 15906,
+    "sha256": "69c96e57dce2e43f73b534ad069dff8cd8bc3a5dbc23fd6a01ebe10ca8882015"
+  },
+  {
+    "name": "data/rgb/pilot-tr00081-005.png",
+    "bytes": 15983,
+    "sha256": "158d56b52b34b461df56654ecabda0fb9dd208cdb4e8eeea1099239e81df4af9"
+  },
+  {
+    "name": "data/rgb/pilot-tr00081-006.png",
+    "bytes": 15826,
+    "sha256": "47bc84c07df3ae149ac9f4923cee51c4afe9688060ffcabf25269b64eb89afe0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00081-007.png",
+    "bytes": 15631,
+    "sha256": "ee9fc6de8866e1acaeda78261bcb5068906418c6aadd4d297feef241799bc331"
+  },
+  {
+    "name": "data/rgb/pilot-tr00081-008.png",
+    "bytes": 15389,
+    "sha256": "30cd2867f686f97d65814606480276cb2f8de36d1da3a4fad430cd9bb895c0c7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00081-009.png",
+    "bytes": 15413,
+    "sha256": "8cafb7fbf2de432ea9c5dfd7326f632a1c04b44bb7a61e1d1791de34312f3535"
+  },
+  {
+    "name": "data/rgb/pilot-tr00082-000.png",
+    "bytes": 15995,
+    "sha256": "1565ba9a925e1f1f9babbb485f746efb8e989db703258f18b5e34b3ef2214844"
+  },
+  {
+    "name": "data/rgb/pilot-tr00082-001.png",
+    "bytes": 16126,
+    "sha256": "aada7c160c71b498ceb6af869c66127207ab395c3b1a0ad417c8ac4e9f6c68ea"
+  },
+  {
+    "name": "data/rgb/pilot-tr00082-002.png",
+    "bytes": 16112,
+    "sha256": "f52f8f2f6352268c2600cd6c1a53291a8aed4262d46f44911ac8d9e338c4a81d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00082-003.png",
+    "bytes": 16273,
+    "sha256": "d6d06bf8d864297f06d90de6f213a398f33425a9381f69028005d9d47bf8f012"
+  },
+  {
+    "name": "data/rgb/pilot-tr00082-004.png",
+    "bytes": 16432,
+    "sha256": "178395bba45da36b5e976104583f0f6e9cdafcb4e4d7923f09a96fd00342f019"
+  },
+  {
+    "name": "data/rgb/pilot-tr00082-005.png",
+    "bytes": 16391,
+    "sha256": "003dbd370bf89e30cbb89d069ddfcaf0e9c5bbe183969d8925c2cf9c5f3b710d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00082-006.png",
+    "bytes": 16349,
+    "sha256": "934eb6168ff7f395ad7b03e74cb5a64ecd8bb3e521d2615850233662c968a9bc"
+  },
+  {
+    "name": "data/rgb/pilot-tr00082-007.png",
+    "bytes": 16356,
+    "sha256": "a41052079f4b2a438f10c2958051e4259984f95a0323649073a64ee9b4f7316b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00082-008.png",
+    "bytes": 16336,
+    "sha256": "b70b5e319cd434cd6a64b6c9cc175f82b4dcd1279a171346698701c0eccea9dc"
+  },
+  {
+    "name": "data/rgb/pilot-tr00082-009.png",
+    "bytes": 16326,
+    "sha256": "df19b6c22f6293250b53c2a3b3c2d93e491af00551c115ef281d2a4dd8b129b8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00083-000.png",
+    "bytes": 17485,
+    "sha256": "45b7a678622443f84631af8f16b60785a31d0cdced73b6748b8e7fb4498da6e6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00083-001.png",
+    "bytes": 17519,
+    "sha256": "efd3763543477402b7380d5cb3becd74536fb6be3d21000ec2fa0b32740777d4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00083-002.png",
+    "bytes": 17544,
+    "sha256": "14a9a6eac800bc6f399bcaf431cbeebb0f9c4bd3fa0846735e3b2f9c1507eca9"
+  },
+  {
+    "name": "data/rgb/pilot-tr00083-003.png",
+    "bytes": 17569,
+    "sha256": "258377d19d2a689c1464f62a0e7b038632dea6a72308cc8ba0aeef69c513d780"
+  },
+  {
+    "name": "data/rgb/pilot-tr00083-004.png",
+    "bytes": 17594,
+    "sha256": "eb2a7329fafced189d76da678d364c636e0e9b772601c13c2a888e8566ff8e08"
+  },
+  {
+    "name": "data/rgb/pilot-tr00083-005.png",
+    "bytes": 17600,
+    "sha256": "ec01f8560deae471c256c67521309d72899ceb07d3c82c9400407ac248bcc515"
+  },
+  {
+    "name": "data/rgb/pilot-tr00083-006.png",
+    "bytes": 17536,
+    "sha256": "0873144f34f631e922afe1015557fe263b0d1ee32e9412ef8446e74c9dcc4b12"
+  },
+  {
+    "name": "data/rgb/pilot-tr00083-007.png",
+    "bytes": 17512,
+    "sha256": "b1a5c41dbcc02f9a5b5f414ee418d6ae68ff760fd6c60e3bb36106e71fd52ef4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00083-008.png",
+    "bytes": 17563,
+    "sha256": "a55205ec2fcb3b9cc6144c46562a0356c92ee058e20f75ad4c11ddcd62340d93"
+  },
+  {
+    "name": "data/rgb/pilot-tr00083-009.png",
+    "bytes": 17389,
+    "sha256": "62b4ff32cdccf1d9c775f98dc99f5901c8efa90b38f95a84e73678a4e8e4955d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00084-000.png",
+    "bytes": 17191,
+    "sha256": "dfec47381639f648ed302b41d94105e2585bd351eb18569c5fc93676a3cc3de3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00084-001.png",
+    "bytes": 17133,
+    "sha256": "344562df3daaba257a998f13509cd1c2a9224fe6d5e1521d2f871593b6284174"
+  },
+  {
+    "name": "data/rgb/pilot-tr00084-002.png",
+    "bytes": 17006,
+    "sha256": "276bb4d070fbc22fba8e679dd556d51473333130a89e16028c4c73b7eb25413c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00084-003.png",
+    "bytes": 16915,
+    "sha256": "7c1d5aea579d855cf00d3be9fd78b23f99862a6c65bf49fe4c09d9fcbfc33f05"
+  },
+  {
+    "name": "data/rgb/pilot-tr00084-004.png",
+    "bytes": 16820,
+    "sha256": "1a697094ce7c56a2be742a2cd54a1c0d8bbbf7a557abdfb95515f31d63b2319e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00084-005.png",
+    "bytes": 16733,
+    "sha256": "d7022afc8888458b5933992dad94a54ca5c179580e0a9d49fb65181a586011f4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00084-006.png",
+    "bytes": 16711,
+    "sha256": "61bb1fb0e1ec8af3a58df0fe55faad193f98d928d2a7fcd7d4bc4a1dd80e34de"
+  },
+  {
+    "name": "data/rgb/pilot-tr00084-007.png",
+    "bytes": 16634,
+    "sha256": "0afba511febec1912b3bd16b97f3884538008fcdd4b89aed43ac93d26a55a6f6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00084-008.png",
+    "bytes": 16548,
+    "sha256": "6077368aefaedc930fea6505486571c5b9c1a57525bbabe732d1348bbf57c0d2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00084-009.png",
+    "bytes": 16433,
+    "sha256": "b508a300a54583f3a3683000f860fac78d33d528c922974da930b46783e7c576"
+  },
+  {
+    "name": "data/rgb/pilot-tr00085-000.png",
+    "bytes": 15284,
+    "sha256": "173fc74048bfee4e688fe26fba8e6dbc3371fb5271388a4c1217839f38b04819"
+  },
+  {
+    "name": "data/rgb/pilot-tr00085-001.png",
+    "bytes": 15294,
+    "sha256": "959a3619b882c0c53cc13eb611f3f0bdcb6db286baef0789d0fbeea1287da509"
+  },
+  {
+    "name": "data/rgb/pilot-tr00085-002.png",
+    "bytes": 15295,
+    "sha256": "4d9086a83f389eea2d4e2aaf9b2e22c3390576157f528c5c11e9f191feda943a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00085-003.png",
+    "bytes": 15318,
+    "sha256": "1c655934009e906b6ad28bf981350842992162c250726eabaa17728bd337c03a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00085-004.png",
+    "bytes": 15387,
+    "sha256": "63ea852da486edf20030ee9323986f1992cf0a50b63d9948bff9505dae88d370"
+  },
+  {
+    "name": "data/rgb/pilot-tr00085-005.png",
+    "bytes": 15344,
+    "sha256": "7fdf9d8bb091626421aa75180fd4b658d459eaf3f416c9d8012a7fea32586aaa"
+  },
+  {
+    "name": "data/rgb/pilot-tr00085-006.png",
+    "bytes": 15475,
+    "sha256": "bf93e2db789ebcd2e0e13a672a0404914322d8139d532493e86520384c0a6ec7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00085-007.png",
+    "bytes": 15646,
+    "sha256": "0fc1d419cb417b0b2fb71d87d25c02b92862fa72cb7316a72f718c2fbbcf7bbb"
+  },
+  {
+    "name": "data/rgb/pilot-tr00085-008.png",
+    "bytes": 15821,
+    "sha256": "f7ed08f7aee759fcf5c3a628e0b97fa7e7cb3340cf288aabd1259393500b011b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00085-009.png",
+    "bytes": 15762,
+    "sha256": "14369437a41be640cac348580d412f52f8319b7bb86aa76db76d9c019790e284"
+  },
+  {
+    "name": "data/rgb/pilot-tr00086-000.png",
+    "bytes": 18199,
+    "sha256": "e46527c3650edf1106ac830de099dd8caa09c7fe6bc5e79a86c822238f9c1f25"
+  },
+  {
+    "name": "data/rgb/pilot-tr00086-001.png",
+    "bytes": 18233,
+    "sha256": "4c924ab88006233ac3deb4c5059f00f82c76aec5ffc2545468f02bd73eefbcf1"
+  },
+  {
+    "name": "data/rgb/pilot-tr00086-002.png",
+    "bytes": 18020,
+    "sha256": "df7081d0226e0f9c37a6452767e392c5b9d34d02105a6ad7c362b5b04056489e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00086-003.png",
+    "bytes": 18127,
+    "sha256": "ca1c235232c4f5e30b695acac2e0a11ef2e6c9c0002b18a50a84ef593a6d94c2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00086-004.png",
+    "bytes": 18102,
+    "sha256": "d943b6447b891ca1354725657e8a805a4c7fdd1cb3d91bd915e14e998857b9ed"
+  },
+  {
+    "name": "data/rgb/pilot-tr00086-005.png",
+    "bytes": 18035,
+    "sha256": "7ce7f6e4bb0edcd8f722ce1ebfa3a94a65d4d7c85101e76a924dfbc988bea5ce"
+  },
+  {
+    "name": "data/rgb/pilot-tr00086-006.png",
+    "bytes": 17904,
+    "sha256": "89ecbd40452786228a7fa0e1ccc51ce75113198f31bd8406e8525183b5f50939"
+  },
+  {
+    "name": "data/rgb/pilot-tr00086-007.png",
+    "bytes": 17931,
+    "sha256": "e420ec1c385a366f888adf5b9a7174b70540d7df551b62fd3a8c8d7348ed026d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00086-008.png",
+    "bytes": 17797,
+    "sha256": "926856cc982d494d098cc6fac644a105057d8cba44c3063d3fc173ba75e59423"
+  },
+  {
+    "name": "data/rgb/pilot-tr00086-009.png",
+    "bytes": 17748,
+    "sha256": "0089d53876b62412bef30e1ebfc077b466e42182e8c6b855c797408ce326d927"
+  },
+  {
+    "name": "data/rgb/pilot-tr00087-000.png",
+    "bytes": 16534,
+    "sha256": "ce2b6a2343bdf8dd19bd1dbf9bfe385e80e43aca30364af2499989f29399a8a2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00087-001.png",
+    "bytes": 16689,
+    "sha256": "442c0e263f8d362c795380eebbdb85b0bbf471b5fd1452f5f81215f328bc7aa7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00087-002.png",
+    "bytes": 16576,
+    "sha256": "90bf7d43b23fef30506d422427c31169de5cef649808648d993d7993f9bdbcf3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00087-003.png",
+    "bytes": 16653,
+    "sha256": "dbce5fb5ef834d64df5306798394f098b84832814f733610d21305132684e300"
+  },
+  {
+    "name": "data/rgb/pilot-tr00087-004.png",
+    "bytes": 16697,
+    "sha256": "63e93b4558326b679c428ccfb52f4bf719850ec8ebc2d399c41cb72dabf6f644"
+  },
+  {
+    "name": "data/rgb/pilot-tr00087-005.png",
+    "bytes": 16643,
+    "sha256": "d53e83636f7dc13c5a5e63466cf0bc0761de98cd34f19ad31034f4d8877f81d3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00087-006.png",
+    "bytes": 16784,
+    "sha256": "99816f5b1e44e3aae273a0ecd21de13cecc2e47e78a9c12f1ef786be45d1b7e8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00087-007.png",
+    "bytes": 16822,
+    "sha256": "a2d4481c91ff48eb68ce674cb8ad76d32bfb12d9d6dcd5f2431efa898b4ab1e9"
+  },
+  {
+    "name": "data/rgb/pilot-tr00087-008.png",
+    "bytes": 16805,
+    "sha256": "1d28cdb07c09994a7cdddd4dcb1ecdd8c26440fe9aad40af4f686353688148f8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00087-009.png",
+    "bytes": 16808,
+    "sha256": "891fa540c19f60762695e0b916f8df2b53b689e816d22878be8307f137440686"
+  },
+  {
+    "name": "data/rgb/pilot-tr00088-000.png",
+    "bytes": 14051,
+    "sha256": "7ba200bcc479fca7e4a9ad3d1e2f8451c63b792d5cab9f5df4585a81ebf6181e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00088-001.png",
+    "bytes": 14051,
+    "sha256": "7ba200bcc479fca7e4a9ad3d1e2f8451c63b792d5cab9f5df4585a81ebf6181e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00088-002.png",
+    "bytes": 14051,
+    "sha256": "7ba200bcc479fca7e4a9ad3d1e2f8451c63b792d5cab9f5df4585a81ebf6181e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00088-003.png",
+    "bytes": 14051,
+    "sha256": "7ba200bcc479fca7e4a9ad3d1e2f8451c63b792d5cab9f5df4585a81ebf6181e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00088-004.png",
+    "bytes": 14356,
+    "sha256": "d4a2c6996e20564b999906409c6add79ca1ccf9dbc95fb27150294d5619c54f0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00088-005.png",
+    "bytes": 14497,
+    "sha256": "b111720d6091b2796fceef2e3f85746f2ddfe2575f1b82fb77cdffa8df32e9d3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00088-006.png",
+    "bytes": 14870,
+    "sha256": "80d1d157061186e8f8a9f743485069124f1788073de58bb91e569badd32e68fd"
+  },
+  {
+    "name": "data/rgb/pilot-tr00088-007.png",
+    "bytes": 15065,
+    "sha256": "d9a50aa8f68dd7a936b69793f2fd3c48fa54ff1ab2e37350f04f714b2dd2b271"
+  },
+  {
+    "name": "data/rgb/pilot-tr00088-008.png",
+    "bytes": 15363,
+    "sha256": "6aa101d9eca877f83e5991be2468fdd6901bda6de9f1f54cb83989194bb94aa5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00088-009.png",
+    "bytes": 15445,
+    "sha256": "85ddec61b05ae23425fd7c4138dacf2784c799f96dd4f82a3abba46da66a1228"
+  },
+  {
+    "name": "data/rgb/pilot-tr00089-000.png",
+    "bytes": 14761,
+    "sha256": "7a37ac579acc15b2995ba3a595f01a1ed642dcf1050a780b2927035686bc26e5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00089-001.png",
+    "bytes": 14920,
+    "sha256": "8b3fb5c38f1f0556370f7cdfe32af43d5e0e852565d27480835e173dcbf5c0f4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00089-002.png",
+    "bytes": 14914,
+    "sha256": "91dd4030aa439f8031a3bcbbbc9a2863126939d255104ded9261289b76cc3560"
+  },
+  {
+    "name": "data/rgb/pilot-tr00089-003.png",
+    "bytes": 15124,
+    "sha256": "4662a386d985c1f8e721f2b42c07fef6bace895854dfd916d02ef4a2e4083b83"
+  },
+  {
+    "name": "data/rgb/pilot-tr00089-004.png",
+    "bytes": 15417,
+    "sha256": "ee60271da609061a51b1e1e471dc8464f6d7fa1e5df168f25a0ec117874d90c2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00089-005.png",
+    "bytes": 15784,
+    "sha256": "ff03b106292d3f95f7522eab3f6ae66a6a81e4385341d72d89aaea107947d9e6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00089-006.png",
+    "bytes": 15794,
+    "sha256": "3e8af656cc4a466606e1f4ff7bf93f5ab26891687796d7b5573c1d2744e08e1f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00089-007.png",
+    "bytes": 15947,
+    "sha256": "44a26670e8995be1aadc3faf09f13cd774c80b76f239063de4b13b04398c2c5c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00089-008.png",
+    "bytes": 15994,
+    "sha256": "252b9ce6a48d4b51ff76ebf590d5eef855609710aef09156b965a3cf87882313"
+  },
+  {
+    "name": "data/rgb/pilot-tr00089-009.png",
+    "bytes": 16167,
+    "sha256": "e47220b67eaa1e40a0062a7c53b5cee651940081ad8f2c59972d92a6ab11dffc"
+  },
+  {
+    "name": "data/rgb/pilot-tr00090-000.png",
+    "bytes": 16492,
+    "sha256": "54812f663c0c601c927d7cbdcb1eb6541ebaeb4bd02d54d0879402b9f8db457b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00090-001.png",
+    "bytes": 16519,
+    "sha256": "7de1d959d32285d44b71250b78fbba5f576de120f3547eb8d06d9e18b715125c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00090-002.png",
+    "bytes": 16445,
+    "sha256": "5721ed86d409e28a42ac5a7363595e5c3af75ef96615a888e1ca52d18f6c45eb"
+  },
+  {
+    "name": "data/rgb/pilot-tr00090-003.png",
+    "bytes": 16371,
+    "sha256": "889cec267d3dcc46444ea94d4474ebf4d4d644e309da4df2575acd0ed2af9173"
+  },
+  {
+    "name": "data/rgb/pilot-tr00090-004.png",
+    "bytes": 16193,
+    "sha256": "fd8fe4f7d0fb41de740ceed118d72f97b1d52e8f5a477740740998d47f46d4bb"
+  },
+  {
+    "name": "data/rgb/pilot-tr00090-005.png",
+    "bytes": 15993,
+    "sha256": "be2102d3b63435eb70e3ed03aa7a1f13560cffed78fac0d330d22a968bd270b9"
+  },
+  {
+    "name": "data/rgb/pilot-tr00090-006.png",
+    "bytes": 15835,
+    "sha256": "e1ab2cf0d8b63f24d8b065cf09eac70a18aa2970b3701a48cbbd201b1917c221"
+  },
+  {
+    "name": "data/rgb/pilot-tr00090-007.png",
+    "bytes": 15715,
+    "sha256": "76998a48932cf7fc77b8d1f32615d1634bf77eeb8e5c0d03f2ae97215a53df9c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00090-008.png",
+    "bytes": 15587,
+    "sha256": "8a64d296a8b7df73ae1008ba97379ca59405e9da6e20dfaa3ca9682eae3fe920"
+  },
+  {
+    "name": "data/rgb/pilot-tr00090-009.png",
+    "bytes": 15384,
+    "sha256": "79f2a43abb4c793ad59b89df209d38180d547527828479eca31963283cd7f502"
+  },
+  {
+    "name": "data/rgb/pilot-tr00091-000.png",
+    "bytes": 16771,
+    "sha256": "5c9bc13b37c935478f305f252d55d696bfbdbd58cf642d6ca8d0e6f0ca8098ea"
+  },
+  {
+    "name": "data/rgb/pilot-tr00091-001.png",
+    "bytes": 16563,
+    "sha256": "82f49e2a2f8deec7bc1c5a21620682579a9b810f595d546ac8da5247dc855ad2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00091-002.png",
+    "bytes": 16250,
+    "sha256": "717620c762c6ca837754cfdd8a6d4674a51ea5f8ab626e80274a9b402d520a22"
+  },
+  {
+    "name": "data/rgb/pilot-tr00091-003.png",
+    "bytes": 15482,
+    "sha256": "de05510ee6b9c327d5c589478b7f6137724643170f80c2a92a83201ec07414a7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00091-004.png",
+    "bytes": 16861,
+    "sha256": "d5a604a22498d77359d94297e41b8f47cb3ebf647e0bdd6ef80f5ead42c42d8d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00091-005.png",
+    "bytes": 17237,
+    "sha256": "f8da67489fb400748f52ac18d895f257e657715bab7f0b549d868248e12b8cec"
+  },
+  {
+    "name": "data/rgb/pilot-tr00091-006.png",
+    "bytes": 17371,
+    "sha256": "5cd39d11b5a2e1e618a81d0d901c7d5a34d44c857b95485de2ea5eef2e1fb95c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00091-007.png",
+    "bytes": 17417,
+    "sha256": "12679e3e80bd6fb51b90a3c1f5f96807b7d05b2a2ef261d534ced07e6cc01ab3"
+  },
+  {
+    "name": "data/rgb/pilot-tr00091-008.png",
+    "bytes": 17432,
+    "sha256": "533cbf488f0b84e2ff42732415d74778350c49fb9c0b6df9150341a2f07a34eb"
+  },
+  {
+    "name": "data/rgb/pilot-tr00091-009.png",
+    "bytes": 17507,
+    "sha256": "60a9115f0694fef093c37e13365822e54f9d1885ee593f68d27860120862970c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00092-000.png",
+    "bytes": 15693,
+    "sha256": "ccce2a9f641fbbed9de15e5fcad785ced8d9eb7f06527201f39537875663ec96"
+  },
+  {
+    "name": "data/rgb/pilot-tr00092-001.png",
+    "bytes": 15871,
+    "sha256": "1d0d14bf04b0ee532e328247d9fdd5e405c5bebae5ae5909c7a0c6ed0d40130d"
+  },
+  {
+    "name": "data/rgb/pilot-tr00092-002.png",
+    "bytes": 15971,
+    "sha256": "30560bfd74d2187e80fb0f2db11212f512ebc8cc4e3fcc130a35196af9a52820"
+  },
+  {
+    "name": "data/rgb/pilot-tr00092-003.png",
+    "bytes": 16133,
+    "sha256": "1eec52e7e530ca5a258a8bfc21a9e8d9019d7a3678eebf02d2555694fc7a436f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00092-004.png",
+    "bytes": 16361,
+    "sha256": "05f181f22c2bfa0e1d735b82604e8d141e9f16e80ecd7ffc233e453ebfcd5f3f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00092-005.png",
+    "bytes": 16330,
+    "sha256": "1c7be0f8fd383765ed9526888e08040d3934fe68512a3dbfb7969fce3d15245b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00092-006.png",
+    "bytes": 16044,
+    "sha256": "e46a135160df2f03fee99e1cc6b625b11dde0d070be4975a88b10991790e6cae"
+  },
+  {
+    "name": "data/rgb/pilot-tr00092-007.png",
+    "bytes": 15792,
+    "sha256": "b30dc7bef2b487103f63d17d9d7d7403a5097bad71e4357ea08ef3364f536d7a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00092-008.png",
+    "bytes": 15727,
+    "sha256": "2f627f32701648292ed3e2054a86fd09909618f1f243d7a6553575c577f2b3ff"
+  },
+  {
+    "name": "data/rgb/pilot-tr00092-009.png",
+    "bytes": 15275,
+    "sha256": "8328a0edde23b65084028279fe701b6366d0265b0f4f9a2016b70816b62c4cb7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00093-000.png",
+    "bytes": 16559,
+    "sha256": "8640705d4c71a7ef90f4fa9a40375f050d69f37a6a0f5fc2d648107961020cbf"
+  },
+  {
+    "name": "data/rgb/pilot-tr00093-001.png",
+    "bytes": 16653,
+    "sha256": "23f25394bf87aa526e5e451ee233a51a791cb64c703928fb4174dc5a99e50327"
+  },
+  {
+    "name": "data/rgb/pilot-tr00093-002.png",
+    "bytes": 16770,
+    "sha256": "66259c0c4e668a22643abbdf8710da56012aabc6ce19b082a2298b3e5d41b503"
+  },
+  {
+    "name": "data/rgb/pilot-tr00093-003.png",
+    "bytes": 16903,
+    "sha256": "e6b6837a1dcdbaacef67c3c71bdc8c70f6a71cbd6e903ba9a24271dfd019433f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00093-004.png",
+    "bytes": 16954,
+    "sha256": "be2acbcbb0556d5519fe2faedd7d8f7ec5ecf3b2f51a339666fd0a3875884fe7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00093-005.png",
+    "bytes": 17081,
+    "sha256": "c855531ac4e86889eb99635ba7e8bea43f86572884418bcfdd837cbec8d15fdb"
+  },
+  {
+    "name": "data/rgb/pilot-tr00093-006.png",
+    "bytes": 17151,
+    "sha256": "0ff8840ffba7a48759e8fd3b3bfd61584dee57d814ced342d15cf2dfde526d1f"
+  },
+  {
+    "name": "data/rgb/pilot-tr00093-007.png",
+    "bytes": 17215,
+    "sha256": "62b51cc062dbe855fb7596c4ff4f59fad8a953b5c155e6b67dd9878c4a1f8216"
+  },
+  {
+    "name": "data/rgb/pilot-tr00093-008.png",
+    "bytes": 17282,
+    "sha256": "8c7dd06ee594559be3aec8f780d9c887c53e467390d3dfab2f81bf2e3ff08837"
+  },
+  {
+    "name": "data/rgb/pilot-tr00093-009.png",
+    "bytes": 17414,
+    "sha256": "50b525c30b96b3af82f570166fc8d5545704ddd3e19d5dbb8f5c1c22f3d8de65"
+  },
+  {
+    "name": "data/rgb/pilot-tr00094-000.png",
+    "bytes": 14856,
+    "sha256": "7070aefff6a7c97965748e056cbe4e0911b7c10587c3174d9fd3eb9427dd2e7b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00094-001.png",
+    "bytes": 15144,
+    "sha256": "ea35ce9425cccffaf1c74516f32bc5bcde72777f7bc31f259c2710d31db987e6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00094-002.png",
+    "bytes": 15251,
+    "sha256": "5b11164ee1226d40567281e640edcb941a905dc9c53653865f862b036750d473"
+  },
+  {
+    "name": "data/rgb/pilot-tr00094-003.png",
+    "bytes": 15480,
+    "sha256": "949337140b676d0a1a6b4c814383412f1cc0e5c03c74fd9476aac1fcc3bdd338"
+  },
+  {
+    "name": "data/rgb/pilot-tr00094-004.png",
+    "bytes": 15500,
+    "sha256": "520637a374374881610322ad6dd5af5dc136598bb3a8a3c60b0d1080395d95bd"
+  },
+  {
+    "name": "data/rgb/pilot-tr00094-005.png",
+    "bytes": 15703,
+    "sha256": "b95d8b55eaee40e85c774b9ebacdd7edf30803e06120967ba92e787a58def528"
+  },
+  {
+    "name": "data/rgb/pilot-tr00094-006.png",
+    "bytes": 15943,
+    "sha256": "10879200800099bb645658db245ba70a98a39e623b550492e38990408f7ba7d6"
+  },
+  {
+    "name": "data/rgb/pilot-tr00094-007.png",
+    "bytes": 15994,
+    "sha256": "c236d9d3c5de47a589528c3ec88366e13a1e4d26d3f64a1b798c7ba87beebc74"
+  },
+  {
+    "name": "data/rgb/pilot-tr00094-008.png",
+    "bytes": 16180,
+    "sha256": "cfc0d27410908e6e6510f06d4a4c052ea6af0eeb03f336f8558f0e5672ff9e0a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00094-009.png",
+    "bytes": 16280,
+    "sha256": "442d0330834c1f8bd394aa29c6267d47faf3f327db510f1b664e07650ca41641"
+  },
+  {
+    "name": "data/rgb/pilot-tr00095-000.png",
+    "bytes": 18043,
+    "sha256": "46a64159943f26549f50407d886a9e7aa00e0c9f4200b16373257cdaef224795"
+  },
+  {
+    "name": "data/rgb/pilot-tr00095-001.png",
+    "bytes": 18126,
+    "sha256": "3b3ff1a7ad380d3e1f7983e78579eca4ae7056ae3012e310ed6493fdbf26833c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00095-002.png",
+    "bytes": 18155,
+    "sha256": "0a931b04f455c60055937ec784e30d0e088f49411641312a7ccc66ec3742af2a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00095-003.png",
+    "bytes": 18071,
+    "sha256": "2993b0bdafb1f7ec647a1452c85c4f8f56969d6454f495faf6b2c1c971fedced"
+  },
+  {
+    "name": "data/rgb/pilot-tr00095-004.png",
+    "bytes": 18080,
+    "sha256": "b34cd4d50e9acbe86454d2e41ef250f2dc25ad758ac3bf2e1872d7cbdedace88"
+  },
+  {
+    "name": "data/rgb/pilot-tr00095-005.png",
+    "bytes": 18035,
+    "sha256": "bc974e48acfda4735e9837e0e1bb13815f187d8dd7b729f0886f5f9568415105"
+  },
+  {
+    "name": "data/rgb/pilot-tr00095-006.png",
+    "bytes": 17860,
+    "sha256": "c6549c5c02cbbfea3878b90fcf8b72129dfd5616d38117fe485ad63777a46ec5"
+  },
+  {
+    "name": "data/rgb/pilot-tr00095-007.png",
+    "bytes": 17846,
+    "sha256": "9878d71943e69fe1ebfbb3fc9017ab64295d58c76450c1591a1ec74e09d373f7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00095-008.png",
+    "bytes": 17805,
+    "sha256": "e570e630a7758323934ee063a7bf2bd4d38d2b748c83ac9f7fdef5cea1fec32c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00095-009.png",
+    "bytes": 17642,
+    "sha256": "c47c0b2acfc1139bf285f21277a27eb2b4e311a1592654bec25f14e0423a12b4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00096-000.png",
+    "bytes": 16512,
+    "sha256": "f8ae682829377c0b4221b7d90ef011492e3f1be10c1b9534218748a5ac5cfaaa"
+  },
+  {
+    "name": "data/rgb/pilot-tr00096-001.png",
+    "bytes": 16555,
+    "sha256": "aa1f0cf21acb7d5d4d8b349efbdff5a9d4daa9ff729422c322ee4122050d3ff0"
+  },
+  {
+    "name": "data/rgb/pilot-tr00096-002.png",
+    "bytes": 16573,
+    "sha256": "801afe6e0f4bda3ebf1c63c78e49ff27f4fbdbeb44ff6c0576b3532473b958a7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00096-003.png",
+    "bytes": 16446,
+    "sha256": "020c408bf9cca2d0360afa76ea44b633bbcf1abc1a1c6fb16408d6b4ed517f56"
+  },
+  {
+    "name": "data/rgb/pilot-tr00096-004.png",
+    "bytes": 16336,
+    "sha256": "04b2bb82bfc6927b0687af2282d7184f65e7e0eb91c29c0a6e3bbe0c0c6b2ab8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00096-005.png",
+    "bytes": 16155,
+    "sha256": "6af5301e57a4e82295b0418024ca716167a27cffbf2455fd3bd6ba6bdf632863"
+  },
+  {
+    "name": "data/rgb/pilot-tr00096-006.png",
+    "bytes": 16226,
+    "sha256": "f805dd0195ed561a657bbd0e4b004b551e67f5a6e8e31e7b8346ff13b6515d27"
+  },
+  {
+    "name": "data/rgb/pilot-tr00096-007.png",
+    "bytes": 16223,
+    "sha256": "345467b8404b223c2af19d0f0c63f9772b5a00d5c1fea51d5651355735107d31"
+  },
+  {
+    "name": "data/rgb/pilot-tr00096-008.png",
+    "bytes": 16297,
+    "sha256": "391256dfce3d54503014a35297268b5bf49051ea200e6af571df8601a002182a"
+  },
+  {
+    "name": "data/rgb/pilot-tr00096-009.png",
+    "bytes": 16274,
+    "sha256": "f3ca37888813b77709a62f68ec1f46413f06b66634633812ae34ec720289cc4b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00097-000.png",
+    "bytes": 17561,
+    "sha256": "1e249cac27a5da3d5f8ba9a02d9dae4793e12b1babb21798df03d4fe67baa1e7"
+  },
+  {
+    "name": "data/rgb/pilot-tr00097-001.png",
+    "bytes": 17457,
+    "sha256": "56a22113835461f72c085321d7dfa395bc956959ac050afc3f7281dcd7b42344"
+  },
+  {
+    "name": "data/rgb/pilot-tr00097-002.png",
+    "bytes": 17518,
+    "sha256": "feb55a5df295734187257fb730ad17786172b73cb5f30bb861ad47ec69290b60"
+  },
+  {
+    "name": "data/rgb/pilot-tr00097-003.png",
+    "bytes": 17310,
+    "sha256": "03302b37a74fd2e786adb103d13d34eb1f6bb891573307565fda53834d3a4956"
+  },
+  {
+    "name": "data/rgb/pilot-tr00097-004.png",
+    "bytes": 17281,
+    "sha256": "c127d77c8b8434b4dd91253236d3f747a687a33daf3b95c73237d75ce4ffa19c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00097-005.png",
+    "bytes": 17270,
+    "sha256": "31f0962bad78c0dbc917d636ad645b86972aa4ae68e6d09ad25b751b7a9d26ff"
+  },
+  {
+    "name": "data/rgb/pilot-tr00097-006.png",
+    "bytes": 17156,
+    "sha256": "d0f7adde8908f313dc3276c95c2ed39a21db92aee35a70f6beaa9fbe0ac06ace"
+  },
+  {
+    "name": "data/rgb/pilot-tr00097-007.png",
+    "bytes": 17137,
+    "sha256": "18007810cf624ff938a94440c019b4b258b8d08ec8983ba85878f1a5af2b506c"
+  },
+  {
+    "name": "data/rgb/pilot-tr00097-008.png",
+    "bytes": 17191,
+    "sha256": "eaf994e1d69d6fbf7d19bba3268fb8b064103a466da2121fccd8129c630780a8"
+  },
+  {
+    "name": "data/rgb/pilot-tr00097-009.png",
+    "bytes": 17193,
+    "sha256": "10223b544686cb1408fca055a9c4b9588f18ea569d4ab0a2264d8e3b773f9633"
+  },
+  {
+    "name": "data/rgb/pilot-tr00098-000.png",
+    "bytes": 18889,
+    "sha256": "a15100b4c69b67677361678d3bec2e6dcaca75fa04842f85e8d4d04488aa3808"
+  },
+  {
+    "name": "data/rgb/pilot-tr00098-001.png",
+    "bytes": 18889,
+    "sha256": "a15100b4c69b67677361678d3bec2e6dcaca75fa04842f85e8d4d04488aa3808"
+  },
+  {
+    "name": "data/rgb/pilot-tr00098-002.png",
+    "bytes": 18889,
+    "sha256": "a15100b4c69b67677361678d3bec2e6dcaca75fa04842f85e8d4d04488aa3808"
+  },
+  {
+    "name": "data/rgb/pilot-tr00098-003.png",
+    "bytes": 18889,
+    "sha256": "a15100b4c69b67677361678d3bec2e6dcaca75fa04842f85e8d4d04488aa3808"
+  },
+  {
+    "name": "data/rgb/pilot-tr00098-004.png",
+    "bytes": 18724,
+    "sha256": "a8f3b5e5570ba82501a408bbe936152a2616447ddac71c772496cc589c091bef"
+  },
+  {
+    "name": "data/rgb/pilot-tr00098-005.png",
+    "bytes": 18528,
+    "sha256": "651df34605992d573ed0be8cc11ae57d0c34447b2602b3ad2d6553430b7237d2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00098-006.png",
+    "bytes": 18434,
+    "sha256": "c987d9b286a354b74769e96ff88593e6c9be316bb59b2cc1cc3cf1b1c22d4cfe"
+  },
+  {
+    "name": "data/rgb/pilot-tr00098-007.png",
+    "bytes": 18266,
+    "sha256": "232cd565056093b818f53898238afd0b7c925bfd697e7b07295d7eb3490be52b"
+  },
+  {
+    "name": "data/rgb/pilot-tr00098-008.png",
+    "bytes": 18138,
+    "sha256": "2318f7361c7f5a99910edd8bf58fce8b4edffbd550f42426fb86674bb5d68516"
+  },
+  {
+    "name": "data/rgb/pilot-tr00098-009.png",
+    "bytes": 18185,
+    "sha256": "7728a702be9ec508f5fbc74c86e415bfe3c7d63bbddea549b9138f99636e7fc4"
+  },
+  {
+    "name": "data/rgb/pilot-tr00099-000.png",
+    "bytes": 16739,
+    "sha256": "40c7e9d231f294eb054cf6bcea94593327528b1c3a6331f8901096497053db35"
+  },
+  {
+    "name": "data/rgb/pilot-tr00099-001.png",
+    "bytes": 16576,
+    "sha256": "8a69201ed58202fd4e8e97f44e6334f49d67dfdf52e1fa958ec0483c2c54d040"
+  },
+  {
+    "name": "data/rgb/pilot-tr00099-002.png",
+    "bytes": 16406,
+    "sha256": "7983661e45fcdfa2f41e02377bd53336fa6a2259a0830d9173513dddec97e3cd"
+  },
+  {
+    "name": "data/rgb/pilot-tr00099-003.png",
+    "bytes": 16209,
+    "sha256": "cf4c628351f19f986c30c1967354fc947e8b56e70d9d7c664a8ceaa5bcadab39"
+  },
+  {
+    "name": "data/rgb/pilot-tr00099-004.png",
+    "bytes": 16178,
+    "sha256": "b18d90ffc5c5688e42bf17d5bb1ac20b55be41ac8579078be041c3dace765665"
+  },
+  {
+    "name": "data/rgb/pilot-tr00099-005.png",
+    "bytes": 16110,
+    "sha256": "52e1caa3f36ca43d99d15c1022e02b5282e4f89869982de6c37b6dabe4974fee"
+  },
+  {
+    "name": "data/rgb/pilot-tr00099-006.png",
+    "bytes": 16070,
+    "sha256": "06c0d1f08fa33dcbed0f57d4bf61db434cc0a8946a8e79dd98c2c03edd0efce2"
+  },
+  {
+    "name": "data/rgb/pilot-tr00099-007.png",
+    "bytes": 15997,
+    "sha256": "87b61371017c009edb0785797e76df1ebdb9ac5896ed5f90d4e35adf09814fbf"
+  },
+  {
+    "name": "data/rgb/pilot-tr00099-008.png",
+    "bytes": 16068,
+    "sha256": "6d7b6a999a3b386d32ac85831ecd361391bec556ba8bdc090d0e7d133008f88e"
+  },
+  {
+    "name": "data/rgb/pilot-tr00099-009.png",
+    "bytes": 16043,
+    "sha256": "7b65383fd784bcffb596fe2d02513504bcdf00f577460ecf82a15d66090a3250"
+  },
+  {
+    "name": "data/sequences-T4.jsonl",
+    "bytes": 275921,
+    "sha256": "68b0a9003e58846cbb5419d3cda83cfef80580ceb33a978b2daa97a81676150b"
+  },
+  {
+    "name": "data/sequences-T8.jsonl",
+    "bytes": 161250,
+    "sha256": "53f95597d541e47769e9532d2dc5d9793c49642498f02ada155f6f9b5d02bec9"
+  },
+  {
+    "name": "dataset.py",
+    "bytes": 7201,
+    "sha256": "4fc120628729da51dccb16339e120a21368313f0208f81716a6290bfe3845ba9"
+  },
+  {
+    "name": "deps/onnxruntime-1.24.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "bytes": 17222993,
+    "sha256": "e54ad52e61d2d4618dcff8fa1480ac66b24ee2eab73331322db1049f11ccf330"
+  },
+  {
+    "name": "deps/onnxruntime-1.24.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "bytes": 17244912,
+    "sha256": "0d640eb9f3782689b55cfa715094474cd5662f2f137be6a6f847a594b6e9705c"
+  },
+  {
+    "name": "deps/onnxruntime-1.24.4-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "bytes": 17244738,
+    "sha256": "e30c972bc02e072911aabb6891453ec73795386c0af2b761b65444b8a4c4745f"
+  },
+  {
+    "name": "deps/WHEELS.json",
+    "bytes": 791,
+    "sha256": "e578f2a18966f24adac1287d1e7e5513aca61042b5872b732a474fdd31bda515"
+  },
+  {
+    "name": "filter.py",
+    "bytes": 5410,
+    "sha256": "b7aae440fa6ce0aae9ba72589c287ba6dd43a60d2c0c4ab03f2b9d16c9484877"
+  },
+  {
+    "name": "learning.py",
+    "bytes": 1184,
+    "sha256": "7208680bfb3d33e5ddc123581937c5925485df240f7d5d377d33fb668d7ff3c5"
+  },
+  {
+    "name": "models.py",
+    "bytes": 2054,
+    "sha256": "902f4ee1e27f52ee8c13ac85d8ac715e24c401838181d0df29ad53b09e348186"
+  },
+  {
+    "name": "models_spatial.py",
+    "bytes": 845,
+    "sha256": "49075013d8552e04ebd9107aec0b73bd8a49158e36b8b0b3c036511f332b9732"
+  },
+  {
+    "name": "RECOVERED.json",
+    "bytes": 933,
+    "sha256": "d5dc4ac5586629643dcaa1ff256b5ffdcead415cb54c71b560c7f76f0f1b20c8"
+  },
+  {
+    "name": "train.py",
+    "bytes": 16970,
+    "sha256": "b4f18e44f85277a6139826c7e047b72fb6114a64efb27edf6da2b3d1296f5f2d"
+  }
+]

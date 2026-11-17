@@ -1,0 +1,75 @@
+{"route": "cnn1", "epoch": 0, "optimizer_updates": 0, "validation_xy_nll": 6.256254196166992, "train_xy_nll": null}
+{"route": "cnn1", "epoch": 1, "optimizer_updates": 16, "validation_xy_nll": 6.101638317108154, "train_xy_nll": 6.502990200042724}
+{"route": "cnn1", "epoch": 2, "optimizer_updates": 32, "validation_xy_nll": 5.9864068031311035, "train_xy_nll": 6.33841229057312}
+{"route": "cnn1", "epoch": 3, "optimizer_updates": 48, "validation_xy_nll": 5.89723539352417, "train_xy_nll": 6.199651484489441}
+{"route": "cnn1", "epoch": 4, "optimizer_updates": 64, "validation_xy_nll": 5.829654216766357, "train_xy_nll": 6.089337093353271}
+{"route": "cnn1", "epoch": 5, "optimizer_updates": 80, "validation_xy_nll": 5.78141450881958, "train_xy_nll": 5.999749854087829}
+{"route": "cnn1", "epoch": 6, "optimizer_updates": 96, "validation_xy_nll": 5.748281478881836, "train_xy_nll": 5.926572022438049}
+{"route": "cnn1", "epoch": 7, "optimizer_updates": 112, "validation_xy_nll": 5.722160816192627, "train_xy_nll": 5.872276387214661}
+{"route": "cnn1", "epoch": 8, "optimizer_updates": 128, "validation_xy_nll": 5.701360702514648, "train_xy_nll": 5.825019258499146}
+{"route": "cnn1", "epoch": 9, "optimizer_updates": 144, "validation_xy_nll": 5.684231758117676, "train_xy_nll": 5.78660706615448}
+{"route": "cnn1", "epoch": 10, "optimizer_updates": 160, "validation_xy_nll": 5.669320106506348, "train_xy_nll": 5.752180896759033}
+{"route": "cnn1", "epoch": 11, "optimizer_updates": 176, "validation_xy_nll": 5.654640197753906, "train_xy_nll": 5.723199031829834}
+{"route": "cnn1", "epoch": 12, "optimizer_updates": 192, "validation_xy_nll": 5.641669750213623, "train_xy_nll": 5.695910207748413}
+/kaggle/working/input/train.py:213: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+  torch.onnx.export(cpu,dummy,str(folder/'camera_xy.onnx'),input_names=['rgb_window'],output_names=['location_logits'],opset_version=13,dynamo=False)
+{"route": "gru4", "epoch": 0, "optimizer_updates": 0, "validation_xy_nll": 6.256254196166992, "train_xy_nll": null}
+{"route": "gru4", "epoch": 1, "optimizer_updates": 16, "validation_xy_nll": 5.966391086578369, "train_xy_nll": 6.463696579933167}
+{"route": "gru4", "epoch": 2, "optimizer_updates": 32, "validation_xy_nll": 5.895822525024414, "train_xy_nll": 6.013518018722534}
+{"route": "gru4", "epoch": 3, "optimizer_updates": 48, "validation_xy_nll": 5.790668964385986, "train_xy_nll": 5.820331668853759}
+{"route": "gru4", "epoch": 4, "optimizer_updates": 64, "validation_xy_nll": 5.723087787628174, "train_xy_nll": 5.738519878387451}
+{"route": "gru4", "epoch": 5, "optimizer_updates": 80, "validation_xy_nll": 5.671750545501709, "train_xy_nll": 5.6753788108825685}
+{"route": "gru4", "epoch": 6, "optimizer_updates": 96, "validation_xy_nll": 5.612539291381836, "train_xy_nll": 5.62455111503601}
+{"route": "gru4", "epoch": 7, "optimizer_updates": 112, "validation_xy_nll": 5.576197147369385, "train_xy_nll": 5.573843782424927}
+{"route": "gru4", "epoch": 8, "optimizer_updates": 128, "validation_xy_nll": 5.538090229034424, "train_xy_nll": 5.530814309120178}
+{"route": "gru4", "epoch": 9, "optimizer_updates": 144, "validation_xy_nll": 5.518395900726318, "train_xy_nll": 5.497941663742066}
+{"route": "gru4", "epoch": 10, "optimizer_updates": 160, "validation_xy_nll": 5.501214981079102, "train_xy_nll": 5.459576393127441}
+{"route": "gru4", "epoch": 11, "optimizer_updates": 176, "validation_xy_nll": 5.484174728393555, "train_xy_nll": 5.431878450393676}
+{"route": "gru4", "epoch": 12, "optimizer_updates": 192, "validation_xy_nll": 5.47184419631958, "train_xy_nll": 5.409808825492859}
+/usr/local/lib/python3.13/dist-packages/torch/onnx/_internal/torchscript_exporter/symbolic_opset9.py:4571: UserWarning: Exporting a model to ONNX with a batch_size other than 1, with a variable length with GRU can cause an error when running the ONNX model with a different batch size. Make sure to save the model with a batch size of 1, or define the initial states (h0/c0) as inputs of the model. 
+  return _generic_rnn(
+{"route": "gru8", "epoch": 0, "optimizer_updates": 0, "validation_xy_nll": 6.256254196166992, "train_xy_nll": null}
+{"route": "gru8", "epoch": 1, "optimizer_updates": 16, "validation_xy_nll": 5.930840492248535, "train_xy_nll": 6.451841895103454}
+{"route": "gru8", "epoch": 2, "optimizer_updates": 32, "validation_xy_nll": 5.8943705558776855, "train_xy_nll": 5.9609166536331175}
+{"route": "gru8", "epoch": 3, "optimizer_updates": 48, "validation_xy_nll": 5.770987033843994, "train_xy_nll": 5.806883117675781}
+{"route": "gru8", "epoch": 4, "optimizer_updates": 64, "validation_xy_nll": 5.7024688720703125, "train_xy_nll": 5.730247968673706}
+{"route": "gru8", "epoch": 5, "optimizer_updates": 80, "validation_xy_nll": 5.647622108459473, "train_xy_nll": 5.666800645828247}
+{"route": "gru8", "epoch": 6, "optimizer_updates": 96, "validation_xy_nll": 5.591020584106445, "train_xy_nll": 5.616442361831665}
+{"route": "gru8", "epoch": 7, "optimizer_updates": 112, "validation_xy_nll": 5.562447547912598, "train_xy_nll": 5.565226366996765}
+{"route": "gru8", "epoch": 8, "optimizer_updates": 128, "validation_xy_nll": 5.527674198150635, "train_xy_nll": 5.526709099769592}
+{"route": "gru8", "epoch": 9, "optimizer_updates": 144, "validation_xy_nll": 5.516600131988525, "train_xy_nll": 5.499098739624023}
+{"route": "gru8", "epoch": 10, "optimizer_updates": 160, "validation_xy_nll": 5.496789455413818, "train_xy_nll": 5.467744814872741}
+{"route": "gru8", "epoch": 11, "optimizer_updates": 176, "validation_xy_nll": 5.480038166046143, "train_xy_nll": 5.4419751558303835}
+{"route": "gru8", "epoch": 12, "optimizer_updates": 192, "validation_xy_nll": 5.4701972007751465, "train_xy_nll": 5.421063947677612}
+{"route": "tcn4", "epoch": 0, "optimizer_updates": 0, "validation_xy_nll": 6.256254196166992, "train_xy_nll": null}
+{"route": "tcn4", "epoch": 1, "optimizer_updates": 16, "validation_xy_nll": 5.8246941566467285, "train_xy_nll": 6.375234890937805}
+{"route": "tcn4", "epoch": 2, "optimizer_updates": 32, "validation_xy_nll": 5.749549865722656, "train_xy_nll": 5.806250897407532}
+{"route": "tcn4", "epoch": 3, "optimizer_updates": 48, "validation_xy_nll": 5.609521389007568, "train_xy_nll": 5.665732888221741}
+{"route": "tcn4", "epoch": 4, "optimizer_updates": 64, "validation_xy_nll": 5.508035182952881, "train_xy_nll": 5.541755746841431}
+{"route": "tcn4", "epoch": 5, "optimizer_updates": 80, "validation_xy_nll": 5.467959403991699, "train_xy_nll": 5.450341743469238}
+{"route": "tcn4", "epoch": 6, "optimizer_updates": 96, "validation_xy_nll": 5.448207378387451, "train_xy_nll": 5.378430156707764}
+{"route": "tcn4", "epoch": 7, "optimizer_updates": 112, "validation_xy_nll": 5.409941673278809, "train_xy_nll": 5.326193486213684}
+{"route": "tcn4", "epoch": 8, "optimizer_updates": 128, "validation_xy_nll": 5.3977580070495605, "train_xy_nll": 5.283861371040344}
+{"route": "tcn4", "epoch": 9, "optimizer_updates": 144, "validation_xy_nll": 5.3729777336120605, "train_xy_nll": 5.243403155326844}
+{"route": "tcn4", "epoch": 10, "optimizer_updates": 160, "validation_xy_nll": 5.351396560668945, "train_xy_nll": 5.206378534317016}
+{"route": "tcn4", "epoch": 11, "optimizer_updates": 176, "validation_xy_nll": 5.32903528213501, "train_xy_nll": 5.176734538078308}
+{"route": "tcn4", "epoch": 12, "optimizer_updates": 192, "validation_xy_nll": 5.298973083496094, "train_xy_nll": 5.140638735771179}
+/usr/local/lib/python3.13/dist-packages/torch/onnx/_internal/torchscript_exporter/jit_utils.py:308: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_node_shape_type_inference(node, params_dict, opset_version)
+/usr/local/lib/python3.13/dist-packages/torch/onnx/_internal/torchscript_exporter/utils.py:714: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_graph_shape_type_inference(
+/usr/local/lib/python3.13/dist-packages/torch/onnx/_internal/torchscript_exporter/utils.py:1187: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_graph_shape_type_inference(
+{"route": "tcn8", "epoch": 0, "optimizer_updates": 0, "validation_xy_nll": 6.256254196166992, "train_xy_nll": null}
+{"route": "tcn8", "epoch": 1, "optimizer_updates": 16, "validation_xy_nll": 5.868515491485596, "train_xy_nll": 6.335972430229187}
+{"route": "tcn8", "epoch": 2, "optimizer_updates": 32, "validation_xy_nll": 5.737871170043945, "train_xy_nll": 5.781967649459839}
+{"route": "tcn8", "epoch": 3, "optimizer_updates": 48, "validation_xy_nll": 5.581695556640625, "train_xy_nll": 5.64554953289032}
+{"route": "tcn8", "epoch": 4, "optimizer_updates": 64, "validation_xy_nll": 5.505335330963135, "train_xy_nll": 5.524354660987854}
+{"route": "tcn8", "epoch": 5, "optimizer_updates": 80, "validation_xy_nll": 5.463636875152588, "train_xy_nll": 5.436264039039612}
+{"route": "tcn8", "epoch": 6, "optimizer_updates": 96, "validation_xy_nll": 5.448014736175537, "train_xy_nll": 5.360339630126953}
+{"route": "tcn8", "epoch": 7, "optimizer_updates": 112, "validation_xy_nll": 5.408872127532959, "train_xy_nll": 5.303002395629883}
+{"route": "tcn8", "epoch": 8, "optimizer_updates": 128, "validation_xy_nll": 5.416326999664307, "train_xy_nll": 5.262315423965454}
+{"route": "tcn8", "epoch": 9, "optimizer_updates": 144, "validation_xy_nll": 5.3735527992248535, "train_xy_nll": 5.224261733055115}
+{"route": "tcn8", "epoch": 10, "optimizer_updates": 160, "validation_xy_nll": 5.347933292388916, "train_xy_nll": 5.1891431016922}
+{"route": "tcn8", "epoch": 11, "optimizer_updates": 176, "validation_xy_nll": 5.327984809875488, "train_xy_nll": 5.158694903373719}
+{"route": "tcn8", "epoch": 12, "optimizer_updates": 192, "validation_xy_nll": 5.292735576629639, "train_xy_nll": 5.121253167152405}

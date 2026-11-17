@@ -1,0 +1,134 @@
+{
+  "status": "ORIGINAL_NAMED_MODEL_MEMBERS_SHA256_PASS",
+  "source": {
+    "ref": "/code/lotus30/k230-camera-xy-multiroute-pilot-a06",
+    "url": "https://www.kaggle.com/code/lotus30/k230-camera-xy-multiroute-pilot-a06",
+    "versionNumber": 1,
+    "kernelId": 145538534
+  },
+  "run_id": "k230-camera-xy-multiroute-pilot-20261117-a06",
+  "total_bytes": 75578867,
+  "files": [
+    {
+      "setting": "cnn1",
+      "name": "models/cnn1/best.pt",
+      "bytes": 7440727,
+      "sha256": "ab1cd063f6c2695e35a345e1c82af17e6ef6f6c43f71fa6f4bba6930a2b146b2"
+    },
+    {
+      "setting": "cnn1",
+      "name": "models/cnn1/camera_xy.onnx",
+      "bytes": 7399249,
+      "sha256": "d1285803a0e96b3eb02361bf629a727be1af9391bfcf3e317cefec29c0e5ce5a"
+    },
+    {
+      "setting": "cnn1",
+      "name": "models/cnn1/METRICS.json",
+      "bytes": 71337,
+      "sha256": "939fd96b6cec044ffb6311dcace066fd3527b74eb9b74427f341e709b558265d"
+    },
+    {
+      "setting": "cnn1",
+      "name": "models/cnn1/history.json",
+      "bytes": 1763,
+      "sha256": "9c2cdcf387f28dd29386beb9f20744c02ba85d9c7899dc73a5687d89245573ca"
+    },
+    {
+      "setting": "gru4",
+      "name": "models/gru4/best.pt",
+      "bytes": 7541503,
+      "sha256": "317594bfd5b6427d05fd59e99d53c31a7a1b3b80a53a33b390b1151c38f3b2f3"
+    },
+    {
+      "setting": "gru4",
+      "name": "models/gru4/camera_xy.onnx",
+      "bytes": 7501152,
+      "sha256": "b309a696ad7b33898f41deb8dec613d9e816431867ef1d92f382250d44e50ec6"
+    },
+    {
+      "setting": "gru4",
+      "name": "models/gru4/METRICS.json",
+      "bytes": 71340,
+      "sha256": "4883df3ef94a01eee83a8fdc37a804e3ef5d2a812623417064025aa39fb16236"
+    },
+    {
+      "setting": "gru4",
+      "name": "models/gru4/history.json",
+      "bytes": 1765,
+      "sha256": "1ead3f9b18c370bd27cc10343c5571f757f7a9975d2001ca14be58ab303bcca2"
+    },
+    {
+      "setting": "gru8",
+      "name": "models/gru8/best.pt",
+      "bytes": 7541503,
+      "sha256": "aa900f916ef9d2a8d0489ace2bcf221d75bb36afef32769b918d2f2114a1688d"
+    },
+    {
+      "setting": "gru8",
+      "name": "models/gru8/camera_xy.onnx",
+      "bytes": 7501152,
+      "sha256": "5d063f025bda1951b0dfd60e473032383502cfa8d27fe1f75ece657105ed98d7"
+    },
+    {
+      "setting": "gru8",
+      "name": "models/gru8/METRICS.json",
+      "bytes": 71451,
+      "sha256": "aead289d25c3a9c4ed7b8531493544297bdf74b2f6cb533f14a714d82e6e60a7"
+    },
+    {
+      "setting": "gru8",
+      "name": "models/gru8/history.json",
+      "bytes": 1771,
+      "sha256": "803a8bbc112573719bbaaeb4a863d6870e49321a8ec77a9e45cd1b055707a709"
+    },
+    {
+      "setting": "tcn4",
+      "name": "models/tcn4/best.pt",
+      "bytes": 7590323,
+      "sha256": "432f084cefc1cbdb5e855d058944fc3ba9bc998288c4505885175e0cef70766c"
+    },
+    {
+      "setting": "tcn4",
+      "name": "models/tcn4/camera_xy.onnx",
+      "bytes": 7553532,
+      "sha256": "39a88639c51b80450ca2c20d5545d07afac9b5d628fc0b7c3e8f1afb953a66c1"
+    },
+    {
+      "setting": "tcn4",
+      "name": "models/tcn4/METRICS.json",
+      "bytes": 71439,
+      "sha256": "a891bae18a006f90acdcbf6b743a431479913f520a7236a0842566d92c656ef2"
+    },
+    {
+      "setting": "tcn4",
+      "name": "models/tcn4/history.json",
+      "bytes": 1768,
+      "sha256": "b8ecf5f9ceb045bf7a16fcc22a36fa0a9c2fce85305ec0381c91885341a4efb6"
+    },
+    {
+      "setting": "tcn8",
+      "name": "models/tcn8/best.pt",
+      "bytes": 7590323,
+      "sha256": "b7af4d5de0e0321c965270adc33a4b679eacd2c83c160afa1a3d0cadc86dd418"
+    },
+    {
+      "setting": "tcn8",
+      "name": "models/tcn8/camera_xy.onnx",
+      "bytes": 7553532,
+      "sha256": "caefcde77273d199257e335bf84e88ad92b3892da07445fa5a94f8603139804f"
+    },
+    {
+      "setting": "tcn8",
+      "name": "models/tcn8/METRICS.json",
+      "bytes": 71473,
+      "sha256": "acc3980824d39de03e34d0cb577a11c2f9823188f57c84e2255485f00752a68d"
+    },
+    {
+      "setting": "tcn8",
+      "name": "models/tcn8/history.json",
+      "bytes": 1764,
+      "sha256": "d7351a721e514237caefa948a847197d9c25d65441f08bdccbc3692f718d3137"
+    }
+  ],
+  "full_archive_downloaded_to_host": false
+}

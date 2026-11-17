@@ -1,0 +1,42 @@
+{
+  "status": "REPORT_ONLY_REQUIRES_COMPETITION_QUALIFICATION",
+  "qa": {
+    "status": "PASS",
+    "frames": 1000,
+    "splits": {
+      "train": 500,
+      "val": 250,
+      "test": 250
+    },
+    "trajectories": 40,
+    "evaluation_partitions": {
+      "trajectory_holdout": 1000,
+      "spatial_challenge": 0,
+      "appearance_challenge": 0
+    },
+    "spatial_challenge_tiles_disjoint": true,
+    "split_group_counts": {
+      "trajectory_id": 40,
+      "pose_group_id": 40,
+      "appearance_profile_id": 40
+    },
+    "scenario_counts": {
+      "straight": 100,
+      "turn": 100,
+      "intersection": 100,
+      "repeated_road": 0,
+      "frame_drop": 0,
+      "variable_speed": 100,
+      "blur": 0,
+      "relocalization": 0,
+      "stop_start": 100,
+      "lighting": 100
+    }
+  },
+  "full_generation_authorized_by_gate": false,
+  "reason": "Do not equate known-start synthetic tracking with global localization",
+  "parent_training_reused": "10000 positions,18epochs4500updates",
+  "elapsed_seconds": 242.81441652899997,
+  "native_board": "NOT RUN",
+  "global_confidence_calibration": "NOT QUALIFIED"
+}

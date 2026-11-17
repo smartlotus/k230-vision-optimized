@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "trajectory_scenario_counts": {
+    "train/repeated_road": 4,
+    "train/variable_speed": 4,
+    "val/intersection": 2,
+    "test/turn": 2,
+    "train/stop_start": 4,
+    "val/variable_speed": 2,
+    "test/intersection": 2,
+    "train/turn": 4,
+    "val/repeated_road": 2,
+    "test/variable_speed": 2,
+    "train/intersection": 4,
+    "val/stop_start": 2,
+    "test/repeated_road": 2,
+    "val/turn": 2,
+    "test/stop_start": 2
+  },
+  "identical_rgb_cross_split": 0
+}

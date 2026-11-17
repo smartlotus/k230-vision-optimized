@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "frames": 1000,
+  "splits": {
+    "train": 500,
+    "val": 250,
+    "test": 250
+  },
+  "trajectories": 40,
+  "evaluation_partitions": {
+    "trajectory_holdout": 1000,
+    "spatial_challenge": 0,
+    "appearance_challenge": 0
+  },
+  "spatial_challenge_tiles_disjoint": true,
+  "split_group_counts": {
+    "trajectory_id": 40,
+    "pose_group_id": 40,
+    "appearance_profile_id": 40
+  },
+  "scenario_counts": {
+    "straight": 0,
+    "turn": 200,
+    "intersection": 200,
+    "repeated_road": 200,
+    "frame_drop": 0,
+    "variable_speed": 200,
+    "blur": 0,
+    "relocalization": 0,
+    "stop_start": 200,
+    "lighting": 0
+  },
+  "field_mask_sha256": "fa5f526d741e27af830cc4b5a6c3e945ef48442670db3aabd12bd642def6f8d2",
+  "start_zones_by_split": {
+    "train/blue1": 10,
+    "train/blue2": 10,
+    "val/blue1": 5,
+    "val/blue2": 5,
+    "test/blue1": 5,
+    "test/blue2": 5
+  },
+  "map_class_counts_sampled_at_most_10mm": {
+    "3": 1364,
+    "0": 17055
+  },
+  "mask_frames_verified": 1000,
+  "manifest_sha256": "ec2e617bb3b15df10c80f666aa2166f29d7231741026dc187ddc582887609042",
+  "scope": "Camera optical projections in simulation; competition chassis clearance not assessed"
+}

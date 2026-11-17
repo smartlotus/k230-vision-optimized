@@ -1,0 +1,7 @@
+{
+  "primary": "PRIVATE_KAGGLE_SAVED_VERSION",
+  "drive": "DEFERRED",
+  "automatic_retry": false,
+  "input_manifest_sha256": "999a51a8a062fd8634e1f7232d7fa170062594e4910eacf95201ebdd60d80936",
+  "reason": "Drive retries failed at network transport; retained private output on the authorized compute platform"
+}

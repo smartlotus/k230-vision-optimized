@@ -1,0 +1,19 @@
+{
+  "geometry_sha256": "b5bea8c6738bc7ebd8d57cdae34af99d1cf10b3fc782ea9c6c986e8802441e95",
+  "cad_sha256": "99c4fa89054623b3d870d594ceb735cd78515389e58dd6339d9b59e97a381858",
+  "renderer_sha256": "57f08b936372a0a9345368b0fc75767addd345b7d723110dd754b2973da4a619",
+  "camera_v2_renderer_sha256": "e4e1b9a473132537a3b634a1c8816c314c0529dbc4fa3f27dc3596bb8116aaf3",
+  "roadnet_renderer_sha256": "45bcfd9380ca0713e48dec7b34b2b95d7790809786f1adc0b789ae0a47c4b541",
+  "source_official_pdf_sha256": "1ac7fa340193591874e3ec84f9427567864c16ab39fb500db814a4d2cfc000e4",
+  "blender": "5.3.0",
+  "stage": "pilot",
+  "resolution": [
+    160,
+    90
+  ],
+  "labels": [
+    "camera_x_mm",
+    "camera_y_mm"
+  ],
+  "start_policy": "both zones, opposite goal per user"
+}

@@ -1,0 +1,26 @@
+{
+  "status": "COMPILE_AND_SIMULATOR_PASS",
+  "scope": "PRETRAINED_MAP_WITH_NONZERO_TEMPORAL_OPERATOR_PROBE",
+  "compiler": {
+    "nncase": "2.11.0",
+    "nncase-kpu": "2.11.0"
+  },
+  "input_type": "float32",
+  "preprocess": false,
+  "normalization": "external RGB/255 ONCE",
+  "onnx_sha256": "b5140bb749e89a541f211047f35252239fe61f7f3012915d455a26df5519f3ec",
+  "kmodel_sha256": "6dad0cff4bd36d95070077f9ceefb748e4a042d2c665adc913b634a303d18d81",
+  "kmodel_bytes": 2703544,
+  "host_simulator_seconds": 38.69664670000202,
+  "pairs": [
+    {
+      "shape": [
+        1,
+        2304
+      ],
+      "max_abs": 0.24316740036010742,
+      "mae": 0.06844750046730042
+    }
+  ],
+  "native_k230": "NOT RUN"
+}

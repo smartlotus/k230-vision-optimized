@@ -1,0 +1,45 @@
+{
+  "status": "NEEDS_IMPROVEMENT",
+  "thresholds": {
+    "median_mm_max": 200,
+    "p95_mm_max": 500
+  },
+  "qa": {
+    "status": "PASS",
+    "frames": 1000,
+    "splits": {
+      "train": 600,
+      "val": 200,
+      "test": 200
+    },
+    "trajectories": 100,
+    "evaluation_partitions": {
+      "trajectory_holdout": 900,
+      "spatial_challenge": 50,
+      "appearance_challenge": 50
+    },
+    "spatial_challenge_tiles_disjoint": true,
+    "split_group_counts": {
+      "trajectory_id": 100,
+      "pose_group_id": 970,
+      "appearance_profile_id": 100
+    },
+    "scenario_counts": {
+      "straight": 100,
+      "turn": 100,
+      "intersection": 100,
+      "repeated_road": 100,
+      "frame_drop": 100,
+      "variable_speed": 100,
+      "blur": 100,
+      "relocalization": 100,
+      "stop_start": 100,
+      "lighting": 100
+    }
+  },
+  "full_generation_authorized_by_gate": false,
+  "note": "Review stability, ambiguity, coverage and calibration before scale-up",
+  "elapsed_seconds": 38.46026013700009,
+  "device": "Tesla T4",
+  "native_board": "NOT RUN"
+}

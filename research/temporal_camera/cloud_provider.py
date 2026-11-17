@@ -46,6 +46,9 @@ def create_dataset(api, stage, record):
             atomic_json(record/"DATASET_ABSENCE_CHECK.json",
                         {"ref":metadata["id"],"status_probe":403,"own_exact_candidates":[]})
         elif code!=404:
+            atomic_json(record/"DATASET_PREFLIGHT_FAILURE.json",{
+                "ref":metadata["id"],"error_type":type(error).__name__,"http_status":code,
+                "create_sent":False,"utc":datetime.now(timezone.utc).isoformat()})
             raise RuntimeError("Dataset preflight failed: "+type(error).__name__) from None
     else:
         atomic_json(record/"DATASET_EXISTING.json",{"ref":metadata["id"],"status":existing})
@@ -68,15 +71,26 @@ def create_dataset(api, stage, record):
         raise RuntimeError("Dataset create requires exact-ref reconciliation")
 
 
-def save_kernel(api, stage, record, no_run):
+def save_kernel(api, stage, record, no_run, kaggle_first=False):
     intent=json.loads((record/"SUBMISSION_INTENT.json").read_text(encoding="utf8"))
     metadata=json.loads((stage/"kernel-metadata.json").read_text(encoding="utf8"))
     if metadata["id"]!=intent["kernel"] or sha(stage/metadata["code_file"])!=intent["notebook_sha256"]:
         raise ValueError("Save source differs from frozen submission intent")
+    if metadata.get("dataset_sources")!=[f"{intent['dataset']}/{intent['dataset_version']}"]:
+        raise ValueError("Save dataset source differs from frozen submission intent")
     if not metadata.get("is_private"):
         raise ValueError("Private notebook required")
-    if (not no_run and intent.get("publisher_admission_status")!="QUALIFIED_AND_AUTHORIZED"):
-        raise ValueError("Qualified publisher route required before scientific admission")
+    if not no_run and intent.get("publisher_admission_status")!="QUALIFIED_AND_AUTHORIZED":
+        if not kaggle_first:
+            raise ValueError("Select the qualified Drive route or explicit private Kaggle-first publication")
+        dataset=json.loads((record/"DATASET_CREATE_RESPONSE.json").read_text(encoding="utf8"))
+        if (not dataset.get("confirmation") or not dataset.get("private") or dataset["ref"]!=intent["dataset"]
+                or dataset["input_manifest_sha256"]!=intent["input_manifest_sha256"]):
+            raise ValueError("Private Kaggle dataset receipt differs from the frozen notebook input")
+        atomic_json(record/"PUBLICATION_ROUTE.json",{
+            "primary":"PRIVATE_KAGGLE_SAVED_VERSION","drive":"DEFERRED",
+            "automatic_retry":False,"input_manifest_sha256":intent["input_manifest_sha256"],
+            "reason":"Drive retries failed at network transport; retained private output on the authorized compute platform"})
     attempt=record/"KERNEL_SAVE_ATTEMPT.json"
     if attempt.exists():
         raise ValueError("Reconcile original Save before retrying")

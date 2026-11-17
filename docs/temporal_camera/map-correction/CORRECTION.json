@@ -1,0 +1,328 @@
+{
+  "status": "MATERIAL_AND_SEMANTIC_CLASS_CORRECTED_GEOMETRY_IDENTICAL",
+  "authority": "Official2027 PDF Figure1 and user confirmation on2026-11-17",
+  "source_blend_sha256": "9a289ad14541b986fdc2d2cb7a213412c407b1becc5770338e76f984a3b41996",
+  "corrected_blend_sha256": "b5bea8c6738bc7ebd8d57cdae34af99d1cf10b3fc782ea9c6c986e8802441e95",
+  "source_unchanged": true,
+  "changed_object": "2.4 m square",
+  "old_material": "Class 2",
+  "new_material": "Class 0",
+  "new_class_id": 0,
+  "geometry_before": {
+    "2.4 m square": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "4bc7a75476c0ba884d8afb23c7064ff285305bd324018a2302438347e85d4ca9"
+    },
+    "Block 0 / 0": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "6f0e6148f6fefdd645089b4cac950720c0cd1591936db6dedf2cc2677e07068e"
+    },
+    "Block 0 / 1": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "37c19ab94d782d21718317c48174260107eee85065078b3bae6ec62fe7e932fd"
+    },
+    "Block 0 / 2": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "98e3f70301f40b711e9f981112f60de6fa41413d6433836ca1ef20e80ae1779f"
+    },
+    "Block 1 / 0": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "aa42d5ddcdd1790749f8589db8e8ac31a9807dd099c207133f8265ea61ff8ef5"
+    },
+    "Block 1 / 1": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "63a6a39fecc2d325b6503a51757ace5e97fe1cad96bcfbea216cd6678506fdcc"
+    },
+    "Block 1 / 2": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "550700c95cc82098a207199ac5dcad0b6d58d1266de84f8754ddc720721e8bf1"
+    },
+    "Block 2 / 0": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "a5326a364053776c8779e600671e1a7355910721e07a142918c179d9c4995e15"
+    },
+    "Block 2 / 1": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "52dff8fb66dfde1f7e65d77d0c8323742296d1e34ec79b65fa797079b78ead69"
+    },
+    "Block 2 / 2": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "a7972d487ffcd0e842c5aef58ba0748743161c67c35d56ea2c6c5774b8babaee"
+    },
+    "Block 3 / 0": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "d7f51717fc692bca8a98ebbb7c58f8d448b06a91e68081bb91d10ad0c3dae3cb"
+    },
+    "Block 3 / 1": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "26877d0e48235f6441191382f190780a1faa44145936395cdac140a46acca123"
+    },
+    "Block 3 / 2": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "ddc51d95a56f6faa7e0aa7cadb9e52e9f8abb5329d93732f483b3f5e5896dfe1"
+    },
+    "blue_start_zones 0": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "9373a04d277d51297f6d1ffd1059f2e63f9474b95201fcb96480f4e07e5354e9"
+    },
+    "blue_start_zones 1": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "18dd8bcbce09a6c985829be0d3e0751783189eb6e8a6c58d51b042dc7789f039"
+    },
+    "Longitudinal road": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "7d084b9c1f7ed9f78be86a84000e166981a8be42092385b3e9e7caf09c506e97"
+    },
+    "Obstacle 0": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "5a10dde1b46496724b92a862c00f72acae021b257cd6d7c122ca1ea5519c7d5a"
+    },
+    "Obstacle 1": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "9a4127305d038da246d762eaba91ec8d7b3ed1003f4ddc4b9cf7ce6d24974224"
+    },
+    "Obstacle 2": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "ca137f80ddc07bf9c28a227c93ab2d79ee6413697ff71a4075ae33b47e943b36"
+    },
+    "Obstacle 3": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "c1303a11d5746e984f295f27ad344fc3565d201192559575ce8cdc1af380b67f"
+    },
+    "Outside": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "ddd28b546ad15b92db26a3cb8da2b22c4f04197bb9f90498fb23ad13d0d046b6"
+    },
+    "rough_processing_zone": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "89a1c69b7c18f066cf028b0914838384fdf80c4065243c28e5b02ed5a55521d3"
+    },
+    "rough_processing_zone rings": {
+      "vertices": 2304,
+      "polygons": 1152,
+      "geometry_sha256": "e48339d1a089a66ab0820279b13d1b0b857776fbfcf1a3015657453be2f90e84"
+    },
+    "temporary_storage_zone": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "a9d089debc7fb367058d3e8736344cfd78e9fc4203be99ad5d254c1fb65185a1"
+    },
+    "temporary_storage_zone rings": {
+      "vertices": 2304,
+      "polygons": 1152,
+      "geometry_sha256": "fc945b28e2d7414f201f7018c3ef58cd38cc653f781e3277658004c4a7a3fa2d"
+    },
+    "Transverse road": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "1d776ee0ac16695be40fab2384b9e4fe59b40351dd2ebb2acc53ff249c50e0e9"
+    },
+    "Turntable": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "076d86f82ce5331e9d92440b0b9bde3e9af0baec4a8eeeb630af752312ef1484"
+    },
+    "yellow_zones 0": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "8bf649f29db0d37fb3d5fdc34df1194cbb6556377ce817f50d563923e45c3a0d"
+    },
+    "yellow_zones 1": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "25d69de172fcb53504afb5ec49eadbc1ae6d6e7bbc837e01d683aedd9d9f43f4"
+    },
+    "yellow_zones 2": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "1f0ea7d4d1509d7cdce152d9bfc6daeccc6c254b250def3a1ccbb881a49fcb25"
+    },
+    "yellow_zones 3": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "337495e71f68cc52d2ad953cafee66ff57e820cbf72110142b296e32fe010319"
+    }
+  },
+  "geometry_after": {
+    "2.4 m square": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "4bc7a75476c0ba884d8afb23c7064ff285305bd324018a2302438347e85d4ca9"
+    },
+    "Block 0 / 0": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "6f0e6148f6fefdd645089b4cac950720c0cd1591936db6dedf2cc2677e07068e"
+    },
+    "Block 0 / 1": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "37c19ab94d782d21718317c48174260107eee85065078b3bae6ec62fe7e932fd"
+    },
+    "Block 0 / 2": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "98e3f70301f40b711e9f981112f60de6fa41413d6433836ca1ef20e80ae1779f"
+    },
+    "Block 1 / 0": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "aa42d5ddcdd1790749f8589db8e8ac31a9807dd099c207133f8265ea61ff8ef5"
+    },
+    "Block 1 / 1": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "63a6a39fecc2d325b6503a51757ace5e97fe1cad96bcfbea216cd6678506fdcc"
+    },
+    "Block 1 / 2": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "550700c95cc82098a207199ac5dcad0b6d58d1266de84f8754ddc720721e8bf1"
+    },
+    "Block 2 / 0": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "a5326a364053776c8779e600671e1a7355910721e07a142918c179d9c4995e15"
+    },
+    "Block 2 / 1": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "52dff8fb66dfde1f7e65d77d0c8323742296d1e34ec79b65fa797079b78ead69"
+    },
+    "Block 2 / 2": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "a7972d487ffcd0e842c5aef58ba0748743161c67c35d56ea2c6c5774b8babaee"
+    },
+    "Block 3 / 0": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "d7f51717fc692bca8a98ebbb7c58f8d448b06a91e68081bb91d10ad0c3dae3cb"
+    },
+    "Block 3 / 1": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "26877d0e48235f6441191382f190780a1faa44145936395cdac140a46acca123"
+    },
+    "Block 3 / 2": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "ddc51d95a56f6faa7e0aa7cadb9e52e9f8abb5329d93732f483b3f5e5896dfe1"
+    },
+    "blue_start_zones 0": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "9373a04d277d51297f6d1ffd1059f2e63f9474b95201fcb96480f4e07e5354e9"
+    },
+    "blue_start_zones 1": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "18dd8bcbce09a6c985829be0d3e0751783189eb6e8a6c58d51b042dc7789f039"
+    },
+    "Longitudinal road": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "7d084b9c1f7ed9f78be86a84000e166981a8be42092385b3e9e7caf09c506e97"
+    },
+    "Obstacle 0": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "5a10dde1b46496724b92a862c00f72acae021b257cd6d7c122ca1ea5519c7d5a"
+    },
+    "Obstacle 1": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "9a4127305d038da246d762eaba91ec8d7b3ed1003f4ddc4b9cf7ce6d24974224"
+    },
+    "Obstacle 2": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "ca137f80ddc07bf9c28a227c93ab2d79ee6413697ff71a4075ae33b47e943b36"
+    },
+    "Obstacle 3": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "c1303a11d5746e984f295f27ad344fc3565d201192559575ce8cdc1af380b67f"
+    },
+    "Outside": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "ddd28b546ad15b92db26a3cb8da2b22c4f04197bb9f90498fb23ad13d0d046b6"
+    },
+    "rough_processing_zone": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "89a1c69b7c18f066cf028b0914838384fdf80c4065243c28e5b02ed5a55521d3"
+    },
+    "rough_processing_zone rings": {
+      "vertices": 2304,
+      "polygons": 1152,
+      "geometry_sha256": "e48339d1a089a66ab0820279b13d1b0b857776fbfcf1a3015657453be2f90e84"
+    },
+    "temporary_storage_zone": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "a9d089debc7fb367058d3e8736344cfd78e9fc4203be99ad5d254c1fb65185a1"
+    },
+    "temporary_storage_zone rings": {
+      "vertices": 2304,
+      "polygons": 1152,
+      "geometry_sha256": "fc945b28e2d7414f201f7018c3ef58cd38cc653f781e3277658004c4a7a3fa2d"
+    },
+    "Transverse road": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "1d776ee0ac16695be40fab2384b9e4fe59b40351dd2ebb2acc53ff249c50e0e9"
+    },
+    "Turntable": {
+      "vertices": 96,
+      "polygons": 50,
+      "geometry_sha256": "076d86f82ce5331e9d92440b0b9bde3e9af0baec4a8eeeb630af752312ef1484"
+    },
+    "yellow_zones 0": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "8bf649f29db0d37fb3d5fdc34df1194cbb6556377ce817f50d563923e45c3a0d"
+    },
+    "yellow_zones 1": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "25d69de172fcb53504afb5ec49eadbc1ae6d6e7bbc837e01d683aedd9d9f43f4"
+    },
+    "yellow_zones 2": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "1f0ea7d4d1509d7cdce152d9bfc6daeccc6c254b250def3a1ccbb881a49fcb25"
+    },
+    "yellow_zones 3": {
+      "vertices": 4,
+      "polygons": 1,
+      "geometry_sha256": "337495e71f68cc52d2ad953cafee66ff57e820cbf72110142b296e32fe010319"
+    }
+  },
+  "mesh_count": 31,
+  "preserved": "field bounds, zones, stations, CAD meshes and all mesh transforms",
+  "meaning": "all non-zone field base including perimeter is gray road; station strips remain white"
+}

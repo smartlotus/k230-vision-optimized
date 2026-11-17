@@ -1,0 +1,37 @@
+[
+  {
+    "name": "RESULT.json",
+    "bytes": 525,
+    "sha256": "b801f3423c5aedba2820a1ae956ab86a62d63402f381003b982b8ec128b0ddcb"
+  },
+  {
+    "name": "ENVIRONMENT.json",
+    "bytes": 170,
+    "sha256": "d5eeffc9053157a5256acf996159a1b136a51146623e3a583203d5a8fa95b1bf"
+  },
+  {
+    "name": "k230-camera-xy-multiroute-pilot-20261117-a04/COMPUTE.json",
+    "bytes": 335,
+    "sha256": "a092e83c6312e1c816e7ac41bdcbe6c0481716a457bcc7c774ce5bdae34f0842"
+  },
+  {
+    "name": "k230-camera-xy-multiroute-pilot-20261117-a04/train.log",
+    "bytes": 7133,
+    "sha256": "8273ec559e5bbb509a2c8d56747df2c25bde31a59fed82f21e7fc81055e39065"
+  },
+  {
+    "name": "k230-camera-xy-multiroute-pilot-20261117-a04/models/COMPARISON.json",
+    "bytes": 2702339,
+    "sha256": "abb5a0af1535a9b5820217203921fa5da3fde8e96c024030e1af15dd6cba652e"
+  },
+  {
+    "name": "k230-camera-xy-multiroute-pilot-20261117-a04/models/PILOT_GATE.json",
+    "bytes": 1075,
+    "sha256": "6e1a7ba62f064ebc1bdeceee9ebc96fa55c73c8b84337fc7c4d51c9bc5a7d407"
+  },
+  {
+    "name": "k230-camera-xy-multiroute-pilot-20261117-a04/models/TINY_LEARNING_GATE.json",
+    "bytes": 1092,
+    "sha256": "f49a6fa47197728792dd640811b642a88a3efdf0a917cda94e4baff045788729"
+  }
+]

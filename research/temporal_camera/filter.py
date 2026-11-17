@@ -93,7 +93,7 @@ class TemporalGridFilter:
             self.bad = 0
             self.state = 'TRACKING' if quality >= .5 else 'DEGRADED'
         self.last_ts = ts
-        ids = np.argsort(self.belief.ravel())[-min(self.top_k,int(self.valid.sum())):][::-1]
+        ids = np.argsort(np.where(self.valid,self.belief,-np.inf).ravel())[-min(self.top_k,int(self.valid.sum())):][::-1]
         top = []
         for idx in ids:
             y,x = divmod(int(idx),self.valid.shape[1])

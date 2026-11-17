@@ -1,0 +1,42 @@
+{
+  "status": "HOST_FROZEN_MODEL_REPLAY",
+  "split": "val",
+  "optimization_updates": 0,
+  "map_parent_sha256": "51df7fb18b76a305a0360eb3a7fd788fe71994aeffeb35b1766912f481ff8f05",
+  "dataset_manifest_sha256": "ec2e617bb3b15df10c80f666aa2166f29d7231741026dc187ddc582887609042",
+  "results": {
+    "single_frame": {
+      "n": 250,
+      "mean_mm": 1046.2195702241509,
+      "median_mm": 950.6811698414051,
+      "p95_mm": 2134.4231188145363,
+      "max_mm": 2606.2649108376936,
+      "within50_rate": 0.06,
+      "within200_rate": 0.196
+    },
+    "two_zone": {
+      "n": 250,
+      "mean_mm": 1016.7452257654776,
+      "median_mm": 909.5260719812493,
+      "p95_mm": 2208.4350229888387,
+      "max_mm": 2488.004221213644,
+      "within50_rate": 0.048,
+      "within200_rate": 0.172
+    },
+    "global": {
+      "n": 250,
+      "mean_mm": 990.8344776725329,
+      "median_mm": 907.1904185502108,
+      "p95_mm": 2218.8594221266835,
+      "max_mm": 2488.004221213644,
+      "within50_rate": 0.048,
+      "within200_rate": 0.184
+    }
+  },
+  "initial_zone_correct": {
+    "two_zone": 5,
+    "global": 5
+  },
+  "initial_zone_trials": 10,
+  "scope": "diagnostic candidate errors before Kaggle adaptation; no real confidence calibration"
+}

@@ -74,7 +74,7 @@ def compile_one(root, route):
         pairs.append({'shape': list(actual.shape), 'max_abs': float(abs(actual-ref).max()),
                       'mae': float(abs(actual-ref).mean())})
     write(root / f'{route}-compile.json', {'status': 'COMPILE_AND_SIMULATOR_PASS',
-          'scope': 'UNTRAINED_RANDOM_WEIGHT_OPERATOR_SMOKE_ONLY',
+          'scope': report.get('scope','OPERATOR_COMPATIBILITY_SMOKE_ONLY'),
           'compiler': {p: importlib.metadata.version(p) for p in ('nncase', 'nncase-kpu')},
           'input_type': 'float32', 'preprocess': False, 'normalization': 'external RGB/255 ONCE',
           'onnx_sha256': report['onnx_sha256'], 'kmodel_sha256': sha(path),

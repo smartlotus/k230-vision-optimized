@@ -1,0 +1,75 @@
+{
+  "status": "FULL_VALIDATION_DIAGNOSTIC",
+  "evaluation_frames": 250,
+  "kmodel_sha256": "d8313949c883bd5ab56dc6c36c2fe09eb869a69e6aa55a39a7d8fdb2050b7801",
+  "dataset_manifest_sha256": "ec2e617bb3b15df10c80f666aa2166f29d7231741026dc187ddc582887609042",
+  "anchor_agreement": 0.716,
+  "raw_float_onnx": {
+    "n": 250,
+    "mean_mm": 1046.2195702241509,
+    "median_mm": 950.6811698414051,
+    "p95_mm": 2134.4231188145363,
+    "max_mm": 2606.2649108376936,
+    "within50_rate": 0.06,
+    "within200_rate": 0.196
+  },
+  "raw_kmodel_simulator": {
+    "n": 250,
+    "mean_mm": 1087.4069091892752,
+    "median_mm": 1041.8311751030367,
+    "p95_mm": 2135.390810407282,
+    "max_mm": 2606.2649108376936,
+    "within50_rate": 0.056,
+    "within200_rate": 0.176
+  },
+  "filtered": {
+    "two_zone": {
+      "simulator": {
+        "n": 250,
+        "mean_mm": 990.2715937883679,
+        "median_mm": 844.5929720691429,
+        "p95_mm": 2208.4350229888387,
+        "max_mm": 2488.0042212136445,
+        "within50_rate": 0.024,
+        "within200_rate": 0.168
+      },
+      "float_replay": {
+        "n": 250,
+        "mean_mm": 1016.7452257654776,
+        "median_mm": 909.5260719812493,
+        "p95_mm": 2208.4350229888387,
+        "max_mm": 2488.004221213644,
+        "within50_rate": 0.048,
+        "within200_rate": 0.172
+      },
+      "initial_zone_trials": 10,
+      "initial_zone_correct_simulator": 5,
+      "initial_zone_correct_float": 5
+    },
+    "global": {
+      "simulator": {
+        "n": 250,
+        "mean_mm": 1008.0027445064061,
+        "median_mm": 881.1040579946963,
+        "p95_mm": 2224.6762487195447,
+        "max_mm": 2488.0042212136445,
+        "within50_rate": 0.044,
+        "within200_rate": 0.18
+      },
+      "float_replay": {
+        "n": 250,
+        "mean_mm": 990.8344776725329,
+        "median_mm": 907.1904185502108,
+        "p95_mm": 2218.8594221266835,
+        "max_mm": 2488.004221213644,
+        "within50_rate": 0.048,
+        "within200_rate": 0.184
+      },
+      "initial_zone_trials": 10,
+      "initial_zone_correct_simulator": 5,
+      "initial_zone_correct_float": 5
+    }
+  },
+  "qualification": "ACCURACY_HOLD",
+  "native_k230": "NOT RUN"
+}

@@ -1,5 +1,7 @@
 # K230 competition CameraXY temporal V1
 
+Current map revision follows the provided official PDF Figure 1 and the user's two-start procedure. [Corrected scene, Smoke/Pilot manifests, and updated evaluation contract](map-correction/README.md). Earlier runs retain their original map and must be reported under that map identity.
+
 Current implementation branch: `ops/temporal-camera-v1-20261117`. Read `.ops/PROJECT.md`, `.ops/PROTOCOL.md`, and the task handoff before writing. This module is isolated from accepted production, UART and motion code.
 
 ## Verified starting state
@@ -55,4 +57,4 @@ Independent CPU forward diagnosis found both best and last CNN predict only clas
 
 User steering on2026-11-17 explicitly defers board connection: continue cloud/offline delivery. Native board tests stay NOT RUN; do not repeatedly request board access during this phase.
 
-The reused scene's gray outer-region interpretation differs from one reading of the official figure. Keep its exact map hash and label this simulation scope; do not rebuild the map or call it a calibrated physical replica.
+[Official gray-map correction](map-correction/README.md) records the map geometry and 1,100 rendered frames. [Offline model delivery](map-correction/OFFLINE_MODEL_DELIVERY.md) describes the frozen experimental A route, native bench and prior Kaggle comparisons. [Corrected-map a06 report](cloud/gray-map-pilot-a06/REPORT.md) records the actual five-setting training, the held-out comparisons, and the Simulator checks for the trained CNN1 and TCN4 KModels. The corrected Pilot finished with `NEEDS_IMPROVEMENT`. [Model archive identity](cloud/gray-map-pilot-a06/MODEL_DELIVERY_SHA256.json)

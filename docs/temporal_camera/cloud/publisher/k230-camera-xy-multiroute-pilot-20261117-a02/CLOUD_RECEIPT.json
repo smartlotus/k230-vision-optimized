@@ -1,0 +1,28 @@
+{
+  "run_id": "k230-camera-xy-multiroute-pilot-20261117-a02",
+  "prep": {
+    "ref": "lotus30/k230-camera-xy-multiroute-pilot-a02",
+    "kernel_id": 145510557,
+    "version": 1,
+    "provider_status": "COMPLETE",
+    "source_sha256": "535fce8465f87a121427daf628bb8bb5220f5d08237daeed94f775f4bc59aa04"
+  },
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "uploaded": {
+    "name": "k230-camera-xy-multiroute-pilot-20261117-a02-f26c5a6d844141ce.tar.gz",
+    "bytes": 9925208,
+    "sha256": "f26c5a6d844141ce1203a63fac71965e975074475a78c49c943dd66492669098",
+    "file_id": "1XY8U4I0_muWuqKj81inuaKte-tb2gd4k",
+    "provider_readback": "FULL_BYTE_SHA256_PASS"
+  },
+  "status": "DRIVE_EXPORT_FULL_BYTE_SHA_COMMITTED",
+  "automatic_replay": false,
+  "provider_mutations": 1,
+  "github": {
+    "run_id": 43997375032,
+    "head": "faa4c9c7b069464b27efb3fbadade79c02c30ee3",
+    "branch": "ops/topface-transfer-1794879623486148500"
+  },
+  "secret_cleanup": "CONFIRMED_DELETED",
+  "independent_metadata_match": false
+}

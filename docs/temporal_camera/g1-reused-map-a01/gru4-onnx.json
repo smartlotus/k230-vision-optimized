@@ -1,0 +1,46 @@
+{
+  "scope": "PRETRAINED_MAP_WITH_NONZERO_TEMPORAL_OPERATOR_PROBE",
+  "status": "ONNX_ORT_PASS",
+  "parent_sha256": "c16e0ddf9f458fb7dfbcda5902f60c09b4a9e0426bb55a7e9b3ebea3d486d989",
+  "input_shape": [
+    1,
+    12,
+    96,
+    160
+  ],
+  "output_shape": [
+    1,
+    932
+  ],
+  "onnx_sha256": "a47e77ed61d8f38b824bc684fe58f73df9e22aeae2ffdfae08371c1ef7eb6fd2",
+  "torch_ort_max_abs": 8.58306884765625e-06,
+  "parameters": 104288,
+  "map_reference_bytes": 5726208,
+  "opset": 13,
+  "route": "gru",
+  "window": 4,
+  "operator_set": [
+    "Add",
+    "AveragePool",
+    "Clip",
+    "Concat",
+    "Constant",
+    "Conv",
+    "Div",
+    "Expand",
+    "Flatten",
+    "GRU",
+    "Gather",
+    "Gemm",
+    "MatMul",
+    "Mul",
+    "ReduceL2",
+    "ReduceMax",
+    "Relu",
+    "Reshape",
+    "Shape",
+    "Squeeze",
+    "Transpose",
+    "Unsqueeze"
+  ]
+}

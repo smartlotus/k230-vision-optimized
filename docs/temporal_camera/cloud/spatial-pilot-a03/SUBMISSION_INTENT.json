@@ -23,9 +23,11 @@
     "wall_seconds": 2200,
     "seed": 117
   },
-  "recovery": true,
-  "prior_cnn_optimizer_updates": 96,
+  "recovery": false,
+  "prior_cnn_optimizer_updates": 0,
   "encoder": "spatial",
   "all_endpoints": true,
-  "full_generation": "NOT RUN; requires pilot acceptance"
+  "full_generation": "NOT RUN; requires pilot acceptance",
+  "recovery_scope": "official dependency wheels only; fresh independent model training",
+  "parent_diagnostic_run": "k230-camera-xy-multiroute-pilot-20261117-a02"
 }

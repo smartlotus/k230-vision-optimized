@@ -43,6 +43,8 @@ def main():
     ap.add_argument('--epochs',type=int,default=60);ap.add_argument('--max-seconds',type=int,default=2400)
     ap.add_argument('--encoder',choices=('baseline','spatial'),default='baseline')
     ap.add_argument('--all-endpoints',action='store_true')
+    ap.add_argument('--learning',choices=('ce','xy_smooth'),default='ce')
+    ap.add_argument('--settings',default='cnn1,gru4,gru8,tcn4,tcn8')
     args=ap.parse_args();out=args.out.resolve();out.mkdir(parents=True,exist_ok=False)
     start=time.monotonic();deadline=start+args.max_seconds
     if not torch.cuda.is_available():raise RuntimeError('Kaggle GPU required; no local CPU training fallback')
@@ -78,14 +80,21 @@ def main():
         with torch.inference_mode():
             logits,_=probe(px);accuracy=float((logits.flatten(1).argmax(1)==pl).float().mean())
             classes=int(logits.flatten(1).argmax(1).unique().numel())
+            probe.eval();eval_logits,_=probe(px)
+            eval_accuracy=float((eval_logits.flatten(1).argmax(1)==pl).float().mean())
         qualification={'status':'PASS' if accuracy>=.8 and float(loss)<.7 else 'FAILED',
             'scope':'train-only learning probe, weights discarded','optimizer_updates':160,
             'samples':len(probe_seq),'sample_ids':[s['sample_id'] for s in probe_seq],
             'train_ce':float(loss),'train_grid_accuracy':accuracy,'predicted_classes':classes}
+        qualification['eval_same_train_samples_grid_accuracy']=eval_accuracy
         save_json(out/'TINY_LEARNING_GATE.json',qualification)
         del probe,optimizer
         if qualification['status']!='PASS':raise ValueError('Spatial encoder tiny learning gate failed')
-    configs=[('cnn',1),('gru',4),('gru',8),('tcn',4),('tcn',8)]
+    requested=args.settings.split(',')
+    available={'cnn1':('cnn',1),'gru4':('gru',4),'gru8':('gru',8),'tcn4':('tcn',4),'tcn8':('tcn',8)}
+    if len(set(requested))!=len(requested) or any(n not in available for n in requested) or 'cnn1' not in requested:
+        raise ValueError('Invalid frozen settings')
+    configs=[available[n] for n in requested]
     summaries={}
     for route,t in configs:
         if time.monotonic()>deadline:raise TimeoutError('Frozen pilot wall budget exceeded')
@@ -107,6 +116,7 @@ def main():
             splits[split]=(clips,x,xy,label,offset)
         train=splits['train'];gen=torch.Generator().manual_seed(117)
         loader=DataLoader(TensorDataset(train[1],train[3],train[4]),batch_size=32,shuffle=True,generator=gen)
+        augment_rng=torch.Generator(device='cuda').manual_seed(117)
         best=float('inf');stale=0;updates=0;history=[]
         prior=args.data.parent/'prior_cnn1'
         reuse=route=='cnn' and prior.exists()
@@ -124,8 +134,16 @@ def main():
             model.train();loss_sum=0
             for x,cls,offset in loader:
                 x,cls,offset=x.cuda(),cls.cuda(),offset.cuda()
+                if args.learning=='xy_smooth':
+                    from learning import augment_window
+                    x=augment_window(x,augment_rng)
                 logits,refine=model(x)
-                loss=nn.functional.cross_entropy(logits.flatten(1),cls)+nn.functional.smooth_l1_loss(refine,offset)
+                if args.learning=='xy_smooth':
+                    from learning import xy_heatmap_loss
+                    cell=torch.stack((cls%24,cls//24),1)
+                    xy=(cell+offset)*100-1200
+                    loss=xy_heatmap_loss(logits,refine,xy,cell)
+                else:loss=nn.functional.cross_entropy(logits.flatten(1),cls)+nn.functional.smooth_l1_loss(refine,offset)
                 opt.zero_grad(set_to_none=True);loss.backward();torch.nn.utils.clip_grad_norm_(model.parameters(),5);opt.step()
                 updates+=1;loss_sum+=loss.item()*len(x)
             scheduler.step();model.eval()
@@ -141,6 +159,7 @@ def main():
                    'dataset_manifest_sha256':digest(args.data/'manifest.jsonl'),
                    'source_sha256':digest(Path(__file__)),'run_id':args.run_id,
                    'encoder':args.encoder,'all_endpoints':args.all_endpoints,
+                   'learning':args.learning,'augmentation_rng':augment_rng.get_state(),
                    'label_fields':['camera_x_mm','camera_y_mm']}
             torch.save(state,folder/'last.pt')
             if score<best:
@@ -223,6 +242,7 @@ def main():
                  'selected_epoch':state['epoch'],'optimizer_updates':updates,'parameters':sum(p.numel() for p in cpu.parameters()),
                  'training_reused_without_optimizer_replay':reuse,
                  'encoder':args.encoder,'all_endpoints':args.all_endpoints,
+                 'learning':args.learning,
                  'temperature':temperature,'test':partitions['trajectory_holdout'],
                  'test_partitions':partitions,'stress':stress,
                  'endpoint_sha256':endpoint_sha,'best_sha256':digest(folder/'best.pt'),

@@ -1,0 +1,17 @@
+{
+  "run_id": "k230-camera-xy-multiroute-pilot-20261117-a03",
+  "source_archive_path": "k230-camera-xy-multiroute-pilot-20261117-a03.tar.gz",
+  "archive": {
+    "name": "k230-camera-xy-multiroute-pilot-20261117-a03-b96a51c6ae7ac185.tar.gz",
+    "bytes": 14625322,
+    "sha256": "b96a51c6ae7ac185cd4472d77acea3812d3199b2e98269e577c9bd2b0b0fb4e7"
+  },
+  "prep": {
+    "ref": "lotus30/k230-camera-xy-multiroute-pilot-a03",
+    "kernel_id": 145512060,
+    "version": 1,
+    "provider_status": "COMPLETE",
+    "source_sha256": "546dacbf3312d5a42064c8335f7a233724f6f94fc3cdcd2dfc12cd1e3637449e"
+  },
+  "source_notebook": "C:/Users/28389/Desktop/k230-temporal-camera-v1/docs/temporal_camera/cloud/spatial-pilot-a03/run.ipynb"
+}

@@ -18,6 +18,11 @@ def main():
     ap.add_argument('--stage',type=Path,required=True);ap.add_argument('--record',type=Path,required=True)
     ap.add_argument('--attempt',default='a01');ap.add_argument('--recovery',type=Path)
     ap.add_argument('--encoder',choices=('baseline','spatial'),default='baseline')
+    ap.add_argument('--learning',choices=('ce','xy_smooth'),default='ce')
+    ap.add_argument('--settings',default='cnn1,gru4,gru8,tcn4,tcn8')
+    ap.add_argument('--recipe',choices=('tiny','map_reuse'),default='tiny')
+    ap.add_argument('--epochs',type=int,default=60)
+    ap.add_argument('--parent',type=Path)
     args=ap.parse_args();here=Path(__file__).resolve().parent
     stage=args.stage.resolve();stage.mkdir(parents=True,exist_ok=False)
     record=args.record.resolve();record.mkdir(parents=True,exist_ok=False)
@@ -26,6 +31,16 @@ def main():
     for name in ('models.py','filter.py','dataset.py','train.py','cloud_worker.py'):
         shutil.copy2(here/name,root/name)
     if args.encoder=='spatial':shutil.copy2(here/'models_spatial.py',root/'models_spatial.py')
+    if args.learning=='xy_smooth':shutil.copy2(here/'learning.py',root/'learning.py')
+    if args.recipe=='map_reuse':
+        shutil.copy2(here/'map_models.py',root/'map_models.py')
+        shutil.copy2(here/'embedded_filter.py',root/'embedded_filter.py')
+        shutil.copy2(here/'train_map_temporal.py',root/'train.py')
+        shutil.copy2(args.parent or here/'reused/map-inference.pt',root/'parent.pt')
+        shutil.copy2(here/'reused/SOURCE.json',root/'PARENT_SOURCE.json')
+        shutil.copy2(here/'competition_paths.py',root/'competition_paths.py')
+        if args.parent:
+            shutil.copy2(args.parent.with_name('REFERENCE.json'),root/'REFERENCE.json')
     shutil.copy2(here.parent/'topface/cloud_store.py',root/'cloud_store.py')
     if args.recovery:
         for name in (('prior_cnn1','deps') if args.encoder=='baseline' else ('deps',)):
@@ -34,6 +49,7 @@ def main():
     manifest=[{'name':p.relative_to(root).as_posix(),'bytes':p.stat().st_size,'sha256':digest(p)}
               for p in sorted(root.rglob('*')) if p.is_file() and '__pycache__' not in p.parts]
     put(root/'INPUT_MANIFEST.json',manifest);input_sha=digest(root/'INPUT_MANIFEST.json')
+    expanded=sum(item['bytes'] for item in manifest)+(root/'INPUT_MANIFEST.json').stat().st_size
     payload=stage/'payload.bin'
     with tarfile.open(payload,'w:gz') as tar:
         for item in manifest:tar.add(root/item['name'],arcname=item['name'],recursive=False)
@@ -58,7 +74,7 @@ assert p.stat().st_size=={payload.stat().st_size} and hashlib.sha256(p.read_byte
 root=Path('/kaggle/working/input');root.mkdir(exist_ok=False)
 with tarfile.open(p,'r:gz') as tar:
     members=tar.getmembers()
-    assert len(members)<2000 and sum(m.size for m in members)<150*1024**2
+    assert len(members)=={len(manifest)+1} and sum(m.size for m in members)=={expanded}
     assert all(m.isfile() and not Path(m.name).is_absolute() and '..' not in Path(m.name).parts for m in members)
     tar.extractall(root,filter='data')
 manifest=root/'INPUT_MANIFEST.json'
@@ -81,6 +97,9 @@ assert ort.InferenceSession(probe.SerializeToString(),providers=['CPUExecutionPr
 assert torch.cuda.is_available() and torch.ones(1,device='cuda').item()==1
 Path('/kaggle/working/ENVIRONMENT.json').write_text(json.dumps({{'python':sys.version,'torch':torch.__version__,'onnxruntime':ort.__version__,'gpu':torch.cuda.get_device_name(0),'actual_ort_operator_probe':'PASS'}}))
 command=[sys.executable,str(root/'cloud_worker.py'),'--root',str(root),'--run-id',{run_id!r},'--input-sha',{input_sha!r},'--wall-seconds',{str(wall)!r},'--encoder',{args.encoder!r}]
+command.extend(['--learning',{args.learning!r}])
+command.extend(['--settings',{args.settings!r}])
+command.extend(['--epochs',{str(args.epochs)!r}])
 if {args.encoder=='spatial'!r}:command.append('--all-endpoints')
 subprocess.run(command,check=True)
 '''
@@ -93,10 +112,15 @@ subprocess.run(command,check=True)
     put(record/'SUBMISSION_INTENT.json',{'run_id':run_id,'kernel':kernel,'dataset':ref,'dataset_version':1,
         'notebook_file':'run.ipynb','notebook_sha256':digest(record/'run.ipynb'),'input_manifest_sha256':input_sha,
         'provider_max_seconds':3000,'publisher_admission_status':'PENDING','publication_mode':'INDEPENDENT_CLOUD_PUBLISHER',
-        'automatic_retry':False,'scientific_budget':{'settings':['cnn1','gru4','gru8','tcn4','tcn8'],
-           'epochs_max_each':60,'early_stop_patience':12,'wall_seconds':wall,'seed':117},
-        'recovery':bool(args.recovery),'prior_cnn_optimizer_updates':96 if args.recovery else 0,
+        'automatic_retry':False,'scientific_budget':{'settings':args.settings.split(','),
+           'epochs_max_each':args.epochs,'early_stop_patience':12,'wall_seconds':wall,'seed':117},
+        'recovery':bool(args.recovery) and args.encoder=='baseline',
+        'recovery_scope':'completed CNN plus dependencies' if args.recovery and args.encoder=='baseline' else 'dependency wheels only' if args.recovery else 'none',
+        'prior_cnn_optimizer_updates':96 if args.recovery and args.encoder=='baseline' else 0,
         'encoder':args.encoder,'all_endpoints':args.encoder=='spatial',
+        'learning':args.learning,
+        'recipe':args.recipe,
+        'parent_sha256':digest(root/'parent.pt') if args.recipe=='map_reuse' else None,
         'full_generation':'NOT RUN; requires pilot acceptance'})
     shutil.copy2(root/'INPUT_MANIFEST.json',record/'INPUT_MANIFEST.json')
     print(json.dumps({'run_id':run_id,'upload':str(upload),'input_sha256':input_sha,'payload_bytes':payload.stat().st_size}))

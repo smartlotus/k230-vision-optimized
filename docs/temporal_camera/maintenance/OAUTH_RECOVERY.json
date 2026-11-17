@@ -1,0 +1,9 @@
+{
+  "incident": "Kaggle saved-version403 and owned-list401 after cached OAuth expiry",
+  "observed_previous_expiry_utc": "2026-11-17T02:05:47.879101+00:00",
+  "refreshed_expiry_utc": "2026-11-17T14:10:36.998599+00:00",
+  "cause": "inspected SDK access_token_has_expired compares expiration to now minus30minutes",
+  "recovery": "supported refresh_access_token; original run145513924/v1 reobserved COMPLETE, no replay",
+  "credential_values_logged": false,
+  "credential_cache_deleted": false
+}

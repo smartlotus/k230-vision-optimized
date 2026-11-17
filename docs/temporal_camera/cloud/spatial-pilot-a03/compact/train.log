@@ -1,0 +1,82 @@
+/kaggle/working/input/train.py:81: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  qualification={'status':'PASS' if accuracy>=.8 and float(loss)<.7 else 'FAILED',
+{"route": "cnn1", "epoch": 1, "updates": 19, "train_loss": 5.596845506032308, "val_mean_mm": 749.6878051757812}
+{"route": "cnn1", "epoch": 2, "updates": 38, "train_loss": 4.108201510111491, "val_mean_mm": 659.18212890625}
+{"route": "cnn1", "epoch": 3, "updates": 57, "train_loss": 3.3296824518839516, "val_mean_mm": 682.321044921875}
+{"route": "cnn1", "epoch": 4, "updates": 76, "train_loss": 2.7622153186798095, "val_mean_mm": 883.6693725585938}
+{"route": "cnn1", "epoch": 5, "updates": 95, "train_loss": 2.336592270533244, "val_mean_mm": 1022.000732421875}
+{"route": "cnn1", "epoch": 6, "updates": 114, "train_loss": 1.9956008434295653, "val_mean_mm": 794.0005493164062}
+{"route": "cnn1", "epoch": 7, "updates": 133, "train_loss": 1.6929352855682374, "val_mean_mm": 821.420654296875}
+{"route": "cnn1", "epoch": 8, "updates": 152, "train_loss": 1.5224644088745116, "val_mean_mm": 754.7256469726562}
+{"route": "cnn1", "epoch": 9, "updates": 171, "train_loss": 1.3329055754343668, "val_mean_mm": 836.8186645507812}
+{"route": "cnn1", "epoch": 10, "updates": 190, "train_loss": 1.2345576747258504, "val_mean_mm": 1008.6235961914062}
+{"route": "cnn1", "epoch": 11, "updates": 209, "train_loss": 1.1249304993947347, "val_mean_mm": 732.8062744140625}
+{"route": "cnn1", "epoch": 12, "updates": 228, "train_loss": 1.04808496316274, "val_mean_mm": 802.01171875}
+{"route": "cnn1", "epoch": 13, "updates": 247, "train_loss": 0.9678539880116781, "val_mean_mm": 913.05517578125}
+{"route": "cnn1", "epoch": 14, "updates": 266, "train_loss": 0.9710823472340901, "val_mean_mm": 737.9769287109375}
+/kaggle/working/input/train.py:166: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+  torch.onnx.export(cpu,example,str(folder/'camera_xy.onnx'),input_names=['rgb_window'],
+{"route": "gru4", "epoch": 1, "updates": 19, "train_loss": 5.822160046895345, "val_mean_mm": 708.15625}
+{"route": "gru4", "epoch": 2, "updates": 38, "train_loss": 4.564619019826253, "val_mean_mm": 675.359375}
+{"route": "gru4", "epoch": 3, "updates": 57, "train_loss": 4.096032409667969, "val_mean_mm": 660.179931640625}
+{"route": "gru4", "epoch": 4, "updates": 76, "train_loss": 3.763355598449707, "val_mean_mm": 731.6439208984375}
+{"route": "gru4", "epoch": 5, "updates": 95, "train_loss": 3.456053253809611, "val_mean_mm": 764.6320190429688}
+{"route": "gru4", "epoch": 6, "updates": 114, "train_loss": 3.1854257933298746, "val_mean_mm": 738.4209594726562}
+{"route": "gru4", "epoch": 7, "updates": 133, "train_loss": 2.9120324261983237, "val_mean_mm": 706.2821655273438}
+{"route": "gru4", "epoch": 8, "updates": 152, "train_loss": 2.6610820802052815, "val_mean_mm": 819.26025390625}
+{"route": "gru4", "epoch": 9, "updates": 171, "train_loss": 2.45863374710083, "val_mean_mm": 710.3903198242188}
+{"route": "gru4", "epoch": 10, "updates": 190, "train_loss": 2.2836535708109538, "val_mean_mm": 706.497802734375}
+{"route": "gru4", "epoch": 11, "updates": 209, "train_loss": 2.1217002852757774, "val_mean_mm": 801.8291625976562}
+{"route": "gru4", "epoch": 12, "updates": 228, "train_loss": 1.9969822756449382, "val_mean_mm": 805.2125244140625}
+{"route": "gru4", "epoch": 13, "updates": 247, "train_loss": 1.8341972001393636, "val_mean_mm": 854.1300659179688}
+{"route": "gru4", "epoch": 14, "updates": 266, "train_loss": 1.7488529984156291, "val_mean_mm": 874.2161865234375}
+{"route": "gru4", "epoch": 15, "updates": 285, "train_loss": 1.677334221204122, "val_mean_mm": 867.0953369140625}
+/usr/local/lib/python3.13/dist-packages/torch/onnx/_internal/torchscript_exporter/symbolic_opset9.py:4571: UserWarning: Exporting a model to ONNX with a batch_size other than 1, with a variable length with GRU can cause an error when running the ONNX model with a different batch size. Make sure to save the model with a batch size of 1, or define the initial states (h0/c0) as inputs of the model. 
+  return _generic_rnn(
+{"route": "gru8", "epoch": 1, "updates": 19, "train_loss": 5.809089603424073, "val_mean_mm": 696.9258422851562}
+{"route": "gru8", "epoch": 2, "updates": 38, "train_loss": 4.569668884277344, "val_mean_mm": 670.60888671875}
+{"route": "gru8", "epoch": 3, "updates": 57, "train_loss": 4.11385352452596, "val_mean_mm": 729.3783569335938}
+{"route": "gru8", "epoch": 4, "updates": 76, "train_loss": 3.7718766276041666, "val_mean_mm": 822.9767456054688}
+{"route": "gru8", "epoch": 5, "updates": 95, "train_loss": 3.455333029429118, "val_mean_mm": 772.3740844726562}
+{"route": "gru8", "epoch": 6, "updates": 114, "train_loss": 3.192129440307617, "val_mean_mm": 801.4403076171875}
+{"route": "gru8", "epoch": 7, "updates": 133, "train_loss": 2.9053195889790855, "val_mean_mm": 745.9385375976562}
+{"route": "gru8", "epoch": 8, "updates": 152, "train_loss": 2.667786169052124, "val_mean_mm": 824.3877563476562}
+{"route": "gru8", "epoch": 9, "updates": 171, "train_loss": 2.4606337547302246, "val_mean_mm": 866.320556640625}
+{"route": "gru8", "epoch": 10, "updates": 190, "train_loss": 2.254455868403117, "val_mean_mm": 817.04150390625}
+{"route": "gru8", "epoch": 11, "updates": 209, "train_loss": 2.080421984990438, "val_mean_mm": 762.968994140625}
+{"route": "gru8", "epoch": 12, "updates": 228, "train_loss": 1.9445463943481445, "val_mean_mm": 796.88232421875}
+{"route": "gru8", "epoch": 13, "updates": 247, "train_loss": 1.7970266803105672, "val_mean_mm": 769.6296997070312}
+{"route": "gru8", "epoch": 14, "updates": 266, "train_loss": 1.7044023672739665, "val_mean_mm": 882.13720703125}
+{"route": "tcn4", "epoch": 1, "updates": 19, "train_loss": 5.493809960683187, "val_mean_mm": 684.7327880859375}
+{"route": "tcn4", "epoch": 2, "updates": 38, "train_loss": 3.8693134371439615, "val_mean_mm": 719.8623657226562}
+{"route": "tcn4", "epoch": 3, "updates": 57, "train_loss": 3.0422983741760254, "val_mean_mm": 794.5748291015625}
+{"route": "tcn4", "epoch": 4, "updates": 76, "train_loss": 2.4152229690551756, "val_mean_mm": 739.2246704101562}
+{"route": "tcn4", "epoch": 5, "updates": 95, "train_loss": 1.9583836714426677, "val_mean_mm": 808.0276489257812}
+{"route": "tcn4", "epoch": 6, "updates": 114, "train_loss": 1.663994108835856, "val_mean_mm": 745.4541625976562}
+{"route": "tcn4", "epoch": 7, "updates": 133, "train_loss": 1.507560362815857, "val_mean_mm": 858.4921875}
+{"route": "tcn4", "epoch": 8, "updates": 152, "train_loss": 1.3628388818105062, "val_mean_mm": 835.65771484375}
+{"route": "tcn4", "epoch": 9, "updates": 171, "train_loss": 1.2032413005828857, "val_mean_mm": 778.2631225585938}
+{"route": "tcn4", "epoch": 10, "updates": 190, "train_loss": 1.1493085034688313, "val_mean_mm": 837.532958984375}
+{"route": "tcn4", "epoch": 11, "updates": 209, "train_loss": 1.0072824430465699, "val_mean_mm": 781.2977905273438}
+{"route": "tcn4", "epoch": 12, "updates": 228, "train_loss": 0.9489241743087768, "val_mean_mm": 765.2301025390625}
+{"route": "tcn4", "epoch": 13, "updates": 247, "train_loss": 0.912462724049886, "val_mean_mm": 867.998779296875}
+/usr/local/lib/python3.13/dist-packages/torch/onnx/_internal/torchscript_exporter/jit_utils.py:308: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_node_shape_type_inference(node, params_dict, opset_version)
+/usr/local/lib/python3.13/dist-packages/torch/onnx/_internal/torchscript_exporter/utils.py:714: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_graph_shape_type_inference(
+/usr/local/lib/python3.13/dist-packages/torch/onnx/_internal/torchscript_exporter/utils.py:1187: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_graph_shape_type_inference(
+{"route": "tcn8", "epoch": 1, "updates": 19, "train_loss": 5.473708515167236, "val_mean_mm": 651.3739013671875}
+{"route": "tcn8", "epoch": 2, "updates": 38, "train_loss": 3.842073882420858, "val_mean_mm": 654.0445556640625}
+{"route": "tcn8", "epoch": 3, "updates": 57, "train_loss": 2.9517261823018393, "val_mean_mm": 735.9540405273438}
+{"route": "tcn8", "epoch": 4, "updates": 76, "train_loss": 2.2733356761932373, "val_mean_mm": 770.1720581054688}
+{"route": "tcn8", "epoch": 5, "updates": 95, "train_loss": 1.839085054397583, "val_mean_mm": 855.5398559570312}
+{"route": "tcn8", "epoch": 6, "updates": 114, "train_loss": 1.621706290245056, "val_mean_mm": 908.215087890625}
+{"route": "tcn8", "epoch": 7, "updates": 133, "train_loss": 1.3700052944819132, "val_mean_mm": 756.15576171875}
+{"route": "tcn8", "epoch": 8, "updates": 152, "train_loss": 1.2897750409444173, "val_mean_mm": 880.6179809570312}
+{"route": "tcn8", "epoch": 9, "updates": 171, "train_loss": 1.107584895292918, "val_mean_mm": 795.368408203125}
+{"route": "tcn8", "epoch": 10, "updates": 190, "train_loss": 1.0412901242574055, "val_mean_mm": 1023.9696655273438}
+{"route": "tcn8", "epoch": 11, "updates": 209, "train_loss": 0.923051594098409, "val_mean_mm": 891.353759765625}
+{"route": "tcn8", "epoch": 12, "updates": 228, "train_loss": 0.8886881844202678, "val_mean_mm": 866.2015380859375}
+{"route": "tcn8", "epoch": 13, "updates": 247, "train_loss": 0.8018548774719239, "val_mean_mm": 776.991455078125}

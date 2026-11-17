@@ -1,0 +1,65 @@
+{"route": "cnn1", "epoch": 0, "optimizer_updates": 0, "validation_xy_nll": 3.759888172149658, "train_xy_nll": null}
+/kaggle/working/input/train.py:178: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+  torch.onnx.export(cpu,dummy,str(folder/'camera_xy.onnx'),input_names=['rgb_window'],output_names=['location_logits'],opset_version=13,dynamo=False)
+{"route": "gru4", "epoch": 0, "optimizer_updates": 0, "validation_xy_nll": 3.759888172149658, "train_xy_nll": null}
+{"route": "gru4", "epoch": 1, "optimizer_updates": 16, "validation_xy_nll": 3.81245493888855, "train_xy_nll": 3.7560904564857482}
+{"route": "gru4", "epoch": 2, "optimizer_updates": 32, "validation_xy_nll": 3.874140739440918, "train_xy_nll": 3.7187462520599364}
+{"route": "gru4", "epoch": 3, "optimizer_updates": 48, "validation_xy_nll": 3.886795997619629, "train_xy_nll": 3.6941798458099364}
+{"route": "gru4", "epoch": 4, "optimizer_updates": 64, "validation_xy_nll": 3.9040472507476807, "train_xy_nll": 3.6770309190750123}
+{"route": "gru4", "epoch": 5, "optimizer_updates": 80, "validation_xy_nll": 3.943775177001953, "train_xy_nll": 3.657703347682953}
+{"route": "gru4", "epoch": 6, "optimizer_updates": 96, "validation_xy_nll": 3.9430534839630127, "train_xy_nll": 3.6373258266448976}
+{"route": "gru4", "epoch": 7, "optimizer_updates": 112, "validation_xy_nll": 3.976583242416382, "train_xy_nll": 3.623600525856018}
+{"route": "gru4", "epoch": 8, "optimizer_updates": 128, "validation_xy_nll": 4.016429901123047, "train_xy_nll": 3.6119156413078306}
+{"route": "gru4", "epoch": 9, "optimizer_updates": 144, "validation_xy_nll": 4.012988567352295, "train_xy_nll": 3.600292326927185}
+{"route": "gru4", "epoch": 10, "optimizer_updates": 160, "validation_xy_nll": 4.086434841156006, "train_xy_nll": 3.593547073841095}
+{"route": "gru4", "epoch": 11, "optimizer_updates": 176, "validation_xy_nll": 4.111607551574707, "train_xy_nll": 3.5865353107452393}
+{"route": "gru4", "epoch": 12, "optimizer_updates": 192, "validation_xy_nll": 4.058146953582764, "train_xy_nll": 3.579190559864044}
+/kaggle/working/input/train.py:178: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+  torch.onnx.export(cpu,dummy,str(folder/'camera_xy.onnx'),input_names=['rgb_window'],output_names=['location_logits'],opset_version=13,dynamo=False)
+/usr/local/lib/python3.13/dist-packages/torch/onnx/_internal/torchscript_exporter/symbolic_opset9.py:4571: UserWarning: Exporting a model to ONNX with a batch_size other than 1, with a variable length with GRU can cause an error when running the ONNX model with a different batch size. Make sure to save the model with a batch size of 1, or define the initial states (h0/c0) as inputs of the model. 
+  return _generic_rnn(
+{"route": "gru8", "epoch": 0, "optimizer_updates": 0, "validation_xy_nll": 3.759888172149658, "train_xy_nll": null}
+{"route": "gru8", "epoch": 1, "optimizer_updates": 16, "validation_xy_nll": 3.8181333541870117, "train_xy_nll": 3.7549587292671203}
+{"route": "gru8", "epoch": 2, "optimizer_updates": 32, "validation_xy_nll": 3.886819362640381, "train_xy_nll": 3.713868414402008}
+{"route": "gru8", "epoch": 3, "optimizer_updates": 48, "validation_xy_nll": 3.894902229309082, "train_xy_nll": 3.6899293193817138}
+{"route": "gru8", "epoch": 4, "optimizer_updates": 64, "validation_xy_nll": 3.9166412353515625, "train_xy_nll": 3.6687768664360045}
+{"route": "gru8", "epoch": 5, "optimizer_updates": 80, "validation_xy_nll": 3.998241901397705, "train_xy_nll": 3.641336857318878}
+{"route": "gru8", "epoch": 6, "optimizer_updates": 96, "validation_xy_nll": 4.023671627044678, "train_xy_nll": 3.6176343178749084}
+{"route": "gru8", "epoch": 7, "optimizer_updates": 112, "validation_xy_nll": 4.114530563354492, "train_xy_nll": 3.6044608316421507}
+{"route": "gru8", "epoch": 8, "optimizer_updates": 128, "validation_xy_nll": 4.131006240844727, "train_xy_nll": 3.5942241592407225}
+{"route": "gru8", "epoch": 9, "optimizer_updates": 144, "validation_xy_nll": 4.168811798095703, "train_xy_nll": 3.581720541000366}
+{"route": "gru8", "epoch": 10, "optimizer_updates": 160, "validation_xy_nll": 4.095502853393555, "train_xy_nll": 3.57328785943985}
+{"route": "gru8", "epoch": 11, "optimizer_updates": 176, "validation_xy_nll": 4.114495277404785, "train_xy_nll": 3.5638045144081114}
+{"route": "gru8", "epoch": 12, "optimizer_updates": 192, "validation_xy_nll": 4.20012903213501, "train_xy_nll": 3.557624972343445}
+{"route": "tcn4", "epoch": 0, "optimizer_updates": 0, "validation_xy_nll": 3.759888172149658, "train_xy_nll": null}
+{"route": "tcn4", "epoch": 1, "optimizer_updates": 16, "validation_xy_nll": 3.8529791831970215, "train_xy_nll": 3.748060106754303}
+{"route": "tcn4", "epoch": 2, "optimizer_updates": 32, "validation_xy_nll": 3.952528476715088, "train_xy_nll": 3.692187413692474}
+{"route": "tcn4", "epoch": 3, "optimizer_updates": 48, "validation_xy_nll": 3.9570181369781494, "train_xy_nll": 3.658307500362396}
+{"route": "tcn4", "epoch": 4, "optimizer_updates": 64, "validation_xy_nll": 3.9676568508148193, "train_xy_nll": 3.625073142528534}
+{"route": "tcn4", "epoch": 5, "optimizer_updates": 80, "validation_xy_nll": 4.037289619445801, "train_xy_nll": 3.5993481731414794}
+{"route": "tcn4", "epoch": 6, "optimizer_updates": 96, "validation_xy_nll": 4.013733386993408, "train_xy_nll": 3.5799917621612547}
+{"route": "tcn4", "epoch": 7, "optimizer_updates": 112, "validation_xy_nll": 3.9803102016448975, "train_xy_nll": 3.565373719215393}
+{"route": "tcn4", "epoch": 8, "optimizer_updates": 128, "validation_xy_nll": 3.9374611377716064, "train_xy_nll": 3.5548942427635195}
+{"route": "tcn4", "epoch": 9, "optimizer_updates": 144, "validation_xy_nll": 4.020613670349121, "train_xy_nll": 3.5435705556869506}
+{"route": "tcn4", "epoch": 10, "optimizer_updates": 160, "validation_xy_nll": 4.044940948486328, "train_xy_nll": 3.534150749206543}
+{"route": "tcn4", "epoch": 11, "optimizer_updates": 176, "validation_xy_nll": 4.077713966369629, "train_xy_nll": 3.528113874912262}
+{"route": "tcn4", "epoch": 12, "optimizer_updates": 192, "validation_xy_nll": 4.077230930328369, "train_xy_nll": 3.521720760822296}
+/usr/local/lib/python3.13/dist-packages/torch/onnx/_internal/torchscript_exporter/jit_utils.py:308: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_node_shape_type_inference(node, params_dict, opset_version)
+/usr/local/lib/python3.13/dist-packages/torch/onnx/_internal/torchscript_exporter/utils.py:714: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_graph_shape_type_inference(
+/usr/local/lib/python3.13/dist-packages/torch/onnx/_internal/torchscript_exporter/utils.py:1187: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_graph_shape_type_inference(
+{"route": "tcn8", "epoch": 0, "optimizer_updates": 0, "validation_xy_nll": 3.759888172149658, "train_xy_nll": null}
+{"route": "tcn8", "epoch": 1, "optimizer_updates": 16, "validation_xy_nll": 3.874394178390503, "train_xy_nll": 3.7452821407318115}
+{"route": "tcn8", "epoch": 2, "optimizer_updates": 32, "validation_xy_nll": 3.9614098072052, "train_xy_nll": 3.681838568687439}
+{"route": "tcn8", "epoch": 3, "optimizer_updates": 48, "validation_xy_nll": 4.033742904663086, "train_xy_nll": 3.637156949043274}
+{"route": "tcn8", "epoch": 4, "optimizer_updates": 64, "validation_xy_nll": 3.9862942695617676, "train_xy_nll": 3.6013933506011964}
+{"route": "tcn8", "epoch": 5, "optimizer_updates": 80, "validation_xy_nll": 4.061053276062012, "train_xy_nll": 3.575543209075928}
+{"route": "tcn8", "epoch": 6, "optimizer_updates": 96, "validation_xy_nll": 4.065999984741211, "train_xy_nll": 3.554244393825531}
+{"route": "tcn8", "epoch": 7, "optimizer_updates": 112, "validation_xy_nll": 4.129930019378662, "train_xy_nll": 3.5401717901229857}
+{"route": "tcn8", "epoch": 8, "optimizer_updates": 128, "validation_xy_nll": 4.0962324142456055, "train_xy_nll": 3.53090740776062}
+{"route": "tcn8", "epoch": 9, "optimizer_updates": 144, "validation_xy_nll": 4.01910400390625, "train_xy_nll": 3.5257985973358155}
+{"route": "tcn8", "epoch": 10, "optimizer_updates": 160, "validation_xy_nll": 4.136419296264648, "train_xy_nll": 3.5186400971412657}
+{"route": "tcn8", "epoch": 11, "optimizer_updates": 176, "validation_xy_nll": 4.199227809906006, "train_xy_nll": 3.5138264150619505}
+{"route": "tcn8", "epoch": 12, "optimizer_updates": 192, "validation_xy_nll": 4.211696624755859, "train_xy_nll": 3.508302740097046}

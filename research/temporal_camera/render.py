@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import random
 from pathlib import Path
 import sys
 
@@ -29,9 +30,16 @@ def main():
     with (out/'manifest.incomplete.jsonl').open('x',encoding='utf8') as f:
         for row in schedule(args.stage):
             trajectory_number=int(row['trajectory_id'].rsplit('tr',1)[1])
-            rec=json.loads(json.dumps(templates[(trajectory_number*10)%len(templates)]))
+            group,scenario_index=divmod(trajectory_number,10)
+            source_strata=list(range(10))
+            random.Random(20261117+group).shuffle(source_strata)
+            # Every trajectory group contains one source from each original
+            # RoadNet stratum. Source domain must not be an alias for split.
+            template_index=source_strata[scenario_index]*100+(group%10)*10
+            rec=json.loads(json.dumps(templates[template_index]))
             row['appearance_profile_id']=f"roadnet-scene-{rec['scene_seed']}-{row['lighting_profile']}"
             row['metadata']['source_appearance_scene_seed']=rec['scene_seed']
+            row['metadata']['source_stratum']=rec['stratum']
             meta=row['metadata'];target=row['camera_xy_target']
             rec.update(center=[target['camera_x_mm']/1000,target['camera_y_mm']/1000,meta['camera_z_mm']/1000],
                        camera_yaw_deg=meta['camera_yaw_deg'],camera_pitch_deg=0,camera_roll_deg=0,

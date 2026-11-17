@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import urllib.request
 
-from cloud import network
+from cloud import network,authenticate
 from cloud_provider import read_output, persist_output
 
 
@@ -16,7 +16,7 @@ def main():
     intent=json.loads((args.record/'SUBMISSION_INTENT.json').read_text())
     saved=json.loads((args.record/'KERNEL_SAVE_RESPONSE.json').read_text())
     from kaggle.api.kaggle_api_extended import KaggleApi
-    api=KaggleApi();api.authenticate();inventory=[]
+    api=KaggleApi();authenticate(api);inventory=[]
     with api.build_kaggle_client() as client:
         raw=read_output(client,saved['ref'].removeprefix('/code/'),saved['versionNumber'],intent['run_id']+'/MEMBERS.json',1024**2)
         members={r['name']:r for r in json.loads(raw)}
