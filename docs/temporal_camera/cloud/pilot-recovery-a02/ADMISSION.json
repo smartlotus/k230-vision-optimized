@@ -1,0 +1,12 @@
+{
+  "status": "INDEPENDENT_PUBLISHER_ADMITTED",
+  "run_id": "k230-camera-xy-multiroute-pilot-20261117-a02",
+  "input_manifest_sha256": "d406101f86dfb787a03e7b640789f127264f879cb6fed0d73c62c8b878cf2037",
+  "drive_marker_id": "1ENmIOn3ApNmrBTVUsmTQHhcEplZw0ugv",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "publisher_source_commit": "efc283f20ee254db38e37444526d40f6b49422e0",
+  "automatic_replay": false,
+  "prior_route_receipt_sha256": "32de55a28550aec044e57f6893ad35d25caf9351ccbf50de82c0897a0f28a6ed",
+  "scope": "Existing user-authorized same-scope K230 cloud-to-cloud publication",
+  "observed_utc": "2026-11-17T01:34:17.252736+00:00"
+}

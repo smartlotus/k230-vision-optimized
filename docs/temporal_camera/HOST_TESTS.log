@@ -1,0 +1,12 @@
+test_bad_target_and_timestamp_rejected (test_contracts.DatasetTests.test_bad_target_and_timestamp_rejected) ... ok
+test_split_leakage_rejected (test_contracts.DatasetTests.test_split_leakage_rejected) ... ok
+test_window_uses_one_trajectory_and_last_target (test_contracts.DatasetTests.test_window_uses_one_trajectory_and_last_target) ... ok
+test_hard_gate_requires_bounds_and_can_recover (test_contracts.FilterTests.test_hard_gate_requires_bounds_and_can_recover) ... ok
+test_lost_then_global_relocalizes (test_contracts.FilterTests.test_lost_then_global_relocalizes) ... ok
+test_timestamp_and_invalid_visual (test_contracts.FilterTests.test_timestamp_and_invalid_visual) ... ok
+test_unknown_motion_retains_global_support (test_contracts.FilterTests.test_unknown_motion_retains_global_support) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.052s
+
+OK

@@ -1,0 +1,25 @@
+{"route": "cnn1", "epoch": 1, "updates": 6, "train_loss": 6.385077232784695, "val_mean_mm": 992.3147583007812}
+{"route": "cnn1", "epoch": 2, "updates": 12, "train_loss": 6.237969938913981, "val_mean_mm": 992.0601806640625}
+{"route": "cnn1", "epoch": 3, "updates": 18, "train_loss": 5.926508246527778, "val_mean_mm": 648.5302124023438}
+{"route": "cnn1", "epoch": 4, "updates": 24, "train_loss": 5.3013878610399034, "val_mean_mm": 648.2804565429688}
+{"route": "cnn1", "epoch": 5, "updates": 30, "train_loss": 4.486042743259006, "val_mean_mm": 648.7006225585938}
+{"route": "cnn1", "epoch": 6, "updates": 36, "train_loss": 4.228617721133762, "val_mean_mm": 649.374755859375}
+{"route": "cnn1", "epoch": 7, "updates": 42, "train_loss": 4.210620964898004, "val_mean_mm": 649.0383911132812}
+{"route": "cnn1", "epoch": 8, "updates": 48, "train_loss": 4.145838091108534, "val_mean_mm": 648.6719360351562}
+{"route": "cnn1", "epoch": 9, "updates": 54, "train_loss": 4.120524925655789, "val_mean_mm": 648.7520751953125}
+{"route": "cnn1", "epoch": 10, "updates": 60, "train_loss": 4.1145585378011065, "val_mean_mm": 648.9990234375}
+{"route": "cnn1", "epoch": 11, "updates": 66, "train_loss": 4.10661875406901, "val_mean_mm": 648.9215698242188}
+{"route": "cnn1", "epoch": 12, "updates": 72, "train_loss": 4.104203987121582, "val_mean_mm": 648.7980346679688}
+{"route": "cnn1", "epoch": 13, "updates": 78, "train_loss": 4.100458823310005, "val_mean_mm": 648.9983520507812}
+{"route": "cnn1", "epoch": 14, "updates": 84, "train_loss": 4.099193625979954, "val_mean_mm": 648.8633422851562}
+{"route": "cnn1", "epoch": 15, "updates": 90, "train_loss": 4.1034884293874105, "val_mean_mm": 648.9560546875}
+{"route": "cnn1", "epoch": 16, "updates": 96, "train_loss": 4.097945668962267, "val_mean_mm": 649.0131225585938}
+/kaggle/working/input/train.py:117: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+  torch.onnx.export(cpu,example,str(folder/'camera_xy.onnx'),input_names=['rgb_window'],
+Traceback (most recent call last):
+  File "/kaggle/working/input/train.py", line 189, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/kaggle/working/input/train.py", line 119, in main
+    import onnxruntime as ort
+ModuleNotFoundError: No module named 'onnxruntime'

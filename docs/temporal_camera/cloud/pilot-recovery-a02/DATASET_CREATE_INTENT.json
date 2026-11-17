@@ -1,0 +1,10 @@
+{
+  "ref": "lotus30/k230-camera-xy-pilot-v1-20261117-a02",
+  "expected_version": 1,
+  "private": true,
+  "payload_sha256": "8c60ca4670b092354ad88c45a8bcd59c0a8e95f5922c4acf4c4954f2c2dcf936",
+  "payload_bytes": 68315706,
+  "input_manifest_sha256": "d406101f86dfb787a03e7b640789f127264f879cb6fed0d73c62c8b878cf2037",
+  "automatic_retry": false,
+  "observed_utc": "2026-11-17T01:34:41.398562+00:00"
+}

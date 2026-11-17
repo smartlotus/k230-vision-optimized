@@ -1,0 +1,54 @@
+{
+  "status": "ONNX_ORT_PASS",
+  "scope": "UNTRAINED_OPERATOR_SMOKE",
+  "route": "tcn",
+  "window": 8,
+  "parameters": 86362,
+  "input_shape": [
+    1,
+    24,
+    90,
+    160
+  ],
+  "output_shapes": [
+    [
+      1,
+      1,
+      24,
+      24
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "opset": 13,
+  "operators": [
+    "Add",
+    "Cast",
+    "Concat",
+    "Constant",
+    "ConstantOfShape",
+    "Conv",
+    "Gather",
+    "Gemm",
+    "Pad",
+    "ReduceMean",
+    "Relu",
+    "Reshape",
+    "Sigmoid",
+    "Slice",
+    "Transpose",
+    "Unsqueeze"
+  ],
+  "onnx_sha256": "b2980014b7bac2695ce5c51c9cabbbeea24ec751a5bf8142d815d41af5374454",
+  "torch_ort_max_abs": [
+    5.960464477539063e-08,
+    0.0
+  ],
+  "versions": {
+    "torch": "2.10.0",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.24.4"
+  }
+}

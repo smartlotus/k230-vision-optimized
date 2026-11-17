@@ -1,0 +1,25 @@
+{
+  "schema": "topface-cloud-transfer-binding-v1.1",
+  "run_id": "k230-camera-xy-multiroute-pilot-20261117-a01",
+  "archive": {
+    "name": "k230-camera-xy-multiroute-pilot-20261117-a01-08514b4da61f49c5.tar.gz",
+    "bytes": 1411552,
+    "sha256": "08514b4da61f49c5e6edb377cfd8cba405d301d0aa9ad7cfb12cd05f4fc77321"
+  },
+  "prep": {
+    "ref": "lotus30/k230-camera-xy-multiroute-pilot-a01",
+    "kernel_id": 145509345,
+    "version": 1,
+    "provider_status": "COMPLETE",
+    "source_sha256": "bb4a65bffce63ed21f2441ac2a1c9d7c8dc3a10701d0537fa6adfb6c773e0818"
+  },
+  "drive_file_id": "1mT49thSBXKDf_ZeAvnhLAucJ1f_tu3GY",
+  "folder_id": "1MwltNmaI24HjvcxnG1w608qui42RAPKf",
+  "head": "72aad7674025db337325608fabfd58986239f41d",
+  "branch": "ops/topface-transfer-1794878967061170300",
+  "secret_name": "TOPFACE_TRANSFER_1794878967061170300",
+  "publisher_source_commit": "efc283f20ee254db38e37444526d40f6b49422e0",
+  "created_utc": "2026-11-17T01:29:27.167487+00:00",
+  "automatic_replay": false,
+  "source_archive_path": "k230-camera-xy-multiroute-pilot-20261117-a01.tar.gz"
+}

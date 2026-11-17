@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "temporal-camera-v1-20261117",
+  "title": "Competition CameraXY temporal localization V1",
+  "paths": [
+    "research/temporal_camera",
+    "docs/temporal_camera",
+    ".ops/PROJECT.md"
+  ],
+  "lane": "serial",
+  "resources": [
+    "Kaggle-CameraXY"
+  ],
+  "depends": [],
+  "acceptance": [
+    "G0 asset integrity; actual CNN GRU TCN export and compiler smoke; camera-XY-only grouped trajectories; bounded Kaggle pilot and honest measured gates"
+  ],
+  "branch": "ops/temporal-camera-v1-20261117",
+  "state": "ready",
+  "claimed": true,
+  "agent": "codex",
+  "session": "temporal-v1-20261117-a",
+  "revision": 3,
+  "handoff": ".ops/handoffs/temporal-camera-v1-20261117/20261117T014627-7d48084a.json",
+  "updated_at": "2026-11-17T01:46:49+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source": "C:\\Users\\28389\\.codex\\skills\\ai-simulation-research\\references\\04-synthetic-data-and-perception.md",
+  "sha256": "21799634041024c3bbc396c377d081b1f951113697163782b9da84d2a375d335",
+  "verified_lessons": [
+    "trajectory grouping requires cross-split ownership audit",
+    "appearance identity binds actual rendering source",
+    "classification validation coverage uses actual window endpoints",
+    "shared sensor stress stream and matched grid decoding"
+  ],
+  "evidence": [
+    "../AUDIT_READOUT.md",
+    "../data/pilot-a03/QA.json",
+    "../../../../research/temporal_camera/test_contracts.py"
+  ],
+  "credentials_or_run_ids_added_to_skill": false
+}

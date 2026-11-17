@@ -1,0 +1,54 @@
+{
+  "status": "ONNX_ORT_PASS",
+  "scope": "UNTRAINED_OPERATOR_SMOKE",
+  "route": "gru",
+  "window": 8,
+  "parameters": 104258,
+  "input_shape": [
+    1,
+    24,
+    90,
+    160
+  ],
+  "output_shapes": [
+    [
+      1,
+      1,
+      24,
+      24
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "opset": 13,
+  "operators": [
+    "AveragePool",
+    "Concat",
+    "Constant",
+    "Conv",
+    "Expand",
+    "Flatten",
+    "GRU",
+    "Gather",
+    "Gemm",
+    "Relu",
+    "Reshape",
+    "Shape",
+    "Sigmoid",
+    "Squeeze",
+    "Transpose",
+    "Unsqueeze"
+  ],
+  "onnx_sha256": "70738373d7661453522702966edb9e9c37e17643fe4076a6d4e53ec45097c0b7",
+  "torch_ort_max_abs": [
+    7.450580596923828e-08,
+    0.0
+  ],
+  "versions": {
+    "torch": "2.10.0",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.24.4"
+  }
+}

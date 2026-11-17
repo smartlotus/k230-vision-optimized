@@ -1,0 +1,11 @@
+{
+  "blender": "5.3.0",
+  "scene_source_sha256": "45bcfd9380ca0713e48dec7b34b2b95d7790809786f1adc0b789ae0a47c4b541",
+  "map_sha256": "a464b51265024103ecd5042a504bc0b6267bdccdc67bd83a8e2398bb262c38bd",
+  "labels": "camera.matrix_world.translation x,y *1000 ONLY",
+  "resolution": [
+    160,
+    90
+  ],
+  "native_camera_validation": "NOT RUN"
+}

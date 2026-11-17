@@ -1,0 +1,27 @@
+{
+  "run_id": "k230-camera-xy-multiroute-pilot-20261117-a01",
+  "kernel": "lotus30/k230-camera-xy-multiroute-pilot-a01",
+  "dataset": "lotus30/k230-camera-xy-pilot-v1-20261117-a01",
+  "dataset_version": 1,
+  "notebook_file": "run.ipynb",
+  "notebook_sha256": "bb4a65bffce63ed21f2441ac2a1c9d7c8dc3a10701d0537fa6adfb6c773e0818",
+  "input_manifest_sha256": "8304d40db8b4f329aec3dec9be7efbe77b1610f844b6088e506955a9ad996b13",
+  "provider_max_seconds": 3000,
+  "publisher_admission_status": "QUALIFIED_AND_AUTHORIZED",
+  "publication_mode": "INDEPENDENT_CLOUD_PUBLISHER",
+  "automatic_retry": false,
+  "scientific_budget": {
+    "settings": [
+      "cnn1",
+      "gru4",
+      "gru8",
+      "tcn4",
+      "tcn8"
+    ],
+    "epochs_max_each": 60,
+    "early_stop_patience": 12,
+    "wall_seconds": 2400,
+    "seed": 117
+  },
+  "full_generation": "NOT RUN; requires pilot acceptance"
+}

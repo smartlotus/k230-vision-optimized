@@ -1,0 +1,36 @@
+{
+  "status": "COMPILE_AND_SIMULATOR_PASS",
+  "scope": "UNTRAINED_RANDOM_WEIGHT_OPERATOR_SMOKE_ONLY",
+  "compiler": {
+    "nncase": "2.11.0",
+    "nncase-kpu": "2.11.0"
+  },
+  "input_type": "float32",
+  "preprocess": false,
+  "normalization": "external RGB/255 ONCE",
+  "onnx_sha256": "0c78bf44ef67224cc759b43907e01bd24eb0226777462ab89520e9f59eca0230",
+  "kmodel_sha256": "d9f9f9ad85686b815b500f08f2f8e0fdd15919edba6a0de76fbc43814d4ec512",
+  "kmodel_bytes": 163768,
+  "host_simulator_seconds": 0.749846200022148,
+  "pairs": [
+    {
+      "shape": [
+        1,
+        1,
+        24,
+        24
+      ],
+      "max_abs": 0.0016084015369415283,
+      "mae": 0.0003842500736936927
+    },
+    {
+      "shape": [
+        1,
+        2
+      ],
+      "max_abs": 0.0032462477684020996,
+      "mae": 0.0031357109546661377
+    }
+  ],
+  "native_k230": "NOT RUN"
+}

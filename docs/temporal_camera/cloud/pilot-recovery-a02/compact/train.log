@@ -1,0 +1,107 @@
+/kaggle/working/input/train.py:129: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+  torch.onnx.export(cpu,example,str(folder/'camera_xy.onnx'),input_names=['rgb_window'],
+{"route": "gru4", "epoch": 1, "updates": 6, "train_loss": 6.3927437888251415, "val_mean_mm": 843.9794311523438}
+{"route": "gru4", "epoch": 2, "updates": 12, "train_loss": 6.1675291379292805, "val_mean_mm": 844.4781494140625}
+{"route": "gru4", "epoch": 3, "updates": 18, "train_loss": 5.426020071241591, "val_mean_mm": 649.3983764648438}
+{"route": "gru4", "epoch": 4, "updates": 24, "train_loss": 4.570314449734158, "val_mean_mm": 649.0272216796875}
+{"route": "gru4", "epoch": 5, "updates": 30, "train_loss": 4.291508600446913, "val_mean_mm": 648.5650024414062}
+{"route": "gru4", "epoch": 6, "updates": 36, "train_loss": 4.1905307133992515, "val_mean_mm": 648.7559814453125}
+{"route": "gru4", "epoch": 7, "updates": 42, "train_loss": 4.149925486246745, "val_mean_mm": 649.2459106445312}
+{"route": "gru4", "epoch": 8, "updates": 48, "train_loss": 4.127993244594998, "val_mean_mm": 648.9788818359375}
+{"route": "gru4", "epoch": 9, "updates": 54, "train_loss": 4.115629000133938, "val_mean_mm": 648.6642456054688}
+{"route": "gru4", "epoch": 10, "updates": 60, "train_loss": 4.111016146341959, "val_mean_mm": 648.8370361328125}
+{"route": "gru4", "epoch": 11, "updates": 66, "train_loss": 4.105114640129937, "val_mean_mm": 648.9389038085938}
+{"route": "gru4", "epoch": 12, "updates": 72, "train_loss": 4.104872290293375, "val_mean_mm": 648.8505249023438}
+{"route": "gru4", "epoch": 13, "updates": 78, "train_loss": 4.102721818288168, "val_mean_mm": 648.9486694335938}
+{"route": "gru4", "epoch": 14, "updates": 84, "train_loss": 4.101071908738878, "val_mean_mm": 648.8546142578125}
+{"route": "gru4", "epoch": 15, "updates": 90, "train_loss": 4.103095865249633, "val_mean_mm": 648.9584350585938}
+{"route": "gru4", "epoch": 16, "updates": 96, "train_loss": 4.0987971835666235, "val_mean_mm": 649.0469970703125}
+{"route": "gru4", "epoch": 17, "updates": 102, "train_loss": 4.099742931789822, "val_mean_mm": 648.716796875}
+/usr/local/lib/python3.13/dist-packages/torch/onnx/_internal/torchscript_exporter/symbolic_opset9.py:4571: UserWarning: Exporting a model to ONNX with a batch_size other than 1, with a variable length with GRU can cause an error when running the ONNX model with a different batch size. Make sure to save the model with a batch size of 1, or define the initial states (h0/c0) as inputs of the model. 
+  return _generic_rnn(
+{"route": "gru8", "epoch": 1, "updates": 6, "train_loss": 6.389224380917019, "val_mean_mm": 844.1715087890625}
+{"route": "gru8", "epoch": 2, "updates": 12, "train_loss": 6.120681805080838, "val_mean_mm": 1107.1219482421875}
+{"route": "gru8", "epoch": 3, "updates": 18, "train_loss": 5.236811531914605, "val_mean_mm": 648.8169555664062}
+{"route": "gru8", "epoch": 4, "updates": 24, "train_loss": 4.49957947201199, "val_mean_mm": 649.049072265625}
+{"route": "gru8", "epoch": 5, "updates": 30, "train_loss": 4.271978516048855, "val_mean_mm": 648.7275390625}
+{"route": "gru8", "epoch": 6, "updates": 36, "train_loss": 4.180772590637207, "val_mean_mm": 648.7618408203125}
+{"route": "gru8", "epoch": 7, "updates": 42, "train_loss": 4.146203454335531, "val_mean_mm": 649.1458129882812}
+{"route": "gru8", "epoch": 8, "updates": 48, "train_loss": 4.1283633126152885, "val_mean_mm": 648.9048461914062}
+{"route": "gru8", "epoch": 9, "updates": 54, "train_loss": 4.115918519761827, "val_mean_mm": 648.7123413085938}
+{"route": "gru8", "epoch": 10, "updates": 60, "train_loss": 4.112120850880941, "val_mean_mm": 648.906005859375}
+{"route": "gru8", "epoch": 11, "updates": 66, "train_loss": 4.106857819027371, "val_mean_mm": 648.9619750976562}
+{"route": "gru8", "epoch": 12, "updates": 72, "train_loss": 4.105619515313043, "val_mean_mm": 648.8171997070312}
+{"route": "gru8", "epoch": 13, "updates": 78, "train_loss": 4.103349208831787, "val_mean_mm": 648.9418334960938}
+{"route": "gru8", "epoch": 14, "updates": 84, "train_loss": 4.101921070946587, "val_mean_mm": 648.8779296875}
+{"route": "gru8", "epoch": 15, "updates": 90, "train_loss": 4.103840430577596, "val_mean_mm": 648.9481811523438}
+{"route": "gru8", "epoch": 16, "updates": 96, "train_loss": 4.099517732196384, "val_mean_mm": 649.031494140625}
+{"route": "gru8", "epoch": 17, "updates": 102, "train_loss": 4.100599204169379, "val_mean_mm": 648.7086791992188}
+{"route": "gru8", "epoch": 18, "updates": 108, "train_loss": 4.098976061079237, "val_mean_mm": 648.8234252929688}
+{"route": "gru8", "epoch": 19, "updates": 114, "train_loss": 4.098166762457954, "val_mean_mm": 649.0347290039062}
+{"route": "gru8", "epoch": 20, "updates": 120, "train_loss": 4.096668900383843, "val_mean_mm": 648.9714965820312}
+{"route": "gru8", "epoch": 21, "updates": 126, "train_loss": 4.096058781941732, "val_mean_mm": 648.9951171875}
+{"route": "gru8", "epoch": 22, "updates": 132, "train_loss": 4.096650123596191, "val_mean_mm": 648.5931396484375}
+{"route": "gru8", "epoch": 23, "updates": 138, "train_loss": 4.094702169630263, "val_mean_mm": 649.0421142578125}
+{"route": "gru8", "epoch": 24, "updates": 144, "train_loss": 4.094456577301026, "val_mean_mm": 649.1718139648438}
+{"route": "gru8", "epoch": 25, "updates": 150, "train_loss": 4.090825483534071, "val_mean_mm": 648.9578247070312}
+{"route": "gru8", "epoch": 26, "updates": 156, "train_loss": 4.091974237230089, "val_mean_mm": 648.6560668945312}
+{"route": "gru8", "epoch": 27, "updates": 162, "train_loss": 4.090530067019992, "val_mean_mm": 648.9600830078125}
+{"route": "gru8", "epoch": 28, "updates": 168, "train_loss": 4.091302627987332, "val_mean_mm": 648.8734741210938}
+{"route": "gru8", "epoch": 29, "updates": 174, "train_loss": 4.091447994444105, "val_mean_mm": 648.8567504882812}
+{"route": "gru8", "epoch": 30, "updates": 180, "train_loss": 4.090094078911675, "val_mean_mm": 648.9099731445312}
+{"route": "gru8", "epoch": 31, "updates": 186, "train_loss": 4.089248869154188, "val_mean_mm": 648.9109497070312}
+{"route": "gru8", "epoch": 32, "updates": 192, "train_loss": 4.088624986012777, "val_mean_mm": 648.8941650390625}
+{"route": "gru8", "epoch": 33, "updates": 198, "train_loss": 4.088696750005086, "val_mean_mm": 648.9000854492188}
+{"route": "gru8", "epoch": 34, "updates": 204, "train_loss": 4.087788221571181, "val_mean_mm": 648.8198852539062}
+{"route": "tcn4", "epoch": 1, "updates": 6, "train_loss": 6.330592272016737, "val_mean_mm": 648.5977172851562}
+{"route": "tcn4", "epoch": 2, "updates": 12, "train_loss": 5.758139440748427, "val_mean_mm": 648.6588134765625}
+{"route": "tcn4", "epoch": 3, "updates": 18, "train_loss": 4.77332157558865, "val_mean_mm": 649.7317504882812}
+{"route": "tcn4", "epoch": 4, "updates": 24, "train_loss": 4.320200570424398, "val_mean_mm": 658.251708984375}
+{"route": "tcn4", "epoch": 5, "updates": 30, "train_loss": 4.256419499715169, "val_mean_mm": 648.0194702148438}
+{"route": "tcn4", "epoch": 6, "updates": 36, "train_loss": 4.186686854892307, "val_mean_mm": 648.7057495117188}
+{"route": "tcn4", "epoch": 7, "updates": 42, "train_loss": 4.157044198777941, "val_mean_mm": 649.7062377929688}
+{"route": "tcn4", "epoch": 8, "updates": 48, "train_loss": 4.132195711135864, "val_mean_mm": 649.2050170898438}
+{"route": "tcn4", "epoch": 9, "updates": 54, "train_loss": 4.12012144724528, "val_mean_mm": 648.4779052734375}
+{"route": "tcn4", "epoch": 10, "updates": 60, "train_loss": 4.119152673085531, "val_mean_mm": 648.5333251953125}
+{"route": "tcn4", "epoch": 11, "updates": 66, "train_loss": 4.114642821417915, "val_mean_mm": 648.982666015625}
+{"route": "tcn4", "epoch": 12, "updates": 72, "train_loss": 4.114927683936225, "val_mean_mm": 649.1517944335938}
+{"route": "tcn4", "epoch": 13, "updates": 78, "train_loss": 4.111766380733914, "val_mean_mm": 648.9114379882812}
+{"route": "tcn4", "epoch": 14, "updates": 84, "train_loss": 4.108313783009847, "val_mean_mm": 648.6942749023438}
+{"route": "tcn4", "epoch": 15, "updates": 90, "train_loss": 4.11622772746616, "val_mean_mm": 649.042724609375}
+{"route": "tcn4", "epoch": 16, "updates": 96, "train_loss": 4.108833858701918, "val_mean_mm": 649.0785522460938}
+{"route": "tcn4", "epoch": 17, "updates": 102, "train_loss": 4.110644139183892, "val_mean_mm": 648.4406127929688}
+/usr/local/lib/python3.13/dist-packages/torch/onnx/_internal/torchscript_exporter/jit_utils.py:308: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_node_shape_type_inference(node, params_dict, opset_version)
+/usr/local/lib/python3.13/dist-packages/torch/onnx/_internal/torchscript_exporter/utils.py:714: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_graph_shape_type_inference(
+/usr/local/lib/python3.13/dist-packages/torch/onnx/_internal/torchscript_exporter/utils.py:1187: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_graph_shape_type_inference(
+{"route": "tcn8", "epoch": 1, "updates": 6, "train_loss": 6.3132737159729, "val_mean_mm": 648.5718994140625}
+{"route": "tcn8", "epoch": 2, "updates": 12, "train_loss": 5.5269662115308975, "val_mean_mm": 648.886474609375}
+{"route": "tcn8", "epoch": 3, "updates": 18, "train_loss": 4.687982474433051, "val_mean_mm": 648.8963623046875}
+{"route": "tcn8", "epoch": 4, "updates": 24, "train_loss": 4.329848215315077, "val_mean_mm": 649.125}
+{"route": "tcn8", "epoch": 5, "updates": 30, "train_loss": 4.231779278649224, "val_mean_mm": 648.4476318359375}
+{"route": "tcn8", "epoch": 6, "updates": 36, "train_loss": 4.182338947719998, "val_mean_mm": 649.1825561523438}
+{"route": "tcn8", "epoch": 7, "updates": 42, "train_loss": 4.1588666598002115, "val_mean_mm": 649.0470581054688}
+{"route": "tcn8", "epoch": 8, "updates": 48, "train_loss": 4.130755090713501, "val_mean_mm": 649.1182250976562}
+{"route": "tcn8", "epoch": 9, "updates": 54, "train_loss": 4.125902027553982, "val_mean_mm": 648.7208251953125}
+{"route": "tcn8", "epoch": 10, "updates": 60, "train_loss": 4.118929661644829, "val_mean_mm": 648.447509765625}
+{"route": "tcn8", "epoch": 11, "updates": 66, "train_loss": 4.116759363810221, "val_mean_mm": 648.9127197265625}
+{"route": "tcn8", "epoch": 12, "updates": 72, "train_loss": 4.116488774617513, "val_mean_mm": 649.3243408203125}
+{"route": "tcn8", "epoch": 13, "updates": 78, "train_loss": 4.114770550198025, "val_mean_mm": 648.9199829101562}
+{"route": "tcn8", "epoch": 14, "updates": 84, "train_loss": 4.108662668863932, "val_mean_mm": 648.4383544921875}
+{"route": "tcn8", "epoch": 15, "updates": 90, "train_loss": 4.120778645409478, "val_mean_mm": 649.0718994140625}
+{"route": "tcn8", "epoch": 16, "updates": 96, "train_loss": 4.109939135445488, "val_mean_mm": 649.3328857421875}
+{"route": "tcn8", "epoch": 17, "updates": 102, "train_loss": 4.1156906551784935, "val_mean_mm": 648.3597412109375}
+{"route": "tcn8", "epoch": 18, "updates": 108, "train_loss": 4.106099277072483, "val_mean_mm": 649.038330078125}
+{"route": "tcn8", "epoch": 19, "updates": 114, "train_loss": 4.115932242075602, "val_mean_mm": 649.3255615234375}
+{"route": "tcn8", "epoch": 20, "updates": 120, "train_loss": 4.106895160675049, "val_mean_mm": 648.804443359375}
+{"route": "tcn8", "epoch": 21, "updates": 126, "train_loss": 4.105361005995008, "val_mean_mm": 648.7335815429688}
+{"route": "tcn8", "epoch": 22, "updates": 132, "train_loss": 4.107143953111437, "val_mean_mm": 648.5526123046875}
+{"route": "tcn8", "epoch": 23, "updates": 138, "train_loss": 4.111452674865722, "val_mean_mm": 649.3501586914062}
+{"route": "tcn8", "epoch": 24, "updates": 144, "train_loss": 4.112137699127198, "val_mean_mm": 649.2896118164062}
+{"route": "tcn8", "epoch": 25, "updates": 150, "train_loss": 4.098228343327841, "val_mean_mm": 648.9170532226562}
+{"route": "tcn8", "epoch": 26, "updates": 156, "train_loss": 4.098507425520155, "val_mean_mm": 648.5866088867188}
+{"route": "tcn8", "epoch": 27, "updates": 162, "train_loss": 4.098015615675185, "val_mean_mm": 648.900390625}
+{"route": "tcn8", "epoch": 28, "updates": 168, "train_loss": 4.097798972659641, "val_mean_mm": 648.7445678710938}
+{"route": "tcn8", "epoch": 29, "updates": 174, "train_loss": 4.095821952819824, "val_mean_mm": 648.930908203125}

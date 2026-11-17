@@ -1,0 +1,733 @@
+{
+  "schema": "temporal-package-audit-v1",
+  "outer_archive": {
+    "bytes": 6043252,
+    "sha256": "ce4b8e342209b5948435635974a34feeebcfdac52586dd79adb600f0e118e691"
+  },
+  "existing_unpack_matches": [
+    {
+      "path": "ASSET_STATUS.md",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "COMPETITION_MULTI_ROUTE_PLAN.md",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "EXECUTION_AI_PROMPT.md",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "K230_DEPLOYMENT_GATES.md",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "LABEL_AND_RUNTIME_CONTRACT.md",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "OPEN_SOURCE_REUSE.md",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "README_START_HERE.md",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "ROUTE_COMPARISON.md",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "TEMPORAL_DATASET_SPEC.md",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2.zip",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package.zip",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "assets/K230_RoadNet_Boundary_Sim_Execution_Package.zip",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "assets/K230_TopFaceNet_Sim2Real_Execution_Package.zip",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "assets/k230_material_block_model_bundle.zip",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "assets/official-2027-task.pdf",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "assets/official-field-figure1.jpeg",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "configs/camera_profile.json",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "configs/field_map.json",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "configs/model_routes.json",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "configs/temporal_filter.json",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "models/temporal_models.py",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "references/LINKS_AND_EVIDENCE.md",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "scripts/build_sequence_manifest.py",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "src/__pycache__/temporal_grid_filter.cpython-313.pyc",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "src/temporal_grid_filter.py",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "tests/__pycache__/test_temporal_grid_filter.cpython-313.pyc",
+      "exists": true,
+      "sha256_pass": true
+    },
+    {
+      "path": "tests/test_temporal_grid_filter.py",
+      "exists": true,
+      "sha256_pass": true
+    }
+  ],
+  "unique_text_inventory": [
+    {
+      "path": "ASSET_STATUS.md",
+      "bytes": 420,
+      "sha256": "c84fd514141f22c3e0a6bacc9e92dade3501fcc546b7a15247f61d7efe3fe841",
+      "lines": 9
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/ASSET_REUSE_AND_GITHUB_RESEARCH.md",
+      "bytes": 6115,
+      "sha256": "d1649845e3569bb9df0c86bb3a938dffc19c5450913b91e12a163be3db890942",
+      "lines": 126
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/k230_material_block_model_bundle__unpacked/k230_material_block_model/material_block_parametric.scad",
+      "bytes": 1048,
+      "sha256": "92c645bff02ba045d840a49649965b34e19cf2695701a3be915f570743914d48",
+      "lines": 33
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/k230_material_block_model_bundle__unpacked/k230_material_block_model/model_validation.json",
+      "bytes": 1652,
+      "sha256": "611bf39e083cccb31ac79e29f593d64f9fcd22f94a3756a4e2cdbd02916fb5bb",
+      "lines": 88
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/k230_material_block_model_bundle__unpacked/k230_material_block_model/README.md",
+      "bytes": 1572,
+      "sha256": "79b7fa5f44980e46de1611cebefb1f24155c6992158c85b8052ece5601b03d31",
+      "lines": 37
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/k230_material_block_model_bundle__unpacked/k230_material_block_model/SHA256SUMS.json",
+      "bytes": 661,
+      "sha256": "04ff355086ab33ddee354199baf4e399b2ede4320590a50e1440369dd6bc65f5",
+      "lines": 9
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/ACCEPTANCE_TEST_PLAN.md",
+      "bytes": 2891,
+      "sha256": "73707749305a73278c154c6d28295c3001208ea41487e32f67f9e42f25ca2c95",
+      "lines": 66
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/assets/README.md",
+      "bytes": 432,
+      "sha256": "ebb798e35af2f30ee7c3aa1720a27ddb24465473efb174d391732781b9e8a2c7",
+      "lines": 8
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/blender/generate_field_scene.py",
+      "bytes": 11010,
+      "sha256": "7785ff54e448174813255b59bfb25910e0e40f0ec265b257556b91faeb728bc3",
+      "lines": 291
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/CAMERA_AND_RUNTIME_ARCHITECTURE.md",
+      "bytes": 5011,
+      "sha256": "10f72c0a8b818ee585e04e8ee0d877fee24d6b45878c026af52bbcbea566adfe",
+      "lines": 107
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/configs/field_layout.json",
+      "bytes": 2261,
+      "sha256": "ef4090c7f06f622b2b3250791958cbb9c834fe709d837c2462b64ee41696316b",
+      "lines": 132
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/configs/mipi_gc2093_profile.json",
+      "bytes": 648,
+      "sha256": "d77d1fd52d24219bee4aa1f8827dac2f81f67daae43e4b4462c9f104eff9cc24",
+      "lines": 24
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/configs/roadnet_classes.json",
+      "bytes": 586,
+      "sha256": "e48a197a87b8e72a86ec5bef01252a8425609e39990ddde29ef7474eba5c1275",
+      "lines": 19
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/configs/usb_ov2735_profile.json",
+      "bytes": 761,
+      "sha256": "332be053570b0adf4531c8ec289a911eacad7e1609e9fbf108e68033476c4c18",
+      "lines": 31
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/DATASET_AND_LABEL_SCHEMA.md",
+      "bytes": 2564,
+      "sha256": "19840494e386e314a7d5f3693326fe7f9ad38adb49b764d13688dc0d93940f3a",
+      "lines": 53
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/EXECUTION_AI_PROMPT.md",
+      "bytes": 10552,
+      "sha256": "b90fe2ce9dcff9b5a045ad2e95599fde9da47e5b92e857c9ce01feaa024192d6",
+      "lines": 232
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/OFFICIAL_FIELD_SPEC.md",
+      "bytes": 4536,
+      "sha256": "1ee369496130c3ef1ed22dbdcf0ded564c242174590670982979317b180abdbe",
+      "lines": 78
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/README_START_HERE.md",
+      "bytes": 2751,
+      "sha256": "c9cd4148336190346ac143ddc7bf0bb227f93a03620520bedf2f9ab1ea3ef129",
+      "lines": 51
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/requirements_sim.txt",
+      "bytes": 112,
+      "sha256": "b0f46f45496e4f15148396c29784d3a8e1f6d0db82659f9d23e0aca488dba97f",
+      "lines": 6
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/ROADNET_SIM2REAL_PLAN.md",
+      "bytes": 9918,
+      "sha256": "7706f8e71b17c97196170a8b5a77eca15891bdf6c90c6ec40b655daa2d602d30",
+      "lines": 215
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/scripts/generate_qr_payloads.py",
+      "bytes": 1877,
+      "sha256": "1f31b89cf3b19dfcd98db1f558c1caf47e3931413ded967a29ce85b7c279f645",
+      "lines": 45
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/SHA256SUMS.json",
+      "bytes": 1826,
+      "sha256": "cd0594f8a93435f69970e881d74f190f6ebe677e6d9be37298ed355c29f5fd02",
+      "lines": 20
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_TopFaceNet_Sim2Real_Execution_Package__unpacked/K230_TopFaceNet_Sim2Real_Execution_Package/EXECUTION_AI_PROMPT.md",
+      "bytes": 26069,
+      "sha256": "9fd2ed6add1bfe74a41fdf487e65d2c709959a30cc54634de78184ce93e4b1c9",
+      "lines": 501
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_TopFaceNet_Sim2Real_Execution_Package__unpacked/K230_TopFaceNet_Sim2Real_Execution_Package/EXECUTION_PLAN.md",
+      "bytes": 11251,
+      "sha256": "679da975974a8e482670ae6539c8f05c6392153df7dec35f46764126338a7c19",
+      "lines": 256
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_TopFaceNet_Sim2Real_Execution_Package__unpacked/K230_TopFaceNet_Sim2Real_Execution_Package/FACTS_AND_UNKNOWNS.md",
+      "bytes": 2933,
+      "sha256": "2920b91b25ab024703484f164c48f8d4fdb70b6b5ff85ba6ac35d3f6a2498f2b",
+      "lines": 69
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_TopFaceNet_Sim2Real_Execution_Package__unpacked/K230_TopFaceNet_Sim2Real_Execution_Package/GITHUB_RESEARCH.md",
+      "bytes": 8541,
+      "sha256": "3ba082cd91f53b83407f89a3598ff592cf81c3fc8bfe02933ab443e0f994939e",
+      "lines": 195
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_TopFaceNet_Sim2Real_Execution_Package__unpacked/K230_TopFaceNet_Sim2Real_Execution_Package/PACKAGE_SHA256SUMS.json",
+      "bytes": 1394,
+      "sha256": "80194bb3f94dc572344fa3fccb5be8791dabd5fa92b00fadae57aa5b22a4bb27",
+      "lines": 15
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_TopFaceNet_Sim2Real_Execution_Package__unpacked/K230_TopFaceNet_Sim2Real_Execution_Package/README_START_HERE.md",
+      "bytes": 1094,
+      "sha256": "ea541c5959c29e1d142ffb4c16ed3258272efa3b887f184fd48855b32532c297",
+      "lines": 26
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/CAMERAXY_LOCALIZATION_PLAN.md",
+      "bytes": 10937,
+      "sha256": "0906ba6850aaf3297bcc61baadf27a2d7bffde412664ca9324236f5730e110ed",
+      "lines": 214
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/configs/field_map_camera_xy.json",
+      "bytes": 1234,
+      "sha256": "619cd8ad8f910f29cca452f984170695664fe08367257f907ffb2b5256bcac57",
+      "lines": 54
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/configs/ov2735_camera_profile.json",
+      "bytes": 1031,
+      "sha256": "247d43eede32192d83b89f848c60daad9b4ede51af426f756f30159ec1bea75d",
+      "lines": 48
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/configs/reuse_manifest.json",
+      "bytes": 1356,
+      "sha256": "c93da2e0c0f4ed6dc9990f2dcbb0c37dd7d23ed9cf077c6804ab6cf18533ebaf",
+      "lines": 45
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/configs/sampling_profile.json",
+      "bytes": 930,
+      "sha256": "0862081fadab084ce9e4c15729617bc028a7e6ad90c0f59ecc7680463d8a0388",
+      "lines": 51
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/EXECUTION_AI_PROMPT.md",
+      "bytes": 9520,
+      "sha256": "b38118b2672d1a62c81101f48c4172ea14734805cec582ed4991df69d004cb67",
+      "lines": 226
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/EXPERIMENTS_AND_ACCEPTANCE.md",
+      "bytes": 2913,
+      "sha256": "f220acebc7170775564867ec30d907f349638164c8aee2fd1ca212f17d021f5f",
+      "lines": 63
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/LABEL_CONTRACT_AND_MAP_FRAME.md",
+      "bytes": 5331,
+      "sha256": "d30c4e87b60c73b0213eacfea9262eb614e02f623e141a82754c3d08f7971707",
+      "lines": 138
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/LEGACY_PACKAGE_SUPERSESSION.md",
+      "bytes": 620,
+      "sha256": "5816b2e7cb5c70bcbb4623b3c076713ea4a30c6fca088614b7d66bea0b07a586",
+      "lines": 13
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/README_START_HERE.md",
+      "bytes": 2719,
+      "sha256": "bd4248efcd45edc4f209e3ff714d925b3afd4db35225f2dd6b13a4e26a0f977c",
+      "lines": 55
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/references/RESEARCH_LINKS.md",
+      "bytes": 2689,
+      "sha256": "cc98f6e68a991dffe42a26d81a07106496ea18692f7eb41d4fc021f01781f2eb",
+      "lines": 25
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/scripts/sample_camera_xy.py",
+      "bytes": 3478,
+      "sha256": "3e36d2a12b6daa7074333c62ab616d3381cff06feb07ab1d2165e9cebdd13217",
+      "lines": 88
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/scripts/validate_camera_xy_manifest.py",
+      "bytes": 2019,
+      "sha256": "8191e0b2f34ce2540353e5f5139860153a68035bffd13a857a76a68396030a54",
+      "lines": 54
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/SHA256SUMS.json",
+      "bytes": 2128,
+      "sha256": "2e111d18cd41807e9b55ccc136884aa82a1fd53798b2543228a81e0dd526e540",
+      "lines": 22
+    },
+    {
+      "path": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/SIM2REAL_CALIBRATION.md",
+      "bytes": 1974,
+      "sha256": "94427e819b3132168c55682942c81d0021128f0e7d83721a69c38e9ea2c8d66b",
+      "lines": 47
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/ASSET_IMPORT_CHECKLIST.md",
+      "bytes": 894,
+      "sha256": "62a42b8955cce651fdbb16663d67fd69633c2cec45152cda19a2cc744b48c0e3",
+      "lines": 17
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/ASSET_REUSE_STATUS.md",
+      "bytes": 682,
+      "sha256": "61242c031cb97c7a93214a7bf42e98609deb72fe40bf9ec940c371870a6b1a7e",
+      "lines": 8
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/COMPETITION_ENGINEERING_PLAN.md",
+      "bytes": 2712,
+      "sha256": "076ceb913a64bbd2a926f6993b64e8083de131b6ff5c3bdd5805d36d7340c7f9",
+      "lines": 56
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/configs/field_map.json",
+      "bytes": 534,
+      "sha256": "cdb3b83fccd9e96931c4bad97f0483017e7f0a7b64c1638d2a2663bcbb72d0d9",
+      "lines": 31
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/configs/model_contract.json",
+      "bytes": 485,
+      "sha256": "293cc8a1d04c64907ef04b11485d0b45759e603c0aac02ec72339dd28ec6adfb",
+      "lines": 34
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/configs/temporal_filter_config.json",
+      "bytes": 772,
+      "sha256": "c1592660fcb3bb94488d17ca24f52b577f6f2f2f62738ba53925c968a7239f46",
+      "lines": 18
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/DATASET_SEQUENCE_SCHEMA.md",
+      "bytes": 995,
+      "sha256": "adac009b8b203b5d8742d318346fd4c4860cbe373637e8d08f8b8cfa774bbb2e",
+      "lines": 35
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/EXECUTION_AI_PROMPT.md",
+      "bytes": 4131,
+      "sha256": "54a2ca484de7c053525762595ad3a5cfcac840cde34d9e5cd1f8017f4748b4ce",
+      "lines": 92
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/MODEL_AND_RUNTIME_CONTRACT.md",
+      "bytes": 915,
+      "sha256": "7a2ebda951785092015fdc6fe4920c2092939bb96c42447d1baf8e5f8b9093e8",
+      "lines": 30
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/OPEN_SOURCE_REUSE.md",
+      "bytes": 2831,
+      "sha256": "bf08861fedce13c8fb635074c73ed972459c47a839841459b546d2fdeddfd5d2",
+      "lines": 44
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/README_START_HERE.md",
+      "bytes": 1503,
+      "sha256": "71488db949432da6cd063580e2404022a57368bfd0e370fcaa17d2f7b4c66e2a",
+      "lines": 34
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/references/OPEN_SOURCE_LINKS.md",
+      "bytes": 856,
+      "sha256": "cd5cef32fc941e6118e659176c76d2b1ce02d19519f4a25f880e8feac293aa05",
+      "lines": 8
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/requirements_host.txt",
+      "bytes": 12,
+      "sha256": "a83a2a4ed7ab2e022b9b8a83cfa2b8cf52cc243006c597e8b96f90a8365590ac",
+      "lines": 1
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/SHA256SUMS.json",
+      "bytes": 1859,
+      "sha256": "3f73aab52357bfdb412700f7afadfd45c3fa7d1f678e3fb1efe583778f539fd7",
+      "lines": 20
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/src/temporal_grid_filter.py",
+      "bytes": 7137,
+      "sha256": "125503d934bc40cc58348ed3c5359119773e3b76feb7b239ab2421b8c1855d91",
+      "lines": 168
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/TEMPORAL_FILTER_SPEC.md",
+      "bytes": 2026,
+      "sha256": "85fb5409fa76a4441a47f5cf2ec384b9afcd5cdca182cc4a8574368d0497d16b",
+      "lines": 45
+    },
+    {
+      "path": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/tests/test_temporal_grid_filter.py",
+      "bytes": 1624,
+      "sha256": "df4d9b7282d667e89abefd56530078f3d8eba70bc73fb597f95b800cff0a846e",
+      "lines": 46
+    },
+    {
+      "path": "COMPETITION_MULTI_ROUTE_PLAN.md",
+      "bytes": 4812,
+      "sha256": "afbff09020353562126e3da1dabe5d29ebed9b7ebfe6f030f8671f0609c2f7fb",
+      "lines": 108
+    },
+    {
+      "path": "configs/camera_profile.json",
+      "bytes": 444,
+      "sha256": "e8d3a96c53ace78327336b6d078da39cb6b975b25f448e7d66e087d51a435acc",
+      "lines": 18
+    },
+    {
+      "path": "configs/field_map.json",
+      "bytes": 585,
+      "sha256": "86ef11a3bad93fa98bdfc45975fd4cbc3fe42b4a90c62b237f18bb02230a7fe4",
+      "lines": 40
+    },
+    {
+      "path": "configs/model_routes.json",
+      "bytes": 787,
+      "sha256": "74a6e0f8051c27c313bf0c9b321c3b489990cbcd33d93552a743729df551e4ff",
+      "lines": 47
+    },
+    {
+      "path": "configs/temporal_filter.json",
+      "bytes": 319,
+      "sha256": "997c8cd4d0134ae1b192ee09db232ee44a0b164d00ebd4e7fccae996c8c197fd",
+      "lines": 11
+    },
+    {
+      "path": "EXECUTION_AI_PROMPT.md",
+      "bytes": 5322,
+      "sha256": "df8630936dec1fd1699fbaccd45ff0f06d95022e65b49aea936e84a5d9c7ca0d",
+      "lines": 122
+    },
+    {
+      "path": "K230_DEPLOYMENT_GATES.md",
+      "bytes": 1245,
+      "sha256": "72376b23b262d6c5321a666aafd845cc34d839bf056cd6b6bf0d9be200e48dda",
+      "lines": 31
+    },
+    {
+      "path": "LABEL_AND_RUNTIME_CONTRACT.md",
+      "bytes": 1323,
+      "sha256": "a1fbe8efdaa61e2615aad313813000e187bc6a9007431e448343847144f15f57",
+      "lines": 41
+    },
+    {
+      "path": "models/temporal_models.py",
+      "bytes": 3636,
+      "sha256": "fa42d33e1be43a668d962331f9d32d08dc7459a46d198901adbcfab7a286ccee",
+      "lines": 89
+    },
+    {
+      "path": "OPEN_SOURCE_REUSE.md",
+      "bytes": 2765,
+      "sha256": "d8857488f15f84f7bf60564bad9a721c7df3b27ae467533e43848dc6d787106f",
+      "lines": 61
+    },
+    {
+      "path": "README_START_HERE.md",
+      "bytes": 2885,
+      "sha256": "166ea56983c2e1c5582e48146ce05bb67ceb2502206577d128d14a6d2aebd9c1",
+      "lines": 66
+    },
+    {
+      "path": "references/LINKS_AND_EVIDENCE.md",
+      "bytes": 1488,
+      "sha256": "3a4492f5a5dca1fd3e6226e4bef6f4d7e660c66bf8fe1e9ce670da7e001eeec6",
+      "lines": 27
+    },
+    {
+      "path": "ROUTE_COMPARISON.md",
+      "bytes": 2149,
+      "sha256": "312e39943407131d1036dc71411e48c3627bb7af6d80a83a0244dfcac23723c9",
+      "lines": 24
+    },
+    {
+      "path": "scripts/build_sequence_manifest.py",
+      "bytes": 1873,
+      "sha256": "ffb44ee776dd6285bbaea6e7bee0d9e64b9920fca9cdcf093bfe14d703b3f817",
+      "lines": 43
+    },
+    {
+      "path": "SHA256SUMS.json",
+      "bytes": 2903,
+      "sha256": "f2d447e7bac49ea1d99b7024bdc0d22203adffc3f0d4f97f99ef231a493459d4",
+      "lines": 29
+    },
+    {
+      "path": "TEMPORAL_DATASET_SPEC.md",
+      "bytes": 1257,
+      "sha256": "7fcdaa0e240105858e03989401e8b0f2a63f6aef54b3a7cb8608ec55490cb9ef",
+      "lines": 33
+    },
+    {
+      "path": "tests/test_temporal_grid_filter.py",
+      "bytes": 889,
+      "sha256": "b1c45ea0136bd7689d80b8c58ae7934ca06aca7d8ed39548cfe14bba9669e36f",
+      "lines": 21
+    }
+  ],
+  "artifact_note": "Package contains starter code/CAD/plans only, no trained cameraXY weights, ONNX, KModel or .blend.",
+  "hash_manifest_checks": [
+    {
+      "manifest": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/k230_material_block_model_bundle__unpacked/k230_material_block_model/SHA256SUMS.json",
+      "members": 7,
+      "pass_count": 7,
+      "failures": []
+    },
+    {
+      "manifest": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/assets/k230_material_block_model_bundle__unpacked/k230_material_block_model/SHA256SUMS.json",
+      "members": 7,
+      "pass_count": 7,
+      "failures": []
+    },
+    {
+      "manifest": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/SHA256SUMS.json",
+      "members": 18,
+      "pass_count": 18,
+      "failures": []
+    },
+    {
+      "manifest": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_TopFaceNet_Sim2Real_Execution_Package__unpacked/K230_TopFaceNet_Sim2Real_Execution_Package/assets/material_block/SHA256SUMS.json",
+      "members": 7,
+      "pass_count": 7,
+      "failures": []
+    },
+    {
+      "manifest": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/assets/K230_TopFaceNet_Sim2Real_Execution_Package__unpacked/K230_TopFaceNet_Sim2Real_Execution_Package/PACKAGE_SHA256SUMS.json",
+      "members": 13,
+      "pass_count": 13,
+      "failures": []
+    },
+    {
+      "manifest": "assets/K230_CameraXY_Localization_Training_Package_V2__unpacked/K230_CameraXY_Localization_Training_Package_V2/SHA256SUMS.json",
+      "members": 20,
+      "pass_count": 20,
+      "failures": []
+    },
+    {
+      "manifest": "assets/K230_Competition_Temporal_Camera_Localization_Package__unpacked/K230_Competition_Temporal_Camera_Localization_Package/SHA256SUMS.json",
+      "members": 18,
+      "pass_count": 18,
+      "failures": []
+    },
+    {
+      "manifest": "assets/k230_material_block_model_bundle__unpacked/k230_material_block_model/SHA256SUMS.json",
+      "members": 7,
+      "pass_count": 7,
+      "failures": []
+    },
+    {
+      "manifest": "assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/assets/k230_material_block_model_bundle__unpacked/k230_material_block_model/SHA256SUMS.json",
+      "members": 7,
+      "pass_count": 7,
+      "failures": []
+    },
+    {
+      "manifest": "assets/K230_RoadNet_Boundary_Sim_Execution_Package__unpacked/K230_RoadNet_Boundary_Sim_Execution_Package/SHA256SUMS.json",
+      "members": 18,
+      "pass_count": 18,
+      "failures": []
+    },
+    {
+      "manifest": "assets/K230_TopFaceNet_Sim2Real_Execution_Package__unpacked/K230_TopFaceNet_Sim2Real_Execution_Package/assets/material_block/SHA256SUMS.json",
+      "members": 7,
+      "pass_count": 7,
+      "failures": []
+    },
+    {
+      "manifest": "assets/K230_TopFaceNet_Sim2Real_Execution_Package__unpacked/K230_TopFaceNet_Sim2Real_Execution_Package/PACKAGE_SHA256SUMS.json",
+      "members": 13,
+      "pass_count": 13,
+      "failures": []
+    },
+    {
+      "manifest": "SHA256SUMS.json",
+      "members": 27,
+      "pass_count": 27,
+      "failures": []
+    }
+  ],
+  "all_manifest_checks_pass": true,
+  "cad_measured": {
+    "stl_triangles": 19518,
+    "stl_units": "mm",
+    "stl_bounds": [
+      [
+        -24.99968910217285,
+        -24.999921798706055,
+        0.0
+      ],
+      [
+        25.0,
+        24.999921798706055,
+        60.0
+      ]
+    ],
+    "glb_position_bounds_m": [
+      [
+        -0.02499968931078911,
+        -0.024999922141432762,
+        0.0
+      ],
+      [
+        0.02500000037252903,
+        0.024999922141432762,
+        0.05999999865889549
+      ]
+    ]
+  },
+  "sequence_split_probe": {
+    "source": "K230_Temporal_Camera_Localization_MultiRoute_Package/scripts/build_sequence_manifest.py",
+    "status": "DEFECT_REPRODUCED",
+    "source_exit_code": 0,
+    "input_frames": 8,
+    "trajectory": "same",
+    "input_splits": [
+      "train",
+      "val"
+    ],
+    "output_sequences": 2,
+    "duplicate_sequence_id": "same_0000000",
+    "input": "split-leak-probe.jsonl",
+    "output": "split-leak-probe-sequences.jsonl"
+  }
+}

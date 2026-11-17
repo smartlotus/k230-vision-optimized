@@ -1,0 +1,27 @@
+[
+  {
+    "name": "RESULT.json",
+    "bytes": 527,
+    "sha256": "6affdf3de1b1781e2c7adc16be0aad0ebee93ea2dc5f4b40dba4631c5904f1b7"
+  },
+  {
+    "name": "k230-camera-xy-multiroute-pilot-20261117-a01/COMPUTE.json",
+    "bytes": 337,
+    "sha256": "26080a7bfe1491925a11936a28f0f684ff15cce6bb001a0b793c156316b781c1"
+  },
+  {
+    "name": "k230-camera-xy-multiroute-pilot-20261117-a01/train.log",
+    "bytes": 2606,
+    "sha256": "0f30bcdaee0f440c7c692db74bab1bb07a8fe7061e865c69fd4e19bc359aad9d"
+  },
+  {
+    "name": "k230-camera-xy-multiroute-pilot-20261117-a01/models/COMPARISON.json",
+    "available": false,
+    "error_type": "HTTPError"
+  },
+  {
+    "name": "k230-camera-xy-multiroute-pilot-20261117-a01/models/PILOT_GATE.json",
+    "available": false,
+    "error_type": "HTTPError"
+  }
+]

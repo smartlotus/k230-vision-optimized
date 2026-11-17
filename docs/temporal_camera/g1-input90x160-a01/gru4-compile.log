@@ -1,0 +1,8 @@
+Unhandled exception. System.InvalidOperationException: Only The Expr Have CheckedType Can Get It's Shape
+   at Nncase.IR.Expr.get_CheckedShape()
+   at Nncase.Importer.OnnxImporter.VisitTranspose(NodeProto op)
+   at Nncase.Importer.OnnxImporter.Visit(NodeProto op)
+   at Nncase.Importer.OnnxImporter.ConvertOp()
+   at Nncase.BaseImporter.Import()
+   at Nncase.Importers.ImportOnnx(Stream onnx, CompileSession compileSession)
+   at Nncase.Compiler.Interop.CApi.CompilerImportOnnxModule(IntPtr compilerHandle, IntPtr streamHandle)

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "frames": 100,
+  "splits": {
+    "train": 70,
+    "val": 10,
+    "test": 20
+  },
+  "trajectories": 10,
+  "split_group_counts": {
+    "trajectory_id": 10,
+    "spatial_block_id": 10,
+    "pose_group_id": 97,
+    "appearance_profile_id": 10
+  },
+  "scenario_counts": {
+    "straight": 10,
+    "turn": 10,
+    "intersection": 10,
+    "repeated_road": 10,
+    "frame_drop": 10,
+    "variable_speed": 10,
+    "blur": 10,
+    "relocalization": 10,
+    "stop_start": 10,
+    "lighting": 10
+  }
+}

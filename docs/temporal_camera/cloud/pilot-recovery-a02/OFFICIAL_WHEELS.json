@@ -1,0 +1,20 @@
+[
+  {
+    "name": "onnxruntime-1.24.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "bytes": 17222993,
+    "sha256": "e54ad52e61d2d4618dcff8fa1480ac66b24ee2eab73331322db1049f11ccf330",
+    "source": "official PyPI onnxruntime1.24.4"
+  },
+  {
+    "name": "onnxruntime-1.24.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "bytes": 17244912,
+    "sha256": "0d640eb9f3782689b55cfa715094474cd5662f2f137be6a6f847a594b6e9705c",
+    "source": "official PyPI onnxruntime1.24.4"
+  },
+  {
+    "name": "onnxruntime-1.24.4-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "bytes": 17244738,
+    "sha256": "e30c972bc02e072911aabb6891453ec73795386c0af2b761b65444b8a4c4745f",
+    "source": "official PyPI onnxruntime1.24.4"
+  }
+]

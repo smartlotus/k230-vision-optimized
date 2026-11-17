@@ -1,0 +1,272 @@
+[
+  {
+    "status": "ONNX_ORT_PASS",
+    "scope": "UNTRAINED_OPERATOR_SMOKE",
+    "route": "cnn",
+    "window": 1,
+    "parameters": 79298,
+    "input_shape": [
+      1,
+      3,
+      90,
+      160
+    ],
+    "output_shapes": [
+      [
+        1,
+        1,
+        24,
+        24
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "opset": 13,
+    "operators": [
+      "AveragePool",
+      "Constant",
+      "Conv",
+      "Flatten",
+      "Gather",
+      "Gemm",
+      "Relu",
+      "Reshape",
+      "Sigmoid"
+    ],
+    "onnx_sha256": "0401b3a606b52724307705741fbe5cb1fd5fdec1f7ea6a1a5beea6b6713f8711",
+    "torch_ort_max_abs": [
+      1.862645149230957e-08,
+      5.960464477539063e-08
+    ],
+    "versions": {
+      "torch": "2.10.0",
+      "onnx": "1.17.0",
+      "onnxruntime": "1.24.4"
+    },
+    "compile_exit_code": 0
+  },
+  {
+    "status": "ONNX_ORT_PASS",
+    "scope": "UNTRAINED_OPERATOR_SMOKE",
+    "route": "gru",
+    "window": 4,
+    "parameters": 104258,
+    "input_shape": [
+      1,
+      12,
+      90,
+      160
+    ],
+    "output_shapes": [
+      [
+        1,
+        1,
+        24,
+        24
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "opset": 13,
+    "operators": [
+      "AveragePool",
+      "Concat",
+      "Constant",
+      "Conv",
+      "Expand",
+      "Flatten",
+      "GRU",
+      "Gather",
+      "Gemm",
+      "Relu",
+      "Reshape",
+      "Shape",
+      "Sigmoid",
+      "Squeeze",
+      "Transpose",
+      "Unsqueeze"
+    ],
+    "onnx_sha256": "ac389e818399e1161b684100c380b85e88c2d903d69cac7c66eb2a38db7fa4b5",
+    "torch_ort_max_abs": [
+      5.960464477539063e-08,
+      2.9802322387695312e-08
+    ],
+    "versions": {
+      "torch": "2.10.0",
+      "onnx": "1.17.0",
+      "onnxruntime": "1.24.4"
+    },
+    "compile_exit_code": 3762504530
+  },
+  {
+    "status": "ONNX_ORT_PASS",
+    "scope": "UNTRAINED_OPERATOR_SMOKE",
+    "route": "tcn",
+    "window": 4,
+    "parameters": 116354,
+    "input_shape": [
+      1,
+      12,
+      90,
+      160
+    ],
+    "output_shapes": [
+      [
+        1,
+        1,
+        24,
+        24
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "opset": 13,
+    "operators": [
+      "Add",
+      "AveragePool",
+      "Cast",
+      "Concat",
+      "Constant",
+      "ConstantOfShape",
+      "Conv",
+      "Flatten",
+      "Gather",
+      "Gemm",
+      "Pad",
+      "Relu",
+      "Reshape",
+      "Sigmoid",
+      "Slice",
+      "Transpose",
+      "Unsqueeze"
+    ],
+    "onnx_sha256": "0c78bf44ef67224cc759b43907e01bd24eb0226777462ab89520e9f59eca0230",
+    "torch_ort_max_abs": [
+      3.3527612686157227e-08,
+      0.0
+    ],
+    "versions": {
+      "torch": "2.10.0",
+      "onnx": "1.17.0",
+      "onnxruntime": "1.24.4"
+    },
+    "compile_exit_code": 0
+  },
+  {
+    "status": "ONNX_ORT_PASS",
+    "scope": "UNTRAINED_OPERATOR_SMOKE",
+    "route": "gru",
+    "window": 8,
+    "parameters": 104258,
+    "input_shape": [
+      1,
+      24,
+      90,
+      160
+    ],
+    "output_shapes": [
+      [
+        1,
+        1,
+        24,
+        24
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "opset": 13,
+    "operators": [
+      "AveragePool",
+      "Concat",
+      "Constant",
+      "Conv",
+      "Expand",
+      "Flatten",
+      "GRU",
+      "Gather",
+      "Gemm",
+      "Relu",
+      "Reshape",
+      "Shape",
+      "Sigmoid",
+      "Squeeze",
+      "Transpose",
+      "Unsqueeze"
+    ],
+    "onnx_sha256": "70738373d7661453522702966edb9e9c37e17643fe4076a6d4e53ec45097c0b7",
+    "torch_ort_max_abs": [
+      7.450580596923828e-08,
+      0.0
+    ],
+    "versions": {
+      "torch": "2.10.0",
+      "onnx": "1.17.0",
+      "onnxruntime": "1.24.4"
+    },
+    "compile_exit_code": 3762504530
+  },
+  {
+    "status": "ONNX_ORT_PASS",
+    "scope": "UNTRAINED_OPERATOR_SMOKE",
+    "route": "tcn",
+    "window": 8,
+    "parameters": 116354,
+    "input_shape": [
+      1,
+      24,
+      90,
+      160
+    ],
+    "output_shapes": [
+      [
+        1,
+        1,
+        24,
+        24
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "opset": 13,
+    "operators": [
+      "Add",
+      "AveragePool",
+      "Cast",
+      "Concat",
+      "Constant",
+      "ConstantOfShape",
+      "Conv",
+      "Flatten",
+      "Gather",
+      "Gemm",
+      "Pad",
+      "Relu",
+      "Reshape",
+      "Sigmoid",
+      "Slice",
+      "Transpose",
+      "Unsqueeze"
+    ],
+    "onnx_sha256": "d6f559778671053214de6f84502acd3b70eee11058d4d7f1adc2daed0f7e03ea",
+    "torch_ort_max_abs": [
+      3.725290298461914e-08,
+      0.0
+    ],
+    "versions": {
+      "torch": "2.10.0",
+      "onnx": "1.17.0",
+      "onnxruntime": "1.24.4"
+    },
+    "compile_exit_code": 0
+  }
+]

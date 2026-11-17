@@ -1,0 +1,13 @@
+{
+  "scope": "HOST_CPU_ONLY_NOT_K230",
+  "updates": 1000,
+  "grid": [
+    24,
+    24
+  ],
+  "mean_ms": 0.1439049995969981,
+  "p95_ms": 0.15462498558918011,
+  "max_ms": 0.27619997854344547,
+  "hard_gate": false,
+  "native_k230": "NOT RUN"
+}

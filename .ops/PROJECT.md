@@ -1,5 +1,9 @@
 # K230 Vision Optimized
 
+## CameraXY temporal competition V1 (2026-11-17)
+
+Isolated checkout: `C:/Users/28389/Desktop/k230-temporal-camera-v1`, branch `ops/temporal-camera-v1-20261117`. Module and evidence entry: [docs/temporal_camera/README.md](../docs/temporal_camera/README.md). OPS task `temporal-camera-v1-20261117`; source in `research/temporal_camera`, frozen provider state in `docs/temporal_camera/cloud`. Preserve other task pauses and accepted production code. Only camera_x_mm/camera_y_mm supervise training; no yaw, chassis labels or installation offset. Training runs on Kaggle; preserve exact original saved source/version and publisher identity. All unexecuted physical tests remain NOT RUN. This section does not change TopFace's existing ownership or board session.
+
 ## 当前接续入口
 
 - 当前实现：`C:/Users/28389/Desktop/k230-topface-production`，分支 `ops/topface-production-fps-20261116`，私有远端 `smartlotus/k230-vision-optimized`。

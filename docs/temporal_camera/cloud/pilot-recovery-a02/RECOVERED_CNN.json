@@ -1,0 +1,31 @@
+{
+  "source": {
+    "ref": "/code/lotus30/k230-camera-xy-multiroute-pilot-a01",
+    "url": "https://www.kaggle.com/code/lotus30/k230-camera-xy-multiroute-pilot-a01",
+    "versionNumber": 1,
+    "kernelId": 145509345
+  },
+  "files": [
+    {
+      "name": "models/cnn1/best.pt",
+      "bytes": 636345,
+      "sha256": "c6d5107d91aadce24be4f7ff3aa9e43143bd24e29a9cfe49f6b09c28de53f14c"
+    },
+    {
+      "name": "models/cnn1/last.pt",
+      "bytes": 636345,
+      "sha256": "fe813090b8734190a660fd1bf7a99e8efbbe8596092c53adf17c40fc5fff944b"
+    },
+    {
+      "name": "models/cnn1/history.json",
+      "bytes": 1892,
+      "sha256": "7ccda11d62c131e85c19ed810c05524a3e1821aa436e95cbfd4a3f55b38d753f"
+    },
+    {
+      "name": "models/cnn1/camera_xy.onnx",
+      "bytes": 202746,
+      "sha256": "9c4d6b26438c0f1165eecc3345e99ff156413374bbb61666080bebadebe2ada0"
+    }
+  ],
+  "automatic_replay": false
+}

@@ -1,0 +1,15 @@
+{
+  "id": "lotus30/k230-camera-xy-multiroute-pilot-a02",
+  "title": "K230 Camera XY Multiroute Pilot A02",
+  "code_file": "run.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "dataset_sources": [
+    "lotus30/k230-camera-xy-pilot-v1-20261117-a02/1"
+  ],
+  "kernel_sources": [],
+  "competition_sources": []
+}

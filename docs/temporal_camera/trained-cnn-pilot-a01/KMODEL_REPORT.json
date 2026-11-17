@@ -1,0 +1,770 @@
+{
+  "status": "COMPILE_AND_SIMULATOR_PASS",
+  "scope": "TRAINED_PILOT_NOT_COMPETITION_ACCEPTANCE",
+  "versions": {
+    "nncase": "2.11.0",
+    "nncase-kpu": "2.11.0"
+  },
+  "onnx_sha256": "9c4d6b26438c0f1165eecc3345e99ff156413374bbb61666080bebadebe2ada0",
+  "kmodel_sha256": "17502909447eed8c1a95bbe98f3bba12bcc211bbf1b607186b02d237260ef8de",
+  "kmodel_bytes": 81520,
+  "dataset_manifest_sha256": "ed7c15317e2d3628018f669522e3f2304a78f927930f13742c756e51fe1415e4",
+  "input": {
+    "shape": [
+      1,
+      3,
+      90,
+      160
+    ],
+    "type": "float32",
+    "layout": "packed RGB history channels NCHW",
+    "normalization": "external RGB /255 once; compiler preprocess=False"
+  },
+  "calibration_ids": [
+    "pilot-tr00000-007",
+    "pilot-tr00003-007",
+    "pilot-tr00006-007",
+    "pilot-tr00009-007",
+    "pilot-tr00012-007",
+    "pilot-tr00015-007",
+    "pilot-tr00018-007",
+    "pilot-tr00021-007",
+    "pilot-tr00024-007",
+    "pilot-tr00027-007",
+    "pilot-tr00030-007",
+    "pilot-tr00033-007",
+    "pilot-tr00036-007",
+    "pilot-tr00039-007",
+    "pilot-tr00042-007",
+    "pilot-tr00045-007",
+    "pilot-tr00048-007",
+    "pilot-tr00051-007",
+    "pilot-tr00054-007",
+    "pilot-tr00057-007"
+  ],
+  "calibration_split": "train ONLY",
+  "evaluation_count": 60,
+  "pairs": [
+    {
+      "sample_id": "pilot-tr00080-007",
+      "trajectory_id": "pilot-tr00080",
+      "onnx_error_mm": 449.69027935551804,
+      "kmodel_error_mm": 449.42593194618144,
+      "host_simulator_seconds": 0.26435149999451824,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0027210505213588476,
+        0.0017752349376678467
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00080-008",
+      "trajectory_id": "pilot-tr00080",
+      "onnx_error_mm": 433.533049001096,
+      "kmodel_error_mm": 433.27427088902357,
+      "host_simulator_seconds": 0.2886638999916613,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0027369011659175158,
+        0.001774713397026062
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00080-009",
+      "trajectory_id": "pilot-tr00080",
+      "onnx_error_mm": 418.7477726563386,
+      "kmodel_error_mm": 418.4957663686005,
+      "host_simulator_seconds": 0.31510419998085126,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002742681186646223,
+        0.0017745345830917358
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00081-007",
+      "trajectory_id": "pilot-tr00081",
+      "onnx_error_mm": 24.674119462684974,
+      "kmodel_error_mm": 24.911247876548252,
+      "host_simulator_seconds": 0.32720859997789375,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0026143030263483524,
+        0.00177842378616333
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00081-008",
+      "trajectory_id": "pilot-tr00081",
+      "onnx_error_mm": 33.25642251790779,
+      "kmodel_error_mm": 33.327463975852496,
+      "host_simulator_seconds": 0.29059270001016557,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002612719312310219,
+        0.0017783939838409424
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00081-009",
+      "trajectory_id": "pilot-tr00081",
+      "onnx_error_mm": 52.999760549185204,
+      "kmodel_error_mm": 52.99646689826008,
+      "host_simulator_seconds": 0.34588340000482276,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0026026612613350153,
+        0.001778438687324524
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00082-007",
+      "trajectory_id": "pilot-tr00082",
+      "onnx_error_mm": 92.83364626079582,
+      "kmodel_error_mm": 93.03901433593997,
+      "host_simulator_seconds": 0.27409009999246337,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0026276004500687122,
+        0.0017776340246200562
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00082-008",
+      "trajectory_id": "pilot-tr00082",
+      "onnx_error_mm": 69.49071238705484,
+      "kmodel_error_mm": 69.70354143839212,
+      "host_simulator_seconds": 0.35349670000141487,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0018634317675605416,
+        0.0020215511322021484
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00082-009",
+      "trajectory_id": "pilot-tr00082",
+      "onnx_error_mm": 49.61909802550125,
+      "kmodel_error_mm": 49.717218042687136,
+      "host_simulator_seconds": 0.31880030001048,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0026343304198235273,
+        0.0017773807048797607
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00083-007",
+      "trajectory_id": "pilot-tr00083",
+      "onnx_error_mm": 468.89210366692146,
+      "kmodel_error_mm": 468.57997005328065,
+      "host_simulator_seconds": 0.33527979999780655,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0019085709936916828,
+        0.002020210027694702
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00083-008",
+      "trajectory_id": "pilot-tr00083",
+      "onnx_error_mm": 459.25595013019324,
+      "kmodel_error_mm": 458.95023055202336,
+      "host_simulator_seconds": 0.279140800004825,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0019092471338808537,
+        0.0020200014114379883
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00083-009",
+      "trajectory_id": "pilot-tr00083",
+      "onnx_error_mm": 451.266426118616,
+      "kmodel_error_mm": 450.96848512124086,
+      "host_simulator_seconds": 0.34193880000384524,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0019114917377009988,
+        0.002019822597503662
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00084-007",
+      "trajectory_id": "pilot-tr00084",
+      "onnx_error_mm": 619.16055098196,
+      "kmodel_error_mm": 619.2402177113435,
+      "host_simulator_seconds": 0.29345520000788383,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002523130504414439,
+        0.0017721205949783325
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00084-008",
+      "trajectory_id": "pilot-tr00084",
+      "onnx_error_mm": 645.4789006858756,
+      "kmodel_error_mm": 645.56369302068,
+      "host_simulator_seconds": 0.2593785999924876,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0025141609366983175,
+        0.0017726123332977295
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00084-009",
+      "trajectory_id": "pilot-tr00084",
+      "onnx_error_mm": 672.0084175301592,
+      "kmodel_error_mm": 672.0978894378643,
+      "host_simulator_seconds": 0.30459409998729825,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0025112838484346867,
+        0.001772955060005188
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00085-007",
+      "trajectory_id": "pilot-tr00085",
+      "onnx_error_mm": 767.1661360290972,
+      "kmodel_error_mm": 766.9375712464526,
+      "host_simulator_seconds": 0.30837610000162385,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002625331049785018,
+        0.0017781257629394531
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00085-008",
+      "trajectory_id": "pilot-tr00085",
+      "onnx_error_mm": 723.6919767506972,
+      "kmodel_error_mm": 723.4590057936446,
+      "host_simulator_seconds": 0.26451629999792203,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0026365062221884727,
+        0.0017778128385543823
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00085-009",
+      "trajectory_id": "pilot-tr00085",
+      "onnx_error_mm": 675.1884542045369,
+      "kmodel_error_mm": 674.9500748418901,
+      "host_simulator_seconds": 0.31372810000902973,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0026370915584266186,
+        0.0017773807048797607
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00086-007",
+      "trajectory_id": "pilot-tr00086",
+      "onnx_error_mm": 757.0024644516632,
+      "kmodel_error_mm": 756.9278378186782,
+      "host_simulator_seconds": 0.266247999999905,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002689204877242446,
+        0.0017768293619155884
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00086-008",
+      "trajectory_id": "pilot-tr00086",
+      "onnx_error_mm": 772.7551083069975,
+      "kmodel_error_mm": 772.6632673231362,
+      "host_simulator_seconds": 0.39010360001702793,
+      "grid_argmax_same": true,
+      "mae": [
+        0.001890921383164823,
+        0.0020210444927215576
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00086-009",
+      "trajectory_id": "pilot-tr00086",
+      "onnx_error_mm": 789.2510737633927,
+      "kmodel_error_mm": 789.193422947654,
+      "host_simulator_seconds": 0.3490872000111267,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0026827065739780664,
+        0.0017769932746887207
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00087-007",
+      "trajectory_id": "pilot-tr00087",
+      "onnx_error_mm": 864.9177872131809,
+      "kmodel_error_mm": 864.6388366262416,
+      "host_simulator_seconds": 0.34834280001814477,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0025807716883718967,
+        0.0017794370651245117
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00087-008",
+      "trajectory_id": "pilot-tr00087",
+      "onnx_error_mm": 859.6582567078214,
+      "kmodel_error_mm": 859.380606815777,
+      "host_simulator_seconds": 0.32492420001653954,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002596491714939475,
+        0.0017790645360946655
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00087-009",
+      "trajectory_id": "pilot-tr00087",
+      "onnx_error_mm": 855.3426825371313,
+      "kmodel_error_mm": 855.0666487925904,
+      "host_simulator_seconds": 0.32596089999424294,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0025841963943094015,
+        0.0017796754837036133
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00088-007",
+      "trajectory_id": "pilot-tr00088",
+      "onnx_error_mm": 1288.7510921683543,
+      "kmodel_error_mm": 1288.9341581630533,
+      "host_simulator_seconds": 0.30206319998251274,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0026575662195682526,
+        0.0017777085304260254
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00088-008",
+      "trajectory_id": "pilot-tr00088",
+      "onnx_error_mm": 1260.01402815496,
+      "kmodel_error_mm": 1259.5320234181345,
+      "host_simulator_seconds": 0.3756708000146318,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002669782377779484,
+        0.003017231822013855
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00088-009",
+      "trajectory_id": "pilot-tr00088",
+      "onnx_error_mm": 1232.210222028217,
+      "kmodel_error_mm": 1232.3816295735335,
+      "host_simulator_seconds": 0.28741449999506585,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0026904281694442034,
+        0.0017770379781723022
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00089-007",
+      "trajectory_id": "pilot-tr00089",
+      "onnx_error_mm": 1214.2680850580393,
+      "kmodel_error_mm": 1214.5460937751127,
+      "host_simulator_seconds": 0.44285010002204217,
+      "grid_argmax_same": true,
+      "mae": [
+        0.00268120807595551,
+        0.00177687406539917
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00089-008",
+      "trajectory_id": "pilot-tr00089",
+      "onnx_error_mm": 1186.7114559410957,
+      "kmodel_error_mm": 1186.9890966028458,
+      "host_simulator_seconds": 0.44775389999267645,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0026763463392853737,
+        0.001776188611984253
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00089-009",
+      "trajectory_id": "pilot-tr00089",
+      "onnx_error_mm": 1159.219673123111,
+      "kmodel_error_mm": 1159.4969116406417,
+      "host_simulator_seconds": 0.26997980001033284,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0027175815775990486,
+        0.0017753690481185913
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00090-007",
+      "trajectory_id": "pilot-tr00090",
+      "onnx_error_mm": 1575.921722418947,
+      "kmodel_error_mm": 1576.0815746461471,
+      "host_simulator_seconds": 0.27099859999725595,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0019135131733492017,
+        0.002019643783569336
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00090-008",
+      "trajectory_id": "pilot-tr00090",
+      "onnx_error_mm": 1585.8854929457639,
+      "kmodel_error_mm": 1586.0065256453001,
+      "host_simulator_seconds": 0.2869242000160739,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002719307318329811,
+        0.0017755627632141113
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00090-009",
+      "trajectory_id": "pilot-tr00090",
+      "onnx_error_mm": 1596.3101301110548,
+      "kmodel_error_mm": 1596.4267586686897,
+      "host_simulator_seconds": 0.3605075000086799,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002696614246815443,
+        0.0017760396003723145
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00091-007",
+      "trajectory_id": "pilot-tr00091",
+      "onnx_error_mm": 1433.1618701607263,
+      "kmodel_error_mm": 1433.4141163800175,
+      "host_simulator_seconds": 0.32267539997701533,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002652860013768077,
+        0.0017766356468200684
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00091-008",
+      "trajectory_id": "pilot-tr00091",
+      "onnx_error_mm": 1413.6744861062393,
+      "kmodel_error_mm": 1413.9277659323443,
+      "host_simulator_seconds": 0.259492399985902,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002644691616296768,
+        0.0017768889665603638
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00091-009",
+      "trajectory_id": "pilot-tr00091",
+      "onnx_error_mm": 1396.6306579373254,
+      "kmodel_error_mm": 1396.8852456285456,
+      "host_simulator_seconds": 0.2519196000066586,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0026505510322749615,
+        0.0017770975828170776
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00092-007",
+      "trajectory_id": "pilot-tr00092",
+      "onnx_error_mm": 1392.4294752406145,
+      "kmodel_error_mm": 1392.1886079577584,
+      "host_simulator_seconds": 0.31280060001881793,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0026244588661938906,
+        0.0017684996128082275
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00092-008",
+      "trajectory_id": "pilot-tr00092",
+      "onnx_error_mm": 1410.0982156860703,
+      "kmodel_error_mm": 1409.8552427510722,
+      "host_simulator_seconds": 0.3337959999917075,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002593746641650796,
+        0.001769036054611206
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00092-009",
+      "trajectory_id": "pilot-tr00092",
+      "onnx_error_mm": 1428.0462312440866,
+      "kmodel_error_mm": 1427.801355373904,
+      "host_simulator_seconds": 0.3860299999942072,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002600456355139613,
+        0.0017689317464828491
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00093-007",
+      "trajectory_id": "pilot-tr00093",
+      "onnx_error_mm": 1219.2472874752184,
+      "kmodel_error_mm": 1219.6459487795073,
+      "host_simulator_seconds": 0.3058612000022549,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0026822793297469616,
+        0.0030166804790496826
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00093-008",
+      "trajectory_id": "pilot-tr00093",
+      "onnx_error_mm": 1195.721034913177,
+      "kmodel_error_mm": 1196.114906375956,
+      "host_simulator_seconds": 0.27020930001162924,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002695878967642784,
+        0.0030162185430526733
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00093-009",
+      "trajectory_id": "pilot-tr00093",
+      "onnx_error_mm": 1172.4346387090904,
+      "kmodel_error_mm": 1172.8234460307353,
+      "host_simulator_seconds": 0.3274266999796964,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002717662137001753,
+        0.003015756607055664
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00094-007",
+      "trajectory_id": "pilot-tr00094",
+      "onnx_error_mm": 1496.5098164910735,
+      "kmodel_error_mm": 1496.638844773881,
+      "host_simulator_seconds": 0.3523010000062641,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002684852806851268,
+        0.0017765313386917114
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00094-008",
+      "trajectory_id": "pilot-tr00094",
+      "onnx_error_mm": 1476.3204574205918,
+      "kmodel_error_mm": 1476.4460820553852,
+      "host_simulator_seconds": 0.2927361000038218,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0027282864321023226,
+        0.0017761588096618652
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00094-009",
+      "trajectory_id": "pilot-tr00094",
+      "onnx_error_mm": 1456.4242236809218,
+      "kmodel_error_mm": 1456.5464698200929,
+      "host_simulator_seconds": 0.3032117999973707,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0027822768315672874,
+        0.0017749518156051636
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00095-007",
+      "trajectory_id": "pilot-tr00095",
+      "onnx_error_mm": 490.36438776358335,
+      "kmodel_error_mm": 490.08983060296345,
+      "host_simulator_seconds": 0.32171950000338256,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0028155483305454254,
+        0.001775994896888733
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00095-008",
+      "trajectory_id": "pilot-tr00095",
+      "onnx_error_mm": 463.2904576723434,
+      "kmodel_error_mm": 463.02187205684334,
+      "host_simulator_seconds": 0.3094229999987874,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0028100137133151293,
+        0.0017761588096618652
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00095-009",
+      "trajectory_id": "pilot-tr00095",
+      "onnx_error_mm": 437.01404009435504,
+      "kmodel_error_mm": 437.34242724275026,
+      "host_simulator_seconds": 0.3438988999987487,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0022401672322303057,
+        0.003257930278778076
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00096-007",
+      "trajectory_id": "pilot-tr00096",
+      "onnx_error_mm": 1118.0671504730412,
+      "kmodel_error_mm": 1117.9991289753284,
+      "host_simulator_seconds": 0.29809599998407066,
+      "grid_argmax_same": true,
+      "mae": [
+        0.001939895679242909,
+        0.0020167678594589233
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00096-008",
+      "trajectory_id": "pilot-tr00096",
+      "onnx_error_mm": 1143.3735695877283,
+      "kmodel_error_mm": 1143.3017133100072,
+      "host_simulator_seconds": 0.2644952000118792,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0019335392862558365,
+        0.0020173341035842896
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00096-009",
+      "trajectory_id": "pilot-tr00096",
+      "onnx_error_mm": 1168.846159944575,
+      "kmodel_error_mm": 1168.7705661565788,
+      "host_simulator_seconds": 0.2852851999923587,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0019284625304862857,
+        0.0020173490047454834
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00097-007",
+      "trajectory_id": "pilot-tr00097",
+      "onnx_error_mm": 892.6166045531493,
+      "kmodel_error_mm": 892.3792665697107,
+      "host_simulator_seconds": 0.32604889999493025,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0028514063451439142,
+        0.0017726421356201172
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00097-008",
+      "trajectory_id": "pilot-tr00097",
+      "onnx_error_mm": 908.6775053090985,
+      "kmodel_error_mm": 908.4442538948996,
+      "host_simulator_seconds": 0.38513029998284765,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0028250047471374273,
+        0.0017736554145812988
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00097-009",
+      "trajectory_id": "pilot-tr00097",
+      "onnx_error_mm": 925.3616829672576,
+      "kmodel_error_mm": 925.1324740914736,
+      "host_simulator_seconds": 0.2519680000259541,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002848236123099923,
+        0.0017732977867126465
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00098-007",
+      "trajectory_id": "pilot-tr00098",
+      "onnx_error_mm": 1178.93449153219,
+      "kmodel_error_mm": 1179.2194775480648,
+      "host_simulator_seconds": 0.3282807000214234,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0019879776518791914,
+        0.0020168572664260864
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00098-008",
+      "trajectory_id": "pilot-tr00098",
+      "onnx_error_mm": 1191.0890648151358,
+      "kmodel_error_mm": 1190.5400544189465,
+      "host_simulator_seconds": 0.33817550001549534,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0022639387752860785,
+        0.003256499767303467
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00098-009",
+      "trajectory_id": "pilot-tr00098",
+      "onnx_error_mm": 1204.7615263225705,
+      "kmodel_error_mm": 1205.0343369343545,
+      "host_simulator_seconds": 0.49528879998251796,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002008195035159588,
+        0.0020157992839813232
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00099-007",
+      "trajectory_id": "pilot-tr00099",
+      "onnx_error_mm": 1305.7909884337746,
+      "kmodel_error_mm": 1305.396669425857,
+      "host_simulator_seconds": 0.3431818000099156,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0027513066306710243,
+        0.00302007794380188
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00099-008",
+      "trajectory_id": "pilot-tr00099",
+      "onnx_error_mm": 1314.904435249642,
+      "kmodel_error_mm": 1314.5030451813427,
+      "host_simulator_seconds": 0.31544569999095984,
+      "grid_argmax_same": true,
+      "mae": [
+        0.002752147614955902,
+        0.003019988536834717
+      ]
+    },
+    {
+      "sample_id": "pilot-tr00099-009",
+      "trajectory_id": "pilot-tr00099",
+      "onnx_error_mm": 1324.5852945430008,
+      "kmodel_error_mm": 1324.17717311443,
+      "host_simulator_seconds": 0.25901509998948313,
+      "grid_argmax_same": true,
+      "mae": [
+        0.0027589823585003614,
+        0.00301949679851532
+      ]
+    }
+  ],
+  "native_k230": "NOT RUN"
+}

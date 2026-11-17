@@ -1,0 +1,47 @@
+{
+  "status": "ONNX_ORT_PASS",
+  "scope": "UNTRAINED_OPERATOR_SMOKE",
+  "route": "cnn",
+  "window": 1,
+  "parameters": 79298,
+  "input_shape": [
+    1,
+    3,
+    90,
+    160
+  ],
+  "output_shapes": [
+    [
+      1,
+      1,
+      24,
+      24
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "opset": 13,
+  "operators": [
+    "AveragePool",
+    "Constant",
+    "Conv",
+    "Flatten",
+    "Gather",
+    "Gemm",
+    "Relu",
+    "Reshape",
+    "Sigmoid"
+  ],
+  "onnx_sha256": "0401b3a606b52724307705741fbe5cb1fd5fdec1f7ea6a1a5beea6b6713f8711",
+  "torch_ort_max_abs": [
+    1.862645149230957e-08,
+    5.960464477539063e-08
+  ],
+  "versions": {
+    "torch": "2.10.0",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.24.4"
+  }
+}

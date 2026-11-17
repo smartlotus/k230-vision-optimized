@@ -1,0 +1,9 @@
+{
+  "run_id": "k230-camera-xy-multiroute-pilot-20261117-a02",
+  "input_manifest_sha256": "d406101f86dfb787a03e7b640789f127264f879cb6fed0d73c62c8b878cf2037",
+  "compute_status": "PASS",
+  "train_exit_code": 0,
+  "elapsed_seconds": 64.57419211499999,
+  "publication": "PENDING_INDEPENDENT_CLOUD_PUBLISHER",
+  "automatic_replay": false
+}
