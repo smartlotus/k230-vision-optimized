@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "project-layout-20261117",
+  "title": "Repair portable K230 project map and handoff entry",
+  "paths": [
+    ".ops/PROJECT.md",
+    "README.md",
+    "docs/PROJECT_LAYOUT.md"
+  ],
+  "lane": "serial",
+  "resources": [],
+  "depends": [],
+  "acceptance": [
+    "UTF-8 project map and working portable links; branch-specific evidence stays in its owning worktree"
+  ],
+  "branch": "ops/project-layout-20261117",
+  "state": "ready",
+  "claimed": true,
+  "agent": "coordinator",
+  "session": "k230-layout-20261117-a",
+  "revision": 3,
+  "handoff": ".ops/handoffs/project-layout-20261117/20261117T113512-7b2bb9a9.json",
+  "updated_at": "2026-11-17T11:35:13+00:00"
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "task": "project-layout-20261117",
+  "created_at": "2026-11-17T11:35:12+00:00",
+  "agent": "coordinator",
+  "session": "k230-layout-20261117-a",
+  "branch": "ops/project-layout-20261117",
+  "head": "8bbec746f399905bb75041c3bea1c85c7a641705",
+  "state": "ready",
+  "files": {
+    ".ops/PROJECT.md": "ed64ff6853a65782eb3e92a24879c9183ca197b18611d121f5c1a5f40718f22f",
+    "README.md": "85eb3618b08d4b2f663a4a654a1b4651e05cfa80ed07b2fe2a4ef96c40b46169",
+    "docs/PROJECT_LAYOUT.md": "0baa96e65253b22ad7ccb0e0b9b5c71cfa878e885acfc95c6dd8373ada1a630d"
+  },
+  "git_blob_oids": {
+    ".ops/PROJECT.md": "09577f845b3513d7d94ceb72809b040d2c65aed3",
+    "README.md": "5819803c80d6a7c4f83518811fe2150972dc1161",
+    "docs/PROJECT_LAYOUT.md": "e47e93655660cf73f93480ab228192fba6ee6b24"
+  },
+  "scope_git_blob_oids": {
+    ".ops/PROJECT.md": "09577f845b3513d7d94ceb72809b040d2c65aed3",
+    "README.md": "5819803c80d6a7c4f83518811fe2150972dc1161",
+    "docs/PROJECT_LAYOUT.md": "e47e93655660cf73f93480ab228192fba6ee6b24"
+  },
+  "scope_fingerprints": {
+    ".ops/PROJECT.md": "ed64ff6853a65782eb3e92a24879c9183ca197b18611d121f5c1a5f40718f22f",
+    "README.md": "85eb3618b08d4b2f663a4a654a1b4651e05cfa80ed07b2fe2a4ef96c40b46169",
+    "docs/PROJECT_LAYOUT.md": "0baa96e65253b22ad7ccb0e0b9b5c71cfa878e885acfc95c6dd8373ada1a630d"
+  },
+  "report": {
+    "completed": [
+      "Restored the UTF-8 project map using the checked-out source inventory and verified each branch-specific entry.",
+      "Aligned README and layout guidance with portable OPS task selection and linked evidence.",
+      "Added verified linked entries to the desktop hub for CameraXY Temporal V1 and the TopFace publisher."
+    ],
+    "remaining": [
+      "Integration of this documentation checkpoint into main is a separate project action."
+    ],
+    "decisions": [
+      "Use a main-based isolated worktree so the project map can be reviewed as a small standalone change.",
+      "Keep live task state in the shared OPS registry and stage-specific evidence in each task branch."
+    ],
+    "risks": [
+      "Board performance, calibration and fresh labeled accuracy depend on the task-specific acceptance evidence."
+    ],
+    "next_steps": [
+      "Use PROJECT.md to select the task branch and OPS status to locate its current handoff."
+    ],
+    "verification": [
+      {
+        "command": "UTF-8, local Markdown link checks, git cat-file for branch-specific paths, git diff --check",
+        "exit_code": 0,
+        "summary": "Project map and both root navigation documents passed. Three exact tracked documentation paths changed.",
+        "evidence": [
+          ".ops/PROJECT.md",
+          "README.md",
+          "docs/PROJECT_LAYOUT.md"
+        ]
+      }
+    ]
+  }
+}

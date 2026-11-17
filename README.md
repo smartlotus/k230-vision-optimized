@@ -1,7 +1,6 @@
 # K230 Vision Optimized
 
-K230视觉算法与资源优化的独立项目。新旧实现并存，可在电脑端比较结果，后续再做板端验收。
-**约25FPS仍是待实机验证目标；本次没有连接或上传板卡。**
+本仓库维护 K230 视觉算法、资源优化、主机验证与板端接入。各任务分支保存相应的原生测试与离线评估。分支和证据入口见 [项目地图](.ops/PROJECT.md)。
 
 来源提交、311份原样导入文件及SHA256见 [docs/UPSTREAM_IMPORT.json](docs/UPSTREAM_IMPORT.json)。
 本项目使用独立Git历史与OPS项目ID，原仓库保留。
@@ -50,9 +49,9 @@ python -m tools.benchmark_uart_optimized --output evidence/local/uart-benchmark.
 
 ```powershell
 python .ops/tools/ops.py status
-python .ops/tools/ops.py verify --task import-snapshot
+python .ops/tools/ops.py verify --task <任务ID>
 ```
 
-任务分支`ops/任务ID`；写入前认领，模块完成后checkpoint并释放。
+从 status 查询任务 ID 和对应工作树。在该工作树核验交接并认领，模块完成后保存 checkpoint 和释放认领。
 自动备份使用当前私有远端。任务完成、推送成功和主线集成分别记录。
 使用、来源与数据边界见 [docs/PROJECT_LAYOUT.md](docs/PROJECT_LAYOUT.md)。
