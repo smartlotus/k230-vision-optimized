@@ -1,0 +1,15 @@
+{
+  "original_64k_upload_status": "UNKNOWN_NO_COMPLETION_MARKER",
+  "original_model_bytes_stored_after_reconnect": 0,
+  "observed_failure": "USBDBG 0xA4 and 0x8E short reads",
+  "reconnects": 1,
+  "recovery_ready": true,
+  "recovery_nonce": "TEMPORAL_TRANSFER_RECOVERY_20261117",
+  "decoder_observation": {"binascii": "Python binascii.py", "ubinascii": "builtin"},
+  "initial_string_decode_error": "TypeError: can't convert str to int",
+  "small_transfer_probe": "3x8192 bytes with complete SHA readback PASS",
+  "current_model_transfer": "VERIFIED_COMPLETE_2646600_BYTES",
+  "current_stored_model_sha256": "ac86c72a648df1c9f484c920180b0bcb9ae877f26d20c2cea364969d0d921fbc",
+  "root_cause_of_disconnect": "UNCONFIRMED",
+  "automatic_replay": false
+}

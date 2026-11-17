@@ -1,0 +1,228 @@
+{
+  "storage_diagnostic": {
+    "/sdcard": {
+      "statvfs": [
+        512,
+        512,
+        1023744,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        255
+      ],
+      "stat": [
+        16895,
+        6472200,
+        0,
+        0,
+        19224224,
+        2,
+        0,
+        25191936,
+        0,
+        0
+      ]
+    },
+    "/": {
+      "statvfs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stat": [
+        16384,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "/tmp": {
+      "statvfs": [
+        512,
+        512,
+        10222,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        255
+      ],
+      "stat": [
+        16895,
+        6472200,
+        0,
+        0,
+        19224224,
+        2,
+        0,
+        25191936,
+        0,
+        0
+      ]
+    }
+  },
+  "alt_storage": {
+    "/bin": {
+      "statvfs": [
+        512,
+        512,
+        40704,
+        11776,
+        11776,
+        0,
+        0,
+        0,
+        0,
+        255
+      ],
+      "entries": [
+        "ov5647-640x480_auto.json",
+        "ov5647-1920x1080.bin",
+        "ov5647-640x480_manual.json",
+        "imx335-2592x1944_auto.json",
+        "ov5647-2592x1944.bin",
+        "gc2093-1920x1080_auto.json",
+        "gc2093-1280x960_auto.json",
+        "gc2093-1280x960.bin",
+        "firmware",
+        "ov5647-1280x720_auto.json",
+        "ov5647-1920x1080.xml",
+        "ov5647-1280x960.xml",
+        "ov5647-2592x1944.xml",
+        "ov5647-640x480.xml",
+        "ov5647-1920x1080_auto.json",
+        "gc2093-1280x960_manual.json",
+        "ov5647-1280x960.bin",
+        "ov5647-1280x720.bin",
+        "imx335-1920x1080_auto.json",
+        "gc2093-1280x960.xml",
+        "gc2093-1920x1080.xml",
+        "imx335-2592x1944.bin",
+        "gc2093-1280x720_auto.json",
+        "gc2093-1280x720.xml",
+        "gc2093-1280x720.bin",
+        "ov5647-2592x1944_auto.json",
+        "imx335-1920x1080_manual.json",
+        "ov5647-1280x720.xml",
+        "imx335-1920x1080.xml",
+        "ov5647-1280x960_auto.json",
+        "imx335-2592x1944.xml",
+        "ov5647-1280x960_manual.json",
+        "ov5647-2592x1944_manual.json",
+        "ov5647-1920x1080_manual.json",
+        "ov5647-1280x720_manual.json"
+      ]
+    },
+    "/tmp": {
+      "statvfs": [
+        512,
+        512,
+        10222,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        255
+      ],
+      "entries": [
+        "xyusb1117f",
+        "xyusb1117e",
+        "xyusb1117d"
+      ]
+    },
+    "/data": {
+      "statvfs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "entries": []
+    },
+    "/udisk": {
+      "statvfs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "entries": []
+    }
+  },
+  "data_probe": {
+    "bytes": 0,
+    "directory": "/data/k230_temporal_v1_probe",
+    "error": "[Errno 22] EINVAL",
+    "purpose": "isolated temporary storage write/read check"
+  },
+  "bin_probe": {
+    "bytes": 256,
+    "readback_equal": true,
+    "directory": "/bin/k230_temporal_v1_probe",
+    "cleanup": [
+      "own_probe_file_removed",
+      "own_probe_directory_removed"
+    ],
+    "directory_created": true
+  },
+  "sd_probe_terminal": {
+    "path": "/sdcard/k230_temporal_v1_p",
+    "bytes": 0,
+    "error": "30"
+  },
+  "transfer_recovery_terminal": {
+    "partial": {
+      "/tmp/k230_temporal_v1_c1r1117": [],
+      "/tmp/k230_temporal_v1_c1r2": []
+    },
+    "modules": {
+      "ubinascii": {
+        "milliseconds": 0,
+        "unhexlify": "<function>",
+        "value": "b'abc'",
+        "file": "builtin"
+      },
+      "binascii": {
+        "milliseconds": 0,
+        "unhexlify": "<function>",
+        "value": "b'abc'",
+        "file": "binascii.py"
+      }
+    },
+    "nonce": "TEMPORAL_TRANSFER_RECOVERY_20261117"
+  },
+  "interpretation": "SD write returned error 30 (read-only); zero statvfs availability alone did not establish disk full. /tmp changed contents after approved removal while statvfs stayed unchanged.",
+  "actual_existing_files_changed": "Only approved /tmp/xyusb1117e was removed after all19 full-byte backups. Own tiny /bin probe was created, verified, then removed; no existing /bin file changed."
+}

@@ -1,0 +1,30 @@
+{
+  "deleted": [
+    "/tmp/xyusb1117e/format-probe.json",
+    "/tmp/xyusb1117e/format-probe-rgb888.bin",
+    "/tmp/xyusb1117e/format-probe-raw.jpg",
+    "/tmp/xyusb1117e/chain300-e02.json",
+    "/tmp/xyusb1117e/chain30-e01.json",
+    "/tmp/xyusb1117e/engineering.kmodel",
+    "/tmp/xyusb1117e/board_usb_smoke.py",
+    "/tmp/xyusb1117e/engineering.json",
+    "/tmp/xyusb1117e/board_probe.py"
+  ],
+  "approved_directory": "/tmp/xyusb1117e",
+  "statvfs": [
+    512,
+    512,
+    10222,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    255
+  ],
+  "remaining_tmp": [
+    "xyusb1117f",
+    "xyusb1117d"
+  ]
+}

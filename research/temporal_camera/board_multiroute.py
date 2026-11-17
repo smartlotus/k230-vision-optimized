@@ -38,10 +38,11 @@ def run(model_root, run_id, expected_usb_device, frames=120, mode='filtered'):
 
     if sys.implementation.name != 'micropython':
         raise RuntimeError('Run on CanMV MicroPython with an idle OV2735')
-    if not model_root.startswith('/sdcard/k230_temporal_v1_') or any(
+    if not (model_root.startswith('/sdcard/k230_temporal_v1_')
+            or model_root.startswith('/tmp/k230_temporal_v1_')) or any(
         part in ('', '.', '..') for part in model_root.split('/')[1:]
     ):
-        raise ValueError('Use a dedicated /sdcard/k230_temporal_v1_ directory')
+        raise ValueError('Use a dedicated k230_temporal_v1_ test directory')
     if (not run_id or any(c not in 'abcdefghijklmnopqrstuvwxyz0123456789-_' for c in run_id)
             or not expected_usb_device or type(frames) is not int or not 1 <= frames <= 3000):
         raise ValueError('Specify a unique report ID, the verified USB ID and 1..3000 attempts')
@@ -191,6 +192,11 @@ def run(model_root, run_id, expected_usb_device, frames=120, mode='filtered'):
         src = raw_image = rgb_image = pixels = planar = output_tensor = None
         kpu = ai2d = builder = backing = model_input = frame_input = frame_buffer = history = None
         gc.collect()
+        try:
+            nn.shrink_memory_pool()
+        except Exception as error:
+            result['cleanup_errors'].append(['nncase_memory_pool', str(error)])
+            result['status'] = 'CLEANUP_UNCONFIRMED'
         sample_memory(result, resources, 'final')
         result['latency'] = {name: histogram.report() for name, histogram in times.items()}
         result['temporal_states'] = decoder.states

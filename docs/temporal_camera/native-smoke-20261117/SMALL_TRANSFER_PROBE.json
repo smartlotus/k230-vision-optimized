@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "blocks": [
+    {
+      "bytes": 8192
+    },
+    {
+      "bytes": 16384
+    },
+    {
+      "bytes": 24576
+    }
+  ],
+  "final": {
+    "bytes": 24576,
+    "sha256": "0bdd6a0281c70e40ea135022943d0ad3c53b619bc4846297df6673574c81ccb7"
+  },
+  "block_bytes": 8192,
+  "decoder": "ubinascii",
+  "cleanup": "own probe removed"
+}

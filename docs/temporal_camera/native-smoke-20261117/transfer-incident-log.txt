@@ -1,0 +1,11 @@
+﻿[11:01:11] [WARN] [Script] Runtime exception detected: TypeError: can't convert str to int
+[11:01:46] [ERROR] [Backend] scriptRunning failed after 3014ms: USBDBG command 0xA4 response (expected 4 bytes): short read: got 0 of 4 bytes
+[11:01:56] [DEBUG] [Backend] [canmv-backend] board disconnected source=poller tx drain err=USBDBG TX_BUF_LEN (0x8E) response (expected 4 bytes): short read: got 0 of 4 bytes
+[11:01:56] [WARN] [Board] Disconnected (poller tx drain: USBDBG TX_BUF_LEN (0x8E) response (expected 4 bytes): short read: got 0 of 4 bytes)
+[11:01:56] [INFO] [Session] State: connected -> disconnected
+[11:02:35] [INFO] [Session] State: disconnected -> connecting
+[11:02:36] [DEBUG] [Backend] [canmv-backend] handshake sync succeeded
+[11:02:36] [DEBUG] [Backend] [canmv-backend] handshake firmware probe succeeded: v0.4.0
+[11:02:36] [DEBUG] [Backend] [canmv-backend] connect handshake result protocol=2 capability_protocol=true firmware="K230-v1.8-36-gae2f20da0467a8e70659f032b240aae50272c49a" arch="[LCKFB-LSPI-K230-1G-CanMV:000000000000000000000000]"
+[11:02:36] [INFO] [Board] Connected: LCKFB-LSPI-K230-1G-CanMV v1.8-36 on COM3
+[11:02:36] [INFO] [Board] Ready after connect soft reboot

@@ -1,0 +1,105 @@
+{
+  "status": "DIRECTORY_CREATION_FAILED",
+  "setting": "cnn1",
+  "remote": "/tmp/k230_temporal_v1_c1s1117",
+  "observed_utc": "2026-11-17T10:57:19.171957+00:00",
+  "archive_sha256": "b7dd989d7f1d23b74a95cbdd7528e8e47fc8e403256ed1363d66f5c4713de48b",
+  "verified_archive_members": 20,
+  "source_changes": {
+    "board_multiroute.py": {
+      "archive_sha256": "d19ab13d2928336c64833afc754aa9979e1209f1d13e0814ac47057b59a77c19",
+      "current_sha256": "fa9dcfe37bb2eceb47ace5cc4293751c335d08506fdbd289ade0dccd8c9d2f30"
+    }
+  },
+  "files": [
+    {
+      "target": "/tmp/k230_temporal_v1_c1s1117/camera_xy.kmodel",
+      "parts": [
+        "/tmp/k230_temporal_v1_c1s1117/camera_xy.kmodel.p0",
+        "/tmp/k230_temporal_v1_c1s1117/camera_xy.kmodel.p1",
+        "/tmp/k230_temporal_v1_c1s1117/camera_xy.kmodel.p2",
+        "/tmp/k230_temporal_v1_c1s1117/camera_xy.kmodel.p3",
+        "/tmp/k230_temporal_v1_c1s1117/camera_xy.kmodel.p4",
+        "/tmp/k230_temporal_v1_c1s1117/camera_xy.kmodel.p5",
+        "/tmp/k230_temporal_v1_c1s1117/camera_xy.kmodel.p6",
+        "/tmp/k230_temporal_v1_c1s1117/camera_xy.kmodel.p7",
+        "/tmp/k230_temporal_v1_c1s1117/camera_xy.kmodel.p8",
+        "/tmp/k230_temporal_v1_c1s1117/camera_xy.kmodel.p9",
+        "/tmp/k230_temporal_v1_c1s1117/camera_xy.kmodel.p10"
+      ],
+      "bytes": 2646600,
+      "sha256": "ac86c72a648df1c9f484c920180b0bcb9ae877f26d20c2cea364969d0d921fbc"
+    },
+    {
+      "target": "/tmp/k230_temporal_v1_c1s1117/KMODEL_REPORT.json",
+      "parts": [
+        "/tmp/k230_temporal_v1_c1s1117/KMODEL_REPORT.json.p0"
+      ],
+      "bytes": 12269,
+      "sha256": "faa72c66564181372e245dd6e4d051ebad80f1637457aae3e98b6997b28561a9"
+    },
+    {
+      "target": "/tmp/k230_temporal_v1_c1s1117/board_helpers.py",
+      "parts": [
+        "/tmp/k230_temporal_v1_c1s1117/board_helpers.py.p0"
+      ],
+      "bytes": 2556,
+      "sha256": "0fdb8b81c7a988bd8d39bc1f5fbbfb8aa7699905f6c85fe5a1aaeaf0fe01fd9f"
+    },
+    {
+      "target": "/tmp/k230_temporal_v1_c1s1117/board_multiroute.py",
+      "parts": [
+        "/tmp/k230_temporal_v1_c1s1117/board_multiroute.py.p0"
+      ],
+      "bytes": 10131,
+      "sha256": "fa9dcfe37bb2eceb47ace5cc4293751c335d08506fdbd289ade0dccd8c9d2f30"
+    },
+    {
+      "target": "/tmp/k230_temporal_v1_c1s1117/board_temporal.py",
+      "parts": [
+        "/tmp/k230_temporal_v1_c1s1117/board_temporal.py.p0"
+      ],
+      "bytes": 4187,
+      "sha256": "7b2245f4712fd13a3f8ea39861a2d896e87e8ead1da704da1f4434046dad7cd9"
+    },
+    {
+      "target": "/tmp/k230_temporal_v1_c1s1117/competition_paths.py",
+      "parts": [
+        "/tmp/k230_temporal_v1_c1s1117/competition_paths.py.p0"
+      ],
+      "bytes": 4575,
+      "sha256": "cb42cd555d452c6781caa43d5ae9084c0dadbe14d6741aa985edca42c8eb5a06"
+    },
+    {
+      "target": "/tmp/k230_temporal_v1_c1s1117/embedded_filter.py",
+      "parts": [
+        "/tmp/k230_temporal_v1_c1s1117/embedded_filter.py.p0"
+      ],
+      "bytes": 7656,
+      "sha256": "856676f28fc032e52bf4916850b2c3819f05bbe74ea1be59d2844f3b16b77402"
+    },
+    {
+      "target": "/tmp/k230_temporal_v1_c1s1117/localization_runtime.py",
+      "parts": [
+        "/tmp/k230_temporal_v1_c1s1117/localization_runtime.py.p0"
+      ],
+      "bytes": 3420,
+      "sha256": "196c2e2c7518f986ca779ade2a9e9be42d6130a801705875c6b47cdbecd96bbe"
+    },
+    {
+      "target": "/tmp/k230_temporal_v1_c1s1117/deployment.json",
+      "parts": [
+        "/tmp/k230_temporal_v1_c1s1117/deployment.json.p0"
+      ],
+      "bytes": 100016,
+      "sha256": "641eab171629e6b44f43f6222409ca093801132af692a436810d16258fd26326"
+    }
+  ],
+  "verified_parts": [],
+  "automatic_retry": false,
+  "mkdir_result": {
+    "errorCode": 1035,
+    "message": "CanMV root folders are read-only",
+    "success": false
+  }
+}

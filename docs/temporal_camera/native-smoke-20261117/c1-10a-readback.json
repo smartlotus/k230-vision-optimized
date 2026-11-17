@@ -1,0 +1,8 @@
+{
+  "-entry.json": {
+    "error": "can't convert 'tuple' object to str implicitly",
+    "status": "ENTRY_FAILED",
+    "run_id": "c1_10a",
+    "root": "/tmp/k230_temporal_v1_c1r3"
+  }
+}

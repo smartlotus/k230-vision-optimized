@@ -1,0 +1,55 @@
+{
+  "completed": [
+    "Actual K230 USB-to-AI2D-to-KPU-to-CPU-filter-to-JSON-readback completed 100/100 frames across10/60/10/10/10 native runs, zero drops",
+    "Final source passed two10frame restart checks with MMZ0to0 and cleanup_errors empty; postflight idle and startup hash unchanged",
+    "Exact original2646600byte KModel and8support files fully reopened for board SHA; final source755c424a bound to POSTFLIGHT",
+    "Recovered USB transport using native ubinascii bytes and8192byte blocks; original64KB UNKNOWN attempt preserved",
+    "All19 old temporary files fully backed up and verified; user explicitly authorized deleting only9files under/tmp/xyusb1117e; remaining10d/f files unchanged at postflight",
+    "Updated project lessons for storage permissions, actual Tensor readback, small transfers and explicit nncase cache cleanup;26host tests pass"
+  ],
+  "remaining": [
+    "Outside this engineering smoke: physical localization accuracy, road detection, native TCN/GRU, pixel equivalence and long-soak acceptance",
+    "SD write returned error30(read-only); persistent SD deployment remains unverified and is not changed by this task"
+  ],
+  "decisions": [
+    "Use isolated/tmp test directory after SD read-only was observed, preserve all startup and production state",
+    "Keep original model weights, filter parameters and acceptance=None; position_valid remains false",
+    "Retain prior failures and distinguish successful frame-loop measurements from transport and readiness",
+    "Changed the isolated benchmark temporary-root check and cache cleanup; other project line sources unchanged"
+  ],
+  "risks": [
+    "The tested flow is a06 CNN1 plus Bayesian CPU filter; it is not accuracy or production acceptance",
+    "Temporary test installation may disappear after power cycling; full old-file backup is local-only at the recorded archives path",
+    "USB short-read low-level root cause remains unconfirmed; current small-block route is verified engineering recovery"
+  ],
+  "next_steps": [
+    "No additional hardware test needed for this bounded smoke; board is idle and resources released",
+    "For later SD or accuracy work, recheck ownership and current files and use new report IDs without replaying closed attempts"
+  ],
+  "verification": [
+    {
+      "command": "native_smoke.py install runtime8192byte blocks plus whole-file SHA readback",
+      "exit_code": 0,
+      "summary": "9stored files verified; exact original a06 CNN1 KModel hash",
+      "evidence": ["docs/temporal_camera/native-smoke-20261117/install-cnn1-runtime-r3.json", "docs/temporal_camera/native-smoke-20261117/POSTFLIGHT.json"]
+    },
+    {
+      "command": "native c1_10b c1_60c c1_10d c1_10e c1_10f then fetch and build_native_summary.py",
+      "exit_code": 0,
+      "summary": "100/100full frames zero drops; two final runs MMZ0to0 and clean restart; failed c1_10a preserved separately",
+      "evidence": ["docs/temporal_camera/native-smoke-20261117/NATIVE_SUMMARY.json", "docs/temporal_camera/native-smoke-20261117/c1-60c-readback.json", "docs/temporal_camera/native-smoke-20261117/c1-10f-readback.json"]
+    },
+    {
+      "command": "python -B -X utf8 -m unittest discover -s research/temporal_camera -p test_*.py -v",
+      "exit_code": 0,
+      "summary": "26tests passed, no failures",
+      "evidence": ["docs/temporal_camera/native-smoke-20261117/HOST_VALIDATION_NATIVE_RESUME.json"]
+    },
+    {
+      "command": "postflight.py protected-state and remaining-file SHA check",
+      "exit_code": 0,
+      "summary": "9current files and10other tmp files verified; main unchanged, boot absent, MMZ0, running=false",
+      "evidence": ["docs/temporal_camera/native-smoke-20261117/POSTFLIGHT.json", "docs/temporal_camera/native-smoke-20261117/APPROVED_CLEANUP_E.json"]
+    }
+  ]
+}

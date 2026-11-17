@@ -1,0 +1,39 @@
+{
+  "kpu_inferences": 0,
+  "attempts": 10,
+  "status": "CAPTURE_AND_AI2D_PASS",
+  "initial_heap_free": 4043072,
+  "input_shape": [
+    1,
+    3,
+    96,
+    160
+  ],
+  "road_test": "NOT_RUN",
+  "usb": "openaicam#openaicam",
+  "input_max": 249,
+  "rgb_min": 0,
+  "rgb_max": 252,
+  "input_min": 6,
+  "seconds": 1.09,
+  "rgb_shape": [
+    360,
+    640,
+    3
+  ],
+  "dropped": 0,
+  "final_heap_free": 4047776,
+  "board_files_written": 0,
+  "nonce": "TEMPORAL_CAPTURE_AI2D_C_20261117",
+  "accuracy": "NOT_RUN",
+  "frames": 10,
+  "mode": {
+    "fourcc": 1196444237,
+    "fps": 30.00003,
+    "height": 720,
+    "width": 1280
+  },
+  "cleanup_errors": [],
+  "backing_max": 0,
+  "filter_updates": 0
+}

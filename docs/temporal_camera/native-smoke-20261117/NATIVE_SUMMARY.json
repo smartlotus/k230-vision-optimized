@@ -1,0 +1,167 @@
+{
+  "status": "BOUNDED_NATIVE_CNN1_FILTER_ENGINEERING_PASS",
+  "observed_utc": "2026-11-17T11:24:37.028058+00:00",
+  "tested_route": "a06 CNN1 KModel + CPU Bayesian temporal grid filter",
+  "source_sha256": "755c424a9ed52ed5b4ffe8eefa34be330f343193ddc2e30317a676dc3ca76f0e",
+  "model_sha256": "ac86c72a648df1c9f484c920180b0bcb9ae877f26d20c2cea364969d0d921fbc",
+  "model_bytes": 2646600,
+  "firmware": "v1.8-36-gae2f20d",
+  "nncase_runtime": "2.11.0",
+  "remote_root": "/tmp/k230_temporal_v1_c1r3",
+  "native_runs": [
+    {
+      "run_id": "c1_10b",
+      "frames": 10,
+      "attempts": 10,
+      "dropped": 0,
+      "fps": 4.78698,
+      "seconds": 2.089,
+      "cleanup_errors": [],
+      "final_mmz_used": 4427776,
+      "receipt_sha256": "29765cd403c87050c8683652417fbf5d790410933c0d0beca0bf9a14dfba1cd3"
+    },
+    {
+      "run_id": "c1_60c",
+      "frames": 60,
+      "attempts": 60,
+      "dropped": 0,
+      "fps": 5.134349,
+      "seconds": 11.686,
+      "cleanup_errors": [],
+      "final_mmz_used": 4427776,
+      "receipt_sha256": "a79ced725b40eaacbe789992fbe729e0addf54c2b0e418084497422ff6add804"
+    },
+    {
+      "run_id": "c1_10d",
+      "frames": 10,
+      "attempts": 10,
+      "dropped": 0,
+      "fps": 4.746084,
+      "seconds": 2.107,
+      "cleanup_errors": [],
+      "final_mmz_used": 4427776,
+      "receipt_sha256": "0b611552b348258e7fa039ba48c60fcd202bd1fc25a92d73aea47df6caa58d3d"
+    },
+    {
+      "run_id": "c1_10e",
+      "frames": 10,
+      "attempts": 10,
+      "dropped": 0,
+      "fps": 4.748338,
+      "seconds": 2.106,
+      "cleanup_errors": [],
+      "final_mmz_used": 0,
+      "receipt_sha256": "23fa664748e8b6c1a3d01ce5befae854308f020794662b0c4734366c180cf6d3"
+    },
+    {
+      "run_id": "c1_10f",
+      "frames": 10,
+      "attempts": 10,
+      "dropped": 0,
+      "fps": 4.764174,
+      "seconds": 2.099,
+      "cleanup_errors": [],
+      "final_mmz_used": 0,
+      "receipt_sha256": "0248411b04a84425d2d02dfe0f8bd3d6b3cf8163fe9b8572a591882a6728dab7"
+    }
+  ],
+  "full_pipeline_frames": 100,
+  "full_pipeline_capture_attempts": 100,
+  "dropped": 0,
+  "startup_entry_failure": {
+    "run_id": "c1_10a",
+    "status": "ENTRY_FAILED",
+    "captured_frames": 0,
+    "cause": "Added tuple startswith check unsupported by MicroPython",
+    "fixed": true
+  },
+  "short_60_frame_measurement": {
+    "fps": 5.134349,
+    "wall_seconds": 11.686,
+    "latency": {
+      "history": {
+        "p95_ms_upper": 1,
+        "mean_ms": 0.01288333,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": 1,
+        "samples": 60,
+        "p50_ms_upper": 1
+      },
+      "capture": {
+        "p95_ms_upper": 1,
+        "mean_ms": 3.525817,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": 209,
+        "samples": 60,
+        "p50_ms_upper": 1
+      },
+      "rgb": {
+        "p95_ms_upper": 70,
+        "mean_ms": 68.7791,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": 71,
+        "samples": 60,
+        "p50_ms_upper": 69
+      },
+      "kpu": {
+        "p95_ms_upper": 6,
+        "mean_ms": 5.753467,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": 6,
+        "samples": 60,
+        "p50_ms_upper": 6
+      },
+      "ai2d": {
+        "p95_ms_upper": 2,
+        "mean_ms": 0.8966333,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": 2,
+        "samples": 60,
+        "p50_ms_upper": 1
+      },
+      "decode": {
+        "p95_ms_upper": 121,
+        "mean_ms": 115.223,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": 122,
+        "samples": 60,
+        "p50_ms_upper": 117
+      },
+      "cycle": {
+        "p95_ms_upper": 197,
+        "mean_ms": 194.7685,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": 391,
+        "samples": 60,
+        "p50_ms_upper": 193
+      },
+      "filter": {
+        "p95_ms_upper": 118,
+        "mean_ms": 111.5381,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": 120,
+        "samples": 60,
+        "p50_ms_upper": 111
+      }
+    }
+  },
+  "source_and_model_readback_files": 9,
+  "preserved_other_tmp_files_verified": 10,
+  "final_mmz_used": 0,
+  "final_script_running": false,
+  "startup_unchanged": true,
+  "boot_unchanged_absent": true,
+  "real_camera_accuracy": "NOT_RUN",
+  "road_test": "NOT_RUN",
+  "long_soak": "NOT_RUN",
+  "native_tcn_gru": "NOT_RUN",
+  "native_pixel_equivalence": "NOT_RUN",
+  "position_valid": false,
+  "qualification": "EXPERIMENTAL_ACCURACY_HOLD",
+  "known_storage_issue": "SD write returned30(read-only); testing used explicitly isolated /tmp and host readback",
+  "approved_cleanup_directory": "/tmp/xyusb1117e",
+  "backup": "All19 files fully downloaded and size/SHA verified; only9files in approved e directory deleted",
+  "transport": "Builtin ubinascii, bytes input,8192-byte blocks; whole stored files reopened for SHA",
+  "prior_64k_transport_attempt": "UNKNOWN; one controlled reconnect, not replayed",
+  "production_deployment": false
+}

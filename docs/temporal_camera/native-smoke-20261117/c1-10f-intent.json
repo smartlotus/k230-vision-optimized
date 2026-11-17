@@ -1,0 +1,9 @@
+{
+  "status": "DISPATCHING",
+  "report": "/tmp/k230_temporal_v1_c1r3/c1_10f.json",
+  "entry": "/tmp/k230_temporal_v1_c1r3/c1_10f-entry.json",
+  "frames": 10,
+  "accuracy": "NOT_RUN",
+  "road_test": "NOT_RUN",
+  "automatic_retry": false
+}

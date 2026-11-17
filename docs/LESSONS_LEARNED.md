@@ -135,6 +135,28 @@
 
 接续方式：执行前核对idle和输出路径，显式传全新的report_path；[交接文档](HANDOFF.md)提供随机新后缀示例。不要删除旧报告来让入口“可用”，不要用另一次长跑验证一个已从源代码确认的路径冲突。将检查前移到代码是后续工程改进；目前文档中已明确这个已知限制。
 
+## F17：存储统计、IDE 写入范围与实际文件系统权限分别判断
+
+2026-11-17 滤波定位短测中，`/sdcard` 的 `statvfs` 可用块为 0，原生写入进一步返回错误 30（只读）。不能仅凭可用块为 0 就认定磁盘已满。`/tmp` 删除已批准且已备份的约 3 MB 文件后，`statvfs` 数值仍未更新，因此它也不是本轮临时空间的可靠剩余容量计数。
+
+当前 CanMV 文件浏览器写入根为 sdcard/data/udisk；它对 `/tmp` 返回 1035，不等于 MicroPython 应用不能使用 `/tmp`。板端应用的临时文件应限定在本任务专属目录，不改 SD 挂载状态，不向系统目录安装。清理其他任务临时文件必须有对应授权、逐文件完整备份和 SHA 复核。本次仅获准清理 `/tmp/xyusb1117e`，`d/f` 保留。原始返回、备份及清理清单见 [存储证据](temporal_camera/native-smoke-20261117/STORAGE_AND_RECOVERY.json) 与 [授权清理收据](temporal_camera/native-smoke-20261117/APPROVED_CLEANUP_E.json)。
+
+## F18：AI2D 输出检查必须读取实际目标 Tensor
+
+当前固件的实测中，`nn.from_numpy()` 的原始零数组在 AI2D 执行后仍全零，而 `tensor.to_numpy()` 的目标张量已有有效像素。只检查原数组会误报黑画面。本次 10/10 USB 帧的 RGB 范围为 0..252，实际模型输入范围为 6..249，原数组最大值仍为 0，清理无异常。见 [原始采样](temporal_camera/native-smoke-20261117/CAPTURE_AI2D_B.json) 和 [目标 Tensor 复验](temporal_camera/native-smoke-20261117/CAPTURE_AI2D_C.json)。此项只验证采集与预处理，不能替代模型或定位精度验收。
+
+## F19：脚本传输使用原生解码与小分片，失败不得当成上传完成
+
+本轮 `binascii` 实际来自 Python `binascii.py`，传 str 给其 base64 解码会报 `can't convert str to int`。64 KB 脚本上传随后遇到 USBDBG 0xA4 / 0x8E 短读，原 attempt 保留 UNKNOWN；一次受控重连后取得新的 REPL nonce，旧目标目录仍为空，没有自动重放。
+
+按用户指出的既有小文件经验，改为原生 `ubinascii`、bytes 字面量和 8192-byte 分片。三片探针完整 SHA 读回通过，随后 2,646,600-byte 模型及其余 8 个文件逐片传输、完整文件重新打开计算 SHA 均通过。不能将这项工程恢复写成已证明 USB 短读的全部底层根因。见 [小分片探针](temporal_camera/native-smoke-20261117/SMALL_TRANSFER_PROBE.json)、[完整上传收据](temporal_camera/native-smoke-20261117/install-cnn1-runtime-r3.json) 和 [故障与恢复](temporal_camera/native-smoke-20261117/TRANSFER_RECOVERY.json)。
+
+## F20：退出清理需要覆盖 nncase 缓存池，并验证重新启动
+
+滤波定位最初 10/60/10 帧均完成，UVC / MediaManager 清理无异常，但 MMZ 驻留约 4.4 MB。独立 `nn.shrink_memory_pool()` 使其降到 0，支持缓存池未收缩的解释，不证明发生内存泄漏。入口清空 Tensor / KPU 等引用并 gc 后显式收缩缓存池；最终两次 10/10 帧复验均为 MMZ 0 → 0、无清理错误，结束设备空闲。见 [缓存对照](temporal_camera/native-smoke-20261117/POOL_CHECK.json)、[最终重启](temporal_camera/native-smoke-20261117/c1-10f-readback.json)、[后验核对](temporal_camera/native-smoke-20261117/POSTFLIGHT.json)。
+
+本次临时路径检查还暴露当前 MicroPython 不接受 `str.startswith(tuple)`，改为逐个字符串检查后通过。主机 CPython PASS 不覆盖这类固件 API 兼容性，首次原生失败记录应保留。
+
 ## 历史经验入口
 
 - [KPU 管线与连接故障](validation/kpu-pipeline-20261112/README.md)：旧模型/旧运行的失败和恢复证据，不覆盖为本轮结果。

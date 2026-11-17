@@ -18,11 +18,11 @@
     "Current USB capture AI2D KPU CPU filter report readback and cleanup verified in bounded runs; no accuracy road-test motion startup or other-line changes"
   ],
   "branch": "ops/temporal-camera-v1-20261117",
-  "state": "paused",
-  "claimed": false,
+  "state": "ready",
+  "claimed": true,
   "agent": "codex",
-  "session": "temporal-native-smoke-20261117-a",
-  "revision": 5,
-  "handoff": ".ops/handoffs/temporal-native-smoke-20261117/20261117T103644-45f42b34.json",
-  "updated_at": "2026-11-17T10:37:15+00:00"
+  "session": "temporal-native-smoke-20261117-b",
+  "revision": 7,
+  "handoff": ".ops/handoffs/temporal-native-smoke-20261117/20261117T112756-38cc1b8d.json",
+  "updated_at": "2026-11-17T11:28:10+00:00"
 }

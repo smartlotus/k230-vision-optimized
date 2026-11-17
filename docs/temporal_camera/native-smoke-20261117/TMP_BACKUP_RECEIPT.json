@@ -1,0 +1,111 @@
+{
+  "status": "ALL19_FULL_BYTE_BACKUPS_VERIFIED",
+  "local_root": "C:\\Users\\28389\\Desktop\\k230-project\\archives\\temporal-native-storage-backup-20261117",
+  "files": [
+    {
+      "path": "/tmp/xyusb1117d/capture30.json",
+      "bytes": 285,
+      "sha256": "d8e9f1a3127157a2ecf7ed7da638fe5091602cf84836be7575e05dd587e58e49"
+    },
+    {
+      "path": "/tmp/xyusb1117d/write-read-test.bin",
+      "bytes": 8192,
+      "sha256": "dc404a613fedaeb54034514bc6505f56b933caa5250299ba7d094377a51caa46"
+    },
+    {
+      "path": "/tmp/xyusb1117e/format-probe.json",
+      "bytes": 138,
+      "sha256": "9bd53dd29fbe68c88d7e66074ba6e93f164d019c17b1e8fff3fc619ad095328b"
+    },
+    {
+      "path": "/tmp/xyusb1117e/format-probe-rgb888.bin",
+      "bytes": 691200,
+      "sha256": "05ff7883dbda98c11af87bdc2ea440b3ad218a5fdb0c121be873a1f6bffd7bc9"
+    },
+    {
+      "path": "/tmp/xyusb1117e/format-probe-raw.jpg",
+      "bytes": 85162,
+      "sha256": "ad01a03343e5bf64d307e026ef9ae305cad322633bd9079caa3270cb4bd674df"
+    },
+    {
+      "path": "/tmp/xyusb1117e/chain300-e02.json",
+      "bytes": 6649,
+      "sha256": "72421013aa5e2fedc26e17b187ccab06af64148e59d95fa41d4f2ea779725202"
+    },
+    {
+      "path": "/tmp/xyusb1117e/chain30-e01.json",
+      "bytes": 3993,
+      "sha256": "2200a69e9ec4a7a484161046a28fca68bfa62045390b01be445b60a22798d0a2"
+    },
+    {
+      "path": "/tmp/xyusb1117e/engineering.kmodel",
+      "bytes": 2133296,
+      "sha256": "ae6f472c020f22026c4e6779c5899a38296401465731a258be557061d391a40b"
+    },
+    {
+      "path": "/tmp/xyusb1117e/board_usb_smoke.py",
+      "bytes": 13205,
+      "sha256": "852bc8576bd5e1c40737eb8decab918a032910b30d6ea5e047f2f110392dc357"
+    },
+    {
+      "path": "/tmp/xyusb1117e/engineering.json",
+      "bytes": 52052,
+      "sha256": "3d923840a98907c3569678b7354fd102a166162bf4a0f94e36fb3047de359792"
+    },
+    {
+      "path": "/tmp/xyusb1117e/board_probe.py",
+      "bytes": 11315,
+      "sha256": "51aaa38e69bcba06a561236bcd4ce4d8e8479e42c9ba180348218f0c5ed710b4"
+    },
+    {
+      "path": "/tmp/xyusb1117f/postflight.json",
+      "bytes": 525,
+      "sha256": "1743eefdbe7a717c4fb59fbb7d69468967d90b6a2543630b94189dc9b285295c"
+    },
+    {
+      "path": "/tmp/xyusb1117f/restart30-f03.json",
+      "bytes": 4022,
+      "sha256": "d32d47abe902b331a595bab69c7c74ba4b7b7f7ab763c8d0b5ecae6248050b45"
+    },
+    {
+      "path": "/tmp/xyusb1117f/chain300-f02.json",
+      "bytes": 6688,
+      "sha256": "0504243e3651c93c01583a634630b1e2a733d945ebfd65f30bd3d3acaacad2b9"
+    },
+    {
+      "path": "/tmp/xyusb1117f/chain30-f01.json",
+      "bytes": 4025,
+      "sha256": "7a28e000df73f522ba23c420432a58f5249f4c3260827d45eca2e93edbe19128"
+    },
+    {
+      "path": "/tmp/xyusb1117f/board_usb_smoke.py",
+      "bytes": 13774,
+      "sha256": "476c0eba7d4fd42e8d81ae01a3fec4db335dd530df81a7d16592d477062625e6"
+    },
+    {
+      "path": "/tmp/xyusb1117f/engineering.kmodel",
+      "bytes": 2133296,
+      "sha256": "ae6f472c020f22026c4e6779c5899a38296401465731a258be557061d391a40b"
+    },
+    {
+      "path": "/tmp/xyusb1117f/engineering.json",
+      "bytes": 52052,
+      "sha256": "3d923840a98907c3569678b7354fd102a166162bf4a0f94e36fb3047de359792"
+    },
+    {
+      "path": "/tmp/xyusb1117f/board_probe.py",
+      "bytes": 11315,
+      "sha256": "51aaa38e69bcba06a561236bcd4ce4d8e8479e42c9ba180348218f0c5ed710b4"
+    }
+  ],
+  "directories": [
+    "/tmp/xyusb1117d",
+    "/tmp/xyusb1117e",
+    "/tmp/xyusb1117f"
+  ],
+  "total_bytes": 5231184,
+  "proposed_cleanup_directory": "/tmp/xyusb1117e",
+  "proposed_cleanup_bytes": 2997010,
+  "permission_to_delete": "NOT_REQUESTED_YET",
+  "deleted": []
+}
