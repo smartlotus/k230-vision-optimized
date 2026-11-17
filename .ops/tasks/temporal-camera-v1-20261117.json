@@ -18,10 +18,10 @@
   ],
   "branch": "ops/temporal-camera-v1-20261117",
   "state": "ready",
-  "claimed": true,
+  "claimed": false,
   "agent": "codex",
   "session": "temporal-v1-20261117-a",
-  "revision": 7,
+  "revision": 8,
   "handoff": ".ops/handoffs/temporal-camera-v1-20261117/20261117T073906-03afbdd3.json",
-  "updated_at": "2026-11-17T07:39:30+00:00"
+  "updated_at": "2026-11-17T07:45:15+00:00"
 }
