@@ -1,0 +1,25 @@
+{
+  "state": "PAUSED_BY_USER",
+  "firmware": "K230-v1.8-36-gae2f20da0467a8e70659f032b240aae50272c49a",
+  "runtime": "2.11.0",
+  "capture_device": "openaicam#openaicam",
+  "tcn4_install": {
+    "state": "INTERRUPTED_FINAL_STATE_UNCONFIRMED",
+    "host_process_exit": 1,
+    "host_error": "WinError 10054 while waiting for canmv_run_script response",
+    "remote_root": "/tmp/k230_temporal_v1_t4p1",
+    "verified_parts": 59,
+    "verified_prefix_bytes": 483328,
+    "model_bytes": 2722784,
+    "full_file_sha_readback": "NOT_RUN",
+    "tcn4_native_frames": 0,
+    "retry": "NOT_RUN"
+  },
+  "optimized_a_native": "NOT_RUN",
+  "offline_archive_inventory": {
+    "manifest": "K230_Temporal_Offline_Delivery_R1.sha256",
+    "verified_files": 20,
+    "verified_zips": 9,
+    "manifest_sha256": "c0244587f9696dc2de1c9792f79064b7c1d3f98d5971673f7896e959270fbd34"
+  }
+}

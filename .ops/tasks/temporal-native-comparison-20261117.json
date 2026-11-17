@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "temporal-native-comparison-20261117",
+  "title": "Measure optimized A and TCN4 in isolated K230 tests",
+  "paths": [
+    "docs/temporal_camera/native-comparison-20261117"
+  ],
+  "lane": "serial",
+  "resources": [
+    "COM3",
+    "K230-media"
+  ],
+  "depends": [],
+  "acceptance": [
+    "Versioned A timing and native temporal model evidence with exact input identity, memory and cleanup; accuracy remains on HOLD"
+  ],
+  "branch": "ops/temporal-camera-v1-20261117",
+  "state": "paused",
+  "claimed": true,
+  "agent": "codex",
+  "session": "temporal-native-comparison-20261117-a",
+  "revision": 3,
+  "handoff": ".ops/handoffs/temporal-native-comparison-20261117/20261117T120357-56baa4e3.json",
+  "updated_at": "2026-11-17T12:03:58+00:00"
+}

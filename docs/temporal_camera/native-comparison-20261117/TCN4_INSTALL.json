@@ -1,0 +1,467 @@
+{
+  "status": "INSTALLING",
+  "setting": "tcn4",
+  "remote": "/tmp/k230_temporal_v1_t4p1",
+  "observed_utc": "2026-11-17T11:58:47.084848+00:00",
+  "archive_sha256": "b7dd989d7f1d23b74a95cbdd7528e8e47fc8e403256ed1363d66f5c4713de48b",
+  "verified_archive_members": 20,
+  "source_changes": {
+    "board_multiroute.py": {
+      "archive_sha256": "d19ab13d2928336c64833afc754aa9979e1209f1d13e0814ac47057b59a77c19",
+      "current_sha256": "755c424a9ed52ed5b4ffe8eefa34be330f343193ddc2e30317a676dc3ca76f0e"
+    },
+    "embedded_filter.py": {
+      "archive_sha256": "856676f28fc032e52bf4916850b2c3819f05bbe74ea1be59d2844f3b16b77402",
+      "current_sha256": "e6fb4fa6fb3961fc5aca91228152d32097973094ecd0d8d17ae16bb597b5e858"
+    },
+    "localization_runtime.py": {
+      "archive_sha256": "196c2e2c7518f986ca779ade2a9e9be42d6130a801705875c6b47cdbecd96bbe",
+      "current_sha256": "1ddc278e480cd96905cf8916a58e43d15cd852d4ae69140ede1e0a0f02f6fcce"
+    }
+  },
+  "files": [
+    {
+      "target": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "parts": [
+        "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel.p0",
+        "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel.p1",
+        "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel.p2",
+        "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel.p3",
+        "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel.p4",
+        "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel.p5",
+        "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel.p6",
+        "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel.p7",
+        "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel.p8",
+        "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel.p9",
+        "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel.p10"
+      ],
+      "bytes": 2722784,
+      "sha256": "3c9de65fe5c7d74300075600dab53c7364307e68f1ff1924e15a7dc1219b5cf2"
+    },
+    {
+      "target": "/tmp/k230_temporal_v1_t4p1/KMODEL_REPORT.json",
+      "parts": [
+        "/tmp/k230_temporal_v1_t4p1/KMODEL_REPORT.json.p0"
+      ],
+      "bytes": 12264,
+      "sha256": "a590a6e9ca7082d9ef530a3f77418afd88fbaac3394c52bef1643a51b071db82"
+    },
+    {
+      "target": "/tmp/k230_temporal_v1_t4p1/board_helpers.py",
+      "parts": [
+        "/tmp/k230_temporal_v1_t4p1/board_helpers.py.p0"
+      ],
+      "bytes": 2556,
+      "sha256": "0fdb8b81c7a988bd8d39bc1f5fbbfb8aa7699905f6c85fe5a1aaeaf0fe01fd9f"
+    },
+    {
+      "target": "/tmp/k230_temporal_v1_t4p1/board_multiroute.py",
+      "parts": [
+        "/tmp/k230_temporal_v1_t4p1/board_multiroute.py.p0"
+      ],
+      "bytes": 10385,
+      "sha256": "755c424a9ed52ed5b4ffe8eefa34be330f343193ddc2e30317a676dc3ca76f0e"
+    },
+    {
+      "target": "/tmp/k230_temporal_v1_t4p1/board_temporal.py",
+      "parts": [
+        "/tmp/k230_temporal_v1_t4p1/board_temporal.py.p0"
+      ],
+      "bytes": 4187,
+      "sha256": "7b2245f4712fd13a3f8ea39861a2d896e87e8ead1da704da1f4434046dad7cd9"
+    },
+    {
+      "target": "/tmp/k230_temporal_v1_t4p1/competition_paths.py",
+      "parts": [
+        "/tmp/k230_temporal_v1_t4p1/competition_paths.py.p0"
+      ],
+      "bytes": 4575,
+      "sha256": "cb42cd555d452c6781caa43d5ae9084c0dadbe14d6741aa985edca42c8eb5a06"
+    },
+    {
+      "target": "/tmp/k230_temporal_v1_t4p1/embedded_filter.py",
+      "parts": [
+        "/tmp/k230_temporal_v1_t4p1/embedded_filter.py.p0"
+      ],
+      "bytes": 8523,
+      "sha256": "e6fb4fa6fb3961fc5aca91228152d32097973094ecd0d8d17ae16bb597b5e858"
+    },
+    {
+      "target": "/tmp/k230_temporal_v1_t4p1/localization_runtime.py",
+      "parts": [
+        "/tmp/k230_temporal_v1_t4p1/localization_runtime.py.p0"
+      ],
+      "bytes": 3790,
+      "sha256": "1ddc278e480cd96905cf8916a58e43d15cd852d4ae69140ede1e0a0f02f6fcce"
+    },
+    {
+      "target": "/tmp/k230_temporal_v1_t4p1/deployment.json",
+      "parts": [
+        "/tmp/k230_temporal_v1_t4p1/deployment.json.p0"
+      ],
+      "bytes": 100017,
+      "sha256": "7805ee4c3f121a7182b5f76c915851d7449efac1aa26150c83270cbcebc1c65c"
+    }
+  ],
+  "verified_parts": [
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 0,
+      "bytes": 8192,
+      "sha256": "a089664043dc8c5fc478010b5f9ccfd48204f735dc46b773c79df17602278314"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 8192,
+      "bytes": 8192,
+      "sha256": "c40f82a1daa8c709686564078476264b910c19e942cc88441ee2708c51f4776e"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 16384,
+      "bytes": 8192,
+      "sha256": "42d715356de9757756967ec55b418378386976baf5046df44300f9bf86ff440a"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 24576,
+      "bytes": 8192,
+      "sha256": "abfd5b9aba488ed34917481a95005df6806a9a08f55051ebf1be913ebf174326"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 32768,
+      "bytes": 8192,
+      "sha256": "b582307076d3f1bfaf1bd74baffa27a508da94308e880ba35f687c00b8c42444"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 40960,
+      "bytes": 8192,
+      "sha256": "4aa305ac9ff45f0b5b0765ba77dbb672098739e99128d7b5fe68e17b2ec06c74"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 49152,
+      "bytes": 8192,
+      "sha256": "0c0fad8a0645569b8ab1cad7cc2c78459f0e684c088a58943c377f95870660c1"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 57344,
+      "bytes": 8192,
+      "sha256": "680a37dde08892d825ec1fd623b1808f0ec0c0bd0fbc891c0a0750255e76c574"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 65536,
+      "bytes": 8192,
+      "sha256": "f9926fefa11a788b853048e342128408048c2a3ec3144568b66d4a24c7132832"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 73728,
+      "bytes": 8192,
+      "sha256": "f1dbc0b769d4e5ff1368b7c27fada5a09c60b764ee95e4e2607758eec7db9f4f"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 81920,
+      "bytes": 8192,
+      "sha256": "6afb128eb1c1e9fe38175484523ee49c921a93baaaca5ff5123a3a594b59243a"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 90112,
+      "bytes": 8192,
+      "sha256": "f29eb8d417a96f5de029b8bfccb029397ce1161e22576755bae0162ee38af3db"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 98304,
+      "bytes": 8192,
+      "sha256": "d431175a914e16d9d926be58b8e0f8276df0a3b381c6cfbb054fd93e1a12ef25"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 106496,
+      "bytes": 8192,
+      "sha256": "6172877f8245ebc41544191da2cd7a468e262d89bcb7319f8ee575232e68fe8c"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 114688,
+      "bytes": 8192,
+      "sha256": "cd61d7b1ebe95c2b31a773c9c11d55f4cdf5a82240038be9727af56876c2a8ba"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 122880,
+      "bytes": 8192,
+      "sha256": "69275eff7635e10b897232a8659da8772a7a2af9af34b5fdd7a441cba78baae6"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 131072,
+      "bytes": 8192,
+      "sha256": "337dbb30294469671e41439d7e67791b1ff7e6f69348f2b9ae813c3f1a864588"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 139264,
+      "bytes": 8192,
+      "sha256": "8ae3fe4fc7697fb46e3d2b2575382d4aa3d514e4356520f3cfd3fff66325a753"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 147456,
+      "bytes": 8192,
+      "sha256": "25831f1348e31c7ed640a47c2f1dac4588189ca6d5c6f2763c7526ceb8f280ee"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 155648,
+      "bytes": 8192,
+      "sha256": "c0acf9def0a9e3369a28d65c9c65cb205b8855a52459c87cd0b9e315c04419df"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 163840,
+      "bytes": 8192,
+      "sha256": "2973e0ac8eb2b2cdc402f63b63eb3f7117cfd748bdd929f6a0f199106d4fca41"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 172032,
+      "bytes": 8192,
+      "sha256": "b8e091fa55080297fc73e527d2bb68cccf300436dc1d8b0dcc49117f475a3e61"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 180224,
+      "bytes": 8192,
+      "sha256": "43bb17247b51cb9f75f32775e575ed63a47a661b22d28fe05c280a3c4d2ac1c9"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 188416,
+      "bytes": 8192,
+      "sha256": "67405ea8b77ea9be585d3c55ebb165b872adc1c39dea4e01349ed080f8597bf1"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 196608,
+      "bytes": 8192,
+      "sha256": "265d29303e9db15ea343ec8ce19d1acb9f17891c181b764189fd3157acb46344"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 204800,
+      "bytes": 8192,
+      "sha256": "d1bccb1a90f72da9ad912ddd98c11c003378acedf582c6ae497ef8a7f80dcc94"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 212992,
+      "bytes": 8192,
+      "sha256": "38098eced11e8c7f0af5bee7850f8959f74c0508b23bc688736c5b90f081624e"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 221184,
+      "bytes": 8192,
+      "sha256": "5c8cced2bd5228f407f1200aef010b5b26a0fe0b6201e25b19bdc7049a948e2c"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 229376,
+      "bytes": 8192,
+      "sha256": "20a2a4e05fe517dbc9d8c94de06850309fdf4e634ec5f81a234061888b16aea7"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 237568,
+      "bytes": 8192,
+      "sha256": "b432833682ae8492767ba72a4c48389c3d4404117a01a547fa6eeecebac34cfc"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 245760,
+      "bytes": 8192,
+      "sha256": "17e2bee88f4c15d2ff38bafcab7de1474dca91a3302fe6aa5e7b2e6358e1b15c"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 253952,
+      "bytes": 8192,
+      "sha256": "be6f57d38dc6d06a8ce7d17e57cf0ff7ae897cf50057acaa316a34046058e55a"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 262144,
+      "bytes": 8192,
+      "sha256": "ac7c80632e55117347840db3bbeb06dc04122cc12c869fce7d8c466aa40b2527"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 270336,
+      "bytes": 8192,
+      "sha256": "2480d9c52f0ff4f916d46cb0f0a293b6306e9e3d575f97b926bd323c10d5e1b8"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 278528,
+      "bytes": 8192,
+      "sha256": "4133a8c59372bbfb22edf4fe5eba39ecb9ff40a07ee6c197f32f9bb6be08a535"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 286720,
+      "bytes": 8192,
+      "sha256": "3497ed9dde0940bc0f7d1e95c6ee591bc3b3e46dd62a4300ea2945eeaa9f0b87"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 294912,
+      "bytes": 8192,
+      "sha256": "4e6b9dfc2e7b7c4a753cf55f57ff0fc29a555e49fdd614c1d493ca70b248e142"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 303104,
+      "bytes": 8192,
+      "sha256": "9c6da7739f2171346fe3efdbc5e64256f8d0869bdfdf4ed78dfa4e17ccf2fd8a"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 311296,
+      "bytes": 8192,
+      "sha256": "73df55480c6d4902bd2e5a8e96b587f98835d47a4f87dc82a13b221ef64f647a"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 319488,
+      "bytes": 8192,
+      "sha256": "16452298eeee07bd8c1a633eb5f868eab193b9294a03f41b95f9ed7967692dc0"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 327680,
+      "bytes": 8192,
+      "sha256": "c7410fc600ba2c09e59dbedb051dc8e9964be36f6434254fd01ed608d36423dd"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 335872,
+      "bytes": 8192,
+      "sha256": "97b97ca8c4c7c4219e251bc5a3937ea1f450ef91baeeb77cc091e887135a1c09"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 344064,
+      "bytes": 8192,
+      "sha256": "36b66c54b0e18a8d3c127ce829aae548d930c5fe928b328a6b0144571064fcfa"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 352256,
+      "bytes": 8192,
+      "sha256": "b39956b7be26b28d9c65235578e01592a08e07aa7f850b0d8eb041f658f605fe"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 360448,
+      "bytes": 8192,
+      "sha256": "37e18c55e162aa080490ebe8138c71815f78e14e1a6d782ff59cb159ca92e51f"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 368640,
+      "bytes": 8192,
+      "sha256": "9a6131ee474ccce5d382a394445ca1e872fb4d74977bf32affec5a63a9c49b25"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 376832,
+      "bytes": 8192,
+      "sha256": "3c6178918d896f932d0fadd029d88bf9ef90c1143a45ee1acc546003947bc700"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 385024,
+      "bytes": 8192,
+      "sha256": "6e9af748340e869ee7807c376a7bf9dddfaf0de027e7642997e81e46bc02506e"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 393216,
+      "bytes": 8192,
+      "sha256": "98f175a51ce4d0d3cb044ab1633355a4812ce4512b53dbbc505ff3acd214b9b7"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 401408,
+      "bytes": 8192,
+      "sha256": "f073136685cbe063e51750d824df9c0d0988856333801ca277dba5fc18acfe4d"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 409600,
+      "bytes": 8192,
+      "sha256": "0fef8f6a56c78639ccaa93a5b2272d00a14daefe90931e20fb6452cccd5dc2ba"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 417792,
+      "bytes": 8192,
+      "sha256": "64174e7a25cb2180a8da1385601d92fa8b38e99990695faf15a6cd7cf0e109f0"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 425984,
+      "bytes": 8192,
+      "sha256": "93d68c64ac790cdb93e879f2ebfa2531c48100de5bfd823bea5c2151a82549d1"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 434176,
+      "bytes": 8192,
+      "sha256": "c1e31030cccd02d0659751437fc5641f180600221e64e9f810d1e4695e37f580"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 442368,
+      "bytes": 8192,
+      "sha256": "3dd3156e897e537d384ff0b9521a0ba4cc6250409a73e7744388e3082d948788"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 450560,
+      "bytes": 8192,
+      "sha256": "33fd79b8b31b15fbf8860be3e74e34633d27d876ef8c08de3066a145f438a39c"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 458752,
+      "bytes": 8192,
+      "sha256": "58968e44d9d7c267c106696ce2233a0b35502b5efc0fed4eca5eda0bc7c634bd"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 466944,
+      "bytes": 8192,
+      "sha256": "6a4084b156693a80be131948457805ca2c186f75871230239b4b6957dc22513e"
+    },
+    {
+      "path": "/tmp/k230_temporal_v1_t4p1/camera_xy.kmodel",
+      "offset": 475136,
+      "bytes": 8192,
+      "sha256": "87dbdc2f1d2f15baae39bdb47a7e9d10c244a6125fb135dd1ea284df81e1f0d6"
+    }
+  ],
+  "automatic_retry": false,
+  "transport": "MICROPYTHON_TMP_FILE_IO",
+  "mkdir_result": {
+    "success": true
+  }
+}

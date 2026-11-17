@@ -1,0 +1,72 @@
+{
+  "marker": "TEMPORAL_PREFLIGHT_COMPARE_6c131f12f31e4dceb03d7782179152e3:",
+  "board": {
+    "connected": true,
+    "ready": true,
+    "board": {
+      "boardType": "K230",
+      "boardName": "LCKFB-LSPI-K230-1G-CanMV",
+      "fwVersion": "v1.8-36",
+      "fwVersionFull": "K230-v1.8-36-gae2f20da0467a8e70659f032b240aae50272c49a",
+      "archStr": "[LCKFB-LSPI-K230-1G-CanMV:000000000000000000000000]",
+      "memorySize": "",
+      "protocolVersion": 2,
+      "capabilities": {
+        "deleteFile": true,
+        "fileExec": true,
+        "listDir": true,
+        "listDirPaged": true,
+        "mkdir": true,
+        "readFile": true,
+        "renameFile": true,
+        "replInput": true,
+        "rmdir": true,
+        "rmdirRecursive": true,
+        "virtualTouch": true,
+        "writeFile": true
+      },
+      "port": "COM3",
+      "ready": true
+    }
+  },
+  "observation": {
+    "heap_free": 4141472,
+    "sdcard": [
+      512,
+      512,
+      1023744,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      255
+    ],
+    "tmp": [
+      512,
+      512,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      255
+    ],
+    "runtime": "2.11.0",
+    "firmware": "(sysname='rt-smart', nodename='rt-smart', release='v1.8-36-gae2f20d', version='v1.8-36-gae2f20d on 2026-08-16', machine='k230_canmv_lckfb')",
+    "mmz": [
+      535822336,
+      0,
+      535822336
+    ],
+    "uvc": [
+      true,
+      "openaicam#openaicam"
+    ],
+    "existing_cnn1_error": "[Errno 2] ENOENT",
+    "tmp_entries": []
+  }
+}

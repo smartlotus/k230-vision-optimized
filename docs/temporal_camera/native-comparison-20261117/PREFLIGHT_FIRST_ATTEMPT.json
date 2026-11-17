@@ -1,0 +1,1 @@
+{"status":"PREFLIGHT_FAILED","action":"read-only runtime and storage query","serial":"COM3","observed_error":"AttributeError: 'module' object has no attribute 'mmz_stat'","next_attempt":"Use gc.sys_mmz() as in the previously verified postflight."}
