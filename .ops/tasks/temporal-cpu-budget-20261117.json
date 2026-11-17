@@ -17,10 +17,10 @@
   ],
   "branch": "ops/temporal-camera-v1-20261117",
   "state": "ready",
-  "claimed": true,
+  "claimed": false,
   "agent": "codex",
   "session": "temporal-cpu-budget-20261117-a",
-  "revision": 3,
+  "revision": 4,
   "handoff": ".ops/handoffs/temporal-cpu-budget-20261117/20261117T114030-300bb97f.json",
-  "updated_at": "2026-11-17T11:40:31+00:00"
+  "updated_at": "2026-11-17T11:40:41+00:00"
 }
