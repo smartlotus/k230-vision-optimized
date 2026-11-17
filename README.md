@@ -49,7 +49,8 @@ python -m tools.benchmark_uart_optimized --output evidence/local/uart-benchmark.
 
 ```powershell
 python .ops/tools/ops.py status
-python .ops/tools/ops.py verify --task <任务ID>
+$taskId = Read-Host "输入当前工作树的 OPS 任务 ID"
+python .ops/tools/ops.py verify --task $taskId
 ```
 
 从 status 查询任务 ID 和对应工作树。在该工作树核验交接并认领，模块完成后保存 checkpoint 和释放认领。
