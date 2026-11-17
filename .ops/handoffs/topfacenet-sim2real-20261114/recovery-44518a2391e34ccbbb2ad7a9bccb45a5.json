@@ -1,0 +1,58 @@
+{
+  "runtime": {
+    "schema_version": 1,
+    "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+    "id": "topfacenet-sim2real-20261114",
+    "title": "Auditable Kaggle TopFaceNet sim2real training with Drive persistence",
+    "paths": [
+      "research/topface",
+      "docs/topface"
+    ],
+    "lane": "serial",
+    "resources": [
+      "Kaggle-gpu",
+      "gdrive-k230"
+    ],
+    "depends": [],
+    "acceptance": [
+      "Hardware provenance and camera range recorded; original fused CAD unchanged; Kaggle render/audit/train evidence preserved; approved r4 and production hardware unchanged; private remote checkpoint verified"
+    ],
+    "branch": "ops/topfacenet-sim2real-20261114",
+    "state": "paused",
+    "claimed": true,
+    "agent": "codex",
+    "session": "topface-20261116-delivery",
+    "revision": 84,
+    "handoff": ".ops/handoffs/topfacenet-sim2real-20261114/20261115T212528-4661b28e.json",
+    "updated_at": "2026-11-15T21:26:09+00:00"
+  },
+  "snapshot": {
+    "schema_version": 1,
+    "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+    "id": "topfacenet-sim2real-20261114",
+    "title": "Auditable Kaggle TopFaceNet sim2real training with Drive persistence",
+    "paths": [
+      "research/topface",
+      "docs/topface"
+    ],
+    "lane": "serial",
+    "resources": [
+      "Kaggle-gpu",
+      "gdrive-k230"
+    ],
+    "depends": [],
+    "acceptance": [
+      "Hardware provenance and camera range recorded; original fused CAD unchanged; Kaggle render/audit/train evidence preserved; approved r4 and production hardware unchanged; private remote checkpoint verified"
+    ],
+    "branch": "ops/topfacenet-sim2real-20261114",
+    "state": "paused",
+    "claimed": true,
+    "agent": "codex",
+    "session": "topface-20261116-delivery",
+    "revision": 84,
+    "handoff": ".ops/handoffs/topfacenet-sim2real-20261114/20261115T212528-4661b28e.json",
+    "updated_at": "2026-11-15T21:26:09+00:00"
+  },
+  "reason": "User confirmed on 2026-11-16 that other sessions stopped and this conversation exclusively owns K230; prior task remains paused; board running=false",
+  "at": "2026-11-16T02:24:44+00:00"
+}
