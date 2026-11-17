@@ -16,10 +16,10 @@
   ],
   "branch": "ops/project-layout-20261117",
   "state": "ready",
-  "claimed": true,
+  "claimed": false,
   "agent": "coordinator",
   "session": "k230-layout-20261117-a",
-  "revision": 3,
+  "revision": 4,
   "handoff": ".ops/handoffs/project-layout-20261117/20261117T113512-7b2bb9a9.json",
-  "updated_at": "2026-11-17T11:35:13+00:00"
+  "updated_at": "2026-11-17T11:35:19+00:00"
 }
