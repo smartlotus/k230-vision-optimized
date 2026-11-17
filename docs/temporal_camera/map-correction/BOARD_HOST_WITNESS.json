@@ -1,0 +1,61 @@
+{
+  "status": "HOST_PIPELINE_AND_REAL_KMODEL_SIMULATOR_PASS",
+  "package_sha256": "b7dd989d7f1d23b74a95cbdd7528e8e47fc8e403256ed1363d66f5c4713de48b",
+  "native_k230": "NOT RUN",
+  "scope": "Mock UVC and AI2D, actual nncase 2.11.0 Simulator; no measured native metrics",
+  "runs": [
+    {
+      "setting": "cnn1",
+      "window": 1,
+      "attempts": 8,
+      "simulator_outputs": 3,
+      "dropped": 5,
+      "lost_and_global_recovery": true,
+      "history_resets": 0,
+      "packed_colors": [
+        [
+          10
+        ],
+        [
+          40
+        ],
+        [
+          100
+        ]
+      ],
+      "kmodel_sha256": "ac86c72a648df1c9f484c920180b0bcb9ae877f26d20c2cea364969d0d921fbc",
+      "cleanup": "PASS"
+    },
+    {
+      "setting": "tcn4",
+      "window": 4,
+      "attempts": 8,
+      "simulator_outputs": 3,
+      "dropped": 5,
+      "lost_and_global_recovery": true,
+      "history_resets": 1,
+      "packed_colors": [
+        [
+          10,
+          10,
+          10,
+          10
+        ],
+        [
+          10,
+          10,
+          10,
+          40
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ]
+      ],
+      "kmodel_sha256": "3c9de65fe5c7d74300075600dab53c7364307e68f1ff1924e15a7dc1219b5cf2",
+      "cleanup": "PASS"
+    }
+  ]
+}

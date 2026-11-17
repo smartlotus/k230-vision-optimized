@@ -12,11 +12,11 @@ from pathlib import Path
 import time
 
 import numpy as np
-from PIL import Image,ImageOps
 import torch
 from torch import nn
 
 from dataset import audit,digest
+from camera_preprocess import rgb_uint8
 from map_models import MapCameraXYNet
 
 
@@ -49,11 +49,7 @@ def main():
             clip=frames[max(0,i-saved['window']+1):i+1]
             windows[r['sample_id']]=[clip[0]]*(saved['window']-len(clip))+clip
     def tensor(row):
-        values=[]
-        for r in windows[row['sample_id']]:
-            with Image.open(data/r['image_path']) as im:
-                im=im.convert('RGB').resize((160,90),Image.Resampling.BILINEAR)
-                values.append(np.asarray(ImageOps.expand(im,(0,3,0,3),fill=(114,114,114))).transpose(2,0,1))
+        values=[rgb_uint8(data/r['image_path']) for r in windows[row['sample_id']]]
         return np.concatenate(values,axis=0)[None].copy()
     shape=[1,3*saved['window'],96,160];onnx=out/'camera_xy_uint8.onnx'
     torch.onnx.export(model,torch.zeros(shape,dtype=torch.uint8),str(onnx),input_names=['rgb_window_uint8'],

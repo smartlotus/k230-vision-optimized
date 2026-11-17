@@ -1,0 +1,216 @@
+{
+  "status": "SAME_RGB_PIL_VS_AI2D_MATCHED_REPLAY",
+  "new_dataset_sha256": "eee4d5cf453caa71ff4331e33000075808793ba0a85e96c99cb1085e43082037",
+  "n": 100,
+  "scenarios": {
+    "straight": 0,
+    "turn": 0,
+    "intersection": 0,
+    "repeated_road": 50,
+    "frame_drop": 0,
+    "variable_speed": 50,
+    "blur": 0,
+    "relocalization": 0,
+    "stop_start": 0,
+    "lighting": 0
+  },
+  "provider_source": {
+    "ref": "/code/lotus30/k230-camera-xy-multiroute-pilot-a06",
+    "url": "https://www.kaggle.com/code/lotus30/k230-camera-xy-multiroute-pilot-a06",
+    "versionNumber": 1,
+    "kernelId": 145538534
+  },
+  "models": {
+    "cnn1": {
+      "all": {
+        "n": 100,
+        "pil": {
+          "n": 100,
+          "mean_mm": 1070.909345691852,
+          "median_mm": 1064.4961026383967,
+          "p95_mm": 2120.267692194316,
+          "max_mm": 2518.7933372567177,
+          "within50_rate": 0.09,
+          "within200_rate": 0.21
+        },
+        "ai2d_matched": {
+          "n": 100,
+          "mean_mm": 1084.268176772015,
+          "median_mm": 1168.2006720440527,
+          "p95_mm": 2088.964849509164,
+          "max_mm": 2317.880012931042,
+          "within50_rate": 0.1,
+          "within200_rate": 0.2
+        },
+        "argmax_agreement": 0.78,
+        "max_logit_diff": 7.612743377685547
+      },
+      "train": {
+        "n": 50,
+        "pil": {
+          "n": 50,
+          "mean_mm": 1209.3277035213746,
+          "median_mm": 1336.215734475761,
+          "p95_mm": 2102.291372714494,
+          "max_mm": 2348.6610634972076,
+          "within50_rate": 0.06,
+          "within200_rate": 0.14
+        },
+        "ai2d_matched": {
+          "n": 50,
+          "mean_mm": 1224.5894451235297,
+          "median_mm": 1363.5306712254462,
+          "p95_mm": 2073.7846013604603,
+          "max_mm": 2283.734828485187,
+          "within50_rate": 0.08,
+          "within200_rate": 0.12
+        },
+        "argmax_agreement": 0.7,
+        "max_logit_diff": 7.612743377685547
+      },
+      "val": {
+        "n": 25,
+        "pil": {
+          "n": 25,
+          "mean_mm": 1167.238641775034,
+          "median_mm": 1102.64433000067,
+          "p95_mm": 2105.2461746556783,
+          "max_mm": 2317.880012931042,
+          "within50_rate": 0.08,
+          "within200_rate": 0.16
+        },
+        "ai2d_matched": {
+          "n": 25,
+          "mean_mm": 1174.2174166919226,
+          "median_mm": 1102.64433000067,
+          "p95_mm": 2105.2461746556783,
+          "max_mm": 2317.880012931042,
+          "within50_rate": 0.08,
+          "within200_rate": 0.16
+        },
+        "argmax_agreement": 0.84,
+        "max_logit_diff": 4.245990753173828
+      },
+      "test": {
+        "n": 25,
+        "pil": {
+          "n": 25,
+          "mean_mm": 697.7433339496255,
+          "median_mm": 460.85977893061056,
+          "p95_mm": 2124.2564480811584,
+          "max_mm": 2518.7933372567177,
+          "within50_rate": 0.16,
+          "within200_rate": 0.4
+        },
+        "ai2d_matched": {
+          "n": 25,
+          "mean_mm": 713.6764001490785,
+          "median_mm": 581.0098601617389,
+          "p95_mm": 2011.8693978696253,
+          "max_mm": 2145.785351435325,
+          "within50_rate": 0.16,
+          "within200_rate": 0.4
+        },
+        "argmax_agreement": 0.88,
+        "max_logit_diff": 1.2951743602752686
+      }
+    },
+    "tcn4": {
+      "all": {
+        "n": 100,
+        "pil": {
+          "n": 100,
+          "mean_mm": 921.965815887427,
+          "median_mm": 749.1668332222239,
+          "p95_mm": 2046.5773357607218,
+          "max_mm": 2482.2128204214796,
+          "within50_rate": 0.1,
+          "within200_rate": 0.24
+        },
+        "ai2d_matched": {
+          "n": 100,
+          "mean_mm": 984.667479286384,
+          "median_mm": 884.2008217717689,
+          "p95_mm": 2054.0058636219323,
+          "max_mm": 2482.2128204214796,
+          "within50_rate": 0.1,
+          "within200_rate": 0.22
+        },
+        "argmax_agreement": 0.83,
+        "max_logit_diff": 3.568206787109375
+      },
+      "train": {
+        "n": 50,
+        "pil": {
+          "n": 50,
+          "mean_mm": 1004.2576225425181,
+          "median_mm": 1054.6517065561593,
+          "p95_mm": 2027.8375091714972,
+          "max_mm": 2114.5201521157096,
+          "within50_rate": 0.1,
+          "within200_rate": 0.2
+        },
+        "ai2d_matched": {
+          "n": 50,
+          "mean_mm": 1021.0487483372054,
+          "median_mm": 1099.851951688183,
+          "p95_mm": 2008.6993967709916,
+          "max_mm": 2114.5201521157096,
+          "within50_rate": 0.1,
+          "within200_rate": 0.2
+        },
+        "argmax_agreement": 0.84,
+        "max_logit_diff": 3.568206787109375
+      },
+      "val": {
+        "n": 25,
+        "pil": {
+          "n": 25,
+          "mean_mm": 1015.0769278033168,
+          "median_mm": 891.6993206489295,
+          "p95_mm": 2042.6868840941922,
+          "max_mm": 2052.27405488187,
+          "within50_rate": 0.04,
+          "within200_rate": 0.16
+        },
+        "ai2d_matched": {
+          "n": 25,
+          "mean_mm": 1051.9083762484975,
+          "median_mm": 952.3197253869694,
+          "p95_mm": 2042.6868840941922,
+          "max_mm": 2052.27405488187,
+          "within50_rate": 0.04,
+          "within200_rate": 0.16
+        },
+        "argmax_agreement": 0.84,
+        "max_logit_diff": 2.9920289516448975
+      },
+      "test": {
+        "n": 25,
+        "pil": {
+          "n": 25,
+          "mean_mm": 664.2710906613548,
+          "median_mm": 362.6110506957195,
+          "p95_mm": 2089.8087297958214,
+          "max_mm": 2482.2128204214796,
+          "within50_rate": 0.16,
+          "within200_rate": 0.4
+        },
+        "ai2d_matched": {
+          "n": 25,
+          "mean_mm": 844.6640442226285,
+          "median_mm": 655.2405846156173,
+          "p95_mm": 2099.615843212801,
+          "max_mm": 2482.2128204214796,
+          "within50_rate": 0.16,
+          "within200_rate": 0.32
+        },
+        "argmax_agreement": 0.8,
+        "max_logit_diff": 1.293555736541748
+      }
+    }
+  },
+  "new_training": "NOT RUN",
+  "native_k230": "NOT RUN",
+  "scope": "Same 100 640x360 synthetic RGBs, output scores for frozen models; only one test trajectory"
+}

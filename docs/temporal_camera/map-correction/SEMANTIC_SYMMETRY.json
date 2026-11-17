@@ -1,0 +1,153 @@
+{
+  "status": "SIMULATION_ONLY_STATIC_MASK_DIAGNOSTIC",
+  "manifest_sha256": "ec2e617bb3b15df10c80f666aa2166f29d7231741026dc187ddc582887609042",
+  "field_mask_sha256": "fa5f526d741e27af830cc4b5a6c3e945ef48442670db3aabd12bd642def6f8d2",
+  "scope": "True camera projection for diagnosis only, no labels or metadata used for model training or inference",
+  "geometry_agreement_median": {
+    "val": 0.9977083206176758,
+    "test": 0.9975820183753967
+  },
+  "startup_exact_ties": 20,
+  "startup_frames": 20,
+  "startup": [
+    {
+      "sample_id": "gray-pilot-tr0004-000",
+      "split": "val",
+      "true_score": 0.9981250166893005,
+      "opposite_start_score": 0.9981250166893005
+    },
+    {
+      "sample_id": "gray-pilot-tr0005-000",
+      "split": "val",
+      "true_score": 0.9974305629730225,
+      "opposite_start_score": 0.9974305629730225
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-000",
+      "split": "test",
+      "true_score": 0.9979861378669739,
+      "opposite_start_score": 0.9979861378669739
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-000",
+      "split": "test",
+      "true_score": 0.9980555772781372,
+      "opposite_start_score": 0.9980555772781372
+    },
+    {
+      "sample_id": "gray-pilot-tr0012-000",
+      "split": "val",
+      "true_score": 0.9977777600288391,
+      "opposite_start_score": 0.9977777600288391
+    },
+    {
+      "sample_id": "gray-pilot-tr0013-000",
+      "split": "val",
+      "true_score": 0.9972916841506958,
+      "opposite_start_score": 0.9972916841506958
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-000",
+      "split": "test",
+      "true_score": 0.9975000023841858,
+      "opposite_start_score": 0.9975000023841858
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-000",
+      "split": "test",
+      "true_score": 0.9976388812065125,
+      "opposite_start_score": 0.9976388812065125
+    },
+    {
+      "sample_id": "gray-pilot-tr0020-000",
+      "split": "val",
+      "true_score": 0.9984027743339539,
+      "opposite_start_score": 0.9984027743339539
+    },
+    {
+      "sample_id": "gray-pilot-tr0021-000",
+      "split": "val",
+      "true_score": 0.9975694417953491,
+      "opposite_start_score": 0.9975694417953491
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-000",
+      "split": "test",
+      "true_score": 0.9975694417953491,
+      "opposite_start_score": 0.9975694417953491
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-000",
+      "split": "test",
+      "true_score": 0.9979861378669739,
+      "opposite_start_score": 0.9979861378669739
+    },
+    {
+      "sample_id": "gray-pilot-tr0028-000",
+      "split": "val",
+      "true_score": 0.9984722137451172,
+      "opposite_start_score": 0.9984722137451172
+    },
+    {
+      "sample_id": "gray-pilot-tr0029-000",
+      "split": "val",
+      "true_score": 0.9972222447395325,
+      "opposite_start_score": 0.9972222447395325
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-000",
+      "split": "test",
+      "true_score": 0.9962499737739563,
+      "opposite_start_score": 0.9962499737739563
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-000",
+      "split": "test",
+      "true_score": 0.9969444274902344,
+      "opposite_start_score": 0.9969444274902344
+    },
+    {
+      "sample_id": "gray-pilot-tr0036-000",
+      "split": "val",
+      "true_score": 0.997083306312561,
+      "opposite_start_score": 0.997083306312561
+    },
+    {
+      "sample_id": "gray-pilot-tr0037-000",
+      "split": "val",
+      "true_score": 0.9976388812065125,
+      "opposite_start_score": 0.9976388812065125
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-000",
+      "split": "test",
+      "true_score": 0.9981944561004639,
+      "opposite_start_score": 0.9981944561004639
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-000",
+      "split": "test",
+      "true_score": 0.997083306312561,
+      "opposite_start_score": 0.997083306312561
+    }
+  ],
+  "far_rotation_gap": {
+    "val/all": {
+      "frames": 236,
+      "alternative_within_2pp_or_better": 235
+    },
+    "val/visible_mapped_mark": {
+      "frames": 154,
+      "alternative_within_2pp_or_better": 154
+    },
+    "test/all": {
+      "frames": 237,
+      "alternative_within_2pp_or_better": 236
+    },
+    "test/visible_mapped_mark": {
+      "frames": 162,
+      "alternative_within_2pp_or_better": 161
+    }
+  },
+  "native_k230": "NOT RUN"
+}

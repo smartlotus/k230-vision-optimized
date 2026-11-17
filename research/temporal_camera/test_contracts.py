@@ -5,8 +5,43 @@ from dataset import schedule, audit, build_sequences
 from embedded_filter import SoftGridFilter
 from competition_paths import seed_start_belief
 from localization_runtime import CameraXYTracker
+from board_multiroute import RGBWindow
+from board_temporal import BenchDecoder
 import copy
 
+
+class BoardInputTests(unittest.TestCase):
+    def test_causal_rgb_history_repeats_first_and_clears_stale_windows(self):
+        for length in (1, 4, 8):
+            window = RGBWindow(np.zeros((3 * length, 96, 160), dtype=np.uint8), length)
+            history = []
+            for i in range(10):
+                frame = np.empty((3, 96, 160), dtype=np.uint8)
+                frame[:] = np.array([i * 3, i * 3 + 1, i * 3 + 2])[:, None, None]
+                history.append(frame)
+                clip = history[-length:]
+                window.push(frame)
+                np.testing.assert_array_equal(window.packed, np.concatenate([clip[0]] * (length - len(clip)) + clip))
+            window.clear()
+            frame.fill(37)
+            window.push(frame)
+            self.assertTrue(np.all(window.packed == 37))
+
+    def test_bench_decoder_forwards_timeouts_and_recovers_in_global_grid(self):
+        times = iter(range(0, 10000000, 25000))
+        centers = ((1050, 1050), (1050, -1050), (-850, -550))
+        latencies = []
+        latency = type('Latency', (), {'add': lambda _, value: latencies.append(value)})()
+        decoder = BenchDecoder(centers, {'grid_size': 24}, 'filtered', lambda: next(times), int.__sub__, latency)
+        decoder([20., 0., -20.], centers, None, None)
+        for _ in range(5):
+            output = decoder(None, centers, None, None)
+        self.assertEqual(output['state'], 'LOST')
+        output = decoder([-20., 0., 20.], centers, None, None)
+        self.assertTrue(output['relocalized'])
+        self.assertEqual(output['candidate_x_mm'], -850.)
+        self.assertIsNone(output['camera_x_mm'])
+        self.assertEqual(len(latencies), 7)
 
 class FilterTests(unittest.TestCase):
     def test_unknown_motion_retains_global_support(self):
@@ -70,6 +105,41 @@ class DatasetTests(unittest.TestCase):
 
 
 class EmbeddedParityTests(unittest.TestCase):
+    def test_time_scaled_soft_support_matches_masked_scatter(self):
+        mask=np.ones((5,8),bool);mask[1:3,2:6]=False
+        f=SoftGridFilter(mask.tolist(),process_scale_mm_s=800)
+        rng=np.random.default_rng(117)
+        visual=np.where(mask,rng.random(mask.shape),0.)
+        for dt in (0.,.12,.37,4.0,.37):
+            with self.subTest(dt=dt):
+                f.initialize(visual.ravel().tolist())
+                previous=np.asarray(f.belief).reshape(mask.shape)
+                spread=np.zeros_like(previous)
+                reach=max(1,min(7,int(np.ceil(800*dt/100))))
+                for y,x in zip(*np.nonzero(mask)):
+                    window=np.s_[max(0,y-reach):y+reach+1,max(0,x-reach):x+reach+1]
+                    allowed=mask[window]
+                    spread[window]+=previous[y,x]*allowed/allowed.sum()
+                f._predict(dt)
+                retain=.95*np.exp(-dt/.5)
+                expected=retain*spread+(1-retain)*mask/mask.sum()
+                np.testing.assert_allclose(f.prior,expected.ravel(),atol=1e-14)
+                self.assertAlmostEqual(sum(f.prior),1.)
+                self.assertTrue(np.all(np.asarray(f.prior)[mask.ravel()]>0))
+
+    def test_wider_soft_support_relocalizes_after_invalid_frames(self):
+        f=SoftGridFilter([[True]*24 for _ in range(24)],bad_limit=2,process_scale_mm_s=800)
+        seed_start_belief(f)
+        f.update([1.]*576,0.)
+        for timestamp in (.2,1.3):
+            result=f.update([0.]*576,timestamp)
+        self.assertEqual(result['state'],'LOST')
+        visual=[0.]*576
+        visual[6*24+3]=1.
+        result=f.update(visual,2.)
+        self.assertTrue(result['relocalized'])
+        self.assertEqual(result['camera_x_mm'],-850.)
+
     def test_uncalibrated_tracker_labels_output_as_candidate(self):
         tracker=CameraXYTracker([(1050,1050),(1050,-1050)],grid_size=24)
         result=tracker.update([9.,-9.],0.)

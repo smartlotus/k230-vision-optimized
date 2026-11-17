@@ -7,7 +7,8 @@ from embedded_filter import SoftGridFilter
 
 class CameraXYTracker:
     def __init__(self, anchors, grid_size=48, temperature=1., memory_seconds=2.,
-                 global_floor=.01, startup='competition', acceptance=None):
+                 global_floor=.01, startup='competition', acceptance=None,
+                 process_scale_mm_s=None):
         if not math.isfinite(temperature) or temperature<=0:
             raise ValueError('Temperature must be finite and positive')
         if startup not in ('competition','global'):
@@ -28,7 +29,8 @@ class CameraXYTracker:
             raise ValueError('Empty anchor list')
         self.likelihood = [0.]*(grid_size*grid_size)
         self.filter = SoftGridFilter([[True]*grid_size for _ in range(grid_size)],cell_mm=self.cell,
-                                     memory_seconds=memory_seconds,global_floor=global_floor)
+                                     memory_seconds=memory_seconds,global_floor=global_floor,
+                                     process_scale_mm_s=process_scale_mm_s)
         if startup=='competition':
             seed_start_belief(self.filter)
 

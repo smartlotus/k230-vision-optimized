@@ -19,23 +19,24 @@ class BenchDecoder:
         self.states = {}
         self.tracker = CameraXYTracker(centers, **settings) if mode == 'filtered' else None
 
-    def __call__(self, logits, map_centers, _confidence, _candidate_set_confidence):
-        if map_centers != self.centers or len(logits) != len(self.centers):
+    def __call__(self, logits, map_centers, _confidence, _candidate_set_confidence, captured_tick=None):
+        if map_centers != self.centers or (logits is not None and len(logits) != len(self.centers)):
             raise ValueError('Benchmark model output differs from its anchor contract')
-        tick = self.clock()
+        begin = self.clock()
+        tick = begin if captured_tick is None else captured_tick
         if self.last_tick is not None:
             self.elapsed_s += self.ticks_diff(tick, self.last_tick) / 1000000
         self.last_tick = tick
         if self.tracker is None:
             x, y = None, None
-            if all(math.isfinite(value) for value in logits):
+            if logits is not None and all(math.isfinite(value) for value in logits):
                 best = max(range(len(logits)), key=lambda index: logits[index])
                 x, y = self.centers[best]
             answer = dict(camera_x_mm=None, camera_y_mm=None, position_valid=False,
                           candidate_x_mm=x, candidate_y_mm=y)
         else:
-            answer = self.tracker.update(logits, self.elapsed_s)
-            self.latency.add(self.ticks_diff(self.clock(), tick))
+            answer = self.tracker.update(logits, self.elapsed_s, visual_quality=0. if logits is None else 1.)
+            self.latency.add(self.ticks_diff(self.clock(), begin))
             state = answer['state']
             self.states[state] = self.states.get(state, 0) + 1
         answer['status'] = 'unlocalized'

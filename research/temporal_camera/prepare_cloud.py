@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import shutil
 import tarfile
@@ -23,7 +24,13 @@ def main():
     ap.add_argument('--recipe',choices=('tiny','map_reuse'),default='tiny')
     ap.add_argument('--epochs',type=int,default=60)
     ap.add_argument('--parent',type=Path)
+    ap.add_argument('--adapt-rgb-projection',action='store_true')
+    ap.add_argument('--ort-wheel',type=Path)
     args=ap.parse_args();here=Path(__file__).resolve().parent
+    if args.adapt_rgb_projection and (args.recipe!='map_reuse' or args.parent is None):
+        ap.error('RGB adaptation requires the corrected map parent')
+    if args.ort_wheel and (args.recovery or not args.ort_wheel.name.startswith('onnxruntime-')):
+        ap.error('Specify one ONNX Runtime wheel or a recovery bundle')
     stage=args.stage.resolve();stage.mkdir(parents=True,exist_ok=False)
     record=args.record.resolve();record.mkdir(parents=True,exist_ok=False)
     root=stage/'assembly';root.mkdir();shutil.copytree(args.data,root/'data')
@@ -35,17 +42,23 @@ def main():
     if args.recipe=='map_reuse':
         shutil.copy2(here/'map_models.py',root/'map_models.py')
         shutil.copy2(here/'embedded_filter.py',root/'embedded_filter.py')
+        shutil.copy2(here/'camera_preprocess.py',root/'camera_preprocess.py')
         shutil.copy2(here/'train_map_temporal.py',root/'train.py')
         shutil.copy2(args.parent or here/'reused/map-inference.pt',root/'parent.pt')
         shutil.copy2(here/'reused/SOURCE.json',root/'PARENT_SOURCE.json')
         shutil.copy2(here/'competition_paths.py',root/'competition_paths.py')
         if args.parent:
             shutil.copy2(args.parent.with_name('REFERENCE.json'),root/'REFERENCE.json')
+        if args.adapt_rgb_projection:
+            put(root/'MAP_ADAPTATION.json',{'rgb_projection_learning_rate':.0003})
     shutil.copy2(here.parent/'topface/cloud_store.py',root/'cloud_store.py')
     if args.recovery:
         for name in (('prior_cnn1','deps') if args.encoder=='baseline' else ('deps',)):
             shutil.copytree(args.recovery/name,root/name)
         shutil.copy2(args.recovery/'RECOVERED.json',root/'RECOVERED.json')
+    if args.ort_wheel:
+        (root/'deps').mkdir()
+        shutil.copy2(args.ort_wheel,root/'deps'/args.ort_wheel.name)
     manifest=[{'name':p.relative_to(root).as_posix(),'bytes':p.stat().st_size,'sha256':digest(p)}
               for p in sorted(root.rglob('*')) if p.is_file() and '__pycache__' not in p.parts]
     put(root/'INPUT_MANIFEST.json',manifest);input_sha=digest(root/'INPUT_MANIFEST.json')
@@ -56,7 +69,11 @@ def main():
         tar.add(root/'INPUT_MANIFEST.json',arcname='INPUT_MANIFEST.json')
     payload_sha=digest(payload)
     # Only the opaque payload and metadata enter Kaggle input; assembly remains local.
-    upload=stage/'upload';upload.mkdir();shutil.copy2(payload,upload/'payload.bin')
+    upload=stage/'upload';upload.mkdir()
+    try:
+        os.link(payload,upload/'payload.bin')
+    except OSError:
+        shutil.copy2(payload,upload/'payload.bin')
     ref='lotus30/k230-camera-xy-pilot-v1-20261117-'+args.attempt
     kernel='lotus30/k230-camera-xy-multiroute-pilot-'+args.attempt
     run_id='k230-camera-xy-multiroute-pilot-20261117-'+args.attempt
@@ -120,6 +137,7 @@ subprocess.run(command,check=True)
         'encoder':args.encoder,'all_endpoints':args.encoder=='spatial',
         'learning':args.learning,
         'recipe':args.recipe,
+        'rgb_projection_adaptation_lr':.0003 if args.adapt_rgb_projection else None,
         'parent_sha256':digest(root/'parent.pt') if args.recipe=='map_reuse' else None,
         'full_generation':'NOT RUN; requires pilot acceptance'})
     shutil.copy2(root/'INPUT_MANIFEST.json',record/'INPUT_MANIFEST.json')

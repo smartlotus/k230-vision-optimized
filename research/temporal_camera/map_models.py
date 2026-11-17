@@ -35,6 +35,16 @@ class MapCameraXYNet(nn.Module):
     def image_embedding(self,rgb):
         return F.normalize(self.rgb(rgb),dim=-1)
 
+    def cache_spatial_features(self, rgb):
+        return self.rgb[:-3](rgb)
+
+    def project_spatial_features(self, spatial):
+        return F.normalize(self.rgb[-3:](spatial), dim=-1)
+
+    def enable_rgb_projection_training(self):
+        for parameter in self.rgb[-3:].parameters():
+            parameter.requires_grad_(True)
+
     def score_features(self,features):
         last=features[:,-1]
         if self.single_frame_adjustment:

@@ -1,0 +1,123 @@
+{
+  "status": "HISTORICAL_NATIVE_PIXELS_SIMULATOR_REPLAY",
+  "native_receipt_sha256": "b0dd8bb58601322a1bb08fb53d3b04c487af62dc81f3ddea6ee83032d6875d61",
+  "historical_firmware": "(sysname='rt-smart', nodename='rt-smart', release='v1.8-36-gae2f20d', version='v1.8-36-gae2f20d on 2026-08-16', machine='k230_canmv_lckfb')",
+  "fixture_count": 5,
+  "scope": "Replays native AI2D and host fixture pixels as exact binaries; no current acquisition or KPU",
+  "tcn_input": "Each synthetic fixture repeated across all four slots",
+  "native_k230": "NOT RUN",
+  "models": {
+    "cnn": {
+      "window": 1,
+      "kmodel_sha256": "ac86c72a648df1c9f484c920180b0bcb9ae877f26d20c2cea364969d0d921fbc",
+      "fixtures": {
+        "constant": {
+          "pixels_equal": true,
+          "pixel_mean_abs": 0.0,
+          "pixel_max_abs": 0,
+          "logit_max_abs": 0.0,
+          "logit_mean_abs": 0.0,
+          "golden_best_anchor": 235,
+          "native_pixel_best_anchor": 235,
+          "anchor_agreement": true
+        },
+        "rgb_ramp": {
+          "pixels_equal": true,
+          "pixel_mean_abs": 0.0,
+          "pixel_max_abs": 0,
+          "logit_max_abs": 0.0,
+          "logit_mean_abs": 0.0,
+          "golden_best_anchor": 215,
+          "native_pixel_best_anchor": 215,
+          "anchor_agreement": true
+        },
+        "thin_lines": {
+          "pixels_equal": false,
+          "pixel_mean_abs": 59.947265625,
+          "pixel_max_abs": 73,
+          "logit_max_abs": 22.48828125,
+          "logit_mean_abs": 8.855236053466797,
+          "golden_best_anchor": 1772,
+          "native_pixel_best_anchor": 335,
+          "anchor_agreement": false
+        },
+        "checkerboard": {
+          "pixels_equal": false,
+          "pixel_mean_abs": 0.00013020833333333333,
+          "pixel_max_abs": 1,
+          "logit_max_abs": 0.2060546875,
+          "logit_mean_abs": 0.0022947522811591625,
+          "golden_best_anchor": 295,
+          "native_pixel_best_anchor": 295,
+          "anchor_agreement": true
+        },
+        "heldout": {
+          "pixels_equal": false,
+          "pixel_mean_abs": 0.6345703125,
+          "pixel_max_abs": 47,
+          "logit_max_abs": 1.234375,
+          "logit_mean_abs": 0.42109912633895874,
+          "golden_best_anchor": 313,
+          "native_pixel_best_anchor": 311,
+          "anchor_agreement": false
+        }
+      }
+    },
+    "tcn": {
+      "window": 4,
+      "kmodel_sha256": "3c9de65fe5c7d74300075600dab53c7364307e68f1ff1924e15a7dc1219b5cf2",
+      "fixtures": {
+        "constant": {
+          "pixels_equal": true,
+          "pixel_mean_abs": 0.0,
+          "pixel_max_abs": 0,
+          "logit_max_abs": 0.0,
+          "logit_mean_abs": 0.0,
+          "golden_best_anchor": 235,
+          "native_pixel_best_anchor": 235,
+          "anchor_agreement": true
+        },
+        "rgb_ramp": {
+          "pixels_equal": true,
+          "pixel_mean_abs": 0.0,
+          "pixel_max_abs": 0,
+          "logit_max_abs": 0.0,
+          "logit_mean_abs": 0.0,
+          "golden_best_anchor": 216,
+          "native_pixel_best_anchor": 216,
+          "anchor_agreement": true
+        },
+        "thin_lines": {
+          "pixels_equal": false,
+          "pixel_mean_abs": 59.947265625,
+          "pixel_max_abs": 73,
+          "logit_max_abs": 19.513671875,
+          "logit_mean_abs": 7.931460857391357,
+          "golden_best_anchor": 293,
+          "native_pixel_best_anchor": 431,
+          "anchor_agreement": false
+        },
+        "checkerboard": {
+          "pixels_equal": false,
+          "pixel_mean_abs": 0.00013020833333333333,
+          "pixel_max_abs": 1,
+          "logit_max_abs": 0.21484375,
+          "logit_mean_abs": 0.0058152941055595875,
+          "golden_best_anchor": 295,
+          "native_pixel_best_anchor": 295,
+          "anchor_agreement": true
+        },
+        "heldout": {
+          "pixels_equal": false,
+          "pixel_mean_abs": 0.6345703125,
+          "pixel_max_abs": 47,
+          "logit_max_abs": 0.84375,
+          "logit_mean_abs": 0.26508787274360657,
+          "golden_best_anchor": 259,
+          "native_pixel_best_anchor": 259,
+          "anchor_agreement": true
+        }
+      }
+    }
+  }
+}

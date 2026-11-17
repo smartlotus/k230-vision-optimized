@@ -7,7 +7,6 @@ import random
 import time
 
 import numpy as np
-from PIL import Image,ImageOps
 import torch
 from torch.nn import functional as F
 
@@ -15,6 +14,7 @@ from dataset import audit,digest
 from embedded_filter import SoftGridFilter
 from map_models import MapCameraXYNet
 from competition_paths import seed_start_belief
+from camera_preprocess import rgb_uint8
 
 
 def put(path,value):
@@ -22,10 +22,7 @@ def put(path,value):
 
 
 def pixels(path):
-    with Image.open(path) as im:
-        im=im.convert('RGB').resize((160,90),Image.Resampling.BILINEAR)
-        x=np.asarray(ImageOps.expand(im,(0,3,0,3),fill=(114,114,114))).transpose(2,0,1).copy()
-    return x.astype(np.float32)/255
+    return rgb_uint8(path).astype(np.float32)/255
 
 
 def stats(error):
@@ -152,13 +149,19 @@ def main():
             raise ValueError('Corrected map reference lineage differs')
         expected=reference['checkpoint_sha256']
     if digest(parent_path)!=expected:raise ValueError('Verified parent changed')
+    adaptation_path=args.data.parent/'MAP_ADAPTATION.json'
+    adaptation=json.loads(adaptation_path.read_text()) if adaptation_path.is_file() else {}
+    adapt_rgb=adaptation.get('rgb_projection_learning_rate')
+    if adapt_rgb is not None and (not competition or adapt_rgb!=.0003):
+        raise ValueError('Unexpected RGB adaptation recipe')
     centers=np.asarray(parent['centers_mm'],np.float32);ct=torch.from_numpy(centers).cuda()
     baseline=MapCameraXYNet(parent).eval().cuda();images=torch.from_numpy(np.stack([pixels(args.data/r['image_path']) for r in rows])).cuda()
     with torch.inference_mode():
-        features=torch.cat([baseline.image_embedding(x) for x in images.split(32)])
-        blurred_features=torch.cat([baseline.image_embedding(F.avg_pool2d(x,9,stride=1,padding=4)) for x in images.split(32)])
-    features=features.clone();blurred_features=blurred_features.clone()
-    del images,baseline
+        encode=baseline.cache_spatial_features if adapt_rgb is not None else baseline.image_embedding
+        cached=torch.cat([encode(x) for x in images.split(32)])
+        cached_blur=torch.cat([encode(F.avg_pool2d(x,9,stride=1,padding=4)) for x in images.split(32)])
+    cached=cached.clone();cached_blur=cached_blur.clone()
+    del images,baseline,encode
     xy=torch.tensor([[r['camera_xy_target'][k] for k in ('camera_x_mm','camera_y_mm')] for r in rows],device='cuda')
     target=soft_target(xy,ct);split={s:np.array([i for i,r in enumerate(rows) if r['split']==s]) for s in ('train','val','test')}
     lookup={}
@@ -172,7 +175,20 @@ def main():
         route,t=available[name];torch.manual_seed(117)
         model=MapCameraXYNet(parent,route,t,single_frame_adjustment=competition).cuda().eval();folder=out/name;folder.mkdir()
         windows=torch.tensor([lookup[i][-t:] for i in range(len(rows))],device='cuda')
-        optimizer=None if route=='cnn' and not competition else torch.optim.AdamW([p for p in model.parameters() if p.requires_grad],lr=.001,weight_decay=.002)
+        temporal_params=[p for p in model.parameters() if p.requires_grad]
+        optimizer=None
+        if temporal_params:
+            groups_and_rates=[{'params':temporal_params,'lr':.001}]
+            if adapt_rgb is not None:
+                model.enable_rgb_projection_training()
+                groups_and_rates.append({'params':[p for p in model.rgb.parameters() if p.requires_grad],
+                                         'lr':adapt_rgb})
+            optimizer=torch.optim.AdamW(groups_and_rates,weight_decay=.002)
+        def logits_at(indices):
+            values=cached[windows[indices]]
+            if adapt_rgb is not None:
+                values=model.project_spatial_features(values)
+            return model.score_features(values)
         history=[];best=float('inf');best_state=None;updates=0;rng=np.random.default_rng(117)
         epochs=0 if optimizer is None else args.epochs
         for epoch in range(epochs+1):
@@ -181,13 +197,13 @@ def main():
             if epoch:
                 model.train()
                 for ids in np.array_split(rng.permutation(split['train']),16):
-                    logits=model.score_features(features[windows[ids]])
+                    logits=logits_at(ids)
                     loss=-(target[ids]*F.log_softmax(logits,1)).sum(1).mean()
                     optimizer.zero_grad(set_to_none=True);loss.backward();torch.nn.utils.clip_grad_norm_(model.parameters(),5);optimizer.step()
                     total+=float(loss.detach())*len(ids);updates+=1
             model.eval()
             with torch.inference_mode():
-                val=torch.cat([model.score_features(features[windows[ids]]) for ids in np.array_split(split['val'],8)])
+                val=torch.cat([logits_at(ids) for ids in np.array_split(split['val'],8)])
                 nll=float(-(target[split['val']]*F.log_softmax(val,1)).sum(1).mean())
             record={'epoch':epoch,'optimizer_updates':updates,'validation_xy_nll':nll,'train_xy_nll':total/len(split['train']) if epoch else None}
             history.append(record);put(folder/'history.json',history);print(json.dumps({'route':name,**record}),flush=True)
@@ -203,9 +219,11 @@ def main():
                 'cuda_rng':torch.cuda.get_rng_state_all(),'parent_sha256':expected},folder/'last.pt')
         model.load_state_dict(best_state);model.eval()
         with torch.inference_mode():
-            val=torch.cat([model.score_features(features[windows[ids]]) for ids in np.array_split(split['val'],8)])
+            val=torch.cat([logits_at(ids) for ids in np.array_split(split['val'],8)])
             temperatures=(.5,1.,2.,4.,8.)
             temperature=min(temperatures,key=lambda temp:float(-(target[split['val']]*F.log_softmax(val/temp,1)).sum(1).mean()))
+            features=model.project_spatial_features(cached) if adapt_rgb is not None else cached
+            blurred_features=model.project_spatial_features(cached_blur) if adapt_rgb is not None else cached_blur
         stress,details=evaluate(model,features,blurred_features,rows,groups,centers,temperature,competition)
         # Keep per-frame evidence in the cloud archive, bounded summaries on host.
         (folder/'predictions.jsonl').write_text(''.join(json.dumps(r,separators=(',',':'))+'\n' for r in details))
@@ -217,7 +235,8 @@ def main():
         sample=np.concatenate([pixels(args.data/rows[i]['image_path']) for i in lookup[split['test'][0]][-t:]],axis=0)[None]
         with torch.inference_mode():ref=cpu(torch.from_numpy(sample)).numpy()
         actual=session.run(None,{'rgb_window':sample})[0];np.testing.assert_allclose(actual,ref,atol=1e-4,rtol=1e-3)
-        summary={'route':route,'window':t,'parent_sha256':expected,'encoder_frozen':True,'reference_frozen':True,
+        summary={'route':route,'window':t,'parent_sha256':expected,'encoder_frozen':adapt_rgb is None,'reference_frozen':True,
+            'rgb_projection_adaptation_lr':adapt_rgb,
             'selected_epoch':selected,'epochs_completed':epochs,'optimizer_updates':updates,
             'temperature':temperature,'stress':stress,'onnx_ort_max_abs':float(abs(actual-ref).max()),
             'onnx_sha256':digest(folder/'camera_xy.onnx'),'best_sha256':digest(folder/'best.pt'),
@@ -236,6 +255,7 @@ def main():
               evidence['initial_zone_correct']/evidence['initial_zone_trials']>=.8 and
               recovery['recovered_with_3_consecutive_within200mm']/recovery['recovery_trajectory_trials']>=.5)
         gate.update(status='PASS' if full else 'NEEDS_IMPROVEMENT',map_sha256=identity['geometry_sha256'],
+                    resolution=identity['resolution'],dataset_manifest_sha256=digest(args.data/'manifest.jsonl'),
                     full_generation_authorized_by_gate=full,
                     criterion={'median_mm_max':200,'p95_mm_max':500,'correct_initial_zone_fraction_min':.8,
                                'recovered_trajectory_fraction_min':.5},

@@ -1,0 +1,40 @@
+{
+  "status": "FIVE_NATIVE_AI2D_FIXTURES_BYTE_EXACT",
+  "firmware": "(sysname='rt-smart', nodename='rt-smart', release='v1.8-36-gae2f20d', version='v1.8-36-gae2f20d on 2026-08-16', machine='k230_canmv_lckfb')",
+  "runtime": "2.11.0",
+  "scope": "Historical camera-free fixtures from 640x360 planar RGB to 160x90 plus three rows of padding. Current board, UVC and full pipeline NOT RUN.",
+  "witness_sha256": "b0dd8bb58601322a1bb08fb53d3b04c487af62dc81f3ddea6ee83032d6875d61",
+  "implementation_sha256": "205dd3c3584d35193125a556d618104c594b49a741d28e849156075a55850127",
+  "cases": [
+    {
+      "name": "constant",
+      "n": 46080,
+      "model_input_sha256": "335c864e63808f3b256441ab4f0fb94ea46344328c9e0d618d765c4af1f216c1",
+      "exact": true
+    },
+    {
+      "name": "rgb_ramp",
+      "n": 46080,
+      "model_input_sha256": "fd2f46bbe0278a803d8ad0ad89c89ed6eb2191e57e0ffc919b3e9d4a60ff4526",
+      "exact": true
+    },
+    {
+      "name": "thin_lines",
+      "n": 46080,
+      "model_input_sha256": "b0af1db447b32cd7e99947145497a9bbac7020ca7bd2d575b91b0cbe77e6fae6",
+      "exact": true
+    },
+    {
+      "name": "checkerboard",
+      "n": 46080,
+      "model_input_sha256": "0dacf69b71099480db5432a55117ac14c48c5ef0f3927075bfa0dc39e462ee59",
+      "exact": true
+    },
+    {
+      "name": "heldout",
+      "n": 46080,
+      "model_input_sha256": "9afedeae160f9325b18d4b2f7ff1ab6f52ceeec0132c09af845724d182ed603d",
+      "exact": true
+    }
+  ]
+}

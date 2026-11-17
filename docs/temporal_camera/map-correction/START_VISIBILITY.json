@@ -1,0 +1,70 @@
+{
+  "status": "SIMULATED_SEMANTIC_VISIBILITY_DIAGNOSTIC",
+  "manifest_sha256": "ec2e617bb3b15df10c80f666aa2166f29d7231741026dc187ddc582887609042",
+  "pixel_threshold": 15,
+  "first_frame_by_split": {
+    "train": 20,
+    "val": 10,
+    "test": 10
+  },
+  "first_frame_non_blue_gray_background_by_split": {
+    "train": 0,
+    "val": 0,
+    "test": 0
+  },
+  "first_frame_substantial_classes": [
+    0,
+    3,
+    255
+  ],
+  "first_visible_other_class_by_trajectory": {
+    "gray-pilot-tr0000": 2,
+    "gray-pilot-tr0001": 4,
+    "gray-pilot-tr0002": 5,
+    "gray-pilot-tr0003": 4,
+    "gray-pilot-tr0004": 4,
+    "gray-pilot-tr0005": 3,
+    "gray-pilot-tr0006": 1,
+    "gray-pilot-tr0007": 1,
+    "gray-pilot-tr0008": 1,
+    "gray-pilot-tr0009": 1,
+    "gray-pilot-tr0010": 2,
+    "gray-pilot-tr0011": 2,
+    "gray-pilot-tr0012": 4,
+    "gray-pilot-tr0013": 12,
+    "gray-pilot-tr0014": 1,
+    "gray-pilot-tr0015": 2,
+    "gray-pilot-tr0016": 2,
+    "gray-pilot-tr0017": 3,
+    "gray-pilot-tr0018": 2,
+    "gray-pilot-tr0019": 2,
+    "gray-pilot-tr0020": 2,
+    "gray-pilot-tr0021": 9,
+    "gray-pilot-tr0022": 5,
+    "gray-pilot-tr0023": 4,
+    "gray-pilot-tr0024": 6,
+    "gray-pilot-tr0025": 1,
+    "gray-pilot-tr0026": 5,
+    "gray-pilot-tr0027": 2,
+    "gray-pilot-tr0028": 1,
+    "gray-pilot-tr0029": 2,
+    "gray-pilot-tr0030": 13,
+    "gray-pilot-tr0031": 3,
+    "gray-pilot-tr0032": 6,
+    "gray-pilot-tr0033": 9,
+    "gray-pilot-tr0034": 3,
+    "gray-pilot-tr0035": 3,
+    "gray-pilot-tr0036": 1,
+    "gray-pilot-tr0037": 2,
+    "gray-pilot-tr0038": 1,
+    "gray-pilot-tr0039": 5
+  },
+  "additional_classes_other_frames": [
+    1,
+    2,
+    4,
+    5,
+    6
+  ],
+  "native_visual_observability": "NOT RUN"
+}

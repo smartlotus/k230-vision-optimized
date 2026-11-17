@@ -1,0 +1,820 @@
+{
+  "status": "PAIRED_TEST_REPLAY",
+  "trajectory_count": 10,
+  "frames": 250,
+  "dataset_manifest_sha256": "ec2e617bb3b15df10c80f666aa2166f29d7231741026dc187ddc582887609042",
+  "provider_source": {
+    "ref": "/code/lotus30/k230-camera-xy-multiroute-pilot-a06",
+    "url": "https://www.kaggle.com/code/lotus30/k230-camera-xy-multiroute-pilot-a06",
+    "versionNumber": 1,
+    "kernelId": 145538534
+  },
+  "process_scale_mm_s": 800.0,
+  "scale_selection_split": "val",
+  "startup_policy": "GT_START_AREA_DIAGNOSTIC_ONLY",
+  "conditions": "same original clean trajectory endpoints and model parameters",
+  "landmark_diagnostic": "Masks are read only to annotate first additional class, not used as filter input",
+  "native_k230": "NOT RUN",
+  "settings": {
+    "cnn1": {
+      "one_ring": {
+        "error": {
+          "n": 250,
+          "mean_mm": 742.6755716586425,
+          "median_mm": 590.5690121179646,
+          "p95_mm": 1951.2837179912515,
+          "max_mm": 2450.0639189693,
+          "within50_rate": 0.024,
+          "within200_rate": 0.22
+        },
+        "initial_zone_correct": 10,
+        "trials": 10,
+        "additional_class_visible": 10,
+        "stable_three_frames_after_additional_class": 3,
+        "median_delay_s_on_stable_routes": 3.2028632104359236,
+        "host_filter_p95_ms": 4.518984999685927,
+        "trajectories": {
+          "gray-pilot-tr0006": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0007": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0014": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0015": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 2,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0022": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": 5,
+            "delay_s": 0.0
+          },
+          "gray-pilot-tr0023": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 4,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0030": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 13,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0031": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 3,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0038": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 8,
+            "delay_s": 3.2028632104359236
+          },
+          "gray-pilot-tr0039": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": 22,
+            "delay_s": 11.574267468067626
+          }
+        }
+      },
+      "time_scaled": {
+        "error": {
+          "n": 250,
+          "mean_mm": 636.7769463687474,
+          "median_mm": 531.4628080199407,
+          "p95_mm": 1756.597472455284,
+          "max_mm": 2023.7608519083997,
+          "within50_rate": 0.104,
+          "within200_rate": 0.288
+        },
+        "initial_zone_correct": 10,
+        "trials": 10,
+        "additional_class_visible": 10,
+        "stable_three_frames_after_additional_class": 4,
+        "median_delay_s_on_stable_routes": 1.6376148895578382,
+        "host_filter_p95_ms": 4.619775000173831,
+        "trajectories": {
+          "gray-pilot-tr0006": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0007": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 22,
+            "delay_s": 9.62424848076701
+          },
+          "gray-pilot-tr0014": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0015": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 2,
+            "first_stable_200mm_after_additional_class": 6,
+            "delay_s": 1.4450222302951488
+          },
+          "gray-pilot-tr0022": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0023": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 4,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0030": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 13,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0031": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 3,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0038": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 5,
+            "delay_s": 1.8302075488205278
+          },
+          "gray-pilot-tr0039": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": 5,
+            "delay_s": 0.0
+          }
+        }
+      }
+    },
+    "gru4": {
+      "one_ring": {
+        "error": {
+          "n": 250,
+          "mean_mm": 760.6567865219686,
+          "median_mm": 625.958740274712,
+          "p95_mm": 1861.1897297227129,
+          "max_mm": 2138.438820425172,
+          "within50_rate": 0.072,
+          "within200_rate": 0.24
+        },
+        "initial_zone_correct": 10,
+        "trials": 10,
+        "additional_class_visible": 10,
+        "stable_three_frames_after_additional_class": 1,
+        "median_delay_s_on_stable_routes": 9.62424848076701,
+        "host_filter_p95_ms": 4.259909999700538,
+        "trajectories": {
+          "gray-pilot-tr0006": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0007": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 22,
+            "delay_s": 9.62424848076701
+          },
+          "gray-pilot-tr0014": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0015": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 2,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0022": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0023": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 4,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0030": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 13,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0031": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 3,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0038": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0039": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          }
+        }
+      },
+      "time_scaled": {
+        "error": {
+          "n": 250,
+          "mean_mm": 662.6428168667578,
+          "median_mm": 539.9364011317793,
+          "p95_mm": 1758.9139029870644,
+          "max_mm": 2293.3978171311924,
+          "within50_rate": 0.128,
+          "within200_rate": 0.316
+        },
+        "initial_zone_correct": 10,
+        "trials": 10,
+        "additional_class_visible": 10,
+        "stable_three_frames_after_additional_class": 4,
+        "median_delay_s_on_stable_routes": 1.4569871107709447,
+        "host_filter_p95_ms": 4.066370000327875,
+        "trajectories": {
+          "gray-pilot-tr0006": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 1,
+            "delay_s": 0.0
+          },
+          "gray-pilot-tr0007": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0014": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 22,
+            "delay_s": 7.064291318503866
+          },
+          "gray-pilot-tr0015": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 2,
+            "first_stable_200mm_after_additional_class": 5,
+            "delay_s": 1.0837666727213617
+          },
+          "gray-pilot-tr0022": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0023": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 4,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0030": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 13,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0031": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 3,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0038": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 5,
+            "delay_s": 1.8302075488205278
+          },
+          "gray-pilot-tr0039": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          }
+        }
+      }
+    },
+    "gru8": {
+      "one_ring": {
+        "error": {
+          "n": 250,
+          "mean_mm": 768.469439447028,
+          "median_mm": 626.3652541107963,
+          "p95_mm": 1891.08702659182,
+          "max_mm": 2145.7590060258854,
+          "within50_rate": 0.072,
+          "within200_rate": 0.244
+        },
+        "initial_zone_correct": 10,
+        "trials": 10,
+        "additional_class_visible": 10,
+        "stable_three_frames_after_additional_class": 1,
+        "median_delay_s_on_stable_routes": 9.62424848076701,
+        "host_filter_p95_ms": 4.154674999881535,
+        "trajectories": {
+          "gray-pilot-tr0006": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0007": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 22,
+            "delay_s": 9.62424848076701
+          },
+          "gray-pilot-tr0014": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0015": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 2,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0022": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0023": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 4,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0030": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 13,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0031": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 3,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0038": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0039": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          }
+        }
+      },
+      "time_scaled": {
+        "error": {
+          "n": 250,
+          "mean_mm": 679.8124320034482,
+          "median_mm": 554.6137521887374,
+          "p95_mm": 1812.3792037255232,
+          "max_mm": 2293.3978171311924,
+          "within50_rate": 0.128,
+          "within200_rate": 0.296
+        },
+        "initial_zone_correct": 10,
+        "trials": 10,
+        "additional_class_visible": 10,
+        "stable_three_frames_after_additional_class": 4,
+        "median_delay_s_on_stable_routes": 0.7225111151475744,
+        "host_filter_p95_ms": 4.514370000106282,
+        "trajectories": {
+          "gray-pilot-tr0006": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 1,
+            "delay_s": 0.0
+          },
+          "gray-pilot-tr0007": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0014": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 22,
+            "delay_s": 7.064291318503866
+          },
+          "gray-pilot-tr0015": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 2,
+            "first_stable_200mm_after_additional_class": 6,
+            "delay_s": 1.4450222302951488
+          },
+          "gray-pilot-tr0022": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0023": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 4,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0030": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 13,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0031": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 3,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0038": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0039": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": 5,
+            "delay_s": 0.0
+          }
+        }
+      }
+    },
+    "tcn4": {
+      "one_ring": {
+        "error": {
+          "n": 250,
+          "mean_mm": 773.6274278032009,
+          "median_mm": 625.958740274712,
+          "p95_mm": 1954.2647344471955,
+          "max_mm": 2095.8393564744165,
+          "within50_rate": 0.072,
+          "within200_rate": 0.236
+        },
+        "initial_zone_correct": 10,
+        "trials": 10,
+        "additional_class_visible": 10,
+        "stable_three_frames_after_additional_class": 3,
+        "median_delay_s_on_stable_routes": 7.064291318503866,
+        "host_filter_p95_ms": 4.350934999911259,
+        "trajectories": {
+          "gray-pilot-tr0006": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0007": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 22,
+            "delay_s": 9.62424848076701
+          },
+          "gray-pilot-tr0014": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 22,
+            "delay_s": 7.064291318503866
+          },
+          "gray-pilot-tr0015": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 2,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0022": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0023": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 4,
+            "first_stable_200mm_after_additional_class": 4,
+            "delay_s": 0.0
+          },
+          "gray-pilot-tr0030": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 13,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0031": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 3,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0038": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0039": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          }
+        }
+      },
+      "time_scaled": {
+        "error": {
+          "n": 250,
+          "mean_mm": 663.9905838949092,
+          "median_mm": 561.2554430550629,
+          "p95_mm": 1790.9432737778222,
+          "max_mm": 2554.9028139293932,
+          "within50_rate": 0.128,
+          "within200_rate": 0.328
+        },
+        "initial_zone_correct": 10,
+        "trials": 10,
+        "additional_class_visible": 10,
+        "stable_three_frames_after_additional_class": 6,
+        "median_delay_s_on_stable_routes": 0.36125555757378713,
+        "host_filter_p95_ms": 4.435534999902301,
+        "trajectories": {
+          "gray-pilot-tr0006": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 1,
+            "delay_s": 0.0
+          },
+          "gray-pilot-tr0007": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0014": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 22,
+            "delay_s": 7.064291318503866
+          },
+          "gray-pilot-tr0015": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 2,
+            "first_stable_200mm_after_additional_class": 4,
+            "delay_s": 0.7225111151475743
+          },
+          "gray-pilot-tr0022": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0023": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 4,
+            "first_stable_200mm_after_additional_class": 4,
+            "delay_s": 0.0
+          },
+          "gray-pilot-tr0030": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 13,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0031": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 3,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0038": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 13,
+            "delay_s": 5.490622646461583
+          },
+          "gray-pilot-tr0039": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": 5,
+            "delay_s": 0.0
+          }
+        }
+      }
+    },
+    "tcn8": {
+      "one_ring": {
+        "error": {
+          "n": 250,
+          "mean_mm": 748.2670507319183,
+          "median_mm": 625.958740274712,
+          "p95_mm": 1917.0367454160994,
+          "max_mm": 2306.27055133403,
+          "within50_rate": 0.072,
+          "within200_rate": 0.232
+        },
+        "initial_zone_correct": 10,
+        "trials": 10,
+        "additional_class_visible": 10,
+        "stable_three_frames_after_additional_class": 3,
+        "median_delay_s_on_stable_routes": 7.064291318503866,
+        "host_filter_p95_ms": 4.244810000227517,
+        "trajectories": {
+          "gray-pilot-tr0006": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0007": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 22,
+            "delay_s": 9.62424848076701
+          },
+          "gray-pilot-tr0014": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 22,
+            "delay_s": 7.064291318503866
+          },
+          "gray-pilot-tr0015": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 2,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0022": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0023": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 4,
+            "first_stable_200mm_after_additional_class": 4,
+            "delay_s": 0.0
+          },
+          "gray-pilot-tr0030": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 13,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0031": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 3,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0038": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0039": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          }
+        }
+      },
+      "time_scaled": {
+        "error": {
+          "n": 250,
+          "mean_mm": 651.3763564617752,
+          "median_mm": 559.1268870465292,
+          "p95_mm": 1736.477138961862,
+          "max_mm": 2030.8261299318688,
+          "within50_rate": 0.124,
+          "within200_rate": 0.308
+        },
+        "initial_zone_correct": 10,
+        "trials": 10,
+        "additional_class_visible": 10,
+        "stable_three_frames_after_additional_class": 5,
+        "median_delay_s_on_stable_routes": 1.0837666727213617,
+        "host_filter_p95_ms": 4.140370000141045,
+        "trajectories": {
+          "gray-pilot-tr0006": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 1,
+            "delay_s": 0.0
+          },
+          "gray-pilot-tr0007": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": 22,
+            "delay_s": 9.62424848076701
+          },
+          "gray-pilot-tr0014": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0015": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 2,
+            "first_stable_200mm_after_additional_class": 5,
+            "delay_s": 1.0837666727213617
+          },
+          "gray-pilot-tr0022": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0023": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 4,
+            "first_stable_200mm_after_additional_class": 14,
+            "delay_s": 3.1227009905585423
+          },
+          "gray-pilot-tr0030": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 13,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0031": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 3,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0038": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 1,
+            "first_stable_200mm_after_additional_class": null,
+            "delay_s": null
+          },
+          "gray-pilot-tr0039": {
+            "initial_zone_correct": true,
+            "first_additional_class_frame": 5,
+            "first_stable_200mm_after_additional_class": 5,
+            "delay_s": 0.0
+          }
+        }
+      }
+    }
+  }
+}

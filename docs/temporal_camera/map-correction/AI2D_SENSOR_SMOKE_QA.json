@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "frames": 100,
+  "splits": {
+    "train": 50,
+    "val": 25,
+    "test": 25
+  },
+  "trajectories": 4,
+  "evaluation_partitions": {
+    "trajectory_holdout": 100,
+    "spatial_challenge": 0,
+    "appearance_challenge": 0
+  },
+  "spatial_challenge_tiles_disjoint": true,
+  "split_group_counts": {
+    "trajectory_id": 4,
+    "pose_group_id": 4,
+    "appearance_profile_id": 4
+  },
+  "scenario_counts": {
+    "straight": 0,
+    "turn": 0,
+    "intersection": 0,
+    "repeated_road": 50,
+    "frame_drop": 0,
+    "variable_speed": 50,
+    "blur": 0,
+    "relocalization": 0,
+    "stop_start": 0,
+    "lighting": 0
+  },
+  "field_mask_sha256": "fa5f526d741e27af830cc4b5a6c3e945ef48442670db3aabd12bd642def6f8d2",
+  "start_zones_by_split": {
+    "train/blue1": 1,
+    "train/blue2": 1,
+    "val/blue1": 1,
+    "test/blue2": 1
+  },
+  "trajectory_scenarios_by_split": {
+    "train/repeated_road": 2,
+    "val/variable_speed": 1,
+    "test/variable_speed": 1
+  },
+  "identical_rgb_cross_split": 0,
+  "map_class_counts_sampled_at_most_10mm": {
+    "3": 164,
+    "0": 1207
+  },
+  "mask_frames_verified": 100,
+  "resolution": [
+    640,
+    360
+  ],
+  "manifest_sha256": "eee4d5cf453caa71ff4331e33000075808793ba0a85e96c99cb1085e43082037",
+  "scope": "Camera optical projections in simulation; competition chassis clearance not assessed"
+}

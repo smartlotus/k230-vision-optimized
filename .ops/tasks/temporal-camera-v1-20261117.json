@@ -21,7 +21,7 @@
   "claimed": true,
   "agent": "codex",
   "session": "temporal-v1-20261117-a",
-  "revision": 4,
-  "handoff": ".ops/handoffs/temporal-camera-v1-20261117/20261117T053039-32f8b025.json",
-  "updated_at": "2026-11-17T05:31:14+00:00"
+  "revision": 5,
+  "handoff": ".ops/handoffs/temporal-camera-v1-20261117/20261117T064436-5f290964.json",
+  "updated_at": "2026-11-17T06:44:59+00:00"
 }

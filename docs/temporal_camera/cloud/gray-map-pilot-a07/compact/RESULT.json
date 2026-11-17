@@ -1,0 +1,14 @@
+{
+  "run_id": "k230-camera-xy-multiroute-pilot-20261117-a07",
+  "input_manifest_sha256": "1444973e492f42a011aaec6e0de13d60c8a8c6f64a763937529cdfd531050bdf",
+  "compute_status": "PASS",
+  "train_exit_code": 0,
+  "elapsed_seconds": 159.03089568500002,
+  "publication": "PENDING_INDEPENDENT_CLOUD_PUBLISHER",
+  "automatic_replay": false,
+  "archive": {
+    "name": "k230-camera-xy-multiroute-pilot-20261117-a07.tar.gz",
+    "bytes": 89492589,
+    "sha256": "2b2ed196d8549819f7cc32ce8b64fe21a12431ba759c47ed1c6436fe3e21f0b0"
+  }
+}

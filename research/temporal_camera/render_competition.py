@@ -24,11 +24,14 @@ def main():
         parser.add_argument('--'+name, type=Path, required=True)
     parser.add_argument('--stage', choices=('smoke','pilot','full'), required=True)
     parser.add_argument('--pilot-gate', type=Path)
+    parser.add_argument('--sensor-resolution', action='store_true', help='Render 640×360 for the 4:1 CanMV AI2D path')
     args = parser.parse_args(sys.argv[sys.argv.index('--')+1:])
+    size = (640,360) if args.sensor_resolution else (160,90)
     if args.stage=='full':
         gate = json.loads(args.pilot_gate.read_text()) if args.pilot_gate else {}
-        if gate.get('status')!='PASS' or gate.get('map_sha256')!=digest(args.blend):
-            parser.error('A passed competition Pilot gate bound to the current map is required')
+        if (gate.get('status')!='PASS' or gate.get('map_sha256')!=digest(args.blend)
+                or gate.get('resolution')!=list(size)):
+            parser.error('A passed competition Pilot gate for the current map and image resolution is required')
     input_sha = digest(args.blend)
     if input_sha!='b5bea8c6738bc7ebd8d57cdae34af99d1cf10b3fc782ea9c6c986e8802441e95':
         raise ValueError('Expected the audited corrected field scene')
@@ -42,7 +45,6 @@ def main():
     spec = importlib.util.spec_from_file_location('camera_xy_v2_render',args.camera_renderer.resolve())
     camera_render = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(camera_render)
-    size = (160,90)
     parts = camera_render.existing_scene(road,size)
     camera_render.use_cad(args.cad,parts.blocks)
     board = camera_render.add_qr_board(road,parts)
