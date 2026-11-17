@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "temporal-native-smoke-20261117",
+  "title": "Isolated USB camera and CameraXY temporal filter hardware smoke",
+  "paths": [
+    "research/temporal_camera",
+    "docs/temporal_camera/native-smoke-20261117",
+    "docs/LESSONS_LEARNED.md"
+  ],
+  "lane": "serial",
+  "resources": [
+    "COM3",
+    "K230-media"
+  ],
+  "depends": [],
+  "acceptance": [
+    "Current USB capture AI2D KPU CPU filter report readback and cleanup verified in bounded runs; no accuracy road-test motion startup or other-line changes"
+  ],
+  "branch": "ops/temporal-camera-v1-20261117",
+  "state": "blocked",
+  "claimed": true,
+  "agent": "codex",
+  "session": "temporal-native-smoke-20261117-a",
+  "revision": 3,
+  "handoff": ".ops/handoffs/temporal-native-smoke-20261117/20261117T103307-43c6bbac.json",
+  "updated_at": "2026-11-17T10:33:12+00:00"
+}

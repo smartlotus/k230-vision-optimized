@@ -1,0 +1,15 @@
+{
+  "observed_date_local": "2026-11-17",
+  "timezone": "Asia/Shanghai",
+  "command": "python -B -X utf8 -m unittest discover -s research/temporal_camera -p test_*.py -v",
+  "exit_code": 0,
+  "tests_passed": 20,
+  "tests_failed": 0,
+  "elapsed_seconds": 0.415,
+  "native_smoke_syntax": "PASS",
+  "native_capture_frames": 0,
+  "native_inference_frames": 0,
+  "native_filter_updates": 0,
+  "accuracy": "NOT_RUN",
+  "road_test": "NOT_RUN"
+}

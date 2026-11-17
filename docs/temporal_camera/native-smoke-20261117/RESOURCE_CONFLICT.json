@@ -1,0 +1,18 @@
+{
+  "observed_date_local": "2026-11-17",
+  "task": "temporal-native-smoke-20261117",
+  "status": "AWAITING_EXCLUSIVE_DEVICE_CONFIRMATION",
+  "initial_running": false,
+  "preflight_nonce": "TEMPORAL_PREFLIGHT_20261117_A",
+  "preflight_completed": true,
+  "later_external_running": true,
+  "last_observed_running": false,
+  "install_command_exit_code": 1,
+  "install_error": "Board busy or unknown; existing session preserved",
+  "board_files_written_by_this_task": 0,
+  "script_stop_sent": false,
+  "production_parameters_changed": false,
+  "other_line_sources_changed": false,
+  "user_confirmation_requested": true,
+  "confirmation_received": false
+}
