@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "task": "temporal-ops-handoff-20261117",
+  "created_at": "2026-11-17T11:32:30+00:00",
+  "agent": "codex",
+  "session": "temporal-ops-handoff-20261117-a",
+  "branch": "ops/temporal-camera-v1-20261117",
+  "head": "d364b45ab5053800dc490084183d43805b2fca64",
+  "state": "ready",
+  "files": {
+    ".ops/PROJECT.md": "4a400c4ac2b228dda92bd41eea0818267dfb7838d7d1aa95fb232973b7644f0a",
+    "docs/temporal_camera/OFFLINE_HANDOVER.md": "f0712b04f49e32bb982fdd2dd5c4a14a5651ec04c33e12d1e37ab94d087e85b6",
+    "docs/temporal_camera/README.md": "706fc12a7522f935c433ea2cf7d29fb63ec66401e2c30161348cc9dbe0e2b79d"
+  },
+  "git_blob_oids": {
+    ".ops/PROJECT.md": "1ac2f0d7ba5ee512aab5721fda06a7f68ca58665",
+    "docs/temporal_camera/OFFLINE_HANDOVER.md": "8f0fb078fef6438a8590bfabd6d7f9df2dec6b54",
+    "docs/temporal_camera/README.md": "775948abc1799540bd338d7488ce0089e77ee17d"
+  },
+  "scope_git_blob_oids": {
+    ".ops/PROJECT.md": "1ac2f0d7ba5ee512aab5721fda06a7f68ca58665",
+    "docs/temporal_camera/OFFLINE_HANDOVER.md": "8f0fb078fef6438a8590bfabd6d7f9df2dec6b54",
+    "docs/temporal_camera/README.md": "775948abc1799540bd338d7488ce0089e77ee17d"
+  },
+  "scope_fingerprints": {
+    ".ops/PROJECT.md": "4a400c4ac2b228dda92bd41eea0818267dfb7838d7d1aa95fb232973b7644f0a",
+    "docs/temporal_camera/OFFLINE_HANDOVER.md": "f0712b04f49e32bb982fdd2dd5c4a14a5651ec04c33e12d1e37ab94d087e85b6",
+    "docs/temporal_camera/README.md": "706fc12a7522f935c433ea2cf7d29fb63ec66401e2c30161348cc9dbe0e2b79d"
+  },
+  "report": {
+    "completed": [
+      "OPS project entry routes CameraXY offline, CameraXY native and TopFace to their evidence and task IDs.",
+      "Temporal index and offline handoff reflect saved Kaggle results, fixed-window GRU compilation, and measured native A-route smoke."
+    ],
+    "remaining": [
+      "OV2735 geometry/XY field evidence, temporal/native latency and memory, and sustained acceptance remain outstanding.",
+      "Pilot accuracy gate still blocks formal scale-up and competition acceptance."
+    ],
+    "decisions": [
+      "Use existing task branch and stable module paths. Preserve historical attempt files and the frozen offline archive."
+    ],
+    "risks": [
+      "The 60-frame USB benchmark does not establish sustained throughput, camera identity or field localization accuracy."
+    ],
+    "next_steps": [
+      "Use bounded host replay to isolate CPU tracker hotspots. Check board ownership before native benchmarking."
+    ],
+    "verification": [
+      {
+        "command": "git diff --check",
+        "exit_code": 0,
+        "summary": "No whitespace errors across three Markdown changes.",
+        "evidence": []
+      },
+      {
+        "command": "Python UTF-8, local-link and evidence consistency validation",
+        "exit_code": 0,
+        "summary": "3 pages, 51 relative links, 3 task records, measured frame count, FPS, stage timing, firmware, runtime and cleanup verified.",
+        "evidence": [
+          "docs/temporal_camera/native-smoke-20261117/NATIVE_SUMMARY.json"
+        ]
+      }
+    ]
+  }
+}

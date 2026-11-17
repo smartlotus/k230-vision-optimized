@@ -1,18 +1,18 @@
 # K230 Vision Optimized
 
-## CameraXY temporal competition V1 (2026-11-17)
+## 项目接续入口
 
-Isolated checkout: `C:/Users/28389/Desktop/k230-temporal-camera-v1`, branch `ops/temporal-camera-v1-20261117`. Module and evidence entry: [docs/temporal_camera/README.md](../docs/temporal_camera/README.md). OPS task `temporal-camera-v1-20261117`; source in `research/temporal_camera`, frozen provider state in `docs/temporal_camera/cloud`. Preserve other task pauses and accepted production code. Only camera_x_mm/camera_y_mm supervise training; no yaw, chassis labels or installation offset. Training runs on Kaggle; preserve exact original saved source/version and publisher identity. All unexecuted physical tests remain NOT RUN. This section does not change TopFace's existing ownership or board session.
+先读 [OPS 协议](PROTOCOL.md)，运行 `python .ops/tools/ops.py status`，再从对应任务的 `handoff` 读取最新交接。仓库为 `smartlotus/k230-vision-optimized`。同机实时认领和同步状态以 OPS 为准。
 
-## 当前接续入口
+| 模块 | 任务分支与 OPS 任务 | 模块入口 |
+|---|---|---|
+| CameraXY 时序定位离线 | `ops/temporal-camera-v1-20261117` · `temporal-camera-v1-20261117` | [模块索引](../docs/temporal_camera/README.md) · [离线交付与人工资料](../docs/temporal_camera/OFFLINE_HANDOVER.md) |
+| CameraXY K230 短测 | `ops/temporal-camera-v1-20261117` · `temporal-native-smoke-20261117` | [板端入口](../docs/temporal_camera/native-smoke-20261117/README.md) · [实测报告](../docs/temporal_camera/native-smoke-20261117/NATIVE_REPORT.md) |
+| TopFace 生产接入 | `ops/topface-production-fps-20261116` · `topface-production-fps-20261116` | [项目状态](../docs/STATUS.md) · [便携交接](../docs/HANDOFF.md) |
 
-- 当前实现：`C:/Users/28389/Desktop/k230-topface-production`，分支 `ops/topface-production-fps-20261116`，私有远端 `smartlotus/k230-vision-optimized`。
-- [最新项目状态](../docs/STATUS.md)记录时间戳、已完成/进行中/待验收、运行和资源证据。
-- [便携交接](../docs/HANDOFF.md)记录设备查询顺序、报告路径、接续命令和已知问题。
-- [经验总账](../docs/LESSONS_LEARNED.md)在板端/部署任务前阅读。
-- 实时任务和认领仍以 `python .ops/tools/ops.py status` 为准；本页不维护第二份任务状态表。
+CameraXY 源码在 `research/temporal_camera`，Kaggle 保存版本及归档清单在 `docs/temporal_camera/cloud`。训练监督仅为 `camera_x_mm` 与 `camera_y_mm`。机械外参由用户在控制层处理。分支交接和备份按 OPS 认领进行，板端和生产代码保护边界见模块交接。
 
-## 目标和目录
+## TopFace 目标和目录
 
 使用冻结TopFaceNet KModel完成K230物块顶面识别，并保留原视觉观察协议、稳定跟踪、标定门、active/draft及旧算法入口。
 KPU TOP部署、CSI/USB画面与FPS各自验证；整车流程和科学/几何接受分开。
@@ -27,7 +27,7 @@ KPU TOP部署、CSI/USB画面与FPS各自验证；整车流程和科学/几何�
 | docs/validation/topface-production-fps-20261116 | 当前部署、CSI/USB原生短测及现场记录 |
 | .ops | 当前任务、不可变交接及同步协议 |
 
-## 资源与保护边界
+## TopFace 资源与保护边界
 
 用户已授权模型接入、板端试验、FPS优化、USB预览以及当前私有仓库checkpoint备份。保留main.py/boot.py、旧SD目录和生产profile；UART/运动关闭。
 CSI2为COLOR/TOP/RING，CSI1为QR/LANE，CSI0隔离；USB保持独立来源身份，不沿用CSI标定。
@@ -36,7 +36,7 @@ COM3和K230媒体资源单控制端。running=true时只读附着，保持预览
 约25FPS仍是待实现目标，按包含采集失败等待、GC和显示的墙钟计量。无标定不得输出有效机器人mm位姿。
 主线集成与任务分支备份分别记录；本协议不自动授权merge/deploy范围扩张。
 
-## 接手与验证
+## TopFace 接手与验证
 
 1. 读AGENTS.md、本页、docs/STATUS.md、docs/HANDOFF.md与.ops/PROTOCOL.md。
 2. 核对Git/worktree、OPS状态和最新handoff，按自己的任务认领。
