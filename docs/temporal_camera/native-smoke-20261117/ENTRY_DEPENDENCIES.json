@@ -1,0 +1,16 @@
+{
+  "status": "STATIC_ENTRY_DEPENDENCIES_CHECKED",
+  "documented_entry": "board_multiroute.run",
+  "documented_local_modules": [
+    "board_temporal",
+    "board_helpers",
+    "competition_paths",
+    "embedded_filter",
+    "localization_runtime"
+  ],
+  "local_modules_present": true,
+  "legacy_entry": "board_temporal.run",
+  "legacy_missing_local_dependency": "board_probe.py",
+  "legacy_called_by_documented_entry": false,
+  "archive_modified": false
+}

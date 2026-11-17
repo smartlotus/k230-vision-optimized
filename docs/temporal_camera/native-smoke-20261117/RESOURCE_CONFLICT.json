@@ -1,7 +1,7 @@
 {
   "observed_date_local": "2026-11-17",
   "task": "temporal-native-smoke-20261117",
-  "status": "AWAITING_EXCLUSIVE_DEVICE_CONFIRMATION",
+  "status": "HARDWARE_DEFERRED_BY_USER_PC_ONLY_COMPLETE",
   "initial_running": false,
   "preflight_nonce": "TEMPORAL_PREFLIGHT_20261117_A",
   "preflight_completed": true,
@@ -14,5 +14,7 @@
   "production_parameters_changed": false,
   "other_line_sources_changed": false,
   "user_confirmation_requested": true,
-  "confirmation_received": false
+  "confirmation_received": true,
+  "user_direction": "Other project lines are still using the board; perform PC-only checks first",
+  "board_tool_calls_after_user_direction": 0
 }

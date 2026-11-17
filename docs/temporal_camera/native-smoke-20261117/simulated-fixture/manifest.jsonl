@@ -1,0 +1,9 @@
+{"trajectory_id": "simulated-engineering-smoke", "frame_index": 0, "timestamp_s": 0.0, "image_path": "frame0.png", "image_sha256": "d8e232e4b6b1742b477f6d3d36176495e4c820177c355a991bc10f0e6dc00431"}
+{"trajectory_id": "simulated-engineering-smoke", "frame_index": 1, "timestamp_s": 0.04, "image_path": "frame1.png", "image_sha256": "ae951c5e1d31e25e87c98b3fc8a17540f18fef900c36e2fd51fbc9df622c7b3a"}
+{"trajectory_id": "simulated-engineering-smoke", "frame_index": 2, "timestamp_s": 0.08, "image_path": null}
+{"trajectory_id": "simulated-engineering-smoke", "frame_index": 3, "timestamp_s": 0.12, "image_path": null}
+{"trajectory_id": "simulated-engineering-smoke", "frame_index": 4, "timestamp_s": 0.16, "image_path": null}
+{"trajectory_id": "simulated-engineering-smoke", "frame_index": 5, "timestamp_s": 0.2, "image_path": null}
+{"trajectory_id": "simulated-engineering-smoke", "frame_index": 6, "timestamp_s": 0.24, "image_path": null}
+{"trajectory_id": "simulated-engineering-smoke", "frame_index": 7, "timestamp_s": 0.28, "image_path": "frame2.png", "image_sha256": "8c557db1e0f8a22e4ffe7106cb2628e91146683cc8704d2225760729b21a82da"}
+{"trajectory_id": "simulated-engineering-smoke", "frame_index": 8, "timestamp_s": 0.32, "image_path": "frame3.png", "image_sha256": "2ff1a0859c2850b54ee0814da143347089be14224cf470a1c5dba5546effddb9"}

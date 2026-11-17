@@ -1,0 +1,86 @@
+{
+  "status": "HOST_MODEL_FILTER_REPORT_READBACK_PASS",
+  "input_source": "SIMULATED_DELIVERY_IMAGES",
+  "archives": {
+    "K230_Official_Gray_Map_And_1100_Frame_Data_R1.zip": "eef0db1d543fe74b2be060ac5e2f5a07622272df64b60f19b23b5f361ccc9833",
+    "K230_Official_Gray_Map_Pilot_A06_Models.zip": "544699078b05d5264abc8ab0ffb1c8519e7cdc9fb50da07458a94739963fdb87",
+    "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip": "b7dd989d7f1d23b74a95cbdd7528e8e47fc8e403256ed1363d66f5c4713de48b"
+  },
+  "images": [
+    {
+      "archive_member": "pilot/rgb/gray-pilot-tr0000-000.png",
+      "fixture_name": "frame0.png",
+      "sha256": "d8e232e4b6b1742b477f6d3d36176495e4c820177c355a991bc10f0e6dc00431"
+    },
+    {
+      "archive_member": "pilot/rgb/gray-pilot-tr0000-001.png",
+      "fixture_name": "frame1.png",
+      "sha256": "ae951c5e1d31e25e87c98b3fc8a17540f18fef900c36e2fd51fbc9df622c7b3a"
+    },
+    {
+      "archive_member": "pilot/rgb/gray-pilot-tr0000-002.png",
+      "fixture_name": "frame2.png",
+      "sha256": "8c557db1e0f8a22e4ffe7106cb2628e91146683cc8704d2225760729b21a82da"
+    },
+    {
+      "archive_member": "pilot/rgb/gray-pilot-tr0000-003.png",
+      "fixture_name": "frame3.png",
+      "sha256": "2ff1a0859c2850b54ee0814da143347089be14224cf470a1c5dba5546effddb9"
+    }
+  ],
+  "routes": {
+    "cnn1": {
+      "capture_attempts": 9,
+      "observed_frames": 4,
+      "missing_captures": 5,
+      "lost_updates": 1,
+      "global_recovery_events": 1,
+      "history_resets": 0,
+      "start_zone_trials": 0,
+      "correct_start_zone": 0,
+      "undecided_start_zone": 0,
+      "surveyed_raw": {
+        "n": 0,
+        "status": "NOT RUN"
+      },
+      "surveyed_filtered": {
+        "n": 0,
+        "status": "NOT RUN"
+      },
+      "surveyed_after_landmark": {
+        "n": 0,
+        "status": "NOT RUN"
+      }
+    },
+    "tcn4": {
+      "capture_attempts": 9,
+      "observed_frames": 4,
+      "missing_captures": 5,
+      "lost_updates": 1,
+      "global_recovery_events": 1,
+      "history_resets": 1,
+      "start_zone_trials": 0,
+      "correct_start_zone": 0,
+      "undecided_start_zone": 0,
+      "surveyed_raw": {
+        "n": 0,
+        "status": "NOT RUN"
+      },
+      "surveyed_filtered": {
+        "n": 0,
+        "status": "NOT RUN"
+      },
+      "surveyed_after_landmark": {
+        "n": 0,
+        "status": "NOT RUN"
+      }
+    }
+  },
+  "json_report_readback": "PASS",
+  "native_k230": "NOT_RUN",
+  "physical_camera_frames": 0,
+  "accuracy": "NOT_RUN",
+  "road_test": "NOT_RUN",
+  "onnx_runtime_provider": "CPUExecutionProvider",
+  "quantized_kmodel_runtime": "NOT_RUN"
+}

@@ -11,13 +11,18 @@
 | USB 枚举 | `UVC.probe()` 返回 `(True, 'openaicam#openaicam')`；列出 1280×720 / 1920×1080 MJPEG 30FPS 及三种 YUY2 模式。设备名本身不能鉴定传感器芯片 |
 | 交付完整性 | [archive-check.json](archive-check.json)：R2 ZIP SHA256 和全部 20 个 ZIP 成员校验通过（19 个内容文件及内置 manifest）；5 个本地板端模块与交付包逐字节一致 |
 | 本地逻辑 | 原有 20 项测试通过，包括因果历史窗口、滤波、缺测恢复、时间戳、输入契约与评估标注隔离；见 [HOST_VALIDATION.json](HOST_VALIDATION.json) |
-| 本次原生采集 / 推理 / 滤波 | **NOT RUN，0 帧**。准备安装时发现外部脚本正在运行，安装器在任何 SD 写入前拒绝继续 |
+| 实际模型的电脑端流程 | [HOST_MODEL_PIPELINE.json](HOST_MODEL_PIPELINE.json)：CNN1、TCN4 各 9 次更新（4 张交付仿真图、5 次显式缺帧）；真实 ONNX CPU 推理、滤波、缺测恢复、TCN 历史重置、JSON 保存并重新读取均通过。不是物理相机或量化 KModel 的原生执行 |
+| 本次原生采集 / 推理 / 滤波 | **NOT RUN，0 帧**。安装器在发现外部脚本后、任何 SD 写入前拒绝继续；用户随后明确要求其他线路继续使用设备，本次仅完成电脑端检查 |
 | 报告落盘 / 原生资源清理 | **NOT RUN** |
 | 定位精度 / 道路实际测试 | 本次不做，**NOT RUN**；原有精度 HOLD 和 `position_valid=false` 保留 |
 
-安装前查询 `running=false`，执行只枚举与读取的预检查后返回 REPL。随后再次查询发现 `running=true`，非本次启动；主机 CanMV 日志也有相应时段外部预览活动。保留现场程序，没有发送 stop、上传模型或切换相机。稍后查询再次为 `running=false`，但独占条件尚待用户确认。OPS 认领只能协调当前 Git common directory，不能证明其他会话没有使用 COM3。
+安装前查询 `running=false`，执行只枚举与读取的预检查后返回 REPL。随后再次查询发现 `running=true`，非本次启动；主机 CanMV 日志也有相应时段外部预览活动。保留现场程序，没有发送 stop、上传模型或切换相机。稍后查询再次为 `running=false`。用户最终确认：**“其他线路仍在使用，先只做电脑端检查”**。收到该指令后不再调用板端工具。OPS 认领只能协调当前 Git common directory，不能证明其他会话没有使用 COM3。
 
 启动文件预检查 SHA：`/sdcard/main.py` 为 `c0b89b0b48864ff51e0e1d9a07082d306dbaf301aa4b6c95432ea6e04dbc640c`，`/sdcard/boot.py` 不存在。本次没有写入启动文件、生产参数、旧 SD 目录或其他线路源码。
+
+## 代码检查
+
+主入口、CPU 滤波和模型回放检查见 [CODE_REVIEW.md](CODE_REVIEW.md)。发现旧 `board_temporal.run()` 需要 `board_probe.py`，R2 ZIP 未包含该文件；从该旧入口直接启动有依赖缺口。R2 文档指定的入口是 **`board_multiroute.run()`**，本次已准备的短测工具也仅调用此入口。原交付 ZIP 和算法源码不变。
 
 ## 方案与待执行入口
 
@@ -25,7 +30,7 @@
 
 [native_smoke.py](../../../research/temporal_camera/native_smoke.py) 复用既有 CanMV MCP 客户端和分片拼合器。它校验 ZIP 与全部成员，262144-byte 分片上传并逐片读回，再重新打开目标文件核对完整 SHA。新目录与新报告名必须不存在，板忙或状态未知时拒绝写入。每次运行限 1–120 次尝试，不自动重试。
 
-用户确认本次独占后，在 `C:/Users/28389/Desktop/k230-temporal-camera-v1` 执行：
+以下命令为将来设备可用且允许真机测试时的恢复入口，**当前不执行**。在 `C:/Users/28389/Desktop/k230-temporal-camera-v1` 执行：
 
 ```powershell
 python -B -X utf8 research/temporal_camera/native_smoke.py install --archive C:/Users/28389/Desktop/k230-project/deliverables/K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip --setting cnn1 --remote /sdcard/k230_temporal_v1_c1s1117 --out docs/temporal_camera/native-smoke-20261117/install-cnn1-original.json

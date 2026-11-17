@@ -1,0 +1,647 @@
+{
+  "status": "HOST_REPLAY_COMPLETE",
+  "declared_source": "simulated",
+  "manifest_sha256": "1da2fb2cc1f3bf64047e6f000fe7b9fb27c1c4c3231a402f4aa01c50995fa9d3",
+  "model_source": {
+    "ref": "/code/lotus30/k230-camera-xy-multiroute-pilot-a06",
+    "url": "https://www.kaggle.com/code/lotus30/k230-camera-xy-multiroute-pilot-a06",
+    "versionNumber": 1,
+    "kernelId": 145538534
+  },
+  "native_k230": "NOT RUN",
+  "confidence": "UNCALIBRATED_POSTERIOR_MASS",
+  "routes": {
+    "cnn1": {
+      "onnx_sha256": "d1285803a0e96b3eb02361bf629a727be1af9391bfcf3e317cefec29c0e5ce5a",
+      "summary": {
+        "capture_attempts": 9,
+        "observed_frames": 4,
+        "missing_captures": 5,
+        "lost_updates": 1,
+        "global_recovery_events": 1,
+        "history_resets": 0,
+        "start_zone_trials": 0,
+        "correct_start_zone": 0,
+        "undecided_start_zone": 0,
+        "surveyed_raw": {
+          "n": 0,
+          "status": "NOT RUN"
+        },
+        "surveyed_filtered": {
+          "n": 0,
+          "status": "NOT RUN"
+        },
+        "surveyed_after_landmark": {
+          "n": 0,
+          "status": "NOT RUN"
+        }
+      },
+      "trajectories": {
+        "simulated-engineering-smoke": {
+          "summary": {
+            "capture_attempts": 9,
+            "observed_frames": 4,
+            "missing_captures": 5,
+            "lost_updates": 1,
+            "global_recovery_events": 1,
+            "history_resets": 0,
+            "start_zone_trials": 0,
+            "correct_start_zone": 0,
+            "undecided_start_zone": 0,
+            "surveyed_raw": {
+              "n": 0,
+              "status": "NOT RUN"
+            },
+            "surveyed_filtered": {
+              "n": 0,
+              "status": "NOT RUN"
+            },
+            "surveyed_after_landmark": {
+              "n": 0,
+              "status": "NOT RUN"
+            }
+          },
+          "frames": [
+            {
+              "frame_index": 0,
+              "timestamp_s": 0.0,
+              "image_path": "frame0.png",
+              "image_sha256": "d8e232e4b6b1742b477f6d3d36176495e4c820177c355a991bc10f0e6dc00431",
+              "preprocessing": "UNPADDED_RGB160X90",
+              "raw_camera_xy_candidate_mm": [
+                1075,
+                -975
+              ],
+              "filtered_camera_xy_candidate_mm": [
+                975.0,
+                1075.0
+              ],
+              "position_valid": false,
+              "state": "DEGRADED",
+              "relocalized": false,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.49998598309937053,
+                0.49998598309937076
+              ],
+              "posterior_local_mass": 0.394482349184797,
+              "posterior_far_mass": 0.5000134458046211,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            },
+            {
+              "frame_index": 1,
+              "timestamp_s": 0.04,
+              "image_path": "frame1.png",
+              "image_sha256": "ae951c5e1d31e25e87c98b3fc8a17540f18fef900c36e2fd51fbc9df622c7b3a",
+              "preprocessing": "UNPADDED_RGB160X90",
+              "raw_camera_xy_candidate_mm": [
+                1025,
+                -925
+              ],
+              "filtered_camera_xy_candidate_mm": [
+                925.0,
+                1025.0
+              ],
+              "position_valid": false,
+              "state": "DEGRADED",
+              "relocalized": false,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.49979843851849154,
+                0.4997984385184914
+              ],
+              "posterior_local_mass": 0.4470732427938747,
+              "posterior_far_mass": 0.5000166342352759,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            },
+            {
+              "frame_index": 2,
+              "timestamp_s": 0.08,
+              "image_path": null,
+              "image_sha256": null,
+              "preprocessing": null,
+              "raw_camera_xy_candidate_mm": null,
+              "filtered_camera_xy_candidate_mm": [
+                925.0,
+                1075.0
+              ],
+              "position_valid": false,
+              "state": "DEGRADED",
+              "relocalized": false,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.4842464448369576,
+                0.4842464448369578
+              ],
+              "posterior_local_mass": 0.41006056582258393,
+              "posterior_far_mass": 0.5126979258981067,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            },
+            {
+              "frame_index": 3,
+              "timestamp_s": 0.12,
+              "image_path": null,
+              "image_sha256": null,
+              "preprocessing": null,
+              "raw_camera_xy_candidate_mm": null,
+              "filtered_camera_xy_candidate_mm": [
+                925.0,
+                1075.0
+              ],
+              "position_valid": false,
+              "state": "DEGRADED",
+              "relocalized": false,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.46346675826770395,
+                0.46346675826770395
+              ],
+              "posterior_local_mass": 0.37181050102821445,
+              "posterior_far_mass": 0.5250015983171717,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            },
+            {
+              "frame_index": 4,
+              "timestamp_s": 0.16,
+              "image_path": null,
+              "image_sha256": null,
+              "preprocessing": null,
+              "raw_camera_xy_candidate_mm": null,
+              "filtered_camera_xy_candidate_mm": [
+                925.0,
+                1075.0
+              ],
+              "position_valid": false,
+              "state": "DEGRADED",
+              "relocalized": false,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.4393404041965288,
+                0.43934040417294806
+              ],
+              "posterior_local_mass": 0.33642452527752575,
+              "posterior_far_mass": 0.5369407151285823,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            },
+            {
+              "frame_index": 5,
+              "timestamp_s": 0.2,
+              "image_path": null,
+              "image_sha256": null,
+              "preprocessing": null,
+              "raw_camera_xy_candidate_mm": null,
+              "filtered_camera_xy_candidate_mm": [
+                925.0,
+                1075.0
+              ],
+              "position_valid": false,
+              "state": "DEGRADED",
+              "relocalized": false,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.41661305581891783,
+                0.4166130556724356
+              ],
+              "posterior_local_mass": 0.3055128352209098,
+              "posterior_far_mass": 0.5485262754068908,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            },
+            {
+              "frame_index": 6,
+              "timestamp_s": 0.24,
+              "image_path": null,
+              "image_sha256": null,
+              "preprocessing": null,
+              "raw_camera_xy_candidate_mm": null,
+              "filtered_camera_xy_candidate_mm": null,
+              "position_valid": false,
+              "state": "LOST",
+              "relocalized": false,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.027777777777777738,
+                0.027777777777777738
+              ],
+              "posterior_local_mass": 0.004774305555555557,
+              "posterior_far_mass": 0.9626736111111345,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            },
+            {
+              "frame_index": 7,
+              "timestamp_s": 0.28,
+              "image_path": "frame2.png",
+              "image_sha256": "8c557db1e0f8a22e4ffe7106cb2628e91146683cc8704d2225760729b21a82da",
+              "preprocessing": "UNPADDED_RGB160X90",
+              "raw_camera_xy_candidate_mm": [
+                875,
+                -975
+              ],
+              "filtered_camera_xy_candidate_mm": [
+                975.0,
+                875.0
+              ],
+              "position_valid": false,
+              "state": "DEGRADED",
+              "relocalized": true,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.39674517370950213,
+                0.39674517370950213
+              ],
+              "posterior_local_mass": 0.2612561157452811,
+              "posterior_far_mass": 0.5350189786716952,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            },
+            {
+              "frame_index": 8,
+              "timestamp_s": 0.32,
+              "image_path": "frame3.png",
+              "image_sha256": "2ff1a0859c2850b54ee0814da143347089be14224cf470a1c5dba5546effddb9",
+              "preprocessing": "UNPADDED_RGB160X90",
+              "raw_camera_xy_candidate_mm": [
+                875,
+                -825
+              ],
+              "filtered_camera_xy_candidate_mm": [
+                875.0,
+                875.0
+              ],
+              "position_valid": false,
+              "state": "DEGRADED",
+              "relocalized": false,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.3915299070790506,
+                0.39152990707905055
+              ],
+              "posterior_local_mass": 0.4188087225208619,
+              "posterior_far_mass": 0.5045441670964752,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            }
+          ]
+        }
+      }
+    },
+    "tcn4": {
+      "onnx_sha256": "39a88639c51b80450ca2c20d5545d07afac9b5d628fc0b7c3e8f1afb953a66c1",
+      "summary": {
+        "capture_attempts": 9,
+        "observed_frames": 4,
+        "missing_captures": 5,
+        "lost_updates": 1,
+        "global_recovery_events": 1,
+        "history_resets": 1,
+        "start_zone_trials": 0,
+        "correct_start_zone": 0,
+        "undecided_start_zone": 0,
+        "surveyed_raw": {
+          "n": 0,
+          "status": "NOT RUN"
+        },
+        "surveyed_filtered": {
+          "n": 0,
+          "status": "NOT RUN"
+        },
+        "surveyed_after_landmark": {
+          "n": 0,
+          "status": "NOT RUN"
+        }
+      },
+      "trajectories": {
+        "simulated-engineering-smoke": {
+          "summary": {
+            "capture_attempts": 9,
+            "observed_frames": 4,
+            "missing_captures": 5,
+            "lost_updates": 1,
+            "global_recovery_events": 1,
+            "history_resets": 1,
+            "start_zone_trials": 0,
+            "correct_start_zone": 0,
+            "undecided_start_zone": 0,
+            "surveyed_raw": {
+              "n": 0,
+              "status": "NOT RUN"
+            },
+            "surveyed_filtered": {
+              "n": 0,
+              "status": "NOT RUN"
+            },
+            "surveyed_after_landmark": {
+              "n": 0,
+              "status": "NOT RUN"
+            }
+          },
+          "frames": [
+            {
+              "frame_index": 0,
+              "timestamp_s": 0.0,
+              "image_path": "frame0.png",
+              "image_sha256": "d8e232e4b6b1742b477f6d3d36176495e4c820177c355a991bc10f0e6dc00431",
+              "preprocessing": "UNPADDED_RGB160X90",
+              "raw_camera_xy_candidate_mm": [
+                975,
+                -1025
+              ],
+              "filtered_camera_xy_candidate_mm": [
+                1025.0,
+                975.0
+              ],
+              "position_valid": false,
+              "state": "DEGRADED",
+              "relocalized": false,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.49999964403373376,
+                0.4999996440337338
+              ],
+              "posterior_local_mass": 0.47101968084117984,
+              "posterior_far_mass": 0.5000003484466976,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            },
+            {
+              "frame_index": 1,
+              "timestamp_s": 0.04,
+              "image_path": "frame1.png",
+              "image_sha256": "ae951c5e1d31e25e87c98b3fc8a17540f18fef900c36e2fd51fbc9df622c7b3a",
+              "preprocessing": "UNPADDED_RGB160X90",
+              "raw_camera_xy_candidate_mm": [
+                975,
+                -975
+              ],
+              "filtered_camera_xy_candidate_mm": [
+                975.0,
+                975.0
+              ],
+              "position_valid": false,
+              "state": "DEGRADED",
+              "relocalized": false,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.4999956324032962,
+                0.4999956324032962
+              ],
+              "posterior_local_mass": 0.49826722085496533,
+              "posterior_far_mass": 0.5000001751866889,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            },
+            {
+              "frame_index": 2,
+              "timestamp_s": 0.08,
+              "image_path": null,
+              "image_sha256": null,
+              "preprocessing": null,
+              "raw_camera_xy_candidate_mm": null,
+              "filtered_camera_xy_candidate_mm": [
+                975.0,
+                975.0
+              ],
+              "position_valid": false,
+              "state": "DEGRADED",
+              "relocalized": false,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.48593593457496215,
+                0.48593593457496215
+              ],
+              "posterior_local_mass": 0.47423688101162415,
+              "posterior_far_mass": 0.5124633707353119,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            },
+            {
+              "frame_index": 3,
+              "timestamp_s": 0.12,
+              "image_path": null,
+              "image_sha256": null,
+              "preprocessing": null,
+              "raw_camera_xy_candidate_mm": null,
+              "filtered_camera_xy_candidate_mm": [
+                975.0,
+                975.0
+              ],
+              "position_valid": false,
+              "state": "DEGRADED",
+              "relocalized": false,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.47103163063431214,
+                0.471031630634312
+              ],
+              "posterior_local_mass": 0.43344787208897545,
+              "posterior_far_mass": 0.5245576143667494,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            },
+            {
+              "frame_index": 4,
+              "timestamp_s": 0.16,
+              "image_path": null,
+              "image_sha256": null,
+              "preprocessing": null,
+              "raw_camera_xy_candidate_mm": null,
+              "filtered_camera_xy_candidate_mm": [
+                975.0,
+                975.0
+              ],
+              "position_valid": false,
+              "state": "DEGRADED",
+              "relocalized": false,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.4502936435902847,
+                0.4502936435902849
+              ],
+              "posterior_local_mass": 0.38000618296922944,
+              "posterior_far_mass": 0.5362938283582638,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            },
+            {
+              "frame_index": 5,
+              "timestamp_s": 0.2,
+              "image_path": null,
+              "image_sha256": null,
+              "preprocessing": null,
+              "raw_camera_xy_candidate_mm": null,
+              "filtered_camera_xy_candidate_mm": [
+                975.0,
+                975.0
+              ],
+              "position_valid": false,
+              "state": "DEGRADED",
+              "relocalized": false,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.4262735566210516,
+                0.4262735566210317
+              ],
+              "posterior_local_mass": 0.3356090579707473,
+              "posterior_far_mass": 0.547682611797324,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            },
+            {
+              "frame_index": 6,
+              "timestamp_s": 0.24,
+              "image_path": null,
+              "image_sha256": null,
+              "preprocessing": null,
+              "raw_camera_xy_candidate_mm": null,
+              "filtered_camera_xy_candidate_mm": null,
+              "position_valid": false,
+              "state": "LOST",
+              "relocalized": false,
+              "history_reset": true,
+              "blue_region_posterior": [
+                0.027777777777777738,
+                0.027777777777777738
+              ],
+              "posterior_local_mass": 0.004774305555555557,
+              "posterior_far_mass": 0.9626736111111345,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            },
+            {
+              "frame_index": 7,
+              "timestamp_s": 0.28,
+              "image_path": "frame2.png",
+              "image_sha256": "8c557db1e0f8a22e4ffe7106cb2628e91146683cc8704d2225760729b21a82da",
+              "preprocessing": "UNPADDED_RGB160X90",
+              "raw_camera_xy_candidate_mm": [
+                925,
+                -925
+              ],
+              "filtered_camera_xy_candidate_mm": [
+                925.0,
+                925.0
+              ],
+              "position_valid": false,
+              "state": "DEGRADED",
+              "relocalized": true,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.42702975632349416,
+                0.4270297563234942
+              ],
+              "posterior_local_mass": 0.4335032665683203,
+              "posterior_far_mass": 0.5088853418810794,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            },
+            {
+              "frame_index": 8,
+              "timestamp_s": 0.32,
+              "image_path": "frame3.png",
+              "image_sha256": "2ff1a0859c2850b54ee0814da143347089be14224cf470a1c5dba5546effddb9",
+              "preprocessing": "UNPADDED_RGB160X90",
+              "raw_camera_xy_candidate_mm": [
+                875,
+                -825
+              ],
+              "filtered_camera_xy_candidate_mm": [
+                875.0,
+                925.0
+              ],
+              "position_valid": false,
+              "state": "DEGRADED",
+              "relocalized": false,
+              "history_reset": false,
+              "blue_region_posterior": [
+                0.43324459286826583,
+                0.4332445928682658
+              ],
+              "posterior_local_mass": 0.48216512445005655,
+              "posterior_far_mass": 0.5004558856752309,
+              "start_zone_reference": null,
+              "start_zone_prediction": null,
+              "at_or_after_landmark": false,
+              "survey_error_mm": null,
+              "raw_survey_error_mm": null,
+              "measurement": null
+            }
+          ]
+        }
+      }
+    }
+  }
+}
