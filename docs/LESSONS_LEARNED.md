@@ -26,6 +26,8 @@
 | 逐帧释放复测 | [gc1000.json](validation/camera-diagnosis-20261116/gc1000.json)：1000/1000成功、capture_failures=0、cleanup_errors=[]；137.285秒测量窗口，墙钟有效7.284117FPS；仅该短测通过 |
 | 主机中断 | [manual-gc18000.json](validation/camera-diagnosis-20261116/manual-gc18000.json)：测量0帧时IDE interrupt；扩展停用/SIGTERM日志另存。之后另启r2会话，不能把中断记录或启动ACK当稳定性通过 |
 
+补档：r2 会话因 IDE 中断结束。请求 18,000 帧，完成 4,480 帧，采集失败为 0，清理无错误。长时间稳定性继续待验收。 [r2 板端报告](validation/camera-diagnosis-20261116/manual-gc18000-r2.json)
+
 ## F01：大模型经过工具文本回显后被截断
 
 现象：本地 KModel 1,611,824 bytes，首次板端回读只有 786,444 bytes，而写工具仍返回 success。工具层取得的 base64 长度已经不足；不能把它写成已经证明的板端 USB 固定大小限制。

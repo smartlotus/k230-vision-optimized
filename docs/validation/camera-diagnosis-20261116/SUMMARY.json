@@ -73,5 +73,17 @@
     ],
     "generic_skill_reference": "pipeline-ops/references/failure-playbook.md"
   },
-  "com3_ownership": "Retained by this conversation while manual preview is running; subagents read only"
+  "com3_ownership": "Retained by this conversation while manual preview is running; subagents read only",
+  "manual_preview_final": {
+    "session": "manual-gc18000-r2",
+    "receipt": "manual-gc18000-r2.json",
+    "receipt_sha256": "396137b30c97c7d96cf332606038f344b55c1d17248b0f52dbafa8706a64c250",
+    "status": "RUN_FAILED",
+    "successful": 4480,
+    "requested": 18000,
+    "capture_failures": 0,
+    "cleanup_errors": [],
+    "error": "IDE interrupt",
+    "long_stability_acceptance": "PENDING"
+  }
 }

@@ -24,10 +24,14 @@
   ],
   "branch": "ops/camera-diagnosis-20261116",
   "state": "ready",
-  "claimed": false,
-  "agent": "codex",
-  "session": "camera-ledger-20261116-a",
-  "revision": 4,
-  "handoff": ".ops/handoffs/camera-repair-ledger-20261116/20261116T031515-b7dfce16.json",
-  "updated_at": "2026-11-16T03:23:38+00:00"
+  "claimed": true,
+  "agent": "coordinator",
+  "session": "camera-r2-closeout-20261117",
+  "revision": 6,
+  "handoff": ".ops/handoffs/camera-repair-ledger-20261116/20261117T114201-b1d00d14.json",
+  "updated_at": "2026-11-17T11:42:04+00:00",
+  "reconciliation_note": {
+    "reason": "The existing untracked r2 report is the terminal response requested by the previously verified task; its original SHA and status were reviewed before archival.",
+    "at": "2026-11-17T11:42:00+00:00"
+  }
 }
