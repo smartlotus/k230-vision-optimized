@@ -13,8 +13,12 @@ from dataset import audit, build_sequences, digest, write_jsonl
 def check(data, field_mask):
     rows = [json.loads(line) for line in (data/'manifest.jsonl').read_text().splitlines()]
     report, groups = audit(rows,data)
-    resolution = tuple(json.loads((data/'RENDER_IDENTITY.json').read_text())['resolution'])
-    if resolution not in ((160,90),(640,360)):
+    identity = json.loads((data/'RENDER_IDENTITY.json').read_text())
+    resolution = tuple(identity['resolution'])
+    rgb_resolution = tuple(identity.get('rgb_storage_resolution',resolution))
+    compact = identity.get('rgb_storage')=='AI2D_HALF_PIXEL_4X_UNPADDED'
+    if resolution not in ((160,90),(640,360)) or (rgb_resolution!=resolution and not (
+            compact and resolution==(640,360) and rgb_resolution==(160,90))):
         raise ValueError('Unknown competition sensor resolution')
     with Image.open(field_mask) as field:
         field.load()
@@ -49,7 +53,7 @@ def check(data, field_mask):
         if original_split!=row['split']:
             raise ValueError('Identical RGB crosses a split')
         with Image.open(data/row['image_path']) as rgb:
-            if rgb.size!=resolution:
+            if rgb.size!=rgb_resolution:
                 raise ValueError('RGB resolution differs from the rendering identity')
         mask = data/row['mask_path']
         if not mask.resolve().is_relative_to(data.resolve()) or digest(mask)!=row['mask_sha256']:
@@ -60,7 +64,8 @@ def check(data, field_mask):
     report.update(field_mask_sha256=digest(field_mask),start_zones_by_split=dict(starts),
                   trajectory_scenarios_by_split=dict(scenarios),identical_rgb_cross_split=0,
                   map_class_counts_sampled_at_most_10mm=dict(geometry_counts),
-                  mask_frames_verified=len(rows),resolution=resolution,manifest_sha256=digest(data/'manifest.jsonl'),
+                  mask_frames_verified=len(rows),resolution=resolution,rgb_storage_resolution=rgb_resolution,
+                  manifest_sha256=digest(data/'manifest.jsonl'),
                   scope='Camera optical projections in simulation; competition chassis clearance not assessed')
     for length in (4,8):
         write_jsonl(data/f'sequences-T{length}.jsonl',build_sequences(rows,length))

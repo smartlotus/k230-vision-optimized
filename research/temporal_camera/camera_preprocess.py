@@ -1,6 +1,5 @@
 """RGB input matching the verified CanMV uint8 resize for 640×360 sources."""
 import numpy as np
-from PIL import Image, ImageOps
 
 
 def ai2d_downsample_4x(rgb):
@@ -17,6 +16,8 @@ def ai2d_downsample_4x(rgb):
 
 
 def rgb_uint8(path):
+    from PIL import Image, ImageOps
+
     with Image.open(path) as source:
         rgb = source.convert('RGB')
         if rgb.size == (640, 360):

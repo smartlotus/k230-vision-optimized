@@ -1,0 +1,36 @@
+{
+  "run_id": "k230-camera-xy-multiroute-pilot-20261117-a08",
+  "kernel": "lotus30/k230-camera-xy-multiroute-pilot-a08",
+  "dataset": "lotus30/k230-camera-xy-pilot-v1-20261117-a08",
+  "dataset_version": 1,
+  "notebook_file": "run.ipynb",
+  "notebook_sha256": "9e57d53818b3824388021069f5cefc4af7d3f619fb4a5df2ade503897b681efe",
+  "input_manifest_sha256": "05d623bea30ce346205f58d62d08dab1ff33911de03900d6bf58240a2744708a",
+  "provider_max_seconds": 3000,
+  "publisher_admission_status": "PENDING",
+  "publication_mode": "INDEPENDENT_CLOUD_PUBLISHER",
+  "automatic_retry": false,
+  "scientific_budget": {
+    "settings": [
+      "cnn1",
+      "gru4",
+      "gru8",
+      "tcn4",
+      "tcn8"
+    ],
+    "epochs_max_each": 12,
+    "early_stop_patience": 12,
+    "wall_seconds": 2200,
+    "seed": 117
+  },
+  "recovery": false,
+  "recovery_scope": "none",
+  "prior_cnn_optimizer_updates": 0,
+  "encoder": "spatial",
+  "all_endpoints": true,
+  "learning": "ce",
+  "recipe": "map_reuse",
+  "rgb_projection_adaptation_lr": 0.0003,
+  "parent_sha256": "51df7fb18b76a305a0360eb3a7fd788fe71994aeffeb35b1766912f481ff8f05",
+  "full_generation": "NOT RUN; requires pilot acceptance"
+}

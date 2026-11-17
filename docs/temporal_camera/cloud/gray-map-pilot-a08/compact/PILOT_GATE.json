@@ -1,0 +1,229 @@
+{
+  "status": "NEEDS_IMPROVEMENT",
+  "qa": {
+    "status": "PASS",
+    "frames": 1000,
+    "splits": {
+      "train": 500,
+      "val": 250,
+      "test": 250
+    },
+    "trajectories": 40,
+    "evaluation_partitions": {
+      "trajectory_holdout": 1000,
+      "spatial_challenge": 0,
+      "appearance_challenge": 0
+    },
+    "spatial_challenge_tiles_disjoint": true,
+    "split_group_counts": {
+      "trajectory_id": 40,
+      "pose_group_id": 40,
+      "appearance_profile_id": 40
+    },
+    "scenario_counts": {
+      "straight": 0,
+      "turn": 200,
+      "intersection": 200,
+      "repeated_road": 200,
+      "frame_drop": 0,
+      "variable_speed": 200,
+      "blur": 0,
+      "relocalization": 0,
+      "stop_start": 200,
+      "lighting": 0
+    }
+  },
+  "full_generation_authorized_by_gate": false,
+  "parent_training_reused": "10000 positions,18epochs4500updates",
+  "elapsed_seconds": 144.26532005500002,
+  "native_board": "NOT RUN",
+  "global_confidence_calibration": "NOT QUALIFIED",
+  "map_sha256": "b5bea8c6738bc7ebd8d57cdae34af99d1cf10b3fc782ea9c6c986e8802441e95",
+  "resolution": [
+    640,
+    360
+  ],
+  "dataset_manifest_sha256": "e425495777f067bd521d696811e9aea72965152e8d4743de49dbf6462d3bf4fc",
+  "criterion": {
+    "median_mm_max": 200,
+    "p95_mm_max": 500,
+    "correct_initial_zone_fraction_min": 0.8,
+    "recovered_trajectory_fraction_min": 0.5
+  },
+  "measured": {
+    "clean": {
+      "raw_anchor": {
+        "n": 250,
+        "mean_mm": 923.2098568055876,
+        "median_mm": 833.8918701383257,
+        "p95_mm": 2086.4339750236377,
+        "max_mm": 2450.0639189693,
+        "within50_rate": 0.076,
+        "within200_rate": 0.24
+      },
+      "raw_grid": {
+        "n": 250,
+        "mean_mm": 923.2098568055876,
+        "median_mm": 833.8918701383257,
+        "p95_mm": 2086.4339750236377,
+        "max_mm": 2450.0639189693,
+        "within50_rate": 0.076,
+        "within200_rate": 0.24
+      },
+      "filtered_grid": {
+        "n": 250,
+        "mean_mm": 900.7427379564361,
+        "median_mm": 792.9115369423603,
+        "p95_mm": 2032.447558012244,
+        "max_mm": 2306.8048699427327,
+        "within50_rate": 0.076,
+        "within200_rate": 0.208
+      },
+      "jumps_over500": 79,
+      "lost_frames": 0,
+      "global_recovery_events": 0,
+      "host_cpu_filter_p95_ms": 5.6074421999994675,
+      "initialization_provenance": "TWO_OFFICIAL_AREAS_EQUAL_WEIGHT_WITH_MARGIN",
+      "by_scenario": {
+        "turn": {
+          "n": 50,
+          "mean_mm": 1019.9696583651531,
+          "median_mm": 1088.989855599745,
+          "p95_mm": 2056.548779756416,
+          "max_mm": 2306.8048699427327,
+          "within50_rate": 0.12,
+          "within200_rate": 0.2
+        },
+        "intersection": {
+          "n": 50,
+          "mean_mm": 834.7191815259378,
+          "median_mm": 688.076458271111,
+          "p95_mm": 1931.3914916757335,
+          "max_mm": 2127.9722575576716,
+          "within50_rate": 0.06,
+          "within200_rate": 0.24
+        },
+        "variable_speed": {
+          "n": 50,
+          "mean_mm": 983.7149101595115,
+          "median_mm": 856.808194121175,
+          "p95_mm": 2027.9304773572994,
+          "max_mm": 2052.7285495327455,
+          "within50_rate": 0.04,
+          "within200_rate": 0.16
+        },
+        "repeated_road": {
+          "n": 50,
+          "mean_mm": 825.066803122064,
+          "median_mm": 684.555798843305,
+          "p95_mm": 1929.2469379481947,
+          "max_mm": 2122.813324281933,
+          "within50_rate": 0.06,
+          "within200_rate": 0.2
+        },
+        "stop_start": {
+          "n": 50,
+          "mean_mm": 840.2431366095142,
+          "median_mm": 698.15651143458,
+          "p95_mm": 2065.0451493173655,
+          "max_mm": 2202.5782864192147,
+          "within50_rate": 0.1,
+          "within200_rate": 0.24
+        }
+      },
+      "initial_zone_correct": 5,
+      "initial_zone_trials": 10,
+      "recovered_with_3_consecutive_within200mm": 0,
+      "recovery_trajectory_trials": 0,
+      "motion": "UNKNOWN; no hard exclusion",
+      "confidence": "UNCALIBRATED_POSTERIOR_MASS"
+    },
+    "relocalization": {
+      "raw_anchor": {
+        "n": 250,
+        "mean_mm": 1154.7817895946255,
+        "median_mm": 1181.6199061469426,
+        "p95_mm": 2180.9234804546095,
+        "max_mm": 2575.8917191691935,
+        "within50_rate": 0.06,
+        "within200_rate": 0.184
+      },
+      "raw_grid": {
+        "n": 250,
+        "mean_mm": 1154.7817895946255,
+        "median_mm": 1181.6199061469426,
+        "p95_mm": 2180.9234804546095,
+        "max_mm": 2575.8917191691935,
+        "within50_rate": 0.06,
+        "within200_rate": 0.184
+      },
+      "filtered_grid": {
+        "n": 250,
+        "mean_mm": 1014.2007307801244,
+        "median_mm": 1043.6665087251374,
+        "p95_mm": 2125.650737583589,
+        "max_mm": 2615.2981205636056,
+        "within50_rate": 0.06,
+        "within200_rate": 0.188
+      },
+      "jumps_over500": 80,
+      "lost_frames": 20,
+      "global_recovery_events": 10,
+      "host_cpu_filter_p95_ms": 5.333873899991204,
+      "initialization_provenance": "TWO_OFFICIAL_AREAS_EQUAL_WEIGHT_WITH_MARGIN",
+      "by_scenario": {
+        "turn": {
+          "n": 50,
+          "mean_mm": 1238.6274753534904,
+          "median_mm": 1231.544988132606,
+          "p95_mm": 2258.2100910618406,
+          "max_mm": 2615.2981205636056,
+          "within50_rate": 0.08,
+          "within200_rate": 0.12
+        },
+        "intersection": {
+          "n": 50,
+          "mean_mm": 959.8306860366747,
+          "median_mm": 964.7544094055509,
+          "p95_mm": 1988.6745859988034,
+          "max_mm": 2368.6665919486595,
+          "within50_rate": 0.06,
+          "within200_rate": 0.18
+        },
+        "variable_speed": {
+          "n": 50,
+          "mean_mm": 1040.303374033708,
+          "median_mm": 1101.989079551533,
+          "p95_mm": 2050.588376431401,
+          "max_mm": 2368.6665919486595,
+          "within50_rate": 0.04,
+          "within200_rate": 0.2
+        },
+        "repeated_road": {
+          "n": 50,
+          "mean_mm": 868.4923426317412,
+          "median_mm": 884.851754393779,
+          "p95_mm": 1989.2001289357192,
+          "max_mm": 2368.6665919486595,
+          "within50_rate": 0.04,
+          "within200_rate": 0.2
+        },
+        "stop_start": {
+          "n": 50,
+          "mean_mm": 963.7497758450078,
+          "median_mm": 840.3602925953758,
+          "p95_mm": 2225.336099665078,
+          "max_mm": 2475.1983070271667,
+          "within50_rate": 0.08,
+          "within200_rate": 0.24
+        }
+      },
+      "initial_zone_correct": 5,
+      "initial_zone_trials": 10,
+      "recovered_with_3_consecutive_within200mm": 6,
+      "recovery_trajectory_trials": 10,
+      "motion": "UNKNOWN; no hard exclusion",
+      "confidence": "UNCALIBRATED_POSTERIOR_MASS"
+    }
+  }
+}

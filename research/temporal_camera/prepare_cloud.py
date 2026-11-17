@@ -14,6 +14,14 @@ def put(path,value):
     path.write_text(json.dumps(value,indent=2)+'\n',encoding='utf8')
 
 
+def link_or_copy(source, target):
+    try:
+        os.link(source,target)
+    except OSError:
+        return shutil.copy2(source,target)
+    return target
+
+
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--data',type=Path,required=True)
     ap.add_argument('--stage',type=Path,required=True);ap.add_argument('--record',type=Path,required=True)
@@ -26,6 +34,7 @@ def main():
     ap.add_argument('--parent',type=Path)
     ap.add_argument('--adapt-rgb-projection',action='store_true')
     ap.add_argument('--ort-wheel',type=Path)
+    ap.add_argument('--link-inputs',action='store_true',help='Use space-saving hardlinks for immutable source data and wheel')
     args=ap.parse_args();here=Path(__file__).resolve().parent
     if args.adapt_rgb_projection and (args.recipe!='map_reuse' or args.parent is None):
         ap.error('RGB adaptation requires the corrected map parent')
@@ -33,7 +42,9 @@ def main():
         ap.error('Specify one ONNX Runtime wheel or a recovery bundle')
     stage=args.stage.resolve();stage.mkdir(parents=True,exist_ok=False)
     record=args.record.resolve();record.mkdir(parents=True,exist_ok=False)
-    root=stage/'assembly';root.mkdir();shutil.copytree(args.data,root/'data')
+    root=stage/'assembly';root.mkdir()
+    copy_input=link_or_copy if args.link_inputs else shutil.copy2
+    shutil.copytree(args.data,root/'data',copy_function=copy_input)
     rows=[json.loads(x) for x in (root/'data/manifest.jsonl').read_text().splitlines()];audit(rows,root/'data')
     for name in ('models.py','filter.py','dataset.py','train.py','cloud_worker.py'):
         shutil.copy2(here/name,root/name)
@@ -58,7 +69,7 @@ def main():
         shutil.copy2(args.recovery/'RECOVERED.json',root/'RECOVERED.json')
     if args.ort_wheel:
         (root/'deps').mkdir()
-        shutil.copy2(args.ort_wheel,root/'deps'/args.ort_wheel.name)
+        copy_input(args.ort_wheel,root/'deps'/args.ort_wheel.name)
     manifest=[{'name':p.relative_to(root).as_posix(),'bytes':p.stat().st_size,'sha256':digest(p)}
               for p in sorted(root.rglob('*')) if p.is_file() and '__pycache__' not in p.parts]
     put(root/'INPUT_MANIFEST.json',manifest);input_sha=digest(root/'INPUT_MANIFEST.json')
@@ -70,10 +81,7 @@ def main():
     payload_sha=digest(payload)
     # Only the opaque payload and metadata enter Kaggle input; assembly remains local.
     upload=stage/'upload';upload.mkdir()
-    try:
-        os.link(payload,upload/'payload.bin')
-    except OSError:
-        shutil.copy2(payload,upload/'payload.bin')
+    link_or_copy(payload,upload/'payload.bin')
     ref='lotus30/k230-camera-xy-pilot-v1-20261117-'+args.attempt
     kernel='lotus30/k230-camera-xy-multiroute-pilot-'+args.attempt
     run_id='k230-camera-xy-multiroute-pilot-20261117-'+args.attempt

@@ -1,0 +1,270 @@
+{
+  "status": "FROZEN_A07_PAIRED_INPUT_TEST",
+  "manifest_old": "ec2e617bb3b15df10c80f666aa2166f29d7231741026dc187ddc582887609042",
+  "manifest_new": "e425495777f067bd521d696811e9aea72965152e8d4743de49dbf6462d3bf4fc",
+  "source": {
+    "ref": "/code/lotus30/k230-camera-xy-multiroute-pilot-a07",
+    "url": "https://www.kaggle.com/code/lotus30/k230-camera-xy-multiroute-pilot-a07",
+    "versionNumber": 1,
+    "kernelId": 145541767
+  },
+  "scope": "same held-out poses and fixed a07 model; combined rendering and AI2D input-domain effect",
+  "settings": {
+    "cnn1": {
+      "argmax_matches": 170,
+      "cnn_onnx_sha256": "5bd2123871ef74dd66cb739962b51ebfc5be9a0b87f1dc632862b9d552d781aa",
+      "temperature": 1.0,
+      "prior_160_render": {
+        "rows": 250,
+        "raw": {
+          "n": 250,
+          "mean_mm": 913.4789905452647,
+          "median_mm": 838.6523421158024,
+          "p95_mm": 2066.0101914470188,
+          "max_mm": 2368.6665919486595,
+          "within50_rate": 0.08,
+          "within200_rate": 0.256
+        },
+        "filtered": {
+          "n": 250,
+          "mean_mm": 944.0777784308023,
+          "median_mm": 857.0362118269109,
+          "p95_mm": 2052.1562318910837,
+          "max_mm": 2402.78566905009,
+          "within50_rate": 0.052,
+          "within200_rate": 0.188
+        },
+        "correct_start": 5,
+        "start_trials": 10
+      },
+      "sensor_640_render_ai2d": {
+        "rows": 250,
+        "raw": {
+          "n": 250,
+          "mean_mm": 928.708385767211,
+          "median_mm": 822.7354583496106,
+          "p95_mm": 2086.4339750236377,
+          "max_mm": 2489.6221434771546,
+          "within50_rate": 0.084,
+          "within200_rate": 0.248
+        },
+        "filtered": {
+          "n": 250,
+          "mean_mm": 913.8491287272296,
+          "median_mm": 822.7354583496106,
+          "p95_mm": 2038.4984807724893,
+          "max_mm": 2306.8048699427327,
+          "within50_rate": 0.076,
+          "within200_rate": 0.204
+        },
+        "correct_start": 5,
+        "start_trials": 10
+      }
+    },
+    "gru4": {
+      "argmax_matches": 170,
+      "cnn_onnx_sha256": "fef945f0ece7d59932f5d756f287c0296fa3f592b0a1964558284f7202cad5bc",
+      "temperature": 1.0,
+      "prior_160_render": {
+        "rows": 250,
+        "raw": {
+          "n": 250,
+          "mean_mm": 939.4320216100838,
+          "median_mm": 853.9020127500166,
+          "p95_mm": 2075.2131787146186,
+          "max_mm": 2372.6925574619936,
+          "within50_rate": 0.08,
+          "within200_rate": 0.248
+        },
+        "filtered": {
+          "n": 250,
+          "mean_mm": 883.5480329797444,
+          "median_mm": 767.8807066352397,
+          "p95_mm": 2030.6438240221985,
+          "max_mm": 2485.9152866677837,
+          "within50_rate": 0.04,
+          "within200_rate": 0.2
+        },
+        "correct_start": 5,
+        "start_trials": 10
+      },
+      "sensor_640_render_ai2d": {
+        "rows": 250,
+        "raw": {
+          "n": 250,
+          "mean_mm": 972.1192419818426,
+          "median_mm": 851.3175563180065,
+          "p95_mm": 2104.9486750225647,
+          "max_mm": 2372.6925574619936,
+          "within50_rate": 0.076,
+          "within200_rate": 0.224
+        },
+        "filtered": {
+          "n": 250,
+          "mean_mm": 885.8701532624559,
+          "median_mm": 726.2065012283281,
+          "p95_mm": 1996.4964368753645,
+          "max_mm": 2372.6925574619936,
+          "within50_rate": 0.04,
+          "within200_rate": 0.188
+        },
+        "correct_start": 5,
+        "start_trials": 10
+      }
+    },
+    "gru8": {
+      "argmax_matches": 169,
+      "cnn_onnx_sha256": "8cec16ea060f32f36b831c43453eb4878511778d7bba00896f69395fee5442b8",
+      "temperature": 1.0,
+      "prior_160_render": {
+        "rows": 250,
+        "raw": {
+          "n": 250,
+          "mean_mm": 921.7184493678645,
+          "median_mm": 844.6919807248403,
+          "p95_mm": 2078.1229180854466,
+          "max_mm": 2450.0639189693,
+          "within50_rate": 0.072,
+          "within200_rate": 0.252
+        },
+        "filtered": {
+          "n": 250,
+          "mean_mm": 1001.1534771046464,
+          "median_mm": 923.9256003456301,
+          "p95_mm": 2061.0774722134547,
+          "max_mm": 2547.0042796211337,
+          "within50_rate": 0.044,
+          "within200_rate": 0.164
+        },
+        "correct_start": 5,
+        "start_trials": 10
+      },
+      "sensor_640_render_ai2d": {
+        "rows": 250,
+        "raw": {
+          "n": 250,
+          "mean_mm": 960.9936129387743,
+          "median_mm": 844.6919807248403,
+          "p95_mm": 2078.1229180854466,
+          "max_mm": 2450.0639189693,
+          "within50_rate": 0.076,
+          "within200_rate": 0.224
+        },
+        "filtered": {
+          "n": 250,
+          "mean_mm": 881.5904138820758,
+          "median_mm": 783.9743789032314,
+          "p95_mm": 2000.5884197775476,
+          "max_mm": 2450.4898406399802,
+          "within50_rate": 0.076,
+          "within200_rate": 0.22
+        },
+        "correct_start": 5,
+        "start_trials": 10
+      }
+    },
+    "tcn4": {
+      "argmax_matches": 162,
+      "cnn_onnx_sha256": "af7bec694473cc547bac9b5d78a4f1df4d7909f996eea43cab23f89a6ed13fb4",
+      "temperature": 1.0,
+      "prior_160_render": {
+        "rows": 250,
+        "raw": {
+          "n": 250,
+          "mean_mm": 985.1403829072509,
+          "median_mm": 909.3938319102175,
+          "p95_mm": 2068.2875489613675,
+          "max_mm": 2380.1551801730025,
+          "within50_rate": 0.084,
+          "within200_rate": 0.24
+        },
+        "filtered": {
+          "n": 250,
+          "mean_mm": 884.0920353348974,
+          "median_mm": 711.6759544552158,
+          "p95_mm": 2084.3941565607365,
+          "max_mm": 2426.3462913530625,
+          "within50_rate": 0.06,
+          "within200_rate": 0.216
+        },
+        "correct_start": 5,
+        "start_trials": 10
+      },
+      "sensor_640_render_ai2d": {
+        "rows": 250,
+        "raw": {
+          "n": 250,
+          "mean_mm": 977.4558038257321,
+          "median_mm": 862.7032057345691,
+          "p95_mm": 2080.680650229678,
+          "max_mm": 2380.1551801730025,
+          "within50_rate": 0.084,
+          "within200_rate": 0.224
+        },
+        "filtered": {
+          "n": 250,
+          "mean_mm": 897.7135737688405,
+          "median_mm": 774.3066816062519,
+          "p95_mm": 1993.2026270969961,
+          "max_mm": 2372.6925574619936,
+          "within50_rate": 0.04,
+          "within200_rate": 0.152
+        },
+        "correct_start": 5,
+        "start_trials": 10
+      }
+    },
+    "tcn8": {
+      "argmax_matches": 161,
+      "cnn_onnx_sha256": "2b9d0015181f84aeec69c60c67d2ab797d2222bbc70036da4ca6e0d106195c92",
+      "temperature": 1.0,
+      "prior_160_render": {
+        "rows": 250,
+        "raw": {
+          "n": 250,
+          "mean_mm": 953.2559805790013,
+          "median_mm": 857.8788195507402,
+          "p95_mm": 2056.598228880328,
+          "max_mm": 2380.1551801730025,
+          "within50_rate": 0.072,
+          "within200_rate": 0.248
+        },
+        "filtered": {
+          "n": 250,
+          "mean_mm": 912.4468924243117,
+          "median_mm": 809.2857947454338,
+          "p95_mm": 2047.3033583528147,
+          "max_mm": 2450.4898406399802,
+          "within50_rate": 0.056,
+          "within200_rate": 0.2
+        },
+        "correct_start": 5,
+        "start_trials": 10
+      },
+      "sensor_640_render_ai2d": {
+        "rows": 250,
+        "raw": {
+          "n": 250,
+          "mean_mm": 980.3036558938082,
+          "median_mm": 887.0885673008518,
+          "p95_mm": 2068.566826973457,
+          "max_mm": 2372.6925574619936,
+          "within50_rate": 0.072,
+          "within200_rate": 0.232
+        },
+        "filtered": {
+          "n": 250,
+          "mean_mm": 830.402958114434,
+          "median_mm": 734.2681420912465,
+          "p95_mm": 1976.7693448062978,
+          "max_mm": 2153.101622157566,
+          "within50_rate": 0.072,
+          "within200_rate": 0.212
+        },
+        "correct_start": 5,
+        "start_trials": 10
+      }
+    }
+  },
+  "native_k230": "NOT RUN"
+}

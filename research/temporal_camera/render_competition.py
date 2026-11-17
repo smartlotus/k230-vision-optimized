@@ -7,15 +7,34 @@ from pathlib import Path
 import sys
 
 import bpy
+import numpy as np
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from competition_paths import schedule
 from dataset import digest, write_jsonl
+from camera_preprocess import ai2d_downsample_4x
 
 sys.path.insert(0, str(HERE/'vendor/roadnet'))
 import blender_scene as road
 import sim
+
+
+def compact_sensor_frame(out, record, metadata, size):
+    rgb_path = out / record['image_path']
+    raw = bpy.data.images.load(str(rgb_path), check_existing=False)
+    raw.colorspace_settings.name = 'Non-Color'
+    values = np.empty(size[0] * size[1] * 4, np.float32)
+    raw.pixels.foreach_get(values)
+    bpy.data.images.remove(raw)
+    rgb = np.rint(values.reshape(size[1],size[0],4)[::-1,:,:3] * 255).astype(np.uint8)
+    model_input = ai2d_downsample_4x(rgb.transpose(2,0,1))
+    road.png_bytes(rgb_path, model_input[:,3:93,:].transpose(1,2,0), 2)
+    record['image_sha256'] = digest(rgb_path)
+    intrinsics = dict(metadata['intrinsics_pinhole'])
+    intrinsics.update(width=160,height=90,fx=intrinsics['fx']/4,fy=intrinsics['fy']/4,
+                      cx=(intrinsics['cx']+.5)/4-.5,cy=(intrinsics['cy']+.5)/4-.5)
+    metadata['rgb_intrinsics_pinhole'] = intrinsics
 
 
 def main():
@@ -25,8 +44,13 @@ def main():
     parser.add_argument('--stage', choices=('smoke','pilot','full'), required=True)
     parser.add_argument('--pilot-gate', type=Path)
     parser.add_argument('--sensor-resolution', action='store_true', help='Render 640×360 for the 4:1 CanMV AI2D path')
+    parser.add_argument('--compact-sensor', action='store_true',
+                        help='Save the exact sensor-matched model RGB at 160×90; keep full-resolution masks')
     args = parser.parse_args(sys.argv[sys.argv.index('--')+1:])
+    if args.compact_sensor and not args.sensor_resolution:
+        parser.error('--compact-sensor requires --sensor-resolution')
     size = (640,360) if args.sensor_resolution else (160,90)
+    rgb_size = (160,90) if args.compact_sensor else size
     if args.stage=='full':
         gate = json.loads(args.pilot_gate.read_text()) if args.pilot_gate else {}
         if (gate.get('status')!='PASS' or gate.get('map_sha256')!=digest(args.blend)
@@ -88,6 +112,8 @@ def main():
             row['appearance_profile_id']=f'gray-appearance-{appearance_seed}'
             row['map_variant']='official-fig1-gray-perimeter-v1'
             road.render(parts,rec,out,size)
+            if args.compact_sensor:
+                compact_sensor_frame(out,rec,meta,size)
             row.update(image_sha256=rec['image_sha256'],mask_sha256=rec['mask_sha256'])
             manifest.write(json.dumps(row,separators=(',',':'))+'\n')
             if i%25==0:
@@ -97,7 +123,8 @@ def main():
     (out/'RENDER_IDENTITY.json').write_text(json.dumps({'geometry_sha256':input_sha,'cad_sha256':digest(args.cad),
         'renderer_sha256':digest(__file__),'camera_v2_renderer_sha256':digest(args.camera_renderer),
         'roadnet_renderer_sha256':digest(road.__file__),'source_official_pdf_sha256':'1ac7fa340193591874e3ec84f9427567864c16ab39fb500db814a4d2cfc000e4',
-        'blender':bpy.app.version_string,'stage':args.stage,'resolution':size,
+        'blender':bpy.app.version_string,'stage':args.stage,'resolution':size,'rgb_storage_resolution':rgb_size,
+        'rgb_storage':'AI2D_HALF_PIXEL_4X_UNPADDED' if args.compact_sensor else 'RAW_RENDER',
         'labels':['camera_x_mm','camera_y_mm'],'start_policy':'both zones, opposite goal per user'} ,indent=2)+'\n')
 
 

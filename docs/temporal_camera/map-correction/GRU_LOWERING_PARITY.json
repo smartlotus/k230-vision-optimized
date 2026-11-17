@@ -1,0 +1,27 @@
+{
+  "status": "DIRECT_VS_FIXED_STEP_ONNX_ALLCLOSE",
+  "declared_dataset_manifest_sha256": "ec2e617bb3b15df10c80f666aa2166f29d7231741026dc187ddc582887609042",
+  "route_settings": {
+    "gru4": {
+      "windows": 500,
+      "max_abs": 1.33514404296875e-05,
+      "anchor_matches": 500,
+      "direct_onnx_sha256": "fef945f0ece7d59932f5d756f287c0296fa3f592b0a1964558284f7202cad5bc",
+      "lowered_onnx_sha256": "d8216484bede50ac27c3d376348be38caf7e337ae76c161ac6fe4b742338cd2b"
+    },
+    "gru8": {
+      "windows": 500,
+      "max_abs": 1.1444091796875e-05,
+      "anchor_matches": 500,
+      "direct_onnx_sha256": "8cec16ea060f32f36b831c43453eb4878511778d7bba00896f69395fee5442b8",
+      "lowered_onnx_sha256": "3b2bcd36e6d55b6f2a789835c1f44c7f540e64a58208367e2e38cec3460185fa"
+    }
+  },
+  "source": {
+    "ref": "/code/lotus30/k230-camera-xy-multiroute-pilot-a07",
+    "url": "https://www.kaggle.com/code/lotus30/k230-camera-xy-multiroute-pilot-a07",
+    "versionNumber": 1,
+    "kernelId": 145541767
+  },
+  "native_k230": "NOT RUN"
+}

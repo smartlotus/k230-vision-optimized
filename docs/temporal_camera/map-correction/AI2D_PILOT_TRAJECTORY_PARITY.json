@@ -1,0 +1,34 @@
+{
+  "status": "PAIRED_ORIGINAL_PILOT_TRAJECTORIES",
+  "rows": 1000,
+  "trajectory_count": 40,
+  "exact_split_and_pose_fields": [
+    "sample_id",
+    "trajectory_id",
+    "split",
+    "timestamp_s",
+    "frame_index",
+    "camera_xy_target",
+    "pose_group_id",
+    "appearance_profile_id",
+    "lighting_profile",
+    "scenario"
+  ],
+  "a07_manifest_sha256": "ec2e617bb3b15df10c80f666aa2166f29d7231741026dc187ddc582887609042",
+  "a08_manifest_sha256": "e425495777f067bd521d696811e9aea72965152e8d4743de49dbf6462d3bf4fc",
+  "same_rgb_hash_count": 0,
+  "same_projection_and_lighting": true,
+  "splits": {
+    "train": 500,
+    "val": 250,
+    "test": 250
+  },
+  "raw_render_resolution": [
+    640,
+    360
+  ],
+  "storage_rgb": [
+    160,
+    90
+  ]
+}

@@ -11,6 +11,7 @@ from cloud_provider import read_output,persist_output
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--record',type=Path,required=True)
     ap.add_argument('--out',type=Path,required=True);ap.add_argument('--settings',default='cnn1,gru4,gru8,tcn4,tcn8')
+    ap.add_argument('--verify-only',action='store_true',help='Verify each original saved model member without storing its bytes locally')
     args=ap.parse_args();network()
     from kaggle.api.kaggle_api_extended import KaggleApi
     api=KaggleApi();authenticate(api)
@@ -30,14 +31,18 @@ def main():
                 if m['bytes']>12*1024**2:raise ValueError('Model member exceeds bound')
                 total+=m['bytes']
                 if total>100*1024**2:raise ValueError('Named deployment collection exceeds100MiB')
-                target=args.out/setting/name;target.parent.mkdir(exist_ok=True)
-                if target.exists():data=target.read_bytes()
+                target=args.out/setting/name
+                if not args.verify_only and target.exists():data=target.read_bytes()
                 else:data=read_output(client,ref,saved['versionNumber'],intent['run_id']+'/'+remote,12*1024**2)
                 if len(data)!=m['bytes'] or hashlib.sha256(data).hexdigest()!=m['sha256']:
                     raise ValueError('Saved deployment member digest differs')
-                persist_output(target,data);receipt.append({'setting':setting,**m})
+                if not args.verify_only:
+                    target.parent.mkdir(exist_ok=True)
+                    persist_output(target,data)
+                receipt.append({'setting':setting,**m})
     value={'status':'ORIGINAL_NAMED_MODEL_MEMBERS_SHA256_PASS','source':saved,'run_id':intent['run_id'],
-           'total_bytes':total,'files':receipt,'full_archive_downloaded_to_host':False}
+           'total_bytes':total,'files':receipt,'full_archive_downloaded_to_host':False,
+           'named_files_retained_locally':not args.verify_only}
     (args.out/'MODEL_COLLECTION.json').write_text(json.dumps(value,indent=2)+'\n')
     print(json.dumps({'status':value['status'],'files':len(receipt),'bytes':total}))
 

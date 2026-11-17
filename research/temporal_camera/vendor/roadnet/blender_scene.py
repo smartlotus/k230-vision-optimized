@@ -219,12 +219,16 @@ def apply_record(parts, rec, size):
 
 
 def png_gray(path, mask):
-    h,w = mask.shape
+    png_bytes(path, mask, 0)
+
+
+def png_bytes(path, pixels, color_type):
+    h,w = pixels.shape[:2]
     def chunk(kind,data):
         return struct.pack('>I',len(data))+kind+data+struct.pack('>I',zlib.crc32(kind+data))
     signature = b'\x89PNG\r\n\x1a\n'
-    hdr = struct.pack('>IIBBBBB',w,h,8,0,0,0,0)
-    scanlines = np.pad(mask,((0,0),(1,0))).tobytes()
+    hdr = struct.pack('>IIBBBBB',w,h,8,color_type,0,0,0)
+    scanlines = np.pad(pixels.reshape(h,-1),((0,0),(1,0))).tobytes()
     path.write_bytes(signature+chunk(b'IHDR',hdr)+chunk(b'IDAT',zlib.compress(scanlines,3))+chunk(b'IEND',b''))
 
 

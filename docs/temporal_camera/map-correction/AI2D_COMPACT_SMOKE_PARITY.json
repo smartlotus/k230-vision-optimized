@@ -1,0 +1,19 @@
+{
+  "status": "EXACT_MODEL_INPUT_ALL_100_FRAMES",
+  "camera_resolution": [
+    640,
+    360
+  ],
+  "stored_rgb": [
+    160,
+    90
+  ],
+  "mask_resolution": [
+    640,
+    360
+  ],
+  "raw_manifest_sha256": "eee4d5cf453caa71ff4331e33000075808793ba0a85e96c99cb1085e43082037",
+  "compact_manifest_sha256": "848bc4e52da013b330c0c2397edc250e906bf05add3bba441b3439ef8d7e7805",
+  "model_input_bytes_per_frame": 46080,
+  "checked_frames": 100
+}

@@ -1,0 +1,7 @@
+{
+  "operation": "SAVE_AND_RUN_ALL",
+  "kernel": "lotus30/k230-camera-xy-multiroute-pilot-a08",
+  "source_sha256": "9e57d53818b3824388021069f5cefc4af7d3f619fb4a5df2ade503897b681efe",
+  "automatic_retry": false,
+  "utc": "2026-11-17T06:55:30.304149+00:00"
+}

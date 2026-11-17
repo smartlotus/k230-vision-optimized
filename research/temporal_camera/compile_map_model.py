@@ -31,6 +31,7 @@ def main():
     ap.add_argument('--out',type=Path,required=True);ap.add_argument('--limit',type=int)
     ap.add_argument('--split',choices=('val','test'),default='test')
     ap.add_argument('--activation',choices=('int16','uint8'),default='int16')
+    ap.add_argument('--unroll-gru',action='store_true',help='Lower static four/eight-frame GRU to tensor operations')
     args=ap.parse_args();out=args.out.resolve();out.mkdir(parents=True,exist_ok=False)
     source=args.model.resolve();data=args.data.resolve()
     parent=torch.load(args.parent,map_location='cpu',weights_only=True)
@@ -38,6 +39,11 @@ def main():
     if saved['parent_sha256']!=digest(args.parent):raise ValueError('Parent lineage differs')
     base=MapCameraXYNet(parent,saved['route'],saved['window'],saved.get('single_frame_adjustment',False)).eval()
     base.load_state_dict(saved['state'])
+    if args.unroll_gru:
+        if saved['route']!='gru':
+            raise ValueError('--unroll-gru requires a trained GRU checkpoint')
+        from unroll_gru import FixedWindowGRU
+        base.temporal=FixedWindowGRU(base.temporal,saved['window']).eval()
     model=Uint8Input(base).eval();torch.set_num_threads(2)
     rows=[json.loads(x) for x in (data/'manifest.jsonl').read_text().splitlines()];audit(rows,data)
     if digest(data/'manifest.jsonl')!=saved['dataset_manifest_sha256']:raise ValueError('Dataset identity differs')
@@ -94,6 +100,7 @@ def main():
     np.savez_compressed(out/'SIMULATOR_SCORES.npz',sample_ids=np.array([r['sample_id'] for r in test]),logits=np.stack(all_scores))
     report={'status':'COMPILE_AND_SIMULATOR_PASS','qualification':'EXPERIMENTAL_NOT_NATIVE_ACCEPTANCE',
         'route':saved['route'],'window':saved['window'],'checkpoint_sha256':digest(source/'best.pt'),
+        'gru_lowered_to_fixed_steps':args.unroll_gru,
         'parent_sha256':saved['parent_sha256'],'float_onnx_sha256':digest(source/'camera_xy.onnx'),
         'uint8_onnx_sha256':digest(onnx),'kmodel_sha256':digest(out/'camera_xy.kmodel'),'kmodel_bytes':len(binary),
         'compiler':versions,'input_shape':shape,'input_type':'uint8','input_order':'past-to-current RGB NCHW packed channels',
