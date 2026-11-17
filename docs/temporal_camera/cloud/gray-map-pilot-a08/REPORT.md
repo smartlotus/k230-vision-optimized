@@ -2,7 +2,7 @@
 
 Kaggle 私有第 1 版，kernel ID 145551903，Tesla T4 训练进程用时 157.0 秒。沿用 a07 的 40 条轨迹、1,000 个相同位姿与时间戳、500/250/250 完整轨迹拆分及同样的模型、学习率、验证选择和压力条件。场景以 640×360 渲染，应用与实测 AI2D 一致的固定倍率缩小后存成 160×90 PNG。掩码保持源尺寸。五组均完成 12 轮、192 次优化更新，选中第 12 轮，温度为 1。监督只有 `camera_x_mm` 和 `camera_y_mm`。 [训练收据](compact/RESULT.json) · [配对验证](../../map-correction/AI2D_PILOT_TRAJECTORY_PARITY.json)
 
-五组权重、浮点 ONNX、指标和训练历史共 20 个文件存放于 Kaggle 原始版本。逐文件读取并核对了 75,578,810 字节的 SHA256，保留云端原件和本地校验清单。本轮权重的 KModel 编译为 **NOT RUN**。 [私有 Kaggle 原始版本](https://www.kaggle.com/code/lotus30/k230-camera-xy-multiroute-pilot-a08) · [权重与 ONNX 哈希清单](MODEL_COLLECTION.json)
+五组权重、浮点 ONNX、指标和训练历史共 20 个文件存放于 Kaggle 原始版本。逐文件读取并核对了 75,578,810 字节的 SHA256，已收回到本地交付 ZIP，并读回校验全部 32 个模型及记录文件。本轮权重的 KModel 编译为 **NOT RUN**。 [私有 Kaggle 原始版本](https://www.kaggle.com/code/lotus30/k230-camera-xy-multiroute-pilot-a08) · [权重与 ONNX 哈希清单](MODEL_COLLECTION.json) · [交付 ZIP 校验](MODEL_DELIVERY_SHA256.json)
 
 下表使用测试集 250 帧，统一 50 mm 网格和软双启停区先验。误差以 mm 计，恢复条件为 LOST 后连续三帧在 200 mm 内。
 

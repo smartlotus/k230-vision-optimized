@@ -1,0 +1,55 @@
+{
+  "status": "FIVE_ROUTE_HOST_REPLAY_AND_VARIABLE_RATE_VIDEO_PASS",
+  "input_frames": 48,
+  "observed_frames": 38,
+  "missing_captures": 10,
+  "trajectories": 4,
+  "declared_source": "simulated",
+  "video_fixture_frames": 6,
+  "video_pts_delta_seconds": [
+    0.04,
+    0.08,
+    0.12,
+    0.04,
+    0.16
+  ],
+  "native_k230": "NOT RUN",
+  "real_camera_replay": "NOT RUN",
+  "settings": {
+    "cnn1": {
+      "capture_attempts": 48,
+      "observed_frames": 38,
+      "missing_captures": 10,
+      "global_recovery_events": 2,
+      "history_resets": 0
+    },
+    "gru4": {
+      "capture_attempts": 48,
+      "observed_frames": 38,
+      "missing_captures": 10,
+      "global_recovery_events": 2,
+      "history_resets": 2
+    },
+    "gru8": {
+      "capture_attempts": 48,
+      "observed_frames": 38,
+      "missing_captures": 10,
+      "global_recovery_events": 2,
+      "history_resets": 2
+    },
+    "tcn4": {
+      "capture_attempts": 48,
+      "observed_frames": 38,
+      "missing_captures": 10,
+      "global_recovery_events": 2,
+      "history_resets": 2
+    },
+    "tcn8": {
+      "capture_attempts": 48,
+      "observed_frames": 38,
+      "missing_captures": 10,
+      "global_recovery_events": 2,
+      "history_resets": 2
+    }
+  }
+}

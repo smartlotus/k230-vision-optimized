@@ -1,0 +1,13 @@
+{
+  "archive": "K230_Official_Gray_Map_Pilot_A08_Models.zip",
+  "bytes": 55094688,
+  "sha256": "8ae867de0bf057d861a225c50e0f0b2efa429db4d6530122fb95ac9f5ef64648",
+  "verified_members": 32,
+  "source": {
+    "ref": "/code/lotus30/k230-camera-xy-multiroute-pilot-a08",
+    "url": "https://www.kaggle.com/code/lotus30/k230-camera-xy-multiroute-pilot-a08",
+    "versionNumber": 1,
+    "kernelId": 145551903
+  },
+  "qualification": "EXPERIMENTAL_ACCURACY_HOLD"
+}

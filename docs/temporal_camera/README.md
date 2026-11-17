@@ -1,5 +1,7 @@
 # K230 competition CameraXY temporal V1
 
+Current offline entry is [OFFLINE_HANDOVER.md](OFFLINE_HANDOVER.md). It maps each requirement to actual evidence and consolidates the future human inputs. [OFFLINE_REPLAY.md](OFFLINE_REPLAY.md) runs timestamped RGB or video through the delivered models. Real OV2735 data and native acceptance remain NOT RUN. The reports below preserve the history of bounded experiments.
+
 Current map revision follows the provided official PDF Figure 1 and the user's two-start procedure. [Corrected scene, Smoke/Pilot manifests, and updated evaluation contract](map-correction/README.md). Earlier runs retain their original map and must be reported under that map identity.
 
 Current implementation branch: `ops/temporal-camera-v1-20261117`. Read `.ops/PROJECT.md`, `.ops/PROTOCOL.md`, and the task handoff before writing. This module is isolated from accepted production, UART and motion code.

@@ -1,0 +1,95 @@
+{
+  "status": "ALL_LISTED_ARCHIVE_BYTES_AND_MEMBERS_VERIFIED",
+  "qualification": "EXPERIMENTAL_ACCURACY_HOLD",
+  "current_experiment": "a08",
+  "comparison_baseline": "a06 CNN1 + Bayesian filter",
+  "temporal_benchmark": "a06 TCN4",
+  "source_archive": "K230_Temporal_Offline_Source_And_Evidence_R1.zip",
+  "requested_full_project": "PENDING_ACCURACY_AND_PHYSICAL_ACCEPTANCE",
+  "real_camera": "NOT RUN",
+  "native_k230": "NOT RUN",
+  "full_10000_20000_training": "NOT RUN",
+  "archives": [
+    {
+      "archive": "K230_Temporal_Offline_Source_And_Evidence_R1.zip",
+      "status": "ALL_MEMBERS_VERIFIED",
+      "members": 437,
+      "sha256": "69e8a23687b3b825075b1506bc50e774e06c30d5eacaee00a00d8d745813b123",
+      "bytes": 9869774,
+      "role": "源码、配置、证据、回放工具与集中人工介入说明",
+      "receipt": "K230_Temporal_Offline_Source_And_Evidence_R1.SHA256.json"
+    },
+    {
+      "archive": "K230_Official_Gray_Map_And_1100_Frame_Data_R1.zip",
+      "status": "ALL_MEMBERS_VERIFIED",
+      "members": 2214,
+      "sha256": "eef0db1d543fe74b2be060ac5e2f5a07622272df64b60f19b23b5f361ccc9833",
+      "bytes": 19393537,
+      "role": "官方灰道场景与原始100/1000帧数据",
+      "receipt": "K230_Official_Gray_Map_And_1100_Frame_Data_R1.SHA256.json"
+    },
+    {
+      "archive": "K230_Official_Gray_Map_AI2D_Sensor_Smoke_R1.zip",
+      "status": "ALL_MEMBERS_VERIFIED",
+      "members": 208,
+      "sha256": "2490de6d51bebf3ab359681df74fddecb3852f7830b3ce2ae94ec8ab744a4015",
+      "bytes": 20834547,
+      "role": "640×360源渲染100帧与AI2D像素证据",
+      "receipt": "K230_Official_Gray_Map_AI2D_Sensor_Smoke_R1.SHA256.json"
+    },
+    {
+      "archive": "K230_Official_Gray_Map_AI2D_Pilot_A08_Data.zip",
+      "status": "ALL_MEMBERS_VERIFIED",
+      "members": 2008,
+      "sha256": "e81f521659a658f0559fd6c737ac9181f9dadfbf3803907f8dc5215df98b933a",
+      "bytes": 17890563,
+      "role": "部署等效输入的1000帧Pilot与语义掩码",
+      "receipt": "K230_Official_Gray_Map_AI2D_Pilot_A08_Data.SHA256.json"
+    },
+    {
+      "archive": "K230_Official_Gray_Map_Pilot_A06_Models.zip",
+      "status": "ALL_MEMBERS_VERIFIED",
+      "members": 40,
+      "sha256": "544699078b05d5264abc8ab0ffb1c8519e7cdc9fb50da07458a94739963fdb87",
+      "bytes": 73961219,
+      "role": "当前实验A/TCN4基准及同轮五路线模型",
+      "receipt": "K230_Official_Gray_Map_Pilot_A06_Models.SHA256.json"
+    },
+    {
+      "archive": "K230_Official_Gray_Map_Pilot_A07_Models.zip",
+      "status": "ALL_MEMBERS_VERIFIED",
+      "members": 40,
+      "sha256": "2a04796217efb2073fbfb3d8fcc1acc4ad1f91a91266b0dfcafea7a38edf7688",
+      "bytes": 73964928,
+      "role": "RGB投影微调五路线模型及A/TCN4编译",
+      "receipt": "K230_Official_Gray_Map_Pilot_A07_Models.SHA256.json"
+    },
+    {
+      "archive": "K230_Official_Gray_Map_Pilot_A08_Models.zip",
+      "status": "ALL_MEMBERS_VERIFIED",
+      "members": 32,
+      "sha256": "8ae867de0bf057d861a225c50e0f0b2efa429db4d6530122fb95ac9f5ef64648",
+      "bytes": 55094688,
+      "role": "最新部署像素对齐的五组权重、ONNX与训练记录",
+      "receipt": "K230_Official_Gray_Map_Pilot_A08_Models.SHA256.json"
+    },
+    {
+      "archive": "K230_Official_Gray_Map_GRU_Fixed_Window_KModels_R1.zip",
+      "status": "ALL_MEMBERS_VERIFIED",
+      "members": 11,
+      "sha256": "ea51a05d7954a75eb2fd6fa0f634c5f4629100325d7798837475fa558ff04172",
+      "bytes": 12678622,
+      "role": "a07 GRU4/8等价展开ONNX与KModel",
+      "receipt": "K230_Official_Gray_Map_GRU_Fixed_Window_KModels_R1.SHA256.json"
+    },
+    {
+      "archive": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip",
+      "status": "ALL_MEMBERS_VERIFIED",
+      "members": 19,
+      "sha256": "b7dd989d7f1d23b74a95cbdd7528e8e47fc8e403256ed1363d66f5c4713de48b",
+      "bytes": 3409938,
+      "role": "a06 A/TCN4独立板端测试入口与配置",
+      "receipt": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.SHA256.json"
+    }
+  ]
+}
