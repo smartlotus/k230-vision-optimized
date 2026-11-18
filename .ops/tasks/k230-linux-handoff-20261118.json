@@ -17,10 +17,10 @@
   ],
   "branch": "ops/k230-linux-20261118",
   "state": "ready",
-  "claimed": true,
+  "claimed": false,
   "agent": "coordinator",
   "session": "k230-linux-handoff-20261118-a",
-  "revision": 4,
+  "revision": 5,
   "handoff": ".ops/handoffs/k230-linux-handoff-20261118/20261118T075111-0849ab79.json",
-  "updated_at": "2026-11-18T07:51:23+00:00"
+  "updated_at": "2026-11-18T07:52:05+00:00"
 }
