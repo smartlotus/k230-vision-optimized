@@ -1,0 +1,136 @@
+{
+  "units": "m",
+  "field": {
+    "width": 2.4,
+    "height": 2.4,
+    "origin": "center",
+    "bounds": [
+      -1.2,
+      1.2,
+      -1.2,
+      1.2
+    ]
+  },
+  "road": {
+    "shape": "union_of_centered_cross_rectangles",
+    "arm_width": 0.4,
+    "color_name": "gray",
+    "status": "official_text"
+  },
+  "yellow_zones": {
+    "size": [
+      0.45,
+      0.45
+    ],
+    "centers": [
+      [
+        -0.425,
+        0.425
+      ],
+      [
+        0.425,
+        0.425
+      ],
+      [
+        -0.425,
+        -0.425
+      ],
+      [
+        0.425,
+        -0.425
+      ]
+    ],
+    "status": "dimensions_official_positions_inferred_from_figure_symmetry"
+  },
+  "blue_start_zones": {
+    "size": [
+      0.3,
+      0.3
+    ],
+    "centers": [
+      [
+        1.05,
+        1.05
+      ],
+      [
+        1.05,
+        -1.05
+      ]
+    ],
+    "status": "dimensions_official_positions_inferred_from_figure"
+  },
+  "light_background": {
+    "status": "official_text",
+    "color_rgb_approx": [
+      0.9,
+      0.9,
+      0.88
+    ]
+  },
+  "temporary_storage_zone": {
+    "size": [
+      0.15,
+      0.58
+    ],
+    "center": [
+      -1.125,
+      0.0
+    ],
+    "status": "dimensions_official_position_inferred_from_figure"
+  },
+  "rough_processing_zone": {
+    "size": [
+      0.58,
+      0.15
+    ],
+    "center": [
+      0.0,
+      -1.125
+    ],
+    "status": "dimensions_official_position_inferred_from_figure"
+  },
+  "raw_material_turntable": {
+    "top_diameter": 0.3,
+    "height_range": [
+      0.08,
+      0.1
+    ],
+    "center": [
+      0,
+      1.27
+    ],
+    "status": "dimensions_official_center_inferred_from_75_to_85_mm_overlap_in_figure_1",
+    "items": 3,
+    "angular_spacing_deg": 120,
+    "rotation_period_s": [
+      6,
+      10
+    ]
+  },
+  "obstacles": {
+    "shape": "cylinder",
+    "diameter": 0.05,
+    "height": 0.1,
+    "count": "random_unspecified_by_rule",
+    "placement": "random"
+  },
+  "qr_board": {
+    "paper_size_landscape": [
+      0.297,
+      0.21
+    ],
+    "qr_size_including_border": 0.08,
+    "orientation": "vertical",
+    "placement": "random_within_official_range_not numerically specified",
+    "illustrative_center_xy": [
+      1.2,
+      0.0
+    ]
+  },
+  "robot_camera": {
+    "height_m": 0.4,
+    "orientation": "vertical_down",
+    "status": "user_estimate",
+    "sensor": "OV2735 USB"
+  }
+}

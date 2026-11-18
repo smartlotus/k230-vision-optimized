@@ -1,0 +1,128 @@
+{
+  "checkpoint_sha256": "8c951c45ed32cb65b5e099a91bc1877fc8f314241d4b75eb14bbc4f94298bb6d",
+  "onnx_sha256": "7e6b6d6b0d58b985d34c178299f256ae57fce958b50f07c6e69ee9872665cbb5",
+  "dataset_manifest_sha256": "6b0ae049692a18d2378d7db34e7a1e6793cf7b436913f6a060c3611e38e62543",
+  "selected_epoch": 67,
+  "lineage": {
+    "run_id": "k230-roadnet-refine99-v1-20261116",
+    "architecture": "roadnet_full_resolution_detail_v1",
+    "parameters": 30654,
+    "source_sha256": {
+      "reference/refine_model.py": "751c649a6cb943b0aa89eea497cb96641f7c5f8386450b03ae6eb190818658d5",
+      "reference/train_refine.py": "7b7432bf6770edf2c74cf5886fb18e518c171efe09d6cafcce77ce9acb619ad2",
+      "roadnet.py": "7c30936484cb203f28bcc4ca59158aeb35ea7925d471a11084169ab90e582946",
+      "train.py": "61dc612a019e294531639966ec55b00c0c4bafd9683c1763bef43812fee03a53",
+      "qa.py": "80df79858de329edde8a3d0706f83cbe265b45158405a76bf33ffb8c48d8fc8f",
+      "sim.py": "92c434fede994a68bb14e3969f62723a15b36d2aecf4f8495d6720a2272d0348"
+    },
+    "initial_checkpoint_sha256": "1c3c1fa2422ca450bd20061ea1237485173025ce13118eb4f112aed7d4a612de",
+    "manifest_sha256": "6b0ae049692a18d2378d7db34e7a1e6793cf7b436913f6a060c3611e38e62543",
+    "counts": {
+      "train": 5792,
+      "val": 724,
+      "test": 724
+    },
+    "seed": 20261116,
+    "batch": 32,
+    "epochs_max": 240,
+    "minimum_epochs": 100,
+    "patience": 50,
+    "learning_rate": 0.0006,
+    "anneal_epochs": 120,
+    "loss": "class_weighted_CE + 0.5_Dice + 0.75_boundary_CE_3px",
+    "wall_budget_seconds": 9000,
+    "augmentation": "paired_flip_mild_gain_noise_blur",
+    "train_class_pixels": [
+      140255973,
+      48223386,
+      116416089,
+      6417566,
+      1201206,
+      665180,
+      4738067
+    ],
+    "torch_version": "2.11.0+cu130",
+    "device": "cuda",
+    "gpu": "Tesla T4",
+    "selection": "validation_miou - 0.5 * validation_false_drivable_rate",
+    "training_precision": "cuda_autocast_fp16_with_fp32_losses",
+    "target": {
+      "miou": 0.99,
+      "scope": "new synthetic test scenes; native board pending"
+    }
+  },
+  "architecture_parameters": 30654,
+  "input_rgb_uint8_nchw": [
+    1,
+    3,
+    192,
+    320
+  ],
+  "host_float_normalization": "RGB / 255",
+  "padding_top_bottom": 6,
+  "content_height": 180,
+  "output_logits": [
+    1,
+    7,
+    192,
+    320
+  ],
+  "onnx_opset": 12,
+  "paired_train_inputs": [
+    {
+      "id": "full-30004-00",
+      "max_abs": 6.771087646484375e-05,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "full-30101-00",
+      "max_abs": 6.866455078125e-05,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "full-30202-00",
+      "max_abs": 7.62939453125e-05,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "full-30303-00",
+      "max_abs": 0.000171661376953125,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "full-30400-00",
+      "max_abs": 6.4849853515625e-05,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "full-30501-00",
+      "max_abs": 4.00543212890625e-05,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "full-30606-00",
+      "max_abs": 9.059906005859375e-05,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "full-30707-00",
+      "max_abs": 8.20159912109375e-05,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "full-30800-00",
+      "max_abs": 8.7738037109375e-05,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "full-30901-00",
+      "max_abs": 5.53131103515625e-05,
+      "argmax_agreement": 1.0
+    }
+  ],
+  "onnx_versions": {
+    "onnx": "1.17.0",
+    "onnxruntime": "1.24.4"
+  },
+  "scope": "ONNX numeric compatibility on train samples"
+}

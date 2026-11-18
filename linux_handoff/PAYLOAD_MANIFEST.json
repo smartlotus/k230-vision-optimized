@@ -1,0 +1,1797 @@
+{
+  "schema": 1,
+  "source_commits": {
+    "topface": "b38864cf0fc11638a1943da17c98dfa878e0128e",
+    "roadnet": "1594435613d0b159cee9482055d077d192a28fb7",
+    "cameraxy": "038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86",
+    "temporal-filter": "cc4034460827c24c200db0843478b75a281f34cd",
+    "temporal-neural": "b6209958afd9e3c282d6f4d7b29c485ed5b99381",
+    "competition": "6328e58b674c409ea8eece15b9292730fb6542a6"
+  },
+  "models": [
+    {
+      "id": "topface-formal-a01",
+      "file": "models/topface/topface.kmodel",
+      "sha256": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88",
+      "bytes": 1611824,
+      "canmv_baseline": "CANMV_NATIVE_SHORT_AND_FIXED_INPUT_PARITY",
+      "linux_status": "NOT_RUN"
+    },
+    {
+      "id": "roadnet-frozen-r3",
+      "file": "models/roadnet/roadnet.kmodel",
+      "sha256": "cba11c87ce36305ffac6dee18b65b4f1e5b47070e00a2f9e706d0aee72a4980e",
+      "bytes": 137208,
+      "canmv_baseline": "CANMV_NATIVE_SHORT_AND_FIXED_INPUT_PARITY",
+      "linux_status": "NOT_RUN"
+    },
+    {
+      "id": "cameraxy-v2-learned-map",
+      "file": "models/cameraxy-v2/engineering.kmodel",
+      "sha256": "ae6f472c020f22026c4e6779c5899a38296401465731a258be557061d391a40b",
+      "bytes": 2133296,
+      "canmv_baseline": "CANMV_NATIVE_360_FRAMES_ENGINEERING_ONLY",
+      "linux_status": "NOT_RUN"
+    },
+    {
+      "id": "temporal-filter-cnn1",
+      "file": "models/temporal-filter/cnn1/camera_xy.kmodel",
+      "sha256": "ac86c72a648df1c9f484c920180b0bcb9ae877f26d20c2cea364969d0d921fbc",
+      "bytes": 2646600,
+      "canmv_baseline": "CANMV_NATIVE_10_AND_60_FRAMES_FILTER",
+      "linux_status": "NOT_RUN"
+    },
+    {
+      "id": "temporal-filter-tcn4",
+      "file": "models/temporal-filter/tcn4/camera_xy.kmodel",
+      "sha256": "3c9de65fe5c7d74300075600dab53c7364307e68f1ff1924e15a7dc1219b5cf2",
+      "bytes": 2722784,
+      "canmv_baseline": "COMPILED_SIMULATOR_REFERENCE",
+      "linux_status": "NOT_RUN"
+    },
+    {
+      "id": "temporal-neural-tcn8-a03",
+      "file": "models/temporal-neural/tcn8-a03/camera_xy.kmodel",
+      "sha256": "3a887066753a549cf06b2ca304abe6530d1d67e6aab50a5dec5b6408799de9ca",
+      "bytes": 539120,
+      "canmv_baseline": "OFFLINE_SIMULATOR_ONLY",
+      "linux_status": "NOT_RUN"
+    },
+    {
+      "id": "temporal-neural-tcn16-a05",
+      "file": "models/temporal-neural/tcn16-a05/camera_xy.kmodel",
+      "sha256": "256a11647e7599761172af0452f17b37ad6f0a894a9e4f10d670a1c8b80f7d01",
+      "bytes": 625528,
+      "canmv_baseline": "OFFLINE_SIMULATOR_ONLY",
+      "linux_status": "NOT_RUN"
+    },
+    {
+      "id": "temporal-neural-gru4-unrolled",
+      "file": "models/temporal-neural/gru4-unrolled/camera_xy.kmodel",
+      "sha256": "f2e564dea46e2e5d5fc9f7947e1c8721737930f42535c01b6b145ddf6485b1fb",
+      "bytes": 2763056,
+      "canmv_baseline": "OFFLINE_SIMULATOR_ONLY",
+      "linux_status": "NOT_RUN"
+    },
+    {
+      "id": "temporal-neural-gru8-unrolled",
+      "file": "models/temporal-neural/gru8-unrolled/camera_xy.kmodel",
+      "sha256": "03f167adc984a75fc2746dd4ea81615e782e3a9434f5226d2c95fea913b301e2",
+      "bytes": 2860632,
+      "canmv_baseline": "OFFLINE_SIMULATOR_ONLY",
+      "linux_status": "NOT_RUN"
+    },
+    {
+      "id": "temporal-neural-mixture-a06",
+      "file": "models/temporal-neural/mixture-a06/camera_xy.kmodel",
+      "bytes": 280240,
+      "sha256": "bbad9c5fbc882d9dc2530fc59df15382b24243c28aa716572854d7c2ceb93412",
+      "canmv_baseline": "OFFLINE_SIMULATOR_ONLY_LOW_ARGMAX_AGREEMENT",
+      "linux_status": "NOT_RUN"
+    }
+  ],
+  "files": [
+    {
+      "path": "evidence/canmv/constant-parity-01/COMPARISON.json",
+      "bytes": 5474,
+      "sha256": "a95a5d55e89786c1c93866e68412c227aba1b80563a42638b1763bb70a8c669e",
+      "source": "CanMV board archive constant-parity-01/COMPARISON.json"
+    },
+    {
+      "path": "evidence/canmv/constant-parity-01/prepared.rgb888p",
+      "bytes": 184320,
+      "sha256": "21c6942c0b30fc322e26c91d1c64be3888de84254daabc696185b2ce4e20a5da",
+      "source": "CanMV board archive constant-parity-01/prepared.rgb888p"
+    },
+    {
+      "path": "evidence/canmv/constant-parity-01/simulator-decoded.json",
+      "bytes": 253,
+      "sha256": "3790d1a7a50966c607fe20d9150d2a42cd18af1747c16373bdc4c28b3b93d5c6",
+      "source": "CanMV board archive constant-parity-01/simulator-decoded.json"
+    },
+    {
+      "path": "evidence/canmv/constant-parity-01/simulator-raw.f32le",
+      "bytes": 255000,
+      "sha256": "54a9863c34d208c8ce328087fb05dfee45c29d40c7b982a76b62d73700549b60",
+      "source": "CanMV board archive constant-parity-01/simulator-raw.f32le"
+    },
+    {
+      "path": "evidence/canmv/historical-replay-01/COMPARISON.json",
+      "bytes": 6904,
+      "sha256": "6af74a98f72fdfaba71307f5fb283ab2ff05bf408851497d4b280a4875cfcb83",
+      "source": "CanMV board archive historical-replay-01/COMPARISON.json"
+    },
+    {
+      "path": "evidence/canmv/historical-replay-01/INPUT_CONTRACT.json",
+      "bytes": 1794,
+      "sha256": "0cf12742be965fdf904e0a56bd0d78b35189ca63c9c34a002206f3deac0f4df8",
+      "source": "CanMV board archive historical-replay-01/INPUT_CONTRACT.json"
+    },
+    {
+      "path": "evidence/canmv/historical-replay-01/host-prepared.rgb888p",
+      "bytes": 184320,
+      "sha256": "fef67d28dd3bb93d2f967ff28d2e8c8737862e064058885f7a0b987c1d98774d",
+      "source": "CanMV board archive historical-replay-01/host-prepared.rgb888p"
+    },
+    {
+      "path": "evidence/canmv/historical-replay-01/native-result.json",
+      "bytes": 1800,
+      "sha256": "bcb244e8075976ba557a41bcfbf4117d37abe6046ff9aa7f03fa55d107a629f2",
+      "source": "CanMV board archive historical-replay-01/native-result.json"
+    },
+    {
+      "path": "evidence/canmv/historical-replay-01/simulator-raw.f32le",
+      "bytes": 255000,
+      "sha256": "9166b0c1d43eb2d6c918b1804f5586ff26fe56ad5c9d408ea2055f842ad53431",
+      "source": "CanMV board archive historical-replay-01/simulator-raw.f32le"
+    },
+    {
+      "path": "evidence/canmv/historical-replay-01/source.rgb888p",
+      "bytes": 691200,
+      "sha256": "b8e8eb3be2f509983da0e03eb7c834cfddaa9a4d7521bacf01d79ca9f3483cf3",
+      "source": "CanMV board archive historical-replay-01/source.rgb888p"
+    },
+    {
+      "path": "evidence/canmv/new-sdcard-20261118/README.md",
+      "bytes": 1609,
+      "sha256": "0a9e55dafa28f97e45da31d90939069cb358d843166a92d21c47eafe83e1d953",
+      "source": "CanMV board archive new-sdcard-20261118/README.md"
+    },
+    {
+      "path": "evidence/canmv/new-sdcard-20261118/new-sd-final.json",
+      "bytes": 2127,
+      "sha256": "dc91938252dd93c8ee37adb4ba4713821acc76368a8ded1b007e6f4ad8438927",
+      "source": "CanMV board archive new-sdcard-20261118/new-sd-final.json"
+    },
+    {
+      "path": "evidence/canmv/new-sdcard-20261118/usb-result.json",
+      "bytes": 5200,
+      "sha256": "f7b26891699b7d03b9ea7c89e81af7bd183c379d866831df215eea56a27cece9",
+      "source": "CanMV board archive new-sdcard-20261118/usb-result.json"
+    },
+    {
+      "path": "evidence/canmv/new-sdcard-20261118/usb120-executed.py",
+      "bytes": 10918,
+      "sha256": "78d8eca080db22238e45fcc9496b289b094599f6db77ff3022192cc5041354e7",
+      "source": "CanMV board archive new-sdcard-20261118/usb120-executed.py"
+    },
+    {
+      "path": "evidence/canmv/new-sdcard-20261118/usb120-result.json",
+      "bytes": 5207,
+      "sha256": "930c951d7632f8c29ffec6c08cf1a3f04aeebc5178d271f02db92f979dae3607",
+      "source": "CanMV board archive new-sdcard-20261118/usb120-result.json"
+    },
+    {
+      "path": "evidence/canmv/roadnet-prior-shared-a.json",
+      "bytes": 2713,
+      "sha256": "f74ebc8c641808fc5d6a0bc3d80e6b050802d4c278d975c7a8ebbce7e147bacd",
+      "source": "CanMV board archive roadnet-prior-shared-a.json"
+    },
+    {
+      "path": "evidence/canmv/roadnet-prior-tensor-a.json",
+      "bytes": 1910,
+      "sha256": "36cd8d992ca90087329426956faf29b7830b7106ec985192f4dd6c97dafbdcef",
+      "source": "CanMV board archive roadnet-prior-tensor-a.json"
+    },
+    {
+      "path": "evidence/canmv/static-kpu-result.json",
+      "bytes": 4796,
+      "sha256": "3ff3225b127104198be964629259e694c70597a0bf6e5faab783ce2368640d6d",
+      "source": "CanMV board archive static-kpu-result.json"
+    },
+    {
+      "path": "evidence/roadnet-fixed/tensor-a.f32",
+      "bytes": 1720320,
+      "sha256": "2eeed233df45289e665a1d53b791c5a69090f696966f2bc326e1d2ccd139bbd0",
+      "source": "RoadNet native fixed paired fixture"
+    },
+    {
+      "path": "evidence/roadnet-fixed/tensor-a.rgb",
+      "bytes": 184320,
+      "sha256": "41bf33f9287344608c5383021e6f33e7edfe573dd7c6d4d1bf19ade7caac16c9",
+      "source": "RoadNet native fixed paired fixture"
+    },
+    {
+      "path": "models/cameraxy-v2/camera_xy.onnx",
+      "bytes": 6029456,
+      "sha256": "ab015f1324afd89ce2283d938d91d70c5d351eb9fc88832def78388079b8d272",
+      "source": "CameraXY USB engineering d01 export"
+    },
+    {
+      "path": "models/cameraxy-v2/engineering.json",
+      "bytes": 52052,
+      "sha256": "3d923840a98907c3569678b7354fd102a166162bf4a0f94e36fb3047de359792",
+      "source": "CameraXY USB engineering delivery/engineering.json"
+    },
+    {
+      "path": "models/cameraxy-v2/engineering.kmodel",
+      "bytes": 2133296,
+      "sha256": "ae6f472c020f22026c4e6779c5899a38296401465731a258be557061d391a40b",
+      "source": "CameraXY USB engineering delivery/engineering.kmodel"
+    },
+    {
+      "path": "models/roadnet/KMODEL_REPORT.json",
+      "bytes": 7172,
+      "sha256": "462694f63e1098087b33630d0dc57e23ab290a1b17e45e67f682be1ecf8ba4ed",
+      "source": "RoadNet delivery model/KMODEL_REPORT.json"
+    },
+    {
+      "path": "models/roadnet/ONNX_REPORT.json",
+      "bytes": 3763,
+      "sha256": "648285daf4022d161b36fd3c80f384462153f002c29a486c652c912fb27e97fd",
+      "source": "RoadNet delivery model/ONNX_REPORT.json"
+    },
+    {
+      "path": "models/roadnet/identity.json",
+      "bytes": 752,
+      "sha256": "8109a700cac1673628235050f513e5106f35a870fff84ed4eff0170140bee0ce",
+      "source": "RoadNet delivery model/identity.json"
+    },
+    {
+      "path": "models/roadnet/roadnet.kmodel",
+      "bytes": 137208,
+      "sha256": "cba11c87ce36305ffac6dee18b65b4f1e5b47070e00a2f9e706d0aee72a4980e",
+      "source": "RoadNet delivery model/roadnet.kmodel"
+    },
+    {
+      "path": "models/roadnet/roadnet.onnx",
+      "bytes": 134536,
+      "sha256": "7e6b6d6b0d58b985d34c178299f256ae57fce958b50f07c6e69ee9872665cbb5",
+      "source": "RoadNet delivery model/roadnet.onnx"
+    },
+    {
+      "path": "models/temporal-filter/cnn1/KMODEL_REPORT.json",
+      "bytes": 12269,
+      "sha256": "faa72c66564181372e245dd6e4d051ebad80f1637457aae3e98b6997b28561a9",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_cnn1/KMODEL_REPORT.json"
+    },
+    {
+      "path": "models/temporal-filter/cnn1/board_helpers.py",
+      "bytes": 2556,
+      "sha256": "0fdb8b81c7a988bd8d39bc1f5fbbfb8aa7699905f6c85fe5a1aaeaf0fe01fd9f",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_cnn1/board_helpers.py"
+    },
+    {
+      "path": "models/temporal-filter/cnn1/board_multiroute.py",
+      "bytes": 10106,
+      "sha256": "d19ab13d2928336c64833afc754aa9979e1209f1d13e0814ac47057b59a77c19",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_cnn1/board_multiroute.py"
+    },
+    {
+      "path": "models/temporal-filter/cnn1/board_temporal.py",
+      "bytes": 4187,
+      "sha256": "7b2245f4712fd13a3f8ea39861a2d896e87e8ead1da704da1f4434046dad7cd9",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_cnn1/board_temporal.py"
+    },
+    {
+      "path": "models/temporal-filter/cnn1/camera_xy.kmodel",
+      "bytes": 2646600,
+      "sha256": "ac86c72a648df1c9f484c920180b0bcb9ae877f26d20c2cea364969d0d921fbc",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_cnn1/camera_xy.kmodel"
+    },
+    {
+      "path": "models/temporal-filter/cnn1/camera_xy_uint8.onnx",
+      "bytes": 7400239,
+      "sha256": "ab6edcc71718c81a0d3ce4c98d78d20bd66cd6314ba625f9bc4eda1a666be454",
+      "source": "Temporal A06 board bench compiled input ONNX"
+    },
+    {
+      "path": "models/temporal-filter/cnn1/competition_paths.py",
+      "bytes": 4575,
+      "sha256": "cb42cd555d452c6781caa43d5ae9084c0dadbe14d6741aa985edca42c8eb5a06",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_cnn1/competition_paths.py"
+    },
+    {
+      "path": "models/temporal-filter/cnn1/deployment.json",
+      "bytes": 100016,
+      "sha256": "641eab171629e6b44f43f6222409ca093801132af692a436810d16258fd26326",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_cnn1/deployment.json"
+    },
+    {
+      "path": "models/temporal-filter/cnn1/embedded_filter.py",
+      "bytes": 7656,
+      "sha256": "856676f28fc032e52bf4916850b2c3819f05bbe74ea1be59d2844f3b16b77402",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_cnn1/embedded_filter.py"
+    },
+    {
+      "path": "models/temporal-filter/cnn1/localization_runtime.py",
+      "bytes": 3420,
+      "sha256": "196c2e2c7518f986ca779ade2a9e9be42d6130a801705875c6b47cdbecd96bbe",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_cnn1/localization_runtime.py"
+    },
+    {
+      "path": "models/temporal-filter/tcn4/KMODEL_REPORT.json",
+      "bytes": 12264,
+      "sha256": "a590a6e9ca7082d9ef530a3f77418afd88fbaac3394c52bef1643a51b071db82",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_tcn4/KMODEL_REPORT.json"
+    },
+    {
+      "path": "models/temporal-filter/tcn4/board_helpers.py",
+      "bytes": 2556,
+      "sha256": "0fdb8b81c7a988bd8d39bc1f5fbbfb8aa7699905f6c85fe5a1aaeaf0fe01fd9f",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_tcn4/board_helpers.py"
+    },
+    {
+      "path": "models/temporal-filter/tcn4/board_multiroute.py",
+      "bytes": 10106,
+      "sha256": "d19ab13d2928336c64833afc754aa9979e1209f1d13e0814ac47057b59a77c19",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_tcn4/board_multiroute.py"
+    },
+    {
+      "path": "models/temporal-filter/tcn4/board_temporal.py",
+      "bytes": 4187,
+      "sha256": "7b2245f4712fd13a3f8ea39861a2d896e87e8ead1da704da1f4434046dad7cd9",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_tcn4/board_temporal.py"
+    },
+    {
+      "path": "models/temporal-filter/tcn4/camera_xy.kmodel",
+      "bytes": 2722784,
+      "sha256": "3c9de65fe5c7d74300075600dab53c7364307e68f1ff1924e15a7dc1219b5cf2",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_tcn4/camera_xy.kmodel"
+    },
+    {
+      "path": "models/temporal-filter/tcn4/camera_xy_uint8.onnx",
+      "bytes": 7555757,
+      "sha256": "e7ba3ae690089706ee67003ec26b2b197aa9b8f54e10e626ce6d838bef475cda",
+      "source": "Temporal A06 board bench compiled input ONNX"
+    },
+    {
+      "path": "models/temporal-filter/tcn4/competition_paths.py",
+      "bytes": 4575,
+      "sha256": "cb42cd555d452c6781caa43d5ae9084c0dadbe14d6741aa985edca42c8eb5a06",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_tcn4/competition_paths.py"
+    },
+    {
+      "path": "models/temporal-filter/tcn4/deployment.json",
+      "bytes": 100017,
+      "sha256": "7805ee4c3f121a7182b5f76c915851d7449efac1aa26150c83270cbcebc1c65c",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_tcn4/deployment.json"
+    },
+    {
+      "path": "models/temporal-filter/tcn4/embedded_filter.py",
+      "bytes": 7656,
+      "sha256": "856676f28fc032e52bf4916850b2c3819f05bbe74ea1be59d2844f3b16b77402",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_tcn4/embedded_filter.py"
+    },
+    {
+      "path": "models/temporal-filter/tcn4/localization_runtime.py",
+      "bytes": 3420,
+      "sha256": "196c2e2c7518f986ca779ade2a9e9be42d6130a801705875c6b47cdbecd96bbe",
+      "source": "K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip:k230_temporal_v1_gray_tcn4/localization_runtime.py"
+    },
+    {
+      "path": "models/temporal-neural/gru4-unrolled/KMODEL_REPORT.json",
+      "bytes": 62580,
+      "sha256": "2ea3deda8672900c8176106465a0030ba149866e931fa83a4c3e1fbe16da0c7c",
+      "source": "K230_Neural_GRU4_Unrolled_Trial.zip:KMODEL_REPORT.json"
+    },
+    {
+      "path": "models/temporal-neural/gru4-unrolled/PAIRED_TEST.json",
+      "bytes": 2062,
+      "sha256": "9862b477d653ce1efb5003e756fa4d7f502c75f3f53d6c54008b72a927d916af",
+      "source": "K230_Neural_GRU4_Unrolled_Trial.zip:PAIRED_TEST.json"
+    },
+    {
+      "path": "models/temporal-neural/gru4-unrolled/RUN.md",
+      "bytes": 877,
+      "sha256": "d7dd1576ca76af63f201359ebd372cc51cef28e51d86654ac914c9ec6ddb73b4",
+      "source": "K230_Neural_GRU4_Unrolled_Trial.zip:RUN.md"
+    },
+    {
+      "path": "models/temporal-neural/gru4-unrolled/RUNTIME_PROFILE.json",
+      "bytes": 820,
+      "sha256": "513d098c465c2838add2a3d6f30ffc01f08d3e058a2793e96c876e22d16feb65",
+      "source": "K230_Neural_GRU4_Unrolled_Trial.zip:RUNTIME_PROFILE.json"
+    },
+    {
+      "path": "models/temporal-neural/gru4-unrolled/board_support.py",
+      "bytes": 2556,
+      "sha256": "0fdb8b81c7a988bd8d39bc1f5fbbfb8aa7699905f6c85fe5a1aaeaf0fe01fd9f",
+      "source": "K230_Neural_GRU4_Unrolled_Trial.zip:board_support.py"
+    },
+    {
+      "path": "models/temporal-neural/gru4-unrolled/camera_xy.kmodel",
+      "bytes": 2763056,
+      "sha256": "f2e564dea46e2e5d5fc9f7947e1c8721737930f42535c01b6b145ddf6485b1fb",
+      "source": "K230_Neural_GRU4_Unrolled_Trial.zip:camera_xy.kmodel"
+    },
+    {
+      "path": "models/temporal-neural/gru4-unrolled/camera_xy.onnx",
+      "bytes": 7501152,
+      "sha256": "b309a696ad7b33898f41deb8dec613d9e816431867ef1d92f382250d44e50ec6",
+      "source": "K230_Neural_GRU4_Unrolled_Trial.zip:camera_xy.onnx"
+    },
+    {
+      "path": "models/temporal-neural/gru4-unrolled/camera_xy_uint8.onnx",
+      "bytes": 7515078,
+      "sha256": "aaa3fac9a3564ef30dceb64a98a4ff7797c2863fccd6b005aa27739e326e7327",
+      "source": "K230_Neural_GRU4_Unrolled_Trial.zip:camera_xy_uint8.onnx"
+    },
+    {
+      "path": "models/temporal-neural/gru4-unrolled/deployment.json",
+      "bytes": 109629,
+      "sha256": "8c3f2f6d7fb17d1112221e903de17659e4edb5315ef799a8d99202d0cf1f24bf",
+      "source": "K230_Neural_GRU4_Unrolled_Trial.zip:deployment.json"
+    },
+    {
+      "path": "models/temporal-neural/gru4-unrolled/neural_board_probe.py",
+      "bytes": 11565,
+      "sha256": "d1adae3fa1d1f73245640ece9c1358c15598824a6a25dd81406021290fabef3f",
+      "source": "K230_Neural_GRU4_Unrolled_Trial.zip:neural_board_probe.py"
+    },
+    {
+      "path": "models/temporal-neural/gru4-unrolled/neural_decode.py",
+      "bytes": 1430,
+      "sha256": "4275ef1a9845ee0ba5c0dbf042ab7444c4ae5c9a3b9966055584274326f5e280",
+      "source": "K230_Neural_GRU4_Unrolled_Trial.zip:neural_decode.py"
+    },
+    {
+      "path": "models/temporal-neural/gru4-unrolled/neural_window.py",
+      "bytes": 1994,
+      "sha256": "541dc40d7ddb1a16ce67914f2383a647e7aee3fe73f03b2fb84afa8fc64f743a",
+      "source": "K230_Neural_GRU4_Unrolled_Trial.zip:neural_window.py"
+    },
+    {
+      "path": "models/temporal-neural/gru8-unrolled/KMODEL_REPORT.json",
+      "bytes": 62480,
+      "sha256": "ce03ea4c8be12089540e9d56d87eca2b9722a4b0fe9bbcae7670f2202700baf9",
+      "source": "K230_Neural_GRU8_Unrolled_Trial.zip:KMODEL_REPORT.json"
+    },
+    {
+      "path": "models/temporal-neural/gru8-unrolled/PAIRED_TEST.json",
+      "bytes": 2063,
+      "sha256": "ba6de7635e210d4aeeff17fd19954262f1339d691b017aac7528c8b3e16d52c7",
+      "source": "K230_Neural_GRU8_Unrolled_Trial.zip:PAIRED_TEST.json"
+    },
+    {
+      "path": "models/temporal-neural/gru8-unrolled/RUN.md",
+      "bytes": 877,
+      "sha256": "ffddfdbcd46abaaad44d29990412e8fec55726249e1e2bbba6d4a4c9d3cb7de2",
+      "source": "K230_Neural_GRU8_Unrolled_Trial.zip:RUN.md"
+    },
+    {
+      "path": "models/temporal-neural/gru8-unrolled/RUNTIME_PROFILE.json",
+      "bytes": 820,
+      "sha256": "87c843cd82ea99b7ba023e11f75bdc7b0d39362b0117b3e23c05a0abd665829e",
+      "source": "K230_Neural_GRU8_Unrolled_Trial.zip:RUNTIME_PROFILE.json"
+    },
+    {
+      "path": "models/temporal-neural/gru8-unrolled/board_support.py",
+      "bytes": 2556,
+      "sha256": "0fdb8b81c7a988bd8d39bc1f5fbbfb8aa7699905f6c85fe5a1aaeaf0fe01fd9f",
+      "source": "K230_Neural_GRU8_Unrolled_Trial.zip:board_support.py"
+    },
+    {
+      "path": "models/temporal-neural/gru8-unrolled/camera_xy.kmodel",
+      "bytes": 2860632,
+      "sha256": "03f167adc984a75fc2746dd4ea81615e782e3a9434f5226d2c95fea913b301e2",
+      "source": "K230_Neural_GRU8_Unrolled_Trial.zip:camera_xy.kmodel"
+    },
+    {
+      "path": "models/temporal-neural/gru8-unrolled/camera_xy.onnx",
+      "bytes": 7501152,
+      "sha256": "5d063f025bda1951b0dfd60e473032383502cfa8d27fe1f75ece657105ed98d7",
+      "source": "K230_Neural_GRU8_Unrolled_Trial.zip:camera_xy.onnx"
+    },
+    {
+      "path": "models/temporal-neural/gru8-unrolled/camera_xy_uint8.onnx",
+      "bytes": 7528123,
+      "sha256": "2f2561b61ccc91fe24250da903eafc5f5016391d992588651cd23a92d0cf4746",
+      "source": "K230_Neural_GRU8_Unrolled_Trial.zip:camera_xy_uint8.onnx"
+    },
+    {
+      "path": "models/temporal-neural/gru8-unrolled/deployment.json",
+      "bytes": 109629,
+      "sha256": "14ce9af75e7d752337f280598b05b6bb36017f0d9e059c3eb691f6fa5eea9dd1",
+      "source": "K230_Neural_GRU8_Unrolled_Trial.zip:deployment.json"
+    },
+    {
+      "path": "models/temporal-neural/gru8-unrolled/neural_board_probe.py",
+      "bytes": 11565,
+      "sha256": "d1adae3fa1d1f73245640ece9c1358c15598824a6a25dd81406021290fabef3f",
+      "source": "K230_Neural_GRU8_Unrolled_Trial.zip:neural_board_probe.py"
+    },
+    {
+      "path": "models/temporal-neural/gru8-unrolled/neural_decode.py",
+      "bytes": 1430,
+      "sha256": "4275ef1a9845ee0ba5c0dbf042ab7444c4ae5c9a3b9966055584274326f5e280",
+      "source": "K230_Neural_GRU8_Unrolled_Trial.zip:neural_decode.py"
+    },
+    {
+      "path": "models/temporal-neural/gru8-unrolled/neural_window.py",
+      "bytes": 1994,
+      "sha256": "541dc40d7ddb1a16ce67914f2383a647e7aee3fe73f03b2fb84afa8fc64f743a",
+      "source": "K230_Neural_GRU8_Unrolled_Trial.zip:neural_window.py"
+    },
+    {
+      "path": "models/temporal-neural/mixture-a06/camera_xy.kmodel",
+      "bytes": 280240,
+      "sha256": "bbad9c5fbc882d9dc2530fc59df15382b24243c28aa716572854d7c2ceb93412",
+      "source": "Neural A06 stable compiled export"
+    },
+    {
+      "path": "models/temporal-neural/mixture-a06/camera_xy.onnx",
+      "bytes": 645120,
+      "sha256": "fa51c02a484ae034cd4c54ae7807d1c50ca918868f818595f3984c0821a9b65f",
+      "source": "Neural A06 original float export"
+    },
+    {
+      "path": "models/temporal-neural/mixture-a06/camera_xy_stable.onnx",
+      "bytes": 651422,
+      "sha256": "856ac42619f677cd810dcb31d73146839c8588ecf22abef83fa5f56c93496482",
+      "source": "Neural A06 stable compiler output"
+    },
+    {
+      "path": "models/temporal-neural/mixture-a06/camera_xy_uint8.onnx",
+      "bytes": 651558,
+      "sha256": "f021e55cac34377dcc30be957f26c3c435562027ab66a8e0951433ec11b3a1f7",
+      "source": "Neural A06 stable compiler output"
+    },
+    {
+      "path": "models/temporal-neural/tcn16-a05/KMODEL_REPORT.json",
+      "bytes": 64722,
+      "sha256": "ef4b75dcbad549f7fe46a03ce334fa105da8f0f60d754225d7f4dd1a540e04e4",
+      "source": "K230_Temporal_Neural_Long_A05_Trial.zip:KMODEL_REPORT.json"
+    },
+    {
+      "path": "models/temporal-neural/tcn16-a05/PAIRED_TEST.json",
+      "bytes": 2052,
+      "sha256": "a848f79121b395734ee0121a1f18eb4949163f32ad375350b996dc0805c5b3bf",
+      "source": "K230_Temporal_Neural_Long_A05_Trial.zip:PAIRED_TEST.json"
+    },
+    {
+      "path": "models/temporal-neural/tcn16-a05/RUN.md",
+      "bytes": 878,
+      "sha256": "a1897cd451cc053702d2eeb9c9451524adf4a154a562eb2f3534bf1020909cdb",
+      "source": "K230_Temporal_Neural_Long_A05_Trial.zip:RUN.md"
+    },
+    {
+      "path": "models/temporal-neural/tcn16-a05/RUNTIME_PROFILE.json",
+      "bytes": 821,
+      "sha256": "46c2aafccc4d3b968665c10ae7faea48a7eefa6b29f8766fc5de3aabec1a7131",
+      "source": "K230_Temporal_Neural_Long_A05_Trial.zip:RUNTIME_PROFILE.json"
+    },
+    {
+      "path": "models/temporal-neural/tcn16-a05/board_support.py",
+      "bytes": 2556,
+      "sha256": "0fdb8b81c7a988bd8d39bc1f5fbbfb8aa7699905f6c85fe5a1aaeaf0fe01fd9f",
+      "source": "K230_Temporal_Neural_Long_A05_Trial.zip:board_support.py"
+    },
+    {
+      "path": "models/temporal-neural/tcn16-a05/camera_xy.kmodel",
+      "bytes": 625528,
+      "sha256": "256a11647e7599761172af0452f17b37ad6f0a894a9e4f10d670a1c8b80f7d01",
+      "source": "K230_Temporal_Neural_Long_A05_Trial.zip:camera_xy.kmodel"
+    },
+    {
+      "path": "models/temporal-neural/tcn16-a05/camera_xy.onnx",
+      "bytes": 1576868,
+      "sha256": "f6cb909b0029d9b9ab63c12d66f8f6b859d9a54ebdc8d1c22fc233069635667e",
+      "source": "K230_Temporal_Neural_Long_A05_Trial.zip:camera_xy.onnx"
+    },
+    {
+      "path": "models/temporal-neural/tcn16-a05/camera_xy_uint8.onnx",
+      "bytes": 1577004,
+      "sha256": "9cb2144b7c149972da44e3e347e055415cb08ccb2d835131f33c768c5298d393",
+      "source": "K230_Temporal_Neural_Long_A05_Trial.zip:camera_xy_uint8.onnx"
+    },
+    {
+      "path": "models/temporal-neural/tcn16-a05/deployment.json",
+      "bytes": 109620,
+      "sha256": "c894df4c62a7115216624226356a721ec7236607b993d09730a81d1d266909a5",
+      "source": "K230_Temporal_Neural_Long_A05_Trial.zip:deployment.json"
+    },
+    {
+      "path": "models/temporal-neural/tcn16-a05/neural_board_probe.py",
+      "bytes": 11565,
+      "sha256": "d1adae3fa1d1f73245640ece9c1358c15598824a6a25dd81406021290fabef3f",
+      "source": "K230_Temporal_Neural_Long_A05_Trial.zip:neural_board_probe.py"
+    },
+    {
+      "path": "models/temporal-neural/tcn16-a05/neural_decode.py",
+      "bytes": 1430,
+      "sha256": "4275ef1a9845ee0ba5c0dbf042ab7444c4ae5c9a3b9966055584274326f5e280",
+      "source": "K230_Temporal_Neural_Long_A05_Trial.zip:neural_decode.py"
+    },
+    {
+      "path": "models/temporal-neural/tcn16-a05/neural_window.py",
+      "bytes": 1994,
+      "sha256": "541dc40d7ddb1a16ce67914f2383a647e7aee3fe73f03b2fb84afa8fc64f743a",
+      "source": "K230_Temporal_Neural_Long_A05_Trial.zip:neural_window.py"
+    },
+    {
+      "path": "models/temporal-neural/tcn8-a03/KMODEL_REPORT.json",
+      "bytes": 64703,
+      "sha256": "47e2dd05971c0c3a55b3f8f6ed6339061e7cce27b9cc169b7f97a50121743b2e",
+      "source": "K230_Temporal_Neural_Geometry_A03_Trial_R2.zip:KMODEL_REPORT.json"
+    },
+    {
+      "path": "models/temporal-neural/tcn8-a03/PAIRED_TEST.json",
+      "bytes": 2059,
+      "sha256": "b7e9cb951779fc7b512beb7eaa90f5b03a9843c5a821ded09d6d1e70aef58472",
+      "source": "K230_Temporal_Neural_Geometry_A03_Trial_R2.zip:PAIRED_TEST.json"
+    },
+    {
+      "path": "models/temporal-neural/tcn8-a03/RUN.md",
+      "bytes": 877,
+      "sha256": "ffddfdbcd46abaaad44d29990412e8fec55726249e1e2bbba6d4a4c9d3cb7de2",
+      "source": "K230_Temporal_Neural_Geometry_A03_Trial_R2.zip:RUN.md"
+    },
+    {
+      "path": "models/temporal-neural/tcn8-a03/RUNTIME_PROFILE.json",
+      "bytes": 820,
+      "sha256": "e009243e5f55bae61162de7b7e059238a45ecd55f3e344dfd8466c4ec6242e3d",
+      "source": "K230_Temporal_Neural_Geometry_A03_Trial_R2.zip:RUNTIME_PROFILE.json"
+    },
+    {
+      "path": "models/temporal-neural/tcn8-a03/board_support.py",
+      "bytes": 2556,
+      "sha256": "0fdb8b81c7a988bd8d39bc1f5fbbfb8aa7699905f6c85fe5a1aaeaf0fe01fd9f",
+      "source": "K230_Temporal_Neural_Geometry_A03_Trial_R2.zip:board_support.py"
+    },
+    {
+      "path": "models/temporal-neural/tcn8-a03/camera_xy.kmodel",
+      "bytes": 539120,
+      "sha256": "3a887066753a549cf06b2ca304abe6530d1d67e6aab50a5dec5b6408799de9ca",
+      "source": "K230_Temporal_Neural_Geometry_A03_Trial_R2.zip:camera_xy.kmodel"
+    },
+    {
+      "path": "models/temporal-neural/tcn8-a03/camera_xy.onnx",
+      "bytes": 1500919,
+      "sha256": "f03b11fc0381da12b8828d4c0c9a767681a8119b5f2a0310f2c8a816b7607068",
+      "source": "K230_Temporal_Neural_Geometry_A03_Trial_R2.zip:camera_xy.onnx"
+    },
+    {
+      "path": "models/temporal-neural/tcn8-a03/camera_xy_uint8.onnx",
+      "bytes": 1501055,
+      "sha256": "b741332ef8559732e5d865d927fb55fd46392b1cecad9a2919bc6a5180ad42bb",
+      "source": "K230_Temporal_Neural_Geometry_A03_Trial_R2.zip:camera_xy_uint8.onnx"
+    },
+    {
+      "path": "models/temporal-neural/tcn8-a03/deployment.json",
+      "bytes": 109627,
+      "sha256": "097c80e08a0009180ca222b0e4bc1eb2ac680ccf5d32cc73d4ddfe4201d5bc5f",
+      "source": "K230_Temporal_Neural_Geometry_A03_Trial_R2.zip:deployment.json"
+    },
+    {
+      "path": "models/temporal-neural/tcn8-a03/neural_board_probe.py",
+      "bytes": 11565,
+      "sha256": "d1adae3fa1d1f73245640ece9c1358c15598824a6a25dd81406021290fabef3f",
+      "source": "K230_Temporal_Neural_Geometry_A03_Trial_R2.zip:neural_board_probe.py"
+    },
+    {
+      "path": "models/temporal-neural/tcn8-a03/neural_decode.py",
+      "bytes": 1430,
+      "sha256": "4275ef1a9845ee0ba5c0dbf042ab7444c4ae5c9a3b9966055584274326f5e280",
+      "source": "K230_Temporal_Neural_Geometry_A03_Trial_R2.zip:neural_decode.py"
+    },
+    {
+      "path": "models/temporal-neural/tcn8-a03/neural_window.py",
+      "bytes": 1990,
+      "sha256": "b5ab2be539fb548d920f063c61bbcc313b045ebba597291301a5a04cb85240c8",
+      "source": "K230_Temporal_Neural_Geometry_A03_Trial_R2.zip:neural_window.py"
+    },
+    {
+      "path": "models/topface/identity.json",
+      "bytes": 528,
+      "sha256": "a62c9e5526217edbc8df8f83857eb9e065a9f3aae0e634b05f6e8e5d6cd68d47",
+      "source": "TopFaceNet-V1.1-Complete-a01/models/identity.json"
+    },
+    {
+      "path": "models/topface/output_contract.json",
+      "bytes": 3734,
+      "sha256": "c49c560cfce764bb0d84b5b992918644596e8c150f6793e78da138b9a6c1f94a",
+      "source": "TopFaceNet-V1.1-Complete-a01/models/output_contract.json"
+    },
+    {
+      "path": "models/topface/topface.kmodel",
+      "bytes": 1611824,
+      "sha256": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88",
+      "source": "TopFaceNet-V1.1-Complete-a01/models/topface.kmodel"
+    },
+    {
+      "path": "models/topface/topface.onnx",
+      "bytes": 4758815,
+      "sha256": "833e5786d3a0385b75ee38638993c56adbcce30165e5f67a02f26ebebd7b0ad4",
+      "source": "TopFaceNet-V1.1-Complete-a01/models/topface.onnx"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/AI2D_HOLDOUT.md",
+      "bytes": 2535,
+      "sha256": "148cf8dc06ebd13593b174264eb14b61e64091d4ae346507cb491b082c72136a",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/AI2D_HOLDOUT.md"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/NATIVE_PROGRESS_20261117.md",
+      "bytes": 7520,
+      "sha256": "4374331901b9d58e3cdd7a134180464f2c0074a79c556f8fd47bd5b31b5c60db",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/NATIVE_PROGRESS_20261117.md"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/README.md",
+      "bytes": 10770,
+      "sha256": "dc3094a2d7c4329817ca19c0b217a7e99d80df2e5a15f79753ba38f74c708192",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/README.md"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/REAL_CAPTURE.md",
+      "bytes": 4959,
+      "sha256": "5a89a9e9ef8df9741a762e13e29642f232255ef4c94ab2f4b117827bc2bdef2d",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/REAL_CAPTURE.md"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/USB_ENGINEERING_20261117.md",
+      "bytes": 4081,
+      "sha256": "1c774d01d237155f939f1f360d1d36e4062349d5682e9afc8900afbf8327f39b",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/USB_ENGINEERING_20261117.md"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/USB_NATIVE_RESULT_20261117.md",
+      "bytes": 4901,
+      "sha256": "f50a3ae87e26c274f186ae42e083357e3427e17fa8bada7a6eca206cf834e2bd",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/USB_NATIVE_RESULT_20261117.md"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/USB_NATIVE_SD_RESULT_20261118.md",
+      "bytes": 3124,
+      "sha256": "c915dfc2bae79ac538cee4912d44d19b2c51c0d063041efb5a98c22c3ef53b15",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/USB_NATIVE_SD_RESULT_20261118.md"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/USB_OUTPUT_DATA_20261118.md",
+      "bytes": 1114,
+      "sha256": "d6d8325479ce7ae4b8c03f7bbba34e8ff63d3a1b974ee191f185908d9815560d",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/USB_OUTPUT_DATA_20261118.md"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/ambiguity_report.py",
+      "bytes": 7023,
+      "sha256": "6382efc9817099d24912a3503420b9c0b4b81af8d5e092007c1bfbdc88b024f7",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/ambiguity_report.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/baselines.py",
+      "bytes": 5757,
+      "sha256": "89f7ee22831b5ec99cc15790a07870c116896f7097a4b97c08508a4fb8157081",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/baselines.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/board_probe.py",
+      "bytes": 11315,
+      "sha256": "51aaa38e69bcba06a561236bcd4ce4d8e8479e42c9ba180348218f0c5ed710b4",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/board_probe.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/board_tensor_bench.py",
+      "bytes": 7975,
+      "sha256": "1f25de9bdbef554970f834b21d46281fafcf3fc3c92a438185cefecad040a20e",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/board_tensor_bench.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/board_usb_smoke.py",
+      "bytes": 14380,
+      "sha256": "42b000aa280cf0bab2be7e73f34df928a96174c0b96a8cdc31a9b8c33b4e0284",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/board_usb_smoke.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/contract.py",
+      "bytes": 3192,
+      "sha256": "f3ee75ec7f0c4f066e56d5bb2dfd8fd6f420ec2ff7a507caa7de655a30006a68",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/contract.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/evaluate_ai2d_holdout.py",
+      "bytes": 10318,
+      "sha256": "e74e3883dcd22dba0e4332cabad48e363c21727bd90b55dcc6055f53c52dace6",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/evaluate_ai2d_holdout.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/evaluate_nuisance.py",
+      "bytes": 12002,
+      "sha256": "b55f7eddd36e3866105a6c95e7d735dc0476c134044ee178efc5f0008561316e",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/evaluate_nuisance.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/evidence/USB-native-20261118-sd/chain300-sd1118.json",
+      "bytes": 6512,
+      "sha256": "a13af59725f60c9c51c005174b62008bdb344d3503ad2b5afbe75412bfb5b16c",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/evidence/USB-native-20261118-sd/chain300-sd1118.json"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/evidence/USB-native-20261118-sd/verification-final-v2.json",
+      "bytes": 8588,
+      "sha256": "6d6917c0a9dc736cf8dcf7d8357168bf105c4b81500bc1c057f656b0ad4a3384",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/evidence/USB-native-20261118-sd/verification-final-v2.json"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/export_engineering.py",
+      "bytes": 3498,
+      "sha256": "36507af9db291aa09318d157b61b5ff478ef7008fd5ce9b0dace12c4f50a5790",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/export_engineering.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/export_k230.py",
+      "bytes": 10458,
+      "sha256": "186ae8ad50cad0f63b99e6d73450fab2a747f0a44ddd6ce29d82cb7835f4e8e0",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/export_k230.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/generate.py",
+      "bytes": 11293,
+      "sha256": "cf08b4bffb4bb9ac8850a429f82165ee1b46b167652f429718d1c4d782fc076c",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/generate.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/infer.py",
+      "bytes": 8901,
+      "sha256": "ef43686954b6e48656e2fde8c5cca702ce772fd0a3626d2e60bc872bb1b4020a",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/infer.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/infer_map.py",
+      "bytes": 7002,
+      "sha256": "e902b1ec6e81a6ededce130ef988ba2d9c3a3c4eef951d372255576f8b3afa8e",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/infer_map.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/kaggle_entry.py",
+      "bytes": 8306,
+      "sha256": "a1075737545a4b1f997c4341ed7732d4ed95c02db26abd6abb9ed95430f12b31",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/kaggle_entry.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/kaggle_prepare.py",
+      "bytes": 6499,
+      "sha256": "e1aaa3af3d22a591ef52e6cd383148b0e484cdeafbb9523ef1e29386a2a41465",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/kaggle_prepare.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/map_matcher.py",
+      "bytes": 4543,
+      "sha256": "7919f81dd221c90496fac8e4a431949bf596af123232da39b5f8dc0750d313e1",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/map_matcher.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/model.py",
+      "bytes": 1936,
+      "sha256": "e45a6699bf00ca6d0c4450630e29fa8b6a5418591a62380d72d64a33942e291a",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/model.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/package_engineering.py",
+      "bytes": 3489,
+      "sha256": "0ba4c5be55c605b227b24af4c4282c7cf3fd95a71c2e9e1008d32a404b8d1806",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/package_engineering.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/prepare_real.py",
+      "bytes": 3616,
+      "sha256": "2d3d7947399d83552429fffaa8d94c8ccad41b7b6d310e24f8faffc705d593ee",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/prepare_real.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/render.py",
+      "bytes": 12851,
+      "sha256": "e4e1b9a473132537a3b634a1c8816c314c0529dbc4fa3f27dc3596bb8116aaf3",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/render.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/render_nuisance.py",
+      "bytes": 6012,
+      "sha256": "b198f0f385abbc568f8edb0f945bafd6e598c8443ecfc6325d0be9ea67905d8f",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/render_nuisance.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/replay_full.py",
+      "bytes": 5752,
+      "sha256": "b60008da58d6410bbee65b0c73080d00a8c44df3d3a0eea1f001d3e5cd09c791",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/replay_full.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/semantic_infer.py",
+      "bytes": 5294,
+      "sha256": "f9d2f9bb7893119d57217f2851b7b0b15a9a71b0c4a0bfa18db8bd126d4fa24d",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/semantic_infer.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/tensor_bench.py",
+      "bytes": 10965,
+      "sha256": "cb06784c03ab3178a919a8795d34715848996f96d93504a5dda717854fc4d692",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/tensor_bench.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/tests/test_native_smoke_readback.py",
+      "bytes": 3519,
+      "sha256": "bc71873a624f99d2dc12e4d1071a00a97599f81cb85a3940caaeb0a52bc005d4",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/tests/test_native_smoke_readback.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/tests/test_real_survey.py",
+      "bytes": 6379,
+      "sha256": "7876b07714ffde73c30ce989585b0ab33602f320d271c08bbc63c16ff9db9347",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/tests/test_real_survey.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/tests/test_tensor_bench.py",
+      "bytes": 1635,
+      "sha256": "6b85aca02b9e91ecce7f12b86284b6859ef9b60951fcea5607425da63fc107f7",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/tests/test_tensor_bench.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/tests/test_usb_engineering.py",
+      "bytes": 1899,
+      "sha256": "ac4f31bd382c432deb38e4709f887d76486d2a6c3bc89fbd9838d0b1afd8face",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/tests/test_usb_engineering.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/train.py",
+      "bytes": 14711,
+      "sha256": "b515a092b47656f175d67994003c1723202d8e73f5bdd6b169b6c60ee2db3912",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/train.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/train_map.py",
+      "bytes": 14790,
+      "sha256": "6958ff50fb9fcd13f2fdd5e7d3e51240a5d4734e4f95e049292a28f9d97596c1",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/train_map.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/verify_kaggle.py",
+      "bytes": 4514,
+      "sha256": "2292f4f7a3908d75245f5218bce6b4256c352b43f0188bb8797da6a9237de17b",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/verify_kaggle.py"
+    },
+    {
+      "path": "reference/cameraxy/experiments/camera_xy_localization_v2/verify_usb_smoke.py",
+      "bytes": 6542,
+      "sha256": "759cd7116f4bdd04521154ecf340a627054cdf6ea5d222a3839d1266efa2537f",
+      "source": "cameraxy@038989ebb17f4f4c9f49ae71ea8ee70f1c42dc86:experiments/camera_xy_localization_v2/verify_usb_smoke.py"
+    },
+    {
+      "path": "reference/competition/experiments/competition_temporal_camera_localization_v1/CONTRACT.json",
+      "bytes": 2321,
+      "sha256": "240ff09d8671aa10755a98d07ad868c951924b28dbee83480de8c3fe363a00a9",
+      "source": "competition@6328e58b674c409ea8eece15b9292730fb6542a6:experiments/competition_temporal_camera_localization_v1/CONTRACT.json"
+    },
+    {
+      "path": "reference/competition/experiments/competition_temporal_camera_localization_v1/MODEL_AND_RUNTIME_CONTRACT.md",
+      "bytes": 915,
+      "sha256": "7a2ebda951785092015fdc6fe4920c2092939bb96c42447d1baf8e5f8b9093e8",
+      "source": "competition@6328e58b674c409ea8eece15b9292730fb6542a6:experiments/competition_temporal_camera_localization_v1/MODEL_AND_RUNTIME_CONTRACT.md"
+    },
+    {
+      "path": "reference/competition/experiments/competition_temporal_camera_localization_v1/OFFLINE_REPORT.md",
+      "bytes": 5883,
+      "sha256": "6ba8f85efb4189019ca651a0b68210748a0d1bf54fa73a117665569df6856e62",
+      "source": "competition@6328e58b674c409ea8eece15b9292730fb6542a6:experiments/competition_temporal_camera_localization_v1/OFFLINE_REPORT.md"
+    },
+    {
+      "path": "reference/competition/experiments/competition_temporal_camera_localization_v1/RECOVERY_V2_REPORT.md",
+      "bytes": 4072,
+      "sha256": "a5b6f1cedc9aae9be328d5547b227ae56c3c8963a76957c3075c15289f92e266",
+      "source": "competition@6328e58b674c409ea8eece15b9292730fb6542a6:experiments/competition_temporal_camera_localization_v1/RECOVERY_V2_REPORT.md"
+    },
+    {
+      "path": "reference/competition/experiments/competition_temporal_camera_localization_v1/TEMPORAL_FILTER_SPEC.md",
+      "bytes": 2026,
+      "sha256": "85fb5409fa76a4441a47f5cf2ec384b9afcd5cdca182cc4a8574368d0497d16b",
+      "source": "competition@6328e58b674c409ea8eece15b9292730fb6542a6:experiments/competition_temporal_camera_localization_v1/TEMPORAL_FILTER_SPEC.md"
+    },
+    {
+      "path": "reference/competition/experiments/competition_temporal_camera_localization_v1/k230_filter.py",
+      "bytes": 11239,
+      "sha256": "c0105c9c83df74249efc21fa9b93882d9c4a05be27661dc63eb56bac1a65b8b0",
+      "source": "competition@6328e58b674c409ea8eece15b9292730fb6542a6:experiments/competition_temporal_camera_localization_v1/k230_filter.py"
+    },
+    {
+      "path": "reference/competition/experiments/competition_temporal_camera_localization_v1/temporal_filter.py",
+      "bytes": 11257,
+      "sha256": "10d51ce9203b2ba37cfa0cbf747cbf2b2ece34216949dc7a990127068b650342",
+      "source": "competition@6328e58b674c409ea8eece15b9292730fb6542a6:experiments/competition_temporal_camera_localization_v1/temporal_filter.py"
+    },
+    {
+      "path": "reference/competition/experiments/competition_temporal_camera_localization_v1/tests/test_filter.py",
+      "bytes": 6754,
+      "sha256": "d1f07eb2800da7717b45deb442f5a1ba3e8920f6d7135a40b706553dee452648",
+      "source": "competition@6328e58b674c409ea8eece15b9292730fb6542a6:experiments/competition_temporal_camera_localization_v1/tests/test_filter.py"
+    },
+    {
+      "path": "reference/roadnet/configs/field_layout.json",
+      "bytes": 2350,
+      "sha256": "8c83c5bf751b86ef2b7343dedf4c4ffdb53a7adf6f4806aeaaf21252a3c8ffda",
+      "source": "roadnet@1594435613d0b159cee9482055d077d192a28fb7:configs/field_layout.json"
+    },
+    {
+      "path": "reference/roadnet/evidence/board-20261117/SIMULATOR_NATIVE_COMPARISON.json",
+      "bytes": 727,
+      "sha256": "98d9ade591333106164b44184dd3e6d50fbb9dc4d17f995d80ba963be25a9001",
+      "source": "roadnet@1594435613d0b159cee9482055d077d192a28fb7:evidence/board-20261117/SIMULATOR_NATIVE_COMPARISON.json"
+    },
+    {
+      "path": "reference/roadnet/evidence/board-20261117/usb-engineering-v1/NEW_SD_20261118_REPORT.md",
+      "bytes": 2839,
+      "sha256": "d971a78c21a234fbb85745a53bf85dc651abf2ea526d54b2b239417236127d3a",
+      "source": "roadnet@1594435613d0b159cee9482055d077d192a28fb7:evidence/board-20261117/usb-engineering-v1/NEW_SD_20261118_REPORT.md"
+    },
+    {
+      "path": "reference/roadnet/reference/BOARD_SMOKE.md",
+      "bytes": 6650,
+      "sha256": "7f1783e261c128e2644ffe00b40362bc709ab6dee883244687be6426eba9b97e",
+      "source": "roadnet@1594435613d0b159cee9482055d077d192a28fb7:reference/BOARD_SMOKE.md"
+    },
+    {
+      "path": "reference/roadnet/reference/USB_ENGINEERING.md",
+      "bytes": 4581,
+      "sha256": "87a1064f8f3153cc33c7d4026c6e86e79359f53e5a734e767d6ce04625d441e3",
+      "source": "roadnet@1594435613d0b159cee9482055d077d192a28fb7:reference/USB_ENGINEERING.md"
+    },
+    {
+      "path": "reference/roadnet/reference/board_smoke.py",
+      "bytes": 18547,
+      "sha256": "1623ff688fdba5491097be0cf88c64b77206a1316819386efdc4bcbebf374b93",
+      "source": "roadnet@1594435613d0b159cee9482055d077d192a28fb7:reference/board_smoke.py"
+    },
+    {
+      "path": "reference/roadnet/reference/ground_corridor.py",
+      "bytes": 7455,
+      "sha256": "f2218cbe0a9395fe1e4905d814f52820a317a22f9088b9f230236b0f964857e6",
+      "source": "roadnet@1594435613d0b159cee9482055d077d192a28fb7:reference/ground_corridor.py"
+    },
+    {
+      "path": "reference/roadnet/reference/native_tensor.py",
+      "bytes": 7720,
+      "sha256": "203b2f9e75b1ec1a4415a63ea2dc3805d482606dba414e682efefdf870629b51",
+      "source": "roadnet@1594435613d0b159cee9482055d077d192a28fb7:reference/native_tensor.py"
+    },
+    {
+      "path": "reference/roadnet/reference/qr_parser/core/__init__.py",
+      "bytes": 54,
+      "sha256": "a89d9886135b9510802270dc8d1c889eb22a4857f415e5efefffe1b6ae9e365c",
+      "source": "roadnet@1594435613d0b159cee9482055d077d192a28fb7:reference/qr_parser/core/__init__.py"
+    },
+    {
+      "path": "reference/roadnet/reference/qr_parser/core/task_parser.py",
+      "bytes": 1432,
+      "sha256": "becdabfe3f45023a13a8c27555606db675a347b94f970bad70366916330308ec",
+      "source": "roadnet@1594435613d0b159cee9482055d077d192a28fb7:reference/qr_parser/core/task_parser.py"
+    },
+    {
+      "path": "reference/roadnet/reference/qr_parser/core/types.py",
+      "bytes": 1577,
+      "sha256": "7c5641528fee16c142fafca5c1fdda6f4419479af77f927e2c91bde4174f4b88",
+      "source": "roadnet@1594435613d0b159cee9482055d077d192a28fb7:reference/qr_parser/core/types.py"
+    },
+    {
+      "path": "reference/roadnet/reference/usb_engineering.py",
+      "bytes": 10507,
+      "sha256": "30226e9b723eb367ee174d97cbad295cb0a6a9e421fab2ce79294e344fbd78c4",
+      "source": "roadnet@1594435613d0b159cee9482055d077d192a28fb7:reference/usb_engineering.py"
+    },
+    {
+      "path": "reference/roadnet/reference/verify_usb_engineering.py",
+      "bytes": 4642,
+      "sha256": "a71eddf35028a6efb21a01df683320bf3c9a7270f4fcc6f0f565c618af977c66",
+      "source": "roadnet@1594435613d0b159cee9482055d077d192a28fb7:reference/verify_usb_engineering.py"
+    },
+    {
+      "path": "reference/temporal-filter/K230_Temporal_Offline_Delivery_R1.md",
+      "bytes": 6420,
+      "sha256": "f537cba8b4de8f3a90239b8c19243c95643245363378d3960233e094f679fc58",
+      "source": "project temporal offline delivery"
+    },
+    {
+      "path": "reference/temporal-filter/docs/temporal_camera/OFFLINE_HANDOVER.md",
+      "bytes": 5053,
+      "sha256": "124dcef34185570de936ef9c9db2cc6d63f1e01790feae01a3f1720bea0cf4c1",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:docs/temporal_camera/OFFLINE_HANDOVER.md"
+    },
+    {
+      "path": "reference/temporal-filter/docs/temporal_camera/README.md",
+      "bytes": 10932,
+      "sha256": "8adc38aa3ee2f5a08ae934ed6f3e4952bdc8bc26587ec05259cec77bb6114284",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:docs/temporal_camera/README.md"
+    },
+    {
+      "path": "reference/temporal-filter/docs/temporal_camera/native-smoke-20261118/SD1118_NATIVE_SUMMARY.json",
+      "bytes": 987,
+      "sha256": "ff5c90fe5130d5aae6994cca8d17e46b57f240cd6a870584e71ea31b6664af26",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:docs/temporal_camera/native-smoke-20261118/SD1118_NATIVE_SUMMARY.json"
+    },
+    {
+      "path": "reference/temporal-filter/docs/temporal_camera/native-smoke-20261118/SD1118_REPORT.md",
+      "bytes": 2424,
+      "sha256": "be1be4b4bd8f3d598c8affde6fbef1ffa353cc5a8ead594ee094c5d89a4d93f9",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:docs/temporal_camera/native-smoke-20261118/SD1118_REPORT.md"
+    },
+    {
+      "path": "reference/temporal-filter/docs/temporal_camera/native-smoke-20261118/sd1118-60c-readback.json",
+      "bytes": 5093,
+      "sha256": "e6e3439e5f830b62071c642a05f496bfab1b3ecd88ebb73a4852c4db7e285b3c",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:docs/temporal_camera/native-smoke-20261118/sd1118-60c-readback.json"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/audit_competition.py",
+      "bytes": 4313,
+      "sha256": "eb71cee1a8d417a241364d6e0f8944f441e4317e67486149b9b384b41641ea3c",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/audit_competition.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/board_multiroute.py",
+      "bytes": 10449,
+      "sha256": "d09927292fc166b4a8d600ea30ce05269697d3dc2a3ba9eb68c3fb9ea90392ae",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/board_multiroute.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/board_temporal.py",
+      "bytes": 4187,
+      "sha256": "7b2245f4712fd13a3f8ea39861a2d896e87e8ead1da704da1f4434046dad7cd9",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/board_temporal.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/camera_preprocess.py",
+      "bytes": 1009,
+      "sha256": "86c9d77a687190997cc0a8117ad1a8e0da83a2af32751bf2b2780ce83cc6a426",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/camera_preprocess.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/cloud.py",
+      "bytes": 5594,
+      "sha256": "d49026c742640705630d61462a7e32098e0cfedfd243138624b4b065403e6566",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/cloud.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/cloud_provider.py",
+      "bytes": 16154,
+      "sha256": "c675cf4414a6c11c5e97fcd1ff2af5ab4b8a1c54055d03d1cac10bc12e86b814",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/cloud_provider.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/cloud_publisher.py",
+      "bytes": 7127,
+      "sha256": "c3e93fe74a5aac90bd724bcb694578a6ab6c272e01708b17faf60d92cdd108ce",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/cloud_publisher.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/cloud_worker.py",
+      "bytes": 2600,
+      "sha256": "d2eef4e8777dd51b637a242ff430131ad6358c528742b075eca4c2c7f4c7df02",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/cloud_worker.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/collect_model_archive.py",
+      "bytes": 5560,
+      "sha256": "393d6ff827379800716672f253e32300ffcc7b80f8d9451f6708c67b66863219",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/collect_model_archive.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/collect_models.py",
+      "bytes": 3059,
+      "sha256": "26e25f7cbe243bb349e178d9552cc2c4398f4aa0ea5e91757eeff7f9a0a01e16",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/collect_models.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/compare_compiled.py",
+      "bytes": 3434,
+      "sha256": "5ae2d53315823317ce3829931f6a545c14ac7b20046f081688ff98a9c53889a2",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/compare_compiled.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/competition_paths.py",
+      "bytes": 4575,
+      "sha256": "cb42cd555d452c6781caa43d5ae9084c0dadbe14d6741aa985edca42c8eb5a06",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/competition_paths.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/compile_map_model.py",
+      "bytes": 7810,
+      "sha256": "74774fce2f6f29ef77ec118d6c42e9b2fb9b73f2eab3ba588780251b215ef0ea",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/compile_map_model.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/compile_model.py",
+      "bytes": 4572,
+      "sha256": "47c8f915f33e91bc570d09a8412a0756246b478b733c4833f6ab28bbda49c546",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/compile_model.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/configs/temporal_filter.json",
+      "bytes": 424,
+      "sha256": "8be0c3aaa67a3bfd8743e77999a3670faa8520c5a0ca0dbad4024a7e9d34dbda",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/configs/temporal_filter.json"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/correct_scene.py",
+      "bytes": 3768,
+      "sha256": "b71c9b347cc4be11dc47652de19287fa423400cd85c095c02281a5c6d8c0f71c",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/correct_scene.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/dataset.py",
+      "bytes": 7201,
+      "sha256": "4fc120628729da51dccb16339e120a21368313f0208f81716a6290bfe3845ba9",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/dataset.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/diagnose_map_symmetry.py",
+      "bytes": 4289,
+      "sha256": "2c963b36c395d5ef65dc7b157dd3653c40e8ad4a45d7da120f40261f218508a4",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/diagnose_map_symmetry.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/embedded_filter.py",
+      "bytes": 8523,
+      "sha256": "e6fb4fa6fb3961fc5aca91228152d32097973094ecd0d8d17ae16bb597b5e858",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/embedded_filter.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/filter.py",
+      "bytes": 5439,
+      "sha256": "6ae75953b73402c392caf9a3095fb9c6cda6d39ac88e30a2e30c2c8be3d9bfa1",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/filter.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/learning.py",
+      "bytes": 1184,
+      "sha256": "7208680bfb3d33e5ddc123581937c5925485df240f7d5d377d33fb668d7ff3c5",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/learning.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/localization_runtime.py",
+      "bytes": 3790,
+      "sha256": "1ddc278e480cd96905cf8916a58e43d15cd852d4ae69140ede1e0a0f02f6fcce",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/localization_runtime.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/map_models.py",
+      "bytes": 3034,
+      "sha256": "90543b01ed95482eb3ee2d0e47723688b3e099e8bd718ed157377808781a7c39",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/map_models.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/map_smoke.py",
+      "bytes": 3054,
+      "sha256": "12dcfacccf646ddbf09345c44edb8c27b1fe4197f0a2d8882fb3399162d9e275",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/map_smoke.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/models.py",
+      "bytes": 2054,
+      "sha256": "902f4ee1e27f52ee8c13ac85d8ac715e24c401838181d0df29ad53b09e348186",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/models.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/models_spatial.py",
+      "bytes": 845,
+      "sha256": "49075013d8552e04ebd9107aec0b73bd8a49158e36b8b0b3c036511f332b9732",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/models_spatial.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/native_smoke.py",
+      "bytes": 16643,
+      "sha256": "aa562863e190a248a0b8d75ae908e2ed13280b79353782d3738fc20b38661ed1",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/native_smoke.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/package_board.py",
+      "bytes": 3712,
+      "sha256": "2b5effa194c5d67df8c2affeb62bca6b36c235b45958c3f2d76e6389318e6aa4",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/package_board.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/package_dataset.py",
+      "bytes": 2170,
+      "sha256": "7e642fc17589eb0e1b6b4861461470540ced042ed3eb804e34af5512a39d71e2",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/package_dataset.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/package_offline.py",
+      "bytes": 6794,
+      "sha256": "a14d760ec9c6157147f9f63c5bcdc41d90eeb286b8d28de584f4b36bb9628250",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/package_offline.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/package_pilot.py",
+      "bytes": 3012,
+      "sha256": "ad262d3f3139bd4c1a7163c318ac20d8b43a56550d90d3151ccfc180fa6cf1d7",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/package_pilot.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/package_source.py",
+      "bytes": 3143,
+      "sha256": "26258edba587f3d0d01bd28a88c47ded5793cba459be26c56dd6ede033bdabc7",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/package_source.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/prepare_cloud.py",
+      "bytes": 9882,
+      "sha256": "750c2b71fa74e8e23e1791984d1fb8808dae3f69c8f95b8c6ba4fd07c961314c",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/prepare_cloud.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/prepare_recording.py",
+      "bytes": 4488,
+      "sha256": "e7484b1e98f2bf4c7146682f56c77bb3bae643c61d19562b0694cc62b3b23a79",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/prepare_recording.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/rebuild_map_reference.py",
+      "bytes": 4143,
+      "sha256": "34bf1a2725e9b5f810ae00dc84062401c6242d529b0ddde6bc2306565573e6ac",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/rebuild_map_reference.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/recover_pilot.py",
+      "bytes": 2733,
+      "sha256": "d7e9443eb53fb0e88b18a75529555686f9747aea1c6d7940b3f945cf465abc97",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/recover_pilot.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/render.py",
+      "bytes": 3763,
+      "sha256": "1df9a50c6f29bffa241806ee88c5e645e43e0dcb94b1326900909fc94a0301bd",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/render.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/render_competition.py",
+      "bytes": 7400,
+      "sha256": "d78443214247be68141fe78a7ae373b74ea297a6ad2d1b3afaca2c71586f74ae",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/render_competition.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/replay_camera.py",
+      "bytes": 15587,
+      "sha256": "20fafeba6d04c9356e90a0224b3033271a14bffa4d1e98f8bc1b494775a3c937",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/replay_camera.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/replay_competition.py",
+      "bytes": 2947,
+      "sha256": "342992006f4378558b7499325c58eb962a4a215aef3e5fb11528af409ab77def",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/replay_competition.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/replay_motion.py",
+      "bytes": 8341,
+      "sha256": "adf989588ee45329e304b0e53b0e8eb5d8fbc1703f6e13760bad4271c1edf3dc",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/replay_motion.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/replay_native_pixels.py",
+      "bytes": 4427,
+      "sha256": "6ffe86c70c99c864a5430548053caad79d14548c42778299827239040eff34fc",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/replay_native_pixels.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/reused/SOURCE.json",
+      "bytes": 616,
+      "sha256": "14e9b5a689bb4bd1807c06ff8b2328fe65b27f25e9fc731871de99868d0443d1",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/reused/SOURCE.json"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/smoke.py",
+      "bytes": 6600,
+      "sha256": "37ccd65cb4cb04505f89204d933285dd45b983af5853e0d3e6fe53dc3f8a5392",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/smoke.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/snapshot_reuse.py",
+      "bytes": 2827,
+      "sha256": "8d44dff815ca7a3dd1ffd9a062c167165373b16b81b46635d81e260e52458841",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/snapshot_reuse.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/test_contracts.py",
+      "bytes": 10353,
+      "sha256": "03e43c172b37390b9c29bc67706b23ca20d5088c84d1043fe87e2aade79cdfa5",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/test_contracts.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/test_native_smoke.py",
+      "bytes": 3470,
+      "sha256": "94be58ec4c2988fd5c7b5471fcd9d47db9e324ad531b758dfcbb0f34275871d3",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/test_native_smoke.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/test_replay_camera.py",
+      "bytes": 6200,
+      "sha256": "cd778c739e9e1aa9b70d89f0a806f9ec94d02840d9a1d558d6d7f7a381b3334b",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/test_replay_camera.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/train.py",
+      "bytes": 16970,
+      "sha256": "b4f18e44f85277a6139826c7e047b72fb6114a64efb27edf6da2b3d1296f5f2d",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/train.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/train_map_temporal.py",
+      "bytes": 18672,
+      "sha256": "272503264f58dc05237837d13b14c2c711d0e4a1a5ea8b10dcd3f7ae947cf0d2",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/train_map_temporal.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/unroll_gru.py",
+      "bytes": 1720,
+      "sha256": "fc6d2769378386d63b044580785db5008fa7e8f1e489115506f274d6e65328bb",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/unroll_gru.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/vendor/roadnet/blender_scene.py",
+      "bytes": 14545,
+      "sha256": "0ae263484f760ed9a3c7b917a40b7f5795909d064e51f550195363068c22b9ed",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/vendor/roadnet/blender_scene.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/vendor/roadnet/configs/field_layout.json",
+      "bytes": 2350,
+      "sha256": "8c83c5bf751b86ef2b7343dedf4c4ffdb53a7adf6f4806aeaaf21252a3c8ffda",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/vendor/roadnet/configs/field_layout.json"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/vendor/roadnet/sim.py",
+      "bytes": 6381,
+      "sha256": "d6010ce21c67443e02959b519cefe1c742872ae9f09ac0264c28efdca6531fb9",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/vendor/roadnet/sim.py"
+    },
+    {
+      "path": "reference/temporal-filter/research/temporal_camera/verify_delivery.py",
+      "bytes": 1752,
+      "sha256": "a13f75ad99e98737a2656e1d5dca8b223087c40671b2e1153da6bc52262e7f3b",
+      "source": "temporal-filter@cc4034460827c24c200db0843478b75a281f34cd:research/temporal_camera/verify_delivery.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/FINAL_OFFLINE_DELIVERY.json",
+      "bytes": 669,
+      "sha256": "f3fb5b83cc184057031eceea61a70fcb72ee57e3a8cb5079d826bde23e4bdbe0",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/FINAL_OFFLINE_DELIVERY.json"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/GRU_IMPORT_SMOKE.json",
+      "bytes": 2411,
+      "sha256": "fc2bd252a7408d9586c4cdfb9aae0e4396624810ac0991fd79275094541211c7",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/GRU_IMPORT_SMOKE.json"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/HUMAN_INPUTS.md",
+      "bytes": 7092,
+      "sha256": "a30d8f54b87a393311f8dd6364fde321922d0134a0fe11d8980c0ec27dc85e8e",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/HUMAN_INPUTS.md"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/MIXTURE_A06_CONVERSION_STATUS.json",
+      "bytes": 1193,
+      "sha256": "9b5b1dcd07e43a727f8be97d670d9fd1be6f4163aba188bac8556c80589801e1",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/MIXTURE_A06_CONVERSION_STATUS.json"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/MIXTURE_A06_RUNTIME_PROFILE.json",
+      "bytes": 820,
+      "sha256": "bcaadb9bd2fcccd4dcc8a721861784fe73dd75065afc83b052e10c8db3673c0b",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/MIXTURE_A06_RUNTIME_PROFILE.json"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/OFFLINE_STATUS.json",
+      "bytes": 5039,
+      "sha256": "66482a9656b4eb7f20b7287a07050210d3dc3003aa3e8501a97b64c1c0ec943b",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/OFFLINE_STATUS.json"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/README.md",
+      "bytes": 12763,
+      "sha256": "79dd856163a379f7c28c161f63f1e539d4ef6d11b8368a92928a83ec3bdb654d",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/README.md"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/audit_neural_faults.py",
+      "bytes": 5782,
+      "sha256": "bce72142e796b78682da7c967702a916a5b64e96647b59ec67584bca06abc44b",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/audit_neural_faults.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/audit_observability.py",
+      "bytes": 4712,
+      "sha256": "04158071b6d8c3d33a15fa5a08a34fa0419b6363ed29d81aad6fb3e23b0c39b0",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/audit_observability.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/audit_runtime.py",
+      "bytes": 8763,
+      "sha256": "67e04614dedb5ab45618ea14f90fa88169e66faef674ee180ce44d01888c4b84",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/audit_runtime.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/board_support.py",
+      "bytes": 2556,
+      "sha256": "0fdb8b81c7a988bd8d39bc1f5fbbfb8aa7699905f6c85fe5a1aaeaf0fe01fd9f",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/board_support.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/capture_pixels.py",
+      "bytes": 692,
+      "sha256": "c58bebd56ce4f36f8959e83c347aad41e88cf751fb36a78c2c5bad655b68e658",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/capture_pixels.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/challenge_data.py",
+      "bytes": 6884,
+      "sha256": "4916d33ff1fd06a58fc429f73acb7f52af512ead020d65889508e54266303b76",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/challenge_data.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/cloud_geometry.py",
+      "bytes": 13312,
+      "sha256": "5a5f57372dbd5ea66efc7631b464177fc3aa333edcef45d73006549bb47cad53",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/cloud_geometry.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/collect_cloud.py",
+      "bytes": 3232,
+      "sha256": "6a89022acf40502e9286d45af349fcbd2d53f089c765e3a3dabb2227157794d2",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/collect_cloud.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/compare_capture.py",
+      "bytes": 8158,
+      "sha256": "f105ff1e7410706ba0e835394d1d61e1e7314fd3e5e234871ee2c39e44ee6a11",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/compare_capture.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/compare_native_preprocessing.py",
+      "bytes": 9714,
+      "sha256": "2abb18d935f03ee8c2ea181c1f2ccc1387bbd0fb3bfe5cbf529ba4c0c8038b09",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/compare_native_preprocessing.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/compile_neural.py",
+      "bytes": 8107,
+      "sha256": "55613ee07baa805f8ad23a4751ac146084af105abfcf4f098002e9f899f6fb67",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/compile_neural.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/evaluate_appearance.py",
+      "bytes": 3753,
+      "sha256": "a488cf21123aa806ef87dc204a3a24fcc49d8ba0d20602769a80c6411cbbd010",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/evaluate_appearance.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/evaluate_challenge.py",
+      "bytes": 8582,
+      "sha256": "3fcb2a8ace1b5e86ca93ec1f85ebbc8c2034e276ff7867578d0c13befe604b05",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/evaluate_challenge.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/evaluate_geometry.py",
+      "bytes": 9184,
+      "sha256": "dc99bbc8a6e2a46a242534e7899558afe882090f37fb43a5f238e836be065386",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/evaluate_geometry.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/evaluate_long.py",
+      "bytes": 5440,
+      "sha256": "1b0c9f2433271bf9a371bc0fc3b05cfb521d7c511ecc4a6953ad42087fe8fd27",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/evaluate_long.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/evaluate_neural.py",
+      "bytes": 11350,
+      "sha256": "e3d4a8a1ea53259ccf903640033de2617905bdb8d952b0e0de30a4535e57d25a",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/evaluate_neural.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/evaluate_neural_simulator.py",
+      "bytes": 5605,
+      "sha256": "c6ecf8cad69169cf65bd46e0f466f34cc8fd2610e9edb5bf620671c07dce12b5",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/evaluate_neural_simulator.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/geometry_pilot.py",
+      "bytes": 12152,
+      "sha256": "05bb68437bc2195f9a83ffd9f9d634befbeff84fb057ee8e13788e60f62cd52e",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/geometry_pilot.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/long_holdout.py",
+      "bytes": 3622,
+      "sha256": "60c0a215653d845e70c7c8c3c6f3ab59b2bc63f81dfb2b5a29cd5484f738801c",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/long_holdout.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/lower_fixed_gru.py",
+      "bytes": 6316,
+      "sha256": "f63791523eda6ea41e57f8979acf4eb3bb58df6b3cff0613c146c04cf71f304c",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/lower_fixed_gru.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/make_final_delivery.py",
+      "bytes": 12800,
+      "sha256": "4597eb4b55843742a9d1e0adc95ff64fb8a76c97da31f0392d21d46cb11c318c",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/make_final_delivery.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/make_long_delivery.py",
+      "bytes": 6110,
+      "sha256": "4d32f808a7a24dfad66eeaec94448df02282f6222de8f51c5a21a80525497a9d",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/make_long_delivery.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/make_neural_delivery.py",
+      "bytes": 8323,
+      "sha256": "a0d0e3c06128dbeb49074ca798568fc802c815561f09fc48526f104245797c8f",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/make_neural_delivery.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/neural_decode.py",
+      "bytes": 1430,
+      "sha256": "4275ef1a9845ee0ba5c0dbf042ab7444c4ae5c9a3b9966055584274326f5e280",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/neural_decode.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/neural_window.py",
+      "bytes": 1994,
+      "sha256": "541dc40d7ddb1a16ce67914f2383a647e7aee3fe73f03b2fb84afa8fc64f743a",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/neural_window.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/operator_smoke.py",
+      "bytes": 3764,
+      "sha256": "50ff99c1cf993283d9422b48656291f64321ff1ad814ec76f8435c895dab04c4",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/operator_smoke.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/package_neural_trial.py",
+      "bytes": 11121,
+      "sha256": "ae75952b263b953efedfcb75b0fa02b4ff57dc0adfa3136096e8e56bf4e3c14a",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/package_neural_trial.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/render_challenge.py",
+      "bytes": 7327,
+      "sha256": "7b39e371ee2701167ae24d23912a07a4aa68fba268ebfe6e7f37649372a46fe6",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/render_challenge.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/replay_capture.py",
+      "bytes": 17426,
+      "sha256": "e7d6f7876ca02f068296bdf647aeab944646ed3dcc5253d234a27adfab2eccc7",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/replay_capture.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/smoke_long_window.py",
+      "bytes": 4427,
+      "sha256": "23529d63fbc02231dfe57dd77370ac4943fc0f31bfc6c03228e5dd74e22b5328",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/smoke_long_window.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/stable_logsumexp.py",
+      "bytes": 2688,
+      "sha256": "824dede95b2f1e28f471bc055a2ad1b3ea10695da346b7b3a933be9d80a1a2e2",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/stable_logsumexp.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/support/cloud.py",
+      "bytes": 5594,
+      "sha256": "d49026c742640705630d61462a7e32098e0cfedfd243138624b4b065403e6566",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/support/cloud.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/support/cloud_provider.py",
+      "bytes": 16154,
+      "sha256": "c675cf4414a6c11c5e97fcd1ff2af5ab4b8a1c54055d03d1cac10bc12e86b814",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/support/cloud_provider.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/support/collect_models.py",
+      "bytes": 3067,
+      "sha256": "a669f5da6350a7815916eb2ed16a4e8d6b0b6e318e951182635e4fcd63643390",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/support/collect_models.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/test_neural_board.py",
+      "bytes": 7800,
+      "sha256": "b04b1b7be0dfa16d0af94bd5e0d510e1492f0a3d05c4242cd69e31067c649a32",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/test_neural_board.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/test_neural_decode.py",
+      "bytes": 1159,
+      "sha256": "05f4c773e4e9dc523fd85d7215f13100530aa63180494818f953e58fea676a6a",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/test_neural_decode.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/test_neural_window.py",
+      "bytes": 1881,
+      "sha256": "c7a6e77cb3dbfcfbb0a91b0183f3b97fba5e1e858e4104d34256994e908af554",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/test_neural_window.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/train_neural.py",
+      "bytes": 15846,
+      "sha256": "b5ea62e0aefb6f3a488aa41590d96f12c7ca1475196b80d5ec24c2785141cad1",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/train_neural.py"
+    },
+    {
+      "path": "reference/temporal-neural/experiments/temporal_neural_camera_localization/verify_board_capture.py",
+      "bytes": 10660,
+      "sha256": "70b49e433d739af944d154792280a5f4e9b4d62342031a7e0896295217cd94bc",
+      "source": "temporal-neural@b6209958afd9e3c282d6f4d7b29c485ed5b99381:experiments/temporal_neural_camera_localization/verify_board_capture.py"
+    },
+    {
+      "path": "reference/topface/docs/HANDOFF.md",
+      "bytes": 9660,
+      "sha256": "fc355b9606d1578d7e4b19ba75ac686078b12e1bdef2f08b4010a785649baf1b",
+      "source": "topface@b38864cf0fc11638a1943da17c98dfa878e0128e:docs/HANDOFF.md"
+    },
+    {
+      "path": "reference/topface/docs/LESSONS_LEARNED.md",
+      "bytes": 20026,
+      "sha256": "75aecea10fd3b6fcde3defd1eaec83f903b965dc29ada1ec26fcd75cd15b8847",
+      "source": "topface@b38864cf0fc11638a1943da17c98dfa878e0128e:docs/LESSONS_LEARNED.md"
+    },
+    {
+      "path": "reference/topface/docs/STATUS.md",
+      "bytes": 6700,
+      "sha256": "1309d281fe667653ca175369b11e173f7488f39839378421f24274abddf007fc",
+      "source": "topface@b38864cf0fc11638a1943da17c98dfa878e0128e:docs/STATUS.md"
+    },
+    {
+      "path": "reference/topface/docs/validation/old-sd-repair-20261118/README.md",
+      "bytes": 2683,
+      "sha256": "a6d1c44fc4c184b6b960986bdc3a8d7bf9c08a98b903a6f2f4b96e24c0bf320e",
+      "source": "topface@b38864cf0fc11638a1943da17c98dfa878e0128e:docs/validation/old-sd-repair-20261118/README.md"
+    },
+    {
+      "path": "reference/topface/docs/validation/topface-production-fps-20261116/RESOURCE_FPS_REPORT.json",
+      "bytes": 2361,
+      "sha256": "d2e447eeabed9a70dbfb72074826885ecdaff591f95f41a67b951c004c0a84c8",
+      "source": "topface@b38864cf0fc11638a1943da17c98dfa878e0128e:docs/validation/topface-production-fps-20261116/RESOURCE_FPS_REPORT.json"
+    }
+  ],
+  "source_repositories": {
+    "topface": {
+      "repo": "smartlotus/k230-vision-optimized",
+      "ref": "ops/topface-production-fps-20261116"
+    },
+    "roadnet": {
+      "repo": "smartlotus/roadnet-boundary-sim-v1-301844d7",
+      "ref": "ops/roadnet-v1",
+      "scope": "committed snapshot only; live task edits were excluded"
+    },
+    "cameraxy": {
+      "repo": "smartlotus/k230worker-6ebd4c18",
+      "ref": "ops/camera-xy-localization-v2",
+      "scope": "selected committed local files; source branch remote did not include this commit at capture"
+    },
+    "temporal-filter": {
+      "repo": "smartlotus/k230-vision-optimized",
+      "ref": "ops/temporal-camera-v1-20261117"
+    },
+    "temporal-neural": {
+      "repo": "smartlotus/k230worker-6ebd4c18",
+      "ref": "ops/temporal-neural-camera-v1"
+    },
+    "competition": {
+      "repo": "smartlotus/k230worker-6ebd4c18",
+      "ref": "ops/competition-temporal-camera-v1"
+    }
+  }
+}

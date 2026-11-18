@@ -1,0 +1,22 @@
+{
+  "scope": "One exact synthetic input, complete native KPU versus identical KModel simulator",
+  "kmodel_sha256": "cba11c87ce36305ffac6dee18b65b4f1e5b47070e00a2f9e706d0aee72a4980e",
+  "input_sha256": "41bf33f9287344608c5383021e6f33e7edfe573dd7c6d4d1bf19ade7caac16c9",
+  "native_output_sha256": "2eeed233df45289e665a1d53b791c5a69090f696966f2bc326e1d2ccd139bbd0",
+  "output_shape": [
+    1,
+    7,
+    192,
+    320
+  ],
+  "values": 430080,
+  "finite_native": 430080,
+  "finite_simulator": 430080,
+  "exact_equal_values": 430080,
+  "logit_mae": 0.0,
+  "logit_max_abs": 0.0,
+  "all_pixel_argmax_agreement": 1.0,
+  "content_pixel_argmax_agreement": 1.0,
+  "camera_acceptance": "NOT_RUN",
+  "real_accuracy_acceptance": "NOT_RUN"
+}

@@ -1,0 +1,80 @@
+{
+  "statvfs": [
+    512,
+    512,
+    1023744,
+    215296,
+    215296,
+    0,
+    0,
+    0,
+    0,
+    255
+  ],
+  "files": {
+    "/sdcard/rn1117a/identity.json": {
+      "bytes": 752,
+      "sha256": "8109a700cac1673628235050f513e5106f35a870fff84ed4eff0170140bee0ce"
+    },
+    "/sdcard/tfp1116/model/topface.kmodel": {
+      "bytes": 1611824,
+      "sha256": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88"
+    },
+    "/sdcard/tfp1116/model/identity.json": {
+      "bytes": 528,
+      "sha256": "a62c9e5526217edbc8df8f83857eb9e065a9f3aae0e634b05f6e8e5d6cd68d47"
+    },
+    "/sdcard/rn1117a/roadnet.kmodel": {
+      "bytes": 137208,
+      "sha256": "cba11c87ce36305ffac6dee18b65b4f1e5b47070e00a2f9e706d0aee72a4980e"
+    },
+    "/sdcard/tfp1116/k230/topface_service.py": {
+      "bytes": 7413,
+      "sha256": "f322928a5596377279e9cf750840441ffee6477f372f8465c334b8b162c7ab12"
+    },
+    "/sdcard/tfp1116/k230/topface_adapter.py": {
+      "bytes": 5531,
+      "sha256": "e013797c0b0a38f9a270bba24364f33e3d4bb5c75726807549d63e86f33603da"
+    },
+    "/sdcard/rn1117a/board_smoke.py": {
+      "bytes": 18070,
+      "sha256": "6f186db8809529b3b9fbfc28e54cdc036f9d248aa21cf0fbd20b3f89b0de91b1"
+    },
+    "/sdcard/tfp1116/model/output_contract.json": {
+      "bytes": 3734,
+      "sha256": "c49c560cfce764bb0d84b5b992918644596e8c150f6793e78da138b9a6c1f94a"
+    },
+    "/sdcard/tfp1116/vision/topface_decode.py": {
+      "bytes": 6383,
+      "sha256": "191cc98381d2934c26f6d73bbf1f2ce036f1479ac063f6d8f3faefa901c958a4"
+    }
+  },
+  "nonce": "new-sd-final-20261118",
+  "firmware": "(sysname='rt-smart', nodename='rt-smart', release='v1.8-0-gc2d1f5c', version='v1.8-0-gc2d1f5c on 2026-07-03', machine='k230_canmv_lckfb')",
+  "resources": {
+    "sys_page": [
+      460488704,
+      24264704,
+      436224000
+    ],
+    "sys_mmz": [
+      535822336,
+      0,
+      535822336
+    ],
+    "python_heap_free": 2263744,
+    "sys_heap": [
+      67108864,
+      3194048,
+      64637120
+    ]
+  },
+  "startup": {
+    "/sdcard/main.py": {
+      "exists": false
+    },
+    "/sdcard/boot.py": {
+      "exists": false
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "status": "BOUNDED_NATIVE_CNN1_FILTER_ENGINEERING_PASS_ON_REPLACEMENT_SD",
+  "firmware": "v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+  "runtime": "2.11.0",
+  "sd_data_root": "/data/k230_temporal_v1_sd1118",
+  "runs": {
+    "sd1118_10b": {
+      "frames": 10,
+      "dropped": 0,
+      "status": "MEASURED",
+      "fps": 5.882353,
+      "cleanup_errors": [],
+      "position_valid": false
+    },
+    "sd1118_60c": {
+      "frames": 60,
+      "dropped": 0,
+      "status": "MEASURED",
+      "fps": 6.581834,
+      "cleanup_errors": [],
+      "position_valid": false
+    }
+  },
+  "total_frames": 70,
+  "total_dropped": 0,
+  "uvc": {
+    "device": "openaicam#openaicam",
+    "mode": "1280x720 MJPEG 30 FPS"
+  },
+  "model_sha256": "ac86c72a648df1c9f484c920180b0bcb9ae877f26d20c2cea364969d0d921fbc",
+  "postflight_mmz_used": 0,
+  "sdcard_main_py_present": false,
+  "sdcard_boot_py_present": false,
+  "accuracy": "NOT_RUN",
+  "road_test": "NOT_RUN",
+  "native_tcn_gru": "NOT_RUN"
+}

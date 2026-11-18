@@ -1,0 +1,73 @@
+{
+  "scope": "Temporal neural camera optical-center XY localization",
+  "offline_implementation": "IMPLEMENTED_AND_TESTED",
+  "current_offline_completion": "IMPLEMENTATION_TRAINING_AND_SIMULATOR_COMPLETE",
+  "delivery_checks": "Final archive inventory and extracted-entry verification are recorded by FINAL_OFFLINE_DELIVERY.json and FINAL_OFFLINE_PACKAGE_REPLAY.json",
+  "overall_project": "INCOMPLETE_QUALITY_AND_NATIVE_ACCEPTANCE",
+  "user_steering": "Complete offline work, then present one consolidated human input list",
+  "requirements": {
+    "G0_assets_and_official_map": {
+      "execution": "AUDITED_AND_REUSED",
+      "evidence": ["GEOMETRY_PILOT_QA.json", "GEOMETRY_PILOT_PLAN.json"],
+      "gray_tian_field_sha256": "b5bea8c6738bc7ebd8d57cdae34af99d1cf10b3fc782ea9c6c986e8802441e95"
+    },
+    "G1_camera_xy_contract": {
+      "execution": "VERIFIED",
+      "evidence": ["train_neural.py", "geometry_pilot.py", "evaluate_neural.py", "GEOMETRY_LOCAL_TEST_PACKAGE.json"],
+      "targets": ["camera_x_mm", "camera_y_mm"]
+    },
+    "G2_smoke_and_trajectory_qa": {
+      "execution": "VERIFIED",
+      "evidence": ["NEURAL_CHALLENGE_RENDER_QA.json", "GEOMETRY_PILOT_QA.json", "GEOMETRY_A03_STRICT_APPEARANCE.json"],
+      "geometry_pilot": {"train": 500, "val": 250, "test": 250},
+      "whole_8_frame_spatially_unseen_windows": 36
+    },
+    "G3_single_frame_pilot": {
+      "execution": "KAGGLE_COMPLETE",
+      "quality": "HOLD",
+      "evidence": ["A06_NEURAL_ONNX_REPLAY.json", "GEOMETRY_A03_NEURAL_REPLAY.json", "cloud/geometry-a03/ARCHIVE_READBACK.json"]
+    },
+    "G4_cpu_filter": {
+      "execution": "OWNED_BY_SEPARATE_USER_CONVERSATION",
+      "authority": "User explicitly assigned this conversation to the neural temporal models"
+    },
+    "G5_neural_temporal_models": {
+      "execution": "GRU_4_8_AND_TCN_4_8_HOST_EVALUATED",
+      "quality": "HOLD",
+      "evidence": ["A06_NEURAL_ONNX_REPLAY.json", "A06_INDEPENDENT_HOLDOUT.json", "GRU_IMPORT_SMOKE.json", "GEOMETRY_A03_TCN8_KMODEL_TEST.json"],
+      "compiler_result": {"TCN8": "COMPILE_AND_SIMULATOR_PASS", "TCN16": "COMPILE_AND_SIMULATOR_PASS", "GRU4": "FIXED_UNROLL_COMPILE_AND_FULL_SIMULATOR_PASS", "GRU8": "FIXED_UNROLL_COMPILE_AND_FULL_SIMULATOR_PASS"},
+      "original_gru_node_import": {"GRU4": "IMPORT_FAILED", "GRU8": "IMPORT_FAILED"},
+      "gru_recovery_evidence": ["GRU_UNROLLED_FLOAT_PARITY.json", "GRU_UNROLLED_INDEPENDENT_REVIEW.json", "GRU4_UNROLLED_KMODEL_TEST.json", "GRU8_UNROLLED_KMODEL_TEST.json"],
+      "mixture_experiment": {"execution": "KAGGLE_AND_LOCAL_EVALUATION_COMPLETE", "quality": "HOLD_NOT_SELECTED", "conversion": "STABLE_DERIVATIVE_FULL_SIMULATOR_PASS", "evidence": ["cloud/mixture-a06/ARCHIVE_READBACK.json", "MIXTURE_A06_GEOMETRY_REPLAY.json", "MIXTURE_A06_SPATIAL_REPLAY.json", "MIXTURE_A06_CONVERSION_STATUS.json"]},
+      "long_window_evidence": ["LONG_A05_SPATIAL_REPLAY.json", "LONG_A05_TCN16_KMODEL_TEST.json", "LONG_A05_RUNTIME_REPLAY.json"]
+    },
+    "G6_fair_comparison_and_selection": {
+      "execution": "NEURAL_COMPARISONS_COMPLETE",
+      "quality": "HOLD_500MM_P95_NOT_MET",
+      "experimental_board_model": "Geometry A03 TCN8",
+      "evidence": ["GEOMETRY_A03_NEURAL_REPLAY.json", "HISTORY_A04_NEURAL_REPLAY.json", "GEOMETRY_A03_RUNTIME_REPLAY.json"],
+      "source_choice": "A03 is a verified trial. A04 did not improve the median. Deployment acceptance remains open."
+    },
+    "G7_optional_uncertainty_fusion": {
+      "decision": "NOT_ADOPTED_FOR_THIS_TRIAL",
+      "reason": "Validation selective acceptance was audited. Poor visual localization remains the measured limitation, and process uncertainty needs installed-camera calibration.",
+      "evidence": ["GEOMETRY_A03_RUNTIME_PROFILE.json", "GEOMETRY_A03_RUNTIME_REPLAY.json"]
+    },
+    "G8_native_and_real_validation": {
+      "execution": "DEFERRED_BY_USER",
+      "offline_preparation": "GROUPED_AND_PAIRED_CAPTURE_REPLAY_AND_FOUR_BOARD_TRIALS_VERIFIED",
+      "evidence": ["GEOMETRY_A03_BOARD_TRIAL_R2.json", "LONG_A05_BOARD_TRIAL.json", "GRU4_UNROLLED_BOARD_TRIAL.json", "GRU8_UNROLLED_BOARD_TRIAL.json", "GROUPED_CAPTURE_REPLAY_WITNESS.json", "PAIRED_CAPTURE_REPLAY_WITNESS.json", "test_neural_board.py", "HUMAN_INPUTS.md"],
+      "real_optical_center_gt": "UNKNOWN",
+      "native_ai2d_pixel_equivalence": "FULL_UVC_PATH_NOT_RUN",
+      "archived_ai2d_diagnostic": {"execution": "ARCHIVED_640X360_INTERMEDIATE_BYTES_MATCH_HOST_MIRROR", "fixtures": 5, "evidence": ["ARCHIVED_AI2D_RESIZE_PARITY.json", "ARCHIVED_AI2D_TCN8_REPLAY.json"]},
+      "board_report_intake": {"execution": "VERIFIER_CHECKED_WITH_PACKAGED_ENTRY_AND_MOCK_BACKEND", "evidence": ["verify_board_capture.py", "BOARD_CAPTURE_VERIFIER_WITNESS.json"]},
+      "native_latency_memory_and_scheduler": "NOT_RUN"
+    }
+  },
+  "full_10k_20k": {
+    "execution": "NOT_STARTED",
+    "condition": "Original plan requires Pilot data and model gates to pass",
+    "gate_current": "HOLD",
+    "evidence": ["GEOMETRY_A03_NEURAL_REPLAY.json", "HISTORY_A04_NEURAL_REPLAY.json"]
+  }
+}

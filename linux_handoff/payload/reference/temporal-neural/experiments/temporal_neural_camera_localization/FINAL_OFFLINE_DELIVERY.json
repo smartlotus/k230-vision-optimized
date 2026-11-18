@@ -1,0 +1,12 @@
+{
+  "status": "FINAL_NEURAL_OFFLINE_ARCHIVE_FULL_READBACK_PASS",
+  "path": "C:\\Users\\28389\\Desktop\\k230-temporal-neural-v1\\experiments\\temporal_neural_camera_localization\\.runtime\\K230_Temporal_Neural_Offline_A06.zip",
+  "bytes": 152771387,
+  "sha256": "18945a427c3daba81be94a6ce92e16e7c7e931e0ce1f45d62eb86aeb4a27e5a3",
+  "members": 5205,
+  "base_archive_sha256": "67232fc8481986dfa3ac0f6d81672b7d30e709943e8d03c62677b3941d77fead",
+  "quality": "HOLD",
+  "native": "NOT_RUN",
+  "human_input_list": "source/experiments/temporal_neural_camera_localization/HUMAN_INPUTS.md",
+  "mixture_conversion": "TRAINED_MODEL_STABLE_COMPILE_AND_FULL_TEST_PASS"
+}

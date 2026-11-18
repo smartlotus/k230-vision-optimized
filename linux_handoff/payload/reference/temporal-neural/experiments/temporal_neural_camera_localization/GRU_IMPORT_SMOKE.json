@@ -1,0 +1,65 @@
+{
+  "scope": "Actual saved A06 GRU graphs on 96x160 input",
+  "models": [
+    {
+      "status": "NNCASE_IMPORT_STARTED",
+      "setting": "gru4",
+      "input_shape": [
+        1,
+        12,
+        96,
+        160
+      ],
+      "onnx_sha256": "b309a696ad7b33898f41deb8dec613d9e816431867ef1d92f382250d44e50ec6",
+      "best_sha256": "317594bfd5b6427d05fd59e99d53c31a7a1b3b80a53a33b390b1151c38f3b2f3",
+      "dataset_manifest_sha256": "ec2e617bb3b15df10c80f666aa2166f29d7231741026dc187ddc582887609042",
+      "saved_version": {
+        "ref": "/code/lotus30/k230-camera-xy-multiroute-pilot-a06",
+        "url": "https://www.kaggle.com/code/lotus30/k230-camera-xy-multiroute-pilot-a06",
+        "versionNumber": 1,
+        "kernelId": 145538534
+      },
+      "compiler": {
+        "nncase": "2.11.0",
+        "nncase-kpu": "2.11.0"
+      },
+      "onnx_runtime_finite": true,
+      "native_k230": "NOT_RUN",
+      "terminal_status": "NNCASE_IMPORT_PROCESS_FAILED",
+      "process_exit": -532462766,
+      "cause": "GRU import fails during VisitTranspose with missing CheckedType",
+      "log_sha256": "af8caa9f6c4c6c19d904f048d397e2471ff1d6544bcb8e4d2435b6c4da03841d",
+      "log": "evidence\\operator-smoke\\gru4-operator-a06.log"
+    },
+    {
+      "status": "NNCASE_IMPORT_STARTED",
+      "setting": "gru8",
+      "input_shape": [
+        1,
+        24,
+        96,
+        160
+      ],
+      "onnx_sha256": "5d063f025bda1951b0dfd60e473032383502cfa8d27fe1f75ece657105ed98d7",
+      "best_sha256": "aa900f916ef9d2a8d0489ace2bcf221d75bb36afef32769b918d2f2114a1688d",
+      "dataset_manifest_sha256": "ec2e617bb3b15df10c80f666aa2166f29d7231741026dc187ddc582887609042",
+      "saved_version": {
+        "ref": "/code/lotus30/k230-camera-xy-multiroute-pilot-a06",
+        "url": "https://www.kaggle.com/code/lotus30/k230-camera-xy-multiroute-pilot-a06",
+        "versionNumber": 1,
+        "kernelId": 145538534
+      },
+      "compiler": {
+        "nncase": "2.11.0",
+        "nncase-kpu": "2.11.0"
+      },
+      "onnx_runtime_finite": true,
+      "native_k230": "NOT_RUN",
+      "terminal_status": "NNCASE_IMPORT_PROCESS_FAILED",
+      "process_exit": -532462766,
+      "cause": "GRU import fails during VisitTranspose with missing CheckedType",
+      "log_sha256": "af8caa9f6c4c6c19d904f048d397e2471ff1d6544bcb8e4d2435b6c4da03841d",
+      "log": "evidence\\operator-smoke\\gru8-operator-a06.log"
+    }
+  ]
+}

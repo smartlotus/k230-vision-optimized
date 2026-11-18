@@ -1,0 +1,56 @@
+# 离线交付与集中人工介入清单
+
+本轮完成了工程包审计、官方图修正、三路线训练对照、编译兼容性、连续数据与 manifest、CPU 滤波、独立板端测试入口和实拍离线回放工具。a08 是部署像素对齐后的最新 Pilot。其五组模型仍处于 NEEDS_IMPROVEMENT。完整项目目标仍有待完成项。
+
+| 项目要求 | 实际证据 | 当前结论 |
+|---|---|---|
+| 只监督相机 XY | 训练代码及 manifest 检查、回放元数据隔离测试 | 已实施 |
+| 复用原地图与资产 | 31 个网格几何指纹相同，灰道材质与类别修正，同一原始 CAD | 已实施 |
+| CNN、GRU4/8、TCN4/8 | Kaggle a06、a07、a08 第 1 版，每轮五组各 192 次更新 | 实际完成 |
+| 同轨迹公平对照 | 每轮同轨迹、端点和拆分，各自加同一滤波前后比较 | 实际完成 |
+| 两个随机起点 | 双蓝区等权软先验，每个拆分两方向等量 | 已实施，首帧判区仅 5/10 |
+| 直道、转弯、路口、重复道路 | Pilot 轨迹与分场景统计 | 实际完成 |
+| 丢帧、变速、模糊和重新定位 | 六种压力条件及逐轨迹恢复记录 | 实际完成，存在恢复失败 |
+| 100 帧 Smoke 与 1,000 帧 Pilot | 灰道数据和 AI2D 对齐数据 ZIP，完整文件 SHA256 | 已交付 |
+| 10,000–20,000 位置 | 需要准确率合格的 Pilot | NOT RUN |
+| CNN、TCN ONNX/nncase | 真实导出、编译与 Simulator 输出 | 已实施 |
+| GRU ONNX/nncase | 原 GRU 导入失败，等价固定步展开后 GRU4/8 编译与 Simulator 通过 | 已实施，量化精度待验收 |
+| CPU Temporal Filter | 软先验、时间间隔、全局概率底、LOST 后全图恢复 | 已实施，量化及实车置信度待校准 |
+| D 路线 KFNet 思想 | 独立备用说明与现有不确定度融合 | 已记录，D 训练 NOT RUN |
+| Runtime/compiler | 历史设备 v1.8-36-gae2f20d/runtime 2.11.0，主机 compiler/plugin 2.11.0 | 历史证据与本轮编译明确，当前设备 NOT RUN |
+| FPS、延迟、内存和稳定性 | R2 独立入口、阶段计时、堆与 MMZ、异常退出记录 | 当前模型真机测试 NOT RUN |
+| 模型与 fallback | 暂留 a06 A 与 a06 TCN4 为固定实验对照，最新 a08 作为对照结果 | 尚无达到比赛定位验收的方案 |
+
+离线证据支持保留多个位置候选。a08 TCN4 的干净测试中位误差为 680.4 mm、P95 为 1,950.7 mm，远场恢复 0/10。a08 A 的中位误差为 792.9 mm、P95 为 2,032.4 mm，恢复 6/10。不能据此宣布比赛可用。
+
+地板语义模板在 20 张验证与测试首帧上的两个蓝区得分完全打平。即使人工给出正确蓝区，a06 时间间隔滤波回放的 A 中位误差仍为 531.5 mm、P95 为 1,756.6 mm。物理场景中的方向与地标信息需要实拍验证。继续扩大同样的仿真分布尚缺准确率依据。
+
+## 集中人工介入
+
+以下资料可以一次性准备，恢复后按同一回放入口验收。
+
+1. **两处起点的 OV2735 原始录像或 RGB 序列。** 每处从蓝区静止开始，经过离区、直道、转弯和首个能区分场地方位的可见地标。保留原始分辨率、方向和时间戳。附两个片段各自的出发区编号，仅用于评估。
+2. **用于量化误差的光心 XY 参考点。** 在两个蓝区、路口及地标附近标注若干实际拍摄帧，提供相机光心在场地平面的测量 XY、测量方法和大致误差。坐标原点为场地中心，x 向官方图右，y 向上，单位 mm。车体机械安装偏移按用户安排在控制层处理。
+3. **实际相机配置。** 提供录像的分辨率和帧率、镜头型号、相机大致离地高度、朝下或倾斜的安装视角，以及是否存在软件旋转、镜像或裁切。它们作为数据与预处理配置。
+4. **板端验收条件。** 后续连接并上电 K230 与 OV2735，提供空闲测试时段。恢复后由 Agent 确认 UVC ID、固件/runtime、模型文件，运行独立目录的短测和持续测试，采集完整 FPS、延迟、内存与清理记录。
+
+先使用第 1、3 项便可验证真实画面的可辨识性。第 2 项用于测量定位误差与校准有效性，第 4 项用于嵌入式性能和稳定性。未知最大光心移动速度时继续使用全局软支持。后续测得保守移动范围后，再评价是否启用更紧的运动约束。
+
+## 恢复入口
+
+源代码包提供 OFFLINE_REPLAY.md、replay_camera.py 和 prepare_recording.py。先用录像生成清单，运行 A 与 TCN4，再按同一输入比较全部五组模型。通过真实光心误差与可靠恢复的验收后，再安排扩大数据和正式训练。 [离线回放说明](OFFLINE_REPLAY.md) · [a08 报告](cloud/gray-map-pilot-a08/REPORT.md) · [板端入口](map-correction/BOARD_MULTIROUTE.md)
+
+
+交付文件均位于本目录。源码压缩包先读 START_HERE.md，各 ZIP 的外部收据与内置 SHA256_MANIFEST.json 已逐字节复核。
+
+| 文件 | 内容 |
+|---|---|
+| [K230_Temporal_Offline_Source_And_Evidence_R1.zip](K230_Temporal_Offline_Source_And_Evidence_R1.zip) | 源码、配置、证据、回放工具与集中人工介入说明 |
+| [K230_Official_Gray_Map_And_1100_Frame_Data_R1.zip](K230_Official_Gray_Map_And_1100_Frame_Data_R1.zip) | 官方灰道场景与原始100/1000帧数据 |
+| [K230_Official_Gray_Map_AI2D_Sensor_Smoke_R1.zip](K230_Official_Gray_Map_AI2D_Sensor_Smoke_R1.zip) | 640×360源渲染100帧与AI2D像素证据 |
+| [K230_Official_Gray_Map_AI2D_Pilot_A08_Data.zip](K230_Official_Gray_Map_AI2D_Pilot_A08_Data.zip) | 部署等效输入的1000帧Pilot与语义掩码 |
+| [K230_Official_Gray_Map_Pilot_A06_Models.zip](K230_Official_Gray_Map_Pilot_A06_Models.zip) | 当前实验A/TCN4基准及同轮五路线模型 |
+| [K230_Official_Gray_Map_Pilot_A07_Models.zip](K230_Official_Gray_Map_Pilot_A07_Models.zip) | RGB投影微调五路线模型及A/TCN4编译 |
+| [K230_Official_Gray_Map_Pilot_A08_Models.zip](K230_Official_Gray_Map_Pilot_A08_Models.zip) | 最新部署像素对齐的五组权重、ONNX与训练记录 |
+| [K230_Official_Gray_Map_GRU_Fixed_Window_KModels_R1.zip](K230_Official_Gray_Map_GRU_Fixed_Window_KModels_R1.zip) | a07 GRU4/8等价展开ONNX与KModel |
+| [K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip](K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip) | a06 A/TCN4独立板端测试入口与配置 |

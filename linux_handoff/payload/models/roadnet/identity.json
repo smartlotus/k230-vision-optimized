@@ -1,0 +1,30 @@
+{
+  "schema": "k230-roadnet-kmodel-identity-v1",
+  "kmodel_sha256": "cba11c87ce36305ffac6dee18b65b4f1e5b47070e00a2f9e706d0aee72a4980e",
+  "onnx_sha256": "7e6b6d6b0d58b985d34c178299f256ae57fce958b50f07c6e69ee9872665cbb5",
+  "checkpoint_sha256": "8c951c45ed32cb65b5e099a91bc1877fc8f314241d4b75eb14bbc4f94298bb6d",
+  "dataset_manifest_sha256": "6b0ae049692a18d2378d7db34e7a1e6793cf7b436913f6a060c3611e38e62543",
+  "input_rgb_uint8_nchw": [
+    1,
+    3,
+    192,
+    320
+  ],
+  "content_rgb_hw": [
+    180,
+    320
+  ],
+  "pad_top_bottom": 6,
+  "pad_value": 114,
+  "output_logits_nchw": [
+    1,
+    7,
+    192,
+    320
+  ],
+  "compiler": {
+    "nncase": "2.11.0",
+    "nncase-kpu": "2.11.0"
+  },
+  "board_test": "NOT_RUN"
+}

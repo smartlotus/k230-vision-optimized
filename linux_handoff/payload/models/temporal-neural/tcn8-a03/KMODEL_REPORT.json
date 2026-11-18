@@ -1,0 +1,1887 @@
+{
+  "status": "COMPILE_AND_SIMULATOR_PASS",
+  "route": "tcn",
+  "window": 8,
+  "input_shape": [
+    1,
+    24,
+    96,
+    160
+  ],
+  "input_type": "uint8",
+  "compiler": {
+    "nncase": "2.11.0",
+    "nncase-kpu": "2.11.0"
+  },
+  "dataset_manifest_sha256": "90e05cacc96118ff7ec35871bec0fba5e5458799c5f620a3ad3bb84d9b8fe0df",
+  "parent_sha256": "51df7fb18b76a305a0360eb3a7fd788fe71994aeffeb35b1766912f481ff8f05",
+  "training_manifest_sha256": "94d12969b1b68122c2ab5193340a05ff05021dc07ace1ab989fa1acea532c22e",
+  "float_onnx_sha256": "f03b11fc0381da12b8828d4c0c9a767681a8119b5f2a0310f2c8a816b7607068",
+  "checkpoint_sha256": "de6e454338f71742e0ba5989385a71c64522fb21ee936e01fe092c79af9df55a",
+  "uint8_onnx_sha256": "b741332ef8559732e5d865d927fb55fd46392b1cecad9a2919bc6a5180ad42bb",
+  "kmodel_sha256": "3a887066753a549cf06b2ca304abe6530d1d67e6aab50a5dec5b6408799de9ca",
+  "kmodel_bytes": 539120,
+  "normalization": "Cast and divide by 255 inside graph; compiler preprocessing disabled",
+  "ptq": {
+    "activation": "int16",
+    "samples": 100,
+    "ids": [
+      "geo-landmark_train-00-nominal-000",
+      "geo-landmark_train-00-nominal-005",
+      "geo-landmark_train-00-nominal-010",
+      "geo-landmark_train-00-nominal-015",
+      "geo-landmark_train-00-nominal-020",
+      "geo-landmark_train-01-nominal-000",
+      "geo-landmark_train-01-nominal-005",
+      "geo-landmark_train-01-nominal-010",
+      "geo-landmark_train-01-nominal-015",
+      "geo-landmark_train-01-nominal-020",
+      "geo-landmark_train-02-nominal-000",
+      "geo-landmark_train-02-nominal-005",
+      "geo-landmark_train-02-nominal-010",
+      "geo-landmark_train-02-nominal-015",
+      "geo-landmark_train-02-nominal-020",
+      "geo-landmark_train-03-nominal-000",
+      "geo-landmark_train-03-nominal-005",
+      "geo-landmark_train-03-nominal-010",
+      "geo-landmark_train-03-nominal-015",
+      "geo-landmark_train-03-nominal-020",
+      "geo-landmark_train-04-warm-000",
+      "geo-landmark_train-04-warm-005",
+      "geo-landmark_train-04-warm-010",
+      "geo-landmark_train-04-warm-015",
+      "geo-landmark_train-04-warm-020",
+      "geo-landmark_train-05-warm-000",
+      "geo-landmark_train-05-warm-005",
+      "geo-landmark_train-05-warm-010",
+      "geo-landmark_train-05-warm-015",
+      "geo-landmark_train-05-warm-020",
+      "geo-landmark_train-06-cool-000",
+      "geo-landmark_train-06-cool-005",
+      "geo-landmark_train-06-cool-010",
+      "geo-landmark_train-06-cool-015",
+      "geo-landmark_train-06-cool-020",
+      "geo-landmark_train-07-cool-000",
+      "geo-landmark_train-07-cool-005",
+      "geo-landmark_train-07-cool-010",
+      "geo-landmark_train-07-cool-015",
+      "geo-landmark_train-07-cool-020",
+      "geo-landmark_train-08-nominal-000",
+      "geo-landmark_train-08-nominal-005",
+      "geo-landmark_train-08-nominal-010",
+      "geo-landmark_train-08-nominal-015",
+      "geo-landmark_train-08-nominal-020",
+      "geo-landmark_train-09-nominal-000",
+      "geo-landmark_train-09-nominal-005",
+      "geo-landmark_train-09-nominal-010",
+      "geo-landmark_train-09-nominal-015",
+      "geo-landmark_train-09-nominal-020",
+      "geo-landmark_train-10-nominal-000",
+      "geo-landmark_train-10-nominal-005",
+      "geo-landmark_train-10-nominal-010",
+      "geo-landmark_train-10-nominal-015",
+      "geo-landmark_train-10-nominal-020",
+      "geo-landmark_train-11-nominal-000",
+      "geo-landmark_train-11-nominal-005",
+      "geo-landmark_train-11-nominal-010",
+      "geo-landmark_train-11-nominal-015",
+      "geo-landmark_train-11-nominal-020",
+      "geo-landmark_train-12-warm-000",
+      "geo-landmark_train-12-warm-005",
+      "geo-landmark_train-12-warm-010",
+      "geo-landmark_train-12-warm-015",
+      "geo-landmark_train-12-warm-020",
+      "geo-landmark_train-13-warm-000",
+      "geo-landmark_train-13-warm-005",
+      "geo-landmark_train-13-warm-010",
+      "geo-landmark_train-13-warm-015",
+      "geo-landmark_train-13-warm-020",
+      "geo-landmark_train-14-cool-000",
+      "geo-landmark_train-14-cool-005",
+      "geo-landmark_train-14-cool-010",
+      "geo-landmark_train-14-cool-015",
+      "geo-landmark_train-14-cool-020",
+      "geo-landmark_train-15-cool-000",
+      "geo-landmark_train-15-cool-005",
+      "geo-landmark_train-15-cool-010",
+      "geo-landmark_train-15-cool-015",
+      "geo-landmark_train-15-cool-020",
+      "geo-landmark_train-16-nominal-000",
+      "geo-landmark_train-16-nominal-005",
+      "geo-landmark_train-16-nominal-010",
+      "geo-landmark_train-16-nominal-015",
+      "geo-landmark_train-16-nominal-020",
+      "geo-landmark_train-17-nominal-000",
+      "geo-landmark_train-17-nominal-005",
+      "geo-landmark_train-17-nominal-010",
+      "geo-landmark_train-17-nominal-015",
+      "geo-landmark_train-17-nominal-020",
+      "geo-landmark_train-18-nominal-000",
+      "geo-landmark_train-18-nominal-005",
+      "geo-landmark_train-18-nominal-010",
+      "geo-landmark_train-18-nominal-015",
+      "geo-landmark_train-18-nominal-020",
+      "geo-landmark_train-19-nominal-000",
+      "geo-landmark_train-19-nominal-005",
+      "geo-landmark_train-19-nominal-010",
+      "geo-landmark_train-19-nominal-015",
+      "geo-landmark_train-19-nominal-020"
+    ]
+  },
+  "evaluation_split": "test",
+  "evaluated_frames": 250,
+  "pairs": [
+    {
+      "sample_id": "geo-spatial_west-00-nominal-000",
+      "anchor_same": true,
+      "onnx_error_mm": 2092.6935183822516,
+      "kmodel_error_mm": 2092.6935183822516,
+      "host_simulator_seconds": 1.3302086999992753
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-001",
+      "anchor_same": true,
+      "onnx_error_mm": 30.79630043615392,
+      "kmodel_error_mm": 30.79630043615392,
+      "host_simulator_seconds": 1.4318436000012298
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-002",
+      "anchor_same": true,
+      "onnx_error_mm": 151.779392670116,
+      "kmodel_error_mm": 151.779392670116,
+      "host_simulator_seconds": 1.4863710999998148
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-003",
+      "anchor_same": true,
+      "onnx_error_mm": 300.1954957337529,
+      "kmodel_error_mm": 300.1954957337529,
+      "host_simulator_seconds": 1.5495977999999013
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-004",
+      "anchor_same": true,
+      "onnx_error_mm": 516.3909232303002,
+      "kmodel_error_mm": 516.3909232303002,
+      "host_simulator_seconds": 1.4416254999996454
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-005",
+      "anchor_same": true,
+      "onnx_error_mm": 782.8754115210583,
+      "kmodel_error_mm": 782.8754115210583,
+      "host_simulator_seconds": 1.3678768999998283
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-006",
+      "anchor_same": true,
+      "onnx_error_mm": 1149.324199409121,
+      "kmodel_error_mm": 1149.324199409121,
+      "host_simulator_seconds": 1.337121799999295
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-007",
+      "anchor_same": true,
+      "onnx_error_mm": 1219.9522864491425,
+      "kmodel_error_mm": 1219.9522864491425,
+      "host_simulator_seconds": 1.371223899999677
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-008",
+      "anchor_same": true,
+      "onnx_error_mm": 1253.3489434740895,
+      "kmodel_error_mm": 1253.3489434740895,
+      "host_simulator_seconds": 1.3744459000008646
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-009",
+      "anchor_same": true,
+      "onnx_error_mm": 1186.7924786971603,
+      "kmodel_error_mm": 1186.7924786971603,
+      "host_simulator_seconds": 1.3705844999985857
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-010",
+      "anchor_same": true,
+      "onnx_error_mm": 1668.196264502264,
+      "kmodel_error_mm": 1668.196264502264,
+      "host_simulator_seconds": 1.3923510999993596
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-011",
+      "anchor_same": true,
+      "onnx_error_mm": 1601.5863308907024,
+      "kmodel_error_mm": 1601.5863308907024,
+      "host_simulator_seconds": 1.3369228999999905
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-012",
+      "anchor_same": true,
+      "onnx_error_mm": 1502.823600395986,
+      "kmodel_error_mm": 1502.823600395986,
+      "host_simulator_seconds": 1.307111399999485
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-013",
+      "anchor_same": true,
+      "onnx_error_mm": 1502.426695657107,
+      "kmodel_error_mm": 1502.426695657107,
+      "host_simulator_seconds": 1.318126799998936
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-014",
+      "anchor_same": true,
+      "onnx_error_mm": 1226.7350050470448,
+      "kmodel_error_mm": 1226.7350050470448,
+      "host_simulator_seconds": 1.3350171000001865
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-015",
+      "anchor_same": true,
+      "onnx_error_mm": 1709.6499055299305,
+      "kmodel_error_mm": 1709.6499055299305,
+      "host_simulator_seconds": 1.3217053000007581
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-016",
+      "anchor_same": true,
+      "onnx_error_mm": 1665.2635771536143,
+      "kmodel_error_mm": 1665.2635771536143,
+      "host_simulator_seconds": 1.355962300000101
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-017",
+      "anchor_same": false,
+      "onnx_error_mm": 2210.813864378412,
+      "kmodel_error_mm": 2422.7887118489934,
+      "host_simulator_seconds": 1.3870624000010139
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-018",
+      "anchor_same": true,
+      "onnx_error_mm": 2193.388894260982,
+      "kmodel_error_mm": 2193.388894260982,
+      "host_simulator_seconds": 1.4262281000010262
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-019",
+      "anchor_same": true,
+      "onnx_error_mm": 1950.3495699685857,
+      "kmodel_error_mm": 1950.3495699685857,
+      "host_simulator_seconds": 1.34905660000004
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-020",
+      "anchor_same": true,
+      "onnx_error_mm": 182.54111205632114,
+      "kmodel_error_mm": 182.54111205632114,
+      "host_simulator_seconds": 1.3354228000007424
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-021",
+      "anchor_same": true,
+      "onnx_error_mm": 214.74362355957902,
+      "kmodel_error_mm": 214.74362355957902,
+      "host_simulator_seconds": 1.3800563000004331
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-022",
+      "anchor_same": true,
+      "onnx_error_mm": 436.0167145773409,
+      "kmodel_error_mm": 436.0167145773409,
+      "host_simulator_seconds": 1.3767363000006299
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-023",
+      "anchor_same": true,
+      "onnx_error_mm": 768.0101034260566,
+      "kmodel_error_mm": 768.0101034260566,
+      "host_simulator_seconds": 1.365966199999093
+    },
+    {
+      "sample_id": "geo-spatial_west-00-nominal-024",
+      "anchor_same": true,
+      "onnx_error_mm": 31.660549571046968,
+      "kmodel_error_mm": 31.660549571046968,
+      "host_simulator_seconds": 1.2418711000009353
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-000",
+      "anchor_same": true,
+      "onnx_error_mm": 2043.5633372469026,
+      "kmodel_error_mm": 2043.5633372469026,
+      "host_simulator_seconds": 1.3051678000010725
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-001",
+      "anchor_same": true,
+      "onnx_error_mm": 1978.6406712573666,
+      "kmodel_error_mm": 1978.6406712573666,
+      "host_simulator_seconds": 1.2510972999989463
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-002",
+      "anchor_same": true,
+      "onnx_error_mm": 1889.4720883465109,
+      "kmodel_error_mm": 1889.4720883465109,
+      "host_simulator_seconds": 1.245947100000194
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-003",
+      "anchor_same": true,
+      "onnx_error_mm": 83.15767589753693,
+      "kmodel_error_mm": 83.15767589753693,
+      "host_simulator_seconds": 1.2874719999999797
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-004",
+      "anchor_same": true,
+      "onnx_error_mm": 374.84019536178323,
+      "kmodel_error_mm": 374.84019536178323,
+      "host_simulator_seconds": 1.3166470999985904
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-005",
+      "anchor_same": true,
+      "onnx_error_mm": 2208.3698632323703,
+      "kmodel_error_mm": 2208.3698632323703,
+      "host_simulator_seconds": 1.2725848000009137
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-006",
+      "anchor_same": true,
+      "onnx_error_mm": 2340.3059469952336,
+      "kmodel_error_mm": 2340.3059469952336,
+      "host_simulator_seconds": 1.2903848999994807
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-007",
+      "anchor_same": true,
+      "onnx_error_mm": 2160.1072881469354,
+      "kmodel_error_mm": 2160.1072881469354,
+      "host_simulator_seconds": 1.2758400999991864
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-008",
+      "anchor_same": true,
+      "onnx_error_mm": 2110.860252938334,
+      "kmodel_error_mm": 2110.860252938334,
+      "host_simulator_seconds": 1.2655207000007067
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-009",
+      "anchor_same": true,
+      "onnx_error_mm": 1526.7106621690277,
+      "kmodel_error_mm": 1526.7106621690277,
+      "host_simulator_seconds": 1.3812495000001945
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-010",
+      "anchor_same": false,
+      "onnx_error_mm": 1107.3972232458539,
+      "kmodel_error_mm": 1301.3055263290635,
+      "host_simulator_seconds": 1.3948565999999119
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-011",
+      "anchor_same": true,
+      "onnx_error_mm": 1298.4781385397719,
+      "kmodel_error_mm": 1298.4781385397719,
+      "host_simulator_seconds": 1.3511809999999969
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-012",
+      "anchor_same": true,
+      "onnx_error_mm": 1397.6571386862777,
+      "kmodel_error_mm": 1397.6571386862777,
+      "host_simulator_seconds": 1.2800993000000744
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-013",
+      "anchor_same": true,
+      "onnx_error_mm": 1503.3447637549748,
+      "kmodel_error_mm": 1503.3447637549748,
+      "host_simulator_seconds": 1.2520292999997764
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-014",
+      "anchor_same": true,
+      "onnx_error_mm": 1700.7144995104513,
+      "kmodel_error_mm": 1700.7144995104513,
+      "host_simulator_seconds": 1.2905243000004702
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-015",
+      "anchor_same": true,
+      "onnx_error_mm": 1943.8270240780375,
+      "kmodel_error_mm": 1943.8270240780375,
+      "host_simulator_seconds": 1.2947470999988582
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-016",
+      "anchor_same": true,
+      "onnx_error_mm": 2252.279898097103,
+      "kmodel_error_mm": 2252.279898097103,
+      "host_simulator_seconds": 1.2424867999998241
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-017",
+      "anchor_same": true,
+      "onnx_error_mm": 2352.9055847371396,
+      "kmodel_error_mm": 2352.9055847371396,
+      "host_simulator_seconds": 1.2682757000002312
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-018",
+      "anchor_same": false,
+      "onnx_error_mm": 2544.533353220833,
+      "kmodel_error_mm": 2576.269949245137,
+      "host_simulator_seconds": 1.2802961000015785
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-019",
+      "anchor_same": true,
+      "onnx_error_mm": 676.7603215435404,
+      "kmodel_error_mm": 676.7603215435404,
+      "host_simulator_seconds": 1.240175900000395
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-020",
+      "anchor_same": true,
+      "onnx_error_mm": 312.1669330207323,
+      "kmodel_error_mm": 312.1669330207323,
+      "host_simulator_seconds": 1.2837319999998726
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-021",
+      "anchor_same": false,
+      "onnx_error_mm": 106.3492944411594,
+      "kmodel_error_mm": 35.478413499766155,
+      "host_simulator_seconds": 1.282566100000622
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-022",
+      "anchor_same": true,
+      "onnx_error_mm": 297.21225988583416,
+      "kmodel_error_mm": 297.21225988583416,
+      "host_simulator_seconds": 1.2509700000009616
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-023",
+      "anchor_same": true,
+      "onnx_error_mm": 75.41265186472151,
+      "kmodel_error_mm": 75.41265186472151,
+      "host_simulator_seconds": 1.2641896000004635
+    },
+    {
+      "sample_id": "geo-spatial_west-01-nominal-024",
+      "anchor_same": true,
+      "onnx_error_mm": 46.8985893718001,
+      "kmodel_error_mm": 46.8985893718001,
+      "host_simulator_seconds": 1.2844855000003008
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-000",
+      "anchor_same": false,
+      "onnx_error_mm": 101.65122268904913,
+      "kmodel_error_mm": 46.6305830435812,
+      "host_simulator_seconds": 1.2777788000003056
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-001",
+      "anchor_same": true,
+      "onnx_error_mm": 106.16609565366375,
+      "kmodel_error_mm": 106.16609565366375,
+      "host_simulator_seconds": 1.2736048000006122
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-002",
+      "anchor_same": true,
+      "onnx_error_mm": 41.2217481310721,
+      "kmodel_error_mm": 41.2217481310721,
+      "host_simulator_seconds": 1.3274302000008902
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-003",
+      "anchor_same": true,
+      "onnx_error_mm": 381.95101605909275,
+      "kmodel_error_mm": 381.95101605909275,
+      "host_simulator_seconds": 1.3105716000009124
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-004",
+      "anchor_same": true,
+      "onnx_error_mm": 502.4636946312912,
+      "kmodel_error_mm": 502.4636946312912,
+      "host_simulator_seconds": 1.257149600000048
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-005",
+      "anchor_same": true,
+      "onnx_error_mm": 872.8020612237465,
+      "kmodel_error_mm": 872.8020612237465,
+      "host_simulator_seconds": 1.305288699999437
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-006",
+      "anchor_same": true,
+      "onnx_error_mm": 1142.9391235501496,
+      "kmodel_error_mm": 1142.9391235501496,
+      "host_simulator_seconds": 1.29156200000034
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-007",
+      "anchor_same": true,
+      "onnx_error_mm": 1066.8929985683656,
+      "kmodel_error_mm": 1066.8929985683656,
+      "host_simulator_seconds": 1.302654999999504
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-008",
+      "anchor_same": true,
+      "onnx_error_mm": 967.0993325318361,
+      "kmodel_error_mm": 967.0993325318361,
+      "host_simulator_seconds": 1.320514999999432
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-009",
+      "anchor_same": true,
+      "onnx_error_mm": 1002.1433826708852,
+      "kmodel_error_mm": 1002.1433826708852,
+      "host_simulator_seconds": 1.328806400000758
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-010",
+      "anchor_same": true,
+      "onnx_error_mm": 1664.1665903786381,
+      "kmodel_error_mm": 1664.1665903786381,
+      "host_simulator_seconds": 1.3833176999996795
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-011",
+      "anchor_same": true,
+      "onnx_error_mm": 1561.297677853103,
+      "kmodel_error_mm": 1561.297677853103,
+      "host_simulator_seconds": 1.299484700000903
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-012",
+      "anchor_same": true,
+      "onnx_error_mm": 1464.599070578808,
+      "kmodel_error_mm": 1464.599070578808,
+      "host_simulator_seconds": 1.3677514000009978
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-013",
+      "anchor_same": true,
+      "onnx_error_mm": 1293.1670885673361,
+      "kmodel_error_mm": 1293.1670885673361,
+      "host_simulator_seconds": 1.4767463999996835
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-014",
+      "anchor_same": false,
+      "onnx_error_mm": 1101.4950503567388,
+      "kmodel_error_mm": 1142.4014699180507,
+      "host_simulator_seconds": 1.3443394000005355
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-015",
+      "anchor_same": true,
+      "onnx_error_mm": 1165.5258247511536,
+      "kmodel_error_mm": 1165.5258247511536,
+      "host_simulator_seconds": 1.3098128000001452
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-016",
+      "anchor_same": true,
+      "onnx_error_mm": 1124.56677715318,
+      "kmodel_error_mm": 1124.56677715318,
+      "host_simulator_seconds": 1.2963736000001518
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-017",
+      "anchor_same": true,
+      "onnx_error_mm": 2115.9417495874764,
+      "kmodel_error_mm": 2115.9417495874764,
+      "host_simulator_seconds": 1.2733516000007512
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-018",
+      "anchor_same": true,
+      "onnx_error_mm": 2347.7899346520826,
+      "kmodel_error_mm": 2347.7899346520826,
+      "host_simulator_seconds": 1.2685568000015337
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-019",
+      "anchor_same": true,
+      "onnx_error_mm": 1931.5637072274228,
+      "kmodel_error_mm": 1931.5637072274228,
+      "host_simulator_seconds": 1.2828212000003987
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-020",
+      "anchor_same": true,
+      "onnx_error_mm": 162.24144598630434,
+      "kmodel_error_mm": 162.24144598630434,
+      "host_simulator_seconds": 1.330596499999956
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-021",
+      "anchor_same": true,
+      "onnx_error_mm": 80.91233562762147,
+      "kmodel_error_mm": 80.91233562762147,
+      "host_simulator_seconds": 1.30345429999943
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-022",
+      "anchor_same": true,
+      "onnx_error_mm": 491.29958767630364,
+      "kmodel_error_mm": 491.29958767630364,
+      "host_simulator_seconds": 1.30704440000045
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-023",
+      "anchor_same": true,
+      "onnx_error_mm": 2010.0827130014789,
+      "kmodel_error_mm": 2010.0827130014789,
+      "host_simulator_seconds": 1.262067700001353
+    },
+    {
+      "sample_id": "geo-spatial_west-02-nominal-024",
+      "anchor_same": true,
+      "onnx_error_mm": 60.03540202032307,
+      "kmodel_error_mm": 60.03540202032307,
+      "host_simulator_seconds": 1.2521739000003436
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-000",
+      "anchor_same": true,
+      "onnx_error_mm": 2121.3169893025633,
+      "kmodel_error_mm": 2121.3169893025633,
+      "host_simulator_seconds": 1.2868478000000323
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-001",
+      "anchor_same": true,
+      "onnx_error_mm": 1924.0531805361918,
+      "kmodel_error_mm": 1924.0531805361918,
+      "host_simulator_seconds": 1.2588692999997875
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-002",
+      "anchor_same": true,
+      "onnx_error_mm": 1761.61477648614,
+      "kmodel_error_mm": 1761.61477648614,
+      "host_simulator_seconds": 1.3373702999997477
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-003",
+      "anchor_same": false,
+      "onnx_error_mm": 2076.5429430185904,
+      "kmodel_error_mm": 125.47241526411037,
+      "host_simulator_seconds": 1.275954399998227
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-004",
+      "anchor_same": true,
+      "onnx_error_mm": 371.5912467690301,
+      "kmodel_error_mm": 371.5912467690301,
+      "host_simulator_seconds": 1.2953785999998217
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-005",
+      "anchor_same": true,
+      "onnx_error_mm": 2201.2907043936107,
+      "kmodel_error_mm": 2201.2907043936107,
+      "host_simulator_seconds": 1.3351428000005399
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-006",
+      "anchor_same": true,
+      "onnx_error_mm": 2330.4692023133866,
+      "kmodel_error_mm": 2330.4692023133866,
+      "host_simulator_seconds": 1.2797736000011355
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-007",
+      "anchor_same": true,
+      "onnx_error_mm": 2013.3343138354057,
+      "kmodel_error_mm": 2013.3343138354057,
+      "host_simulator_seconds": 1.3007512000003771
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-008",
+      "anchor_same": true,
+      "onnx_error_mm": 1902.1343551629404,
+      "kmodel_error_mm": 1902.1343551629404,
+      "host_simulator_seconds": 1.3134723999992275
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-009",
+      "anchor_same": true,
+      "onnx_error_mm": 1794.9693765454815,
+      "kmodel_error_mm": 1794.9693765454815,
+      "host_simulator_seconds": 1.2832053000001906
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-010",
+      "anchor_same": true,
+      "onnx_error_mm": 1291.5823585995822,
+      "kmodel_error_mm": 1291.5823585995822,
+      "host_simulator_seconds": 1.358917500001553
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-011",
+      "anchor_same": true,
+      "onnx_error_mm": 1402.9914431840511,
+      "kmodel_error_mm": 1402.9914431840511,
+      "host_simulator_seconds": 1.3010797000006278
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-012",
+      "anchor_same": true,
+      "onnx_error_mm": 1389.8524489101417,
+      "kmodel_error_mm": 1389.8524489101417,
+      "host_simulator_seconds": 1.2696293999997579
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-013",
+      "anchor_same": true,
+      "onnx_error_mm": 1595.9683891856012,
+      "kmodel_error_mm": 1595.9683891856012,
+      "host_simulator_seconds": 1.2501727000017127
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-014",
+      "anchor_same": true,
+      "onnx_error_mm": 1692.606008757811,
+      "kmodel_error_mm": 1692.606008757811,
+      "host_simulator_seconds": 1.3473723999995855
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-015",
+      "anchor_same": true,
+      "onnx_error_mm": 2184.765557902477,
+      "kmodel_error_mm": 2184.765557902477,
+      "host_simulator_seconds": 1.2445542000004934
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-016",
+      "anchor_same": true,
+      "onnx_error_mm": 2244.111301784675,
+      "kmodel_error_mm": 2244.111301784675,
+      "host_simulator_seconds": 1.2543060000007245
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-017",
+      "anchor_same": true,
+      "onnx_error_mm": 2345.0875220581074,
+      "kmodel_error_mm": 2345.0875220581074,
+      "host_simulator_seconds": 1.3856500000001688
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-018",
+      "anchor_same": true,
+      "onnx_error_mm": 1288.9120055649362,
+      "kmodel_error_mm": 1288.9120055649362,
+      "host_simulator_seconds": 1.2498197000004438
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-019",
+      "anchor_same": true,
+      "onnx_error_mm": 819.8164846482315,
+      "kmodel_error_mm": 819.8164846482315,
+      "host_simulator_seconds": 1.2498654000009992
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-020",
+      "anchor_same": true,
+      "onnx_error_mm": 401.1184094081922,
+      "kmodel_error_mm": 401.1184094081922,
+      "host_simulator_seconds": 1.300014000000374
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-021",
+      "anchor_same": true,
+      "onnx_error_mm": 40.504276196265636,
+      "kmodel_error_mm": 40.504276196265636,
+      "host_simulator_seconds": 1.28252220000104
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-022",
+      "anchor_same": true,
+      "onnx_error_mm": 339.0908599428071,
+      "kmodel_error_mm": 339.0908599428071,
+      "host_simulator_seconds": 1.2718873000012536
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-023",
+      "anchor_same": true,
+      "onnx_error_mm": 62.12198899083024,
+      "kmodel_error_mm": 62.12198899083024,
+      "host_simulator_seconds": 1.293894200000068
+    },
+    {
+      "sample_id": "geo-spatial_west-03-nominal-024",
+      "anchor_same": true,
+      "onnx_error_mm": 48.3328209699661,
+      "kmodel_error_mm": 48.3328209699661,
+      "host_simulator_seconds": 1.278040900000633
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-000",
+      "anchor_same": true,
+      "onnx_error_mm": 2117.3834564382178,
+      "kmodel_error_mm": 2117.3834564382178,
+      "host_simulator_seconds": 1.2667725999999675
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-001",
+      "anchor_same": true,
+      "onnx_error_mm": 51.29901845169097,
+      "kmodel_error_mm": 51.29901845169097,
+      "host_simulator_seconds": 1.3037307999984478
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-002",
+      "anchor_same": true,
+      "onnx_error_mm": 120.53412202317034,
+      "kmodel_error_mm": 120.53412202317034,
+      "host_simulator_seconds": 1.2660551000008127
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-003",
+      "anchor_same": true,
+      "onnx_error_mm": 177.9734624962804,
+      "kmodel_error_mm": 177.9734624962804,
+      "host_simulator_seconds": 1.3296748000011576
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-004",
+      "anchor_same": true,
+      "onnx_error_mm": 500.79512155529255,
+      "kmodel_error_mm": 500.79512155529255,
+      "host_simulator_seconds": 1.3558699999994133
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-005",
+      "anchor_same": true,
+      "onnx_error_mm": 774.7426847868026,
+      "kmodel_error_mm": 774.7426847868026,
+      "host_simulator_seconds": 1.3429966999992757
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-006",
+      "anchor_same": true,
+      "onnx_error_mm": 1147.393373157218,
+      "kmodel_error_mm": 1147.393373157218,
+      "host_simulator_seconds": 1.3162695999999414
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-007",
+      "anchor_same": true,
+      "onnx_error_mm": 1217.6534830253222,
+      "kmodel_error_mm": 1217.6534830253222,
+      "host_simulator_seconds": 1.2866971000003105
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-008",
+      "anchor_same": true,
+      "onnx_error_mm": 1637.8730112576725,
+      "kmodel_error_mm": 1637.8730112576725,
+      "host_simulator_seconds": 1.285024799999519
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-009",
+      "anchor_same": true,
+      "onnx_error_mm": 1866.3070534305464,
+      "kmodel_error_mm": 1866.3070534305464,
+      "host_simulator_seconds": 1.282259300000078
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-010",
+      "anchor_same": true,
+      "onnx_error_mm": 1666.6562337520509,
+      "kmodel_error_mm": 1666.6562337520509,
+      "host_simulator_seconds": 1.289833799999542
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-011",
+      "anchor_same": true,
+      "onnx_error_mm": 1599.9821873699736,
+      "kmodel_error_mm": 1599.9821873699736,
+      "host_simulator_seconds": 1.2554841000001034
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-012",
+      "anchor_same": true,
+      "onnx_error_mm": 1501.1139192321205,
+      "kmodel_error_mm": 1501.1139192321205,
+      "host_simulator_seconds": 1.2518087999997078
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-013",
+      "anchor_same": true,
+      "onnx_error_mm": 1409.2348978993584,
+      "kmodel_error_mm": 1409.2348978993584,
+      "host_simulator_seconds": 1.3058063999997103
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-014",
+      "anchor_same": true,
+      "onnx_error_mm": 1427.3221423791135,
+      "kmodel_error_mm": 1427.3221423791135,
+      "host_simulator_seconds": 1.276361199999883
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-015",
+      "anchor_same": true,
+      "onnx_error_mm": 1690.3928588651177,
+      "kmodel_error_mm": 1690.3928588651177,
+      "host_simulator_seconds": 1.2775578000000678
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-016",
+      "anchor_same": true,
+      "onnx_error_mm": 1663.0177390904278,
+      "kmodel_error_mm": 1663.0177390904278,
+      "host_simulator_seconds": 1.3653653999990638
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-017",
+      "anchor_same": true,
+      "onnx_error_mm": 2283.7887294521497,
+      "kmodel_error_mm": 2283.7887294521497,
+      "host_simulator_seconds": 1.2745934999984456
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-018",
+      "anchor_same": true,
+      "onnx_error_mm": 2279.6634592698024,
+      "kmodel_error_mm": 2279.6634592698024,
+      "host_simulator_seconds": 1.2886029000001145
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-019",
+      "anchor_same": true,
+      "onnx_error_mm": 2038.088246566931,
+      "kmodel_error_mm": 2038.088246566931,
+      "host_simulator_seconds": 1.3070520000001125
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-020",
+      "anchor_same": true,
+      "onnx_error_mm": 175.69053054222064,
+      "kmodel_error_mm": 175.69053054222064,
+      "host_simulator_seconds": 1.363691900000049
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-021",
+      "anchor_same": true,
+      "onnx_error_mm": 239.93599118875687,
+      "kmodel_error_mm": 239.93599118875687,
+      "host_simulator_seconds": 1.3861035999998421
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-022",
+      "anchor_same": true,
+      "onnx_error_mm": 397.33247117992136,
+      "kmodel_error_mm": 397.33247117992136,
+      "host_simulator_seconds": 1.3476159999991069
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-023",
+      "anchor_same": true,
+      "onnx_error_mm": 95.72243694490281,
+      "kmodel_error_mm": 95.72243694490281,
+      "host_simulator_seconds": 1.2360971000016434
+    },
+    {
+      "sample_id": "geo-spatial_west-04-nominal-024",
+      "anchor_same": true,
+      "onnx_error_mm": 37.36283217022115,
+      "kmodel_error_mm": 37.36283217022115,
+      "host_simulator_seconds": 1.3241873999995732
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-000",
+      "anchor_same": true,
+      "onnx_error_mm": 60.02873282992479,
+      "kmodel_error_mm": 60.02873282992479,
+      "host_simulator_seconds": 1.3003289000007499
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-001",
+      "anchor_same": false,
+      "onnx_error_mm": 38.73399893693901,
+      "kmodel_error_mm": 1993.7780933966717,
+      "host_simulator_seconds": 1.2917326000006142
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-002",
+      "anchor_same": true,
+      "onnx_error_mm": 1958.4207219671412,
+      "kmodel_error_mm": 1958.4207219671412,
+      "host_simulator_seconds": 1.2844965999993292
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-003",
+      "anchor_same": true,
+      "onnx_error_mm": 67.155550685492,
+      "kmodel_error_mm": 67.155550685492,
+      "host_simulator_seconds": 1.3520097000000533
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-004",
+      "anchor_same": true,
+      "onnx_error_mm": 596.0152618997439,
+      "kmodel_error_mm": 596.0152618997439,
+      "host_simulator_seconds": 1.2725988000001962
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-005",
+      "anchor_same": true,
+      "onnx_error_mm": 2176.0774818046016,
+      "kmodel_error_mm": 2176.0774818046016,
+      "host_simulator_seconds": 1.2602738999994472
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-006",
+      "anchor_same": true,
+      "onnx_error_mm": 2352.924644520278,
+      "kmodel_error_mm": 2352.924644520278,
+      "host_simulator_seconds": 1.2991550999995525
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-007",
+      "anchor_same": true,
+      "onnx_error_mm": 339.7409744321335,
+      "kmodel_error_mm": 339.7409744321335,
+      "host_simulator_seconds": 1.3765884000004007
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-008",
+      "anchor_same": true,
+      "onnx_error_mm": 460.46055332971827,
+      "kmodel_error_mm": 460.46055332971827,
+      "host_simulator_seconds": 1.2685361999992892
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-009",
+      "anchor_same": true,
+      "onnx_error_mm": 675.1473218755937,
+      "kmodel_error_mm": 675.1473218755937,
+      "host_simulator_seconds": 1.3300824999987526
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-010",
+      "anchor_same": true,
+      "onnx_error_mm": 1106.8510586192285,
+      "kmodel_error_mm": 1106.8510586192285,
+      "host_simulator_seconds": 1.2797979000006308
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-011",
+      "anchor_same": true,
+      "onnx_error_mm": 1411.4240809424955,
+      "kmodel_error_mm": 1411.4240809424955,
+      "host_simulator_seconds": 1.2486267000003863
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-012",
+      "anchor_same": true,
+      "onnx_error_mm": 1503.1692976239801,
+      "kmodel_error_mm": 1503.1692976239801,
+      "host_simulator_seconds": 1.312044700000115
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-013",
+      "anchor_same": true,
+      "onnx_error_mm": 1601.9107149614047,
+      "kmodel_error_mm": 1601.9107149614047,
+      "host_simulator_seconds": 1.2479442000003473
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-014",
+      "anchor_same": true,
+      "onnx_error_mm": 1736.0349291471803,
+      "kmodel_error_mm": 1736.0349291471803,
+      "host_simulator_seconds": 1.2341012000015326
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-015",
+      "anchor_same": true,
+      "onnx_error_mm": 2084.937626841132,
+      "kmodel_error_mm": 2084.937626841132,
+      "host_simulator_seconds": 1.3208486000003177
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-016",
+      "anchor_same": true,
+      "onnx_error_mm": 2181.0926050314124,
+      "kmodel_error_mm": 2181.0926050314124,
+      "host_simulator_seconds": 1.3213510999994469
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-017",
+      "anchor_same": true,
+      "onnx_error_mm": 1609.1979086815852,
+      "kmodel_error_mm": 1609.1979086815852,
+      "host_simulator_seconds": 1.2501165000012406
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-018",
+      "anchor_same": true,
+      "onnx_error_mm": 1050.4078961454215,
+      "kmodel_error_mm": 1050.4078961454215,
+      "host_simulator_seconds": 1.307854500000758
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-019",
+      "anchor_same": true,
+      "onnx_error_mm": 823.1154323542622,
+      "kmodel_error_mm": 823.1154323542622,
+      "host_simulator_seconds": 1.261838499998703
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-020",
+      "anchor_same": true,
+      "onnx_error_mm": 297.6398350124381,
+      "kmodel_error_mm": 297.6398350124381,
+      "host_simulator_seconds": 1.245939799999178
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-021",
+      "anchor_same": true,
+      "onnx_error_mm": 33.722046440855145,
+      "kmodel_error_mm": 33.722046440855145,
+      "host_simulator_seconds": 1.3630986999996821
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-022",
+      "anchor_same": true,
+      "onnx_error_mm": 45.02844490574357,
+      "kmodel_error_mm": 45.02844490574357,
+      "host_simulator_seconds": 1.3529753999991954
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-023",
+      "anchor_same": true,
+      "onnx_error_mm": 112.26717846710002,
+      "kmodel_error_mm": 112.26717846710002,
+      "host_simulator_seconds": 1.2755128999997396
+    },
+    {
+      "sample_id": "geo-spatial_west-05-nominal-024",
+      "anchor_same": true,
+      "onnx_error_mm": 72.26620504980697,
+      "kmodel_error_mm": 72.26620504980697,
+      "host_simulator_seconds": 1.3322196999997686
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-000",
+      "anchor_same": true,
+      "onnx_error_mm": 2105.195891941293,
+      "kmodel_error_mm": 2105.195891941293,
+      "host_simulator_seconds": 1.2820423999983177
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-001",
+      "anchor_same": true,
+      "onnx_error_mm": 2085.4095353012012,
+      "kmodel_error_mm": 2085.4095353012012,
+      "host_simulator_seconds": 1.258479800000714
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-002",
+      "anchor_same": true,
+      "onnx_error_mm": 1961.133368334891,
+      "kmodel_error_mm": 1961.133368334891,
+      "host_simulator_seconds": 1.3315423999993072
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-003",
+      "anchor_same": true,
+      "onnx_error_mm": 1808.7923252654477,
+      "kmodel_error_mm": 1808.7923252654477,
+      "host_simulator_seconds": 1.2517102999991039
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-004",
+      "anchor_same": true,
+      "onnx_error_mm": 1762.2584826277066,
+      "kmodel_error_mm": 1762.2584826277066,
+      "host_simulator_seconds": 1.2611759999999776
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-005",
+      "anchor_same": true,
+      "onnx_error_mm": 1351.591453639783,
+      "kmodel_error_mm": 1351.591453639783,
+      "host_simulator_seconds": 1.3138089000003674
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-006",
+      "anchor_same": true,
+      "onnx_error_mm": 996.0885902930736,
+      "kmodel_error_mm": 996.0885902930736,
+      "host_simulator_seconds": 1.249128000001292
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-007",
+      "anchor_same": true,
+      "onnx_error_mm": 792.477962127248,
+      "kmodel_error_mm": 792.477962127248,
+      "host_simulator_seconds": 1.2539374999996653
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-008",
+      "anchor_same": true,
+      "onnx_error_mm": 339.2929986656662,
+      "kmodel_error_mm": 339.2929986656662,
+      "host_simulator_seconds": 1.3058192999997118
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-009",
+      "anchor_same": true,
+      "onnx_error_mm": 235.96962975177263,
+      "kmodel_error_mm": 235.96962975177263,
+      "host_simulator_seconds": 1.308947800000169
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-010",
+      "anchor_same": false,
+      "onnx_error_mm": 133.36427720445792,
+      "kmodel_error_mm": 232.20975853599546,
+      "host_simulator_seconds": 1.27853210000103
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-011",
+      "anchor_same": false,
+      "onnx_error_mm": 1131.8248138066879,
+      "kmodel_error_mm": 35.622121130330754,
+      "host_simulator_seconds": 1.311862900000051
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-012",
+      "anchor_same": true,
+      "onnx_error_mm": 80.36267231331303,
+      "kmodel_error_mm": 80.36267231331303,
+      "host_simulator_seconds": 1.291744699999981
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-013",
+      "anchor_same": true,
+      "onnx_error_mm": 182.18072302472257,
+      "kmodel_error_mm": 182.18072302472257,
+      "host_simulator_seconds": 1.2778034000002663
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-014",
+      "anchor_same": true,
+      "onnx_error_mm": 285.41881027297705,
+      "kmodel_error_mm": 285.41881027297705,
+      "host_simulator_seconds": 1.3796873999999661
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-015",
+      "anchor_same": true,
+      "onnx_error_mm": 439.05451391426226,
+      "kmodel_error_mm": 439.05451391426226,
+      "host_simulator_seconds": 1.3105414000001474
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-016",
+      "anchor_same": true,
+      "onnx_error_mm": 542.6843156659799,
+      "kmodel_error_mm": 542.6843156659799,
+      "host_simulator_seconds": 1.2840980000000854
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-017",
+      "anchor_same": true,
+      "onnx_error_mm": 646.363781780606,
+      "kmodel_error_mm": 646.363781780606,
+      "host_simulator_seconds": 1.2700126999989152
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-018",
+      "anchor_same": true,
+      "onnx_error_mm": 699.988982762525,
+      "kmodel_error_mm": 699.988982762525,
+      "host_simulator_seconds": 1.2420463999987987
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-019",
+      "anchor_same": true,
+      "onnx_error_mm": 803.7230746150977,
+      "kmodel_error_mm": 803.7230746150977,
+      "host_simulator_seconds": 1.272874899999806
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-020",
+      "anchor_same": true,
+      "onnx_error_mm": 2013.017851487346,
+      "kmodel_error_mm": 2013.017851487346,
+      "host_simulator_seconds": 1.281951000000845
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-021",
+      "anchor_same": true,
+      "onnx_error_mm": 2011.088125054185,
+      "kmodel_error_mm": 2011.088125054185,
+      "host_simulator_seconds": 1.2400918999992427
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-022",
+      "anchor_same": true,
+      "onnx_error_mm": 2069.398079782508,
+      "kmodel_error_mm": 2069.398079782508,
+      "host_simulator_seconds": 1.2890092999987246
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-023",
+      "anchor_same": true,
+      "onnx_error_mm": 2063.198881411108,
+      "kmodel_error_mm": 2063.198881411108,
+      "host_simulator_seconds": 1.2862693999995827
+    },
+    {
+      "sample_id": "geo-appearance-00-warm-024",
+      "anchor_same": true,
+      "onnx_error_mm": 94.4365514388714,
+      "kmodel_error_mm": 94.4365514388714,
+      "host_simulator_seconds": 1.2950900999985606
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-000",
+      "anchor_same": true,
+      "onnx_error_mm": 45.98354433467983,
+      "kmodel_error_mm": 45.98354433467983,
+      "host_simulator_seconds": 1.2825413999999
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-001",
+      "anchor_same": true,
+      "onnx_error_mm": 130.24511643642495,
+      "kmodel_error_mm": 130.24511643642495,
+      "host_simulator_seconds": 1.2795127000008506
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-002",
+      "anchor_same": true,
+      "onnx_error_mm": 1957.9935930943766,
+      "kmodel_error_mm": 1957.9935930943766,
+      "host_simulator_seconds": 1.2685062999989896
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-003",
+      "anchor_same": true,
+      "onnx_error_mm": 1925.5772805352292,
+      "kmodel_error_mm": 1925.5772805352292,
+      "host_simulator_seconds": 1.2833626999999979
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-004",
+      "anchor_same": true,
+      "onnx_error_mm": 1677.1155907834548,
+      "kmodel_error_mm": 1677.1155907834548,
+      "host_simulator_seconds": 1.3150127999997494
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-005",
+      "anchor_same": true,
+      "onnx_error_mm": 1425.4919128762835,
+      "kmodel_error_mm": 1425.4919128762835,
+      "host_simulator_seconds": 1.3111738999996305
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-006",
+      "anchor_same": true,
+      "onnx_error_mm": 1325.465068627297,
+      "kmodel_error_mm": 1325.465068627297,
+      "host_simulator_seconds": 1.2730973999987327
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-007",
+      "anchor_same": true,
+      "onnx_error_mm": 1125.4596957374827,
+      "kmodel_error_mm": 1125.4596957374827,
+      "host_simulator_seconds": 1.34329230000003
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-008",
+      "anchor_same": true,
+      "onnx_error_mm": 79.88403009672516,
+      "kmodel_error_mm": 79.88403009672516,
+      "host_simulator_seconds": 1.3017755999990186
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-009",
+      "anchor_same": true,
+      "onnx_error_mm": 1467.8265307281072,
+      "kmodel_error_mm": 1467.8265307281072,
+      "host_simulator_seconds": 1.319514499999059
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-010",
+      "anchor_same": true,
+      "onnx_error_mm": 284.62352655247133,
+      "kmodel_error_mm": 284.62352655247133,
+      "host_simulator_seconds": 1.3111786999998003
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-011",
+      "anchor_same": true,
+      "onnx_error_mm": 189.67295880388187,
+      "kmodel_error_mm": 189.67295880388187,
+      "host_simulator_seconds": 1.2818072999998549
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-012",
+      "anchor_same": true,
+      "onnx_error_mm": 104.67783318916514,
+      "kmodel_error_mm": 104.67783318916514,
+      "host_simulator_seconds": 1.3486486000001605
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-013",
+      "anchor_same": true,
+      "onnx_error_mm": 77.17128016646647,
+      "kmodel_error_mm": 77.17128016646647,
+      "host_simulator_seconds": 1.28019200000017
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-014",
+      "anchor_same": true,
+      "onnx_error_mm": 144.8092014963339,
+      "kmodel_error_mm": 144.8092014963339,
+      "host_simulator_seconds": 1.2810826999993878
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-015",
+      "anchor_same": true,
+      "onnx_error_mm": 236.64391306669043,
+      "kmodel_error_mm": 236.64391306669043,
+      "host_simulator_seconds": 1.2360669000008784
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-016",
+      "anchor_same": true,
+      "onnx_error_mm": 333.23764286090403,
+      "kmodel_error_mm": 333.23764286090403,
+      "host_simulator_seconds": 1.3169058999992558
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-017",
+      "anchor_same": true,
+      "onnx_error_mm": 431.4054135634939,
+      "kmodel_error_mm": 431.4054135634939,
+      "host_simulator_seconds": 1.266618900001049
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-018",
+      "anchor_same": true,
+      "onnx_error_mm": 431.44564809643396,
+      "kmodel_error_mm": 431.44564809643396,
+      "host_simulator_seconds": 1.23301309999988
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-019",
+      "anchor_same": true,
+      "onnx_error_mm": 725.6301412262304,
+      "kmodel_error_mm": 725.6301412262304,
+      "host_simulator_seconds": 1.3203662999985681
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-020",
+      "anchor_same": true,
+      "onnx_error_mm": 144.22443840959542,
+      "kmodel_error_mm": 144.22443840959542,
+      "host_simulator_seconds": 1.3254268000000593
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-021",
+      "anchor_same": false,
+      "onnx_error_mm": 37.031557153361355,
+      "kmodel_error_mm": 77.27783324946559,
+      "host_simulator_seconds": 1.335782600001039
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-022",
+      "anchor_same": true,
+      "onnx_error_mm": 81.07493612245912,
+      "kmodel_error_mm": 81.07493612245912,
+      "host_simulator_seconds": 1.3740060000000085
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-023",
+      "anchor_same": true,
+      "onnx_error_mm": 2137.569685097384,
+      "kmodel_error_mm": 2137.569685097384,
+      "host_simulator_seconds": 1.359713699999702
+    },
+    {
+      "sample_id": "geo-appearance-01-warm-024",
+      "anchor_same": true,
+      "onnx_error_mm": 131.56683918252742,
+      "kmodel_error_mm": 131.56683918252742,
+      "host_simulator_seconds": 1.2841874999994616
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-000",
+      "anchor_same": true,
+      "onnx_error_mm": 2067.4680150694276,
+      "kmodel_error_mm": 2067.4680150694276,
+      "host_simulator_seconds": 1.3925177000000986
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-001",
+      "anchor_same": true,
+      "onnx_error_mm": 1930.5896909793328,
+      "kmodel_error_mm": 1930.5896909793328,
+      "host_simulator_seconds": 1.3112610000007408
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-002",
+      "anchor_same": true,
+      "onnx_error_mm": 1933.3811485789313,
+      "kmodel_error_mm": 1933.3811485789313,
+      "host_simulator_seconds": 1.2950104999999894
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-003",
+      "anchor_same": true,
+      "onnx_error_mm": 105.04132165299393,
+      "kmodel_error_mm": 105.04132165299393,
+      "host_simulator_seconds": 1.3231092999994871
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-004",
+      "anchor_same": true,
+      "onnx_error_mm": 50.92235397169183,
+      "kmodel_error_mm": 50.92235397169183,
+      "host_simulator_seconds": 1.2568449999998847
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-005",
+      "anchor_same": true,
+      "onnx_error_mm": 203.06904832052493,
+      "kmodel_error_mm": 203.06904832052493,
+      "host_simulator_seconds": 1.3144635000007838
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-006",
+      "anchor_same": true,
+      "onnx_error_mm": 168.24509052105665,
+      "kmodel_error_mm": 168.24509052105665,
+      "host_simulator_seconds": 1.3913969000004727
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-007",
+      "anchor_same": true,
+      "onnx_error_mm": 87.08993227568432,
+      "kmodel_error_mm": 87.08993227568432,
+      "host_simulator_seconds": 1.2610339000002568
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-008",
+      "anchor_same": true,
+      "onnx_error_mm": 160.8117645180103,
+      "kmodel_error_mm": 160.8117645180103,
+      "host_simulator_seconds": 1.320017399999415
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-009",
+      "anchor_same": true,
+      "onnx_error_mm": 810.2520453460692,
+      "kmodel_error_mm": 810.2520453460692,
+      "host_simulator_seconds": 1.4423076000002766
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-010",
+      "anchor_same": true,
+      "onnx_error_mm": 157.33720871155896,
+      "kmodel_error_mm": 157.33720871155896,
+      "host_simulator_seconds": 1.3313242999993236
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-011",
+      "anchor_same": true,
+      "onnx_error_mm": 665.9664052842057,
+      "kmodel_error_mm": 665.9664052842057,
+      "host_simulator_seconds": 1.3404730000002019
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-012",
+      "anchor_same": false,
+      "onnx_error_mm": 815.880287430866,
+      "kmodel_error_mm": 818.9387299537569,
+      "host_simulator_seconds": 1.4209436000001006
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-013",
+      "anchor_same": true,
+      "onnx_error_mm": 848.4643826330586,
+      "kmodel_error_mm": 848.4643826330586,
+      "host_simulator_seconds": 1.406556099998852
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-014",
+      "anchor_same": true,
+      "onnx_error_mm": 950.7212223268474,
+      "kmodel_error_mm": 950.7212223268474,
+      "host_simulator_seconds": 1.4916444000009506
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-015",
+      "anchor_same": true,
+      "onnx_error_mm": 794.6606466550012,
+      "kmodel_error_mm": 794.6606466550012,
+      "host_simulator_seconds": 1.3424699999995937
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-016",
+      "anchor_same": true,
+      "onnx_error_mm": 974.4870747895397,
+      "kmodel_error_mm": 974.4870747895397,
+      "host_simulator_seconds": 1.4108155999983865
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-017",
+      "anchor_same": true,
+      "onnx_error_mm": 87.08993227568432,
+      "kmodel_error_mm": 87.08993227568432,
+      "host_simulator_seconds": 1.4127891999996791
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-018",
+      "anchor_same": true,
+      "onnx_error_mm": 89.76537574357971,
+      "kmodel_error_mm": 89.76537574357971,
+      "host_simulator_seconds": 1.377538699998695
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-019",
+      "anchor_same": true,
+      "onnx_error_mm": 242.62403218998057,
+      "kmodel_error_mm": 242.62403218998057,
+      "host_simulator_seconds": 1.3813260999995691
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-020",
+      "anchor_same": true,
+      "onnx_error_mm": 307.61184989798863,
+      "kmodel_error_mm": 307.61184989798863,
+      "host_simulator_seconds": 1.3648083000007318
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-021",
+      "anchor_same": true,
+      "onnx_error_mm": 903.6818929037405,
+      "kmodel_error_mm": 903.6818929037405,
+      "host_simulator_seconds": 1.35035550000066
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-022",
+      "anchor_same": true,
+      "onnx_error_mm": 649.625698949111,
+      "kmodel_error_mm": 649.625698949111,
+      "host_simulator_seconds": 1.3547353000012663
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-023",
+      "anchor_same": true,
+      "onnx_error_mm": 1517.2245758106521,
+      "kmodel_error_mm": 1517.2245758106521,
+      "host_simulator_seconds": 1.3465089999990596
+    },
+    {
+      "sample_id": "geo-appearance-02-cool-024",
+      "anchor_same": true,
+      "onnx_error_mm": 62.39074466411028,
+      "kmodel_error_mm": 62.39074466411028,
+      "host_simulator_seconds": 1.3714202999999543
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-000",
+      "anchor_same": true,
+      "onnx_error_mm": 73.4841065078695,
+      "kmodel_error_mm": 73.4841065078695,
+      "host_simulator_seconds": 1.3922729999994772
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-001",
+      "anchor_same": true,
+      "onnx_error_mm": 1917.436040750319,
+      "kmodel_error_mm": 1917.436040750319,
+      "host_simulator_seconds": 1.287904000000708
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-002",
+      "anchor_same": true,
+      "onnx_error_mm": 1917.2334212033682,
+      "kmodel_error_mm": 1917.2334212033682,
+      "host_simulator_seconds": 1.3022144000005937
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-003",
+      "anchor_same": true,
+      "onnx_error_mm": 1916.4149190457763,
+      "kmodel_error_mm": 1916.4149190457763,
+      "host_simulator_seconds": 1.3093205999994098
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-004",
+      "anchor_same": true,
+      "onnx_error_mm": 66.791638464819,
+      "kmodel_error_mm": 66.791638464819,
+      "host_simulator_seconds": 1.2592031000003772
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-005",
+      "anchor_same": true,
+      "onnx_error_mm": 21.34005354870131,
+      "kmodel_error_mm": 21.34005354870131,
+      "host_simulator_seconds": 1.3112740999986272
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-006",
+      "anchor_same": true,
+      "onnx_error_mm": 180.55951787394176,
+      "kmodel_error_mm": 180.55951787394176,
+      "host_simulator_seconds": 1.2755677999994077
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-007",
+      "anchor_same": true,
+      "onnx_error_mm": 2004.9275671744026,
+      "kmodel_error_mm": 2004.9275671744026,
+      "host_simulator_seconds": 1.2729343000009976
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-008",
+      "anchor_same": true,
+      "onnx_error_mm": 806.864230924438,
+      "kmodel_error_mm": 806.864230924438,
+      "host_simulator_seconds": 1.300430499999493
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-009",
+      "anchor_same": true,
+      "onnx_error_mm": 132.07713209010237,
+      "kmodel_error_mm": 132.07713209010237,
+      "host_simulator_seconds": 1.2526469999993424
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-010",
+      "anchor_same": true,
+      "onnx_error_mm": 272.3953708769033,
+      "kmodel_error_mm": 272.3953708769033,
+      "host_simulator_seconds": 1.2710229999993317
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-011",
+      "anchor_same": false,
+      "onnx_error_mm": 959.0175146491798,
+      "kmodel_error_mm": 257.03710756778327,
+      "host_simulator_seconds": 1.2684087000016007
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-012",
+      "anchor_same": false,
+      "onnx_error_mm": 830.5442056940145,
+      "kmodel_error_mm": 1018.2739332997531,
+      "host_simulator_seconds": 1.237185199999658
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-013",
+      "anchor_same": true,
+      "onnx_error_mm": 891.7431781933532,
+      "kmodel_error_mm": 891.7431781933532,
+      "host_simulator_seconds": 1.2529379999996308
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-014",
+      "anchor_same": false,
+      "onnx_error_mm": 1068.2711520183227,
+      "kmodel_error_mm": 865.5716117409879,
+      "host_simulator_seconds": 1.2845168000003468
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-015",
+      "anchor_same": true,
+      "onnx_error_mm": 1083.316758474773,
+      "kmodel_error_mm": 1083.316758474773,
+      "host_simulator_seconds": 1.2889416999987588
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-016",
+      "anchor_same": true,
+      "onnx_error_mm": 1256.2145355439773,
+      "kmodel_error_mm": 1256.2145355439773,
+      "host_simulator_seconds": 1.289088699999411
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-017",
+      "anchor_same": true,
+      "onnx_error_mm": 287.5857940954067,
+      "kmodel_error_mm": 287.5857940954067,
+      "host_simulator_seconds": 1.3407107000002725
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-018",
+      "anchor_same": true,
+      "onnx_error_mm": 85.6307411052713,
+      "kmodel_error_mm": 85.6307411052713,
+      "host_simulator_seconds": 1.2688817999987805
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-019",
+      "anchor_same": true,
+      "onnx_error_mm": 1790.4851964960424,
+      "kmodel_error_mm": 1790.4851964960424,
+      "host_simulator_seconds": 1.3244510999993508
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-020",
+      "anchor_same": true,
+      "onnx_error_mm": 1823.7773219609614,
+      "kmodel_error_mm": 1823.7773219609614,
+      "host_simulator_seconds": 1.3136472000005597
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-021",
+      "anchor_same": true,
+      "onnx_error_mm": 1365.1142125599506,
+      "kmodel_error_mm": 1365.1142125599506,
+      "host_simulator_seconds": 1.245951500000956
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-022",
+      "anchor_same": true,
+      "onnx_error_mm": 235.76998931091654,
+      "kmodel_error_mm": 235.76998931091654,
+      "host_simulator_seconds": 1.2685739000007743
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-023",
+      "anchor_same": true,
+      "onnx_error_mm": 88.95674233353944,
+      "kmodel_error_mm": 88.95674233353944,
+      "host_simulator_seconds": 1.303167799998846
+    },
+    {
+      "sample_id": "geo-appearance-03-cool-024",
+      "anchor_same": true,
+      "onnx_error_mm": 104.57550487400617,
+      "kmodel_error_mm": 104.57550487400617,
+      "host_simulator_seconds": 1.31999469999937
+    }
+  ],
+  "full_evaluation_split_frames": 250,
+  "native_k230": "NOT_RUN"
+}

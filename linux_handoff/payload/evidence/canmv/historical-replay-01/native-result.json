@@ -1,0 +1,73 @@
+{
+  "memory_after": {
+    "sys_heap": {
+      "free": 64050880,
+      "total": 67108864,
+      "used": 3057984
+    },
+    "sys_mmz": {
+      "free": 535822336,
+      "total": 535822336,
+      "used": 0
+    },
+    "sys_page": {
+      "free": 432082944,
+      "total": 460189696,
+      "used": 28106752
+    },
+    "python_heap_used": 332768,
+    "python_heap_free": 3812896
+  },
+  "requested": 1,
+  "status": "NATIVE_HISTORICAL_REPLAY_COMPLETE",
+  "model_sha256": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88",
+  "decoded": {
+    "observed_capacity_state": "EMPTY",
+    "capacity_state": "EMPTY",
+    "uncertain": false,
+    "thresholds": {
+      "class_agnostic_nms_iou": 0.5,
+      "score": 0.25
+    },
+    "detections": [],
+    "count": 0,
+    "post_nms_total_before_five_limit": 0
+  },
+  "main_after": "c0b89b0b48864ff51e0e1d9a07082d306dbaf301aa4b6c95432ea6e04dbc640c",
+  "successful": 1,
+  "source_path": "/sdcard/cdiag1116/chn2.raw",
+  "prepared": {
+    "bytes": 184320,
+    "sha256": "fef67d28dd3bb93d2f967ff28d2e8c8737862e064058885f7a0b987c1d98774d",
+    "shape": [
+      1,
+      3,
+      192,
+      320
+    ]
+  },
+  "main_before": "c0b89b0b48864ff51e0e1d9a07082d306dbaf301aa4b6c95432ea6e04dbc640c",
+  "timing_ms": {
+    "decode_ms": 2.918,
+    "kpu_ms": 19.194,
+    "ai2d_ms": 1.205
+  },
+  "uart_or_motion": false,
+  "sdcard_writes": false,
+  "nonce": "historical-replay-20261117-01",
+  "runtime": "2.11.0",
+  "source_sha256": "b8e8eb3be2f509983da0e03eb7c834cfddaa9a4d7521bacf01d79ca9f3483cf3",
+  "fresh_capture": false,
+  "cleanup_errors": [],
+  "camera_started": false,
+  "raw": {
+    "bytes": 255000,
+    "finite_values": 63750,
+    "shape": [
+      1,
+      1275,
+      50
+    ],
+    "sha256": "9166b0c1d43eb2d6c918b1804f5586ff26fe56ad5c9d408ea2055f842ad53431"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "status": "NEURAL_KMODEL_PAIRED_TEST_VERIFIED",
+  "setting": "tcn8",
+  "test_frames": 250,
+  "profile": {
+    "window": 8,
+    "input_shape": [
+      1,
+      24,
+      96,
+      160
+    ],
+    "input_dtype": "uint8",
+    "normalization": "Cast and divide by 255 inside graph; compiler preprocessing disabled",
+    "compiler": {
+      "nncase": "2.11.0",
+      "nncase-kpu": "2.11.0"
+    },
+    "ptq": "int16"
+  },
+  "source": {
+    "ref": "/code/lotus30/k230-neural-camera-xy-geometry-a03",
+    "url": "https://www.kaggle.com/code/lotus30/k230-neural-camera-xy-geometry-a03",
+    "versionNumber": 1,
+    "kernelId": 145553018
+  },
+  "dataset_manifest_sha256": "90e05cacc96118ff7ec35871bec0fba5e5458799c5f620a3ad3bb84d9b8fe0df",
+  "field_mask_sha256": "fa5f526d741e27af830cc4b5a6c3e945ef48442670db3aabd12bd642def6f8d2",
+  "training_manifest_sha256": "94d12969b1b68122c2ab5193340a05ff05021dc07ace1ab989fa1acea532c22e",
+  "quantized": {
+    "frames": 250,
+    "median_mm": 970.7932036606879,
+    "p95_mm": 2205.1842417549283,
+    "mean_mm": 1018.1288885398502,
+    "within50_rate": 0.056,
+    "brier_within50": 0.05682874498948199,
+    "jumps_over500": 65
+  },
+  "float_onnx": {
+    "median_mm": 985.2878325413067,
+    "p95_mm": 2205.1842417549283
+  },
+  "common_warm": {
+    "frames": 180,
+    "quantized": {
+      "median_mm": 927.201557615294,
+      "p95_mm": 2195.9250146371655
+    },
+    "float_onnx": {
+      "median_mm": 963.058423590508,
+      "p95_mm": 2194.2601427668533
+    }
+  },
+  "anchor_agreement": 0.94,
+  "simulator_host_p95_ms": 1393.8040949999959,
+  "simulator_report_sha256": "47e2dd05971c0c3a55b3f8f6ed6339061e7cce27b9cc169b7f97a50121743b2e",
+  "simulator_scores_sha256": "b48708a6ab46c74e3ba0a06ec34dd99e967582d146f1e8b61452af3d4bbdeb4a",
+  "kmodel_sha256": "3a887066753a549cf06b2ca304abe6530d1d67e6aab50a5dec5b6408799de9ca",
+  "uint8_onnx_sha256": "b741332ef8559732e5d865d927fb55fd46392b1cecad9a2919bc6a5180ad42bb",
+  "raw_onnx_sha256": "f03b11fc0381da12b8828d4c0c9a767681a8119b5f2a0310f2c8a816b7607068",
+  "native_k230": "NOT_RUN"
+}

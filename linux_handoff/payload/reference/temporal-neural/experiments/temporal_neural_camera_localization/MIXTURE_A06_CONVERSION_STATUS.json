@@ -1,0 +1,23 @@
+{
+  "status": "TRAINED_MODEL_STABLE_COMPILE_AND_FULL_TEST_PASS",
+  "saved_version": {
+    "ref": "/code/lotus30/k230-neural-camera-xy-mixture-a06",
+    "url": "https://www.kaggle.com/code/lotus30/k230-neural-camera-xy-mixture-a06",
+    "versionNumber": 1,
+    "kernelId": 145568319
+  },
+  "direct_failure": "MIXTURE_A06_DIRECT_COMPILER_DIAGNOSTIC.json",
+  "direct_log": "evidence\\operator-smoke\\mixture-a06-direct.log",
+  "direct_log_sha256": "bc2930a45c1f7355b6e33f1e4e67448ce65abb7c613fcb21cbe49d666efb2ba2",
+  "float_parity": "MIXTURE_A06_STABLE_FLOAT_PARITY.json",
+  "paired_test": "MIXTURE_A06_TCN8_KMODEL_TEST.json",
+  "full_paired_frames": 250,
+  "kmodel_sha256": "bbad9c5fbc882d9dc2530fc59df15382b24243c28aa716572854d7c2ceb93412",
+  "float_onnx_sha256": "fa51c02a484ae034cd4c54ae7807d1c50ca918868f818595f3984c0821a9b65f",
+  "derivative_sha256": "856ac42619f677cd810dcb31d73146839c8588ecf22abef83fa5f56c93496482",
+  "anchor_agreement": 0.268,
+  "quantized_p95_mm": 2164.570787664649,
+  "scope": "Finite Simulator outputs and complete same-frame evaluation; quantization accuracy is reported separately",
+  "deployment_accuracy": "HOLD",
+  "native": "NOT_RUN"
+}

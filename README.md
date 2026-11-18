@@ -1,5 +1,7 @@
 # K230 Vision Optimized
 
+**Linux 迁移线**：立创庐山派 K230 1G 使用官方 Linux SDK 的交接包、模型契约和推进路线见 [Linux 交接入口](docs/linux-handoff/README.md) 与 [执行提示词](docs/linux-handoff/EXECUTION_PROMPT.md)。
+
 接手先读 [最新项目状态](docs/STATUS.md) 和 [便携交接文档](docs/HANDOFF.md)。它们记录本次现场时间、当前USB运行、已完成证据和下一步；历史任务README中的“当前”只对其原快照时间有效。
 
 项目经验与故障预防统一记录在 [经验总账](docs/LESSONS_LEARNED.md)。涉及板端、传输或部署前先读相关条目；确认新问题或验证修复后，随证据和 OPS checkpoint 更新。

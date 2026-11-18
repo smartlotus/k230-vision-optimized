@@ -1,0 +1,1925 @@
+{
+  "status": "COMPILE_AND_SIMULATOR_PASS",
+  "route": "gru",
+  "window": 4,
+  "input_shape": [
+    1,
+    12,
+    96,
+    160
+  ],
+  "input_type": "uint8",
+  "compiler": {
+    "nncase": "2.11.0",
+    "nncase-kpu": "2.11.0"
+  },
+  "dataset_manifest_sha256": "ec2e617bb3b15df10c80f666aa2166f29d7231741026dc187ddc582887609042",
+  "parent_sha256": "51df7fb18b76a305a0360eb3a7fd788fe71994aeffeb35b1766912f481ff8f05",
+  "training_manifest_sha256": "ec2e617bb3b15df10c80f666aa2166f29d7231741026dc187ddc582887609042",
+  "float_onnx_sha256": "b309a696ad7b33898f41deb8dec613d9e816431867ef1d92f382250d44e50ec6",
+  "checkpoint_sha256": "317594bfd5b6427d05fd59e99d53c31a7a1b3b80a53a33b390b1151c38f3b2f3",
+  "uint8_onnx_sha256": "aaa3fac9a3564ef30dceb64a98a4ff7797c2863fccd6b005aa27739e326e7327",
+  "kmodel_sha256": "f2e564dea46e2e5d5fc9f7947e1c8721737930f42535c01b6b145ddf6485b1fb",
+  "kmodel_bytes": 2763056,
+  "normalization": "Cast and divide by 255 inside graph; compiler preprocessing disabled",
+  "ptq": {
+    "activation": "int16",
+    "samples": 100,
+    "ids": [
+      "gray-pilot-tr0000-000",
+      "gray-pilot-tr0000-005",
+      "gray-pilot-tr0000-010",
+      "gray-pilot-tr0000-015",
+      "gray-pilot-tr0000-020",
+      "gray-pilot-tr0001-000",
+      "gray-pilot-tr0001-005",
+      "gray-pilot-tr0001-010",
+      "gray-pilot-tr0001-015",
+      "gray-pilot-tr0001-020",
+      "gray-pilot-tr0002-000",
+      "gray-pilot-tr0002-005",
+      "gray-pilot-tr0002-010",
+      "gray-pilot-tr0002-015",
+      "gray-pilot-tr0002-020",
+      "gray-pilot-tr0003-000",
+      "gray-pilot-tr0003-005",
+      "gray-pilot-tr0003-010",
+      "gray-pilot-tr0003-015",
+      "gray-pilot-tr0003-020",
+      "gray-pilot-tr0008-000",
+      "gray-pilot-tr0008-005",
+      "gray-pilot-tr0008-010",
+      "gray-pilot-tr0008-015",
+      "gray-pilot-tr0008-020",
+      "gray-pilot-tr0009-000",
+      "gray-pilot-tr0009-005",
+      "gray-pilot-tr0009-010",
+      "gray-pilot-tr0009-015",
+      "gray-pilot-tr0009-020",
+      "gray-pilot-tr0010-000",
+      "gray-pilot-tr0010-005",
+      "gray-pilot-tr0010-010",
+      "gray-pilot-tr0010-015",
+      "gray-pilot-tr0010-020",
+      "gray-pilot-tr0011-000",
+      "gray-pilot-tr0011-005",
+      "gray-pilot-tr0011-010",
+      "gray-pilot-tr0011-015",
+      "gray-pilot-tr0011-020",
+      "gray-pilot-tr0016-000",
+      "gray-pilot-tr0016-005",
+      "gray-pilot-tr0016-010",
+      "gray-pilot-tr0016-015",
+      "gray-pilot-tr0016-020",
+      "gray-pilot-tr0017-000",
+      "gray-pilot-tr0017-005",
+      "gray-pilot-tr0017-010",
+      "gray-pilot-tr0017-015",
+      "gray-pilot-tr0017-020",
+      "gray-pilot-tr0018-000",
+      "gray-pilot-tr0018-005",
+      "gray-pilot-tr0018-010",
+      "gray-pilot-tr0018-015",
+      "gray-pilot-tr0018-020",
+      "gray-pilot-tr0019-000",
+      "gray-pilot-tr0019-005",
+      "gray-pilot-tr0019-010",
+      "gray-pilot-tr0019-015",
+      "gray-pilot-tr0019-020",
+      "gray-pilot-tr0024-000",
+      "gray-pilot-tr0024-005",
+      "gray-pilot-tr0024-010",
+      "gray-pilot-tr0024-015",
+      "gray-pilot-tr0024-020",
+      "gray-pilot-tr0025-000",
+      "gray-pilot-tr0025-005",
+      "gray-pilot-tr0025-010",
+      "gray-pilot-tr0025-015",
+      "gray-pilot-tr0025-020",
+      "gray-pilot-tr0026-000",
+      "gray-pilot-tr0026-005",
+      "gray-pilot-tr0026-010",
+      "gray-pilot-tr0026-015",
+      "gray-pilot-tr0026-020",
+      "gray-pilot-tr0027-000",
+      "gray-pilot-tr0027-005",
+      "gray-pilot-tr0027-010",
+      "gray-pilot-tr0027-015",
+      "gray-pilot-tr0027-020",
+      "gray-pilot-tr0032-000",
+      "gray-pilot-tr0032-005",
+      "gray-pilot-tr0032-010",
+      "gray-pilot-tr0032-015",
+      "gray-pilot-tr0032-020",
+      "gray-pilot-tr0033-000",
+      "gray-pilot-tr0033-005",
+      "gray-pilot-tr0033-010",
+      "gray-pilot-tr0033-015",
+      "gray-pilot-tr0033-020",
+      "gray-pilot-tr0034-000",
+      "gray-pilot-tr0034-005",
+      "gray-pilot-tr0034-010",
+      "gray-pilot-tr0034-015",
+      "gray-pilot-tr0034-020",
+      "gray-pilot-tr0035-000",
+      "gray-pilot-tr0035-005",
+      "gray-pilot-tr0035-010",
+      "gray-pilot-tr0035-015",
+      "gray-pilot-tr0035-020"
+    ]
+  },
+  "evaluation_split": "test",
+  "evaluated_frames": 250,
+  "pairs": [
+    {
+      "sample_id": "gray-pilot-tr0006-000",
+      "anchor_same": false,
+      "onnx_error_mm": 1994.0184784915741,
+      "kmodel_error_mm": 2043.9452954677633,
+      "host_simulator_seconds": 3.0766133000033733
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-001",
+      "anchor_same": false,
+      "onnx_error_mm": 1743.8407970786136,
+      "kmodel_error_mm": 1848.664270720531,
+      "host_simulator_seconds": 3.172869999998511
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-002",
+      "anchor_same": true,
+      "onnx_error_mm": 2189.895040122397,
+      "kmodel_error_mm": 2189.895040122397,
+      "host_simulator_seconds": 3.4363394000029075
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-003",
+      "anchor_same": false,
+      "onnx_error_mm": 1550.4311576214413,
+      "kmodel_error_mm": 1745.8368081607844,
+      "host_simulator_seconds": 3.6815272999992885
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-004",
+      "anchor_same": true,
+      "onnx_error_mm": 1769.574574874216,
+      "kmodel_error_mm": 1769.574574874216,
+      "host_simulator_seconds": 3.398552300001029
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-005",
+      "anchor_same": false,
+      "onnx_error_mm": 1835.6874563069382,
+      "kmodel_error_mm": 1883.6217623792068,
+      "host_simulator_seconds": 3.206529799997952
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-006",
+      "anchor_same": false,
+      "onnx_error_mm": 2035.5426884968326,
+      "kmodel_error_mm": 2136.013589790844,
+      "host_simulator_seconds": 3.278746299998602
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-007",
+      "anchor_same": false,
+      "onnx_error_mm": 2175.468474499111,
+      "kmodel_error_mm": 2060.491574204581,
+      "host_simulator_seconds": 3.41422760000205
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-008",
+      "anchor_same": false,
+      "onnx_error_mm": 2260.7318106493326,
+      "kmodel_error_mm": 2333.805743997537,
+      "host_simulator_seconds": 3.4466329000024416
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-009",
+      "anchor_same": true,
+      "onnx_error_mm": 1443.694129105421,
+      "kmodel_error_mm": 1443.694129105421,
+      "host_simulator_seconds": 3.259911799999827
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-010",
+      "anchor_same": true,
+      "onnx_error_mm": 1479.0024249671003,
+      "kmodel_error_mm": 1479.0024249671003,
+      "host_simulator_seconds": 3.0228998999991745
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-011",
+      "anchor_same": true,
+      "onnx_error_mm": 1360.6020888362293,
+      "kmodel_error_mm": 1360.6020888362293,
+      "host_simulator_seconds": 3.355778900000587
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-012",
+      "anchor_same": false,
+      "onnx_error_mm": 1367.4130763489197,
+      "kmodel_error_mm": 1163.848506514153,
+      "host_simulator_seconds": 2.9692610000020068
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-013",
+      "anchor_same": false,
+      "onnx_error_mm": 949.3654124237471,
+      "kmodel_error_mm": 984.3091684404277,
+      "host_simulator_seconds": 2.9602209000004223
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-014",
+      "anchor_same": false,
+      "onnx_error_mm": 921.7280627596315,
+      "kmodel_error_mm": 857.3395776464129,
+      "host_simulator_seconds": 3.2683804000007513
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-015",
+      "anchor_same": false,
+      "onnx_error_mm": 22.276053364139052,
+      "kmodel_error_mm": 30.754309317234153,
+      "host_simulator_seconds": 3.05327639999814
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-016",
+      "anchor_same": false,
+      "onnx_error_mm": 25.078946205543613,
+      "kmodel_error_mm": 1687.3593605464828,
+      "host_simulator_seconds": 3.256080799998017
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-017",
+      "anchor_same": true,
+      "onnx_error_mm": 363.52216039411695,
+      "kmodel_error_mm": 363.52216039411695,
+      "host_simulator_seconds": 3.4911685999977635
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-018",
+      "anchor_same": false,
+      "onnx_error_mm": 382.3435054939214,
+      "kmodel_error_mm": 514.5027495617793,
+      "host_simulator_seconds": 3.3128281999997853
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-019",
+      "anchor_same": true,
+      "onnx_error_mm": 80.7932350942253,
+      "kmodel_error_mm": 80.7932350942253,
+      "host_simulator_seconds": 3.528960100000404
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-020",
+      "anchor_same": true,
+      "onnx_error_mm": 67.87990652630171,
+      "kmodel_error_mm": 67.87990652630171,
+      "host_simulator_seconds": 3.5444123999986914
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-021",
+      "anchor_same": true,
+      "onnx_error_mm": 551.5938874957949,
+      "kmodel_error_mm": 551.5938874957949,
+      "host_simulator_seconds": 3.6375775000014983
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-022",
+      "anchor_same": false,
+      "onnx_error_mm": 1515.3866218048202,
+      "kmodel_error_mm": 1506.5746932279776,
+      "host_simulator_seconds": 3.4579750999982934
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-023",
+      "anchor_same": true,
+      "onnx_error_mm": 136.0462456286722,
+      "kmodel_error_mm": 136.0462456286722,
+      "host_simulator_seconds": 3.6258225000019593
+    },
+    {
+      "sample_id": "gray-pilot-tr0006-024",
+      "anchor_same": true,
+      "onnx_error_mm": 33.78345730038221,
+      "kmodel_error_mm": 33.78345730038221,
+      "host_simulator_seconds": 3.654779199998302
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-000",
+      "anchor_same": false,
+      "onnx_error_mm": 12.713634244140593,
+      "kmodel_error_mm": 40.05496599777846,
+      "host_simulator_seconds": 3.5478425000001153
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-001",
+      "anchor_same": true,
+      "onnx_error_mm": 96.1917255733449,
+      "kmodel_error_mm": 96.1917255733449,
+      "host_simulator_seconds": 3.67666239999744
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-002",
+      "anchor_same": false,
+      "onnx_error_mm": 273.8763083306209,
+      "kmodel_error_mm": 1073.8642668648058,
+      "host_simulator_seconds": 3.4491478000018105
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-003",
+      "anchor_same": true,
+      "onnx_error_mm": 54.734549588215394,
+      "kmodel_error_mm": 54.734549588215394,
+      "host_simulator_seconds": 3.5142679999989923
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-004",
+      "anchor_same": true,
+      "onnx_error_mm": 188.13180198441924,
+      "kmodel_error_mm": 188.13180198441924,
+      "host_simulator_seconds": 3.7305526999989524
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-005",
+      "anchor_same": true,
+      "onnx_error_mm": 36.431641773471476,
+      "kmodel_error_mm": 36.431641773471476,
+      "host_simulator_seconds": 3.4230188000001363
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-006",
+      "anchor_same": true,
+      "onnx_error_mm": 562.0423204794199,
+      "kmodel_error_mm": 562.0423204794199,
+      "host_simulator_seconds": 3.4669140000005427
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-007",
+      "anchor_same": true,
+      "onnx_error_mm": 1406.176729852075,
+      "kmodel_error_mm": 1406.176729852075,
+      "host_simulator_seconds": 3.769077599998127
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-008",
+      "anchor_same": true,
+      "onnx_error_mm": 1651.9097667031199,
+      "kmodel_error_mm": 1651.9097667031199,
+      "host_simulator_seconds": 3.459977099999378
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-009",
+      "anchor_same": true,
+      "onnx_error_mm": 1852.996660347625,
+      "kmodel_error_mm": 1852.996660347625,
+      "host_simulator_seconds": 3.642855400001281
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-010",
+      "anchor_same": false,
+      "onnx_error_mm": 1374.3016107091864,
+      "kmodel_error_mm": 594.4317124609476,
+      "host_simulator_seconds": 3.5890902999999525
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-011",
+      "anchor_same": true,
+      "onnx_error_mm": 1054.058584929277,
+      "kmodel_error_mm": 1054.058584929277,
+      "host_simulator_seconds": 3.7462225000017497
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-012",
+      "anchor_same": true,
+      "onnx_error_mm": 1366.01453550812,
+      "kmodel_error_mm": 1366.01453550812,
+      "host_simulator_seconds": 3.984927299999981
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-013",
+      "anchor_same": true,
+      "onnx_error_mm": 1611.2412977057352,
+      "kmodel_error_mm": 1611.2412977057352,
+      "host_simulator_seconds": 3.623598199999833
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-014",
+      "anchor_same": true,
+      "onnx_error_mm": 2249.9270413463682,
+      "kmodel_error_mm": 2249.9270413463682,
+      "host_simulator_seconds": 3.5021739000003436
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-015",
+      "anchor_same": false,
+      "onnx_error_mm": 2262.152082704493,
+      "kmodel_error_mm": 1619.5170206834382,
+      "host_simulator_seconds": 3.3707118999991508
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-016",
+      "anchor_same": false,
+      "onnx_error_mm": 2439.876927659996,
+      "kmodel_error_mm": 1752.986225424094,
+      "host_simulator_seconds": 3.785609500002465
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-017",
+      "anchor_same": false,
+      "onnx_error_mm": 1831.063655145488,
+      "kmodel_error_mm": 2281.48090857607,
+      "host_simulator_seconds": 3.710149700000329
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-018",
+      "anchor_same": false,
+      "onnx_error_mm": 2084.5421804297603,
+      "kmodel_error_mm": 2155.9862200975103,
+      "host_simulator_seconds": 3.0804963000009593
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-019",
+      "anchor_same": false,
+      "onnx_error_mm": 1996.8608518799335,
+      "kmodel_error_mm": 1931.0919498322985,
+      "host_simulator_seconds": 3.3596835999996983
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-020",
+      "anchor_same": false,
+      "onnx_error_mm": 1937.9047773538832,
+      "kmodel_error_mm": 1796.2118107946474,
+      "host_simulator_seconds": 3.4359915999993973
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-021",
+      "anchor_same": true,
+      "onnx_error_mm": 1765.2162672400984,
+      "kmodel_error_mm": 1765.2162672400984,
+      "host_simulator_seconds": 3.265463199997612
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-022",
+      "anchor_same": true,
+      "onnx_error_mm": 1716.968732539738,
+      "kmodel_error_mm": 1716.968732539738,
+      "host_simulator_seconds": 3.613952400002745
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-023",
+      "anchor_same": true,
+      "onnx_error_mm": 1907.214572034361,
+      "kmodel_error_mm": 1907.214572034361,
+      "host_simulator_seconds": 3.565175100000488
+    },
+    {
+      "sample_id": "gray-pilot-tr0007-024",
+      "anchor_same": true,
+      "onnx_error_mm": 2056.1882230230963,
+      "kmodel_error_mm": 2056.1882230230963,
+      "host_simulator_seconds": 3.415474000001268
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-000",
+      "anchor_same": false,
+      "onnx_error_mm": 1946.9792409612762,
+      "kmodel_error_mm": 1996.9788579099281,
+      "host_simulator_seconds": 3.3946663999995508
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-001",
+      "anchor_same": true,
+      "onnx_error_mm": 1936.5626418283625,
+      "kmodel_error_mm": 1936.5626418283625,
+      "host_simulator_seconds": 3.415929499999038
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-002",
+      "anchor_same": true,
+      "onnx_error_mm": 1939.8329477901482,
+      "kmodel_error_mm": 1939.8329477901482,
+      "host_simulator_seconds": 3.357134399997449
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-003",
+      "anchor_same": true,
+      "onnx_error_mm": 1940.1706996867335,
+      "kmodel_error_mm": 1940.1706996867335,
+      "host_simulator_seconds": 3.539203099997394
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-004",
+      "anchor_same": true,
+      "onnx_error_mm": 1935.0653323054346,
+      "kmodel_error_mm": 1935.0653323054346,
+      "host_simulator_seconds": 3.4953677999983483
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-005",
+      "anchor_same": true,
+      "onnx_error_mm": 2024.132617003706,
+      "kmodel_error_mm": 2024.132617003706,
+      "host_simulator_seconds": 3.5063376999969478
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-006",
+      "anchor_same": true,
+      "onnx_error_mm": 2016.4356923248745,
+      "kmodel_error_mm": 2016.4356923248745,
+      "host_simulator_seconds": 3.699357899997267
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-007",
+      "anchor_same": true,
+      "onnx_error_mm": 1718.9047843577414,
+      "kmodel_error_mm": 1718.9047843577414,
+      "host_simulator_seconds": 3.4134073999994143
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-008",
+      "anchor_same": false,
+      "onnx_error_mm": 839.034479249632,
+      "kmodel_error_mm": 1240.2232781347732,
+      "host_simulator_seconds": 3.944949799999449
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-009",
+      "anchor_same": false,
+      "onnx_error_mm": 921.9522453156201,
+      "kmodel_error_mm": 920.347018034538,
+      "host_simulator_seconds": 3.273307499999646
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-010",
+      "anchor_same": false,
+      "onnx_error_mm": 801.6623400084101,
+      "kmodel_error_mm": 851.661574227775,
+      "host_simulator_seconds": 3.5862041999971552
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-011",
+      "anchor_same": false,
+      "onnx_error_mm": 239.26960708758187,
+      "kmodel_error_mm": 1199.916814269475,
+      "host_simulator_seconds": 3.510516300000745
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-012",
+      "anchor_same": false,
+      "onnx_error_mm": 906.8538758486579,
+      "kmodel_error_mm": 1144.7201298913023,
+      "host_simulator_seconds": 3.677675700000691
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-013",
+      "anchor_same": false,
+      "onnx_error_mm": 54.75096821118262,
+      "kmodel_error_mm": 603.1865239144604,
+      "host_simulator_seconds": 3.6154059000000416
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-014",
+      "anchor_same": false,
+      "onnx_error_mm": 94.29965657426293,
+      "kmodel_error_mm": 515.3920494956164,
+      "host_simulator_seconds": 3.6146699000019
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-015",
+      "anchor_same": false,
+      "onnx_error_mm": 42.032051023810276,
+      "kmodel_error_mm": 364.9516177217925,
+      "host_simulator_seconds": 3.5114982000013697
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-016",
+      "anchor_same": false,
+      "onnx_error_mm": 612.9033012187191,
+      "kmodel_error_mm": 662.7196564829625,
+      "host_simulator_seconds": 3.539255299998331
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-017",
+      "anchor_same": true,
+      "onnx_error_mm": 146.91320384451873,
+      "kmodel_error_mm": 146.91320384451873,
+      "host_simulator_seconds": 3.6836693000004743
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-018",
+      "anchor_same": true,
+      "onnx_error_mm": 60.29657634729436,
+      "kmodel_error_mm": 60.29657634729436,
+      "host_simulator_seconds": 3.657801199999085
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-019",
+      "anchor_same": true,
+      "onnx_error_mm": 327.40884061136444,
+      "kmodel_error_mm": 327.40884061136444,
+      "host_simulator_seconds": 3.5580086000009032
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-020",
+      "anchor_same": true,
+      "onnx_error_mm": 546.8609971086255,
+      "kmodel_error_mm": 546.8609971086255,
+      "host_simulator_seconds": 3.7172806000016863
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-021",
+      "anchor_same": true,
+      "onnx_error_mm": 186.1808845532305,
+      "kmodel_error_mm": 186.1808845532305,
+      "host_simulator_seconds": 3.1979424000019208
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-022",
+      "anchor_same": true,
+      "onnx_error_mm": 36.40135202221302,
+      "kmodel_error_mm": 36.40135202221302,
+      "host_simulator_seconds": 2.995257300000958
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-023",
+      "anchor_same": true,
+      "onnx_error_mm": 15.212877115532947,
+      "kmodel_error_mm": 15.212877115532947,
+      "host_simulator_seconds": 3.037717999999586
+    },
+    {
+      "sample_id": "gray-pilot-tr0014-024",
+      "anchor_same": true,
+      "onnx_error_mm": 68.76494473148661,
+      "kmodel_error_mm": 68.76494473148661,
+      "host_simulator_seconds": 2.9648866999996244
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-000",
+      "anchor_same": true,
+      "onnx_error_mm": 47.63628130729223,
+      "kmodel_error_mm": 47.63628130729223,
+      "host_simulator_seconds": 3.0415546000003815
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-001",
+      "anchor_same": true,
+      "onnx_error_mm": 21.173476648287323,
+      "kmodel_error_mm": 21.173476648287323,
+      "host_simulator_seconds": 3.0407149999991816
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-002",
+      "anchor_same": true,
+      "onnx_error_mm": 176.1790808248281,
+      "kmodel_error_mm": 176.1790808248281,
+      "host_simulator_seconds": 2.9151588000022457
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-003",
+      "anchor_same": true,
+      "onnx_error_mm": 412.57079113824113,
+      "kmodel_error_mm": 412.57079113824113,
+      "host_simulator_seconds": 3.1031368000003567
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-004",
+      "anchor_same": true,
+      "onnx_error_mm": 435.90125716345784,
+      "kmodel_error_mm": 435.90125716345784,
+      "host_simulator_seconds": 3.21520899999814
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-005",
+      "anchor_same": true,
+      "onnx_error_mm": 67.06330361604769,
+      "kmodel_error_mm": 67.06330361604769,
+      "host_simulator_seconds": 3.3108934000010777
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-006",
+      "anchor_same": true,
+      "onnx_error_mm": 42.672902170675826,
+      "kmodel_error_mm": 42.672902170675826,
+      "host_simulator_seconds": 2.993033300001116
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-007",
+      "anchor_same": true,
+      "onnx_error_mm": 149.1919448322457,
+      "kmodel_error_mm": 149.1919448322457,
+      "host_simulator_seconds": 3.016599300000962
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-008",
+      "anchor_same": true,
+      "onnx_error_mm": 160.22249569343583,
+      "kmodel_error_mm": 160.22249569343583,
+      "host_simulator_seconds": 3.1193638000004285
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-009",
+      "anchor_same": true,
+      "onnx_error_mm": 10.316663318245215,
+      "kmodel_error_mm": 10.316663318245215,
+      "host_simulator_seconds": 3.2069674000013038
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-010",
+      "anchor_same": true,
+      "onnx_error_mm": 177.82594806778656,
+      "kmodel_error_mm": 177.82594806778656,
+      "host_simulator_seconds": 3.069436099998711
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-011",
+      "anchor_same": false,
+      "onnx_error_mm": 444.95408950021897,
+      "kmodel_error_mm": 494.55985433597755,
+      "host_simulator_seconds": 2.9335724000011396
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-012",
+      "anchor_same": false,
+      "onnx_error_mm": 915.9476160061562,
+      "kmodel_error_mm": 1103.5528125957828,
+      "host_simulator_seconds": 3.0565949000010733
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-013",
+      "anchor_same": true,
+      "onnx_error_mm": 837.5523394257085,
+      "kmodel_error_mm": 837.5523394257085,
+      "host_simulator_seconds": 3.0930802000002586
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-014",
+      "anchor_same": true,
+      "onnx_error_mm": 860.7776746697809,
+      "kmodel_error_mm": 860.7776746697809,
+      "host_simulator_seconds": 3.356388500000321
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-015",
+      "anchor_same": true,
+      "onnx_error_mm": 1035.6294067454146,
+      "kmodel_error_mm": 1035.6294067454146,
+      "host_simulator_seconds": 3.384499499999947
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-016",
+      "anchor_same": true,
+      "onnx_error_mm": 1358.4586338553263,
+      "kmodel_error_mm": 1358.4586338553263,
+      "host_simulator_seconds": 3.036290200001531
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-017",
+      "anchor_same": false,
+      "onnx_error_mm": 1336.827900423307,
+      "kmodel_error_mm": 1194.6154356102543,
+      "host_simulator_seconds": 2.9369880000012927
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-018",
+      "anchor_same": true,
+      "onnx_error_mm": 2114.456592327914,
+      "kmodel_error_mm": 2114.456592327914,
+      "host_simulator_seconds": 3.0103226999999606
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-019",
+      "anchor_same": true,
+      "onnx_error_mm": 2009.0115588351523,
+      "kmodel_error_mm": 2009.0115588351523,
+      "host_simulator_seconds": 2.9847148999979254
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-020",
+      "anchor_same": false,
+      "onnx_error_mm": 1881.1398650097844,
+      "kmodel_error_mm": 1909.2096572759253,
+      "host_simulator_seconds": 3.0282803000009153
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-021",
+      "anchor_same": false,
+      "onnx_error_mm": 1881.0316272984062,
+      "kmodel_error_mm": 1886.2823288262591,
+      "host_simulator_seconds": 3.0277657000006
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-022",
+      "anchor_same": true,
+      "onnx_error_mm": 1929.5331034611343,
+      "kmodel_error_mm": 1929.5331034611343,
+      "host_simulator_seconds": 3.084516099999746
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-023",
+      "anchor_same": false,
+      "onnx_error_mm": 1929.1752924451366,
+      "kmodel_error_mm": 1929.3538850548478,
+      "host_simulator_seconds": 3.2640236999977787
+    },
+    {
+      "sample_id": "gray-pilot-tr0015-024",
+      "anchor_same": true,
+      "onnx_error_mm": 2042.4787681060795,
+      "kmodel_error_mm": 2042.4787681060795,
+      "host_simulator_seconds": 3.3669154000017443
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-000",
+      "anchor_same": true,
+      "onnx_error_mm": 2030.9784156225337,
+      "kmodel_error_mm": 2030.9784156225337,
+      "host_simulator_seconds": 3.18615040000077
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-001",
+      "anchor_same": true,
+      "onnx_error_mm": 2024.6370844047046,
+      "kmodel_error_mm": 2024.6370844047046,
+      "host_simulator_seconds": 3.1734384999981557
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-002",
+      "anchor_same": false,
+      "onnx_error_mm": 2005.4683861582296,
+      "kmodel_error_mm": 2055.4680832793856,
+      "host_simulator_seconds": 3.0990529999980936
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-003",
+      "anchor_same": true,
+      "onnx_error_mm": 1969.9949060281886,
+      "kmodel_error_mm": 1969.9949060281886,
+      "host_simulator_seconds": 2.9999105999995663
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-004",
+      "anchor_same": true,
+      "onnx_error_mm": 1870.3324549831525,
+      "kmodel_error_mm": 1870.3324549831525,
+      "host_simulator_seconds": 2.999482799998077
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-005",
+      "anchor_same": true,
+      "onnx_error_mm": 1757.3932314005162,
+      "kmodel_error_mm": 1757.3932314005162,
+      "host_simulator_seconds": 3.0787725999980466
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-006",
+      "anchor_same": true,
+      "onnx_error_mm": 1629.4239121847443,
+      "kmodel_error_mm": 1629.4239121847443,
+      "host_simulator_seconds": 3.20543760000146
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-007",
+      "anchor_same": false,
+      "onnx_error_mm": 1286.2121291603075,
+      "kmodel_error_mm": 1649.2432475868982,
+      "host_simulator_seconds": 3.2148356000034255
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-008",
+      "anchor_same": false,
+      "onnx_error_mm": 1179.7928269556871,
+      "kmodel_error_mm": 2218.7530869660295,
+      "host_simulator_seconds": 3.2897236999997403
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-009",
+      "anchor_same": true,
+      "onnx_error_mm": 2216.0252518218085,
+      "kmodel_error_mm": 2216.0252518218085,
+      "host_simulator_seconds": 3.212472400002298
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-010",
+      "anchor_same": true,
+      "onnx_error_mm": 1291.0742715381928,
+      "kmodel_error_mm": 1291.0742715381928,
+      "host_simulator_seconds": 3.0080909999996948
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-011",
+      "anchor_same": true,
+      "onnx_error_mm": 1144.263016546949,
+      "kmodel_error_mm": 1144.263016546949,
+      "host_simulator_seconds": 2.913419000000431
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-012",
+      "anchor_same": true,
+      "onnx_error_mm": 1008.8386072463343,
+      "kmodel_error_mm": 1008.8386072463343,
+      "host_simulator_seconds": 3.109413299996959
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-013",
+      "anchor_same": true,
+      "onnx_error_mm": 685.7678482803816,
+      "kmodel_error_mm": 685.7678482803816,
+      "host_simulator_seconds": 3.1360088999972504
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-014",
+      "anchor_same": false,
+      "onnx_error_mm": 849.2391048801887,
+      "kmodel_error_mm": 884.1461979778321,
+      "host_simulator_seconds": 4.0175276000009035
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-015",
+      "anchor_same": true,
+      "onnx_error_mm": 602.7768120488505,
+      "kmodel_error_mm": 602.7768120488505,
+      "host_simulator_seconds": 3.6290139999982785
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-016",
+      "anchor_same": true,
+      "onnx_error_mm": 695.2718552842581,
+      "kmodel_error_mm": 695.2718552842581,
+      "host_simulator_seconds": 3.636402399999497
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-017",
+      "anchor_same": true,
+      "onnx_error_mm": 22.49863491737532,
+      "kmodel_error_mm": 22.49863491737532,
+      "host_simulator_seconds": 3.976932899997337
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-018",
+      "anchor_same": true,
+      "onnx_error_mm": 164.89783261692446,
+      "kmodel_error_mm": 164.89783261692446,
+      "host_simulator_seconds": 3.738095800003066
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-019",
+      "anchor_same": true,
+      "onnx_error_mm": 19.92907273493443,
+      "kmodel_error_mm": 19.92907273493443,
+      "host_simulator_seconds": 3.5594223000007332
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-020",
+      "anchor_same": true,
+      "onnx_error_mm": 184.91559659309323,
+      "kmodel_error_mm": 184.91559659309323,
+      "host_simulator_seconds": 3.3238777999977174
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-021",
+      "anchor_same": true,
+      "onnx_error_mm": 141.13685395727308,
+      "kmodel_error_mm": 141.13685395727308,
+      "host_simulator_seconds": 3.177727700000105
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-022",
+      "anchor_same": true,
+      "onnx_error_mm": 254.06472918233965,
+      "kmodel_error_mm": 254.06472918233965,
+      "host_simulator_seconds": 2.8734048000005714
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-023",
+      "anchor_same": true,
+      "onnx_error_mm": 65.67809240422642,
+      "kmodel_error_mm": 65.67809240422642,
+      "host_simulator_seconds": 3.019803499999398
+    },
+    {
+      "sample_id": "gray-pilot-tr0022-024",
+      "anchor_same": true,
+      "onnx_error_mm": 127.43371841503794,
+      "kmodel_error_mm": 127.43371841503794,
+      "host_simulator_seconds": 3.085682500000985
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-000",
+      "anchor_same": true,
+      "onnx_error_mm": 47.39062722269294,
+      "kmodel_error_mm": 47.39062722269294,
+      "host_simulator_seconds": 3.0853706000016246
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-001",
+      "anchor_same": true,
+      "onnx_error_mm": 52.050550047342774,
+      "kmodel_error_mm": 52.050550047342774,
+      "host_simulator_seconds": 3.48886180000045
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-002",
+      "anchor_same": true,
+      "onnx_error_mm": 68.21549889324582,
+      "kmodel_error_mm": 68.21549889324582,
+      "host_simulator_seconds": 3.3166225000022678
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-003",
+      "anchor_same": true,
+      "onnx_error_mm": 99.62420920336538,
+      "kmodel_error_mm": 99.62420920336538,
+      "host_simulator_seconds": 3.17733650000082
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-004",
+      "anchor_same": false,
+      "onnx_error_mm": 195.53294145437027,
+      "kmodel_error_mm": 145.93108405986595,
+      "host_simulator_seconds": 3.015951599998516
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-005",
+      "anchor_same": true,
+      "onnx_error_mm": 272.8060435841416,
+      "kmodel_error_mm": 272.8060435841416,
+      "host_simulator_seconds": 2.959994500000903
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-006",
+      "anchor_same": true,
+      "onnx_error_mm": 321.21323109196015,
+      "kmodel_error_mm": 321.21323109196015,
+      "host_simulator_seconds": 2.9426595000004454
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-007",
+      "anchor_same": false,
+      "onnx_error_mm": 209.15203642099536,
+      "kmodel_error_mm": 700.8239814936668,
+      "host_simulator_seconds": 2.9463060999987647
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-008",
+      "anchor_same": false,
+      "onnx_error_mm": 297.299802589193,
+      "kmodel_error_mm": 752.5759292814391,
+      "host_simulator_seconds": 2.9607973999991373
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-009",
+      "anchor_same": false,
+      "onnx_error_mm": 405.0844682248337,
+      "kmodel_error_mm": 822.6341555723997,
+      "host_simulator_seconds": 3.057112499998766
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-010",
+      "anchor_same": false,
+      "onnx_error_mm": 529.4148182244647,
+      "kmodel_error_mm": 687.0953550417231,
+      "host_simulator_seconds": 3.0755859999990207
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-011",
+      "anchor_same": true,
+      "onnx_error_mm": 1020.6051927911344,
+      "kmodel_error_mm": 1020.6051927911344,
+      "host_simulator_seconds": 3.1074343000000226
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-012",
+      "anchor_same": true,
+      "onnx_error_mm": 1148.1914527766069,
+      "kmodel_error_mm": 1148.1914527766069,
+      "host_simulator_seconds": 3.2195458999995026
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-013",
+      "anchor_same": false,
+      "onnx_error_mm": 1767.251298618767,
+      "kmodel_error_mm": 1813.0040265957784,
+      "host_simulator_seconds": 2.913413700000092
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-014",
+      "anchor_same": false,
+      "onnx_error_mm": 817.8311345264456,
+      "kmodel_error_mm": 1169.6554347133037,
+      "host_simulator_seconds": 2.9226924999966286
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-015",
+      "anchor_same": false,
+      "onnx_error_mm": 604.2936976068357,
+      "kmodel_error_mm": 1018.3873493603528,
+      "host_simulator_seconds": 2.9805325999986962
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-016",
+      "anchor_same": false,
+      "onnx_error_mm": 613.5061177012782,
+      "kmodel_error_mm": 991.4845512126284,
+      "host_simulator_seconds": 2.957278799996857
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-017",
+      "anchor_same": false,
+      "onnx_error_mm": 1180.714017911904,
+      "kmodel_error_mm": 1120.5201449299784,
+      "host_simulator_seconds": 2.9732648999997764
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-018",
+      "anchor_same": false,
+      "onnx_error_mm": 834.3845147845332,
+      "kmodel_error_mm": 884.1849200490071,
+      "host_simulator_seconds": 2.8897486999994726
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-019",
+      "anchor_same": false,
+      "onnx_error_mm": 985.5404519814397,
+      "kmodel_error_mm": 985.6955871133816,
+      "host_simulator_seconds": 3.0315541999989364
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-020",
+      "anchor_same": false,
+      "onnx_error_mm": 1257.564509629545,
+      "kmodel_error_mm": 1735.248350833147,
+      "host_simulator_seconds": 3.2612802000003285
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-021",
+      "anchor_same": false,
+      "onnx_error_mm": 1776.9437218024257,
+      "kmodel_error_mm": 2025.3237250539357,
+      "host_simulator_seconds": 3.331738900000346
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-022",
+      "anchor_same": false,
+      "onnx_error_mm": 1380.9017884986931,
+      "kmodel_error_mm": 1903.588314929954,
+      "host_simulator_seconds": 3.3228979999985313
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-023",
+      "anchor_same": true,
+      "onnx_error_mm": 1924.662501972506,
+      "kmodel_error_mm": 1924.662501972506,
+      "host_simulator_seconds": 3.0326356000005035
+    },
+    {
+      "sample_id": "gray-pilot-tr0023-024",
+      "anchor_same": true,
+      "onnx_error_mm": 1964.0087291149687,
+      "kmodel_error_mm": 1964.0087291149687,
+      "host_simulator_seconds": 3.0583236000020406
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-000",
+      "anchor_same": false,
+      "onnx_error_mm": 1947.1863642728993,
+      "kmodel_error_mm": 1997.1652677788215,
+      "host_simulator_seconds": 3.121479100002034
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-001",
+      "anchor_same": true,
+      "onnx_error_mm": 1931.0633937182602,
+      "kmodel_error_mm": 1931.0633937182602,
+      "host_simulator_seconds": 3.083656800001336
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-002",
+      "anchor_same": true,
+      "onnx_error_mm": 1796.2995851708736,
+      "kmodel_error_mm": 1796.2995851708736,
+      "host_simulator_seconds": 3.052612200001022
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-003",
+      "anchor_same": true,
+      "onnx_error_mm": 1779.8303795245492,
+      "kmodel_error_mm": 1779.8303795245492,
+      "host_simulator_seconds": 2.937290899997606
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-004",
+      "anchor_same": true,
+      "onnx_error_mm": 1694.7748294411745,
+      "kmodel_error_mm": 1694.7748294411745,
+      "host_simulator_seconds": 3.1100287000008393
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-005",
+      "anchor_same": true,
+      "onnx_error_mm": 1503.134339082174,
+      "kmodel_error_mm": 1503.134339082174,
+      "host_simulator_seconds": 3.4071005000005243
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-006",
+      "anchor_same": false,
+      "onnx_error_mm": 2211.1495038521316,
+      "kmodel_error_mm": 2239.8008375213594,
+      "host_simulator_seconds": 3.3755826000015077
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-007",
+      "anchor_same": true,
+      "onnx_error_mm": 1071.2951690435864,
+      "kmodel_error_mm": 1071.2951690435864,
+      "host_simulator_seconds": 3.366692999999941
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-008",
+      "anchor_same": true,
+      "onnx_error_mm": 985.7897309731337,
+      "kmodel_error_mm": 985.7897309731337,
+      "host_simulator_seconds": 3.500379899996915
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-009",
+      "anchor_same": false,
+      "onnx_error_mm": 2120.0710704974754,
+      "kmodel_error_mm": 2100.360207987287,
+      "host_simulator_seconds": 3.4366200999975263
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-010",
+      "anchor_same": true,
+      "onnx_error_mm": 2081.1674657883436,
+      "kmodel_error_mm": 2081.1674657883436,
+      "host_simulator_seconds": 3.3832207000014023
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-011",
+      "anchor_same": true,
+      "onnx_error_mm": 2045.153329025959,
+      "kmodel_error_mm": 2045.153329025959,
+      "host_simulator_seconds": 3.26354530000026
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-012",
+      "anchor_same": true,
+      "onnx_error_mm": 1008.5940430878246,
+      "kmodel_error_mm": 1008.5940430878246,
+      "host_simulator_seconds": 3.093901799999003
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-013",
+      "anchor_same": true,
+      "onnx_error_mm": 924.8053838819886,
+      "kmodel_error_mm": 924.8053838819886,
+      "host_simulator_seconds": 3.0186595000013767
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-014",
+      "anchor_same": true,
+      "onnx_error_mm": 841.4900732995355,
+      "kmodel_error_mm": 841.4900732995355,
+      "host_simulator_seconds": 3.2556282000005012
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-015",
+      "anchor_same": true,
+      "onnx_error_mm": 758.8040577761815,
+      "kmodel_error_mm": 758.8040577761815,
+      "host_simulator_seconds": 3.2730345999989368
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-016",
+      "anchor_same": true,
+      "onnx_error_mm": 676.977952812094,
+      "kmodel_error_mm": 676.977952812094,
+      "host_simulator_seconds": 3.117895300001692
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-017",
+      "anchor_same": true,
+      "onnx_error_mm": 596.3658092773376,
+      "kmodel_error_mm": 596.3658092773376,
+      "host_simulator_seconds": 3.057969999998022
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-018",
+      "anchor_same": true,
+      "onnx_error_mm": 517.5352520998999,
+      "kmodel_error_mm": 517.5352520998999,
+      "host_simulator_seconds": 2.9145706000017526
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-019",
+      "anchor_same": true,
+      "onnx_error_mm": 441.44168799692216,
+      "kmodel_error_mm": 441.44168799692216,
+      "host_simulator_seconds": 2.9072246000032465
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-020",
+      "anchor_same": true,
+      "onnx_error_mm": 369.7787062974667,
+      "kmodel_error_mm": 369.7787062974667,
+      "host_simulator_seconds": 3.0591754999986733
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-021",
+      "anchor_same": true,
+      "onnx_error_mm": 343.96754754378935,
+      "kmodel_error_mm": 343.96754754378935,
+      "host_simulator_seconds": 2.9899512000010873
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-022",
+      "anchor_same": true,
+      "onnx_error_mm": 173.87105352613204,
+      "kmodel_error_mm": 173.87105352613204,
+      "host_simulator_seconds": 3.0865416999986337
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-023",
+      "anchor_same": true,
+      "onnx_error_mm": 43.13313283416602,
+      "kmodel_error_mm": 43.13313283416602,
+      "host_simulator_seconds": 3.3803138000002946
+    },
+    {
+      "sample_id": "gray-pilot-tr0030-024",
+      "anchor_same": false,
+      "onnx_error_mm": 30.235133943784273,
+      "kmodel_error_mm": 53.12935057164254,
+      "host_simulator_seconds": 3.6700922999989416
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-000",
+      "anchor_same": true,
+      "onnx_error_mm": 53.910050754067555,
+      "kmodel_error_mm": 53.910050754067555,
+      "host_simulator_seconds": 3.393215899999632
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-001",
+      "anchor_same": false,
+      "onnx_error_mm": 53.5588662293035,
+      "kmodel_error_mm": 40.021432154687744,
+      "host_simulator_seconds": 3.2723516000005475
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-002",
+      "anchor_same": true,
+      "onnx_error_mm": 25.880728223530426,
+      "kmodel_error_mm": 25.880728223530426,
+      "host_simulator_seconds": 3.297904600000038
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-003",
+      "anchor_same": true,
+      "onnx_error_mm": 129.74973457010728,
+      "kmodel_error_mm": 129.74973457010728,
+      "host_simulator_seconds": 2.9734696000014083
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-004",
+      "anchor_same": false,
+      "onnx_error_mm": 263.7460166933319,
+      "kmodel_error_mm": 1388.1285586235524,
+      "host_simulator_seconds": 3.126853099998698
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-005",
+      "anchor_same": false,
+      "onnx_error_mm": 338.0968784360613,
+      "kmodel_error_mm": 366.331300131322,
+      "host_simulator_seconds": 3.121365099999821
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-006",
+      "anchor_same": true,
+      "onnx_error_mm": 419.3517041532484,
+      "kmodel_error_mm": 419.3517041532484,
+      "host_simulator_seconds": 3.4377444999990985
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-007",
+      "anchor_same": true,
+      "onnx_error_mm": 188.3467738483658,
+      "kmodel_error_mm": 188.3467738483658,
+      "host_simulator_seconds": 3.389546900001733
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-008",
+      "anchor_same": true,
+      "onnx_error_mm": 275.008210630017,
+      "kmodel_error_mm": 275.008210630017,
+      "host_simulator_seconds": 3.334520500000508
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-009",
+      "anchor_same": true,
+      "onnx_error_mm": 1880.1626001566945,
+      "kmodel_error_mm": 1880.1626001566945,
+      "host_simulator_seconds": 3.044821100000263
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-010",
+      "anchor_same": true,
+      "onnx_error_mm": 454.2422533349842,
+      "kmodel_error_mm": 454.2422533349842,
+      "host_simulator_seconds": 3.0717755000005127
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-011",
+      "anchor_same": false,
+      "onnx_error_mm": 495.3821504373844,
+      "kmodel_error_mm": 1885.7586628389101,
+      "host_simulator_seconds": 3.130141300000105
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-012",
+      "anchor_same": false,
+      "onnx_error_mm": 586.1646027487461,
+      "kmodel_error_mm": 635.7969838573993,
+      "host_simulator_seconds": 3.1902095999976154
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-013",
+      "anchor_same": false,
+      "onnx_error_mm": 1980.9896248716243,
+      "kmodel_error_mm": 2001.0331297095593,
+      "host_simulator_seconds": 3.006622699998843
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-014",
+      "anchor_same": true,
+      "onnx_error_mm": 818.1288772333733,
+      "kmodel_error_mm": 818.1288772333733,
+      "host_simulator_seconds": 2.9281418999999005
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-015",
+      "anchor_same": true,
+      "onnx_error_mm": 909.4402796361629,
+      "kmodel_error_mm": 909.4402796361629,
+      "host_simulator_seconds": 3.0804786999979115
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-016",
+      "anchor_same": false,
+      "onnx_error_mm": 1260.1374192051574,
+      "kmodel_error_mm": 1210.6354266008175,
+      "host_simulator_seconds": 3.138272500000312
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-017",
+      "anchor_same": true,
+      "onnx_error_mm": 1350.968135444859,
+      "kmodel_error_mm": 1350.968135444859,
+      "host_simulator_seconds": 3.2291023999969184
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-018",
+      "anchor_same": false,
+      "onnx_error_mm": 1441.9022663366707,
+      "kmodel_error_mm": 1491.549523459088,
+      "host_simulator_seconds": 3.2034224000017275
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-019",
+      "anchor_same": true,
+      "onnx_error_mm": 1582.6089642509612,
+      "kmodel_error_mm": 1582.6089642509612,
+      "host_simulator_seconds": 3.0019926999993913
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-020",
+      "anchor_same": true,
+      "onnx_error_mm": 1731.0157502148259,
+      "kmodel_error_mm": 1731.0157502148259,
+      "host_simulator_seconds": 3.0989801999967312
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-021",
+      "anchor_same": true,
+      "onnx_error_mm": 1770.536261256529,
+      "kmodel_error_mm": 1770.536261256529,
+      "host_simulator_seconds": 3.079560299996956
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-022",
+      "anchor_same": true,
+      "onnx_error_mm": 1798.130259521599,
+      "kmodel_error_mm": 1798.130259521599,
+      "host_simulator_seconds": 3.4117920999997295
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-023",
+      "anchor_same": true,
+      "onnx_error_mm": 1938.5790131841222,
+      "kmodel_error_mm": 1938.5790131841222,
+      "host_simulator_seconds": 3.3230254000009154
+    },
+    {
+      "sample_id": "gray-pilot-tr0031-024",
+      "anchor_same": true,
+      "onnx_error_mm": 2023.7608519083997,
+      "kmodel_error_mm": 2023.7608519083997,
+      "host_simulator_seconds": 3.410107199997583
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-000",
+      "anchor_same": false,
+      "onnx_error_mm": 1943.0271857041696,
+      "kmodel_error_mm": 1993.0177154785179,
+      "host_simulator_seconds": 3.148546099997475
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-001",
+      "anchor_same": true,
+      "onnx_error_mm": 1812.0895105840946,
+      "kmodel_error_mm": 1812.0895105840946,
+      "host_simulator_seconds": 3.444186999997328
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-002",
+      "anchor_same": true,
+      "onnx_error_mm": 1477.768817315221,
+      "kmodel_error_mm": 1477.768817315221,
+      "host_simulator_seconds": 3.5427039000023797
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-003",
+      "anchor_same": true,
+      "onnx_error_mm": 1136.4136767495427,
+      "kmodel_error_mm": 1136.4136767495427,
+      "host_simulator_seconds": 3.569639000001189
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-004",
+      "anchor_same": true,
+      "onnx_error_mm": 926.915104939056,
+      "kmodel_error_mm": 926.915104939056,
+      "host_simulator_seconds": 3.55060020000019
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-005",
+      "anchor_same": true,
+      "onnx_error_mm": 687.8200860579357,
+      "kmodel_error_mm": 687.8200860579357,
+      "host_simulator_seconds": 3.25586679999833
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-006",
+      "anchor_same": false,
+      "onnx_error_mm": 657.6918314813856,
+      "kmodel_error_mm": 610.2561379258318,
+      "host_simulator_seconds": 3.311427000000549
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-007",
+      "anchor_same": true,
+      "onnx_error_mm": 947.5996850554642,
+      "kmodel_error_mm": 947.5996850554642,
+      "host_simulator_seconds": 3.4534616000019014
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-008",
+      "anchor_same": true,
+      "onnx_error_mm": 578.7356894888387,
+      "kmodel_error_mm": 578.7356894888387,
+      "host_simulator_seconds": 3.4265601000006427
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-009",
+      "anchor_same": true,
+      "onnx_error_mm": 651.4515375647546,
+      "kmodel_error_mm": 651.4515375647546,
+      "host_simulator_seconds": 3.6471573999988323
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-010",
+      "anchor_same": true,
+      "onnx_error_mm": 651.4515375647546,
+      "kmodel_error_mm": 651.4515375647546,
+      "host_simulator_seconds": 3.3883664999993925
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-011",
+      "anchor_same": false,
+      "onnx_error_mm": 686.5245942141112,
+      "kmodel_error_mm": 651.4515375647546,
+      "host_simulator_seconds": 3.7443507999996655
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-012",
+      "anchor_same": false,
+      "onnx_error_mm": 686.5245942141112,
+      "kmodel_error_mm": 651.4515375647546,
+      "host_simulator_seconds": 3.356848799998261
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-013",
+      "anchor_same": true,
+      "onnx_error_mm": 1280.5861093619606,
+      "kmodel_error_mm": 1280.5861093619606,
+      "host_simulator_seconds": 3.3013947999970696
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-014",
+      "anchor_same": true,
+      "onnx_error_mm": 1307.3898370070629,
+      "kmodel_error_mm": 1307.3898370070629,
+      "host_simulator_seconds": 3.56855060000089
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-015",
+      "anchor_same": false,
+      "onnx_error_mm": 1852.1394761855704,
+      "kmodel_error_mm": 1288.0926836363965,
+      "host_simulator_seconds": 3.390208500000881
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-016",
+      "anchor_same": false,
+      "onnx_error_mm": 1821.5003035099155,
+      "kmodel_error_mm": 162.68119189123337,
+      "host_simulator_seconds": 3.3334605999989435
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-017",
+      "anchor_same": true,
+      "onnx_error_mm": 1699.9699385375588,
+      "kmodel_error_mm": 1699.9699385375588,
+      "host_simulator_seconds": 3.4032059000019217
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-018",
+      "anchor_same": true,
+      "onnx_error_mm": 1410.629296490632,
+      "kmodel_error_mm": 1410.629296490632,
+      "host_simulator_seconds": 3.5672497999985353
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-019",
+      "anchor_same": true,
+      "onnx_error_mm": 525.8348228751053,
+      "kmodel_error_mm": 525.8348228751053,
+      "host_simulator_seconds": 3.483938000001217
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-020",
+      "anchor_same": true,
+      "onnx_error_mm": 86.39912802686442,
+      "kmodel_error_mm": 86.39912802686442,
+      "host_simulator_seconds": 3.4342560000004596
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-021",
+      "anchor_same": false,
+      "onnx_error_mm": 742.7193584242257,
+      "kmodel_error_mm": 209.77335552697934,
+      "host_simulator_seconds": 3.457079399999202
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-022",
+      "anchor_same": true,
+      "onnx_error_mm": 148.77863423232452,
+      "kmodel_error_mm": 148.77863423232452,
+      "host_simulator_seconds": 3.3206664999997884
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-023",
+      "anchor_same": true,
+      "onnx_error_mm": 134.05087153105984,
+      "kmodel_error_mm": 134.05087153105984,
+      "host_simulator_seconds": 3.1939813000026334
+    },
+    {
+      "sample_id": "gray-pilot-tr0038-024",
+      "anchor_same": true,
+      "onnx_error_mm": 4.158947137850311,
+      "kmodel_error_mm": 4.158947137850311,
+      "host_simulator_seconds": 3.3227207000018097
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-000",
+      "anchor_same": true,
+      "onnx_error_mm": 34.06729873331002,
+      "kmodel_error_mm": 34.06729873331002,
+      "host_simulator_seconds": 3.2335925000006682
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-001",
+      "anchor_same": true,
+      "onnx_error_mm": 65.12715839735408,
+      "kmodel_error_mm": 65.12715839735408,
+      "host_simulator_seconds": 3.2737968000001274
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-002",
+      "anchor_same": true,
+      "onnx_error_mm": 400.06388364200535,
+      "kmodel_error_mm": 400.06388364200535,
+      "host_simulator_seconds": 3.3688803000004555
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-003",
+      "anchor_same": true,
+      "onnx_error_mm": 462.43214463470537,
+      "kmodel_error_mm": 462.43214463470537,
+      "host_simulator_seconds": 3.5645250999987184
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-004",
+      "anchor_same": false,
+      "onnx_error_mm": 658.8187280565872,
+      "kmodel_error_mm": 708.800524498484,
+      "host_simulator_seconds": 3.4687162000009266
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-005",
+      "anchor_same": false,
+      "onnx_error_mm": 677.7568481287416,
+      "kmodel_error_mm": 1124.6896935631055,
+      "host_simulator_seconds": 3.342751899999712
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-006",
+      "anchor_same": false,
+      "onnx_error_mm": 651.0915281233226,
+      "kmodel_error_mm": 608.7397727294783,
+      "host_simulator_seconds": 3.4647998999971605
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-007",
+      "anchor_same": false,
+      "onnx_error_mm": 1112.275991912048,
+      "kmodel_error_mm": 1081.111379596341,
+      "host_simulator_seconds": 3.5249086000003444
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-008",
+      "anchor_same": true,
+      "onnx_error_mm": 678.1871212273295,
+      "kmodel_error_mm": 678.1871212273295,
+      "host_simulator_seconds": 3.3857019000024593
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-009",
+      "anchor_same": true,
+      "onnx_error_mm": 657.0909143634319,
+      "kmodel_error_mm": 657.0909143634319,
+      "host_simulator_seconds": 3.30691840000145
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-010",
+      "anchor_same": true,
+      "onnx_error_mm": 657.0909143634319,
+      "kmodel_error_mm": 657.0909143634319,
+      "host_simulator_seconds": 3.676298799997312
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-011",
+      "anchor_same": true,
+      "onnx_error_mm": 657.0909143634319,
+      "kmodel_error_mm": 657.0909143634319,
+      "host_simulator_seconds": 3.298186899999564
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-012",
+      "anchor_same": true,
+      "onnx_error_mm": 657.0909143634319,
+      "kmodel_error_mm": 657.0909143634319,
+      "host_simulator_seconds": 3.525833399999101
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-013",
+      "anchor_same": true,
+      "onnx_error_mm": 966.9882861904854,
+      "kmodel_error_mm": 966.9882861904854,
+      "host_simulator_seconds": 3.5259397000008903
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-014",
+      "anchor_same": true,
+      "onnx_error_mm": 1254.8011070501198,
+      "kmodel_error_mm": 1254.8011070501198,
+      "host_simulator_seconds": 3.4586157000012463
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-015",
+      "anchor_same": true,
+      "onnx_error_mm": 1664.5701933445623,
+      "kmodel_error_mm": 1664.5701933445623,
+      "host_simulator_seconds": 3.1811687999979767
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-016",
+      "anchor_same": true,
+      "onnx_error_mm": 2364.088559532659,
+      "kmodel_error_mm": 2364.088559532659,
+      "host_simulator_seconds": 3.312348800001928
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-017",
+      "anchor_same": true,
+      "onnx_error_mm": 2554.9028139293932,
+      "kmodel_error_mm": 2554.9028139293932,
+      "host_simulator_seconds": 3.1822758999987855
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-018",
+      "anchor_same": true,
+      "onnx_error_mm": 2203.842114384377,
+      "kmodel_error_mm": 2203.842114384377,
+      "host_simulator_seconds": 3.4109951999998884
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-019",
+      "anchor_same": true,
+      "onnx_error_mm": 2015.8469796223612,
+      "kmodel_error_mm": 2015.8469796223612,
+      "host_simulator_seconds": 3.4737642999971285
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-020",
+      "anchor_same": false,
+      "onnx_error_mm": 1837.6229494911368,
+      "kmodel_error_mm": 1854.9433664343405,
+      "host_simulator_seconds": 3.263668999999936
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-021",
+      "anchor_same": false,
+      "onnx_error_mm": 2103.4901895479156,
+      "kmodel_error_mm": 1728.7127283312534,
+      "host_simulator_seconds": 3.468487300000561
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-022",
+      "anchor_same": false,
+      "onnx_error_mm": 1607.542490742347,
+      "kmodel_error_mm": 2179.1994046069744,
+      "host_simulator_seconds": 3.805443999997806
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-023",
+      "anchor_same": true,
+      "onnx_error_mm": 1913.1884023762468,
+      "kmodel_error_mm": 1913.1884023762468,
+      "host_simulator_seconds": 3.313524499997584
+    },
+    {
+      "sample_id": "gray-pilot-tr0039-024",
+      "anchor_same": true,
+      "onnx_error_mm": 2121.1456624694,
+      "kmodel_error_mm": 2121.1456624694,
+      "host_simulator_seconds": 3.462827400002425
+    }
+  ],
+  "full_evaluation_split_frames": 250,
+  "native_k230": "NOT_RUN",
+  "onnx_lowering": {
+    "window": 4,
+    "hidden": 64,
+    "linear_before_reset": 1,
+    "weights": "Original ONNX weights, transposed/sliced without retraining",
+    "reference": "https://onnx.ai/onnx/operators/onnx__GRU.html",
+    "operators": [
+      "Add",
+      "AveragePool",
+      "Clip",
+      "Concat",
+      "Constant",
+      "Conv",
+      "Div",
+      "Expand",
+      "Flatten",
+      "Gather",
+      "Gemm",
+      "MatMul",
+      "Mul",
+      "ReduceL2",
+      "ReduceMax",
+      "Relu",
+      "Reshape",
+      "Shape",
+      "Sigmoid",
+      "Slice",
+      "Squeeze",
+      "Sub",
+      "Tanh",
+      "Transpose",
+      "Unsqueeze"
+    ],
+    "source_sha256": "b309a696ad7b33898f41deb8dec613d9e816431867ef1d92f382250d44e50ec6",
+    "derivative_sha256": "f494371ca1c07e229da7c79017cfe281a2cb5aa6fa6d28110a4f90eb0d711489",
+    "original_paired_frames": 250,
+    "max_abs": 5.7220458984375e-06
+  }
+}

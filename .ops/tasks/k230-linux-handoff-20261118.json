@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "k230-linux-handoff-20261118",
+  "title": "Package K230 Linux port baselines and hardware parity plan",
+  "paths": [
+    "README.md",
+    "docs/linux-handoff",
+    "linux_handoff",
+    ".gitattributes"
+  ],
+  "lane": "parallel",
+  "resources": [],
+  "depends": [],
+  "acceptance": [
+    "Portable AI execution prompt, pinned Linux image and source/model inputs, verified bundle and private remote branch"
+  ],
+  "branch": "ops/k230-linux-20261118",
+  "state": "ready",
+  "claimed": true,
+  "agent": "coordinator",
+  "session": "k230-linux-handoff-20261118-a",
+  "revision": 3,
+  "handoff": ".ops/handoffs/k230-linux-handoff-20261118/20261118T074709-17bbab29.json",
+  "updated_at": "2026-11-18T07:47:33+00:00"
+}

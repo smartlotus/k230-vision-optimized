@@ -1,0 +1,65 @@
+{
+  "scope": "Existing raw board file replay, no new camera capture",
+  "source_board_path": "/sdcard/cdiag1116/chn2.raw",
+  "source_shape": [
+    3,
+    360,
+    640
+  ],
+  "source_dtype": "uint8_RGB_planar",
+  "source_sha256": "b8e8eb3be2f509983da0e03eb7c834cfddaa9a4d7521bacf01d79ca9f3483cf3",
+  "host_prepared_shape": [
+    1,
+    3,
+    192,
+    320
+  ],
+  "host_prepared_sha256": "fef67d28dd3bb93d2f967ff28d2e8c8737862e064058885f7a0b987c1d98774d",
+  "letterbox": {
+    "source_wh": [
+      640,
+      360
+    ],
+    "model_wh": [
+      320,
+      192
+    ],
+    "gain": 0.5,
+    "resized_wh": [
+      320,
+      180
+    ],
+    "padding_tblr": [
+      6,
+      6,
+      0,
+      0
+    ],
+    "pad_value": 114,
+    "coordinate_origin": "continuous top-left image edge",
+    "point_forward": "source_xy*gain+[left,top]",
+    "point_inverse": "(model_xy-[left,top])/gain",
+    "axis_forward": "source_length*gain",
+    "axis_inverse": "model_length/gain",
+    "orientation": "theta in radians encoded sin(2theta),cos(2theta); unchanged by isotropic resize"
+  },
+  "host_source_library": "current task_geometry.letterbox_bgr OpenCV INTER_LINEAR",
+  "fresh_capture": false,
+  "predeclared_rounding_diagnostics": [
+    {
+      "name": "quarter_half_up",
+      "path": "quarter_half_up.rgb888p",
+      "sha256": "fef67d28dd3bb93d2f967ff28d2e8c8737862e064058885f7a0b987c1d98774d"
+    },
+    {
+      "name": "quarter_floor",
+      "path": "quarter_floor.rgb888p",
+      "sha256": "ec27f470a7ad10785145e4bda7a8c98b354d47ed2f9a3c68136c6b86a12b1dfb"
+    },
+    {
+      "name": "quarter_half_even",
+      "path": "quarter_half_even.rgb888p",
+      "sha256": "c252e856499874b66d926c651247c8e255845a99b0f7724e36b458fd3b103abf"
+    }
+  ]
+}

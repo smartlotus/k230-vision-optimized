@@ -1,0 +1,25 @@
+{
+  "window": 8,
+  "sample_us": 229998,
+  "max_gap_us": 730405,
+  "training_manifest_sha256": "94d12969b1b68122c2ab5193340a05ff05021dc07ace1ab989fa1acea532c22e",
+  "full_manifest_sha256": "90e05cacc96118ff7ec35871bec0fba5e5458799c5f620a3ad3bb84d9b8fe0df",
+  "best_sha256": "ef07aa00e02305090b267e22179310fb4dfb27d58fe420fc3c8171728c00b31a",
+  "temperature": 1.0,
+  "threshold": null,
+  "threshold_qualification": "HOLD_VALIDATION_REQUIRES_95PCT_WITHIN200",
+  "simulation_only": true,
+  "measured_acquisition_cadence": "UNKNOWN",
+  "train_intervals_s": {
+    "min": 0.22999999999999998,
+    "median": 0.24591016980103253,
+    "max": 0.6351353440127472
+  },
+  "validation_threshold_fit": {
+    "threshold": null,
+    "source": "val",
+    "tolerance_mm": 200,
+    "minimum_samples": 25,
+    "minimum_precision": 0.95
+  }
+}

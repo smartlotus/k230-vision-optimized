@@ -1,0 +1,17 @@
+{
+  "source_worktree": "C:/Users/28389/Desktop/k230-camera-xy-v2",
+  "source_commit": "c89abb9",
+  "source_relative_path": "experiments/camera_xy_localization_v2/.runtime/kaggle-map-full-a01/provider/map-inference.pt",
+  "checkpoint_sha256": "c16e0ddf9f458fb7dfbcda5902f60c09b4a9e0426bb55a7e9b3ebea3d486d989",
+  "bytes": 6062366,
+  "provider": "lotus30/k230-camera-xy-map-full-a01/1",
+  "kernel_id": 145453718,
+  "epochs": 18,
+  "optimizer_updates": 4500,
+  "targets": [
+    "camera_x_mm",
+    "camera_y_mm"
+  ],
+  "single_point_acceptance": "HOLD",
+  "active_temporal_tree": "READ_ONLY_OTHER_OWNER_DO_NOT_MODIFY"
+}

@@ -1,0 +1,198 @@
+{
+  "topface_inferences": 191,
+  "minimum_python_heap_free": 2004896,
+  "usb_device": "openaicam#openaicam",
+  "memory_sampling_failures": 0,
+  "capture_failures": 0,
+  "run_id": "new-sd-chain30-20261118",
+  "fps": 6.364969,
+  "preview": true,
+  "with_topface": true,
+  "firmware": "(sysname='rt-smart', nodename='rt-smart', release='v1.8-0-gc2d1f5c', version='v1.8-0-gc2d1f5c on 2026-07-03', machine='k230_canmv_lckfb')",
+  "elapsed_seconds": 30.008,
+  "negotiated": {
+    "fourcc": 1196444237,
+    "fps": 30.00003,
+    "height": 720,
+    "width": 1280
+  },
+  "status": "ENGINEERING_MEASURED",
+  "final_memory": {
+    "sys_heap": {
+      "free": 64635840,
+      "total": 67108864,
+      "used": 3194048
+    },
+    "sys_mmz": {
+      "free": 535822336,
+      "total": 535822336,
+      "used": 0
+    },
+    "sys_page": {
+      "free": 436224000,
+      "total": 460488704,
+      "used": 24264704
+    },
+    "python_heap_used": 281728,
+    "python_heap_free": 3863936
+  },
+  "capture_errors": [],
+  "latency": {
+    "roadnet_readback": {
+      "p50_ms_upper": 10,
+      "p95_ms_upper": 11,
+      "overflow_over_1000ms": 0,
+      "p99_ms_upper": 12,
+      "samples": 191,
+      "mean_ms": 10.00074
+    },
+    "gc": {
+      "p50_ms_upper": 12,
+      "p95_ms_upper": 13,
+      "overflow_over_1000ms": 0,
+      "p99_ms_upper": 14,
+      "samples": 191,
+      "mean_ms": 11.80584
+    },
+    "roadnet_kpu": {
+      "p50_ms_upper": 13,
+      "p95_ms_upper": 14,
+      "overflow_over_1000ms": 0,
+      "p99_ms_upper": 14,
+      "samples": 191,
+      "mean_ms": 12.53377
+    },
+    "usb_rgb": {
+      "p50_ms_upper": 70,
+      "p95_ms_upper": 72,
+      "overflow_over_1000ms": 0,
+      "p99_ms_upper": 73,
+      "samples": 191,
+      "mean_ms": 69.66866
+    },
+    "roadnet_postprocess": {
+      "p50_ms_upper": 18,
+      "p95_ms_upper": 19,
+      "overflow_over_1000ms": 0,
+      "p99_ms_upper": 20,
+      "samples": 191,
+      "mean_ms": 17.79763
+    },
+    "cycle": {
+      "p50_ms_upper": 154,
+      "p95_ms_upper": 166,
+      "overflow_over_1000ms": 0,
+      "p99_ms_upper": 171,
+      "samples": 191,
+      "mean_ms": 157.073
+    },
+    "roadnet_ai2d": {
+      "p50_ms_upper": 2,
+      "p95_ms_upper": 2,
+      "overflow_over_1000ms": 0,
+      "p99_ms_upper": 2,
+      "samples": 191,
+      "mean_ms": 1.199094
+    },
+    "topface": {
+      "p50_ms_upper": 27,
+      "p95_ms_upper": 27,
+      "overflow_over_1000ms": 0,
+      "p99_ms_upper": 28,
+      "samples": 191,
+      "mean_ms": 25.8697
+    },
+    "capture": {
+      "p50_ms_upper": 1,
+      "p95_ms_upper": 1,
+      "overflow_over_1000ms": 0,
+      "p99_ms_upper": 1,
+      "samples": 191,
+      "mean_ms": 1.110592
+    },
+    "roadnet": {
+      "p50_ms_upper": 42,
+      "p95_ms_upper": 43,
+      "overflow_over_1000ms": 0,
+      "p99_ms_upper": 44,
+      "samples": 191,
+      "mean_ms": 41.53123
+    },
+    "display": {
+      "p50_ms_upper": 4,
+      "p95_ms_upper": 16,
+      "overflow_over_1000ms": 0,
+      "p99_ms_upper": 18,
+      "samples": 191,
+      "mean_ms": 6.156896
+    }
+  },
+  "postprocess_frames": 191,
+  "requested_seconds": 30,
+  "accuracy_test": "NOT_RUN_BY_USER_SCOPE",
+  "initial_memory": {
+    "sys_heap": {
+      "free": 64658944,
+      "total": 67108864,
+      "used": 3113216
+    },
+    "sys_mmz": {
+      "free": 535822336,
+      "total": 535822336,
+      "used": 0
+    },
+    "sys_page": {
+      "free": 437833728,
+      "total": 460488704,
+      "used": 22654976
+    },
+    "python_heap_used": 324480,
+    "python_heap_free": 3821184
+  },
+  "csi_qr_control": "NOT_IN_SCOPE",
+  "supported_modes": "[{\"width\":1920, \"height\":1080, \"format\":mjpeg, \"fourcc\":0x47504a4d, \"fps\":30.00}, {\"width\":1280, \"height\":720, \"format\":mjpeg, \"fourcc\":0x47504a4d, \"fps\":30.00}, {\"width\":1920, \"height\":1080, \"format\":raw, \"fourcc\":0x32595559, \"fps\":5.00}, {\"width\":1280, \"height\":720, \"format\":raw, \"fourcc\":0x32595559, \"fps\":10.00}, {\"width\":1280, \"height\":720, \"format\":raw, \"fourcc\":0x32595559, \"fps\":5.00}]",
+  "model_output": [
+    1,
+    7,
+    192,
+    320
+  ],
+  "road_quality_test": "NOT_RUN_BY_USER_SCOPE",
+  "attempts": 191,
+  "model_input": [
+    1,
+    3,
+    192,
+    320
+  ],
+  "frames": 191,
+  "scope": "USB camera, model ABI, full-output structural decode, display and cleanup only",
+  "active_pool_peaks": {
+    "sys_page": {
+      "free": 434204672,
+      "total": 460488704,
+      "used": 26284032
+    },
+    "sys_mmz": {
+      "free": 505344000,
+      "total": 535822336,
+      "used": 30478336
+    },
+    "sys_heap": {
+      "free": 63963136,
+      "total": 67108864,
+      "used": 3194048
+    }
+  },
+  "roadnet_sha256": "cba11c87ce36305ffac6dee18b65b4f1e5b47070e00a2f9e706d0aee72a4980e",
+  "active_memory_samples": 28,
+  "shared_inferences": 191,
+  "topface_sha256": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88",
+  "decoded_content_shape": [
+    180,
+    320
+  ],
+  "roadnet_inferences": 191,
+  "displayed_frames": 191,
+  "cleanup_errors": []
+}

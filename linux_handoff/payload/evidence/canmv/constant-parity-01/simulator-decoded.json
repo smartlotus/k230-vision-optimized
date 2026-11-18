@@ -1,0 +1,12 @@
+{
+  "detections": [],
+  "count": 0,
+  "post_nms_total_before_five_limit": 0,
+  "observed_capacity_state": "EMPTY",
+  "capacity_state": "EMPTY",
+  "uncertain": false,
+  "thresholds": {
+    "score": 0.25,
+    "class_agnostic_nms_iou": 0.5
+  }
+}

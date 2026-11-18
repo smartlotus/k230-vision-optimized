@@ -1,0 +1,317 @@
+{
+  "status": "BOUNDED_NATIVE_ENGINEERING_PASS",
+  "runs": [
+    {
+      "file": "chain30-sd1118.json",
+      "frames": 30,
+      "processed_fps": 7.89266,
+      "elapsed_seconds": 3.801,
+      "timing": {
+        "preview": {
+          "samples": 30,
+          "p50_ms": 2.97,
+          "p95_ms": 17.062,
+          "mean_ms": 5.079067
+        },
+        "capture": {
+          "samples": 30,
+          "p50_ms": 0.038,
+          "p95_ms": 0.043,
+          "mean_ms": 6.9924
+        },
+        "rgb": {
+          "samples": 30,
+          "p50_ms": 68.888,
+          "p95_ms": 70.677,
+          "mean_ms": 68.64133
+        },
+        "ai2d": {
+          "samples": 30,
+          "p50_ms": 0.48,
+          "p95_ms": 0.502,
+          "mean_ms": 0.4831666
+        },
+        "readback": {
+          "samples": 30,
+          "p50_ms": 1.402,
+          "p95_ms": 1.526,
+          "mean_ms": 1.463967
+        },
+        "decode": {
+          "samples": 30,
+          "p50_ms": 38.094,
+          "p95_ms": 42.579,
+          "mean_ms": 38.32946
+        },
+        "cycle": {
+          "samples": 30,
+          "p50_ms": 117.572,
+          "p95_ms": 133.451,
+          "mean_ms": 126.5171
+        },
+        "kpu": {
+          "samples": 30,
+          "p50_ms": 1.261,
+          "p95_ms": 1.551,
+          "mean_ms": 1.323833
+        }
+      },
+      "preview_pixel_format": "RGB565",
+      "initial_memory": {
+        "sys_heap": {
+          "free": 64723840,
+          "used": 2898624,
+          "total": 67108864
+        },
+        "sys_mmz": {
+          "free": 535822336,
+          "used": 0,
+          "total": 535822336
+        },
+        "sys_page": {
+          "free": 437837824,
+          "used": 22650880,
+          "total": 460488704
+        },
+        "python_heap_used": 1020320,
+        "python_heap_free": 3125344
+      },
+      "final_memory": {
+        "sys_heap": {
+          "free": 64659840,
+          "used": 3111680,
+          "total": 67108864
+        },
+        "sys_mmz": {
+          "free": 535822336,
+          "used": 0,
+          "total": 535822336
+        },
+        "sys_page": {
+          "free": 437833728,
+          "used": 22654976,
+          "total": 460488704
+        },
+        "python_heap_used": 308864,
+        "python_heap_free": 3836800
+      },
+      "native_sha256": "0dcdbbd52efbfff13230628d0f94f8e72539c879ccb586d13d5015c96cea0728",
+      "source_sha256": {
+        "board_probe.py": "51aaa38e69bcba06a561236bcd4ce4d8e8479e42c9ba180348218f0c5ed710b4",
+        "board_usb_smoke.py": "476c0eba7d4fd42e8d81ae01a3fec4db335dd530df81a7d16592d477062625e6"
+      },
+      "model_sha256": "ae6f472c020f22026c4e6779c5899a38296401465731a258be557061d391a40b",
+      "startup_sha256": {}
+    },
+    {
+      "file": "chain300-sd1118.json",
+      "frames": 300,
+      "processed_fps": 8.346316,
+      "elapsed_seconds": 35.944,
+      "timing": {
+        "preview": {
+          "samples": 300,
+          "p50_ms": 2.967,
+          "p95_ms": 13.577,
+          "mean_ms": 4.433347
+        },
+        "capture": {
+          "samples": 300,
+          "p50_ms": 0.04,
+          "p95_ms": 0.044,
+          "mean_ms": 0.7374833
+        },
+        "rgb": {
+          "samples": 300,
+          "p50_ms": 68.818,
+          "p95_ms": 69.192,
+          "mean_ms": 68.81976
+        },
+        "ai2d": {
+          "samples": 300,
+          "p50_ms": 0.479,
+          "p95_ms": 0.511,
+          "mean_ms": 0.48362
+        },
+        "readback": {
+          "samples": 300,
+          "p50_ms": 1.403,
+          "p95_ms": 1.773,
+          "mean_ms": 1.483993
+        },
+        "decode": {
+          "samples": 300,
+          "p50_ms": 38.035,
+          "p95_ms": 40.003,
+          "mean_ms": 38.15154
+        },
+        "cycle": {
+          "samples": 300,
+          "p50_ms": 117.658,
+          "p95_ms": 131.265,
+          "mean_ms": 119.6213
+        },
+        "kpu": {
+          "samples": 300,
+          "p50_ms": 1.261,
+          "p95_ms": 1.42,
+          "mean_ms": 1.305243
+        }
+      },
+      "preview_pixel_format": "RGB565",
+      "initial_memory": {
+        "sys_heap": {
+          "free": 64659776,
+          "used": 3111680,
+          "total": 67108864
+        },
+        "sys_mmz": {
+          "free": 535822336,
+          "used": 0,
+          "total": 535822336
+        },
+        "sys_page": {
+          "free": 437833728,
+          "used": 22654976,
+          "total": 460488704
+        },
+        "python_heap_used": 1020320,
+        "python_heap_free": 3125344
+      },
+      "final_memory": {
+        "sys_heap": {
+          "free": 64659712,
+          "used": 3113216,
+          "total": 67108864
+        },
+        "sys_mmz": {
+          "free": 535822336,
+          "used": 0,
+          "total": 535822336
+        },
+        "sys_page": {
+          "free": 437833728,
+          "used": 22654976,
+          "total": 460488704
+        },
+        "python_heap_used": 344000,
+        "python_heap_free": 3801664
+      },
+      "native_sha256": "a13af59725f60c9c51c005174b62008bdb344d3503ad2b5afbe75412bfb5b16c",
+      "source_sha256": {
+        "board_probe.py": "51aaa38e69bcba06a561236bcd4ce4d8e8479e42c9ba180348218f0c5ed710b4",
+        "board_usb_smoke.py": "476c0eba7d4fd42e8d81ae01a3fec4db335dd530df81a7d16592d477062625e6"
+      },
+      "model_sha256": "ae6f472c020f22026c4e6779c5899a38296401465731a258be557061d391a40b",
+      "startup_sha256": {}
+    },
+    {
+      "file": "restart30-sd1118.json",
+      "frames": 30,
+      "processed_fps": 8.002133,
+      "elapsed_seconds": 3.749,
+      "timing": {
+        "preview": {
+          "samples": 30,
+          "p50_ms": 2.963,
+          "p95_ms": 14.392,
+          "mean_ms": 4.122533
+        },
+        "capture": {
+          "samples": 30,
+          "p50_ms": 0.038,
+          "p95_ms": 0.044,
+          "mean_ms": 7.005933
+        },
+        "rgb": {
+          "samples": 30,
+          "p50_ms": 68.777,
+          "p95_ms": 69.141,
+          "mean_ms": 68.35667
+        },
+        "ai2d": {
+          "samples": 30,
+          "p50_ms": 0.48,
+          "p95_ms": 0.501,
+          "mean_ms": 0.4878
+        },
+        "readback": {
+          "samples": 30,
+          "p50_ms": 1.483,
+          "p95_ms": 1.948,
+          "mean_ms": 1.522467
+        },
+        "decode": {
+          "samples": 30,
+          "p50_ms": 37.592,
+          "p95_ms": 39.586,
+          "mean_ms": 37.7809
+        },
+        "cycle": {
+          "samples": 30,
+          "p50_ms": 117.303,
+          "p95_ms": 133.568,
+          "mean_ms": 124.8027
+        },
+        "kpu": {
+          "samples": 30,
+          "p50_ms": 1.263,
+          "p95_ms": 1.65,
+          "mean_ms": 1.358067
+        }
+      },
+      "preview_pixel_format": "RGB565",
+      "initial_memory": {
+        "sys_heap": {
+          "free": 64659648,
+          "used": 3113216,
+          "total": 67108864
+        },
+        "sys_mmz": {
+          "free": 535822336,
+          "used": 0,
+          "total": 535822336
+        },
+        "sys_page": {
+          "free": 437833728,
+          "used": 22654976,
+          "total": 460488704
+        },
+        "python_heap_used": 1020320,
+        "python_heap_free": 3125344
+      },
+      "final_memory": {
+        "sys_heap": {
+          "free": 64659712,
+          "used": 3113216,
+          "total": 67108864
+        },
+        "sys_mmz": {
+          "free": 535822336,
+          "used": 0,
+          "total": 535822336
+        },
+        "sys_page": {
+          "free": 437833728,
+          "used": 22654976,
+          "total": 460488704
+        },
+        "python_heap_used": 308864,
+        "python_heap_free": 3836800
+      },
+      "native_sha256": "635d748ff59bdcf26d7a92f4e6d20894e9a660505e394cad388612f89acd8c89",
+      "source_sha256": {
+        "board_probe.py": "51aaa38e69bcba06a561236bcd4ce4d8e8479e42c9ba180348218f0c5ed710b4",
+        "board_usb_smoke.py": "476c0eba7d4fd42e8d81ae01a3fec4db335dd530df81a7d16592d477062625e6"
+      },
+      "model_sha256": "ae6f472c020f22026c4e6779c5899a38296401465731a258be557061d391a40b",
+      "startup_sha256": {}
+    }
+  ],
+  "completed_frames": 360,
+  "accuracy_test": "NOT_RUN_BY_USER_SCOPE",
+  "road_quality_test": "NOT_RUN_BY_USER_SCOPE",
+  "tested_method": "learned_map",
+  "scientific_gate": "HOLD",
+  "production_eligible": false
+}

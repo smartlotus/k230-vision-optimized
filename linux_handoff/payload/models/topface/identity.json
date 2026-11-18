@@ -1,0 +1,22 @@
+{
+  "kmodel_sha256": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88",
+  "onnx_sha256": "833e5786d3a0385b75ee38638993c56adbcce30165e5f67a02f26ebebd7b0ad4",
+  "checkpoint_sha256": "7d7b9a332e2b30d3d09e85245d6e39fd5f9a9d52b694f4bdb0d203585b0346d7",
+  "model_wh": [
+    320,
+    192
+  ],
+  "output_shape": [
+    1,
+    1275,
+    50
+  ],
+  "input": "NCHW_RGB_UINT8",
+  "score_threshold": 0.25,
+  "nms_iou": 0.5,
+  "compiler": {
+    "nncase": "2.11.0",
+    "nncase-kpu": "2.11.0"
+  },
+  "board_status": "NOT_RUN"
+}
