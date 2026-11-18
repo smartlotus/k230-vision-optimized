@@ -1,0 +1,11 @@
+{
+  "state": "BOARD_DATA_MOUNT_AND_WRITE_READBACK_VERIFIED",
+  "firmware": "K230-v1.8-36-gae2f20da0467a8e70659f032b240aae50272c49a",
+  "host_marker_sha256": "940817bdbcd2cb8ac5d0b4a8a0dd843f6a9bf88af056034a29acc42d4858fcb9",
+  "verified_output_scripts": 6,
+  "board_probe": {
+    "path": "/data/k230-board-check-6e1a53e0521c.txt",
+    "bytes": 63,
+    "sha256": "3f720fb5e4a8280d7fcf7f38fd07047fd0f5b6966a123c5312e70d92f76ffbf9"
+  }
+}

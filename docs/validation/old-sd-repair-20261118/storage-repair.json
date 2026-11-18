@@ -1,0 +1,178 @@
+{
+  "verified_archive": {
+    "state": "VERIFIED",
+    "phase": "complete",
+    "bytes_done": 32010928128,
+    "bytes_total": 32010928128,
+    "time": "2026-11-18T15:07:25.7841915+08:00",
+    "message": "Complete card image archived and verified by SHA-256.",
+    "matches_prior_1g": true,
+    "partition3_raw_sha256": "8e95f7771621f5282b908ecc8fa2aef4c40a6923f52962575541cb7bce157f77",
+    "archive": "k230-old-32gb-full.img.gz",
+    "full_raw_sha256": "a61ade8099f29fb9da05b9951bc36f268ddf8d1a09863bd9f847a271e8e12add",
+    "first_1g_sha256": "7534fade1ee67c0eb4e01913c3345047a5283e1a12d3e0f8b29045a3c7082695",
+    "writes_to_sd": 0,
+    "compressed_bytes": 3363529963
+  },
+  "repair": {
+    "phase": "complete_host_validation",
+    "status": "FAT32_REPAIRED_AND_HOST_WRITE_READBACK_VERIFIED",
+    "time": "2026-11-18T15:07:55.5605204+08:00",
+    "format_started": true,
+    "target": {
+      "bytes": 30937185792,
+      "drive_letter": "G",
+      "disk": 1,
+      "offset": 1073741824,
+      "original_raw_fingerprint": {
+        "mbr_sha256": "aa13521969667a29a572f535e485389536383aa1cd6ef670aa9c4a69b2527a62",
+        "third_boot_hex": "1A00805280010035600600F000B847F9000040B91F0C007128100054150080D2",
+        "third_boot_signature": "FF97",
+        "third_boot_fat32_type": "\u0000?\u0007\u0000\u0000\u0014?\u0003"
+      },
+      "partition": 3
+    },
+    "full_backup": {
+      "raw_sha256": "a61ade8099f29fb9da05b9951bc36f268ddf8d1a09863bd9f847a271e8e12add",
+      "file": "k230-old-32gb-full.img.gz",
+      "archive_bytes": 3363529963,
+      "raw_bytes": 32010928128
+    },
+    "prior_hashes": {
+      "main_py": "c0b89b0b48864ff51e0e1d9a07082d306dbaf301aa4b6c95432ea6e04dbc640c",
+      "bin_config": "5a5b3fae804b5ef7bb17670553d7f29e5cfa76719ccb5a104f31441f19453a2c",
+      "topface_kmodel": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88",
+      "roadnet_kmodel": "cba11c87ce36305ffac6dee18b65b4f1e5b47070e00a2f9e706d0aee72a4980e"
+    },
+    "volume": {
+      "DriveLetter": "G",
+      "FileSystem": "FAT32",
+      "FileSystemLabel": "K230DATA",
+      "Size": 30920392704,
+      "SizeRemaining": 30920327168
+    },
+    "raw_after": {
+      "mbr_sha256": "86940186d1f82690dc7e7573bbc212fb9f42e5747b4174f992ab75356ea28895",
+      "third_boot_hex": "EB58904D53444F53352E30000220CE0C0200000000F800003F00FF0000002000",
+      "third_boot_signature": "55AA",
+      "third_boot_fat32_type": "FAT32   ",
+      "first_1g_sha256": "7822c7ea4e1ecdc5fbd19fe18311b162235b5673d0cb22d43afe09b7d7c7e301"
+    },
+    "first_gib_matches_verified_backup": false,
+    "post_hashes": {
+      "main_py": "c0b89b0b48864ff51e0e1d9a07082d306dbaf301aa4b6c95432ea6e04dbc640c",
+      "bin_config": "5a5b3fae804b5ef7bb17670553d7f29e5cfa76719ccb5a104f31441f19453a2c",
+      "topface_kmodel": "f9bb4021ec0ca812e2dca333953ba72ca775b1c8a18fccf0f9ac0ec87f241f88",
+      "roadnet_kmodel": "cba11c87ce36305ffac6dee18b65b4f1e5b47070e00a2f9e706d0aee72a4980e"
+    },
+    "metadata_comparison": {
+      "compared_bytes": 1073741824,
+      "mbr_partition3_start_chs_only": [
+        {
+          "offset": 479,
+          "before": 254,
+          "after": 138
+        },
+        {
+          "offset": 480,
+          "before": 255,
+          "after": 9
+        },
+        {
+          "offset": 481,
+          "before": 255,
+          "after": 130
+        }
+      ],
+      "fat16_last_access_date_only": [
+        {
+          "entry_offset": 115445536,
+          "old_date_word": 23921,
+          "new_date_word": 23922,
+          "attribute": 32,
+          "file_size": 14
+        },
+        {
+          "entry_offset": 136413536,
+          "old_date_word": 23921,
+          "new_date_word": 23922,
+          "attribute": 32,
+          "file_size": 241
+        },
+        {
+          "entry_offset": 137527488,
+          "old_date_word": 23824,
+          "new_date_word": 23922,
+          "attribute": 32,
+          "file_size": 5052
+        },
+        {
+          "entry_offset": 137986496,
+          "old_date_word": 23824,
+          "new_date_word": 23922,
+          "attribute": 32,
+          "file_size": 2326
+        },
+        {
+          "entry_offset": 494043200,
+          "old_date_word": 23824,
+          "new_date_word": 23922,
+          "attribute": 32,
+          "file_size": 8675
+        },
+        {
+          "entry_offset": 494044224,
+          "old_date_word": 23824,
+          "new_date_word": 23922,
+          "attribute": 32,
+          "file_size": 8441
+        },
+        {
+          "entry_offset": 550109632,
+          "old_date_word": 23824,
+          "new_date_word": 23922,
+          "attribute": 32,
+          "file_size": 5661
+        },
+        {
+          "entry_offset": 651133216,
+          "old_date_word": 0,
+          "new_date_word": 23922,
+          "attribute": 32,
+          "file_size": 362
+        },
+        {
+          "entry_offset": 651231360,
+          "old_date_word": 0,
+          "new_date_word": 23922,
+          "attribute": 32,
+          "file_size": 1611824
+        },
+        {
+          "entry_offset": 655786112,
+          "old_date_word": 0,
+          "new_date_word": 23922,
+          "attribute": 32,
+          "file_size": 137208
+        },
+        {
+          "entry_offset": 655786272,
+          "old_date_word": 0,
+          "new_date_word": 23922,
+          "attribute": 32,
+          "file_size": 18070
+        }
+      ],
+      "payload_changed": false
+    },
+    "nonce": "218ed27d4e3e469fb606f8132f778fb5",
+    "probe": {
+      "path": "/data/k230-repair-check.txt",
+      "bytes": 50,
+      "sha256": "940817bdbcd2cb8ac5d0b4a8a0dd843f6a9bf88af056034a29acc42d4858fcb9"
+    },
+    "original_verification_failure": "Partition boot sector verification failed.",
+    "board_mount_verified": false
+  },
+  "read_only_chkdsk": "Windows has scanned the file system and found no problems."
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "old-sd-repair-20261118",
+  "title": "Repair the old K230 card data partition with a verified full backup",
+  "paths": [
+    "docs/LESSONS_LEARNED.md",
+    "docs/validation/old-sd-repair-20261118"
+  ],
+  "lane": "serial",
+  "resources": [
+    "COM3",
+    "K230-media",
+    "SD-reader"
+  ],
+  "depends": [],
+  "acceptance": [
+    "Preserve a full verified old-card image, restore writable FAT32 only on partition 3, confirm original boot and application bytes and verify /data on the original board"
+  ],
+  "branch": "ops/topface-production-fps-20261116",
+  "state": "ready",
+  "claimed": true,
+  "agent": "coordinator",
+  "session": "old-sd-repair-20261118-recovery",
+  "revision": 3,
+  "handoff": ".ops/handoffs/old-sd-repair-20261118/20261118T071831-b9481b32.json",
+  "updated_at": "2026-11-18T07:18:32+00:00"
+}

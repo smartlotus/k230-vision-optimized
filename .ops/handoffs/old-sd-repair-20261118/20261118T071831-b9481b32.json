@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "task": "old-sd-repair-20261118",
+  "created_at": "2026-11-18T07:18:31+00:00",
+  "agent": "coordinator",
+  "session": "old-sd-repair-20261118-recovery",
+  "branch": "ops/topface-production-fps-20261116",
+  "head": "82b688d225f0dba55e3d14e226b820c672413b3e",
+  "state": "ready",
+  "files": {
+    "docs/LESSONS_LEARNED.md": "4f00fc1ac7acc9bf2e1971bd5331a1a218e627f89971f2104d3840212b464570",
+    "docs/validation/old-sd-repair-20261118/README.md": "a6d1c44fc4c184b6b960986bdc3a8d7bf9c08a98b903a6f2f4b96e24c0bf320e",
+    "docs/validation/old-sd-repair-20261118/board-postflight.json": "5e288aadb6a976c213158768afb0be1ebbde3d8df5338387445713626b522814",
+    "docs/validation/old-sd-repair-20261118/output-routes.json": "47e977ad19c89e9194dca97f4973ce0b391b95f34dcf75500f8f4ea27263b63b",
+    "docs/validation/old-sd-repair-20261118/storage-repair.json": "8224a5280c1f908d0b491564012491e5de7e85429c011111c2fc4abcf6a55f65"
+  },
+  "git_blob_oids": {
+    "docs/LESSONS_LEARNED.md": "68a1c584a9ce017901aa0073bd9fc11ac4689f8e",
+    "docs/validation/old-sd-repair-20261118/README.md": "0e0cd093bfb42882cc6486dd7bcb32767aa0ac82",
+    "docs/validation/old-sd-repair-20261118/board-postflight.json": "fa423d353d3de33f15fe06437b277fb958ccb220",
+    "docs/validation/old-sd-repair-20261118/output-routes.json": "88c796c03cc234a68a8b4c014fe0401918ee5df6",
+    "docs/validation/old-sd-repair-20261118/storage-repair.json": "3bbcda3f5bdc409973916f67c1bd8bca10c753be"
+  },
+  "scope_git_blob_oids": {
+    "docs/LESSONS_LEARNED.md": "68a1c584a9ce017901aa0073bd9fc11ac4689f8e",
+    "docs/validation/old-sd-repair-20261118/README.md": "0e0cd093bfb42882cc6486dd7bcb32767aa0ac82",
+    "docs/validation/old-sd-repair-20261118/board-postflight.json": "fa423d353d3de33f15fe06437b277fb958ccb220",
+    "docs/validation/old-sd-repair-20261118/output-routes.json": "88c796c03cc234a68a8b4c014fe0401918ee5df6",
+    "docs/validation/old-sd-repair-20261118/storage-repair.json": "3bbcda3f5bdc409973916f67c1bd8bca10c753be"
+  },
+  "scope_fingerprints": {
+    "docs/LESSONS_LEARNED.md": "4f00fc1ac7acc9bf2e1971bd5331a1a218e627f89971f2104d3840212b464570",
+    "docs/validation/old-sd-repair-20261118/README.md": "a6d1c44fc4c184b6b960986bdc3a8d7bf9c08a98b903a6f2f4b96e24c0bf320e",
+    "docs/validation/old-sd-repair-20261118/board-postflight.json": "5e288aadb6a976c213158768afb0be1ebbde3d8df5338387445713626b522814",
+    "docs/validation/old-sd-repair-20261118/output-routes.json": "47e977ad19c89e9194dca97f4973ce0b391b95f34dcf75500f8f4ea27263b63b",
+    "docs/validation/old-sd-repair-20261118/storage-repair.json": "8224a5280c1f908d0b491564012491e5de7e85429c011111c2fc4abcf6a55f65"
+  },
+  "report": {
+    "completed": [
+      "Verified full raw 32 GB image through complete decompression and SHA-256.",
+      "Rebuilt FAT32 on existing partition 3. Chkdsk and the host write probe passed.",
+      "Updated six output entry points and verified board readback. CanMV mounted /data and passed a separate board-side write probe."
+    ],
+    "remaining": [
+      "Media capture or model execution was outside the storage acceptance scope."
+    ],
+    "decisions": [
+      "Retain the full raw image locally because the invalid partition contained old nonzero bytes.",
+      "Point collected data to /data while retaining existing source and model paths."
+    ],
+    "risks": [
+      "The /sdcard FAT16 volume remains full due to existing files."
+    ],
+    "next_steps": [
+      "Use CanMV data for new captures, recordings and persistent reports."
+    ],
+    "verification": [
+      {
+        "evidence": [
+          "docs/validation/old-sd-repair-20261118/storage-repair.json"
+        ],
+        "exit_code": 0,
+        "summary": "All 32,010,928,128 bytes verified. LBA boundaries and protected file payloads checked.",
+        "command": "Complete raw device read, gzip round-trip and SHA-256"
+      },
+      {
+        "evidence": [
+          "docs/validation/old-sd-repair-20261118/storage-repair.json"
+        ],
+        "exit_code": 0,
+        "summary": "No problems found. FAT32 28.8 GiB writable.",
+        "command": "Windows chkdsk G: and host nonce readback"
+      },
+      {
+        "evidence": [
+          "docs/validation/old-sd-repair-20261118/board-postflight.json",
+          "docs/validation/old-sd-repair-20261118/output-routes.json"
+        ],
+        "exit_code": 0,
+        "summary": "Matching old firmware and host nonce, 6/6 script hashes, a new 63-byte /data file written and read back.",
+        "command": "Verify-K230OldCardOnBoard.py"
+      }
+    ]
+  }
+}
