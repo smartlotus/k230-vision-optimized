@@ -39,6 +39,7 @@ def run(model_root, run_id, expected_usb_device, frames=120, mode='filtered'):
     if sys.implementation.name != 'micropython':
         raise RuntimeError('Run on CanMV MicroPython with an idle OV2735')
     if not (model_root.startswith('/sdcard/k230_temporal_v1_')
+            or model_root.startswith('/data/k230_temporal_v1_')
             or model_root.startswith('/tmp/k230_temporal_v1_')) or any(
         part in ('', '.', '..') for part in model_root.split('/')[1:]
     ):

@@ -58,6 +58,7 @@ class StreamingInstallTests(unittest.TestCase):
 
     def test_test_roots_exclude_system_and_other_experiments(self):
         self.assertEqual(remote_root('/tmp/k230_temporal_v1_a'), '/tmp/k230_temporal_v1_a')
+        self.assertEqual(remote_root('/data/k230_temporal_v1_a'), '/data/k230_temporal_v1_a')
         for path in ('/bin/k230_temporal_v1_a', '/sdcard/tfp1116', '/tmp/xyusb1117e',
                      '/tmp/k230_temporal_v1_a/../xyusb1117f'):
             with self.assertRaises(ValueError):

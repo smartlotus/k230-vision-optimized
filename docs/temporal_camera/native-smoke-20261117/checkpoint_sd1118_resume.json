@@ -1,0 +1,35 @@
+{
+  "completed": [
+    "Verified replacement SD /data capacity and write probe on board",
+    "Extended CameraXY test roots and runtime uploader for persistent /data path",
+    "Ran 28 host tests after /data support"
+  ],
+  "remaining": [
+    "Fresh UVC probe is false across five samples after deployment to /data",
+    "Physical USB camera replug and possible firmware alignment remain"
+  ],
+  "decisions": [
+    "Preserve old native smoke task and use a separate SD1118 continuation task for new evidence"
+  ],
+  "verification": [
+    {
+      "command": "python -B -X utf8 -m unittest discover -s research/temporal_camera -p test_*.py -q",
+      "exit_code": 0,
+      "summary": "28 tests passed",
+      "evidence": ["research/temporal_camera/test_native_smoke.py"]
+    },
+    {
+      "command": "SD capacity and write probe",
+      "exit_code": 0,
+      "summary": "/data 61456908288 total, 61456515072 free, 256-byte write/readback/cleanup PASS",
+      "evidence": ["docs/temporal_camera/native-smoke-20261118/SD1118_STORAGE_AND_UVC.json"]
+    }
+  ],
+  "next_steps": [
+    "Release old task ownership and continue SD1118 in its new task after UVC hardware recovery"
+  ],
+  "risks": [
+    "Current firmware v1.8-0 differs from the previous v1.8-36 UVC evidence",
+    "UVC is currently unenumerated, so the new-card native inference run is not complete"
+  ]
+}

@@ -19,10 +19,14 @@
   ],
   "branch": "ops/temporal-camera-v1-20261117",
   "state": "ready",
-  "claimed": false,
-  "agent": "codex",
-  "session": "temporal-native-smoke-20261117-b",
-  "revision": 8,
-  "handoff": ".ops/handoffs/temporal-native-smoke-20261117/20261117T112756-38cc1b8d.json",
-  "updated_at": "2026-11-17T11:28:57+00:00"
+  "claimed": true,
+  "agent": "coordinator",
+  "session": "temporal-native-smoke-20261118-a",
+  "revision": 10,
+  "handoff": ".ops/handoffs/temporal-native-smoke-20261117/20261118T041839-3e98878f.json",
+  "updated_at": "2026-11-18T04:18:44+00:00",
+  "reconciliation_note": {
+    "reason": "Resume same CameraXY smoke on newly replaced SD. Reconcile current task fingerprints before extending the existing isolated path check to /data.",
+    "at": "2026-11-18T04:01:30+00:00"
+  }
 }

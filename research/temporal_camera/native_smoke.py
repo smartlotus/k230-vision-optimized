@@ -43,7 +43,7 @@ def idle(client):
 
 
 def remote_root(value):
-    if not re.fullmatch(r'/(?:sdcard|tmp)/k230_temporal_v1_[a-z0-9_]+', value):
+    if not re.fullmatch(r'/(?:sdcard|data|tmp)/k230_temporal_v1_[a-z0-9_]+', value):
         raise ValueError('A dedicated CameraXY directory is required')
     return value
 
@@ -77,10 +77,10 @@ def append_script(part, target, offset, block, marker):
 
 
 def runtime_append_script(target, offset, block, marker):
-    # MicroPython applications use /tmp directly; the IDE file browser exposes
-    # only sdcard/data/udisk for mutations. Never use this for system folders.
-    if not re.fullmatch(r'/tmp/k230_temporal_v1_[a-z0-9_]+/[a-zA-Z0-9_.]+', target):
-        raise ValueError('Runtime upload is limited to dedicated /tmp test files')
+    # MicroPython applications use dedicated temporary or data paths. The IDE
+    # file browser exposes data as the large persistent SD-backed filesystem.
+    if not re.fullmatch(r'/(?:tmp|data)/k230_temporal_v1_[a-z0-9_]+/[a-zA-Z0-9_.]+', target):
+        raise ValueError('Runtime upload is limited to dedicated test files')
     return ("import os,json,hashlib\nimport ubinascii as binascii\nt=" + repr(target) + "\noffset=" + str(offset) + "\n"
             "try:\n size=os.stat(t)[6]\nexcept OSError:\n size=0\n"
             "if size!=offset:raise ValueError('Unexpected runtime upload offset')\n"
@@ -132,8 +132,9 @@ def install(args, client):
                    source_changes=changes, files=jobs, verified_parts=[], automatic_retry=False)
     save(args.out, receipt)
     if args.runtime_upload:
-        if not args.remote.startswith('/tmp/k230_temporal_v1_'):
-            raise ValueError('Runtime upload requires a dedicated /tmp test root')
+        if not (args.remote.startswith('/tmp/k230_temporal_v1_')
+                or args.remote.startswith('/data/k230_temporal_v1_')):
+            raise ValueError('Runtime upload requires a dedicated /tmp or /data test root')
         marker = 'TEMPORAL_MKDIR_' + uuid.uuid4().hex + ':'
         script = ("import os,json\np=" + repr(args.remote) + "\n"
                   "try:\n os.stat(p)\nexcept OSError:\n pass\nelse:\n raise ValueError('Existing directory preserved')\n"
