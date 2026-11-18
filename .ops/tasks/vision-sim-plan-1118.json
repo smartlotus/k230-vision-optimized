@@ -14,10 +14,10 @@
   ],
   "branch": "ops/vision-sim-plan-1118",
   "state": "ready",
-  "claimed": false,
+  "claimed": true,
   "agent": "codex",
-  "session": "vision-plan-1118-a",
-  "revision": 4,
-  "handoff": ".ops/handoffs/vision-sim-plan-1118/20261118T144700-a2b928bd.json",
-  "updated_at": "2026-11-18T14:47:09+00:00"
+  "session": "vision-auto-plan-1119",
+  "revision": 6,
+  "handoff": ".ops/handoffs/vision-sim-plan-1118/20261118T162400-008f907d.json",
+  "updated_at": "2026-11-18T16:24:00+00:00"
 }

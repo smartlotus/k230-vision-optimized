@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "task": "vision-sim-plan-1118",
+  "created_at": "2026-11-18T16:24:00+00:00",
+  "agent": "codex",
+  "session": "vision-auto-plan-1119",
+  "branch": "ops/vision-sim-plan-1118",
+  "head": "823b09f08985af667bb6113984bf4fe71f8a38dc",
+  "state": "ready",
+  "files": {
+    "docs/plans/k230-vision-sim-iterations.md": "f80107a3c64f09c11b8a2c114bcc13d18e8a0048dc0a174ba8c2bf30fbaa340c"
+  },
+  "git_blob_oids": {
+    "docs/plans/k230-vision-sim-iterations.md": "40af1655c5a3d2e8d4b7af35510ea3b60e17b398"
+  },
+  "scope_git_blob_oids": {
+    "docs/plans/k230-vision-sim-iterations.md": "40af1655c5a3d2e8d4b7af35510ea3b60e17b398"
+  },
+  "scope_fingerprints": {
+    "docs/plans/k230-vision-sim-iterations.md": "f80107a3c64f09c11b8a2c114bcc13d18e8a0048dc0a174ba8c2bf30fbaa340c"
+  },
+  "report": {
+    "completed": [
+      "Delivered the local Chinese execution-AI plan for unattended K230 competition simulations. It covers the camera and three-axis gripper, virtual STM32, road feedback, independent release physics, changed tasks, training, soak and recovery. The 14 suites and 17-job manifest are in one standalone Markdown file."
+    ],
+    "remaining": [
+      "Implement and run the proposed R3.0–R3.4 campaign when requested. Real-world vision acceptance and electrical commissioning remain paused."
+    ],
+    "decisions": [
+      "Use the existing R2 checkpoint as baseline. Treat rail travel and TCP offsets as configurable simulation assumptions. Keep rigid-body and geometric evidence separately visible. Defaults are 36/12/12 scenario groups, up to three development iterations and 100 endurance rounds."
+    ],
+    "risks": [
+      "The physical rail travel, camera field of view, actual sensing capabilities and eligibility of the forward QR camera remain unmeasured. Synthetic results describe the simulated plant."
+    ],
+    "next_steps": [
+      "Execution AI can start with sections 0 and 3 of docs/plans/k230-vision-sim-iterations.md and implement the version gates and job graph from sections 6–7."
+    ],
+    "verification": [
+      {
+        "command": "R2 ops verify; mission_vision.run replay; python -B -m unittest discover -s tests -p test_workflow_session.py; Get-FileHash; resolve 43 asset paths; parse Markdown JSON; validate suite coverage, DAG and copied delivery digest; git diff --check.",
+        "exit_code": 0,
+        "summary": "24/24 target observations, 12 workflow tests passed, 43/43 paths present, nine sections, 14 suites, 17 distinct schedulable jobs with acyclic dependencies. Delivery SHA256 f80107a3c64f09c11b8a2c114bcc13d18e8a0048dc0a174ba8c2bf30fbaa340c.",
+        "evidence": [
+          "docs/plans/k230-vision-sim-iterations.md"
+        ]
+      }
+    ]
+  }
+}
