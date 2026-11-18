@@ -20,10 +20,10 @@
   ],
   "branch": "ops/temporal-camera-v1-20261117",
   "state": "ready",
-  "claimed": true,
+  "claimed": false,
   "agent": "coordinator",
   "session": "temporal-native-sd1118-20261118-a",
-  "revision": 3,
+  "revision": 4,
   "handoff": ".ops/handoffs/temporal-native-sd1118-20261118/20261118T042139-a93a19e2.json",
-  "updated_at": "2026-11-18T04:21:40+00:00"
+  "updated_at": "2026-11-18T04:21:58+00:00"
 }
