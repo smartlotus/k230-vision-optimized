@@ -28,10 +28,14 @@
   ],
   "branch": "ops/topface-production-fps-20261116",
   "state": "ready",
-  "claimed": false,
-  "agent": "codex",
-  "session": "topface-prod-fps-20261116-a",
-  "revision": 5,
-  "handoff": ".ops/handoffs/topface-production-fps-20261116/20261116T035749-1dc3316a.json",
-  "updated_at": "2026-11-16T04:12:24+00:00"
+  "claimed": true,
+  "agent": "coordinator",
+  "session": "old-sd-output-guard-20261118-a",
+  "revision": 7,
+  "handoff": ".ops/handoffs/topface-production-fps-20261116/20261118T063221-01efe7b2.json",
+  "updated_at": "2026-11-18T06:32:27+00:00",
+  "reconciliation_note": {
+    "reason": "Old SD is connected with firmware v1.8-36, /sdcard free blocks=0 and /data statvfs total/free=0. Add a preflight guard so the existing /data output route fails before camera start when the data volume is unavailable.",
+    "at": "2026-11-18T06:08:49+00:00"
+  }
 }

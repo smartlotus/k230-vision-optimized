@@ -9,6 +9,9 @@ sys.path.insert(0, root)
 from k230.topface_service import run
 
 report_dir = '/data/logs'
+volume = os.statvfs('/data')
+if len(volume) < 4 or volume[0] <= 0 or volume[2] <= 0 or volume[3] <= 0:
+    raise RuntimeError('DATA_VOLUME_UNAVAILABLE')
 try:
     os.stat(report_dir)
 except OSError:
