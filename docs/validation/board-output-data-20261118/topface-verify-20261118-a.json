@@ -1,0 +1,19 @@
+{
+  "scope": "Bounded TopFace service invocation and persistent output path only",
+  "launched_entry": "RAM wrapper calling the deployed /sdcard/tfp1116/k230/topface_service.py run()",
+  "model_root": "/sdcard/tfp1116/model",
+  "report_path": "/data/logs/topface-verify-20261118-a.json",
+  "report_bytes": 1767,
+  "report_readback": true,
+  "report_status": "RUN_FAILED",
+  "requested_frames": 30,
+  "attempted": 0,
+  "successful": 0,
+  "error": "Can not found sensor on 2",
+  "cleanup_errors": [],
+  "old_sd_report_path_exists": false,
+  "startup_files": {"/sdcard/main.py": false, "/sdcard/boot.py": false},
+  "firmware": "v1.8-0-gc2d1f5c",
+  "accuracy_test": "NOT_RUN",
+  "hardware_interpretation": "CSI2 camera initialization failed before capture; this run does not evaluate storage routing failure or model accuracy"
+}
