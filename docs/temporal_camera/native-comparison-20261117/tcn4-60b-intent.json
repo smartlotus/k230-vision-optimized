@@ -1,0 +1,9 @@
+{
+  "status": "DISPATCHING",
+  "report": "/data/k230_temporal_v1_cmp1118_tcn4/tcn4_60b.json",
+  "entry": "/data/k230_temporal_v1_cmp1118_tcn4/tcn4_60b-entry.json",
+  "frames": 60,
+  "accuracy": "NOT_RUN",
+  "road_test": "NOT_RUN",
+  "automatic_retry": false
+}

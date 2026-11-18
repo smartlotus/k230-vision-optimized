@@ -1,0 +1,16 @@
+﻿{
+  "marker": "TEMPORAL_COMPARE_POSTFLIGHT_20261118",
+  "board": "LCKFB-LSPI-K230-1G-CanMV",
+  "port": "COM3",
+  "firmware": "v1.8-36-gae2f20d",
+  "runtime": "2.11.0",
+  "uvc": [true, "openaicam#openaicam"],
+  "statvfs": {
+    "/sdcard": [512, 512, 1023744, 0, 0, 0, 0, 0, 0, 255],
+    "/data": [512, 512, 60391392, 60379328, 60379328, 0, 0, 0, 0, 255],
+    "/tmp": [512, 512, 1, 1, 1, 0, 0, 0, 0, 255]
+  },
+  "script_running_after_runs": false,
+  "accuracy": "HOLD",
+  "visual_recognition": "PAUSED"
+}

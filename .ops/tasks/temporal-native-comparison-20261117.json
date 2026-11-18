@@ -16,11 +16,15 @@
     "Versioned A timing and native temporal model evidence with exact input identity, memory and cleanup; accuracy remains on HOLD"
   ],
   "branch": "ops/temporal-camera-v1-20261117",
-  "state": "paused",
-  "claimed": false,
-  "agent": "codex",
-  "session": "temporal-native-comparison-20261117-a",
-  "revision": 4,
-  "handoff": ".ops/handoffs/temporal-native-comparison-20261117/20261117T120357-56baa4e3.json",
-  "updated_at": "2026-11-17T12:04:07+00:00"
+  "state": "ready",
+  "claimed": true,
+  "agent": "coordinator",
+  "session": "temporal-native-comparison-20261118-a",
+  "revision": 6,
+  "handoff": ".ops/handoffs/temporal-native-comparison-20261117/20261118T110511-57faa40f.json",
+  "updated_at": "2026-11-18T11:05:13+00:00",
+  "reconciliation_note": {
+    "reason": "User requested continuation while model and visual recognition acceptance remains paused; resume only bounded native performance comparison with current board state, preserving UNKNOWN and closed attempts.",
+    "at": "2026-11-18T10:32:09+00:00"
+  }
 }

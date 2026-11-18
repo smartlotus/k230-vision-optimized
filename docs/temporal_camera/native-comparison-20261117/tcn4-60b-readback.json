@@ -1,0 +1,207 @@
+{
+  ".json": {
+    "unlocalized": 60,
+    "native_ai2d_pixel_equivalence": "NOT RUN",
+    "nncase_runtime": "2.11.0",
+    "history_resets": 0,
+    "last_prediction": {
+      "relocalized": false,
+      "confidence": 0.07433245,
+      "top_k": [
+        {
+          "camera_x_mm": 925.0,
+          "camera_y_mm": 925.0,
+          "probability": 0.07433245
+        },
+        {
+          "camera_x_mm": 925.0,
+          "camera_y_mm": -925.0,
+          "probability": 0.07433245
+        },
+        {
+          "camera_x_mm": 975.0,
+          "camera_y_mm": -875.0,
+          "probability": 0.05960068
+        },
+        {
+          "camera_x_mm": 875.0,
+          "camera_y_mm": 975.0,
+          "probability": 0.05960066
+        },
+        {
+          "camera_x_mm": 875.0,
+          "camera_y_mm": -925.0,
+          "probability": 0.05743954
+        }
+      ],
+      "camera_x_mm": null,
+      "status": "unlocalized",
+      "entropy": 3.276945,
+      "hard_gate_enabled": false,
+      "camera_y_mm": null,
+      "state": "DEGRADED",
+      "candidate_y_mm": 925.0,
+      "probability": 0.07433245,
+      "candidate_x_mm": 925.0,
+      "confidence_far_mass": 0.5000002,
+      "position_valid": false,
+      "confidence_local_mass": 0.4924222
+    },
+    "wall_seconds": 9.828,
+    "real_camera_accuracy": "NOT RUN",
+    "memory_sampling_failures": 0,
+    "mode": "filtered",
+    "active_memory_samples": 6,
+    "status": "MEASURED",
+    "history_window": 4,
+    "requested_frames": 60,
+    "negotiated_uvc": {
+      "size": [
+        1280,
+        720
+      ],
+      "device": "openaicam#openaicam",
+      "fps": 30.00003,
+      "fourcc": 1196444237
+    },
+    "latency": {
+      "history": {
+        "p95_ms_upper": 12,
+        "mean_ms": 11.22207,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": 13,
+        "samples": 60,
+        "p50_ms_upper": 12
+      },
+      "capture": {
+        "p95_ms_upper": 1,
+        "mean_ms": 3.516633,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": 209,
+        "samples": 60,
+        "p50_ms_upper": 1
+      },
+      "rgb": {
+        "p95_ms_upper": 66,
+        "mean_ms": 65.02265,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": 66,
+        "samples": 60,
+        "p50_ms_upper": 65
+      },
+      "kpu": {
+        "p95_ms_upper": 19,
+        "mean_ms": 18.01205,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": 19,
+        "samples": 60,
+        "p50_ms_upper": 18
+      },
+      "ai2d": {
+        "p95_ms_upper": 2,
+        "mean_ms": 0.9036167,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": 2,
+        "samples": 60,
+        "p50_ms_upper": 1
+      },
+      "decode": {
+        "p95_ms_upper": 66,
+        "mean_ms": 64.48145,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": 67,
+        "samples": 60,
+        "p50_ms_upper": 65
+      },
+      "cycle": {
+        "p95_ms_upper": 167,
+        "mean_ms": 163.8085,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": 352,
+        "samples": 60,
+        "p50_ms_upper": 161
+      },
+      "filter": {
+        "p95_ms_upper": 58,
+        "mean_ms": 55.98602,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": 64,
+        "samples": 60,
+        "p50_ms_upper": 56
+      }
+    },
+    "temporal_states": {
+      "DEGRADED": 60
+    },
+    "cleanup_errors": [],
+    "model_bytes": 2722784,
+    "final_memory": {
+      "sys_heap": {
+        "free": 64052416,
+        "used": 3056448,
+        "total": 67108864
+      },
+      "sys_mmz": {
+        "free": 535822336,
+        "used": 0,
+        "total": 535822336
+      },
+      "sys_page": {
+        "free": 432205824,
+        "used": 27983872,
+        "total": 460189696
+      },
+      "python_heap_used": 1425696,
+      "python_heap_free": 2719968
+    },
+    "dropped": 0,
+    "minimum_python_heap_free": 341056,
+    "device": "(sysname='rt-smart', nodename='rt-smart', release='v1.8-36-gae2f20d', version='v1.8-36-gae2f20d on 2026-08-16', machine='k230_canmv_lckfb')",
+    "camera_to_result_fps": 6.105006,
+    "expected_nncase_runtime": "2.11.0",
+    "kmodel_sha256": "3c9de65fe5c7d74300075600dab53c7364307e68f1ff1924e15a7dc1219b5cf2",
+    "initial_memory": {
+      "sys_heap": {
+        "free": 64052480,
+        "used": 3056384,
+        "total": 67108864
+      },
+      "sys_mmz": {
+        "free": 535822336,
+        "used": 0,
+        "total": 535822336
+      },
+      "sys_page": {
+        "free": 432205824,
+        "used": 27983872,
+        "total": 460189696
+      },
+      "python_heap_used": 3317440,
+      "python_heap_free": 828224
+    },
+    "active_pool_peaks": {
+      "sys_page": {
+        "free": 431464448,
+        "used": 28725248,
+        "total": 460189696
+      },
+      "sys_mmz": {
+        "free": 518946816,
+        "used": 16875520,
+        "total": 535822336
+      },
+      "sys_heap": {
+        "free": 63538752,
+        "used": 3570112,
+        "total": 67108864
+      }
+    },
+    "frames": 60
+  },
+  "-entry.json": {
+    "report_status": "MEASURED",
+    "status": "RETURNED",
+    "run_id": "tcn4_60b",
+    "root": "/data/k230_temporal_v1_cmp1118_tcn4"
+  }
+}

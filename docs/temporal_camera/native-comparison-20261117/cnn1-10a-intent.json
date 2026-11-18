@@ -1,0 +1,9 @@
+{
+  "status": "DISPATCHING",
+  "report": "/data/k230_temporal_v1_cmp1118_cnn1/cnn1_10a.json",
+  "entry": "/data/k230_temporal_v1_cmp1118_cnn1/cnn1_10a-entry.json",
+  "frames": 10,
+  "accuracy": "NOT_RUN",
+  "road_test": "NOT_RUN",
+  "automatic_retry": false
+}

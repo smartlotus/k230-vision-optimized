@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "task": "temporal-native-comparison-20261117",
+  "created_at": "2026-11-18T11:05:11+00:00",
+  "agent": "coordinator",
+  "session": "temporal-native-comparison-20261118-a",
+  "branch": "ops/temporal-camera-v1-20261117",
+  "head": "cc4034460827c24c200db0843478b75a281f34cd",
+  "state": "ready",
+  "files": {
+    "docs/temporal_camera/native-comparison-20261117/CNN1_INSTALL_20261118.json": "a8186db46d5c663ae2ae0e1ff83788f396606880b8be16c4c45722eb53dc9b95",
+    "docs/temporal_camera/native-comparison-20261117/CNN1_INSTALL_20261118.log": "9ac060e8b51e8d8ee095cfa9911d62aaee89df88dcb6c4ab3e8ba74d1293b51c",
+    "docs/temporal_camera/native-comparison-20261117/NATIVE_COMPARISON_20261118.json": "18625c8c5ef2e1d533b5251b503d03f3198fdd052e1c605cc3b072294e1774d2",
+    "docs/temporal_camera/native-comparison-20261117/NATIVE_COMPARISON_20261118.md": "4aea0f6a168c8b7385131d55cad7946e1e8e6fd27311f5cf4332902bea86f796",
+    "docs/temporal_camera/native-comparison-20261117/POSTFLIGHT_20261118.json": "1981a42a0734cbc3ba9415c324624ab07faac00650bfe4aee12c6948d12b264f",
+    "docs/temporal_camera/native-comparison-20261117/TCN4_INSTALL_20261118.json": "56e568419da7e20470012db11995b4e7acd1da7086d89ad34f0838b9d7c559c3",
+    "docs/temporal_camera/native-comparison-20261117/TCN4_INSTALL_20261118.log": "ea51de1d033d0c6f44763452a61159f0e97c5c02507498e495f0bc138e804938",
+    "docs/temporal_camera/native-comparison-20261117/checkpoint_report_20261118.json": "75dbf623c3c1476399168131296953b32162d0a213b7803b45cec7a8771dfa2e",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-10a-intent.json": "5dd5af77a4e0b9d60da052033aabfa28c23880793a202a7a13f6a14bc5710080",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-10a-intent.runner.py": "dbcc384c430816a4f6170d550db92d1591123c727c9949dcd523f23930231eba",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-10a-readback.json": "5d635113822873a5075f627e5e807b39b340fb955be239dd73b07404ca982121",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-10a-readback.log": "4c7e5571b2a9362726bf0202cb498be17a70439d50fda6dacd720413d0544b78",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-60b-intent.json": "1230ab23c72f00025d09ed78d53950aef539cf97897706c4d9570e6fe518e719",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-60b-intent.runner.py": "3044958d61027fc73aefaf8f9f54bb6441bdf26d175045673af70a0388163cfc",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-60b-readback.json": "fb24f0d878041b13b5b53d34bed035e869f91e90b08fd55848e113b6328c168e",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-60b-readback.log": "08a3c2c0ed630b0929af12c9d40fae3d198072043b02f5085d0e52917dbd64d9",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-10a-intent.json": "5bbb792d2e01553aa22f41115e5a796ce3ee5df3cb00752a65c68ccc0e250ae4",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-10a-intent.runner.py": "d42aad2b3ded2793c6024973b41c43015fba3a61b34fa555d2a293b51623fb93",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-10a-readback.json": "0b9e21d6223ef9289844a77a7c37de1c2c3ebbb55aad72490d6892f980f73a13",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-10a-readback.log": "7567b5559b7a10fc6f5de28b08af1beaa281b253f0a9ed157606145d4c403417",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-60b-intent.json": "71fa97241f1444767a7ade045bfefba94f7d6dcf253fbcc42f0c7b1d32eda33a",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-60b-intent.runner.py": "adc01cd51e9de8c58e6c277457f91c2f8012c7cfb6cb3af74d3993adc03b127b",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-60b-readback.json": "58cd3c159d674f76a47d43a223b4944ff14cefe1c7f87e6a04723180ed6d07fc",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-60b-readback.log": "d8d0a98dd706eeb8429715eadac0bca7c2c18b5c496d30b3ceb3fbf4109c674e"
+  },
+  "git_blob_oids": {
+    "docs/temporal_camera/native-comparison-20261117/CNN1_INSTALL_20261118.json": "b0d320a728c7e4694c2e05554ccb10d124bde6ff",
+    "docs/temporal_camera/native-comparison-20261117/CNN1_INSTALL_20261118.log": "5d4cc21f08060a6991502e29e88147197e2b368a",
+    "docs/temporal_camera/native-comparison-20261117/NATIVE_COMPARISON_20261118.json": "c9f32cf7494467a3f48ce7ade89c93fc6ae9f25f",
+    "docs/temporal_camera/native-comparison-20261117/NATIVE_COMPARISON_20261118.md": "a42a2c398a80d22b38b2afb411708ee2e9da0125",
+    "docs/temporal_camera/native-comparison-20261117/POSTFLIGHT_20261118.json": "403d2465ef0c4d3ed5c18a2229f1064f4bf3c254",
+    "docs/temporal_camera/native-comparison-20261117/TCN4_INSTALL_20261118.json": "4ce55de80ddd141530752df05e67f92193a76daf",
+    "docs/temporal_camera/native-comparison-20261117/TCN4_INSTALL_20261118.log": "ecbad60aa3d0b0b6b82270516bcf0b1b5f9e85df",
+    "docs/temporal_camera/native-comparison-20261117/checkpoint_report_20261118.json": "f222c4e4aca33da1a647b6b2f7a2b890b7abf8fd",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-10a-intent.json": "d006c8c482bc6bbd2a903399831fc0edd4601c93",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-10a-intent.runner.py": "36bcbd1be65494990e8fc210b6b1f85071865cc3",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-10a-readback.json": "96c92b3f77e2a262a3c62952318fe22a2db6b4e9",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-10a-readback.log": "f71ac7cfe307640b6cf774c08886d0cde11ffd8c",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-60b-intent.json": "45cdbb0e5259958815229f3a7caa5c0c61019636",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-60b-intent.runner.py": "ef2cf4eb9a97f898d06f370bfc088506f08b18e4",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-60b-readback.json": "d298a7b4266145047de3f475a2e860d6be88f955",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-60b-readback.log": "fad903e480a6ff92c9d73298da9c9c1be469e37a",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-10a-intent.json": "3523c0c58dc1bb658109e52107f0db1f6eec961f",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-10a-intent.runner.py": "191fe7de07cfb24eae03f67497c643256a93240c",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-10a-readback.json": "edce060b0786236007c544e04fe65d89a949a7df",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-10a-readback.log": "9305f496dd0cbca5c3d2f3dad4672ac4bc00ffa6",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-60b-intent.json": "f91d136b1d41fcda8751eb700d5962fa52c15a40",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-60b-intent.runner.py": "ad236a15aa8e3671e34898467bf11981d084b64d",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-60b-readback.json": "f1d00a0ffa43e568b13e7f373f6319346906fce9",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-60b-readback.log": "e4a74e22673f72746f244e750df04b5ea5311945"
+  },
+  "scope_git_blob_oids": {
+    "docs/temporal_camera/native-comparison-20261117/CNN1_INSTALL_20261118.json": "b0d320a728c7e4694c2e05554ccb10d124bde6ff",
+    "docs/temporal_camera/native-comparison-20261117/CNN1_INSTALL_20261118.log": "5d4cc21f08060a6991502e29e88147197e2b368a",
+    "docs/temporal_camera/native-comparison-20261117/NATIVE_COMPARISON_20261118.json": "c9f32cf7494467a3f48ce7ade89c93fc6ae9f25f",
+    "docs/temporal_camera/native-comparison-20261117/NATIVE_COMPARISON_20261118.md": "a42a2c398a80d22b38b2afb411708ee2e9da0125",
+    "docs/temporal_camera/native-comparison-20261117/PAUSE_STATE.json": "efb6179253a15945ab49d69ca9d2b6f492508786",
+    "docs/temporal_camera/native-comparison-20261117/POSTFLIGHT_20261118.json": "403d2465ef0c4d3ed5c18a2229f1064f4bf3c254",
+    "docs/temporal_camera/native-comparison-20261117/PREFLIGHT.json": "c08cf6150897fb99cc5af9062d06bb5dba3de725",
+    "docs/temporal_camera/native-comparison-20261117/PREFLIGHT_FIRST_ATTEMPT.json": "0425b0d880621dbe78fe74ab6ab1db561e9bb6bd",
+    "docs/temporal_camera/native-comparison-20261117/README.md": "dd5cfb058727cedc05995f4a838e7dad7acb01c5",
+    "docs/temporal_camera/native-comparison-20261117/TCN4_INSTALL.json": "632006235cde0349da21cb495f06905b2595b150",
+    "docs/temporal_camera/native-comparison-20261117/TCN4_INSTALL_20261118.json": "4ce55de80ddd141530752df05e67f92193a76daf",
+    "docs/temporal_camera/native-comparison-20261117/TCN4_INSTALL_20261118.log": "ecbad60aa3d0b0b6b82270516bcf0b1b5f9e85df",
+    "docs/temporal_camera/native-comparison-20261117/checkpoint_report_20261118.json": "f222c4e4aca33da1a647b6b2f7a2b890b7abf8fd",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-10a-intent.json": "d006c8c482bc6bbd2a903399831fc0edd4601c93",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-10a-intent.runner.py": "36bcbd1be65494990e8fc210b6b1f85071865cc3",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-10a-readback.json": "96c92b3f77e2a262a3c62952318fe22a2db6b4e9",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-10a-readback.log": "f71ac7cfe307640b6cf774c08886d0cde11ffd8c",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-60b-intent.json": "45cdbb0e5259958815229f3a7caa5c0c61019636",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-60b-intent.runner.py": "ef2cf4eb9a97f898d06f370bfc088506f08b18e4",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-60b-readback.json": "d298a7b4266145047de3f475a2e860d6be88f955",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-60b-readback.log": "fad903e480a6ff92c9d73298da9c9c1be469e37a",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-10a-intent.json": "3523c0c58dc1bb658109e52107f0db1f6eec961f",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-10a-intent.runner.py": "191fe7de07cfb24eae03f67497c643256a93240c",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-10a-readback.json": "edce060b0786236007c544e04fe65d89a949a7df",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-10a-readback.log": "9305f496dd0cbca5c3d2f3dad4672ac4bc00ffa6",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-60b-intent.json": "f91d136b1d41fcda8751eb700d5962fa52c15a40",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-60b-intent.runner.py": "ad236a15aa8e3671e34898467bf11981d084b64d",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-60b-readback.json": "f1d00a0ffa43e568b13e7f373f6319346906fce9",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-60b-readback.log": "e4a74e22673f72746f244e750df04b5ea5311945"
+  },
+  "scope_fingerprints": {
+    "docs/temporal_camera/native-comparison-20261117/CNN1_INSTALL_20261118.json": "a8186db46d5c663ae2ae0e1ff83788f396606880b8be16c4c45722eb53dc9b95",
+    "docs/temporal_camera/native-comparison-20261117/CNN1_INSTALL_20261118.log": "9ac060e8b51e8d8ee095cfa9911d62aaee89df88dcb6c4ab3e8ba74d1293b51c",
+    "docs/temporal_camera/native-comparison-20261117/NATIVE_COMPARISON_20261118.json": "18625c8c5ef2e1d533b5251b503d03f3198fdd052e1c605cc3b072294e1774d2",
+    "docs/temporal_camera/native-comparison-20261117/NATIVE_COMPARISON_20261118.md": "4aea0f6a168c8b7385131d55cad7946e1e8e6fd27311f5cf4332902bea86f796",
+    "docs/temporal_camera/native-comparison-20261117/PAUSE_STATE.json": "87b3f4a21468d6f89108b4074d2e722c04fea676b7c5658d344d4dd3a80a5e98",
+    "docs/temporal_camera/native-comparison-20261117/POSTFLIGHT_20261118.json": "1981a42a0734cbc3ba9415c324624ab07faac00650bfe4aee12c6948d12b264f",
+    "docs/temporal_camera/native-comparison-20261117/PREFLIGHT.json": "4eb0706aa9857341d8c179fab111fb51ab2ffe1a4c616db14417df26ccefc3b2",
+    "docs/temporal_camera/native-comparison-20261117/PREFLIGHT_FIRST_ATTEMPT.json": "33696ca50ad8db96804e6de189c4f619a0c4ff9841a1347960a8fcfff4d5df1d",
+    "docs/temporal_camera/native-comparison-20261117/README.md": "ed9790417d50f222ee5de8791b546219320261ba08c23f544d5649ed70633ae1",
+    "docs/temporal_camera/native-comparison-20261117/TCN4_INSTALL.json": "1bc2d772b5181fc6a828cf484cb2f8e34a78b91bb9c949223b73ce395aa237b6",
+    "docs/temporal_camera/native-comparison-20261117/TCN4_INSTALL_20261118.json": "56e568419da7e20470012db11995b4e7acd1da7086d89ad34f0838b9d7c559c3",
+    "docs/temporal_camera/native-comparison-20261117/TCN4_INSTALL_20261118.log": "ea51de1d033d0c6f44763452a61159f0e97c5c02507498e495f0bc138e804938",
+    "docs/temporal_camera/native-comparison-20261117/checkpoint_report_20261118.json": "75dbf623c3c1476399168131296953b32162d0a213b7803b45cec7a8771dfa2e",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-10a-intent.json": "5dd5af77a4e0b9d60da052033aabfa28c23880793a202a7a13f6a14bc5710080",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-10a-intent.runner.py": "dbcc384c430816a4f6170d550db92d1591123c727c9949dcd523f23930231eba",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-10a-readback.json": "5d635113822873a5075f627e5e807b39b340fb955be239dd73b07404ca982121",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-10a-readback.log": "4c7e5571b2a9362726bf0202cb498be17a70439d50fda6dacd720413d0544b78",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-60b-intent.json": "1230ab23c72f00025d09ed78d53950aef539cf97897706c4d9570e6fe518e719",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-60b-intent.runner.py": "3044958d61027fc73aefaf8f9f54bb6441bdf26d175045673af70a0388163cfc",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-60b-readback.json": "fb24f0d878041b13b5b53d34bed035e869f91e90b08fd55848e113b6328c168e",
+    "docs/temporal_camera/native-comparison-20261117/cnn1-60b-readback.log": "08a3c2c0ed630b0929af12c9d40fae3d198072043b02f5085d0e52917dbd64d9",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-10a-intent.json": "5bbb792d2e01553aa22f41115e5a796ce3ee5df3cb00752a65c68ccc0e250ae4",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-10a-intent.runner.py": "d42aad2b3ded2793c6024973b41c43015fba3a61b34fa555d2a293b51623fb93",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-10a-readback.json": "0b9e21d6223ef9289844a77a7c37de1c2c3ebbb55aad72490d6892f980f73a13",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-10a-readback.log": "7567b5559b7a10fc6f5de28b08af1beaa281b253f0a9ed157606145d4c403417",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-60b-intent.json": "71fa97241f1444767a7ade045bfefba94f7d6dcf253fbcc42f0c7b1d32eda33a",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-60b-intent.runner.py": "adc01cd51e9de8c58e6c277457f91c2f8012c7cfb6cb3af74d3993adc03b127b",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-60b-readback.json": "58cd3c159d674f76a47d43a223b4944ff14cefe1c7f87e6a04723180ed6d07fc",
+    "docs/temporal_camera/native-comparison-20261117/tcn4-60b-readback.log": "d8d0a98dd706eeb8429715eadac0bca7c2c18b5c496d30b3ceb3fbf4109c674e"
+  },
+  "report": {
+    "completed": [
+      "Reconciled COM3 ownership and confirmed idle board before native work",
+      "Installed CNN1 and TCN4 into independent /data test directories with source substitution and full file SHA readback",
+      "Completed CNN1 10/60 frame and TCN4 10/60 frame bounded native runs on the same v1.8-36 and runtime 2.11.0",
+      "Captured UVC, storage, runtime and postflight evidence after all runs",
+      "Preserved accuracy and visual recognition as HOLD/PAUSED"
+    ],
+    "remaining": [
+      "Accuracy and visual recognition acceptance requires a confirmed real environment, labels and calibration",
+      "Road test, true position acceptance and long soak remain NOT RUN",
+      "GRU native comparison remains NOT RUN"
+    ],
+    "decisions": [
+      "Use new /data/k230_temporal_v1_cmp1118_cnn1 and /data/k230_temporal_v1_cmp1118_tcn4 roots",
+      "Keep the earlier interrupted TCN4 attempt closed and do not overwrite it",
+      "Treat all position_valid=false results as engineering runtime evidence only"
+    ],
+    "risks": [
+      "The UVC device identity and negotiated mode are recorded, but physical scene geometry and optical-center labels are not available",
+      "The 60-frame runs are bounded comparisons and do not establish long-duration stability"
+    ],
+    "next_steps": [
+      "Keep the native comparison package as the current engineering baseline",
+      "Resume accuracy or visual acceptance only after the actual environment and labels are fixed"
+    ],
+    "verification": [
+      {
+        "command": "python -B -X utf8 -m unittest discover -s research/temporal_camera -p test_*.py -q",
+        "exit_code": 0,
+        "summary": "28 host tests passed",
+        "evidence": [
+          "research/temporal_camera/test_native_smoke.py"
+        ]
+      },
+      {
+        "command": "comparison_report_consistency",
+        "exit_code": 0,
+        "summary": "Four MEASURED runs, zero dropped frames and zero cleanup errors retained with position_valid false",
+        "evidence": [
+          "docs/temporal_camera/native-comparison-20261117/NATIVE_COMPARISON_20261118.json"
+        ]
+      },
+      {
+        "command": "TEMPORAL_COMPARE_POSTFLIGHT_20261118",
+        "exit_code": 0,
+        "summary": "Board idle after runs, UVC probe true, firmware v1.8-36, runtime 2.11.0",
+        "evidence": [
+          "docs/temporal_camera/native-comparison-20261117/POSTFLIGHT_20261118.json"
+        ]
+      }
+    ]
+  }
+}

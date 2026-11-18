@@ -1,0 +1,110 @@
+﻿{
+  "schema_version": 1,
+  "task": "temporal-native-comparison-20261117",
+  "observed_local_date": "2026-11-18",
+  "scope": "bounded native engineering comparison only",
+  "acceptance": {
+    "accuracy": "HOLD",
+    "visual_recognition": "PAUSED",
+    "road_test": "NOT RUN",
+    "long_soak": "NOT RUN",
+    "position_valid": false
+  },
+  "board": {
+    "port": "COM3",
+    "board": "LCKFB-LSPI-K230-1G-CanMV",
+    "firmware": "K230-v1.8-36-gae2f20da0467a8e70659f032b240aae50272c49a",
+    "runtime": "2.11.0",
+    "uvc_device": "openaicam#openaicam",
+    "uvc_mode": "1280x720 MJPEG 30 FPS",
+    "source_identity": "OV2735 identity matched by UVC device and negotiated mode"
+  },
+  "archive": {
+    "path": "C:/Users/28389/Desktop/k230-project/deliverables/K230_Official_Gray_Map_A_TCN4_Board_Bench_R2.zip",
+    "sha256": "b7dd989d7f1d23b74a95cbdd7528e8e47fc8e403256ed1363d66f5c4713de48b",
+    "verified_members": 20
+  },
+  "installations": {
+    "cnn1": {
+      "remote": "/data/k230_temporal_v1_cmp1118_cnn1",
+      "status": "VERIFIED_BOARD_FILES_ONLY",
+      "model_bytes": 2646600,
+      "model_sha256": "ac86c72a648df1c9f484c920180b0bcb9ae877f26d20c2cea364969d0d921fbc",
+      "current_source_substitutions": ["board_multiroute.py", "embedded_filter.py", "localization_runtime.py"]
+    },
+    "tcn4": {
+      "remote": "/data/k230_temporal_v1_cmp1118_tcn4",
+      "status": "VERIFIED_BOARD_FILES_ONLY",
+      "model_bytes": 2722784,
+      "model_sha256": "3c9de65fe5c7d74300075600dab53c7364307e68f1ff1924e15a7dc1219b5cf2",
+      "current_source_substitutions": ["board_multiroute.py", "embedded_filter.py", "localization_runtime.py"]
+    }
+  },
+  "runs": {
+    "cnn1_10a": {
+      "frames": 10,
+      "dropped": 0,
+      "status": "MEASURED",
+      "camera_to_result_fps": 6.422607,
+      "kpu_mean_ms": 5.7737,
+      "ai2d_mean_ms": 0.9592,
+      "filter_mean_ms": 56.2716,
+      "cycle_mean_ms": 155.6961,
+      "position_valid": 0,
+      "unlocalized": 10,
+      "cleanup_errors": [],
+      "minimum_python_heap_free": 2093024,
+      "final_mmz_used": 0,
+      "readback": "cnn1-10a-readback.json"
+    },
+    "cnn1_60b": {
+      "frames": 60,
+      "dropped": 0,
+      "status": "MEASURED",
+      "camera_to_result_fps": 7.111532,
+      "kpu_mean_ms": 5.7527,
+      "ai2d_mean_ms": 0.9054833,
+      "filter_mean_ms": 55.95708,
+      "cycle_mean_ms": 140.5996,
+      "position_valid": 0,
+      "unlocalized": 60,
+      "cleanup_errors": [],
+      "minimum_python_heap_free": 340864,
+      "final_mmz_used": 0,
+      "readback": "cnn1-60b-readback.json"
+    },
+    "tcn4_10a": {
+      "frames": 10,
+      "dropped": 0,
+      "status": "MEASURED",
+      "camera_to_result_fps": 5.488474,
+      "kpu_mean_ms": 18.0158,
+      "ai2d_mean_ms": 0.934,
+      "filter_mean_ms": 56.0966,
+      "cycle_mean_ms": 182.2354,
+      "position_valid": 0,
+      "unlocalized": 10,
+      "cleanup_errors": [],
+      "minimum_python_heap_free": 2054976,
+      "final_mmz_used": 0,
+      "readback": "tcn4-10a-readback.json"
+    },
+    "tcn4_60b": {
+      "frames": 60,
+      "dropped": 0,
+      "status": "MEASURED",
+      "camera_to_result_fps": 6.105006,
+      "kpu_mean_ms": 18.01205,
+      "ai2d_mean_ms": 0.9036167,
+      "filter_mean_ms": 55.98602,
+      "cycle_mean_ms": 163.8085,
+      "position_valid": 0,
+      "unlocalized": 60,
+      "cleanup_errors": [],
+      "minimum_python_heap_free": 341056,
+      "final_mmz_used": 0,
+      "readback": "tcn4-60b-readback.json"
+    }
+  },
+  "postflight": "POSTFLIGHT_20261118.json"
+}
