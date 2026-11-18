@@ -19,12 +19,12 @@
   ],
   "branch": "ops/topface-production-fps-20261116",
   "state": "ready",
-  "claimed": true,
+  "claimed": false,
   "agent": "coordinator",
   "session": "output-data-verify-20261118-a",
-  "revision": 6,
+  "revision": 7,
   "handoff": ".ops/handoffs/board-output-data-20261118/20261118T054247-bebb49c1.json",
-  "updated_at": "2026-11-18T05:42:47+00:00",
+  "updated_at": "2026-11-18T05:43:11+00:00",
   "reconciliation_note": {
     "reason": "User resumed the paused storage handoff; COM3 detected, board script_running=false, no other task claims COM3/K230-media; verify existing /data TopFace route with one bounded new report name and no redeploy.",
     "at": "2026-11-18T05:39:31+00:00"
