@@ -19,14 +19,14 @@
   ],
   "branch": "ops/topface-production-fps-20261116",
   "state": "ready",
-  "claimed": false,
+  "claimed": true,
   "agent": "coordinator",
-  "session": "output-data-verify-20261118-a",
-  "revision": 7,
-  "handoff": ".ops/handoffs/board-output-data-20261118/20261118T054247-bebb49c1.json",
-  "updated_at": "2026-11-18T05:43:11+00:00",
+  "session": "old-sd-output-guard-20261118-d",
+  "revision": 9,
+  "handoff": ".ops/handoffs/board-output-data-20261118/20261118T063300-69c42841.json",
+  "updated_at": "2026-11-18T06:33:00+00:00",
   "reconciliation_note": {
-    "reason": "User resumed the paused storage handoff; COM3 detected, board script_running=false, no other task claims COM3/K230-media; verify existing /data TopFace route with one bounded new report name and no redeploy.",
-    "at": "2026-11-18T05:39:31+00:00"
+    "reason": "Record old-card data-volume guard in the output handoff after v1.8-36 reported /data total/free=0 and /sdcard free=0.",
+    "at": "2026-11-18T06:32:59+00:00"
   }
 }

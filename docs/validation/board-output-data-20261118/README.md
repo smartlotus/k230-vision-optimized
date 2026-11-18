@@ -23,4 +23,6 @@
 
 2026-11-18 bounded verification: `/data/logs/topface-verify-20261118-a.json` was created and read back at 1767 bytes. The deployed TopFace service reached initialization but returned `RUN_FAILED` with `Can not found sensor on 2` before capture; cleanup errors were empty. `/sdcard/tfp1116/production-session01.json` remained absent and startup files remained absent. This confirms the new output path and preserves the CSI2 hardware failure separately.
 
+2026-11-18 old-card precheck: firmware v1.8-36 reported `/sdcard` free blocks `0` and `/data` total/free blocks `0`. `run_topface_service.py` now checks `os.statvfs('/data')` before camera initialization and raises `DATA_VOLUME_UNAVAILABLE` when the data volume is not mounted. It does not fall back to `/sdcard`.
+
 板端各文件的前后哈希见 [部署收据](deploy.json)。本机原始脚本备份位于 TopFace 工作树的 `.ops/local/board-output-data-20261118/*.original`。固件示例本次直接在当前卡上调整，更换或重刷镜像后应重新核对。

@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "task": "board-output-data-20261118",
+  "created_at": "2026-11-18T06:33:00+00:00",
+  "agent": "coordinator",
+  "session": "old-sd-output-guard-20261118-d",
+  "branch": "ops/topface-production-fps-20261116",
+  "head": "bfbe1c5dc7a91e180ba140b31fcd1718a75b317b",
+  "state": "ready",
+  "files": {
+    "docs/validation/board-output-data-20261118/README.md": "58e929f8d05b8e87eb0ee6410525ba99d760c8e975a48837d9070f8c94a7584f"
+  },
+  "git_blob_oids": {
+    "docs/validation/board-output-data-20261118/README.md": "f241aef097eba420a2b56c63ee1a47fe6e9b1f5a"
+  },
+  "scope_git_blob_oids": {
+    "docs/LESSONS_LEARNED.md": "5ac5c1e370597d55183d3400e97b9d3eb8b25254",
+    "docs/validation/board-output-data-20261118/README.md": "f241aef097eba420a2b56c63ee1a47fe6e9b1f5a",
+    "docs/validation/board-output-data-20261118/deploy.json": "6512f8edee8f49c62abf4d4bdc4c641c7e21edc3",
+    "docs/validation/board-output-data-20261118/topface-verify-20261118-a.json": "6cbddab8998dd14f74c7e4d4e993bbb5a89a6853",
+    "k230_transport_mvp/run_topface_service.py": "04639071b01d1f7ec11fcb21d083bf2a01cc58b1"
+  },
+  "scope_fingerprints": {
+    "docs/LESSONS_LEARNED.md": "8af0deadf8a389da484344fb9dd665c07a34106b504d2812e9c35711f0c192cc",
+    "docs/validation/board-output-data-20261118/README.md": "58e929f8d05b8e87eb0ee6410525ba99d760c8e975a48837d9070f8c94a7584f",
+    "docs/validation/board-output-data-20261118/deploy.json": "5df46156d3659f82224186a1a470a3f153e12cd58b3cb358eeb205ccb081400a",
+    "docs/validation/board-output-data-20261118/topface-verify-20261118-a.json": "4151a41cc3020532717def6505fe3487683e86aa220fe7b2148159b83997e227",
+    "k230_transport_mvp/run_topface_service.py": "8fa50593509bb75498bf1aceda92754798ed954743a19c1af581e74176053058"
+  },
+  "report": {
+    "completed": [
+      "Read the board-output-data-20261118 handoff and F17 storage rule",
+      "Confirmed COM3 board connected and ready, script_running=false, and no startup files",
+      "Reused existing deployment without redeploying or changing model paths",
+      "Ran a bounded TopFace service wrapper with a fresh report basename",
+      "Read back /data/logs/topface-verify-20261118-a.json at 1767 bytes",
+      "Confirmed old /sdcard/tfp1116/production-session01.json was not created"
+    ],
+    "remaining": [
+      "TopFace run stopped before capture because CSI2 sensor 2 was not found",
+      "CameraXY USB /data/logs/xyusb1118 entry remains a separate task",
+      "No recording, image or audio entry was exercised in this short run"
+    ],
+    "decisions": [
+      "Treat /data path creation and readback as verified",
+      "Preserve the CSI2 initialization failure as a hardware-channel result",
+      "Do not retry or deploy again in this task"
+    ],
+    "risks": [
+      "TopFace production entry remains an 18000-frame service wrapper; bounded verification used the same deployed service with frames=30",
+      "CSI2 sensor availability is unresolved on firmware v1.8-0"
+    ],
+    "next_steps": [
+      "Keep /data/logs/topface-<random>.json for production reports",
+      "Verify CameraXY USB route separately if requested",
+      "Diagnose CSI2 sensor wiring/channel before claiming TopFace capture success"
+    ],
+    "verification": [
+      {
+        "command": "canmv_board_info + canmv_script_running",
+        "exit_code": 0,
+        "summary": "COM3 connected/ready and board idle before and after the run",
+        "evidence": [
+          "docs/validation/board-output-data-20261118/topface-verify-20261118-a.json"
+        ]
+      },
+      {
+        "command": "Bounded TopFace service invocation with fresh /data filename",
+        "exit_code": 0,
+        "summary": "Report created/read back; service returned RUN_FAILED at CSI2 initialization",
+        "evidence": [
+          "docs/validation/board-output-data-20261118/topface-verify-20261118-a.json"
+        ]
+      }
+    ]
+  }
+}
