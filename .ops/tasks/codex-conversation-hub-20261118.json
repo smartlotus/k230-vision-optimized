@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "codex-conversation-hub-20261118",
+  "title": "Local Codex conversation archive and continuation hub",
+  "paths": [
+    "tools/codex_conversation_hub",
+    "docs/codex_conversation_hub"
+  ],
+  "lane": "serial",
+  "resources": [
+    "local-codex-data"
+  ],
+  "depends": [],
+  "acceptance": [
+    "Scans configured Codex and VS Code JSONL roots on startup",
+    "Stores immutable source copies and searchable SQLite metadata",
+    "Provides local web UI search, filters, preview, original path copy, and continuation bundle export",
+    "Preserves credentials and unrelated project files"
+  ],
+  "branch": "ops/temporal-camera-v1-20261117",
+  "state": "planned",
+  "claimed": false,
+  "agent": null,
+  "session": null,
+  "revision": 1,
+  "handoff": null,
+  "updated_at": "2026-11-18T14:01:30+00:00"
+}

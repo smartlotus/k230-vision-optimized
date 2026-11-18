@@ -1,0 +1,20 @@
+{
+  "data_dir": "%LOCALAPPDATA%/CodexConversationHub",
+  "archive_originals": true,
+  "max_file_bytes": 250000000,
+  "preview_chars": 12000,
+  "sources": [
+    {
+      "id": "codex-sessions",
+      "kind": "codex_jsonl",
+      "path": "%USERPROFILE%/.codex/sessions",
+      "enabled": true
+    },
+    {
+      "id": "vscode-chat-sessions",
+      "kind": "vscode_chat_jsonl",
+      "path": "%APPDATA%/Code/User/workspaceStorage",
+      "enabled": false
+    }
+  ]
+}

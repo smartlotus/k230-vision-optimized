@@ -13,3 +13,7 @@ __pycache__/
 venv/
 dist/
 k230_transport_mvp/evidence/local/
+
+# Codex Conversation Hub local configuration and runtime state
+codex-hub.config.json
+tools/codex_conversation_hub/.runtime/

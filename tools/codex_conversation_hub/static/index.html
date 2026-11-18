@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codex Conversation Hub</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101316;
+      --panel: #171b1e;
+      --panel-2: #1d2327;
+      --line: #30383d;
+      --muted: #8e9aa1;
+      --text: #e9eeee;
+      --teal: #67e1c6;
+      --amber: #f3b86f;
+      --blue: #8fc6ff;
+      --red: #f58e8e;
+      --shadow: 0 18px 60px rgba(0,0,0,.28);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(103,225,198,.08), transparent 34rem),
+        radial-gradient(circle at 100% 20%, rgba(143,198,255,.07), transparent 30rem),
+        var(--bg);
+      font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+    }
+    button, input, select { font: inherit; }
+    button { cursor: pointer; }
+    .shell { width: min(1500px, calc(100% - 44px)); margin: 0 auto; padding: 28px 0 44px; }
+    .topbar { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 26px; }
+    .eyebrow { color: var(--teal); font: 600 11px/1.1 "IBM Plex Mono", monospace; letter-spacing: .18em; text-transform: uppercase; }
+    h1 { margin: 9px 0 0; font: 600 clamp(28px, 4vw, 52px)/1 "Aptos Display", "Segoe UI", sans-serif; letter-spacing: -.045em; }
+    .sub { margin: 12px 0 0; color: var(--muted); max-width: 700px; font-size: 14px; line-height: 1.6; }
+    .actions { display: flex; flex-wrap: wrap; gap: 9px; }
+    .button { border: 1px solid var(--line); color: var(--text); background: rgba(255,255,255,.035); border-radius: 8px; padding: 10px 13px; transition: .2s ease; }
+    .button:hover { border-color: var(--teal); color: var(--teal); transform: translateY(-1px); }
+    .button.primary { background: var(--teal); border-color: var(--teal); color: #10201e; font-weight: 700; }
+    .button.primary:hover { color: #10201e; filter: brightness(1.08); }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+    .stat { min-height: 94px; padding: 17px; border: 1px solid var(--line); background: linear-gradient(145deg, rgba(255,255,255,.05), rgba(255,255,255,.015)); border-radius: 10px; box-shadow: var(--shadow); }
+    .stat .value { display: block; margin-top: 10px; color: var(--teal); font: 600 30px/1 "IBM Plex Mono", monospace; }
+    .stat .label { color: var(--muted); font-size: 12px; }
+    .layout { display: grid; grid-template-columns: minmax(360px, .86fr) minmax(420px, 1.45fr); gap: 16px; align-items: start; }
+    .panel { border: 1px solid var(--line); border-radius: 12px; background: rgba(23,27,30,.9); box-shadow: var(--shadow); overflow: hidden; }
+    .toolbar { padding: 14px; border-bottom: 1px solid var(--line); display: grid; gap: 10px; }
+    .search { position: relative; }
+    .search input { width: 100%; padding: 12px 14px 12px 40px; color: var(--text); background: #111517; border: 1px solid var(--line); border-radius: 8px; outline: none; }
+    .search input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(103,225,198,.09); }
+    .search::before { content: "⌕"; position: absolute; left: 14px; top: 7px; color: var(--teal); font-size: 22px; }
+    .filters { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    select { min-width: 0; color: var(--muted); background: #111517; border: 1px solid var(--line); border-radius: 7px; padding: 9px 10px; outline: none; }
+    select:focus { border-color: var(--teal); }
+    .list { max-height: calc(100vh - 320px); min-height: 430px; overflow: auto; }
+    .item { display: block; width: 100%; text-align: left; color: inherit; border: 0; border-bottom: 1px solid rgba(48,56,61,.72); background: transparent; padding: 15px 16px; transition: background .15s ease; }
+    .item:hover, .item.active { background: var(--panel-2); }
+    .item.active { box-shadow: inset 3px 0 0 var(--teal); }
+    .item-title { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-weight: 600; line-height: 1.45; }
+    .item-meta { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 9px; color: var(--muted); font: 11px/1.35 "IBM Plex Mono", monospace; }
+    .badge { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; padding: 3px 7px; color: var(--blue); }
+    .badge.account { color: var(--amber); }
+    .empty { padding: 44px 22px; text-align: center; color: var(--muted); line-height: 1.7; }
+    .detail { min-height: 650px; }
+    .detail-head { padding: 20px 21px 17px; border-bottom: 1px solid var(--line); }
+    .detail-head h2 { margin: 7px 0 8px; font-size: 23px; line-height: 1.3; letter-spacing: -.02em; }
+    .detail-meta { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 9px 20px; color: var(--muted); font: 11px/1.5 "IBM Plex Mono", monospace; }
+    .detail-meta span { overflow-wrap: anywhere; }
+    .detail-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .detail-actions .button { padding: 8px 10px; font-size: 12px; }
+    .messages { padding: 18px 21px 26px; max-height: calc(100vh - 370px); overflow: auto; }
+    .message { padding: 15px 16px; border: 1px solid var(--line); border-radius: 9px; background: #131719; margin-bottom: 12px; }
+    .message.user { border-left: 3px solid var(--amber); }
+    .message.assistant { border-left: 3px solid var(--teal); }
+    .message-role { color: var(--muted); margin-bottom: 8px; font: 600 11px/1 "IBM Plex Mono", monospace; letter-spacing: .12em; text-transform: uppercase; }
+    .message-text { white-space: pre-wrap; overflow-wrap: anywhere; color: #d7dfdf; font-size: 13px; line-height: 1.65; }
+    .notice { margin: 0 0 15px; padding: 10px 13px; border: 1px solid rgba(103,225,198,.3); border-radius: 8px; color: var(--teal); background: rgba(103,225,198,.06); font-size: 12px; }
+    .error { color: var(--red); }
+    @media (max-width: 920px) { .topbar { align-items: start; flex-direction: column; } .stats { grid-template-columns: repeat(2, 1fr); } .layout { grid-template-columns: 1fr; } .list { max-height: 440px; } .messages { max-height: none; } }
+    @media (max-width: 520px) { .shell { width: min(100% - 24px, 1500px); padding-top: 18px; } .stats { grid-template-columns: 1fr 1fr; gap: 8px; } .stat { min-height: 82px; padding: 12px; } .stat .value { font-size: 23px; } .detail-meta { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">Local archive / cross-account continuity</div>
+        <h1>Codex Conversation Hub</h1>
+        <p class="sub">把分散在 Codex 客户端和 VS Code 的会话变成一份可搜索、可核验、可复制路径的本地资料库。每次打开都会先做增量扫描。</p>
+      </div>
+      <div class="actions">
+        <button class="button" id="refreshBtn">刷新索引</button>
+        <button class="button primary" id="scanBtn">扫描新数据</button>
+      </div>
+    </header>
+    <section class="stats" aria-label="库统计">
+      <div class="stat"><span class="label">已收录会话</span><span class="value" id="statConversations">—</span></div>
+      <div class="stat"><span class="label">消息条数</span><span class="value" id="statMessages">—</span></div>
+      <div class="stat"><span class="label">账号标识</span><span class="value" id="statAccounts">—</span></div>
+      <div class="stat"><span class="label">最近扫描</span><span class="value" id="statLast" style="font-size:14px;line-height:2">—</span></div>
+    </section>
+    <div id="notice" class="notice" hidden></div>
+    <section class="layout">
+      <section class="panel">
+        <div class="toolbar">
+          <div class="search"><input id="search" type="search" placeholder="搜索标题、项目路径、用户请求或助手回复" autocomplete="off"></div>
+          <div class="filters">
+            <select id="account"><option value="">所有账号</option></select>
+            <select id="source"><option value="">所有来源</option></select>
+          </div>
+        </div>
+        <div id="list" class="list"><div class="empty">正在读取资料库…</div></div>
+      </section>
+      <section class="panel detail" id="detail">
+        <div class="empty">从左侧选择一个会话。你可以复制原始路径，或生成跨客户端通用的续接包。</div>
+      </section>
+    </section>
+  </main>
+  <script>
+    const state = { selected: null, timer: null };
+    const $ = (id) => document.getElementById(id);
+    const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const shortAccount = (value) => value ? `${value.slice(0, 8)}…` : '未知账号';
+    const showNotice = (text, error = false) => { $('notice').hidden = !text; $('notice').textContent = text; $('notice').className = error ? 'notice error' : 'notice'; };
+    async function api(url, options) { const response = await fetch(url, options); const data = await response.json(); if (!response.ok) throw new Error(data.error || '请求失败'); return data; }
+    function debounceLoad() { clearTimeout(state.timer); state.timer = setTimeout(loadConversations, 180); }
+    function fillSelect(id, values, label) { const select = $(id); const current = select.value; select.innerHTML = `<option value="">${label}</option>` + values.map(v => `<option value="${escapeHtml(v)}">${escapeHtml(id === 'account' ? shortAccount(v) : v)}</option>`).join(''); select.value = values.includes(current) ? current : ''; }
+    async function loadSummary() { const data = await api('/api/summary'); $('statConversations').textContent = data.conversations.toLocaleString(); $('statMessages').textContent = data.messages.toLocaleString(); $('statAccounts').textContent = data.accounts.toLocaleString(); $('statLast').textContent = data.last_scan ? new Date(data.last_scan).toLocaleString() : '尚未扫描'; fillSelect('account', data.filters.accounts, '所有账号'); fillSelect('source', data.filters.sources, '所有来源'); }
+    async function loadConversations() { const params = new URLSearchParams({ q: $('search').value, account: $('account').value, source: $('source').value, limit: '100' }); try { const data = await api(`/api/conversations?${params}`); const list = $('list'); if (!data.items.length) { list.innerHTML = '<div class="empty">没有匹配的会话。尝试换一个关键词或清除筛选。</div>'; return; } list.innerHTML = data.items.map(item => `<button class="item ${state.selected === item.id ? 'active' : ''}" data-id="${encodeURIComponent(item.id)}"><div class="item-title">${escapeHtml(item.title)}</div><div class="item-meta"><span class="badge">${escapeHtml(item.source_label || item.source_kind)}</span><span class="badge account">${escapeHtml(shortAccount(item.account_id))}</span><span>${item.message_count} 条消息</span><span>${item.updated_at ? new Date(item.updated_at).toLocaleDateString() : '未知日期'}</span></div></button>`).join(''); document.querySelectorAll('.item').forEach(button => button.addEventListener('click', () => selectConversation(decodeURIComponent(button.dataset.id)))); } catch (error) { showNotice(error.message, true); } }
+    async function selectConversation(id) { state.selected = id; await loadConversations(); try { const item = await api(`/api/conversation/${encodeURIComponent(id)}`); renderDetail(item); } catch (error) { showNotice(error.message, true); } }
+    function renderDetail(item) { const messages = item.messages?.length ? item.messages.map(message => `<article class="message ${message.role}"><div class="message-role">${message.role === 'user' ? 'USER / 用户' : 'ASSISTANT / 助手'}</div><div class="message-text">${escapeHtml(message.text)}</div></article>`).join('') : '<div class="empty">这个源文件只有会话元数据，没有可读消息内容。</div>'; $('detail').innerHTML = `<div class="detail-head"><div class="eyebrow">${escapeHtml(item.source_label || item.source_kind)}</div><h2>${escapeHtml(item.title)}</h2><div class="detail-meta"><span>账号 · ${escapeHtml(item.account_id || '未知')}</span><span>模型 · ${escapeHtml(item.model || '未知')}</span><span>项目 · ${escapeHtml(item.cwd || '未知')}</span><span>分支 · ${escapeHtml(item.git_branch || '未知')}</span><span>原始 · ${escapeHtml(item.original_path || '')}</span><span>归档 · ${escapeHtml(item.archive_path || '未启用')}</span></div><div class="detail-actions"><button class="button" onclick="copyPath('original')">复制原始路径</button><button class="button" onclick="copyPath('archive')">复制归档路径</button><button class="button primary" onclick="exportBundle()">生成并复制续接包</button><button class="button" onclick="openPath('original')">定位原文件</button></div></div><div class="messages">${messages}</div>`; }
+    async function copyPath(kind) { try { const data = await api(`/api/copy/${encodeURIComponent(state.selected)}?kind=${kind}`, { method: 'POST' }); showNotice(`${kind === 'original' ? '原始文件' : '归档副本'}路径已复制${data.copied ? '到剪贴板' : ''}。`); } catch (error) { showNotice(error.message, true); } }
+    async function exportBundle() { try { const data = await api(`/api/export/${encodeURIComponent(state.selected)}`, { method: 'POST' }); showNotice(`续接包已写入 ${data.path}${data.copied ? '，路径已复制。' : '。'}`); } catch (error) { showNotice(error.message, true); } }
+    async function openPath(kind) { try { await api(`/api/open/${encodeURIComponent(state.selected)}?kind=${kind}`, { method: 'POST' }); showNotice('已请求打开原始文件。'); } catch (error) { showNotice(error.message, true); } }
+    async function refresh() { try { await loadSummary(); await loadConversations(); showNotice('索引读取完成。'); } catch (error) { showNotice(error.message, true); } }
+    async function scan() { $('scanBtn').disabled = true; showNotice('正在增量扫描本地源文件…'); try { const result = await api('/api/scan', { method: 'POST' }); await refresh(); showNotice(`扫描完成。发现 ${result.files_seen} 个文件，新增或更新 ${result.files_indexed} 个，跳过 ${result.files_skipped} 个。`); } catch (error) { showNotice(error.message, true); } finally { $('scanBtn').disabled = false; } }
+    $('search').addEventListener('input', debounceLoad); $('account').addEventListener('change', debounceLoad); $('source').addEventListener('change', debounceLoad); $('refreshBtn').addEventListener('click', refresh); $('scanBtn').addEventListener('click', scan); refresh();
+  </script>
+</body>
+</html>
