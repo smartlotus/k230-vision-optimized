@@ -17,10 +17,10 @@
   ],
   "branch": "ops/vision-r3-1119",
   "state": "paused",
-  "claimed": true,
+  "claimed": false,
   "agent": "codex",
   "session": "r3-local-1119-a",
-  "revision": 3,
+  "revision": 4,
   "handoff": ".ops/handoffs/vision-r3-1119/20261118T165651-e39b2ebf.json",
-  "updated_at": "2026-11-18T16:57:05+00:00"
+  "updated_at": "2026-11-18T16:58:29+00:00"
 }
