@@ -28,12 +28,12 @@
   ],
   "branch": "ops/topface-production-fps-20261116",
   "state": "ready",
-  "claimed": true,
+  "claimed": false,
   "agent": "coordinator",
   "session": "old-sd-output-guard-20261118-a",
-  "revision": 7,
+  "revision": 8,
   "handoff": ".ops/handoffs/topface-production-fps-20261116/20261118T063221-01efe7b2.json",
-  "updated_at": "2026-11-18T06:32:27+00:00",
+  "updated_at": "2026-11-18T06:32:36+00:00",
   "reconciliation_note": {
     "reason": "Old SD is connected with firmware v1.8-36, /sdcard free blocks=0 and /data statvfs total/free=0. Add a preflight guard so the existing /data output route fails before camera start when the data volume is unavailable.",
     "at": "2026-11-18T06:08:49+00:00"
