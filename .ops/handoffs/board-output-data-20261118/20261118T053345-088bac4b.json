@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "task": "board-output-data-20261118",
+  "created_at": "2026-11-18T05:33:45+00:00",
+  "agent": "coordinator",
+  "session": "output-data-64g-20261118",
+  "branch": "ops/topface-production-fps-20261116",
+  "head": "d9012c1e5089cd5700bad3022965eef3fe9f46ff",
+  "state": "paused",
+  "files": {
+    "docs/LESSONS_LEARNED.md": "8af0deadf8a389da484344fb9dd665c07a34106b504d2812e9c35711f0c192cc",
+    "docs/validation/board-output-data-20261118/README.md": "57d862d6d1cf067f2cc5ecdad6e02fb11be5accf20796d5f882e18c074ffdcd8",
+    "docs/validation/board-output-data-20261118/deploy.json": "5df46156d3659f82224186a1a470a3f153e12cd58b3cb358eeb205ccb081400a",
+    "k230_transport_mvp/run_topface_service.py": "1ce0ae136cef8ebc48dce44df44fc8bf4b19daec30b6db1d567d8876927d008a"
+  },
+  "git_blob_oids": {
+    "docs/LESSONS_LEARNED.md": "5ac5c1e370597d55183d3400e97b9d3eb8b25254",
+    "docs/validation/board-output-data-20261118/README.md": "fc966df4e3bef056f53d98af326739be711baac6",
+    "docs/validation/board-output-data-20261118/deploy.json": "6512f8edee8f49c62abf4d4bdc4c641c7e21edc3",
+    "k230_transport_mvp/run_topface_service.py": "7090fa893298c84370e637ccaf1fe1a8ff2c695a"
+  },
+  "scope_git_blob_oids": {
+    "docs/LESSONS_LEARNED.md": "5ac5c1e370597d55183d3400e97b9d3eb8b25254",
+    "docs/validation/board-output-data-20261118/README.md": "fc966df4e3bef056f53d98af326739be711baac6",
+    "docs/validation/board-output-data-20261118/deploy.json": "6512f8edee8f49c62abf4d4bdc4c641c7e21edc3",
+    "k230_transport_mvp/run_topface_service.py": "7090fa893298c84370e637ccaf1fe1a8ff2c695a"
+  },
+  "scope_fingerprints": {
+    "docs/LESSONS_LEARNED.md": "8af0deadf8a389da484344fb9dd665c07a34106b504d2812e9c35711f0c192cc",
+    "docs/validation/board-output-data-20261118/README.md": "57d862d6d1cf067f2cc5ecdad6e02fb11be5accf20796d5f882e18c074ffdcd8",
+    "docs/validation/board-output-data-20261118/deploy.json": "5df46156d3659f82224186a1a470a3f153e12cd58b3cb358eeb205ccb081400a",
+    "k230_transport_mvp/run_topface_service.py": "1ce0ae136cef8ebc48dce44df44fc8bf4b19daec30b6db1d567d8876927d008a"
+  },
+  "report": {
+    "completed": [
+      "Separate persistent output routes deployed on the replacement card. Seven scripts matched board readback.",
+      "Documented volume inspection and update procedure in the project lessons."
+    ],
+    "remaining": [
+      "VS Code owner to check final routes and exercise a bounded write on the desired media or report entrypoint."
+    ],
+    "decisions": [
+      "Keep code and model input roots while routing output to /data. Stop device work at user request."
+    ],
+    "risks": [
+      "No new camera, recording, or post-change report generation run captured. Firmware defaults may return after reflashing."
+    ],
+    "next_steps": [
+      "Review the storage handoff and recheck source hashes and sole board ownership."
+    ],
+    "verification": [
+      {
+        "exit_code": 0,
+        "evidence": [
+          "docs/validation/board-output-data-20261118/deploy.json"
+        ],
+        "command": "Compile prepared source and check exact CanMV MCP readback for 7 board files",
+        "summary": "7/7 matched, 5 directories confirmed, no startup files before or after."
+      },
+      {
+        "exit_code": 0,
+        "evidence": [
+          "docs/validation/board-output-data-20261118/README.md"
+        ],
+        "command": "Read CanMV Windows MTP storage properties",
+        "summary": "Data volume 61,456,908,288 B, free 61,451,796,480 B."
+      }
+    ]
+  }
+}

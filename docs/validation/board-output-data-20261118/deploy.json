@@ -1,0 +1,64 @@
+{
+  "board": "LCKFB-LSPI-K230-1G-CanMV",
+  "firmware": "K230-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+  "directories": [
+    "/data/logs",
+    "/data/logs/xyusb1118",
+    "/data/captures",
+    "/data/captures/ai-cube",
+    "/data/captures/save-image"
+  ],
+  "startup_before": {
+    "main.py": false,
+    "boot.py": false
+  },
+  "files": [
+    {
+      "path": "/sdcard/tfp1116/run_topface_service.py",
+      "original_sha256": "915022365e067551bb66649c2bf0bca7feac5cc8bf4bf477e0c9d657e3d25c14",
+      "readback_sha256": "1ce0ae136cef8ebc48dce44df44fc8bf4b19daec30b6db1d567d8876927d008a",
+      "bytes": 570
+    },
+    {
+      "path": "/sdcard/xyusb1118/board_usb_smoke.py",
+      "original_sha256": "476c0eba7d4fd42e8d81ae01a3fec4db335dd530df81a7d16592d477062625e6",
+      "readback_sha256": "dc6e50d8c61735aa89236d45e6c31d6fcafb149a1cfb121d604015bc1ffea18f",
+      "bytes": 14055
+    },
+    {
+      "path": "/sdcard/examples/17-Sensor/camera_snapshot_and_save.py",
+      "original_sha256": "c898a54a7c1a87e5f1c399d00615acb8106923beb5dc2493af299cf4d94e11a8",
+      "readback_sha256": "5f0ed24f34585b609213045ce2e2c7ea0858e992e3e83f6425794f39f838c6e9",
+      "bytes": 2333
+    },
+    {
+      "path": "/sdcard/examples/16-AI-Cube/DataCollectionCamera.py",
+      "original_sha256": "21a87addd5ef6386db0b81e0734b9a4b4b62a81a0fdf7e595901ea355db38746",
+      "readback_sha256": "44dd6b18e36fcaab3ad0ce1eb680721290d8d1ab805d0bc9f9d34311c13ffa8c",
+      "bytes": 5662
+    },
+    {
+      "path": "/sdcard/examples/22-Others/save_image.py",
+      "original_sha256": "5ba7d5370159af3d8621012f663a65fd7185051eedadfe060d637fe62e06742d",
+      "readback_sha256": "d327518e7dfd218a4e3c92aacf789bb07a42df7d18bd80d2da76bd900c56b641",
+      "bytes": 5056
+    },
+    {
+      "path": "/sdcard/examples/02-Media/mp4muxer.py",
+      "original_sha256": "87917b017fe1c25bd77c1d90ed7b9ebef735c5b2fd550eb2a6237dafd198ca51",
+      "readback_sha256": "15a80117494ce2d495153358a8e5995da00ba50efc93561d1838fb78957aeb0a",
+      "bytes": 8525
+    },
+    {
+      "path": "/sdcard/examples/02-Media/audio.py",
+      "original_sha256": "e9cdedf70c0a7779388dea3d40e77498a2d70a3b80597b4cc9b5830e8cbb5726",
+      "readback_sha256": "c5dc9bbfa8d31c53f432e8c353ae81bb26a3669533e43b9d6f9705698f601853",
+      "bytes": 8408
+    }
+  ],
+  "result": "VERIFIED_BOARD_SOURCE_READBACK",
+  "startup_after": {
+    "main.py": false,
+    "boot.py": false
+  }
+}

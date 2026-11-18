@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "board-output-data-20261118",
+  "title": "Route live K230 output to the large data partition",
+  "paths": [
+    "k230_transport_mvp/run_topface_service.py",
+    "docs/validation/board-output-data-20261118",
+    "docs/LESSONS_LEARNED.md"
+  ],
+  "lane": "serial",
+  "resources": [
+    "COM3",
+    "K230-media"
+  ],
+  "depends": [],
+  "acceptance": [
+    "Configure and verify TopFace reports, capture examples and recording outputs on /data with existing model and startup paths preserved"
+  ],
+  "branch": "ops/topface-production-fps-20261116",
+  "state": "paused",
+  "claimed": true,
+  "agent": "coordinator",
+  "session": "output-data-64g-20261118",
+  "revision": 3,
+  "handoff": ".ops/handoffs/board-output-data-20261118/20261118T053345-088bac4b.json",
+  "updated_at": "2026-11-18T05:33:46+00:00"
+}
