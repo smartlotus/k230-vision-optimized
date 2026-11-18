@@ -14,10 +14,10 @@
   ],
   "branch": "ops/car-blender-1118",
   "state": "ready",
-  "claimed": true,
+  "claimed": false,
   "agent": "codex",
   "session": "car-sim-1118-r2",
-  "revision": 6,
+  "revision": 7,
   "handoff": ".ops/handoffs/car-blender-1118/20261118T142233-8a719cbe.json",
-  "updated_at": "2026-11-18T14:23:02+00:00"
+  "updated_at": "2026-11-18T14:23:56+00:00"
 }
