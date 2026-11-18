@@ -1,0 +1,32 @@
+{
+  "START_1": {
+    "sampled_poses": 13330,
+    "footprint_width_length_m": [
+      0.28,
+      0.295
+    ],
+    "floor_mask_sha256": "fa5f526d741e27af830cc4b5a6c3e945ef48442670db3aabd12bd642def6f8d2",
+    "blocked_floor_pixels": 0,
+    "min_chassis_gaps_m": {
+      "Obstacle 0": 0.03008035599999994,
+      "Turntable": 0.014999975000000026
+    },
+    "max_corner_step_m": 0.002,
+    "scope": "Kinematic chassis footprint and frozen obstacle layout"
+  },
+  "START_2": {
+    "sampled_poses": 15088,
+    "footprint_width_length_m": [
+      0.28,
+      0.295
+    ],
+    "floor_mask_sha256": "fa5f526d741e27af830cc4b5a6c3e945ef48442670db3aabd12bd642def6f8d2",
+    "blocked_floor_pixels": 0,
+    "min_chassis_gaps_m": {
+      "Obstacle 0": 0.03008035599999994,
+      "Turntable": 0.014999975000000026
+    },
+    "max_corner_step_m": 0.002,
+    "scope": "Kinematic chassis footprint and frozen obstacle layout"
+  }
+}

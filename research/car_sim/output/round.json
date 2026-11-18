@@ -1,0 +1,1740 @@
+{
+  "plan": {
+    "task": "156+123+516+231",
+    "start_id": "START_1",
+    "workflow_summary": {
+      "session_id": "sim-workflow",
+      "mode": "SIM",
+      "is_simulated": true,
+      "status": "DONE",
+      "reason": null,
+      "task": "156+123+516+231",
+      "start_id": "START_1",
+      "station": "START_1",
+      "station_verified": true,
+      "step_index": 31,
+      "planned_steps": 31,
+      "confirmed_steps": 31,
+      "counters": {
+        "picks": 12,
+        "placements": 12
+      },
+      "completed": {
+        "1_PROCESS": 3,
+        "1_BUFFER": 3,
+        "2_PROCESS": 3,
+        "2_BUFFER": 3
+      },
+      "carrier": [],
+      "pending": null,
+      "controller_verified": true,
+      "failed": false,
+      "rejected_receipts": 0,
+      "placement_scoring": {
+        "scope": "CONFIRMED_PLACEMENT_RECEIPTS_ONLY",
+        "is_simulated": true,
+        "denominator": 12,
+        "scored": 0,
+        "unknown": 12,
+        "rule_points": null
+      }
+    },
+    "qr_board_center_xy_m": [
+      1.2,
+      0.08
+    ],
+    "footprint_width_length_m": [
+      0.28,
+      0.295
+    ],
+    "slot_order": {
+      "PROCESS": "decreasing X",
+      "BUFFER": "increasing Y"
+    },
+    "steps": [
+      {
+        "action": "QR",
+        "source_station": "START_1",
+        "dest_station": "QR",
+        "batch": 0,
+        "layer": 0,
+        "target_color": null,
+        "target_slot": null,
+        "pick_index": null,
+        "poses": [
+          [
+            1.05,
+            1.05,
+            0.0
+          ],
+          [
+            1.05,
+            0.86,
+            0.0
+          ],
+          [
+            0.9,
+            0.86,
+            0.0
+          ],
+          [
+            0.9,
+            0.86,
+            -1.5707963267948966
+          ],
+          [
+            0.95,
+            0.86,
+            -1.5707963267948966
+          ],
+          [
+            0.95,
+            0.08,
+            -1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "MOVE",
+        "batch": 1,
+        "phase": "PROCESS",
+        "source_station": "QR",
+        "dest_station": "RAW",
+        "target_color": null,
+        "target_slot": null,
+        "pick_index": null,
+        "layer": 1,
+        "requires_carrier_unload": true,
+        "preconditions": [
+          "GRIPPER_EMPTY",
+          "CARRIER_EMPTY"
+        ],
+        "poses": [
+          [
+            0.95,
+            0.08,
+            -1.5707963267948966
+          ],
+          [
+            0.95,
+            0.86,
+            -1.5707963267948966
+          ],
+          [
+            0.9,
+            0.86,
+            -1.5707963267948966
+          ],
+          [
+            0.9,
+            0.86,
+            0.0
+          ],
+          [
+            0.0,
+            0.86,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.5707963267948966
+          ],
+          [
+            0.0,
+            0.86,
+            1.5707963267948966
+          ],
+          [
+            0.0,
+            0.965,
+            1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PICK",
+        "batch": 1,
+        "phase": "PROCESS",
+        "source_station": "RAW",
+        "dest_station": "CARRIER",
+        "target_color": 1,
+        "target_slot": null,
+        "pick_index": 0,
+        "layer": 1,
+        "requires_carrier_unload": false,
+        "preconditions": [
+          "PHASE_BARRIER",
+          "CAPACITY_AVAILABLE"
+        ],
+        "poses": [
+          [
+            0.0,
+            0.965,
+            1.5707963267948966
+          ],
+          [
+            -3.6739403974420597e-19,
+            0.959,
+            1.5707963267948966
+          ],
+          [
+            0.0,
+            0.965,
+            1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PICK",
+        "batch": 1,
+        "phase": "PROCESS",
+        "source_station": "RAW",
+        "dest_station": "CARRIER",
+        "target_color": 5,
+        "target_slot": null,
+        "pick_index": 1,
+        "layer": 1,
+        "requires_carrier_unload": false,
+        "preconditions": [
+          "PHASE_BARRIER",
+          "CAPACITY_AVAILABLE"
+        ],
+        "poses": [
+          [
+            0.0,
+            0.965,
+            1.5707963267948966
+          ],
+          [
+            -3.6739403974420597e-19,
+            0.959,
+            1.5707963267948966
+          ],
+          [
+            0.0,
+            0.965,
+            1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PICK",
+        "batch": 1,
+        "phase": "PROCESS",
+        "source_station": "RAW",
+        "dest_station": "CARRIER",
+        "target_color": 6,
+        "target_slot": null,
+        "pick_index": 2,
+        "layer": 1,
+        "requires_carrier_unload": false,
+        "preconditions": [
+          "PHASE_BARRIER",
+          "CAPACITY_AVAILABLE"
+        ],
+        "poses": [
+          [
+            0.0,
+            0.965,
+            1.5707963267948966
+          ],
+          [
+            -3.6739403974420597e-19,
+            0.959,
+            1.5707963267948966
+          ],
+          [
+            0.0,
+            0.965,
+            1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "MOVE",
+        "batch": 1,
+        "phase": "PROCESS",
+        "source_station": "RAW",
+        "dest_station": "PROCESS",
+        "target_color": null,
+        "target_slot": null,
+        "pick_index": null,
+        "layer": 1,
+        "requires_carrier_unload": false,
+        "preconditions": [
+          "GRIPPER_EMPTY",
+          "CARRIER_LOADED"
+        ],
+        "poses": [
+          [
+            0.0,
+            0.965,
+            1.5707963267948966
+          ],
+          [
+            0.0,
+            0.86,
+            1.5707963267948966
+          ],
+          [
+            0.0,
+            0.0,
+            1.5707963267948966
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.5707963267948966
+          ],
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PLACE",
+        "batch": 1,
+        "phase": "PROCESS",
+        "source_station": "CARRIER",
+        "dest_station": "PROCESS",
+        "target_color": 1,
+        "target_slot": 1,
+        "pick_index": 0,
+        "layer": 1,
+        "requires_carrier_unload": true,
+        "preconditions": [
+          "MATCHING_CARGO",
+          "TARGET_VALID"
+        ],
+        "poses": [
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            0.15,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            0.15,
+            -0.884,
+            -1.5707963267948966
+          ],
+          [
+            0.15,
+            -0.89,
+            -1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PLACE",
+        "batch": 1,
+        "phase": "PROCESS",
+        "source_station": "CARRIER",
+        "dest_station": "PROCESS",
+        "target_color": 5,
+        "target_slot": 2,
+        "pick_index": 1,
+        "layer": 1,
+        "requires_carrier_unload": true,
+        "preconditions": [
+          "MATCHING_CARGO",
+          "TARGET_VALID"
+        ],
+        "poses": [
+          [
+            0.15,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            -3.6739403974420597e-19,
+            -0.884,
+            -1.5707963267948966
+          ],
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PLACE",
+        "batch": 1,
+        "phase": "PROCESS",
+        "source_station": "CARRIER",
+        "dest_station": "PROCESS",
+        "target_color": 6,
+        "target_slot": 3,
+        "pick_index": 2,
+        "layer": 1,
+        "requires_carrier_unload": true,
+        "preconditions": [
+          "MATCHING_CARGO",
+          "TARGET_VALID"
+        ],
+        "poses": [
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            -0.15,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            -0.15,
+            -0.884,
+            -1.5707963267948966
+          ],
+          [
+            -0.15,
+            -0.89,
+            -1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PICK",
+        "batch": 1,
+        "phase": "BUFFER",
+        "source_station": "PROCESS",
+        "dest_station": "CARRIER",
+        "target_color": 1,
+        "target_slot": 1,
+        "pick_index": 0,
+        "layer": 1,
+        "requires_carrier_unload": false,
+        "preconditions": [
+          "PHASE_BARRIER",
+          "CAPACITY_AVAILABLE"
+        ],
+        "poses": [
+          [
+            -0.15,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            0.15,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            0.15,
+            -0.884,
+            -1.5707963267948966
+          ],
+          [
+            0.15,
+            -0.89,
+            -1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PICK",
+        "batch": 1,
+        "phase": "BUFFER",
+        "source_station": "PROCESS",
+        "dest_station": "CARRIER",
+        "target_color": 5,
+        "target_slot": 2,
+        "pick_index": 1,
+        "layer": 1,
+        "requires_carrier_unload": false,
+        "preconditions": [
+          "PHASE_BARRIER",
+          "CAPACITY_AVAILABLE"
+        ],
+        "poses": [
+          [
+            0.15,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            -3.6739403974420597e-19,
+            -0.884,
+            -1.5707963267948966
+          ],
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PICK",
+        "batch": 1,
+        "phase": "BUFFER",
+        "source_station": "PROCESS",
+        "dest_station": "CARRIER",
+        "target_color": 6,
+        "target_slot": 3,
+        "pick_index": 2,
+        "layer": 1,
+        "requires_carrier_unload": false,
+        "preconditions": [
+          "PHASE_BARRIER",
+          "CAPACITY_AVAILABLE"
+        ],
+        "poses": [
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            -0.15,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            -0.15,
+            -0.884,
+            -1.5707963267948966
+          ],
+          [
+            -0.15,
+            -0.89,
+            -1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "MOVE",
+        "batch": 1,
+        "phase": "BUFFER",
+        "source_station": "PROCESS",
+        "dest_station": "BUFFER",
+        "target_color": null,
+        "target_slot": null,
+        "pick_index": null,
+        "layer": 1,
+        "requires_carrier_unload": false,
+        "preconditions": [
+          "GRIPPER_EMPTY",
+          "CARRIER_LOADED"
+        ],
+        "poses": [
+          [
+            -0.15,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            0.0,
+            0.0,
+            -1.5707963267948966
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            3.141592653589793
+          ],
+          [
+            -0.89,
+            0.0,
+            3.141592653589793
+          ]
+        ]
+      },
+      {
+        "action": "PLACE",
+        "batch": 1,
+        "phase": "BUFFER",
+        "source_station": "CARRIER",
+        "dest_station": "BUFFER",
+        "target_color": 1,
+        "target_slot": 1,
+        "pick_index": 0,
+        "layer": 1,
+        "requires_carrier_unload": true,
+        "preconditions": [
+          "MATCHING_CARGO",
+          "TARGET_VALID"
+        ],
+        "poses": [
+          [
+            -0.89,
+            0.0,
+            3.141592653589793
+          ],
+          [
+            -0.89,
+            -0.15,
+            3.141592653589793
+          ],
+          [
+            -0.884,
+            -0.15,
+            3.141592653589793
+          ],
+          [
+            -0.89,
+            -0.15,
+            3.141592653589793
+          ]
+        ]
+      },
+      {
+        "action": "PLACE",
+        "batch": 1,
+        "phase": "BUFFER",
+        "source_station": "CARRIER",
+        "dest_station": "BUFFER",
+        "target_color": 5,
+        "target_slot": 2,
+        "pick_index": 1,
+        "layer": 1,
+        "requires_carrier_unload": true,
+        "preconditions": [
+          "MATCHING_CARGO",
+          "TARGET_VALID"
+        ],
+        "poses": [
+          [
+            -0.89,
+            -0.15,
+            3.141592653589793
+          ],
+          [
+            -0.89,
+            0.0,
+            3.141592653589793
+          ],
+          [
+            -0.884,
+            -7.347880794884119e-19,
+            3.141592653589793
+          ],
+          [
+            -0.89,
+            0.0,
+            3.141592653589793
+          ]
+        ]
+      },
+      {
+        "action": "PLACE",
+        "batch": 1,
+        "phase": "BUFFER",
+        "source_station": "CARRIER",
+        "dest_station": "BUFFER",
+        "target_color": 6,
+        "target_slot": 3,
+        "pick_index": 2,
+        "layer": 1,
+        "requires_carrier_unload": true,
+        "preconditions": [
+          "MATCHING_CARGO",
+          "TARGET_VALID"
+        ],
+        "poses": [
+          [
+            -0.89,
+            0.0,
+            3.141592653589793
+          ],
+          [
+            -0.89,
+            0.15,
+            3.141592653589793
+          ],
+          [
+            -0.884,
+            0.15,
+            3.141592653589793
+          ],
+          [
+            -0.89,
+            0.15,
+            3.141592653589793
+          ]
+        ]
+      },
+      {
+        "action": "MOVE",
+        "batch": 2,
+        "phase": "PROCESS",
+        "source_station": "BUFFER",
+        "dest_station": "RAW",
+        "target_color": null,
+        "target_slot": null,
+        "pick_index": null,
+        "layer": 1,
+        "requires_carrier_unload": true,
+        "preconditions": [
+          "GRIPPER_EMPTY",
+          "CARRIER_EMPTY"
+        ],
+        "poses": [
+          [
+            -0.89,
+            0.15,
+            3.141592653589793
+          ],
+          [
+            -0.89,
+            0.0,
+            3.141592653589793
+          ],
+          [
+            0.0,
+            0.0,
+            3.141592653589793
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.5707963267948966
+          ],
+          [
+            0.0,
+            0.86,
+            1.5707963267948966
+          ],
+          [
+            0.0,
+            0.965,
+            1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PICK",
+        "batch": 2,
+        "phase": "PROCESS",
+        "source_station": "RAW",
+        "dest_station": "CARRIER",
+        "target_color": 5,
+        "target_slot": null,
+        "pick_index": 0,
+        "layer": 1,
+        "requires_carrier_unload": false,
+        "preconditions": [
+          "PHASE_BARRIER",
+          "CAPACITY_AVAILABLE"
+        ],
+        "poses": [
+          [
+            0.0,
+            0.965,
+            1.5707963267948966
+          ],
+          [
+            -3.6739403974420597e-19,
+            0.959,
+            1.5707963267948966
+          ],
+          [
+            0.0,
+            0.965,
+            1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PICK",
+        "batch": 2,
+        "phase": "PROCESS",
+        "source_station": "RAW",
+        "dest_station": "CARRIER",
+        "target_color": 1,
+        "target_slot": null,
+        "pick_index": 1,
+        "layer": 1,
+        "requires_carrier_unload": false,
+        "preconditions": [
+          "PHASE_BARRIER",
+          "CAPACITY_AVAILABLE"
+        ],
+        "poses": [
+          [
+            0.0,
+            0.965,
+            1.5707963267948966
+          ],
+          [
+            -3.6739403974420597e-19,
+            0.959,
+            1.5707963267948966
+          ],
+          [
+            0.0,
+            0.965,
+            1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PICK",
+        "batch": 2,
+        "phase": "PROCESS",
+        "source_station": "RAW",
+        "dest_station": "CARRIER",
+        "target_color": 6,
+        "target_slot": null,
+        "pick_index": 2,
+        "layer": 1,
+        "requires_carrier_unload": false,
+        "preconditions": [
+          "PHASE_BARRIER",
+          "CAPACITY_AVAILABLE"
+        ],
+        "poses": [
+          [
+            0.0,
+            0.965,
+            1.5707963267948966
+          ],
+          [
+            -3.6739403974420597e-19,
+            0.959,
+            1.5707963267948966
+          ],
+          [
+            0.0,
+            0.965,
+            1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "MOVE",
+        "batch": 2,
+        "phase": "PROCESS",
+        "source_station": "RAW",
+        "dest_station": "PROCESS",
+        "target_color": null,
+        "target_slot": null,
+        "pick_index": null,
+        "layer": 1,
+        "requires_carrier_unload": false,
+        "preconditions": [
+          "GRIPPER_EMPTY",
+          "CARRIER_LOADED"
+        ],
+        "poses": [
+          [
+            0.0,
+            0.965,
+            1.5707963267948966
+          ],
+          [
+            0.0,
+            0.86,
+            1.5707963267948966
+          ],
+          [
+            0.0,
+            0.0,
+            1.5707963267948966
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.5707963267948966
+          ],
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PLACE",
+        "batch": 2,
+        "phase": "PROCESS",
+        "source_station": "CARRIER",
+        "dest_station": "PROCESS",
+        "target_color": 5,
+        "target_slot": 2,
+        "pick_index": 0,
+        "layer": 1,
+        "requires_carrier_unload": true,
+        "preconditions": [
+          "MATCHING_CARGO",
+          "TARGET_VALID"
+        ],
+        "poses": [
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            -3.6739403974420597e-19,
+            -0.884,
+            -1.5707963267948966
+          ],
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PLACE",
+        "batch": 2,
+        "phase": "PROCESS",
+        "source_station": "CARRIER",
+        "dest_station": "PROCESS",
+        "target_color": 1,
+        "target_slot": 3,
+        "pick_index": 1,
+        "layer": 1,
+        "requires_carrier_unload": true,
+        "preconditions": [
+          "MATCHING_CARGO",
+          "TARGET_VALID"
+        ],
+        "poses": [
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            -0.15,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            -0.15,
+            -0.884,
+            -1.5707963267948966
+          ],
+          [
+            -0.15,
+            -0.89,
+            -1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PLACE",
+        "batch": 2,
+        "phase": "PROCESS",
+        "source_station": "CARRIER",
+        "dest_station": "PROCESS",
+        "target_color": 6,
+        "target_slot": 1,
+        "pick_index": 2,
+        "layer": 1,
+        "requires_carrier_unload": true,
+        "preconditions": [
+          "MATCHING_CARGO",
+          "TARGET_VALID"
+        ],
+        "poses": [
+          [
+            -0.15,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            0.15,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            0.15,
+            -0.884,
+            -1.5707963267948966
+          ],
+          [
+            0.15,
+            -0.89,
+            -1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PICK",
+        "batch": 2,
+        "phase": "BUFFER",
+        "source_station": "PROCESS",
+        "dest_station": "CARRIER",
+        "target_color": 5,
+        "target_slot": 2,
+        "pick_index": 0,
+        "layer": 1,
+        "requires_carrier_unload": false,
+        "preconditions": [
+          "PHASE_BARRIER",
+          "CAPACITY_AVAILABLE"
+        ],
+        "poses": [
+          [
+            0.15,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            -3.6739403974420597e-19,
+            -0.884,
+            -1.5707963267948966
+          ],
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PICK",
+        "batch": 2,
+        "phase": "BUFFER",
+        "source_station": "PROCESS",
+        "dest_station": "CARRIER",
+        "target_color": 1,
+        "target_slot": 3,
+        "pick_index": 1,
+        "layer": 1,
+        "requires_carrier_unload": false,
+        "preconditions": [
+          "PHASE_BARRIER",
+          "CAPACITY_AVAILABLE"
+        ],
+        "poses": [
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            -0.15,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            -0.15,
+            -0.884,
+            -1.5707963267948966
+          ],
+          [
+            -0.15,
+            -0.89,
+            -1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "PICK",
+        "batch": 2,
+        "phase": "BUFFER",
+        "source_station": "PROCESS",
+        "dest_station": "CARRIER",
+        "target_color": 6,
+        "target_slot": 1,
+        "pick_index": 2,
+        "layer": 1,
+        "requires_carrier_unload": false,
+        "preconditions": [
+          "PHASE_BARRIER",
+          "CAPACITY_AVAILABLE"
+        ],
+        "poses": [
+          [
+            -0.15,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            0.15,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            0.15,
+            -0.884,
+            -1.5707963267948966
+          ],
+          [
+            0.15,
+            -0.89,
+            -1.5707963267948966
+          ]
+        ]
+      },
+      {
+        "action": "MOVE",
+        "batch": 2,
+        "phase": "BUFFER",
+        "source_station": "PROCESS",
+        "dest_station": "BUFFER",
+        "target_color": null,
+        "target_slot": null,
+        "pick_index": null,
+        "layer": 1,
+        "requires_carrier_unload": false,
+        "preconditions": [
+          "GRIPPER_EMPTY",
+          "CARRIER_LOADED"
+        ],
+        "poses": [
+          [
+            0.15,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            0.0,
+            -0.89,
+            -1.5707963267948966
+          ],
+          [
+            0.0,
+            0.0,
+            -1.5707963267948966
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            3.141592653589793
+          ],
+          [
+            -0.89,
+            0.0,
+            3.141592653589793
+          ]
+        ]
+      },
+      {
+        "action": "PLACE",
+        "batch": 2,
+        "phase": "BUFFER",
+        "source_station": "CARRIER",
+        "dest_station": "BUFFER",
+        "target_color": 5,
+        "target_slot": 2,
+        "pick_index": 0,
+        "layer": 2,
+        "requires_carrier_unload": true,
+        "preconditions": [
+          "MATCHING_CARGO",
+          "TARGET_VALID"
+        ],
+        "poses": [
+          [
+            -0.89,
+            0.0,
+            3.141592653589793
+          ],
+          [
+            -0.884,
+            -7.347880794884119e-19,
+            3.141592653589793
+          ],
+          [
+            -0.89,
+            0.0,
+            3.141592653589793
+          ]
+        ]
+      },
+      {
+        "action": "PLACE",
+        "batch": 2,
+        "phase": "BUFFER",
+        "source_station": "CARRIER",
+        "dest_station": "BUFFER",
+        "target_color": 1,
+        "target_slot": 1,
+        "pick_index": 1,
+        "layer": 2,
+        "requires_carrier_unload": true,
+        "preconditions": [
+          "MATCHING_CARGO",
+          "TARGET_VALID"
+        ],
+        "poses": [
+          [
+            -0.89,
+            0.0,
+            3.141592653589793
+          ],
+          [
+            -0.89,
+            -0.15,
+            3.141592653589793
+          ],
+          [
+            -0.884,
+            -0.15,
+            3.141592653589793
+          ],
+          [
+            -0.89,
+            -0.15,
+            3.141592653589793
+          ]
+        ]
+      },
+      {
+        "action": "PLACE",
+        "batch": 2,
+        "phase": "BUFFER",
+        "source_station": "CARRIER",
+        "dest_station": "BUFFER",
+        "target_color": 6,
+        "target_slot": 3,
+        "pick_index": 2,
+        "layer": 2,
+        "requires_carrier_unload": true,
+        "preconditions": [
+          "MATCHING_CARGO",
+          "TARGET_VALID"
+        ],
+        "poses": [
+          [
+            -0.89,
+            -0.15,
+            3.141592653589793
+          ],
+          [
+            -0.89,
+            0.15,
+            3.141592653589793
+          ],
+          [
+            -0.884,
+            0.15,
+            3.141592653589793
+          ],
+          [
+            -0.89,
+            0.15,
+            3.141592653589793
+          ]
+        ]
+      },
+      {
+        "action": "RETURN",
+        "batch": 2,
+        "phase": "RETURN",
+        "source_station": "BUFFER",
+        "dest_station": "ORIGINAL_START",
+        "target_color": null,
+        "target_slot": null,
+        "pick_index": null,
+        "layer": 1,
+        "requires_carrier_unload": true,
+        "preconditions": [
+          "ALL_BUFFER_COMPLETE",
+          "CARRIER_EMPTY",
+          "GRIPPER_EMPTY"
+        ],
+        "poses": [
+          [
+            -0.89,
+            0.15,
+            3.141592653589793
+          ],
+          [
+            -0.89,
+            0.0,
+            3.141592653589793
+          ],
+          [
+            0.0,
+            0.0,
+            3.141592653589793
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.86,
+            0.0
+          ],
+          [
+            0.9,
+            0.86,
+            0.0
+          ],
+          [
+            1.05,
+            0.86,
+            0.0
+          ],
+          [
+            1.05,
+            1.05,
+            0.0
+          ]
+        ]
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "index": 0,
+      "action": "QR",
+      "start": 1,
+      "arrival": 86,
+      "end": 96,
+      "observation_frame": null,
+      "batch": 0,
+      "color": null,
+      "slot": null,
+      "layer": 0
+    },
+    {
+      "index": 1,
+      "action": "MOVE",
+      "start": 96,
+      "arrival": 313,
+      "end": 313,
+      "observation_frame": null,
+      "batch": 1,
+      "color": null,
+      "slot": null,
+      "layer": 1
+    },
+    {
+      "index": 2,
+      "action": "PICK",
+      "start": 313,
+      "arrival": 315,
+      "end": 346,
+      "observation_frame": 316,
+      "batch": 1,
+      "color": 1,
+      "slot": null,
+      "layer": 1
+    },
+    {
+      "index": 3,
+      "action": "PICK",
+      "start": 346,
+      "arrival": 354,
+      "end": 440,
+      "observation_frame": 410,
+      "batch": 1,
+      "color": 5,
+      "slot": null,
+      "layer": 1
+    },
+    {
+      "index": 4,
+      "action": "PICK",
+      "start": 440,
+      "arrival": 448,
+      "end": 534,
+      "observation_frame": 504,
+      "batch": 1,
+      "color": 6,
+      "slot": null,
+      "layer": 1
+    },
+    {
+      "index": 5,
+      "action": "MOVE",
+      "start": 534,
+      "arrival": 669,
+      "end": 669,
+      "observation_frame": null,
+      "batch": 1,
+      "color": null,
+      "slot": null,
+      "layer": 1
+    },
+    {
+      "index": 6,
+      "action": "PLACE",
+      "start": 669,
+      "arrival": 679,
+      "end": 709,
+      "observation_frame": 679,
+      "batch": 1,
+      "color": 1,
+      "slot": 1,
+      "layer": 1
+    },
+    {
+      "index": 7,
+      "action": "PLACE",
+      "start": 709,
+      "arrival": 725,
+      "end": 755,
+      "observation_frame": 725,
+      "batch": 1,
+      "color": 5,
+      "slot": 2,
+      "layer": 1
+    },
+    {
+      "index": 8,
+      "action": "PLACE",
+      "start": 755,
+      "arrival": 771,
+      "end": 801,
+      "observation_frame": 771,
+      "batch": 1,
+      "color": 6,
+      "slot": 3,
+      "layer": 1
+    },
+    {
+      "index": 9,
+      "action": "PICK",
+      "start": 801,
+      "arrival": 824,
+      "end": 854,
+      "observation_frame": 824,
+      "batch": 1,
+      "color": 1,
+      "slot": 1,
+      "layer": 1
+    },
+    {
+      "index": 10,
+      "action": "PICK",
+      "start": 854,
+      "arrival": 870,
+      "end": 900,
+      "observation_frame": 870,
+      "batch": 1,
+      "color": 5,
+      "slot": 2,
+      "layer": 1
+    },
+    {
+      "index": 11,
+      "action": "PICK",
+      "start": 900,
+      "arrival": 916,
+      "end": 946,
+      "observation_frame": 916,
+      "batch": 1,
+      "color": 6,
+      "slot": 3,
+      "layer": 1
+    },
+    {
+      "index": 12,
+      "action": "MOVE",
+      "start": 946,
+      "arrival": 1106,
+      "end": 1106,
+      "observation_frame": null,
+      "batch": 1,
+      "color": null,
+      "slot": null,
+      "layer": 1
+    },
+    {
+      "index": 13,
+      "action": "PLACE",
+      "start": 1106,
+      "arrival": 1116,
+      "end": 1146,
+      "observation_frame": 1116,
+      "batch": 1,
+      "color": 1,
+      "slot": 1,
+      "layer": 1
+    },
+    {
+      "index": 14,
+      "action": "PLACE",
+      "start": 1146,
+      "arrival": 1162,
+      "end": 1192,
+      "observation_frame": 1162,
+      "batch": 1,
+      "color": 5,
+      "slot": 2,
+      "layer": 1
+    },
+    {
+      "index": 15,
+      "action": "PLACE",
+      "start": 1192,
+      "arrival": 1208,
+      "end": 1238,
+      "observation_frame": 1208,
+      "batch": 1,
+      "color": 6,
+      "slot": 3,
+      "layer": 1
+    },
+    {
+      "index": 16,
+      "action": "MOVE",
+      "start": 1238,
+      "arrival": 1401,
+      "end": 1401,
+      "observation_frame": null,
+      "batch": 2,
+      "color": null,
+      "slot": null,
+      "layer": 1
+    },
+    {
+      "index": 17,
+      "action": "PICK",
+      "start": 1401,
+      "arrival": 1403,
+      "end": 1435,
+      "observation_frame": 1405,
+      "batch": 2,
+      "color": 5,
+      "slot": null,
+      "layer": 1
+    },
+    {
+      "index": 18,
+      "action": "PICK",
+      "start": 1435,
+      "arrival": 1443,
+      "end": 1529,
+      "observation_frame": 1499,
+      "batch": 2,
+      "color": 1,
+      "slot": null,
+      "layer": 1
+    },
+    {
+      "index": 19,
+      "action": "PICK",
+      "start": 1529,
+      "arrival": 1537,
+      "end": 1623,
+      "observation_frame": 1593,
+      "batch": 2,
+      "color": 6,
+      "slot": null,
+      "layer": 1
+    },
+    {
+      "index": 20,
+      "action": "MOVE",
+      "start": 1623,
+      "arrival": 1758,
+      "end": 1758,
+      "observation_frame": null,
+      "batch": 2,
+      "color": null,
+      "slot": null,
+      "layer": 1
+    },
+    {
+      "index": 21,
+      "action": "PLACE",
+      "start": 1758,
+      "arrival": 1760,
+      "end": 1790,
+      "observation_frame": 1760,
+      "batch": 2,
+      "color": 5,
+      "slot": 2,
+      "layer": 1
+    },
+    {
+      "index": 22,
+      "action": "PLACE",
+      "start": 1790,
+      "arrival": 1806,
+      "end": 1836,
+      "observation_frame": 1806,
+      "batch": 2,
+      "color": 1,
+      "slot": 3,
+      "layer": 1
+    },
+    {
+      "index": 23,
+      "action": "PLACE",
+      "start": 1836,
+      "arrival": 1859,
+      "end": 1889,
+      "observation_frame": 1859,
+      "batch": 2,
+      "color": 6,
+      "slot": 1,
+      "layer": 1
+    },
+    {
+      "index": 24,
+      "action": "PICK",
+      "start": 1889,
+      "arrival": 1905,
+      "end": 1935,
+      "observation_frame": 1905,
+      "batch": 2,
+      "color": 5,
+      "slot": 2,
+      "layer": 1
+    },
+    {
+      "index": 25,
+      "action": "PICK",
+      "start": 1935,
+      "arrival": 1951,
+      "end": 1981,
+      "observation_frame": 1951,
+      "batch": 2,
+      "color": 1,
+      "slot": 3,
+      "layer": 1
+    },
+    {
+      "index": 26,
+      "action": "PICK",
+      "start": 1981,
+      "arrival": 2004,
+      "end": 2034,
+      "observation_frame": 2004,
+      "batch": 2,
+      "color": 6,
+      "slot": 1,
+      "layer": 1
+    },
+    {
+      "index": 27,
+      "action": "MOVE",
+      "start": 2034,
+      "arrival": 2194,
+      "end": 2194,
+      "observation_frame": null,
+      "batch": 2,
+      "color": null,
+      "slot": null,
+      "layer": 1
+    },
+    {
+      "index": 28,
+      "action": "PLACE",
+      "start": 2194,
+      "arrival": 2196,
+      "end": 2226,
+      "observation_frame": 2196,
+      "batch": 2,
+      "color": 5,
+      "slot": 2,
+      "layer": 2
+    },
+    {
+      "index": 29,
+      "action": "PLACE",
+      "start": 2226,
+      "arrival": 2242,
+      "end": 2272,
+      "observation_frame": 2242,
+      "batch": 2,
+      "color": 1,
+      "slot": 1,
+      "layer": 2
+    },
+    {
+      "index": 30,
+      "action": "PLACE",
+      "start": 2272,
+      "arrival": 2295,
+      "end": 2325,
+      "observation_frame": 2295,
+      "batch": 2,
+      "color": 6,
+      "slot": 3,
+      "layer": 2
+    },
+    {
+      "index": 31,
+      "action": "RETURN",
+      "start": 2325,
+      "arrival": 2524,
+      "end": 2530,
+      "observation_frame": null,
+      "batch": 2,
+      "color": null,
+      "slot": null,
+      "layer": 1
+    }
+  ],
+  "cad": {
+    "mesh_count": 1,
+    "vertices": 9761,
+    "polygons": 19518,
+    "size_m": [
+      0.04999968968331814,
+      0.049999844282865524,
+      0.0599999997516768
+    ],
+    "top_face_count": 627,
+    "top_area_m2": 0.0007068465536495816,
+    "glb_up_axis_correction_deg": -90.0,
+    "original_topology_preserved": true,
+    "units": "m"
+  },
+  "frame_end": 2530
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "car-blender-1118",
+  "title": "Photo-based Blender vehicle, field and competition round",
+  "paths": [
+    "research/car_sim"
+  ],
+  "lane": "parallel",
+  "resources": [],
+  "depends": [],
+  "acceptance": [
+    "Reloadable Blender vehicle and field, measured dimensions, pivot and camera checks, bounded round with verification and explicit simulation scope"
+  ],
+  "branch": "ops/car-blender-1118",
+  "state": "ready",
+  "claimed": true,
+  "agent": "codex",
+  "session": "car-sim-1118-first",
+  "revision": 3,
+  "handoff": ".ops/handoffs/car-blender-1118/20261118T140255-4c758080.json",
+  "updated_at": "2026-11-18T14:03:25+00:00"
+}

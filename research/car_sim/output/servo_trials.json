@@ -1,0 +1,836 @@
+{
+  "scope": "Rendered image-to-motion loop on six individual dock approaches. Nominal gripper XY and stationary block are simulation assumptions. No clamp or lift command.",
+  "unit": "pixel errors in 640x360, vector commands in world mm",
+  "trials": [
+    {
+      "index": 2,
+      "feature": "pick_top",
+      "color": 1,
+      "outcome": "PIXEL_ALIGNED",
+      "initial_offset_mm": [
+        8.999999612569809,
+        16.00000075995922
+      ],
+      "trace": [
+        {
+          "image": "02-00.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6664400100708
+          ],
+          "estimated_px": [
+            182.8998565673828,
+            253.54238891601562
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            8.999999612569809,
+            16.00000075995922
+          ],
+          "error_px": 24.03198173375805,
+          "command_world_mm": [
+            -3.963078372180462,
+            -6.949389353394508
+          ]
+        },
+        {
+          "image": "02-01.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6666009426117
+          ],
+          "estimated_px": [
+            187.9287872314453,
+            244.23422241210938
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            5.036921240389347,
+            9.050611406564713
+          ],
+          "error_px": 13.45701604585169,
+          "command_world_mm": [
+            -4.087769892066717,
+            -6.876782048493624
+          ]
+        },
+        {
+          "image": "02-02.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6664400100708
+          ],
+          "estimated_px": [
+            193.70420837402344,
+            235.93124389648438
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            0.9491513483226299,
+            2.173829358071089
+          ],
+          "error_px": 3.4453656590042536,
+          "command_world_mm": [
+            -0.7374871638603508,
+            -2.187418518587947
+          ]
+        },
+        {
+          "image": "02-03.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6666009426117
+          ],
+          "estimated_px": [
+            194.00379943847656,
+            232.8211212158203
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            0.21166418446227908,
+            -0.013589160516858101
+          ],
+          "error_px": 0.8159016070089976
+        },
+        {
+          "image": "02-04.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6666009426117
+          ],
+          "estimated_px": [
+            194.12823486328125,
+            232.82069396972656
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            0.21166418446227908,
+            -0.013589160516858101
+          ],
+          "error_px": 0.6940233081634107
+        },
+        {
+          "image": "02-05.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6666009426117
+          ],
+          "estimated_px": [
+            194.1038818359375,
+            233.0444793701172
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            0.21166418446227908,
+            -0.013589160516858101
+          ],
+          "error_px": 0.7964096202498461
+        }
+      ],
+      "independent_final_xy_error_mm": 0.2120906217309827
+    },
+    {
+      "index": 3,
+      "feature": "pick_top",
+      "color": 5,
+      "outcome": "PIXEL_ALIGNED",
+      "initial_offset_mm": [
+        -12.999999336898327,
+        -9.000000543892384
+      ],
+      "trace": [
+        {
+          "image": "03-00.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6664400100708
+          ],
+          "estimated_px": [
+            210.4796905517578,
+            222.25100708007812
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            -12.999999336898327,
+            -9.000000543892384
+          ],
+          "error_px": 18.819649052317846,
+          "command_world_mm": [
+            6.663144566118717,
+            4.427471663802862
+          ]
+        },
+        {
+          "image": "03-01.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6666009426117
+          ],
+          "estimated_px": [
+            202.3744354248047,
+            226.31881713867188
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            -6.33685477077961,
+            -4.572528880089521
+          ],
+          "error_px": 9.878850591518988,
+          "command_world_mm": [
+            5.071565043181181,
+            4.253014922142029
+          ]
+        },
+        {
+          "image": "03-02.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6664400100708
+          ],
+          "estimated_px": [
+            196.5587158203125,
+            232.34912109375
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            -1.2652897275984287,
+            -0.3195139579474926
+          ],
+          "error_px": 1.7822561160731887
+        },
+        {
+          "image": "03-03.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6664400100708
+          ],
+          "estimated_px": [
+            196.74264526367188,
+            232.68150329589844
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            -1.2652897275984287,
+            -0.3195139579474926
+          ],
+          "error_px": 1.9377683566294
+        },
+        {
+          "image": "03-04.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6664400100708
+          ],
+          "estimated_px": [
+            196.71583557128906,
+            232.44381713867188
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            -1.2652897275984287,
+            -0.3195139579474926
+          ],
+          "error_px": 1.9238243672622042
+        }
+      ],
+      "independent_final_xy_error_mm": 1.3050095785922213
+    },
+    {
+      "index": 4,
+      "feature": "pick_top",
+      "color": 6,
+      "outcome": "PIXEL_ALIGNED",
+      "initial_offset_mm": [
+        13.9999995008111,
+        11.00000087171793
+      ],
+      "trace": [
+        {
+          "image": "04-00.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6664400100708
+          ],
+          "estimated_px": [
+            176.90859985351562,
+            247.46295166015625
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            13.9999995008111,
+            11.00000087171793
+          ],
+          "error_px": 23.221016019623395,
+          "command_world_mm": [
+            -6.165565457195044,
+            -5.097627639770508
+          ]
+        },
+        {
+          "image": "04-01.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6664400100708
+          ],
+          "estimated_px": [
+            184.4384002685547,
+            240.08079528808594
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            7.834434509277344,
+            5.902373231947422
+          ],
+          "error_px": 12.74510556908499,
+          "command_world_mm": [
+            -6.5069906413555145,
+            -4.653931129723787
+          ]
+        },
+        {
+          "image": "04-02.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6664400100708
+          ],
+          "estimated_px": [
+            193.4272003173828,
+            234.7422332763672
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            1.3274438679218292,
+            1.2484421022236347
+          ],
+          "error_px": 2.4913995654479963
+        },
+        {
+          "image": "04-03.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6664400100708
+          ],
+          "estimated_px": [
+            193.3917694091797,
+            234.78810119628906
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            1.3274438679218292,
+            1.2484421022236347
+          ],
+          "error_px": 2.5492125182250556,
+          "command_world_mm": [
+            -0.9468212374486029,
+            -1.4215130358934402
+          ]
+        },
+        {
+          "image": "04-04.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6666009426117
+          ],
+          "estimated_px": [
+            193.95559692382812,
+            232.55015563964844
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            0.3806226304732263,
+            -0.17307093366980553
+          ],
+          "error_px": 0.857283762626371
+        },
+        {
+          "image": "04-05.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6666009426117
+          ],
+          "estimated_px": [
+            193.89390563964844,
+            232.58352661132812
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            0.3806226304732263,
+            -0.17307093366980553
+          ],
+          "error_px": 0.9148096356974501
+        },
+        {
+          "image": "04-06.png",
+          "reference_px": [
+            194.80493545532227,
+            232.6666009426117
+          ],
+          "estimated_px": [
+            193.8759765625,
+            232.62281799316406
+          ],
+          "station": "RAW",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            0.3806226304732263,
+            -0.17307093366980553
+          ],
+          "error_px": 0.9299900919987822
+        }
+      ],
+      "independent_final_xy_error_mm": 0.41812346578706283
+    },
+    {
+      "index": 28,
+      "feature": "support_top",
+      "color": 5,
+      "outcome": "HOLD_NO_TARGET",
+      "initial_offset_mm": [
+        -15.999998897314072,
+        9.000000543892384
+      ],
+      "trace": [
+        {
+          "image": "28-00.png",
+          "reference_px": [
+            224.393310546875,
+            200.60024499893188
+          ],
+          "estimated_px": [
+            225.88890075683594,
+            212.4310760498047
+          ],
+          "station": "BUFFER",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            -15.999998897314072,
+            9.000000543892384
+          ],
+          "error_px": 11.924988613429662,
+          "command_world_mm": [
+            7.926656864583492,
+            1.0020439513027668
+          ]
+        },
+        {
+          "image": "28-01.png",
+          "reference_px": [
+            224.393310546875,
+            200.60024499893188
+          ],
+          "estimated_px": null,
+          "station": "BUFFER",
+          "status": "HOLD",
+          "reason": "INSUFFICIENT_TOP_CONFIDENCE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            -8.07334203273058,
+            10.002044960856438
+          ]
+        },
+        {
+          "image": "28-02.png",
+          "reference_px": [
+            224.393310546875,
+            200.60024499893188
+          ],
+          "estimated_px": [
+            215.63414001464844,
+            209.19073486328125
+          ],
+          "station": "BUFFER",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0.9,
+          "body_offset_world_mm": [
+            -8.07334203273058,
+            10.002044960856438
+          ],
+          "error_px": 12.268642325950958,
+          "command_world_mm": [
+            5.601589567959309,
+            -5.711583886295557
+          ]
+        },
+        {
+          "image": "28-03.png",
+          "reference_px": [
+            224.393310546875,
+            200.60024499893188
+          ],
+          "estimated_px": null,
+          "station": "BUFFER",
+          "status": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_delta": 0.9,
+          "body_offset_world_mm": [
+            -2.4717524647712708,
+            4.290461074560881
+          ]
+        },
+        {
+          "image": "28-04.png",
+          "reference_px": [
+            224.393310546875,
+            200.60024499893188
+          ],
+          "estimated_px": null,
+          "station": "BUFFER",
+          "status": "HOLD",
+          "reason": "INSUFFICIENT_TOP_CONFIDENCE",
+          "exposure_delta": -0.65,
+          "body_offset_world_mm": [
+            -2.4717524647712708,
+            4.290461074560881
+          ]
+        }
+      ],
+      "independent_final_xy_error_mm": 4.951498050666531
+    },
+    {
+      "index": 29,
+      "feature": "support_top",
+      "color": 1,
+      "outcome": "PIXEL_ALIGNED",
+      "initial_offset_mm": [
+        8.999999612569809,
+        -13.000000268220901
+      ],
+      "trace": [
+        {
+          "image": "29-00.png",
+          "reference_px": [
+            224.393310546875,
+            200.60025572776794
+          ],
+          "estimated_px": [
+            238.11570739746094,
+            192.93121337890625
+          ],
+          "station": "BUFFER",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            8.999999612569809,
+            -13.000000268220901
+          ],
+          "error_px": 15.719999550687174,
+          "command_world_mm": [
+            -3.9028192404657602,
+            6.98340917006135
+          ]
+        },
+        {
+          "image": "29-01.png",
+          "reference_px": [
+            224.393310546875,
+            200.60025572776794
+          ],
+          "estimated_px": [
+            231.1566162109375,
+            195.489990234375
+          ],
+          "station": "BUFFER",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            5.097180604934692,
+            -6.016591098159552
+          ],
+          "error_px": 8.476857726687557,
+          "command_world_mm": [
+            -3.4238772932440042,
+            4.531415179371834
+          ]
+        },
+        {
+          "image": "29-02.png",
+          "reference_px": [
+            224.393310546875,
+            200.60024499893188
+          ],
+          "estimated_px": [
+            225.79603576660156,
+            201.60800170898438
+          ],
+          "station": "BUFFER",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            1.6733033116906881,
+            -1.4851759187877178
+          ],
+          "error_px": 1.727197622946706
+        },
+        {
+          "image": "29-03.png",
+          "reference_px": [
+            224.393310546875,
+            200.60024499893188
+          ],
+          "estimated_px": [
+            225.75286865234375,
+            201.6554412841797
+          ],
+          "station": "BUFFER",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            1.6733033116906881,
+            -1.4851759187877178
+          ],
+          "error_px": 1.7209989664571386
+        },
+        {
+          "image": "29-04.png",
+          "reference_px": [
+            224.393310546875,
+            200.60024499893188
+          ],
+          "estimated_px": [
+            225.78468322753906,
+            201.6240692138672
+          ],
+          "station": "BUFFER",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            1.6733033116906881,
+            -1.4851759187877178
+          ],
+          "error_px": 1.727464604438015
+        }
+      ],
+      "independent_final_xy_error_mm": 2.2373636687969327
+    },
+    {
+      "index": 30,
+      "feature": "support_top",
+      "color": 6,
+      "outcome": "PIXEL_ALIGNED",
+      "initial_offset_mm": [
+        -10.999999940395355,
+        14.000000432133675
+      ],
+      "trace": [
+        {
+          "image": "30-00.png",
+          "reference_px": [
+            224.39332962036133,
+            200.60023427009583
+          ],
+          "estimated_px": [
+            212.99891662597656,
+            211.3486328125
+          ],
+          "station": "BUFFER",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            -10.999999940395355,
+            14.000000432133675
+          ],
+          "error_px": 15.66399434093873,
+          "command_world_mm": [
+            5.489479750394821,
+            -5.81941707059741
+          ]
+        },
+        {
+          "image": "30-01.png",
+          "reference_px": [
+            224.39332962036133,
+            200.60023427009583
+          ],
+          "estimated_px": [
+            216.1240997314453,
+            207.06492614746094
+          ],
+          "station": "BUFFER",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            -5.510520190000534,
+            8.180582895874977
+          ],
+          "error_px": 10.496304303182736,
+          "command_world_mm": [
+            4.331342410296202,
+            -5.540384445339441
+          ]
+        },
+        {
+          "image": "30-02.png",
+          "reference_px": [
+            224.393310546875,
+            200.60023427009583
+          ],
+          "estimated_px": [
+            221.41363525390625,
+            201.73216247558594
+          ],
+          "station": "BUFFER",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            -1.1791777797043324,
+            2.640198450535536
+          ],
+          "error_px": 3.1874325583316225,
+          "command_world_mm": [
+            0.758391513954848,
+            -1.9963823724538088
+          ]
+        },
+        {
+          "image": "30-03.png",
+          "reference_px": [
+            224.393310546875,
+            200.60023427009583
+          ],
+          "estimated_px": [
+            222.16461181640625,
+            202.29290771484375
+          ],
+          "station": "BUFFER",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            -0.4207862657494843,
+            0.643816078081727
+          ],
+          "error_px": 2.7986141966601656,
+          "command_world_mm": [
+            1.1340908240526915,
+            -1.493228366598487
+          ]
+        },
+        {
+          "image": "30-04.png",
+          "reference_px": [
+            224.39329147338867,
+            200.60023427009583
+          ],
+          "estimated_px": [
+            224.6267547607422,
+            201.51718139648438
+          ],
+          "station": "BUFFER",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            0.7133045583032072,
+            -0.8494122885167599
+          ],
+          "error_px": 0.9462014263010436
+        },
+        {
+          "image": "30-05.png",
+          "reference_px": [
+            224.39329147338867,
+            200.60023427009583
+          ],
+          "estimated_px": [
+            224.5933074951172,
+            201.73805236816406
+          ],
+          "station": "BUFFER",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            0.7133045583032072,
+            -0.8494122885167599
+          ],
+          "error_px": 1.1552646593918308
+        },
+        {
+          "image": "30-06.png",
+          "reference_px": [
+            224.39329147338867,
+            200.60023427009583
+          ],
+          "estimated_px": [
+            224.8008270263672,
+            201.69528198242188
+          ],
+          "station": "BUFFER",
+          "status": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_delta": 0,
+          "body_offset_world_mm": [
+            0.7133045583032072,
+            -0.8494122885167599
+          ],
+          "error_px": 1.1684240322810977
+        }
+      ],
+      "independent_final_xy_error_mm": 1.1092180968030918
+    }
+  ]
+}

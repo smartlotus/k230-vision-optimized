@@ -1,0 +1,220 @@
+{
+  "frames": {
+    "02.png": {
+      "station": "RAW",
+      "support_color_id": null,
+      "target_center_xy": [
+        194.8049545288086,
+        232.6666009426117
+      ],
+      "visible_target": true
+    },
+    "03.png": {
+      "station": "RAW",
+      "support_color_id": null,
+      "target_center_xy": [
+        194.8049545288086,
+        232.6666009426117
+      ],
+      "visible_target": true
+    },
+    "04.png": {
+      "station": "RAW",
+      "support_color_id": null,
+      "target_center_xy": [
+        194.8049545288086,
+        232.6666009426117
+      ],
+      "visible_target": true
+    },
+    "06.png": {
+      "station": "PROCESS",
+      "support_color_id": null,
+      "target_center_xy": [
+        238.84265899658203,
+        197.4868655204773
+      ],
+      "visible_target": true
+    },
+    "07.png": {
+      "station": "PROCESS",
+      "support_color_id": null,
+      "target_center_xy": [
+        238.84265899658203,
+        197.48685479164124
+      ],
+      "visible_target": true
+    },
+    "08.png": {
+      "station": "PROCESS",
+      "support_color_id": null,
+      "target_center_xy": [
+        238.84267807006836,
+        197.48684406280518
+      ],
+      "visible_target": true
+    },
+    "09.png": {
+      "station": "PROCESS",
+      "support_color_id": null,
+      "target_center_xy": [
+        224.39329147338867,
+        200.60025572776794
+      ],
+      "visible_target": true
+    },
+    "10.png": {
+      "station": "PROCESS",
+      "support_color_id": null,
+      "target_center_xy": [
+        224.39329147338867,
+        200.60024499893188
+      ],
+      "visible_target": true
+    },
+    "11.png": {
+      "station": "PROCESS",
+      "support_color_id": null,
+      "target_center_xy": [
+        224.393310546875,
+        200.60022354125977
+      ],
+      "visible_target": true
+    },
+    "13.png": {
+      "station": "BUFFER",
+      "support_color_id": null,
+      "target_center_xy": [
+        238.8426399230957,
+        197.48687624931335
+      ],
+      "visible_target": true
+    },
+    "14.png": {
+      "station": "BUFFER",
+      "support_color_id": null,
+      "target_center_xy": [
+        238.84265899658203,
+        197.48685479164124
+      ],
+      "visible_target": true
+    },
+    "15.png": {
+      "station": "BUFFER",
+      "support_color_id": null,
+      "target_center_xy": [
+        238.84265899658203,
+        197.48683333396912
+      ],
+      "visible_target": true
+    },
+    "17.png": {
+      "station": "RAW",
+      "support_color_id": null,
+      "target_center_xy": [
+        194.80493545532227,
+        232.6666009426117
+      ],
+      "visible_target": true
+    },
+    "18.png": {
+      "station": "RAW",
+      "support_color_id": null,
+      "target_center_xy": [
+        194.80493545532227,
+        232.6666009426117
+      ],
+      "visible_target": true
+    },
+    "19.png": {
+      "station": "RAW",
+      "support_color_id": null,
+      "target_center_xy": [
+        194.80493545532227,
+        232.6666009426117
+      ],
+      "visible_target": true
+    },
+    "21.png": {
+      "station": "PROCESS",
+      "support_color_id": null,
+      "target_center_xy": [
+        238.8426971435547,
+        197.48685479164124
+      ],
+      "visible_target": true
+    },
+    "22.png": {
+      "station": "PROCESS",
+      "support_color_id": null,
+      "target_center_xy": [
+        238.8426971435547,
+        197.4868655204773
+      ],
+      "visible_target": true
+    },
+    "23.png": {
+      "station": "PROCESS",
+      "support_color_id": null,
+      "target_center_xy": [
+        238.8426971435547,
+        197.48684406280518
+      ],
+      "visible_target": true
+    },
+    "24.png": {
+      "station": "PROCESS",
+      "support_color_id": null,
+      "target_center_xy": [
+        224.39332962036133,
+        200.60024499893188
+      ],
+      "visible_target": true
+    },
+    "25.png": {
+      "station": "PROCESS",
+      "support_color_id": null,
+      "target_center_xy": [
+        224.39332962036133,
+        200.60025572776794
+      ],
+      "visible_target": true
+    },
+    "26.png": {
+      "station": "PROCESS",
+      "support_color_id": null,
+      "target_center_xy": [
+        224.39332962036133,
+        200.60022354125977
+      ],
+      "visible_target": true
+    },
+    "28.png": {
+      "station": "BUFFER",
+      "support_color_id": 5,
+      "target_center_xy": [
+        224.393310546875,
+        200.60024499893188
+      ],
+      "visible_target": true
+    },
+    "29.png": {
+      "station": "BUFFER",
+      "support_color_id": 1,
+      "target_center_xy": [
+        224.393310546875,
+        200.60024499893188
+      ],
+      "visible_target": true
+    },
+    "30.png": {
+      "station": "BUFFER",
+      "support_color_id": 6,
+      "target_center_xy": [
+        224.393310546875,
+        200.60023427009583
+      ],
+      "visible_target": true
+    }
+  }
+}

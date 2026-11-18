@@ -1,0 +1,293 @@
+{
+  "status": "HOLD_GRASP_RECEIPT",
+  "qr": "156+123+516+231",
+  "picks": 4,
+  "placements": 3,
+  "last_step": 10,
+  "events": [
+    {
+      "step": 1,
+      "action": "MOVE",
+      "state": "PRESCRIBED_MOTION"
+    },
+    {
+      "step": 2,
+      "action": "PICK",
+      "station": "RAW",
+      "slot": null,
+      "color": 1,
+      "feature": "pick_top",
+      "attempts": [
+        {
+          "file": "02-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        -0.28443336486816406,
+        1179.842472076416
+      ],
+      "contact_offset_mm": 0.3251166916251765,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 3,
+      "action": "PICK",
+      "station": "RAW",
+      "slot": null,
+      "color": 5,
+      "feature": "pick_top",
+      "attempts": [
+        {
+          "file": "03-0-0.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        },
+        {
+          "file": "03-0-1.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": -0.65,
+          "lane_offset_m": 0
+        },
+        {
+          "file": "03-0-2.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": 0.9,
+          "lane_offset_m": 0
+        },
+        {
+          "file": "03-0-3.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": -0.35,
+          "lane_offset_m": 0.016
+        },
+        {
+          "file": "03-0-4.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": 0.2,
+          "lane_offset_m": -0.016
+        },
+        {
+          "file": "03-1-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        0.1289770007133484,
+        1179.7611713409424
+      ],
+      "contact_offset_mm": 0.2713837573033665,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 4,
+      "action": "PICK",
+      "station": "RAW",
+      "slot": null,
+      "color": 6,
+      "feature": "pick_top",
+      "attempts": [
+        {
+          "file": "04-0-0.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        },
+        {
+          "file": "04-0-1.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": -0.65,
+          "lane_offset_m": 0
+        },
+        {
+          "file": "04-0-2.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": 0.9,
+          "lane_offset_m": 0
+        },
+        {
+          "file": "04-0-3.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": -0.35,
+          "lane_offset_m": 0.016
+        },
+        {
+          "file": "04-0-4.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": 0.2,
+          "lane_offset_m": -0.016
+        },
+        {
+          "file": "04-1-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        0.6166622042655945,
+        1180.0694465637207
+      ],
+      "contact_offset_mm": 0.6205661829071821,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 5,
+      "action": "MOVE",
+      "state": "PRESCRIBED_MOTION"
+    },
+    {
+      "step": 6,
+      "action": "PLACE",
+      "station": "PROCESS",
+      "slot": 1,
+      "color": 1,
+      "feature": "empty_rings",
+      "attempts": [
+        {
+          "file": "06-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        150.51960945129395,
+        -1125.6303787231445
+      ],
+      "release_offset_mm": 0.81692418392131,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 7,
+      "action": "PLACE",
+      "station": "PROCESS",
+      "slot": 2,
+      "color": 5,
+      "feature": "empty_rings",
+      "attempts": [
+        {
+          "file": "07-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        0.4885941743850708,
+        -1125.5239248275757
+      ],
+      "release_offset_mm": 0.7163947879439372,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 8,
+      "action": "PLACE",
+      "station": "PROCESS",
+      "slot": 3,
+      "color": 6,
+      "feature": "empty_rings",
+      "attempts": [
+        {
+          "file": "08-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        -149.49271082878113,
+        -1125.6086826324463
+      ],
+      "release_offset_mm": 0.7923653814190592,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 9,
+      "action": "PICK",
+      "station": "PROCESS",
+      "slot": 1,
+      "color": 1,
+      "feature": "pick_top",
+      "attempts": [
+        {
+          "file": "09-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        151.49377286434174,
+        -1124.0956783294678
+      ],
+      "contact_offset_mm": 1.8177732679496956,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 10,
+      "action": "PICK",
+      "station": "PROCESS",
+      "slot": 2,
+      "color": 5,
+      "feature": "pick_top",
+      "attempts": [
+        {
+          "file": "10-0-0.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        },
+        {
+          "file": "10-0-1.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": -0.65,
+          "lane_offset_m": 0
+        },
+        {
+          "file": "10-0-2.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": 0.9,
+          "lane_offset_m": 0
+        },
+        {
+          "file": "10-0-3.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": -0.35,
+          "lane_offset_m": 0.016
+        }
+      ],
+      "estimated_world_xy_mm": [
+        -9.156033396720886,
+        -1125.7177591323853
+      ]
+    }
+  ],
+  "scope": "One fixed layout. QR and per-action RGB drive a mutable object world. Chassis follows recorded waypoints, fixture heights and pose known, contact receipts approximate. No hardware I/O."
+}

@@ -1,0 +1,4244 @@
+{
+  "scope": "Frozen float ONNX inference on supplied rendered camera images",
+  "frames_evaluated": 30,
+  "backend": "1.24.4",
+  "provider": "CPUExecutionProvider",
+  "topface_onnx_sha256": "833e5786d3a0385b75ee38638993c56adbcce30165e5f67a02f26ebebd7b0ad4",
+  "roadnet_onnx_sha256": "7e6b6d6b0d58b985d34c178299f256ae57fce958b50f07c6e69ee9872665cbb5",
+  "topface_geometry_sha256": "5a2773816cc2f52c1e8058b410ed842c9f0e958d5b830ce3d6c4931be1dfd1de",
+  "road_classes": [
+    "ROAD_GRAY",
+    "FORBIDDEN_YELLOW",
+    "LIGHT_BACKGROUND",
+    "BLUE_START_ZONE",
+    "BLACK_OBSTACLE",
+    "MATERIAL_OBJECT",
+    "SPECIAL_MARKING"
+  ],
+  "road_truth_frames": 30,
+  "road_confusion_gt_rows": [
+    [
+      585437,
+      1263,
+      210325,
+      451,
+      103,
+      60,
+      6317
+    ],
+    [
+      523,
+      159688,
+      165,
+      0,
+      0,
+      4,
+      8
+    ],
+    [
+      372,
+      3,
+      129261,
+      0,
+      0,
+      34,
+      6042
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      68,
+      0,
+      0,
+      0,
+      616,
+      0,
+      0
+    ],
+    [
+      82,
+      258,
+      192,
+      2050,
+      67,
+      15969,
+      4082
+    ],
+    [
+      33663,
+      14,
+      8086,
+      6,
+      1,
+      326,
+      53176
+    ]
+  ],
+  "gray_road_iou": 0.6980590558316561,
+  "topface_truth_frames": 30,
+  "topface_match_radius_640x360_px": 12,
+  "topface_matching_sum": {
+    "matched": 18,
+    "missed": 5,
+    "unmatched_predictions": 7
+  },
+  "frames": [
+    {
+      "file": "test-115/0-road.png",
+      "sha256": "621efa43067f33473b62223d2e0ec44787a41586bda6ac3099834fd77d89e41b",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        33360,
+        17353,
+        4446,
+        1673,
+        2,
+        2,
+        764
+      ],
+      "topface": {
+        "detections": [],
+        "count": 0,
+        "post_nms_total_before_five_limit": 0,
+        "observed_capacity_state": "EMPTY",
+        "capacity_state": "EMPTY",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          32874,
+          118,
+          3104,
+          12,
+          0,
+          0,
+          24
+        ],
+        [
+          57,
+          17235,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          56,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "test-115/1-raw.png",
+      "sha256": "3ab3640dbd250678c00a8432d51a04db2dd8f1dc7201f32983f016d793f22203",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        19015,
+        2847,
+        20277,
+        320,
+        155,
+        1635,
+        13351
+      ],
+      "topface": {
+        "detections": [
+          {
+            "score": 0.9920658469200134,
+            "color_id": 1,
+            "color_probabilities": [
+              0.9920658469200134,
+              0.015656128525733948,
+              0.005179123021662235,
+              0.0020704572089016438,
+              0.007404261268675327,
+              3.300993114407902e-07
+            ],
+            "bbox_xyxy_visible": [
+              153.28604125976562,
+              223.3628692626953,
+              191.66920471191406,
+              262.6988220214844
+            ],
+            "bbox_xyxy_unclipped": [
+              153.28604125976562,
+              223.3628692626953,
+              191.66920471191406,
+              262.6988220214844
+            ],
+            "center_xy_projected_3d": [
+              172.1199493408203,
+              242.90122985839844
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.9999946355819702,
+            "ellipse": {
+              "conic_center_xy": [
+                172.0602264404297,
+                242.92465209960938
+              ],
+              "semi_major": 19.519798940813985,
+              "semi_minor": 19.016968418580642,
+              "orientation_deg": -78.85761930372158,
+              "orientation_valid": true,
+              "geometry_confidence": 0.9999843835830688
+            },
+            "visibility_quality": 0.9986463189125061,
+            "boundary_candidate": false
+          },
+          {
+            "score": 0.969919741153717,
+            "color_id": 6,
+            "color_probabilities": [
+              1.7087906201140868e-07,
+              0.003944172523915768,
+              0.0033247722312808037,
+              0.0024004988372325897,
+              0.002009222051128745,
+              0.969919741153717
+            ],
+            "bbox_xyxy_visible": [
+              257.75628662109375,
+              53.548553466796875,
+              302.5126953125,
+              94.96530151367188
+            ],
+            "bbox_xyxy_unclipped": [
+              257.75628662109375,
+              53.548553466796875,
+              302.5126953125,
+              94.96530151367188
+            ],
+            "center_xy_projected_3d": [
+              280.3473815917969,
+              76.6624755859375
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.9999908208847046,
+            "ellipse": {
+              "conic_center_xy": [
+                280.4164733886719,
+                76.8357162475586
+              ],
+              "semi_major": 21.81437669609896,
+              "semi_minor": 21.48249297559328,
+              "orientation_deg": -28.901486618586315,
+              "orientation_valid": false,
+              "geometry_confidence": 0.9999805688858032
+            },
+            "visibility_quality": 0.9986836314201355,
+            "boundary_candidate": false
+          }
+        ],
+        "count": 2,
+        "post_nms_total_before_five_limit": 2,
+        "observed_capacity_state": "OK",
+        "capacity_state": "OK",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          2439,
+          13,
+          13134,
+          0,
+          1,
+          0,
+          233
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0,
+          0,
+          1420,
+          36
+        ],
+        [
+          6262,
+          0,
+          520,
+          0,
+          0,
+          67,
+          10339
+        ]
+      ],
+      "topface_matching": {
+        "matched": 2,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": [
+          0.19186632993772185,
+          5.052550271356579
+        ]
+      }
+    },
+    {
+      "file": "test-115/2-process.png",
+      "sha256": "54a29ebcc57ad1780a82f905613acfe2ec3c64b06fd87a40a60746fcb527d692",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        32347,
+        36,
+        22338,
+        482,
+        6,
+        724,
+        1667
+      ],
+      "topface": {
+        "detections": [
+          {
+            "score": 0.9349232316017151,
+            "color_id": 1,
+            "color_probabilities": [
+              0.9349232316017151,
+              0.004039941821247339,
+              0.007723720744252205,
+              0.001167036360129714,
+              0.004945474211126566,
+              4.062780135427602e-06
+            ],
+            "bbox_xyxy_visible": [
+              203.051513671875,
+              204.59423828125,
+              234.4014892578125,
+              239.05323791503906
+            ],
+            "bbox_xyxy_unclipped": [
+              203.051513671875,
+              204.59423828125,
+              234.4014892578125,
+              239.05323791503906
+            ],
+            "center_xy_projected_3d": [
+              221.61532592773438,
+              221.11590576171875
+            ],
+            "center_valid_probability": 0.9999998807907104,
+            "center_visible_probability": 0.9999685287475586,
+            "ellipse": {
+              "conic_center_xy": [
+                221.6049346923828,
+                221.1053924560547
+              ],
+              "semi_major": 18.065135057601584,
+              "semi_minor": 17.907160961913984,
+              "orientation_deg": -74.49271473254862,
+              "orientation_valid": false,
+              "geometry_confidence": 0.9999772310256958
+            },
+            "visibility_quality": 0.9980820417404175,
+            "boundary_candidate": false
+          }
+        ],
+        "count": 1,
+        "post_nms_total_before_five_limit": 1,
+        "observed_capacity_state": "OK",
+        "capacity_state": "OK",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          9195,
+          2,
+          8519,
+          1,
+          0,
+          4,
+          139
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          21,
+          3,
+          9347,
+          0,
+          0,
+          3,
+          502
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          18,
+          10,
+          0,
+          403,
+          13
+        ],
+        [
+          0,
+          1,
+          419,
+          4,
+          0,
+          13,
+          203
+        ]
+      ],
+      "topface_matching": {
+        "matched": 1,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": [
+          2.533268928339212
+        ]
+      }
+    },
+    {
+      "file": "test-115/3-buffer.png",
+      "sha256": "8e1c57e3f43cf07035cdd23b0d37e1c7417df7215c4101dfd06bf9e3194cddf1",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        35379,
+        92,
+        18752,
+        359,
+        41,
+        910,
+        2067
+      ],
+      "topface": {
+        "detections": [
+          {
+            "score": 0.8463907837867737,
+            "color_id": 1,
+            "color_probabilities": [
+              0.8463907837867737,
+              0.012256298214197159,
+              0.0014404308749362826,
+              0.0004853782884310931,
+              0.0005939226248301566,
+              2.766916395557928e-06
+            ],
+            "bbox_xyxy_visible": [
+              58.26226806640625,
+              193.42019653320312,
+              90.94520568847656,
+              229.8050079345703
+            ],
+            "bbox_xyxy_unclipped": [
+              58.26226806640625,
+              193.42019653320312,
+              90.94520568847656,
+              229.8050079345703
+            ],
+            "center_xy_projected_3d": [
+              77.41251373291016,
+              212.3129119873047
+            ],
+            "center_valid_probability": 0.9999996423721313,
+            "center_visible_probability": 0.9997637867927551,
+            "ellipse": {
+              "conic_center_xy": [
+                77.46989440917969,
+                212.2633056640625
+              ],
+              "semi_major": 18.389365883618602,
+              "semi_minor": 17.41547317319966,
+              "orientation_deg": -77.4906011716596,
+              "orientation_valid": true,
+              "geometry_confidence": 0.9999144077301025
+            },
+            "visibility_quality": 0.9943726062774658,
+            "boundary_candidate": false
+          }
+        ],
+        "count": 1,
+        "post_nms_total_before_five_limit": 1,
+        "observed_capacity_state": "OK",
+        "capacity_state": "OK",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          10732,
+          0,
+          2423,
+          0,
+          0,
+          4,
+          129
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          20,
+          0,
+          12578,
+          0,
+          0,
+          6,
+          520
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          14,
+          0,
+          0,
+          576,
+          10
+        ],
+        [
+          0,
+          0,
+          768,
+          0,
+          0,
+          11,
+          341
+        ]
+      ],
+      "topface_matching": {
+        "matched": 1,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": [
+          3.952782037239873
+        ]
+      }
+    },
+    {
+      "file": "test-115/4-stowed.png",
+      "sha256": "7dfc6c6638a18aacbf5458a57a86f17350c943248f3a7e573ad7dd1079433e9a",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        23396,
+        164,
+        21999,
+        1730,
+        378,
+        2686,
+        7247
+      ],
+      "topface": {
+        "detections": [
+          {
+            "score": 0.9679295420646667,
+            "color_id": 1,
+            "color_probabilities": [
+              0.9679295420646667,
+              0.006701536010950804,
+              0.003497108118608594,
+              0.0005720692570321262,
+              0.0025335149839520454,
+              6.174768714117818e-07
+            ],
+            "bbox_xyxy_visible": [
+              63.22869110107422,
+              281.0408935546875,
+              117.05378723144531,
+              333.8865051269531
+            ],
+            "bbox_xyxy_unclipped": [
+              63.22869110107422,
+              281.0408935546875,
+              117.05378723144531,
+              333.8865051269531
+            ],
+            "center_xy_projected_3d": [
+              89.37092590332031,
+              308.1841735839844
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.9999988079071045,
+            "ellipse": {
+              "conic_center_xy": [
+                89.33063507080078,
+                308.1947937011719
+              ],
+              "semi_major": 27.409638458278724,
+              "semi_minor": 26.95498911457977,
+              "orientation_deg": 70.52671597291946,
+              "orientation_valid": false,
+              "geometry_confidence": 0.999971866607666
+            },
+            "visibility_quality": 0.9990379810333252,
+            "boundary_candidate": false
+          },
+          {
+            "score": 0.32057732343673706,
+            "color_id": 5,
+            "color_probabilities": [
+              0.0011066640727221966,
+              0.00888054259121418,
+              0.000521484122145921,
+              0.0006590437260456383,
+              0.32057732343673706,
+              0.004201275762170553
+            ],
+            "bbox_xyxy_visible": [
+              225.39480590820312,
+              297.6142578125,
+              269.0431213378906,
+              343.5455322265625
+            ],
+            "bbox_xyxy_unclipped": [
+              225.39480590820312,
+              297.6142578125,
+              269.0431213378906,
+              343.5455322265625
+            ],
+            "center_xy_projected_3d": [
+              245.29324340820312,
+              319.48614501953125
+            ],
+            "center_valid_probability": 0.9999980926513672,
+            "center_visible_probability": 5.305415015754988e-06,
+            "ellipse": {
+              "conic_center_xy": [
+                245.967529296875,
+                320.68890380859375
+              ],
+              "semi_major": 22.189009280335505,
+              "semi_minor": 21.487879250188396,
+              "orientation_deg": -76.06664615194829,
+              "orientation_valid": true,
+              "geometry_confidence": 0.9992201328277588
+            },
+            "visibility_quality": 0.40741217136383057,
+            "boundary_candidate": false
+          }
+        ],
+        "count": 2,
+        "post_nms_total_before_five_limit": 2,
+        "observed_capacity_state": "OK",
+        "capacity_state": "OK",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          18090,
+          8,
+          17348,
+          62,
+          0,
+          16,
+          668
+        ],
+        [
+          5,
+          127,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          7,
+          0,
+          172,
+          0,
+          1674,
+          46
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "topface_matching": {
+        "matched": 1,
+        "missed": 0,
+        "unmatched_predictions": 1,
+        "errors_px": [
+          1.1444411856762284
+        ]
+      }
+    },
+    {
+      "file": "test-115/5-road2.png",
+      "sha256": "51ee0ffc69435f4b62f6630733617c62402910302e46179cc4c3e1928fd8a525",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        22919,
+        27256,
+        5382,
+        1074,
+        51,
+        100,
+        818
+      ],
+      "topface": {
+        "detections": [],
+        "count": 0,
+        "post_nms_total_before_five_limit": 0,
+        "observed_capacity_state": "EMPTY",
+        "capacity_state": "EMPTY",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          22149,
+          153,
+          3649,
+          193,
+          2,
+          0,
+          86
+        ],
+        [
+          70,
+          27091,
+          31,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "train-31/0-road.png",
+      "sha256": "f864bb369adb08d86f66522554f8df655cd42c3bf8dbe7c13473bae211535a4c",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        30776,
+        19714,
+        4045,
+        796,
+        47,
+        154,
+        2068
+      ],
+      "topface": {
+        "detections": [],
+        "count": 0,
+        "post_nms_total_before_five_limit": 0,
+        "observed_capacity_state": "EMPTY",
+        "capacity_state": "EMPTY",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          30025,
+          134,
+          3568,
+          0,
+          1,
+          2,
+          46
+        ],
+        [
+          66,
+          19576,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "train-31/1-raw.png",
+      "sha256": "2c0d4e719a0e8ab683cdca339e7d6ee9abb0e8982e6f3347624b9431fc148fcf",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        21731,
+        3312,
+        14383,
+        376,
+        77,
+        1409,
+        16312
+      ],
+      "topface": {
+        "detections": [
+          {
+            "score": 0.9793461561203003,
+            "color_id": 5,
+            "color_probabilities": [
+              0.006499036680907011,
+              0.003221044782549143,
+              0.010378852486610413,
+              0.004601628519594669,
+              0.9793461561203003,
+              0.00425735954195261
+            ],
+            "bbox_xyxy_visible": [
+              160.30738830566406,
+              214.70738220214844,
+              198.44406127929688,
+              253.75677490234375
+            ],
+            "bbox_xyxy_unclipped": [
+              160.30738830566406,
+              214.70738220214844,
+              198.44406127929688,
+              253.75677490234375
+            ],
+            "center_xy_projected_3d": [
+              179.44737243652344,
+              234.20913696289062
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.999994158744812,
+            "ellipse": {
+              "conic_center_xy": [
+                179.47227478027344,
+                234.15162658691406
+              ],
+              "semi_major": 19.851646770592396,
+              "semi_minor": 19.376110075475662,
+              "orientation_deg": -79.44725539988706,
+              "orientation_valid": true,
+              "geometry_confidence": 0.999996542930603
+            },
+            "visibility_quality": 0.9985920786857605,
+            "boundary_candidate": false
+          },
+          {
+            "score": 0.9279244542121887,
+            "color_id": 6,
+            "color_probabilities": [
+              1.7713365423333016e-06,
+              0.009113340638577938,
+              0.0030844619031995535,
+              0.0018681313376873732,
+              0.002049993956461549,
+              0.9279244542121887
+            ],
+            "bbox_xyxy_visible": [
+              267.5324401855469,
+              46.052452087402344,
+              308.1407470703125,
+              83.5655746459961
+            ],
+            "bbox_xyxy_unclipped": [
+              267.5324401855469,
+              46.052452087402344,
+              308.1407470703125,
+              83.5655746459961
+            ],
+            "center_xy_projected_3d": [
+              286.815673828125,
+              65.94134521484375
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.9999995231628418,
+            "ellipse": {
+              "conic_center_xy": [
+                286.77349853515625,
+                66.03394317626953
+              ],
+              "semi_major": 19.72498744522239,
+              "semi_minor": 19.496313880970188,
+              "orientation_deg": -24.925436354252607,
+              "orientation_valid": false,
+              "geometry_confidence": 0.99996018409729
+            },
+            "visibility_quality": 0.9992961883544922,
+            "boundary_candidate": false
+          }
+        ],
+        "count": 2,
+        "post_nms_total_before_five_limit": 2,
+        "observed_capacity_state": "OK",
+        "capacity_state": "OK",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          3658,
+          19,
+          12262,
+          0,
+          2,
+          0,
+          655
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1303,
+          157
+        ],
+        [
+          4867,
+          2,
+          78,
+          0,
+          0,
+          60,
+          11873
+        ]
+      ],
+      "topface_matching": {
+        "matched": 2,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": [
+          0.3950759928985595,
+          0.8756518615704216
+        ]
+      }
+    },
+    {
+      "file": "train-31/2-process.png",
+      "sha256": "2500709cb17a4bedae2377fc731062467bf6063ced25533c60d5b974caf08dd6",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        30681,
+        99,
+        21853,
+        690,
+        45,
+        685,
+        3547
+      ],
+      "topface": {
+        "detections": [
+          {
+            "score": 0.8348919153213501,
+            "color_id": 5,
+            "color_probabilities": [
+              0.009143246337771416,
+              0.00437020743265748,
+              0.0007854391005821526,
+              0.00040569406701251864,
+              0.8348919153213501,
+              0.0003711553290486336
+            ],
+            "bbox_xyxy_visible": [
+              82.68443298339844,
+              161.76840209960938,
+              128.1761932373047,
+              205.90646362304688
+            ],
+            "bbox_xyxy_unclipped": [
+              82.68443298339844,
+              161.76840209960938,
+              128.1761932373047,
+              205.90646362304688
+            ],
+            "center_xy_projected_3d": [
+              104.78691101074219,
+              184.16006469726562
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.9999958276748657,
+            "ellipse": {
+              "conic_center_xy": [
+                104.79267883300781,
+                184.17063903808594
+              ],
+              "semi_major": 23.696649120829484,
+              "semi_minor": 23.472675308475324,
+              "orientation_deg": -14.409963662933038,
+              "orientation_valid": false,
+              "geometry_confidence": 0.9999977350234985
+            },
+            "visibility_quality": 0.9991331696510315,
+            "boundary_candidate": false
+          }
+        ],
+        "count": 1,
+        "post_nms_total_before_five_limit": 1,
+        "observed_capacity_state": "OK",
+        "capacity_state": "OK",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          11550,
+          7,
+          10327,
+          14,
+          0,
+          2,
+          128
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          44,
+          0,
+          9072,
+          0,
+          0,
+          0,
+          356
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          29,
+          76,
+          0,
+          524,
+          55
+        ],
+        [
+          0,
+          3,
+          582,
+          0,
+          0,
+          6,
+          201
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 1,
+        "unmatched_predictions": 1,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "train-31/3-buffer.png",
+      "sha256": "d4935c5853adcbcc2064abfc7a89873b6e426b6ed1d039f2ab337e90f4e1fd64",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        35891,
+        23,
+        16180,
+        355,
+        167,
+        761,
+        4223
+      ],
+      "topface": {
+        "detections": [
+          {
+            "score": 0.6760851144790649,
+            "color_id": 1,
+            "color_probabilities": [
+              0.6760851144790649,
+              0.001904545002616942,
+              0.000554102414753288,
+              5.730239718104713e-05,
+              0.0001226686144946143,
+              5.17239129749214e-07
+            ],
+            "bbox_xyxy_visible": [
+              77.87545013427734,
+              189.80247497558594,
+              124.72474670410156,
+              231.62481689453125
+            ],
+            "bbox_xyxy_unclipped": [
+              77.87545013427734,
+              189.80247497558594,
+              124.72474670410156,
+              231.62481689453125
+            ],
+            "center_xy_projected_3d": [
+              99.52045440673828,
+              210.74188232421875
+            ],
+            "center_valid_probability": 0.9999997615814209,
+            "center_visible_probability": 0.9998199343681335,
+            "ellipse": {
+              "conic_center_xy": [
+                99.63167572021484,
+                210.88986206054688
+              ],
+              "semi_major": 23.916044272880125,
+              "semi_minor": 23.53024520151196,
+              "orientation_deg": -12.832904014958821,
+              "orientation_valid": false,
+              "geometry_confidence": 0.999971866607666
+            },
+            "visibility_quality": 0.9973836541175842,
+            "boundary_candidate": false
+          }
+        ],
+        "count": 1,
+        "post_nms_total_before_five_limit": 1,
+        "observed_capacity_state": "OK",
+        "capacity_state": "OK",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          12940,
+          1,
+          2047,
+          0,
+          1,
+          2,
+          261
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          12509,
+          0,
+          0,
+          2,
+          549
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          23,
+          0,
+          0,
+          574,
+          11
+        ],
+        [
+          0,
+          0,
+          723,
+          0,
+          0,
+          12,
+          361
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 1,
+        "unmatched_predictions": 1,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "train-31/4-stowed.png",
+      "sha256": "997e9911199acc0d62092def1b88214aa0809b4cb1c00e666401d03207b2e67a",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        35929,
+        94,
+        7997,
+        1409,
+        348,
+        2221,
+        9602
+      ],
+      "topface": {
+        "detections": [
+          {
+            "score": 0.9836717247962952,
+            "color_id": 1,
+            "color_probabilities": [
+              0.9836717247962952,
+              0.009862085804343224,
+              0.0017203177558258176,
+              0.0014150766655802727,
+              0.001980775035917759,
+              2.8111782057749224e-07
+            ],
+            "bbox_xyxy_visible": [
+              27.22475242614746,
+              126.33645629882812,
+              79.14527130126953,
+              179.11766052246094
+            ],
+            "bbox_xyxy_unclipped": [
+              27.22475242614746,
+              126.33645629882812,
+              79.14527130126953,
+              179.11766052246094
+            ],
+            "center_xy_projected_3d": [
+              52.73379898071289,
+              153.2263641357422
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.9999878406524658,
+            "ellipse": {
+              "conic_center_xy": [
+                52.78579330444336,
+                153.31344604492188
+              ],
+              "semi_major": 26.303369859175145,
+              "semi_minor": 25.571580409597654,
+              "orientation_deg": -79.78506058844097,
+              "orientation_valid": true,
+              "geometry_confidence": 0.9999655485153198
+            },
+            "visibility_quality": 0.997317373752594,
+            "boundary_candidate": false
+          },
+          {
+            "score": 0.2510586977005005,
+            "color_id": 5,
+            "color_probabilities": [
+              0.0013478941982612014,
+              0.0028587866108864546,
+              0.001311945030465722,
+              0.0011277293087914586,
+              0.2510586977005005,
+              0.0023103479761630297
+            ],
+            "bbox_xyxy_visible": [
+              228.34666442871094,
+              296.3508605957031,
+              269.4395446777344,
+              341.17431640625
+            ],
+            "bbox_xyxy_unclipped": [
+              228.34666442871094,
+              296.3508605957031,
+              269.4395446777344,
+              341.17431640625
+            ],
+            "center_xy_projected_3d": [
+              245.94398498535156,
+              318.4731140136719
+            ],
+            "center_valid_probability": 0.9999915361404419,
+            "center_visible_probability": 4.841471309191547e-05,
+            "ellipse": {
+              "conic_center_xy": [
+                246.47010803222656,
+                319.3930358886719
+              ],
+              "semi_major": 20.83566241688183,
+              "semi_minor": 20.38894709047801,
+              "orientation_deg": -79.38488333927387,
+              "orientation_valid": true,
+              "geometry_confidence": 0.9995396137237549
+            },
+            "visibility_quality": 0.4857303500175476,
+            "boundary_candidate": false
+          }
+        ],
+        "count": 2,
+        "post_nms_total_before_five_limit": 2,
+        "observed_capacity_state": "OK",
+        "capacity_state": "OK",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          30034,
+          20,
+          6279,
+          31,
+          0,
+          8,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          53,
+          3,
+          1,
+          1,
+          1580,
+          23
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "topface_matching": {
+        "matched": 1,
+        "missed": 0,
+        "unmatched_predictions": 1,
+        "errors_px": [
+          0.20185817936341044
+        ]
+      }
+    },
+    {
+      "file": "train-31/5-road2.png",
+      "sha256": "0065ac7900c781fcb2f80e82770bdcdcadbd97b03f63ca978dd172cd9052b47c",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        33881,
+        17697,
+        3335,
+        1078,
+        29,
+        3,
+        1577
+      ],
+      "topface": {
+        "detections": [],
+        "count": 0,
+        "post_nms_total_before_five_limit": 0,
+        "observed_capacity_state": "EMPTY",
+        "capacity_state": "EMPTY",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          32774,
+          112,
+          2836,
+          5,
+          0,
+          0,
+          45
+        ],
+        [
+          73,
+          17576,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "train-52/0-road.png",
+      "sha256": "d039a87a969714db94aab10a8f974c31061714c8cc46abdb26afe8cdc3478c61",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        37808,
+        18,
+        16686,
+        802,
+        46,
+        166,
+        2074
+      ],
+      "topface": {
+        "detections": [],
+        "count": 0,
+        "post_nms_total_before_five_limit": 0,
+        "observed_capacity_state": "EMPTY",
+        "capacity_state": "EMPTY",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          36836,
+          0,
+          7731,
+          2,
+          0,
+          0,
+          143
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          66,
+          0,
+          7577,
+          0,
+          0,
+          0,
+          413
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          32,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          414,
+          0,
+          0,
+          0,
+          242
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "train-52/1-raw.png",
+      "sha256": "f09e1078c0fd5bb4c81fc445427ff3ce42cfc6cd42364e2a594110308095744a",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        22707,
+        970,
+        22196,
+        796,
+        41,
+        466,
+        10424
+      ],
+      "topface": {
+        "detections": [
+          {
+            "score": 0.9848173260688782,
+            "color_id": 6,
+            "color_probabilities": [
+              2.3308953700507118e-07,
+              0.0038963546976447105,
+              0.008205244317650795,
+              0.002160382457077503,
+              0.0024639246985316277,
+              0.9848173260688782
+            ],
+            "bbox_xyxy_visible": [
+              163.25424194335938,
+              238.44898986816406,
+              201.4220733642578,
+              278.0343933105469
+            ],
+            "bbox_xyxy_unclipped": [
+              163.25424194335938,
+              238.44898986816406,
+              201.4220733642578,
+              278.0343933105469
+            ],
+            "center_xy_projected_3d": [
+              183.18785095214844,
+              258.4247741699219
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.9999972581863403,
+            "ellipse": {
+              "conic_center_xy": [
+                183.11024475097656,
+                258.41058349609375
+              ],
+              "semi_major": 20.009443235558173,
+              "semi_minor": 19.414224191490167,
+              "orientation_deg": -75.42768337027165,
+              "orientation_valid": true,
+              "geometry_confidence": 0.9999468326568604
+            },
+            "visibility_quality": 0.9987014532089233,
+            "boundary_candidate": false
+          }
+        ],
+        "count": 1,
+        "post_nms_total_before_five_limit": 1,
+        "observed_capacity_state": "OK",
+        "capacity_state": "OK",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          1323,
+          10,
+          14090,
+          1,
+          0,
+          0,
+          336
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          364,
+          0,
+          361,
+          46
+        ],
+        [
+          10300,
+          0,
+          47,
+          1,
+          0,
+          25,
+          7915
+        ]
+      ],
+      "topface_matching": {
+        "matched": 1,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": [
+          0.6437152197821656
+        ]
+      }
+    },
+    {
+      "file": "train-52/2-process.png",
+      "sha256": "d3cfe8d8af58bb915134f4056e980d6fdd6b9992d372c70199c24a5faa8242fd",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        28540,
+        374,
+        20424,
+        1074,
+        7,
+        115,
+        7066
+      ],
+      "topface": {
+        "detections": [],
+        "count": 0,
+        "post_nms_total_before_five_limit": 0,
+        "observed_capacity_state": "EMPTY",
+        "capacity_state": "EMPTY",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          15672,
+          0,
+          4037,
+          0,
+          0,
+          3,
+          136
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          45,
+          0,
+          13412,
+          0,
+          0,
+          0,
+          675
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          375,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          652,
+          0,
+          0,
+          0,
+          316
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "train-52/3-buffer.png",
+      "sha256": "64d6384e4ec302bd803b6f1ee38599065fbc24d028eb570a0f7b8333d44e512f",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        35931,
+        152,
+        16171,
+        490,
+        476,
+        15,
+        4365
+      ],
+      "topface": {
+        "detections": [],
+        "count": 0,
+        "post_nms_total_before_five_limit": 0,
+        "observed_capacity_state": "EMPTY",
+        "capacity_state": "EMPTY",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          14226,
+          4,
+          967,
+          0,
+          18,
+          0,
+          181
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          31,
+          0,
+          13230,
+          0,
+          0,
+          0,
+          655
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          675,
+          0,
+          0,
+          0,
+          373
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "train-52/4-stowed.png",
+      "sha256": "62af17c0f13e50f9ae7988584d3bc66beb828a3a46cfccc6af06ef4edff28b5b",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        33166,
+        228,
+        9024,
+        1532,
+        753,
+        1903,
+        10994
+      ],
+      "topface": {
+        "detections": [
+          {
+            "score": 0.9738385081291199,
+            "color_id": 1,
+            "color_probabilities": [
+              0.9738385081291199,
+              0.0352683961391449,
+              0.0009924920741468668,
+              0.0021297612693160772,
+              0.0025966614484786987,
+              6.613128107346711e-07
+            ],
+            "bbox_xyxy_visible": [
+              56.64318084716797,
+              143.53038024902344,
+              107.9932861328125,
+              198.67376708984375
+            ],
+            "bbox_xyxy_unclipped": [
+              56.64318084716797,
+              143.53038024902344,
+              107.9932861328125,
+              198.67376708984375
+            ],
+            "center_xy_projected_3d": [
+              82.13092803955078,
+              171.21539306640625
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.9999920129776001,
+            "ellipse": {
+              "conic_center_xy": [
+                82.1301498413086,
+                171.27362060546875
+              ],
+              "semi_major": 27.165533432887873,
+              "semi_minor": 25.757023480691117,
+              "orientation_deg": -87.91804591509683,
+              "orientation_valid": true,
+              "geometry_confidence": 0.9999802112579346
+            },
+            "visibility_quality": 0.9985401630401611,
+            "boundary_candidate": false
+          },
+          {
+            "score": 0.5888645052909851,
+            "color_id": 5,
+            "color_probabilities": [
+              0.005504128988832235,
+              0.005171989090740681,
+              0.0014797300100326538,
+              0.0008661758038215339,
+              0.5888645052909851,
+              0.001131582772359252
+            ],
+            "bbox_xyxy_visible": [
+              54.19273376464844,
+              263.6341552734375,
+              105.51754760742188,
+              318.25042724609375
+            ],
+            "bbox_xyxy_unclipped": [
+              54.19273376464844,
+              263.6341552734375,
+              105.51754760742188,
+              318.25042724609375
+            ],
+            "center_xy_projected_3d": [
+              79.08900451660156,
+              289.425048828125
+            ],
+            "center_valid_probability": 0.9999998807907104,
+            "center_visible_probability": 0.9999896287918091,
+            "ellipse": {
+              "conic_center_xy": [
+                79.17955780029297,
+                289.5633544921875
+              ],
+              "semi_major": 26.408754908355895,
+              "semi_minor": 25.970150162219575,
+              "orientation_deg": 83.5010052669142,
+              "orientation_valid": false,
+              "geometry_confidence": 0.9999642372131348
+            },
+            "visibility_quality": 0.9986127614974976,
+            "boundary_candidate": false
+          }
+        ],
+        "count": 2,
+        "post_nms_total_before_five_limit": 2,
+        "observed_capacity_state": "OK",
+        "capacity_state": "OK",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          27632,
+          12,
+          8068,
+          25,
+          4,
+          0,
+          147
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          31,
+          167,
+          25,
+          527,
+          4,
+          1330,
+          1680
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "topface_matching": {
+        "matched": 2,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": [
+          1.6704136287823848,
+          1.7967265393625989
+        ]
+      }
+    },
+    {
+      "file": "train-52/5-road2.png",
+      "sha256": "bf139ffb8813de2ce6cb528d9956f77d03d5f9bc1e086758ac43bc5f87ceacdb",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        44417,
+        7436,
+        3322,
+        691,
+        145,
+        176,
+        1413
+      ],
+      "topface": {
+        "detections": [],
+        "count": 0,
+        "post_nms_total_before_five_limit": 0,
+        "observed_capacity_state": "EMPTY",
+        "capacity_state": "EMPTY",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          43521,
+          83,
+          2243,
+          17,
+          26,
+          0,
+          126
+        ],
+        [
+          29,
+          7345,
+          34,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "train-83/0-road.png",
+      "sha256": "0026a344bd2cb558695bd6f23bf5f95a45b505c060383c3ce095852dec7ec9b7",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        26605,
+        24672,
+        4297,
+        913,
+        70,
+        202,
+        841
+      ],
+      "topface": {
+        "detections": [],
+        "count": 0,
+        "post_nms_total_before_five_limit": 0,
+        "observed_capacity_state": "EMPTY",
+        "capacity_state": "EMPTY",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          25787,
+          147,
+          2844,
+          5,
+          2,
+          0,
+          43
+        ],
+        [
+          75,
+          24499,
+          22,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "train-83/1-raw.png",
+      "sha256": "42faf0e5c521eda8c6483513e702f17ee4e90f8f743e0f3fbcbd53d38a24790f",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        19441,
+        326,
+        25554,
+        431,
+        125,
+        984,
+        10739
+      ],
+      "topface": {
+        "detections": [
+          {
+            "score": 0.9875255823135376,
+            "color_id": 6,
+            "color_probabilities": [
+              3.779852590923838e-07,
+              0.008813733235001564,
+              0.007115012034773827,
+              0.004911776166409254,
+              0.0045383647084236145,
+              0.9875255823135376
+            ],
+            "bbox_xyxy_visible": [
+              167.27841186523438,
+              192.31527709960938,
+              205.81858825683594,
+              232.7834930419922
+            ],
+            "bbox_xyxy_unclipped": [
+              167.27841186523438,
+              192.31527709960938,
+              205.81858825683594,
+              232.7834930419922
+            ],
+            "center_xy_projected_3d": [
+              186.72225952148438,
+              212.73370361328125
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.9999963045120239,
+            "ellipse": {
+              "conic_center_xy": [
+                186.77481079101562,
+                212.7229461669922
+              ],
+              "semi_major": 20.536564972048264,
+              "semi_minor": 19.44665744224612,
+              "orientation_deg": -84.02765592518806,
+              "orientation_valid": true,
+              "geometry_confidence": 0.9999630451202393
+            },
+            "visibility_quality": 0.9990229606628418,
+            "boundary_candidate": false
+          }
+        ],
+        "count": 1,
+        "post_nms_total_before_five_limit": 1,
+        "observed_capacity_state": "OK",
+        "capacity_state": "OK",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          3603,
+          4,
+          16555,
+          0,
+          8,
+          0,
+          978
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          708,
+          12
+        ],
+        [
+          8693,
+          7,
+          118,
+          0,
+          0,
+          35,
+          7947
+        ]
+      ],
+      "topface_matching": {
+        "matched": 1,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": [
+          0.6179952083759384
+        ]
+      }
+    },
+    {
+      "file": "train-83/2-process.png",
+      "sha256": "803739c942c39c28ddb547d422e444df0cdcdbbca770c0cacd40f44eac432eba",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        32430,
+        245,
+        22183,
+        319,
+        242,
+        244,
+        1937
+      ],
+      "topface": {
+        "detections": [],
+        "count": 0,
+        "post_nms_total_before_five_limit": 0,
+        "observed_capacity_state": "EMPTY",
+        "capacity_state": "EMPTY",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          12198,
+          0,
+          3282,
+          2,
+          3,
+          3,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          40,
+          0,
+          13344,
+          0,
+          0,
+          0,
+          664
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          662,
+          0,
+          0,
+          0,
+          362
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "train-83/3-buffer.png",
+      "sha256": "85f719ae885376f68ea83db231451e3506fca0567432e10941032567db375696",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        35181,
+        370,
+        17696,
+        408,
+        481,
+        632,
+        2832
+      ],
+      "topface": {
+        "detections": [
+          {
+            "score": 0.3060428500175476,
+            "color_id": 5,
+            "color_probabilities": [
+              0.002787460805848241,
+              0.0225982628762722,
+              0.00010496151662664488,
+              0.00021672023285645992,
+              0.3060428500175476,
+              0.0009038384887389839
+            ],
+            "bbox_xyxy_visible": [
+              352.5365295410156,
+              187.53965759277344,
+              397.8979797363281,
+              230.43338012695312
+            ],
+            "bbox_xyxy_unclipped": [
+              352.5365295410156,
+              187.53965759277344,
+              397.8979797363281,
+              230.43338012695312
+            ],
+            "center_xy_projected_3d": [
+              373.8415832519531,
+              207.67678833007812
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.0001952464081114158,
+            "ellipse": {
+              "conic_center_xy": [
+                374.4061584472656,
+                208.7346649169922
+              ],
+              "semi_major": 22.63696984851104,
+              "semi_minor": 22.514504708931987,
+              "orientation_deg": 49.96603578650641,
+              "orientation_valid": false,
+              "geometry_confidence": 0.9999440908432007
+            },
+            "visibility_quality": 0.5274482369422913,
+            "boundary_candidate": false
+          }
+        ],
+        "count": 1,
+        "post_nms_total_before_five_limit": 1,
+        "observed_capacity_state": "OK",
+        "capacity_state": "OK",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          13038,
+          2,
+          2489,
+          0,
+          19,
+          3,
+          109
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          47,
+          0,
+          12990,
+          0,
+          0,
+          10,
+          553
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          15,
+          4,
+          5,
+          536,
+          17
+        ],
+        [
+          0,
+          0,
+          595,
+          0,
+          0,
+          14,
+          271
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 1,
+        "unmatched_predictions": 1,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "train-83/4-stowed.png",
+      "sha256": "08c37483605db16fd1a835b90bc6db4b268d41b8aed268e5fd1c06409d35481b",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        31653,
+        317,
+        11319,
+        1241,
+        492,
+        2410,
+        10168
+      ],
+      "topface": {
+        "detections": [
+          {
+            "score": 0.9699990153312683,
+            "color_id": 1,
+            "color_probabilities": [
+              0.9699990153312683,
+              0.0025259831454604864,
+              0.003766805399209261,
+              0.006385324988514185,
+              0.002051674760878086,
+              1.8228182341317734e-07
+            ],
+            "bbox_xyxy_visible": [
+              49.00812530517578,
+              196.5133819580078,
+              100.62266540527344,
+              250.228271484375
+            ],
+            "bbox_xyxy_unclipped": [
+              49.00812530517578,
+              196.5133819580078,
+              100.62266540527344,
+              250.228271484375
+            ],
+            "center_xy_projected_3d": [
+              74.84823608398438,
+              223.46592712402344
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.9999825954437256,
+            "ellipse": {
+              "conic_center_xy": [
+                74.85702514648438,
+                223.59939575195312
+              ],
+              "semi_major": 26.857557274329164,
+              "semi_minor": 26.078399792851194,
+              "orientation_deg": -89.24469183322874,
+              "orientation_valid": true,
+              "geometry_confidence": 0.9999946355819702
+            },
+            "visibility_quality": 0.9985013008117676,
+            "boundary_candidate": false
+          }
+        ],
+        "count": 1,
+        "post_nms_total_before_five_limit": 1,
+        "observed_capacity_state": "OK",
+        "capacity_state": "OK",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          26536,
+          30,
+          9096,
+          33,
+          1,
+          7,
+          93
+        ],
+        [
+          3,
+          235,
+          3,
+          0,
+          0,
+          2,
+          5
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          27,
+          27,
+          7,
+          3,
+          0,
+          1555,
+          1673
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "topface_matching": {
+        "matched": 1,
+        "missed": 1,
+        "unmatched_predictions": 0,
+        "errors_px": [
+          0.5658528050043685
+        ]
+      }
+    },
+    {
+      "file": "train-83/5-road2.png",
+      "sha256": "97e6efde0da21dec90be0388ca0e73487eb94facf2394c9c78b9201f5f333c77",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        34695,
+        2106,
+        17707,
+        1258,
+        631,
+        5,
+        1198
+      ],
+      "topface": {
+        "detections": [],
+        "count": 0,
+        "post_nms_total_before_five_limit": 0,
+        "observed_capacity_state": "EMPTY",
+        "capacity_state": "EMPTY",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          30565,
+          33,
+          15908,
+          8,
+          8,
+          0,
+          10
+        ],
+        [
+          21,
+          2073,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          68,
+          0,
+          0,
+          0,
+          616,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          308,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "val-94/0-road.png",
+      "sha256": "8c1a982baa57d63a367403f9f22489f751684657cffa75908672e1953ee87bed",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        33175,
+        17070,
+        4977,
+        1250,
+        20,
+        126,
+        982
+      ],
+      "topface": {
+        "detections": [],
+        "count": 0,
+        "post_nms_total_before_five_limit": 0,
+        "observed_capacity_state": "EMPTY",
+        "capacity_state": "EMPTY",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          32631,
+          170,
+          3535,
+          15,
+          0,
+          0,
+          109
+        ],
+        [
+          36,
+          16888,
+          40,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          7,
+          211,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "val-94/1-raw.png",
+      "sha256": "64b1982cc916161ce0b95e5e8b36aba6ad554884cb1b572af13618b2eacdbfc7",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        15226,
+        678,
+        23897,
+        459,
+        261,
+        2333,
+        14746
+      ],
+      "topface": {
+        "detections": [
+          {
+            "score": 0.9888801574707031,
+            "color_id": 1,
+            "color_probabilities": [
+              0.9888801574707031,
+              0.010402191430330276,
+              0.006086024921387434,
+              0.0022010209504514933,
+              0.006263034418225288,
+              4.6214213966777606e-07
+            ],
+            "bbox_xyxy_visible": [
+              152.3500518798828,
+              205.77459716796875,
+              190.97216796875,
+              245.02227783203125
+            ],
+            "bbox_xyxy_unclipped": [
+              152.3500518798828,
+              205.77459716796875,
+              190.97216796875,
+              245.02227783203125
+            ],
+            "center_xy_projected_3d": [
+              171.1287384033203,
+              225.31527709960938
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.9999943971633911,
+            "ellipse": {
+              "conic_center_xy": [
+                171.07501220703125,
+                225.34909057617188
+              ],
+              "semi_major": 19.669387699645235,
+              "semi_minor": 19.366439572996534,
+              "orientation_deg": -65.07563038398213,
+              "orientation_valid": false,
+              "geometry_confidence": 0.9999808073043823
+            },
+            "visibility_quality": 0.9984586238861084,
+            "boundary_candidate": false
+          },
+          {
+            "score": 0.8060561418533325,
+            "color_id": 5,
+            "color_probabilities": [
+              0.00263031292706728,
+              0.003192366100847721,
+              0.0010350487427785993,
+              0.00040649273432791233,
+              0.8060561418533325,
+              0.0013513241428881884
+            ],
+            "bbox_xyxy_visible": [
+              245.0609130859375,
+              29.605941772460938,
+              282.2051086425781,
+              66.61331176757812
+            ],
+            "bbox_xyxy_unclipped": [
+              245.0609130859375,
+              29.605941772460938,
+              282.2051086425781,
+              66.61331176757812
+            ],
+            "center_xy_projected_3d": [
+              263.0121765136719,
+              49.11937713623047
+            ],
+            "center_valid_probability": 0.9999998807907104,
+            "center_visible_probability": 0.9999426603317261,
+            "ellipse": {
+              "conic_center_xy": [
+                263.1076965332031,
+                49.24857711791992
+              ],
+              "semi_major": 20.484083843111712,
+              "semi_minor": 20.138302727506247,
+              "orientation_deg": -25.630181681166558,
+              "orientation_valid": false,
+              "geometry_confidence": 0.9999041557312012
+            },
+            "visibility_quality": 0.9963130354881287,
+            "boundary_candidate": false
+          },
+          {
+            "score": 0.5453453660011292,
+            "color_id": 6,
+            "color_probabilities": [
+              1.1245487030464574e-06,
+              0.0006229568971320987,
+              0.004108624067157507,
+              0.00045693659922108054,
+              0.0004174721543677151,
+              0.5453453660011292
+            ],
+            "bbox_xyxy_visible": [
+              45.26970291137695,
+              36.604148864746094,
+              83.22367858886719,
+              75.20304870605469
+            ],
+            "bbox_xyxy_unclipped": [
+              45.26970291137695,
+              36.604148864746094,
+              83.22367858886719,
+              75.20304870605469
+            ],
+            "center_xy_projected_3d": [
+              61.456932067871094,
+              53.762611389160156
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.9998953342437744,
+            "ellipse": {
+              "conic_center_xy": [
+                61.41734313964844,
+                54.141578674316406
+              ],
+              "semi_major": 20.84354564049837,
+              "semi_minor": 19.873151857174804,
+              "orientation_deg": -84.91615575460052,
+              "orientation_valid": true,
+              "geometry_confidence": 0.997543215751648
+            },
+            "visibility_quality": 0.995087206363678,
+            "boundary_candidate": false
+          },
+          {
+            "score": 0.5134803652763367,
+            "color_id": 6,
+            "color_probabilities": [
+              1.811016318242764e-06,
+              0.015019530430436134,
+              0.00017455646593589336,
+              9.806078014662489e-05,
+              0.00035113413468934596,
+              0.5134803652763367
+            ],
+            "bbox_xyxy_visible": [
+              80.505126953125,
+              50.33433532714844,
+              138.63778686523438,
+              105.85128784179688
+            ],
+            "bbox_xyxy_unclipped": [
+              80.505126953125,
+              50.33433532714844,
+              138.63778686523438,
+              105.85128784179688
+            ],
+            "center_xy_projected_3d": [
+              109.97616577148438,
+              77.6444320678711
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.9999847412109375,
+            "ellipse": {
+              "conic_center_xy": [
+                110.03314971923828,
+                77.62882232666016
+              ],
+              "semi_major": 28.94446942948318,
+              "semi_minor": 28.934873594801967,
+              "orientation_deg": -53.54459881060369,
+              "orientation_valid": false,
+              "geometry_confidence": 0.9999649524688721
+            },
+            "visibility_quality": 0.9989287257194519,
+            "boundary_candidate": false
+          }
+        ],
+        "count": 4,
+        "post_nms_total_before_five_limit": 4,
+        "observed_capacity_state": "OVER_CAPACITY",
+        "capacity_state": "OVER_CAPACITY",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          3421,
+          3,
+          15049,
+          0,
+          3,
+          0,
+          508
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          13,
+          0,
+          0,
+          101,
+          55,
+          2122,
+          241
+        ],
+        [
+          3541,
+          1,
+          248,
+          1,
+          1,
+          50,
+          11766
+        ]
+      ],
+      "topface_matching": {
+        "matched": 3,
+        "missed": 0,
+        "unmatched_predictions": 1,
+        "errors_px": [
+          0.5367255720045662,
+          1.9167294172193712,
+          3.947658502946541
+        ]
+      }
+    },
+    {
+      "file": "val-94/2-process.png",
+      "sha256": "d4fce481a0314bc371f77580ac032ddf96043ba32691584dcc2c169106bdc2f5",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        33864,
+        1,
+        19566,
+        567,
+        11,
+        1571,
+        2020
+      ],
+      "topface": {
+        "detections": [
+          {
+            "score": 0.9727727174758911,
+            "color_id": 1,
+            "color_probabilities": [
+              0.9727727174758911,
+              0.007196093909442425,
+              0.000765940931160003,
+              0.0012652567820623517,
+              0.0009277198114432395,
+              1.6912824207793165e-07
+            ],
+            "bbox_xyxy_visible": [
+              338.8738098144531,
+              147.13929748535156,
+              377.548828125,
+              184.64910888671875
+            ],
+            "bbox_xyxy_unclipped": [
+              338.8738098144531,
+              147.13929748535156,
+              377.548828125,
+              184.64910888671875
+            ],
+            "center_xy_projected_3d": [
+              358.4522399902344,
+              165.71597290039062
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.9999698400497437,
+            "ellipse": {
+              "conic_center_xy": [
+                358.3786926269531,
+                165.7584991455078
+              ],
+              "semi_major": 19.113830374274727,
+              "semi_minor": 19.08857913124881,
+              "orientation_deg": -88.23839859311654,
+              "orientation_valid": false,
+              "geometry_confidence": 0.9999969005584717
+            },
+            "visibility_quality": 0.9983277916908264,
+            "boundary_candidate": false
+          },
+          {
+            "score": 0.7511060833930969,
+            "color_id": 5,
+            "color_probabilities": [
+              0.005121974274516106,
+              0.0038843729998916388,
+              0.0004842109919991344,
+              0.000396484334487468,
+              0.7511060833930969,
+              0.0002914109209086746
+            ],
+            "bbox_xyxy_visible": [
+              198.48104858398438,
+              159.41293334960938,
+              233.8846893310547,
+              198.39566040039062
+            ],
+            "bbox_xyxy_unclipped": [
+              198.48104858398438,
+              159.41293334960938,
+              233.8846893310547,
+              198.39566040039062
+            ],
+            "center_xy_projected_3d": [
+              216.4684295654297,
+              179.23348999023438
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.9986135959625244,
+            "ellipse": {
+              "conic_center_xy": [
+                216.57106018066406,
+                179.4829559326172
+              ],
+              "semi_major": 19.80939916784529,
+              "semi_minor": 19.525418731291897,
+              "orientation_deg": 64.83999549783196,
+              "orientation_valid": false,
+              "geometry_confidence": 0.9999972581863403
+            },
+            "visibility_quality": 0.9944524168968201,
+            "boundary_candidate": false
+          },
+          {
+            "score": 0.29777824878692627,
+            "color_id": 6,
+            "color_probabilities": [
+              3.0477877999146585e-07,
+              0.0008300194167532027,
+              0.000277621962595731,
+              0.00013706000754609704,
+              8.716936281416565e-05,
+              0.29777824878692627
+            ],
+            "bbox_xyxy_visible": [
+              82.50065612792969,
+              173.0635223388672,
+              126.83232879638672,
+              215.2581329345703
+            ],
+            "bbox_xyxy_unclipped": [
+              82.50065612792969,
+              173.0635223388672,
+              126.83232879638672,
+              215.2581329345703
+            ],
+            "center_xy_projected_3d": [
+              101.95059204101562,
+              194.3148193359375
+            ],
+            "center_valid_probability": 1.0,
+            "center_visible_probability": 0.9998739957809448,
+            "ellipse": {
+              "conic_center_xy": [
+                101.9677734375,
+                194.6094970703125
+              ],
+              "semi_major": 23.47512452661547,
+              "semi_minor": 22.44207863051942,
+              "orientation_deg": 88.70070068450086,
+              "orientation_valid": true,
+              "geometry_confidence": 0.9998677968978882
+            },
+            "visibility_quality": 0.9944602251052856,
+            "boundary_candidate": false
+          }
+        ],
+        "count": 3,
+        "post_nms_total_before_five_limit": 3,
+        "observed_capacity_state": "OK",
+        "capacity_state": "OK",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          16867,
+          0,
+          4527,
+          1,
+          0,
+          2,
+          123
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          27,
+          0,
+          11941,
+          0,
+          0,
+          13,
+          543
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          40,
+          0,
+          0,
+          1287,
+          49
+        ],
+        [
+          0,
+          0,
+          532,
+          0,
+          0,
+          33,
+          279
+        ]
+      ],
+      "topface_matching": {
+        "matched": 2,
+        "missed": 1,
+        "unmatched_predictions": 1,
+        "errors_px": [
+          3.231290696423704,
+          1.8804127231270118
+        ]
+      }
+    },
+    {
+      "file": "val-94/3-buffer.png",
+      "sha256": "16c4e5ab2ef178427c9e572d3e727ca659cb0f699f01367e900252e4e711936c",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        33612,
+        24,
+        20260,
+        647,
+        45,
+        182,
+        2830
+      ],
+      "topface": {
+        "detections": [],
+        "count": 0,
+        "post_nms_total_before_five_limit": 0,
+        "observed_capacity_state": "EMPTY",
+        "capacity_state": "EMPTY",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          12725,
+          0,
+          4351,
+          0,
+          2,
+          3,
+          259
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          31,
+          0,
+          13261,
+          0,
+          0,
+          0,
+          612
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          118,
+          0,
+          16,
+          2
+        ],
+        [
+          0,
+          0,
+          745,
+          0,
+          0,
+          0,
+          387
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "val-94/4-stowed.png",
+      "sha256": "ae1aa1ee4c2e1b05aa20275980669f3aebeae4b8d5a4db84179114ac4e14d91b",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        35434,
+        1511,
+        7426,
+        1485,
+        564,
+        801,
+        10379
+      ],
+      "topface": {
+        "detections": [],
+        "count": 0,
+        "post_nms_total_before_five_limit": 0,
+        "observed_capacity_state": "EMPTY",
+        "capacity_state": "EMPTY",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          28699,
+          32,
+          6289,
+          17,
+          2,
+          1,
+          248
+        ],
+        [
+          6,
+          1447,
+          10,
+          0,
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": []
+      }
+    },
+    {
+      "file": "val-94/5-road2.png",
+      "sha256": "d897bb2c2fd4f6002cf1cba0ecaf8e328c214894cebe8afa9b44ef2c75f843ed",
+      "input_wh": [
+        640,
+        360
+      ],
+      "road_class_pixels": [
+        24264,
+        25743,
+        5436,
+        845,
+        3,
+        170,
+        1139
+      ],
+      "topface": {
+        "detections": [],
+        "count": 0,
+        "post_nms_total_before_five_limit": 0,
+        "observed_capacity_state": "EMPTY",
+        "capacity_state": "EMPTY",
+        "uncertain": false,
+        "thresholds": {
+          "score": 0.25,
+          "class_agnostic_nms_iou": 0.5
+        },
+        "scope": "single model declared logits; no second network; no board accuracy claim"
+      },
+      "road_confusion": [
+        [
+          23697,
+          146,
+          3768,
+          7,
+          0,
+          0,
+          114
+        ],
+        [
+          82,
+          25596,
+          14,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "topface_matching": {
+        "matched": 0,
+        "missed": 0,
+        "unmatched_predictions": 0,
+        "errors_px": []
+      }
+    }
+  ]
+}

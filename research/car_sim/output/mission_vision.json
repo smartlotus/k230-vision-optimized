@@ -1,0 +1,1237 @@
+{
+  "status": "INCOMPLETE_ACQUISITION",
+  "scope": "Single-frame acquisition and rejection on independently prescribed operation frames. Empty-slot digits checked against generic templates. Occupied slots use expected color and prescribed docking. No gripper alignment, serial command, scene feedback, or closed-loop mission success evaluated.",
+  "decoded_qr": "156+123+516+231",
+  "input_wh": [
+    640,
+    360
+  ],
+  "topface_onnx_sha256": "833e5786d3a0385b75ee38638993c56adbcce30165e5f67a02f26ebebd7b0ad4",
+  "source_origin": "upper left, +u right, +v down",
+  "steps_evaluated": 24,
+  "capture_windows_xyxy": {
+    "RAW": [
+      145,
+      174,
+      245,
+      268
+    ],
+    "PAPER": [
+      185,
+      162,
+      279,
+      236
+    ]
+  },
+  "offline_match_radius_px": 8.0,
+  "scores": {
+    "ON_TARGET": 23,
+    "OFF_TARGET": 0,
+    "HOLD": 1
+  },
+  "scores_after_retry": {
+    "ON_TARGET": 23,
+    "OFF_TARGET": 0,
+    "HOLD": 1
+  },
+  "reobserved": 1,
+  "observations": [
+    {
+      "index": 2,
+      "file": "02.png",
+      "sha256": "a8cd842c3e781a2814cdfcc5f6eec728507b05b88e576952fe21e04e09c6a971",
+      "action": "PICK",
+      "slot": null,
+      "carried_or_pick_color": 1,
+      "station": "RAW",
+      "feature": "pick_top",
+      "expected_observed_color": 1,
+      "capture_window_xyxy": [
+        145,
+        174,
+        245,
+        268
+      ],
+      "detections_in_window": [
+        {
+          "color": 1,
+          "score": 0.9883571267127991,
+          "center": [
+            194.43959045410156,
+            232.86883544921875
+          ]
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        194.43959045410156,
+        232.86883544921875
+      ],
+      "offset_from_image_center_px": [
+        -125.56040954589844,
+        52.86883544921875
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 0.41759993145249,
+        "visible": true,
+        "reference_xy": [
+          194.8049545288086,
+          232.6666009426117
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "file": "03.png",
+      "sha256": "9fcf0bc2bec7544ce0a87c51ee1f5bff8cd0eab5a734c8ac46367528ff7c4dc8",
+      "action": "PICK",
+      "slot": null,
+      "carried_or_pick_color": 5,
+      "station": "RAW",
+      "feature": "pick_top",
+      "expected_observed_color": 5,
+      "capture_window_xyxy": [
+        145,
+        174,
+        245,
+        268
+      ],
+      "detections_in_window": [
+        {
+          "color": 5,
+          "score": 0.9857380390167236,
+          "center": [
+            194.9706573486328,
+            232.9732666015625
+          ]
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        194.9706573486328,
+        232.9732666015625
+      ],
+      "offset_from_image_center_px": [
+        -125.02934265136719,
+        52.9732666015625
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 0.34857029546051305,
+        "visible": true,
+        "reference_xy": [
+          194.8049545288086,
+          232.6666009426117
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "file": "04.png",
+      "sha256": "044f4f1d57f1a934de80462341818774b73c9e7c40447b0ca2ef0161890b34cb",
+      "action": "PICK",
+      "slot": null,
+      "carried_or_pick_color": 6,
+      "station": "RAW",
+      "feature": "pick_top",
+      "expected_observed_color": 6,
+      "capture_window_xyxy": [
+        145,
+        174,
+        245,
+        268
+      ],
+      "detections_in_window": [
+        {
+          "color": 6,
+          "score": 0.9935612678527832,
+          "center": [
+            195.59707641601562,
+            232.57728576660156
+          ]
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        195.59707641601562,
+        232.57728576660156
+      ],
+      "offset_from_image_center_px": [
+        -124.40292358398438,
+        52.57728576660156
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 0.7971413205060628,
+        "visible": true,
+        "reference_xy": [
+          194.8049545288086,
+          232.6666009426117
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "file": "06.png",
+      "sha256": "ac0c3dea698ee2fa922c53bd4316c6170618b234b201a6d6458b0d9ca8b6c7d1",
+      "action": "PLACE",
+      "slot": 1,
+      "carried_or_pick_color": 1,
+      "station": "PROCESS",
+      "feature": "empty_rings",
+      "expected_observed_color": null,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [],
+      "rings_in_window": [
+        {
+          "center": [
+            238.4099884033203,
+            196.96194458007812
+          ],
+          "stroke_radii_px": [
+            27,
+            31,
+            35,
+            39
+          ],
+          "read_slot": 1,
+          "interior_paper_fraction": 0.9698600645855759,
+          "appears_empty": true
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        238.4099884033203,
+        196.96194458007812
+      ],
+      "offset_from_image_center_px": [
+        -81.59001159667969,
+        16.961944580078125
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 0.6802542436052836,
+        "visible": true,
+        "reference_xy": [
+          238.84265899658203,
+          197.4868655204773
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "file": "07.png",
+      "sha256": "720fcb8d417f4c3eb96795dc9b405fbd9bb661ac874d251a820250d0f957b998",
+      "action": "PLACE",
+      "slot": 2,
+      "carried_or_pick_color": 5,
+      "station": "PROCESS",
+      "feature": "empty_rings",
+      "expected_observed_color": null,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [],
+      "rings_in_window": [
+        {
+          "center": [
+            238.41641235351562,
+            196.98244094848633
+          ],
+          "stroke_radii_px": [
+            27,
+            31,
+            35,
+            39
+          ],
+          "read_slot": 2,
+          "interior_paper_fraction": 0.9353448275862069,
+          "appears_empty": true
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        238.41641235351562,
+        196.98244094848633
+      ],
+      "offset_from_image_center_px": [
+        -81.58358764648438,
+        16.982440948486328
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 0.6603934629383332,
+        "visible": true,
+        "reference_xy": [
+          238.84265899658203,
+          197.48685479164124
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "file": "08.png",
+      "sha256": "147355d9a3658e50d1f13c7550b2b3c31d1baee20b52146428cb7be71a1ead1d",
+      "action": "PLACE",
+      "slot": 3,
+      "carried_or_pick_color": 6,
+      "station": "PROCESS",
+      "feature": "empty_rings",
+      "expected_observed_color": null,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [],
+      "rings_in_window": [
+        {
+          "center": [
+            238.4202423095703,
+            196.98003768920898
+          ],
+          "stroke_radii_px": [
+            27,
+            31,
+            35,
+            39
+          ],
+          "read_slot": 3,
+          "interior_paper_fraction": 0.9321120689655172,
+          "appears_empty": true
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        238.4202423095703,
+        196.98003768920898
+      ],
+      "offset_from_image_center_px": [
+        -81.57975769042969,
+        16.980037689208984
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 0.6597762287816117,
+        "visible": true,
+        "reference_xy": [
+          238.84267807006836,
+          197.48684406280518
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "file": "09.png",
+      "sha256": "deba63c5a40333ca89ce9a0ac750689373a7c14f36be4e8f9470dbdec4493c19",
+      "action": "PICK",
+      "slot": 1,
+      "carried_or_pick_color": 1,
+      "station": "PROCESS",
+      "feature": "pick_top",
+      "expected_observed_color": 1,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [
+        {
+          "color": 1,
+          "score": 0.9743151664733887,
+          "center": [
+            223.356689453125,
+            201.54031372070312
+          ]
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        223.356689453125,
+        201.54031372070312
+      ],
+      "offset_from_image_center_px": [
+        -96.643310546875,
+        21.540313720703125
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 1.399375853191717,
+        "visible": true,
+        "reference_xy": [
+          224.39329147338867,
+          200.60025572776794
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "file": "10.png",
+      "sha256": "07d8d978ef3c1953562316a5cff7569b6c85a7e301be5cbb21b166a230b81541",
+      "action": "PICK",
+      "slot": 2,
+      "carried_or_pick_color": 5,
+      "station": "PROCESS",
+      "feature": "pick_top",
+      "expected_observed_color": 5,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [
+        {
+          "color": 5,
+          "score": 0.6746936440467834,
+          "center": [
+            223.86940002441406,
+            203.10763549804688
+          ]
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        223.86940002441406,
+        203.10763549804688
+      ],
+      "offset_from_image_center_px": [
+        -96.13059997558594,
+        23.107635498046875
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 2.5615365243074,
+        "visible": true,
+        "reference_xy": [
+          224.39329147338867,
+          200.60024499893188
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "file": "11.png",
+      "sha256": "c2c498e4857c9c1de614577f110a0b1d1e1b44b869fb7b1c4bf757e8ec24b24f",
+      "action": "PICK",
+      "slot": 3,
+      "carried_or_pick_color": 6,
+      "station": "PROCESS",
+      "feature": "pick_top",
+      "expected_observed_color": 6,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [
+        {
+          "color": 6,
+          "score": 0.975685715675354,
+          "center": [
+            223.02999877929688,
+            201.6670684814453
+          ]
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        223.02999877929688,
+        201.6670684814453
+      ],
+      "offset_from_image_center_px": [
+        -96.97000122070312,
+        21.667068481445312
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 1.7311201870512904,
+        "visible": true,
+        "reference_xy": [
+          224.393310546875,
+          200.60022354125977
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "file": "13.png",
+      "sha256": "d543af93e8a3ced03d61a3bdd781e4e604a81c8ed4517071020816de2acbb989",
+      "action": "PLACE",
+      "slot": 1,
+      "carried_or_pick_color": 1,
+      "station": "BUFFER",
+      "feature": "empty_rings",
+      "expected_observed_color": null,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [],
+      "rings_in_window": [
+        {
+          "center": [
+            238.42913055419922,
+            196.9746322631836
+          ],
+          "stroke_radii_px": [
+            27,
+            31,
+            35,
+            39
+          ],
+          "read_slot": 1,
+          "interior_paper_fraction": 0.9676724137931034,
+          "appears_empty": true
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        238.42913055419922,
+        196.9746322631836
+      ],
+      "offset_from_image_center_px": [
+        -81.57086944580078,
+        16.974632263183594
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 0.6583189952380801,
+        "visible": true,
+        "reference_xy": [
+          238.8426399230957,
+          197.48687624931335
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "file": "14.png",
+      "sha256": "b85c992ebe4795ce457e4e1ae1e2bf5a1ca884ca1f4444a2c6d1d1fe1d45ac07",
+      "action": "PLACE",
+      "slot": 2,
+      "carried_or_pick_color": 5,
+      "station": "BUFFER",
+      "feature": "empty_rings",
+      "expected_observed_color": null,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [],
+      "rings_in_window": [
+        {
+          "center": [
+            238.40695190429688,
+            196.97097778320312
+          ],
+          "stroke_radii_px": [
+            27,
+            31,
+            35,
+            39
+          ],
+          "read_slot": 2,
+          "interior_paper_fraction": 0.9310344827586207,
+          "appears_empty": true
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        238.40695190429688,
+        196.97097778320312
+      ],
+      "offset_from_image_center_px": [
+        -81.59304809570312,
+        16.970977783203125
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 0.6752553280816375,
+        "visible": true,
+        "reference_xy": [
+          238.84265899658203,
+          197.48685479164124
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "file": "15.png",
+      "sha256": "4ff26fbc114ffb2b28d06a180e65a85c4090b7b52c9ecf729843be9fc5c66345",
+      "action": "PLACE",
+      "slot": 3,
+      "carried_or_pick_color": 6,
+      "station": "BUFFER",
+      "feature": "empty_rings",
+      "expected_observed_color": null,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [],
+      "rings_in_window": [
+        {
+          "center": [
+            238.33555603027344,
+            196.92583847045898
+          ],
+          "stroke_radii_px": [
+            27,
+            31,
+            35,
+            39
+          ],
+          "read_slot": 3,
+          "interior_paper_fraction": 0.9354144241119483,
+          "appears_empty": true
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        238.33555603027344,
+        196.92583847045898
+      ],
+      "offset_from_image_center_px": [
+        -81.66444396972656,
+        16.925838470458984
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 0.7562199781305213,
+        "visible": true,
+        "reference_xy": [
+          238.84265899658203,
+          197.48683333396912
+        ]
+      }
+    },
+    {
+      "index": 17,
+      "file": "17.png",
+      "sha256": "1f8e54aa66e93a793fce615d7f6d8e8cdf82fb806d8c830d09f830c68f4f1056",
+      "action": "PICK",
+      "slot": null,
+      "carried_or_pick_color": 5,
+      "station": "RAW",
+      "feature": "pick_top",
+      "expected_observed_color": 5,
+      "capture_window_xyxy": [
+        145,
+        174,
+        245,
+        268
+      ],
+      "detections_in_window": [
+        {
+          "color": 5,
+          "score": 0.9838100671768188,
+          "center": [
+            195.04879760742188,
+            233.03147888183594
+          ]
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        195.04879760742188,
+        233.03147888183594
+      ],
+      "offset_from_image_center_px": [
+        -124.95120239257812,
+        53.03147888183594
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 0.4388674740273919,
+        "visible": true,
+        "reference_xy": [
+          194.80493545532227,
+          232.6666009426117
+        ]
+      }
+    },
+    {
+      "index": 18,
+      "file": "18.png",
+      "sha256": "17791a574f53a5ec98a089997eb7b42db4046356810ed16053adb3fadb66090c",
+      "action": "PICK",
+      "slot": null,
+      "carried_or_pick_color": 1,
+      "station": "RAW",
+      "feature": "pick_top",
+      "expected_observed_color": 1,
+      "capture_window_xyxy": [
+        145,
+        174,
+        245,
+        268
+      ],
+      "detections_in_window": [
+        {
+          "color": 1,
+          "score": 0.9884599447250366,
+          "center": [
+            194.37640380859375,
+            232.8709716796875
+          ]
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        194.37640380859375,
+        232.8709716796875
+      ],
+      "offset_from_image_center_px": [
+        -125.62359619140625,
+        52.8709716796875
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 0.47477022908009026,
+        "visible": true,
+        "reference_xy": [
+          194.80493545532227,
+          232.6666009426117
+        ]
+      }
+    },
+    {
+      "index": 19,
+      "file": "19.png",
+      "sha256": "6109bee0e50d6c5dc505e825fb5f4c0133f84e6f2f4ce13bf4ac262f7a7f0c58",
+      "action": "PICK",
+      "slot": null,
+      "carried_or_pick_color": 6,
+      "station": "RAW",
+      "feature": "pick_top",
+      "expected_observed_color": 6,
+      "capture_window_xyxy": [
+        145,
+        174,
+        245,
+        268
+      ],
+      "detections_in_window": [
+        {
+          "color": 6,
+          "score": 0.993550181388855,
+          "center": [
+            195.59814453125,
+            232.5769500732422
+          ]
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        195.59814453125,
+        232.5769500732422
+      ],
+      "offset_from_image_center_px": [
+        -124.40185546875,
+        52.57695007324219
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 0.7982593040565444,
+        "visible": true,
+        "reference_xy": [
+          194.80493545532227,
+          232.6666009426117
+        ]
+      }
+    },
+    {
+      "index": 21,
+      "file": "21.png",
+      "sha256": "42d9ad1ff58883054590e180a3099402a1f2083769662eb19cb7672c84a175d4",
+      "action": "PLACE",
+      "slot": 2,
+      "carried_or_pick_color": 5,
+      "station": "PROCESS",
+      "feature": "empty_rings",
+      "expected_observed_color": null,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [],
+      "rings_in_window": [
+        {
+          "center": [
+            238.43239974975586,
+            197.04934692382812
+          ],
+          "stroke_radii_px": [
+            27,
+            31,
+            35,
+            39
+          ],
+          "read_slot": 2,
+          "interior_paper_fraction": 0.9352051835853131,
+          "appears_empty": true
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        238.43239974975586,
+        197.04934692382812
+      ],
+      "offset_from_image_center_px": [
+        -81.56760025024414,
+        17.049346923828125
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 0.5997975373044513,
+        "visible": true,
+        "reference_xy": [
+          238.8426971435547,
+          197.48685479164124
+        ]
+      }
+    },
+    {
+      "index": 22,
+      "file": "22.png",
+      "sha256": "2482cc40b52cfe7ba9e3184a9a9236021e22c595a250cd8465e91e001aafcad4",
+      "action": "PLACE",
+      "slot": 3,
+      "carried_or_pick_color": 1,
+      "station": "PROCESS",
+      "feature": "empty_rings",
+      "expected_observed_color": null,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [],
+      "rings_in_window": [
+        {
+          "center": [
+            238.4202423095703,
+            196.98003768920898
+          ],
+          "stroke_radii_px": [
+            27,
+            31,
+            35,
+            39
+          ],
+          "read_slot": 3,
+          "interior_paper_fraction": 0.9321120689655172,
+          "appears_empty": true
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        238.4202423095703,
+        196.98003768920898
+      ],
+      "offset_from_image_center_px": [
+        -81.57975769042969,
+        16.980037689208984
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 0.6598049236743425,
+        "visible": true,
+        "reference_xy": [
+          238.8426971435547,
+          197.4868655204773
+        ]
+      }
+    },
+    {
+      "index": 23,
+      "file": "23.png",
+      "sha256": "c2b52081985b8d46a88eefbb7668264781f810453fa965a67c4353339b6abb61",
+      "action": "PLACE",
+      "slot": 1,
+      "carried_or_pick_color": 6,
+      "station": "PROCESS",
+      "feature": "empty_rings",
+      "expected_observed_color": null,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [],
+      "rings_in_window": [
+        {
+          "center": [
+            238.4099884033203,
+            196.96194458007812
+          ],
+          "stroke_radii_px": [
+            27,
+            31,
+            35,
+            39
+          ],
+          "read_slot": 1,
+          "interior_paper_fraction": 0.9698600645855759,
+          "appears_empty": true
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        238.4099884033203,
+        196.96194458007812
+      ],
+      "offset_from_image_center_px": [
+        -81.59001159667969,
+        16.961944580078125
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 0.6802619501650414,
+        "visible": true,
+        "reference_xy": [
+          238.8426971435547,
+          197.48684406280518
+        ]
+      }
+    },
+    {
+      "index": 24,
+      "file": "24.png",
+      "sha256": "d5d2e4b1429f8b8f0ac7e72de4d7e4970ca484ca854526be09ff14a3873835c5",
+      "action": "PICK",
+      "slot": 2,
+      "carried_or_pick_color": 5,
+      "station": "PROCESS",
+      "feature": "pick_top",
+      "expected_observed_color": 5,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [
+        {
+          "color": 5,
+          "score": 0.7927964925765991,
+          "center": [
+            223.47982788085938,
+            203.3667755126953
+          ]
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        223.47982788085938,
+        203.3667755126953
+      ],
+      "offset_from_image_center_px": [
+        -96.52017211914062,
+        23.366775512695312
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 2.913447530273581,
+        "visible": true,
+        "reference_xy": [
+          224.39332962036133,
+          200.60024499893188
+        ]
+      }
+    },
+    {
+      "index": 25,
+      "file": "25.png",
+      "sha256": "ebd6b8d3d860a0866d15e1e31163f85d398fce651294fa591c9622f6f82534e9",
+      "action": "PICK",
+      "slot": 3,
+      "carried_or_pick_color": 1,
+      "station": "PROCESS",
+      "feature": "pick_top",
+      "expected_observed_color": 1,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [
+        {
+          "color": 1,
+          "score": 0.9626409411430359,
+          "center": [
+            223.2379608154297,
+            201.63690185546875
+          ]
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        223.2379608154297,
+        201.63690185546875
+      ],
+      "offset_from_image_center_px": [
+        -96.76203918457031,
+        21.63690185546875
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 1.5522603742562788,
+        "visible": true,
+        "reference_xy": [
+          224.39332962036133,
+          200.60025572776794
+        ]
+      }
+    },
+    {
+      "index": 26,
+      "file": "26.png",
+      "sha256": "ce6a522989ac4e682306876b4e593462d2065503b2bb6003b34b74b22a1708e8",
+      "action": "PICK",
+      "slot": 1,
+      "carried_or_pick_color": 6,
+      "station": "PROCESS",
+      "feature": "pick_top",
+      "expected_observed_color": 6,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [
+        {
+          "color": 6,
+          "score": 0.9743378162384033,
+          "center": [
+            222.97726440429688,
+            201.63661193847656
+          ]
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        222.97726440429688,
+        201.63661193847656
+      ],
+      "offset_from_image_center_px": [
+        -97.02273559570312,
+        21.636611938476562
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 1.7548052900630506,
+        "visible": true,
+        "reference_xy": [
+          224.39332962036133,
+          200.60022354125977
+        ]
+      }
+    },
+    {
+      "index": 28,
+      "file": "28.png",
+      "sha256": "7d99364ae59335b29a163e1d6494492c2dc88d9a041018953b0be198a095e66a",
+      "action": "PLACE",
+      "slot": 2,
+      "carried_or_pick_color": 5,
+      "station": "BUFFER",
+      "feature": "support_top",
+      "expected_observed_color": 5,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [
+        {
+          "color": 5,
+          "score": 0.40177595615386963,
+          "center": [
+            236.4829559326172,
+            198.1416015625
+          ]
+        }
+      ],
+      "status": "HOLD",
+      "reason": "INSUFFICIENT_TOP_CONFIDENCE",
+      "center_xy": null,
+      "offset_from_image_center_px": null,
+      "retry": {
+        "file": "mission_retry/28.png",
+        "sha256": "e934ce3e435d0352ee296b56943a2e5976d006754a6a8cb121f76ed5b920ee53",
+        "station": "BUFFER",
+        "feature": "support_top",
+        "expected_observed_color": 5,
+        "capture_window_xyxy": [
+          185,
+          162,
+          279,
+          236
+        ],
+        "detections_in_window": [],
+        "status": "HOLD",
+        "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+        "center_xy": null,
+        "offset_from_image_center_px": null,
+        "offline_score": {
+          "result": "HOLD",
+          "error_px": null,
+          "visible": true,
+          "reference_xy": [
+            224.393310546875,
+            200.60024499893188
+          ]
+        }
+      },
+      "offline_score": {
+        "result": "HOLD",
+        "error_px": null,
+        "visible": true,
+        "reference_xy": [
+          224.393310546875,
+          200.60024499893188
+        ]
+      }
+    },
+    {
+      "index": 29,
+      "file": "29.png",
+      "sha256": "a23a031a99aa3bef2f467a4d34739f5046e39d8810ab1f14203ea9ded479b6f3",
+      "action": "PLACE",
+      "slot": 1,
+      "carried_or_pick_color": 1,
+      "station": "BUFFER",
+      "feature": "support_top",
+      "expected_observed_color": 1,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [
+        {
+          "color": 1,
+          "score": 0.9620267748832703,
+          "center": [
+            223.75494384765625,
+            201.93252563476562
+          ]
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        223.75494384765625,
+        201.93252563476562
+      ],
+      "offset_from_image_center_px": [
+        -96.24505615234375,
+        21.932525634765625
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 1.477323165488512,
+        "visible": true,
+        "reference_xy": [
+          224.393310546875,
+          200.60024499893188
+        ]
+      }
+    },
+    {
+      "index": 30,
+      "file": "30.png",
+      "sha256": "56066771cb849091e500509225f3e3c8c3066420b5708dcea633150cbb58ce99",
+      "action": "PLACE",
+      "slot": 3,
+      "carried_or_pick_color": 6,
+      "station": "BUFFER",
+      "feature": "support_top",
+      "expected_observed_color": 6,
+      "capture_window_xyxy": [
+        185,
+        162,
+        279,
+        236
+      ],
+      "detections_in_window": [
+        {
+          "color": 6,
+          "score": 0.9744840264320374,
+          "center": [
+            223.6221466064453,
+            202.0277099609375
+          ]
+        }
+      ],
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        223.6221466064453,
+        202.0277099609375
+      ],
+      "offset_from_image_center_px": [
+        -96.37785339355469,
+        22.0277099609375
+      ],
+      "offline_score": {
+        "result": "ON_TARGET",
+        "error_px": 1.6224613002974706,
+        "visible": true,
+        "reference_xy": [
+          224.393310546875,
+          200.60023427009583
+        ]
+      }
+    }
+  ]
+}

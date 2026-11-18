@@ -1,0 +1,300 @@
+{
+  "frames": {
+    "train-31/0-road.png": {
+      "road_mask": "masks/train-31/0-road.png",
+      "topfaces": []
+    },
+    "train-31/1-raw.png": {
+      "road_mask": "masks/train-31/1-raw.png",
+      "topfaces": [
+        {
+          "color_id": 5,
+          "center_xy": [
+            179.23614501953125,
+            233.87526869773865
+          ]
+        },
+        {
+          "color_id": 6,
+          "center_xy": [
+            286.9582939147949,
+            65.07738590240479
+          ]
+        }
+      ]
+    },
+    "train-31/2-process.png": {
+      "road_mask": "masks/train-31/2-process.png",
+      "topfaces": [
+        {
+          "color_id": 5,
+          "center_xy": [
+            68.97615432739258,
+            183.83363842964172
+          ]
+        }
+      ]
+    },
+    "train-31/3-buffer.png": {
+      "road_mask": "masks/train-31/3-buffer.png",
+      "topfaces": [
+        {
+          "color_id": 1,
+          "center_xy": [
+            67.5023889541626,
+            212.39614963531494
+          ]
+        }
+      ]
+    },
+    "train-31/4-stowed.png": {
+      "road_mask": "masks/train-31/4-stowed.png",
+      "topfaces": [
+        {
+          "color_id": 1,
+          "center_xy": [
+            52.911086082458496,
+            153.12984466552734
+          ]
+        }
+      ]
+    },
+    "train-31/5-road2.png": {
+      "road_mask": "masks/train-31/5-road2.png",
+      "topfaces": []
+    },
+    "train-52/0-road.png": {
+      "road_mask": "masks/train-52/0-road.png",
+      "topfaces": []
+    },
+    "train-52/1-raw.png": {
+      "road_mask": "masks/train-52/1-raw.png",
+      "topfaces": [
+        {
+          "color_id": 6,
+          "center_xy": [
+            182.63050079345703,
+            258.7468457221985
+          ]
+        }
+      ]
+    },
+    "train-52/2-process.png": {
+      "road_mask": "masks/train-52/2-process.png",
+      "topfaces": []
+    },
+    "train-52/3-buffer.png": {
+      "road_mask": "masks/train-52/3-buffer.png",
+      "topfaces": []
+    },
+    "train-52/4-stowed.png": {
+      "road_mask": "masks/train-52/4-stowed.png",
+      "topfaces": [
+        {
+          "color_id": 1,
+          "center_xy": [
+            83.79315376281738,
+            171.38058185577393
+          ]
+        },
+        {
+          "color_id": 5,
+          "center_xy": [
+            80.66930770874023,
+            290.27995705604553
+          ]
+        }
+      ]
+    },
+    "train-52/5-road2.png": {
+      "road_mask": "masks/train-52/5-road2.png",
+      "topfaces": []
+    },
+    "train-83/0-road.png": {
+      "road_mask": "masks/train-83/0-road.png",
+      "topfaces": []
+    },
+    "train-83/1-raw.png": {
+      "road_mask": "masks/train-83/1-raw.png",
+      "topfaces": [
+        {
+          "color_id": 6,
+          "center_xy": [
+            186.55096054077148,
+            212.13992357254028
+          ]
+        }
+      ]
+    },
+    "train-83/2-process.png": {
+      "road_mask": "masks/train-83/2-process.png",
+      "topfaces": []
+    },
+    "train-83/3-buffer.png": {
+      "road_mask": "masks/train-83/3-buffer.png",
+      "topfaces": [
+        {
+          "color_id": 1,
+          "center_xy": [
+            91.13940238952637,
+            189.69562768936157
+          ]
+        }
+      ]
+    },
+    "train-83/4-stowed.png": {
+      "road_mask": "masks/train-83/4-stowed.png",
+      "topfaces": [
+        {
+          "color_id": 1,
+          "center_xy": [
+            75.23765563964844,
+            223.87646555900574
+          ]
+        },
+        {
+          "color_id": 5,
+          "center_xy": [
+            86.6008186340332,
+            342.27270394563675
+          ]
+        }
+      ]
+    },
+    "train-83/5-road2.png": {
+      "road_mask": "masks/train-83/5-road2.png",
+      "topfaces": []
+    },
+    "val-94/0-road.png": {
+      "road_mask": "masks/val-94/0-road.png",
+      "topfaces": []
+    },
+    "val-94/1-raw.png": {
+      "road_mask": "masks/val-94/1-raw.png",
+      "topfaces": [
+        {
+          "color_id": 1,
+          "center_xy": [
+            171.65586471557617,
+            225.41633248329163
+          ]
+        },
+        {
+          "color_id": 5,
+          "center_xy": [
+            264.6063232421875,
+            48.05516481399536
+          ]
+        },
+        {
+          "color_id": 6,
+          "center_xy": [
+            64.53190803527832,
+            56.23819828033447
+          ]
+        }
+      ]
+    },
+    "val-94/2-process.png": {
+      "road_mask": "masks/val-94/2-process.png",
+      "topfaces": [
+        {
+          "color_id": 1,
+          "center_xy": [
+            361.0841751098633,
+            163.8413643836975
+          ]
+        },
+        {
+          "color_id": 5,
+          "center_xy": [
+            214.6854591369629,
+            178.6360216140747
+          ]
+        },
+        {
+          "color_id": 6,
+          "center_xy": [
+            68.28673839569092,
+            193.43065738677979
+          ]
+        }
+      ]
+    },
+    "val-94/3-buffer.png": {
+      "road_mask": "masks/val-94/3-buffer.png",
+      "topfaces": []
+    },
+    "val-94/4-stowed.png": {
+      "road_mask": "masks/val-94/4-stowed.png",
+      "topfaces": []
+    },
+    "val-94/5-road2.png": {
+      "road_mask": "masks/val-94/5-road2.png",
+      "topfaces": []
+    },
+    "test-115/0-road.png": {
+      "road_mask": "masks/test-115/0-road.png",
+      "topfaces": []
+    },
+    "test-115/1-raw.png": {
+      "road_mask": "masks/test-115/1-raw.png",
+      "topfaces": [
+        {
+          "color_id": 1,
+          "center_xy": [
+            172.3116683959961,
+            242.89371371269226
+          ]
+        },
+        {
+          "color_id": 6,
+          "center_xy": [
+            277.4871063232422,
+            72.49749183654785
+          ]
+        }
+      ]
+    },
+    "test-115/2-process.png": {
+      "road_mask": "masks/test-115/2-process.png",
+      "topfaces": [
+        {
+          "color_id": 1,
+          "center_xy": [
+            219.0825653076172,
+            221.16665124893188
+          ]
+        }
+      ]
+    },
+    "test-115/3-buffer.png": {
+      "road_mask": "masks/test-115/3-buffer.png",
+      "topfaces": [
+        {
+          "color_id": 1,
+          "center_xy": [
+            73.46193790435791,
+            212.1808648109436
+          ]
+        }
+      ]
+    },
+    "test-115/4-stowed.png": {
+      "road_mask": "masks/test-115/4-stowed.png",
+      "topfaces": [
+        {
+          "color_id": 1,
+          "center_xy": [
+            89.92611885070801,
+            307.1834206581116
+          ]
+        }
+      ]
+    },
+    "test-115/5-road2.png": {
+      "road_mask": "masks/test-115/5-road2.png",
+      "topfaces": []
+    }
+  }
+}
