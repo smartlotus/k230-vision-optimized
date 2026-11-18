@@ -19,12 +19,12 @@
   ],
   "branch": "ops/topface-production-fps-20261116",
   "state": "ready",
-  "claimed": true,
+  "claimed": false,
   "agent": "coordinator",
   "session": "old-sd-output-guard-20261118-d",
-  "revision": 9,
+  "revision": 10,
   "handoff": ".ops/handoffs/board-output-data-20261118/20261118T063300-69c42841.json",
-  "updated_at": "2026-11-18T06:33:00+00:00",
+  "updated_at": "2026-11-18T06:33:21+00:00",
   "reconciliation_note": {
     "reason": "Record old-card data-volume guard in the output handoff after v1.8-36 reported /data total/free=0 and /sdcard free=0.",
     "at": "2026-11-18T06:32:59+00:00"
