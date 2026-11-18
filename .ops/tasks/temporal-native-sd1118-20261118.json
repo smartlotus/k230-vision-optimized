@@ -20,12 +20,12 @@
   ],
   "branch": "ops/temporal-camera-v1-20261117",
   "state": "ready",
-  "claimed": true,
+  "claimed": false,
   "agent": "coordinator",
   "session": "temporal-native-sd1118-20261118-b",
-  "revision": 6,
+  "revision": 7,
   "handoff": ".ops/handoffs/temporal-native-sd1118-20261118/20261118T043206-2ee81912.json",
-  "updated_at": "2026-11-18T04:32:08+00:00",
+  "updated_at": "2026-11-18T04:32:55+00:00",
   "reconciliation_note": {
     "reason": "Continue same replacement-SD smoke after physical USB replug. Reconcile prior checkpoint before adding sd1118_10b and sd1118_60c evidence.",
     "at": "2026-11-18T04:31:45+00:00"
