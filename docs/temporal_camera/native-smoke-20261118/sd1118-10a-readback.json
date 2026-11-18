@@ -1,0 +1,135 @@
+{
+  ".json": {
+    "unlocalized": 0,
+    "native_ai2d_pixel_equivalence": "NOT RUN",
+    "nncase_runtime": "2.11.0",
+    "latency": {
+      "history": {
+        "p95_ms_upper": null,
+        "mean_ms": null,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": null,
+        "samples": 0,
+        "p50_ms_upper": null
+      },
+      "capture": {
+        "p95_ms_upper": null,
+        "mean_ms": null,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": null,
+        "samples": 0,
+        "p50_ms_upper": null
+      },
+      "rgb": {
+        "p95_ms_upper": null,
+        "mean_ms": null,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": null,
+        "samples": 0,
+        "p50_ms_upper": null
+      },
+      "kpu": {
+        "p95_ms_upper": null,
+        "mean_ms": null,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": null,
+        "samples": 0,
+        "p50_ms_upper": null
+      },
+      "ai2d": {
+        "p95_ms_upper": null,
+        "mean_ms": null,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": null,
+        "samples": 0,
+        "p50_ms_upper": null
+      },
+      "decode": {
+        "p95_ms_upper": null,
+        "mean_ms": null,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": null,
+        "samples": 0,
+        "p50_ms_upper": null
+      },
+      "cycle": {
+        "p95_ms_upper": null,
+        "mean_ms": null,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": null,
+        "samples": 0,
+        "p50_ms_upper": null
+      },
+      "filter": {
+        "p95_ms_upper": null,
+        "mean_ms": null,
+        "overflow_over_1000ms": 0,
+        "p99_ms_upper": null,
+        "samples": 0,
+        "p50_ms_upper": null
+      }
+    },
+    "history_resets": 0,
+    "real_camera_accuracy": "NOT RUN",
+    "memory_sampling_failures": 0,
+    "mode": "filtered",
+    "active_memory_samples": 0,
+    "status": "RUN_FAILED",
+    "history_window": 1,
+    "requested_frames": 10,
+    "temporal_states": {},
+    "cleanup_errors": [],
+    "model_bytes": 2646600,
+    "error": "Selected UVC source differs from the verified OV2735",
+    "final_memory": {
+      "sys_heap": {
+        "free": 64734592,
+        "used": 2385216,
+        "total": 67108864
+      },
+      "sys_mmz": {
+        "free": 535822336,
+        "used": 0,
+        "total": 535822336
+      },
+      "sys_page": {
+        "free": 437932032,
+        "used": 22556672,
+        "total": 460488704
+      },
+      "python_heap_used": 1095872,
+      "python_heap_free": 3049792
+    },
+    "dropped": 0,
+    "device": "(sysname='rt-smart', nodename='rt-smart', release='v1.8-0-gc2d1f5c', version='v1.8-0-gc2d1f5c on 2026-07-03', machine='k230_canmv_lckfb')",
+    "expected_nncase_runtime": "2.11.0",
+    "kmodel_sha256": "ac86c72a648df1c9f484c920180b0bcb9ae877f26d20c2cea364969d0d921fbc",
+    "initial_memory": {
+      "sys_heap": {
+        "free": 64734592,
+        "used": 2385216,
+        "total": 67108864
+      },
+      "sys_mmz": {
+        "free": 535822336,
+        "used": 0,
+        "total": 535822336
+      },
+      "sys_page": {
+        "free": 437932032,
+        "used": 22556672,
+        "total": 460488704
+      },
+      "python_heap_used": 3269536,
+      "python_heap_free": 876128
+    },
+    "active_pool_peaks": {},
+    "frames": 0
+  },
+  "-entry.json": {
+    "error": "Selected UVC source differs from the verified OV2735",
+    "status": "ENTRY_FAILED",
+    "run_id": "sd1118_10a",
+    "root": "/data/k230_temporal_v1_sd1118"
+  }
+}

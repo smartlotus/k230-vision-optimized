@@ -1,0 +1,48 @@
+{
+  "observed_date_local": "2026-11-18",
+  "board": "LCKFB-LSPI-K230-1G-CanMV",
+  "port": "COM3",
+  "firmware": "v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+  "runtime": "2.11.0",
+  "previous_successful_usb_firmware": "v1.8-36-gae2f20da0467a8e70659f032b240aae50272c49",
+  "sdcard_mounts": {
+    "/sdcard": {
+      "total_bytes": 524156928,
+      "free_bytes": 117309440,
+      "interpretation": "small boot and compatibility partition"
+    },
+    "/data": {
+      "total_bytes": 61456908288,
+      "free_bytes": 61456515072,
+      "interpretation": "main data partition of the new 64G card"
+    }
+  },
+  "write_probe": {
+    "path": "/data/k230_sd_probe_20261118",
+    "bytes": 256,
+    "readback_equal": true,
+    "cleanup": "PASS"
+  },
+  "deployment": {
+    "root": "/data/k230_temporal_v1_sd1118",
+    "status": "VERIFIED_BOARD_FILES_ONLY",
+    "files": 9,
+    "model_sha256": "ac86c72a648df1c9f484c920180b0bcb9ae877f26d20c2cea364969d0d921fbc"
+  },
+  "uvc": {
+    "expected_previous_device": "openaicam#openaicam",
+    "current_probe": [false, null],
+    "current_modes": [],
+    "reprobe_samples": 5,
+    "reprobe_all_false": true,
+    "meaning": "K230 currently sees no USB video device"
+  },
+  "run": {
+    "run_id": "sd1118_10a",
+    "status": "ENTRY_FAILED",
+    "frames": 0,
+    "error": "Selected UVC source differs from the verified OV2735",
+    "model_and_data_readable": true,
+    "inference_started": false
+  }
+}

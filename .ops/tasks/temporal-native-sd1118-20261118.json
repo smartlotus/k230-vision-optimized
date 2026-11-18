@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "temporal-native-sd1118-20261118",
+  "title": "Continue CameraXY smoke on replacement 64G SD",
+  "paths": [
+    "research/temporal_camera/native_smoke.py",
+    "research/temporal_camera/board_multiroute.py",
+    "research/temporal_camera/test_native_smoke.py",
+    "docs/temporal_camera/native-smoke-20261118"
+  ],
+  "lane": "serial",
+  "resources": [
+    "COM3",
+    "K230-media"
+  ],
+  "depends": [],
+  "acceptance": [
+    "Replacement 64G SD data mount capacity and writeback verified; CameraXY package readback verified; fresh UVC enumeration and bounded native smoke recorded without accuracy or road testing"
+  ],
+  "branch": "ops/temporal-camera-v1-20261117",
+  "state": "ready",
+  "claimed": true,
+  "agent": "coordinator",
+  "session": "temporal-native-sd1118-20261118-a",
+  "revision": 3,
+  "handoff": ".ops/handoffs/temporal-native-sd1118-20261118/20261118T042139-a93a19e2.json",
+  "updated_at": "2026-11-18T04:21:40+00:00"
+}
