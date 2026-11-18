@@ -1,5 +1,22 @@
 # K230 右侧相机与两批搬运仿真 R2
 
+## R3 连续仿真
+
+R3 的验收、套件和预算见 [执行计划](../../docs/plans/k230-vision-sim-iterations.md)。
+从 R3 工作树根目录运行首批 R3.0 用例。
+
+```powershell
+$hub = 'C:/Users/28389/Desktop/k230-project'
+$out = Join-Path $hub 'experiments/continuous-sim'
+python -B research/car_sim/run_campaign.py --hub $hub --out $out --campaign r30-smoke --profile r30 --resume
+python -B research/car_sim/run_campaign.py --hub $hub --out $out --campaign r30-smoke --status
+```
+
+`r30` 跑冻结 R2 工位观测、6 个合法任务、2 个扫码负例、主机 C/V/A 回放和队列恢复探针。扫码从 Blender 前视机位的 PNG 解码，随后使用现有离散工作流。计划中的视觉行驶和抓放闭环由后续套件验收。
+`full` 会报告当前实现可执行的用例和因缺失实现或依赖而受阻的用例。报告按套件记录范围。
+
+运行目录包含 `manifest.json`、`queue.sqlite`、`status.json`、`attempts/` 和 `episodes/`。在该目录下创建 `STOP` 文件会在一致断点退出。移除 STOP 后用同一条 `--resume` 命令接续。输入或源码改变后使用新的 campaign ID。报告在 `episodes/delivery/report.md`。
+
 压缩包内的车模、短片和验证记录都在 `research/car_sim/output/`。以下缩写 `output/` 均指这个目录。
 
 打开 `output/vehicle.blend` 检查机械结构，按空格播放。第 1 帧收拢，第 40 帧展开到右侧最高点，第 85 帧在右侧降到最低，第 110 帧回到行驶高度。在 `output/competition_round.blend` 播放整轮参考轨迹，可在时间轴按工序跳转。中文预览在 `output/车体右侧相机.png`、`output/工位相机.png` 和 `output/整轮回放.mp4`。完整的图像决策记录见 `output/live_profile_round.json`。

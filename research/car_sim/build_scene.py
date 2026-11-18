@@ -23,6 +23,8 @@ from vehicle import build_vehicle, set_vehicle_pose
 
 TASK = "156+123+516+231"
 COLORS = {1: (.73, .014, .015), 5: (.016, .017, .019), 6: (.06, .50, .82)}
+OTHER_COLORS = {2: (.72, .58, .008), 3: (.01, .04, .6), 4: (.018, .47, .056)}
+RAW_ORDERS = ((1, 5, 6), (5, 1, 6))
 CARGO = [(-.068, -.053, .081), (0, -.053, .081), (.068, -.053, .081)]
 
 
@@ -176,11 +178,12 @@ def add_qr_board(texture):
     patch.data.materials.append(mat)
 
 
-def make_blocks(asset_dir):
+def make_blocks(asset_dir, orders=RAW_ORDERS):
     first, _, receipt = import_cad(asset_dir)
     blocks = {}
-    for batch in (1, 2):
-        for color in COLORS:
+    palette = {**COLORS, **OTHER_COLORS}
+    for batch, order in enumerate(orders, 1):
+        for color in sorted(order):
             obj = first if not blocks else first.copy()
             if blocks:
                 bpy.context.collection.objects.link(obj)
@@ -189,7 +192,7 @@ def make_blocks(asset_dir):
                 obj.data.materials.append(None)
             slot = obj.material_slots[0]
             slot.link = "OBJECT"
-            slot.material = bpy.data.materials.get(f"Task color {color}") or material(f"Task color {color}", COLORS[color])
+            slot.material = bpy.data.materials.get(f"Task color {color}") or material(f"Task color {color}", palette[color])
             obj["road_label"], obj["batch"], obj["color_id"] = 5, batch, color
             blocks[batch, color] = obj
     return blocks, receipt
@@ -208,8 +211,8 @@ def target_slot(station, slot, layer=1):
     return Vector((-1.125, t, .003+.060*(layer-1)))
 
 
-def raw_pos(batch, color, spin, top_z):
-    order = (1,5,6) if batch == 1 else (5,1,6)
+def raw_pos(batch, color, spin, top_z, orders=RAW_ORDERS):
+    order = orders[batch - 1]
     a = -math.pi/2 + order.index(color)*math.tau/3 + spin
     return Vector((.09*math.cos(a), 1.27+.09*math.sin(a), top_z))
 
@@ -234,7 +237,7 @@ def print_slot_numbers():
             bpy.context.object["road_label"]=6
 
 
-def timeline(scene, rig, blocks, plan, table_z):
+def timeline(scene, rig, blocks, plan, table_z, orders=RAW_ORDERS):
     steps = plan["steps"]
     pose = list(steps[0]["poses"][0])
     frame, fraction, spin, batch = 1, 0., 0., 1
@@ -255,7 +258,7 @@ def timeline(scene, rig, blocks, plan, table_z):
             elif ident in placed:
                 pos = placed[ident]
             elif ident[0] == batch:
-                pos = raw_pos(*ident, spin, table_z)
+                pos = raw_pos(*ident, spin, table_z, orders)
             else:
                 pos = (0, 0, -1.)
             obj.location = pos
@@ -305,7 +308,7 @@ def timeline(scene, rig, blocks, plan, table_z):
             if station=="RAW" and ident[0]!=batch:
                 frame+=1; batch=ident[0]; spin=0.; key()
             if action=="PICK" and station=="RAW":
-                order=(1,5,6) if batch==1 else (5,1,6)
+                order=orders[batch - 1]
                 desired=-order.index(ident[1])*math.tau/3
                 delta=desired-spin
                 count=max(1,math.ceil(abs(delta)/.15))
@@ -315,7 +318,7 @@ def timeline(scene, rig, blocks, plan, table_z):
             capture=frame
             shift(0.)
             if action=="PICK":
-                src=raw_pos(*ident,spin,table_z) if station=="RAW" else placed.pop(ident)
+                src=raw_pos(*ident,spin,table_z,orders) if station=="RAW" else placed.pop(ident)
                 carrier_slot=next(i for i in range(3) if i not in carried.values())
                 dst=local_to_world(pose,CARGO[carrier_slot])
             else:
@@ -351,7 +354,7 @@ def timeline(scene, rig, blocks, plan, table_z):
                         for point in curve.keyframe_points:
                             point.interpolation="LINEAR"
     assert len(placed)==6 and not carried
-    for color in COLORS:
+    for color in orders[0]:
         assert (placed[2,color]-placed[1,color]-Vector((0,0,.06))).length<1e-6
     scene.frame_end=frame
     scene.frame_set(1)
@@ -402,9 +405,15 @@ def labels(scene, cam, blocks, path):
     return visible
 
 
-def run(hub,out):
-    out.mkdir(parents=True,exist_ok=True)
-    vehicle_asset(out)
+def prepare_round(hub, task=TASK, start_id="START_1", orders=RAW_ORDERS, qr_texture=None):
+    from core.task_parser import parse_task
+
+    parsed = parse_task(task)
+    if len(orders) != 2 or any(
+        len(order) != 3 or set(order) != set(colors)
+        for order, colors in zip(orders, (parsed.batch1_colors, parsed.batch2_colors))
+    ):
+        raise ValueError("Each turntable order must contain exactly the colors of its batch")
     field=hub/"worktrees/ops-temporal-camera-v1/docs/temporal_camera/map-correction/field_gray_v1.blend"
     assert hashlib.sha256(field.read_bytes()).hexdigest()=="b5bea8c6738bc7ebd8d57cdae34af99d1cf10b3fc782ea9c6c986e8802441e95"
     bpy.ops.wm.open_mainfile(filepath=str(field))
@@ -418,7 +427,7 @@ def run(hub,out):
         elif obj.hide_render:
             obj.hide_viewport=True
     print_slot_numbers()
-    add_qr_board(HERE.parents[1]/"k230_transport_mvp/data/task_qr.png")
+    add_qr_board(qr_texture or HERE.parents[1]/"k230_transport_mvp/data/task_qr.png")
     rig=build_vehicle()
     front=camera("QR camera / assumed mount",(0,.062,.155),(0,.30,.155),parent=rig["root"])
     front.data.lens=26
@@ -428,15 +437,22 @@ def run(hub,out):
     overhead.location=(0,0,4)
     overhead.rotation_euler=(0,0,0)
     cad=hub/"webhelp/camera_xy_v2_audit_20261117/k230_material_block_model_bundle/k230_material_block_model"
-    blocks,receipt=make_blocks(cad)
-    plan=build_round()
+    blocks,receipt=make_blocks(cad, orders)
+    plan=build_round(task, start_id)
     table=scene.objects["Turntable"]
-    records,views=timeline(scene,rig,blocks,plan,table.location.z+table.dimensions.z/2)
+    records,views=timeline(scene,rig,blocks,plan,table.location.z+table.dimensions.z/2,orders)
     scene.camera=overhead
     screen_view(overhead)
-    scene["task"]=TASK
+    scene["task"]=task
     scene["scope"]="Prescribed kinematic mission; movable side camera, real CAD, frozen perception evaluated on separate renders."
     scene["body_axes"]="+Y front, +X right, +Z up"
+    return scene, rig, front, overhead, blocks, plan, records, views, receipt
+
+
+def run(hub,out):
+    out.mkdir(parents=True,exist_ok=True)
+    vehicle_asset(out)
+    scene,rig,front,overhead,blocks,plan,records,views,receipt=prepare_round(hub)
     bpy.context.preferences.filepaths.save_version=0
     bpy.ops.wm.save_as_mainfile(filepath=str(out/"competition_round.blend"),compress=True)
     write_json(out/"round.json",dict(plan=plan,timeline=records,cad=receipt,frame_end=scene.frame_end))

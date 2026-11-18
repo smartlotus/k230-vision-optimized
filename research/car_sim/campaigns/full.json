@@ -1,0 +1,196 @@
+{
+  "version": "continuous-sim-v1",
+  "scope": "PC_SIM_ONLY",
+  "transport": "loopback",
+  "required_suites": [
+    "T00",
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05",
+    "T06",
+    "T07",
+    "T08",
+    "T09",
+    "T10",
+    "T11",
+    "T12",
+    "T13"
+  ],
+  "groups": {
+    "development": 36,
+    "validation": 12,
+    "sealed": 12,
+    "smoke_in_development": 6
+  },
+  "resources": {
+    "render_workers": 1,
+    "inference_workers": 2
+  },
+  "policy": {
+    "heartbeat_s": 30,
+    "infra_retries": 2,
+    "max_dev_cycles": 3,
+    "sealed_openings": 1,
+    "soak_episodes": 100
+  },
+  "jobs": [
+    {
+      "id": "baseline",
+      "after": [],
+      "suites": [
+        "T00"
+      ]
+    },
+    {
+      "id": "rig",
+      "after": [
+        "baseline"
+      ],
+      "suites": [
+        "T01"
+      ]
+    },
+    {
+      "id": "protocol",
+      "after": [
+        "baseline"
+      ],
+      "suites": [
+        "T10"
+      ]
+    },
+    {
+      "id": "scenarios",
+      "after": [
+        "baseline"
+      ],
+      "suites": [
+        "T02"
+      ]
+    },
+    {
+      "id": "road_observe",
+      "after": [
+        "scenarios",
+        "rig"
+      ],
+      "suites": [
+        "T03"
+      ]
+    },
+    {
+      "id": "drive",
+      "after": [
+        "road_observe",
+        "protocol"
+      ],
+      "suites": [
+        "T04"
+      ]
+    },
+    {
+      "id": "align",
+      "after": [
+        "scenarios",
+        "rig",
+        "protocol"
+      ],
+      "suites": [
+        "T05"
+      ]
+    },
+    {
+      "id": "grasp",
+      "after": [
+        "align"
+      ],
+      "suites": [
+        "T06"
+      ]
+    },
+    {
+      "id": "carrier",
+      "after": [
+        "grasp",
+        "scenarios"
+      ],
+      "suites": [
+        "T07"
+      ]
+    },
+    {
+      "id": "flat_place",
+      "after": [
+        "carrier"
+      ],
+      "suites": [
+        "T08"
+      ]
+    },
+    {
+      "id": "physics_sweep",
+      "after": [
+        "baseline"
+      ],
+      "suites": [
+        "T09"
+      ]
+    },
+    {
+      "id": "stack",
+      "after": [
+        "flat_place",
+        "physics_sweep"
+      ],
+      "suites": [
+        "T09"
+      ]
+    },
+    {
+      "id": "development_rounds",
+      "after": [
+        "drive",
+        "stack",
+        "protocol"
+      ],
+      "suites": [
+        "T11"
+      ]
+    },
+    {
+      "id": "model_comparison",
+      "after": [
+        "development_rounds"
+      ],
+      "suites": [
+        "T12"
+      ]
+    },
+    {
+      "id": "locked_rounds",
+      "after": [
+        "model_comparison"
+      ],
+      "suites": [
+        "T11"
+      ]
+    },
+    {
+      "id": "soak_recovery",
+      "after": [
+        "locked_rounds"
+      ],
+      "suites": [
+        "T13"
+      ]
+    },
+    {
+      "id": "delivery",
+      "after": [],
+      "suites": [],
+      "trigger": "after_all_other_jobs_terminal"
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "scope": "R3.0 smoke on frozen R2 field and discrete workflow",
+  "manifest_id": "7b2b98c51a5a7219544e4003271affd6fb02f4b26529a41008c26c7202b7025b",
+  "local_campaign": "experiments/continuous-sim/r30-smoke-a03",
+  "local_recovery_campaign": "experiments/continuous-sim/r30-recovery-a01",
+  "status": {
+    "PASS": 12
+  },
+  "baseline": {
+    "ON_TARGET": 24,
+    "OFF_TARGET": 0,
+    "HOLD": 0
+  },
+  "suite_complete": [
+    "T00"
+  ],
+  "subset_verification": [
+    "T02",
+    "T10"
+  ],
+  "scenarios": [
+    {
+      "key": "qr-3000",
+      "seed": 3000,
+      "start_id": "START_1",
+      "split": "development",
+      "payload": "156+123+516+231",
+      "orders": [
+        [
+          6,
+          1,
+          5
+        ],
+        [
+          5,
+          1,
+          6
+        ]
+      ],
+      "state": "COMPLETE",
+      "decoded": "156+123+516+231",
+      "submissions": 31,
+      "seconds": 3.3289999999979045,
+      "rgb_bytes": 210856,
+      "rgb_sha256": "019c62dad6e1a38cbd261b33af660bebcdf7b172c13187e38661fc9e892f7568"
+    },
+    {
+      "key": "qr-3001",
+      "seed": 3001,
+      "start_id": "START_2",
+      "split": "development",
+      "payload": "651+312+165+213",
+      "orders": [
+        [
+          5,
+          1,
+          6
+        ],
+        [
+          6,
+          1,
+          5
+        ]
+      ],
+      "state": "COMPLETE",
+      "decoded": "651+312+165+213",
+      "submissions": 31,
+      "seconds": 3.2189999999973224,
+      "rgb_bytes": 210290,
+      "rgb_sha256": "e098855d831e5991066d60ed0c63948b3000a8829eeac709d1e84d489da66f0c"
+    },
+    {
+      "key": "qr-3002",
+      "seed": 3002,
+      "start_id": "START_1",
+      "split": "development",
+      "payload": "234+321+432+132",
+      "orders": [
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          4,
+          3,
+          2
+        ]
+      ],
+      "state": "COMPLETE",
+      "decoded": "234+321+432+132",
+      "submissions": 31,
+      "seconds": 3.2339999999967404,
+      "rgb_bytes": 211478,
+      "rgb_sha256": "55bb374ea0b92919041805658fb377badc8a23885152a7217159de93435b0f86"
+    },
+    {
+      "key": "qr-3003",
+      "seed": 3003,
+      "start_id": "START_2",
+      "split": "development",
+      "payload": "245+231+542+213",
+      "orders": [
+        [
+          5,
+          4,
+          2
+        ],
+        [
+          2,
+          4,
+          5
+        ]
+      ],
+      "state": "COMPLETE",
+      "decoded": "245+231+542+213",
+      "submissions": 31,
+      "seconds": 3.327999999994063,
+      "rgb_bytes": 210787,
+      "rgb_sha256": "8c02e4076a5794370ed16b09b409934485194ab8da7063c28e41acbf2a07d9b6"
+    },
+    {
+      "key": "qr-3004",
+      "seed": 3004,
+      "start_id": "START_1",
+      "split": "development",
+      "payload": "136+312+361+123",
+      "orders": [
+        [
+          3,
+          6,
+          1
+        ],
+        [
+          1,
+          3,
+          6
+        ]
+      ],
+      "state": "COMPLETE",
+      "decoded": "136+312+361+123",
+      "submissions": 31,
+      "seconds": 3.327999999994063,
+      "rgb_bytes": 212005,
+      "rgb_sha256": "59aabcafb1f2a4b8ba0971d8b956285e63d5279f7c5a9864b9b832ca957bf560"
+    },
+    {
+      "key": "qr-3005",
+      "seed": 3005,
+      "start_id": "START_2",
+      "split": "development",
+      "payload": "124+132+421+321",
+      "orders": [
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          4
+        ]
+      ],
+      "state": "COMPLETE",
+      "decoded": "124+132+421+321",
+      "submissions": 31,
+      "seconds": 3.2179999999934807,
+      "rgb_bytes": 211958,
+      "rgb_sha256": "9f685d80ab8026228776a1db2eab7e3c202efdbc7b8af9f7b150dc257449b696"
+    },
+    {
+      "key": "qr-3006",
+      "seed": 3006,
+      "start_id": "START_1",
+      "split": "negative",
+      "payload": "156+113+516+231",
+      "orders": [
+        [
+          6,
+          1,
+          5
+        ],
+        [
+          6,
+          1,
+          5
+        ]
+      ],
+      "state": "HOLD_INVALID_TASK",
+      "decoded": "156+113+516+231",
+      "submissions": 0,
+      "seconds": 3.2339999999967404,
+      "rgb_bytes": 211038,
+      "rgb_sha256": "00f3d8a2b982a99957d0445ec2013a1433b527d8f6580d6a0275961a8dae8d6e"
+    },
+    {
+      "key": "qr-3007",
+      "seed": 3007,
+      "start_id": "START_2",
+      "split": "negative",
+      "payload": "",
+      "orders": [
+        [
+          6,
+          5,
+          1
+        ],
+        [
+          6,
+          1,
+          5
+        ]
+      ],
+      "state": "HOLD_NO_QR",
+      "decoded": "",
+      "submissions": 0,
+      "seconds": 3.125,
+      "rgb_bytes": 193044,
+      "rgb_sha256": "81d9665dcf594b17c8e1bbda98d23a2c286d5979c4cd96f0501d8a1a9f372e8d"
+    }
+  ],
+  "protocol": {
+    "transport": "loopback byte stream",
+    "cases": {
+      "success": {
+        "status": "DONE",
+        "commands": 31,
+        "field_transfers": 24,
+        "confirmed": 31,
+        "frames": 148,
+        "duplicates_rejected": 31,
+        "matched_host_c_frames": 148
+      },
+      "timeout": {
+        "status": "UNCERTAIN",
+        "commands": 2,
+        "field_transfers": 0,
+        "confirmed": 1,
+        "frames": 9,
+        "duplicates_rejected": 2,
+        "matched_host_c_frames": 9
+      },
+      "ack-loss": {
+        "status": "UNCERTAIN",
+        "commands": 2,
+        "field_transfers": 1,
+        "confirmed": 1,
+        "frames": 9,
+        "duplicates_rejected": 2,
+        "matched_host_c_frames": 9
+      }
+    },
+    "protocol_test_exit_code": 0,
+    "host_c_backend": "WSL Ubuntu-24.04 gcc",
+    "scope": "Existing v1 C/V/A replay with pick receipts and existing host protocol fault vectors"
+  },
+  "interruption": {
+    "interrupt_target": "qr-3000",
+    "attempt_statuses": [
+      "INTERRUPTED",
+      "PASS"
+    ],
+    "baseline_reused": true
+  },
+  "episode_receipts_sha256": {
+    "baseline": "324ec18ade77289a278601799350ecec4d7b88fef8bcde0a62db7be9d1bd726b",
+    "delivery": "62f9de12ab59591014a8382442c73b2f99d91b5dc7283459f79a09a79cb14ab5",
+    "protocol": "e5b72c9e4acc1208219ff6cd074f8fe019e4561575b2f6a2d8197d3b25d1d436",
+    "qr-3000": "81a5084e69f648925b32aba075d6467b876e58f61ac87a76d3f3ea64b174e075",
+    "qr-3001": "418a57e401236ee2a1b0631e948ad7e752f3fdda4ca57741a75ef222a3aca8dc",
+    "qr-3002": "8f1553818e10ca703a0aab3c344420a3b23354a9c10ddbea948f061dfbe87e4a",
+    "qr-3003": "35df77a36875f8bea53fa46055c3a52fd14b06eda0b1258afc88fe0bbe8fed22",
+    "qr-3004": "54be0cecc5032bd355184d7e51e9a4f448953bb0c8c766242a500e5a7f033c3f",
+    "qr-3005": "a24f44519c3676fc6f0889183b34092b1e9d085f8b03bd16fae7235832857457",
+    "qr-3006": "066aae776e3a3fb287f3f12f192fe763f15726b1180a6ff31399bb3b6e12cc4c",
+    "qr-3007": "328f4353b5ca71e292b3b1502e7e4a71efa9b44c509f04256873b93bc49fce0e",
+    "recovery_probe": "af270df388dacf265db03ed0bf72a7929f52be3c380cc66a293104e691289c82"
+  },
+  "remaining": "Continuous drive, mechanics and full plan acceptance remain open."
+}
