@@ -20,7 +20,7 @@
   "claimed": true,
   "agent": "coordinator",
   "session": "k230-linux-handoff-20261118-a",
-  "revision": 3,
-  "handoff": ".ops/handoffs/k230-linux-handoff-20261118/20261118T074709-17bbab29.json",
-  "updated_at": "2026-11-18T07:47:33+00:00"
+  "revision": 4,
+  "handoff": ".ops/handoffs/k230-linux-handoff-20261118/20261118T075111-0849ab79.json",
+  "updated_at": "2026-11-18T07:51:23+00:00"
 }

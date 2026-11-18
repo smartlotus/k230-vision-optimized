@@ -62,5 +62,5 @@ python .ops/tools/ops.py verify --task import-snapshot
 ```
 
 任务分支`ops/任务ID`；写入前认领，模块完成后checkpoint并释放。
-自动备份使用当前私有远端。任务完成、推送成功和主线集成分别记录。
+按项目授权范围同步到已核对的远端。任务完成、推送成功和主线集成分别记录。
 使用、来源与数据边界见 [docs/PROJECT_LAYOUT.md](docs/PROJECT_LAYOUT.md)。

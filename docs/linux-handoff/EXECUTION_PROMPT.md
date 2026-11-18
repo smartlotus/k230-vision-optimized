@@ -2,7 +2,7 @@
 
 你负责推进 **立创庐山派 K230 1G 原生 Linux 迁移线**。目标是在同一块板上复现当前 CanMV 已验证的工程链路和业务输出，然后继续补齐原来未通过的挂载、相机、通信、定位和稳定性验收。把迁移作为独立工程维护。以可复查的模型、张量、画面和报告为完成依据。
 
-我会给你 `K230_Linux_Handoff_20261118.zip` 或仓库 `smartlotus/k230-vision-optimized` 的 `ops/k230-linux-20261118` 分支。先读本文件、同目录 `README.md`、`LINUX_PLATFORM.md`、`PARITY_MATRIX.md` 和 `linux_handoff/PAYLOAD_MANIFEST.json`。ZIP 解压后运行 `python linux_handoff/verify_payload.py --package`。仓库检出运行无参数的核验，再读 AGENTS.md 和 .ops 协议，检查任务所有者、当前分支和改动。Linux 代码放在自己的目录，保留已有 CanMV 基线和模型版本。任一可验收模块完成、暂停或交接时记录证据并精确提交到指定分支，确认远端 SHA。原 OPS 自动推送会校验私有可见性，公开后应核对当前授权与实际仓库设置，再执行精确的分支同步。不要自动合并主线。
+我会给你 `K230_Linux_Handoff_20261118.zip` 或公开仓库 `smartlotus/k230-vision-optimized` 的 `ops/k230-linux-20261118` 分支。先读本文件、同目录 `README.md`、`LINUX_PLATFORM.md`、`PARITY_MATRIX.md` 和 `linux_handoff/PAYLOAD_MANIFEST.json`。ZIP 解压后运行 `python linux_handoff/verify_payload.py --package`。仓库检出运行无参数的核验，再读 AGENTS.md 和 .ops 协议，检查任务所有者、当前分支和改动。Linux 代码放在自己的目录，保留已有 CanMV 基线和模型版本。任一可验收模块完成、暂停或交接时记录证据并精确提交到指定分支。按当前授权同步到已核对的远端后，验证远端 SHA。检查公开推送范围内的文件与提交历史。不要自动合并主线。
 
 ## 工作顺序
 

@@ -18,7 +18,7 @@ def content(source):
 
 
 def select(root):
-    paths = {Path("AGENTS.md")}
+    paths = {Path("AGENTS.md"), Path("requirements-host.txt")}
     paths.update(path.relative_to(root) for path in (root / "docs/linux-handoff").glob("*.md"))
     paths.update(Path("linux_handoff") / name for name in (
         "PAYLOAD_MANIFEST.json", "verify_payload.py", "build_bundle.py",
@@ -29,12 +29,18 @@ def select(root):
     tracked = subprocess.check_output([
         "git", "-C", str(root), "ls-files", "-z", "--", "k230_transport_mvp",
     ]).decode("utf-8").split("\0")
-    folders = {"core", "vision", "k230", "ports", "stm32", "tests"}
-    suffixes = {".py", ".json", ".md", ".c", ".h", ".txt"}
+    folders = {"contracts", "core", "k230", "ports", "sim", "stm32", "tests", "tools", "vision"}
+    suffixes = {".py", ".json", ".md", ".c", ".h", ".txt", ".html"}
+    fixture_folders = {"board_fixtures", "calibrations", "spec", "visual_profiles"}
+    fixture_suffixes = {".jpg", ".json", ".md", ".png"}
+    task_fixtures = {"task_qr.json", "task_qr.png", "task_qr_fixture.jpg", "visual_profile_template.json"}
     for name in filter(None, tracked):
         path = Path(name)
-        if ((path.parts[1] in folders or path.parent.as_posix() == "k230_transport_mvp")
-                and path.suffix in suffixes):
+        section = path.parts[1]
+        if section == "data":
+            if path.name in task_fixtures or (path.parts[2] in fixture_folders and path.suffix in fixture_suffixes):
+                paths.add(path)
+        elif (section in folders or len(path.parts) == 2) and path.suffix in suffixes:
             paths.add(path)
     return {path.as_posix(): (root / path).read_bytes() for path in paths}
 
