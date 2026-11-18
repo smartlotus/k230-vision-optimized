@@ -29,8 +29,8 @@
     ]
   },
   "assumed": {
-    "turret_x": 96,
-    "turret_y": -15,
+    "driving_overhang_mm": 116,
+    "turret_y": 33,
     "stow_yaw_deg": 90,
     "deploy_yaw_deg": -90,
     "bracket_reference_to_lens_tip": 6,
@@ -42,12 +42,12 @@
     "wheel_radius": 34,
     "wheel_track_centres": 244,
     "wheelbase": 198,
-    "offset_along_arm_mm": 160,
+    "upright_mount_height_mm": 25,
     "visible_boom_mm": 100
   },
   "notes": [
     "Reference drawing fixed mast top 370 mm, bracket reference 336 mm. Static optical Z provisionally 330 mm. Driving optical Z confirmed 400 mm; extension shown as schematic carriage overlap.",
-    "180 mm horizontal radius and right side are confirmed. Turret XY, azimuth endpoints, split into longitudinal and transverse offsets and mechanical transmission are provisional. 100 mm outboard strip is separate from pivot-to-optics radius.",
+    "The deployed lens is outside the right edge and longitudinally centered between the right wheel hubs. The lateral overhang is provisionally retained at 116 mm. The pivot X is solved from the fixed radius and assumed fore-aft pivot coordinate. The upright camera holder height and yaw endpoints are schematic.",
     "96 degree diagonal field of view is nominal for OV2735. Lens distortion, intrinsics and QR camera position are unmeasured.",
     "Cargo trajectory and carrier sites in the field scene are kinematic proxies."
   ],
@@ -58,6 +58,8 @@
     "camera_tilt_from_down_deg": 0,
     "pivot_to_lens_horizontal_mm": 180,
     "travel_side": "right +X",
+    "driving_centerline": "right wheel longitudinal midpoint",
+    "camera_mount": "vertical, orthogonal to ground",
     "source": "user clarification + annotated plan 04f5cacd719fd8edf62d7147753e2a51.png"
   }
 }

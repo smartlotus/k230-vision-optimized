@@ -1,9 +1,38 @@
 {
-  "status": "HOLD_GRASP_RECEIPT",
+  "status": "DONE",
   "qr": "156+123+516+231",
-  "picks": 4,
-  "placements": 3,
-  "last_step": 10,
+  "picks": 12,
+  "placements": 12,
+  "black_paper_profile": false,
+  "challenge": false,
+  "referee": {
+    "start_center_error_mm": 6.743495768023414e-05,
+    "stacks": [
+      {
+        "slot": 1,
+        "color": 1,
+        "first_ring_error_mm": 0.8282680215885745,
+        "second_xy_offset_mm": 1.8105832408701137,
+        "layer_height_mm": 60.00000098720193
+      },
+      {
+        "slot": 2,
+        "color": 5,
+        "first_ring_error_mm": 0.8375234818202003,
+        "second_xy_offset_mm": 2.857727104530776,
+        "layer_height_mm": 60.00000098720193
+      },
+      {
+        "slot": 3,
+        "color": 6,
+        "first_ring_error_mm": 1.275533185734421,
+        "second_xy_offset_mm": 1.7906724402241228,
+        "layer_height_mm": 60.00000098720193
+      }
+    ]
+  },
+  "base_exposure": -3.5,
+  "last_step": 31,
   "events": [
     {
       "step": 1,
@@ -27,10 +56,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        -0.28443336486816406,
-        1179.842472076416
+        0.40655650082044303,
+        1179.5287132263184
       ],
-      "contact_offset_mm": 0.3251166916251765,
+      "contact_offset_mm": 0.6223744646173558,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -85,10 +114,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        0.1289770007133484,
-        1179.7611713409424
+        -0.132831308292225,
+        1179.4923543930054
       ],
-      "contact_offset_mm": 0.2713837573033665,
+      "contact_offset_mm": 0.5246855890638671,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -143,10 +172,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        0.6166622042655945,
-        1180.0694465637207
+        0.2250975521747023,
+        1179.586410522461
       ],
-      "contact_offset_mm": 0.6205661829071821,
+      "contact_offset_mm": 0.47083094568480455,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -171,10 +200,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        150.51960945129395,
-        -1125.6303787231445
+        150.61905980110168,
+        -1125.5745887756348
       ],
-      "release_offset_mm": 0.81692418392131,
+      "release_offset_mm": 0.8446182088335152,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -194,10 +223,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        0.4885941743850708,
-        -1125.5239248275757
+        0.61393080977723,
+        -1125.5645751953125
       ],
-      "release_offset_mm": 0.7163947879439372,
+      "release_offset_mm": 0.8340600639977153,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -217,10 +246,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        -149.49271082878113,
-        -1125.6086826324463
+        -149.39740300178528,
+        -1125.5686283111572
       ],
-      "release_offset_mm": 0.7923653814190592,
+      "release_offset_mm": 0.8285339353692427,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -240,10 +269,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        151.49377286434174,
-        -1124.0956783294678
+        151.88828110694885,
+        -1124.2620944976807
       ],
-      "contact_offset_mm": 1.8177732679496956,
+      "contact_offset_mm": 1.8258050150217706,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -256,37 +285,481 @@
       "attempts": [
         {
           "file": "10-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        -0.7761138840578496,
+        -1128.8779973983765
+      ],
+      "contact_offset_mm": 3.5931867397362356,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 11,
+      "action": "PICK",
+      "station": "PROCESS",
+      "slot": 3,
+      "color": 6,
+      "feature": "pick_top",
+      "attempts": [
+        {
+          "file": "11-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        -147.832453250885,
+        -1125.2257823944092
+      ],
+      "contact_offset_mm": 1.6020646196310626,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 12,
+      "action": "MOVE",
+      "state": "PRESCRIBED_MOTION"
+    },
+    {
+      "step": 13,
+      "action": "PLACE",
+      "station": "BUFFER",
+      "slot": 1,
+      "color": 1,
+      "feature": "empty_rings",
+      "attempts": [
+        {
+          "file": "13-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        -1125.5595684051514,
+        -150.61067044734955
+      ],
+      "release_offset_mm": 0.8282680215885745,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 14,
+      "action": "PLACE",
+      "station": "BUFFER",
+      "slot": 2,
+      "color": 5,
+      "feature": "empty_rings",
+      "attempts": [
+        {
+          "file": "14-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        -1125.562071800232,
+        -0.6209032726474106
+      ],
+      "release_offset_mm": 0.8375234818202003,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 15,
+      "action": "PLACE",
+      "station": "BUFFER",
+      "slot": 3,
+      "color": 6,
+      "feature": "empty_rings",
+      "attempts": [
+        {
+          "file": "15-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        -1126.0343790054321,
+        149.25365149974823
+      ],
+      "release_offset_mm": 1.275533185734421,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 16,
+      "action": "MOVE",
+      "state": "PRESCRIBED_MOTION"
+    },
+    {
+      "step": 17,
+      "action": "PICK",
+      "station": "RAW",
+      "slot": null,
+      "color": 5,
+      "feature": "pick_top",
+      "attempts": [
+        {
+          "file": "17-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        -0.044678781705442816,
+        1179.5341968536377
+      ],
+      "contact_offset_mm": 0.46788877177405813,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 18,
+      "action": "PICK",
+      "station": "RAW",
+      "slot": null,
+      "color": 1,
+      "feature": "pick_top",
+      "attempts": [
+        {
+          "file": "18-0-0.png",
           "state": "HOLD",
           "reason": "REQUIRE_UNIQUE_COLOR_TOP",
           "exposure_ev": 0,
           "lane_offset_m": 0
         },
         {
-          "file": "10-0-1.png",
+          "file": "18-0-1.png",
           "state": "HOLD",
           "reason": "REQUIRE_UNIQUE_COLOR_TOP",
           "exposure_ev": -0.65,
           "lane_offset_m": 0
         },
         {
-          "file": "10-0-2.png",
+          "file": "18-0-2.png",
           "state": "HOLD",
           "reason": "REQUIRE_UNIQUE_COLOR_TOP",
           "exposure_ev": 0.9,
           "lane_offset_m": 0
         },
         {
-          "file": "10-0-3.png",
-          "state": "ACQUIRED",
-          "reason": "UNIQUE_IMAGE_FEATURE",
+          "file": "18-0-3.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
           "exposure_ev": -0.35,
           "lane_offset_m": 0.016
+        },
+        {
+          "file": "18-0-4.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": 0.2,
+          "lane_offset_m": -0.016
+        },
+        {
+          "file": "18-1-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
         }
       ],
       "estimated_world_xy_mm": [
-        -9.156033396720886,
-        -1125.7177591323853
-      ]
+        0.32044854015111923,
+        1179.5305013656616
+      ],
+      "contact_offset_mm": 0.5683898177439468,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 19,
+      "action": "PICK",
+      "station": "RAW",
+      "slot": null,
+      "color": 6,
+      "feature": "pick_top",
+      "attempts": [
+        {
+          "file": "19-0-0.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        },
+        {
+          "file": "19-0-1.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": -0.65,
+          "lane_offset_m": 0
+        },
+        {
+          "file": "19-0-2.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": 0.9,
+          "lane_offset_m": 0
+        },
+        {
+          "file": "19-0-3.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": -0.35,
+          "lane_offset_m": 0.016
+        },
+        {
+          "file": "19-0-4.png",
+          "state": "HOLD",
+          "reason": "REQUIRE_UNIQUE_COLOR_TOP",
+          "exposure_ev": 0.2,
+          "lane_offset_m": -0.016
+        },
+        {
+          "file": "19-1-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        0.22012110275682062,
+        1179.5785427093506
+      ],
+      "contact_offset_mm": 0.475431738362461,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 20,
+      "action": "MOVE",
+      "state": "PRESCRIBED_MOTION"
+    },
+    {
+      "step": 21,
+      "action": "PLACE",
+      "station": "PROCESS",
+      "slot": 2,
+      "color": 5,
+      "feature": "empty_rings",
+      "attempts": [
+        {
+          "file": "21-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        0.6139755714684725,
+        -1125.5645751953125
+      ],
+      "release_offset_mm": 0.8340930125125045,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 22,
+      "action": "PLACE",
+      "station": "PROCESS",
+      "slot": 3,
+      "color": 1,
+      "feature": "empty_rings",
+      "attempts": [
+        {
+          "file": "22-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        -149.3973433971405,
+        -1125.5686283111572
+      ],
+      "release_offset_mm": 0.8285772875729478,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 23,
+      "action": "PLACE",
+      "station": "PROCESS",
+      "slot": 1,
+      "color": 6,
+      "feature": "empty_rings",
+      "attempts": [
+        {
+          "file": "23-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        150.61911940574646,
+        -1125.5745887756348
+      ],
+      "release_offset_mm": 0.8446618963907305,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 24,
+      "action": "PICK",
+      "station": "PROCESS",
+      "slot": 2,
+      "color": 5,
+      "feature": "pick_top",
+      "attempts": [
+        {
+          "file": "24-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        -0.6610244745388627,
+        -1128.899335861206
+      ],
+      "contact_offset_mm": 3.570189605064349,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 25,
+      "action": "PICK",
+      "station": "PROCESS",
+      "slot": 3,
+      "color": 1,
+      "feature": "pick_top",
+      "attempts": [
+        {
+          "file": "25-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        -147.1874564886093,
+        -1125.2930164337158
+      ],
+      "contact_offset_mm": 2.2270074215153195,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 26,
+      "action": "PICK",
+      "station": "PROCESS",
+      "slot": 1,
+      "color": 6,
+      "feature": "pick_top",
+      "attempts": [
+        {
+          "file": "26-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        151.74831449985504,
+        -1124.9035596847534
+      ],
+      "contact_offset_mm": 1.3135302057310811,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 27,
+      "action": "MOVE",
+      "state": "PRESCRIBED_MOTION"
+    },
+    {
+      "step": 28,
+      "action": "PLACE",
+      "station": "BUFFER",
+      "slot": 2,
+      "color": 5,
+      "feature": "support_top",
+      "attempts": [
+        {
+          "file": "28-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        -1128.369688987732,
+        -0.0880900479387492
+      ],
+      "release_offset_mm": 2.857727104530776,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 29,
+      "action": "PLACE",
+      "station": "BUFFER",
+      "slot": 1,
+      "color": 1,
+      "feature": "support_top",
+      "attempts": [
+        {
+          "file": "29-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        -1123.9280700683594,
+        -151.3957977294922
+      ],
+      "release_offset_mm": 1.8105832408701137,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 30,
+      "action": "PLACE",
+      "station": "BUFFER",
+      "slot": 3,
+      "color": 6,
+      "feature": "support_top",
+      "attempts": [
+        {
+          "file": "30-0-0.png",
+          "state": "ACQUIRED",
+          "reason": "UNIQUE_IMAGE_FEATURE",
+          "exposure_ev": 0,
+          "lane_offset_m": 0
+        }
+      ],
+      "estimated_world_xy_mm": [
+        -1124.5604753494263,
+        148.2367366552353
+      ],
+      "release_offset_mm": 1.7906724402241228,
+      "state": "SIMULATED_TRANSFER"
+    },
+    {
+      "step": 31,
+      "action": "RETURN",
+      "state": "PRESCRIBED_MOTION"
     }
   ],
   "scope": "One fixed layout. QR and per-action RGB drive a mutable object world. Chassis follows recorded waypoints, fixture heights and pose known, contact receipts approximate. No hardware I/O."

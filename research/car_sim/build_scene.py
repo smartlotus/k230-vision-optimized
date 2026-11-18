@@ -130,6 +130,15 @@ def vehicle_asset(out):
         radius = math.hypot(x-axis.x,y-axis.y)
         assert abs(z*1000-h)<.001 and abs(radius-.180)<.00001
         assert (opt.to_quaternion() @ Vector((0,0,-1))).z < -.99999
+        holder=rig["holder"]
+        endpoints=[holder.matrix_world @ Vector((0,0,z_local)) for z_local in
+                   (min(v.co.z for v in holder.data.vertices),max(v.co.z for v in holder.data.vertices))]
+        holder_axis=(endpoints[1]-endpoints[0]).normalized()
+        assert holder_axis.z>.999999
+        hubs=[wheel.matrix_world.translation for wheel in rig["right_wheels"]]
+        mid=(hubs[0]+hubs[1])/2
+        if f!=1:
+            assert abs(y-mid.y)<1e-6 and x>mid.x
         assert (x>.140 if f!=1 else abs(x)<.140 and abs(y)<.1475)
         deps=bpy.context.evaluated_depsgraph_get()
         mesh_objects=[o.evaluated_get(deps) for o in rig["collection"].objects if o.type=="MESH"]
@@ -138,7 +147,11 @@ def vehicle_asset(out):
         if f==1:
             assert all(v<=limit+.001 for v,limit in zip(spans,(300.,300.,400.)))
         poses.append(dict(frame=f,xyz_mm=[1000*v for v in opt.translation],radius_mm=1000*radius,
-                          mesh_xyz_span_mm=spans))
+                          mesh_xyz_span_mm=spans,holder_axis=list(holder_axis),
+                          right_wheel_midpoint_xy_mm=[1000*v for v in mid[:2]],
+                          lens_minus_midpoint_xy_mm=[1000*(x-mid.x),1000*(y-mid.y)],
+                          right_edge_overhang_mm=1000*x-140,
+                          turret_xy_mm=[1000*v for v in axis[:2]]))
     write_json(out/"rig_check.json", poses)
 
 

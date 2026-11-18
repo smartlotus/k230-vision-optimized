@@ -334,14 +334,19 @@ class VehicleBuilder:
             self.beam("Ribbon cable", root, a, b, 11, 0.9, self.ivory, 0.1)
         return [self.wheel(root, sx, sy, cfg) for sx in (-1, 1) for sy in (-1, 1)]
 
-    def camera_rig(self, root, d, cfg):
+    def camera_rig(self, root, d, cfg, right_mid):
         top = d["chassis_top_height"]
         pedestal = d["pedestal_rise"]
         length = d["overall_height"] - top
         span = d["mast_span"]
-        turret = self.obj(
-            "AZIMUTH | turntable", root, (cfg["turret_x"], cfg["turret_y"], top)
-        )
+        # At deployment the local +Y boom points right. Preserve its 180 mm
+        # radius while centering the lens fore/aft between both right hubs.
+        assert cfg["deploy_yaw_deg"] == -90
+        side = cfg["turret_y"] - right_mid.y / MM
+        radius = self.confirmed["pivot_to_lens_horizontal_mm"]
+        reach = (radius**2 - side**2)**0.5
+        driving_x = d["chassis_width"]/2 + cfg["driving_overhang_mm"]
+        turret = self.obj("AZIMUTH | turntable", root, (driving_x-reach, cfg["turret_y"], top))
         self.disk("Base ring", turret, (0, 0, 4), 39, 8, (0, 0, 1), self.black, 48)
         self.disk("Turntable rim", turret, (0, 0, 10), 36, 4, (0, 0, 1), self.steel, 48)
         self.box("Turntable plate", turret, (0, 0, 17), (64, span, 7), self.carbon, 2)
@@ -423,11 +428,14 @@ class VehicleBuilder:
         self.disk("Belt motor", turret, (-12, 0, 43), 11, 22, (1, 0, 0), self.steel, 24)
         lift = self.obj("LIFT | camera carriage", turret, (0, 0, 0))
         # Lift's local Z origin is the optical centre itself.
-        reach = cfg["offset_along_arm_mm"]
-        radius = self.confirmed["pivot_to_lens_horizontal_mm"]
-        side = (radius**2 - reach**2)**0.5
         arm_start = reach - cfg["visible_boom_mm"]
-        self.beam("Offset carriage crosshead",lift,(6,0,3),(side,arm_start,3),15,8,self.darkblue)
+        holder_height = cfg["upright_mount_height_mm"]
+        boom_z = holder_height + 3
+        self.box("Carriage endplate",lift,(8,0,boom_z/2),(14,20,boom_z),self.darkblue)
+        self.box("Right angle crosshead",lift,((side+8)/2,0,boom_z),
+                 (abs(side-8)+12,14,7),self.darkblue)
+        self.box("Carrier extension",lift,(side,arm_start/2,boom_z),
+                 (14,arm_start+5,7),self.darkblue)
         self.box("Lift overlap proxy",lift,(7,0,-21),(8,13,48),self.black)
         plate_z = cfg["bracket_reference_to_lens_tip"]
         self.box(
@@ -444,7 +452,7 @@ class VehicleBuilder:
         self.box(
             "Camera boom",
             lift,
-            (side, (reach+arm_start)/2, plate_z),
+            (side, (reach+arm_start)/2, boom_z),
             (10, reach-arm_start, 3),
             self.blue,
             0.6,
@@ -452,25 +460,29 @@ class VehicleBuilder:
         self.box(
             "K230 board support",
             lift,
-            (side, arm_start - 28, plate_z + 4),
+            (side, arm_start - 28, boom_z + 4),
             (36, 77, 3),
             self.darkblue,
         )
         self.box(
             "K230 electronics proxy",
             lift,
-            (side, arm_start - 28, plate_z + 7),
+            (side, arm_start - 28, boom_z + 7),
             (32, 67, 2),
             self.pcb,
         )
         self.box(
             "K230 display proxy",
             lift,
-            (side, arm_start - 28, plate_z + 10),
+            (side, arm_start - 28, boom_z + 10),
             (35, 70, 3),
             self.black,
             1,
         )
+        # The physical end bracket is vertical. The horizontal boom fixes it
+        # at the top and the optical housing fixes it at the bottom.
+        upright = self.box("Camera holder | vertical",lift,(side,reach,3+holder_height/2),
+                           (10,9,holder_height),self.darkblue)
         self.box(
             "Camera housing",
             lift,
@@ -509,7 +521,7 @@ class VehicleBuilder:
         data.clip_start = 0.001
         data.clip_end = 12
         data.display_size = 0.025
-        return turret, lift, camera
+        return turret, lift, camera, upright
 
 
 def build_vehicle():
@@ -522,7 +534,10 @@ def build_vehicle():
     root["source_units"] = "mm"
     root["dimension_source"] = parameters["source"]
     wheels = builder.deck(root, drawing, assumed)
-    turret, lift, camera = builder.camera_rig(root, drawing, assumed)
+    right_wheels = [w for w in wheels if w.location.x > 0]
+    assert len(right_wheels)==2
+    right_mid = (right_wheels[0].location + right_wheels[1].location)/2
+    turret, lift, camera, upright = builder.camera_rig(root, drawing, assumed, right_mid)
     nominal = (
         drawing["chassis_top_height"]
         + drawing["pedestal_rise"]
@@ -534,6 +549,8 @@ def build_vehicle():
         turret=turret,
         lift=lift,
         camera=camera,
+        holder=upright,
+        right_wheels=right_wheels,
         wheels=wheels,
         parameters=parameters,
         collection=builder.collection,

@@ -11,22 +11,22 @@
       {
         "slot": 1,
         "color": 1,
-        "first_ring_error_mm": 0.9433553639331635,
-        "second_xy_offset_mm": 2.718173797954807,
+        "first_ring_error_mm": 0.8464283539302762,
+        "second_xy_offset_mm": 1.6357943567203566,
         "layer_height_mm": 60.00000098720193
       },
       {
         "slot": 2,
         "color": 5,
-        "first_ring_error_mm": 0.8757324035341829,
-        "second_xy_offset_mm": 2.1262660949132988,
+        "first_ring_error_mm": 0.8467026783853837,
+        "second_xy_offset_mm": 1.619947050634183,
         "layer_height_mm": 60.00000098720193
       },
       {
         "slot": 3,
         "color": 6,
-        "first_ring_error_mm": 0.9114494864968447,
-        "second_xy_offset_mm": 2.2389629330423397,
+        "first_ring_error_mm": 1.0832963225443462,
+        "second_xy_offset_mm": 1.8899926546015695,
         "layer_height_mm": 60.00000098720193
       }
     ]
@@ -70,10 +70,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        -0.3022700548171997,
-        1179.5580387115479
+        0.05214940756559372,
+        1179.8932552337646
       ],
-      "contact_offset_mm": 0.5353976145785861,
+      "contact_offset_mm": 0.11875525507398194,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -128,10 +128,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        -0.46322494745254517,
-        1179.6387434005737
+        -0.20927749574184418,
+        1179.9649000167847
       ],
-      "contact_offset_mm": 0.5874059822620268,
+      "contact_offset_mm": 0.21219189348828363,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -186,10 +186,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        0.059738755226135254,
-        1179.688572883606
+        -0.4985709674656391,
+        1180.0063848495483
       ],
-      "contact_offset_mm": 0.3170534662293421,
+      "contact_offset_mm": 0.4986125233605534,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -214,10 +214,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        150.65574645996094,
-        -1125.664234161377
+        150.59436857700348,
+        -1125.615119934082
       ],
-      "release_offset_mm": 0.9333823567113378,
+      "release_offset_mm": 0.8553592539069012,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -230,31 +230,17 @@
       "attempts": [
         {
           "file": "07-0-0.png",
-          "state": "HOLD",
-          "reason": "MATERIAL_PREDICTED_IN_SLOT",
-          "exposure_ev": 0,
-          "lane_offset_m": 0.005
-        },
-        {
-          "file": "07-0-1.png",
-          "state": "HOLD",
-          "reason": "MATERIAL_PREDICTED_IN_SLOT",
-          "exposure_ev": -0.65,
-          "lane_offset_m": 0.005
-        },
-        {
-          "file": "07-0-2.png",
           "state": "ACQUIRED",
           "reason": "UNIQUE_IMAGE_FEATURE",
-          "exposure_ev": 0.9,
+          "exposure_ev": 0,
           "lane_offset_m": 0.005
         }
       ],
       "estimated_world_xy_mm": [
-        0.5707591772079468,
-        -1125.662088394165
+        0.5777152255177498,
+        -1125.717282295227
       ],
-      "release_offset_mm": 0.8741436266742053,
+      "release_offset_mm": 0.921004219773835,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -267,31 +253,17 @@
       "attempts": [
         {
           "file": "08-0-0.png",
-          "state": "HOLD",
-          "reason": "MATERIAL_PREDICTED_IN_SLOT",
-          "exposure_ev": 0,
-          "lane_offset_m": 0.005
-        },
-        {
-          "file": "08-0-1.png",
-          "state": "HOLD",
-          "reason": "MATERIAL_PREDICTED_IN_SLOT",
-          "exposure_ev": -0.65,
-          "lane_offset_m": 0.005
-        },
-        {
-          "file": "08-0-2.png",
           "state": "ACQUIRED",
           "reason": "UNIQUE_IMAGE_FEATURE",
-          "exposure_ev": 0.9,
+          "exposure_ev": 0,
           "lane_offset_m": 0.005
         }
       ],
       "estimated_world_xy_mm": [
-        -149.50071275234222,
-        -1125.6587505340576
+        -149.40084517002106,
+        -1125.6073713302612
       ],
-      "release_offset_mm": 0.8265869426734297,
+      "release_offset_mm": 0.8531667982452675,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -311,10 +283,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        152.0405113697052,
-        -1123.5419511795044
+        150.9067565202713,
+        -1124.5027780532837
       ],
-      "contact_offset_mm": 2.5340992305758103,
+      "contact_offset_mm": 1.1553746954460653,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -331,7 +303,7 @@
           "reason": "BLACK_CAD_OUTLINE",
           "exposure_ev": 0,
           "lane_offset_m": 0.005,
-          "outline_iou": 0.937465103294249
+          "outline_iou": 0.9376558603491272
         },
         {
           "file": "10-0-1.png",
@@ -339,14 +311,14 @@
           "reason": "BLACK_CAD_OUTLINE",
           "exposure_ev": -0.15,
           "lane_offset_m": 0.017,
-          "outline_iou": 0.9272206303724928
+          "outline_iou": 0.936050156739812
         }
       ],
       "estimated_world_xy_mm": [
-        -0.20246952772140503,
-        -1127.4535655975342
+        0.6781455595046282,
+        -1126.5885829925537
       ],
-      "contact_offset_mm": 1.9512235136749556,
+      "contact_offset_mm": 0.8770696421303386,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -366,10 +338,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        -148.18155765533447,
-        -1123.9997148513794
+        -148.49843084812164,
+        -1124.6384382247925
       ],
-      "contact_offset_mm": 2.119568249988928,
+      "contact_offset_mm": 1.3240781590383912,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -394,10 +366,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        -1125.6847381591797,
-        -150.64889192581177
+        -1125.6030797958374,
+        -150.59392154216766
       ],
-      "release_offset_mm": 0.9433553639331635,
+      "release_offset_mm": 0.8464283539302762,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -410,31 +382,17 @@
       "attempts": [
         {
           "file": "14-0-0.png",
-          "state": "HOLD",
-          "reason": "MATERIAL_PREDICTED_IN_SLOT",
-          "exposure_ev": 0,
-          "lane_offset_m": 0.005
-        },
-        {
-          "file": "14-0-1.png",
-          "state": "HOLD",
-          "reason": "MATERIAL_PREDICTED_IN_SLOT",
-          "exposure_ev": -0.65,
-          "lane_offset_m": 0.005
-        },
-        {
-          "file": "14-0-2.png",
           "state": "ACQUIRED",
           "reason": "UNIQUE_IMAGE_FEATURE",
-          "exposure_ev": 0.9,
+          "exposure_ev": 0,
           "lane_offset_m": 0.005
         }
       ],
       "estimated_world_xy_mm": [
-        -1125.6862878799438,
-        -0.5439817905426025
+        -1125.6184577941895,
+        -0.5782865919172764
       ],
-      "release_offset_mm": 0.8757324035341829,
+      "release_offset_mm": 0.8467026783853837,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -468,10 +426,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        -1125.7264614105225,
-        149.44955706596375
+        -1125.7914304733276,
+        149.2602974176407
       ],
-      "release_offset_mm": 0.9114494864968447,
+      "release_offset_mm": 1.0832963225443462,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -510,10 +468,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        -0.46590715646743774,
-        1179.6226501464844
+        -0.15854183584451675,
+        1179.9782514572144
       ],
-      "contact_offset_mm": 0.5995188133595709,
+      "contact_offset_mm": 0.16001948026580323,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -568,10 +526,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        -0.23968517780303955,
-        1179.5601844787598
+        -0.015902798622846603,
+        1179.9087524414062
       ],
-      "contact_offset_mm": 0.5008398361244799,
+      "contact_offset_mm": 0.09257130470476842,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -626,10 +584,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        0.05920231342315674,
-        1179.687738418579
+        -0.4971800372004509,
+        1180.0041198730469
       ],
-      "contact_offset_mm": 0.3177726456978837,
+      "contact_offset_mm": 0.49719754392763577,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -654,10 +612,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        0.5701407790184021,
-        -1125.6580352783203
+        0.5777599290013313,
+        -1125.717282295227
       ],
-      "release_offset_mm": 0.8706726913219465,
+      "release_offset_mm": 0.9210322614359442,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -670,31 +628,17 @@
       "attempts": [
         {
           "file": "22-0-0.png",
-          "state": "HOLD",
-          "reason": "MATERIAL_PREDICTED_IN_SLOT",
-          "exposure_ev": 0,
-          "lane_offset_m": 0.005
-        },
-        {
-          "file": "22-0-1.png",
-          "state": "HOLD",
-          "reason": "MATERIAL_PREDICTED_IN_SLOT",
-          "exposure_ev": -0.65,
-          "lane_offset_m": 0.005
-        },
-        {
-          "file": "22-0-2.png",
           "state": "ACQUIRED",
           "reason": "UNIQUE_IMAGE_FEATURE",
-          "exposure_ev": 0.9,
+          "exposure_ev": 0,
           "lane_offset_m": 0.005
         }
       ],
       "estimated_world_xy_mm": [
-        -149.50066804885864,
-        -1125.6587505340576
+        -149.40078556537628,
+        -1125.6073713302612
       ],
-      "release_offset_mm": 0.826613946221616,
+      "release_offset_mm": 0.853208658367313,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -714,10 +658,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        150.54389834403992,
-        -1125.6591081619263
+        150.59441328048706,
+        -1125.615119934082
       ],
-      "release_offset_mm": 0.854542271645586,
+      "release_offset_mm": 0.8553903175752645,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -734,7 +678,7 @@
           "reason": "BLACK_CAD_OUTLINE",
           "exposure_ev": 0,
           "lane_offset_m": 0.005,
-          "outline_iou": 0.937465103294249
+          "outline_iou": 0.9376558603491272
         },
         {
           "file": "24-0-1.png",
@@ -742,14 +686,14 @@
           "reason": "BLACK_CAD_OUTLINE",
           "exposure_ev": -0.15,
           "lane_offset_m": 0.017,
-          "outline_iou": 0.9289805269186713
+          "outline_iou": 0.936050156739812
         }
       ],
       "estimated_world_xy_mm": [
-        -0.2238638699054718,
-        -1127.4614334106445
+        0.6781893316656351,
+        -1126.5885829925537
       ],
-      "contact_offset_mm": 1.970453807168086,
+      "contact_offset_mm": 0.8770695354881692,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -769,10 +713,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        -148.06704223155975,
-        -1123.4471797943115
+        -148.20420742034912,
+        -1124.992847442627
       ],
-      "contact_offset_mm": 2.635588761724217,
+      "contact_offset_mm": 1.3451538445954003,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -792,10 +736,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        151.7932415008545,
-        -1123.8646507263184
+        151.00929141044617,
+        -1124.1788864135742
       ],
-      "contact_offset_mm": 2.18653511558537,
+      "contact_offset_mm": 1.4949550455276674,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -817,7 +761,7 @@
           "reason": "BLACK_CAD_OUTLINE",
           "exposure_ev": 0,
           "lane_offset_m": 0.005,
-          "outline_iou": 0.8966630785791173
+          "outline_iou": 0.8845020624631703
         },
         {
           "file": "28-0-1.png",
@@ -825,14 +769,14 @@
           "reason": "BLACK_CAD_OUTLINE",
           "exposure_ev": -0.15,
           "lane_offset_m": 0.017,
-          "outline_iou": 0.8945334069574821
+          "outline_iou": 0.8888231815493791
         }
       ],
       "estimated_world_xy_mm": [
-        -1127.7601718902588,
-        -0.07492676377296448
+        -1127.1859407424927,
+        -0.987218925729394
       ],
-      "release_offset_mm": 2.1262660949132988,
+      "release_offset_mm": 1.619947050634183,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -852,10 +796,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        -1123.2126951217651,
-        -151.7791450023651
+        -1123.9964962005615,
+        -150.28616786003113
       ],
-      "release_offset_mm": 2.718173797954807,
+      "release_offset_mm": 1.6357943567203566,
       "state": "SIMULATED_TRANSFER"
     },
     {
@@ -875,10 +819,10 @@
         }
       ],
       "estimated_world_xy_mm": [
-        -1123.691439628601,
-        148.5159397125244
+        -1123.9275932312012,
+        148.94695580005646
       ],
-      "release_offset_mm": 2.2389629330423397,
+      "release_offset_mm": 1.8899926546015695,
       "state": "SIMULATED_TRANSFER"
     },
     {

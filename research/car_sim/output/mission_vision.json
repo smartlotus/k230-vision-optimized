@@ -1,5 +1,5 @@
 {
-  "status": "INCOMPLETE_ACQUISITION",
+  "status": "ALL_FEATURES_ACQUIRED",
   "scope": "Single-frame acquisition and rejection on independently prescribed operation frames. Empty-slot digits checked against generic templates. Occupied slots use expected color and prescribed docking. No gripper alignment, serial command, scene feedback, or closed-loop mission success evaluated.",
   "decoded_qr": "156+123+516+231",
   "input_wh": [
@@ -10,36 +10,104 @@
   "source_origin": "upper left, +u right, +v down",
   "steps_evaluated": 24,
   "capture_windows_xyxy": {
-    "RAW": [
-      145,
-      174,
-      245,
-      268
+    "raw_top": [
+      271,
+      183,
+      369,
+      282
     ],
-    "PAPER": [
-      185,
-      162,
-      279,
-      236
+    "station_top": [
+      282,
+      163,
+      358,
+      238
+    ],
+    "empty_rings": [
+      288,
+      165,
+      352,
+      230
     ]
+  },
+  "geometry": {
+    "source": "Body-frame work points and deployed rig dimensions",
+    "body_optical_center_mm": [
+      256.0,
+      0.0,
+      400
+    ],
+    "camera_yaw_deg": -90,
+    "focal_px": 330.58442085913515,
+    "work_points_body_mm": {
+      "raw_top": [
+        215,
+        0,
+        142.64600000000002
+      ],
+      "station_top": [
+        235,
+        0,
+        63
+      ],
+      "empty_rings": [
+        235,
+        0,
+        3
+      ]
+    },
+    "candidate_half_width_mm": 38,
+    "projected_centers_xy_px": {
+      "raw_top": [
+        320.0,
+        232.6666041919867
+      ],
+      "station_top": [
+        320.0,
+        200.60021613662266
+      ],
+      "empty_rings": [
+        320.0,
+        197.48683334519353
+      ]
+    },
+    "windows_xyxy": {
+      "raw_top": [
+        271,
+        183,
+        369,
+        282
+      ],
+      "station_top": [
+        282,
+        163,
+        358,
+        238
+      ],
+      "empty_rings": [
+        288,
+        165,
+        352,
+        230
+      ]
+    }
   },
   "offline_match_radius_px": 8.0,
   "scores": {
-    "ON_TARGET": 23,
+    "ON_TARGET": 24,
     "OFF_TARGET": 0,
-    "HOLD": 1
+    "HOLD": 0
   },
   "scores_after_retry": {
-    "ON_TARGET": 23,
+    "ON_TARGET": 24,
     "OFF_TARGET": 0,
-    "HOLD": 1
+    "HOLD": 0
   },
-  "reobserved": 1,
+  "reobserved": 0,
   "observations": [
     {
       "index": 2,
       "file": "02.png",
-      "sha256": "a8cd842c3e781a2814cdfcc5f6eec728507b05b88e576952fe21e04e09c6a971",
+      "sha256": "0ec89701c4f14d2247d11909b764eed358bea29e8315961e7fdcadddd4fcf8e0",
       "action": "PICK",
       "slot": null,
       "carried_or_pick_color": 1,
@@ -47,37 +115,37 @@
       "feature": "pick_top",
       "expected_observed_color": 1,
       "capture_window_xyxy": [
-        145,
-        174,
-        245,
-        268
+        271,
+        183,
+        369,
+        282
       ],
       "detections_in_window": [
         {
           "color": 1,
-          "score": 0.9883571267127991,
+          "score": 0.9825265407562256,
           "center": [
-            194.43959045410156,
-            232.86883544921875
+            320.5222473144531,
+            233.27188110351562
           ]
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        194.43959045410156,
-        232.86883544921875
+        320.5222473144531,
+        233.27188110351562
       ],
       "offset_from_image_center_px": [
-        -125.56040954589844,
-        52.86883544921875
+        0.522247314453125,
+        53.271881103515625
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 0.41759993145249,
+        "error_px": 0.799441261530445,
         "visible": true,
         "reference_xy": [
-          194.8049545288086,
+          320.0,
           232.6666009426117
         ]
       }
@@ -85,7 +153,7 @@
     {
       "index": 3,
       "file": "03.png",
-      "sha256": "9fcf0bc2bec7544ce0a87c51ee1f5bff8cd0eab5a734c8ac46367528ff7c4dc8",
+      "sha256": "1df53f356527cf4823d1108a2eb014758ce01539f389da8e0606cf907073fe22",
       "action": "PICK",
       "slot": null,
       "carried_or_pick_color": 5,
@@ -93,37 +161,37 @@
       "feature": "pick_top",
       "expected_observed_color": 5,
       "capture_window_xyxy": [
-        145,
-        174,
-        245,
-        268
+        271,
+        183,
+        369,
+        282
       ],
       "detections_in_window": [
         {
           "color": 5,
-          "score": 0.9857380390167236,
+          "score": 0.9845837354660034,
           "center": [
-            194.9706573486328,
-            232.9732666015625
+            319.82940673828125,
+            233.31861877441406
           ]
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        194.9706573486328,
-        232.9732666015625
+        319.82940673828125,
+        233.31861877441406
       ],
       "offset_from_image_center_px": [
-        -125.02934265136719,
-        52.9732666015625
+        -0.17059326171875,
+        53.31861877441406
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 0.34857029546051305,
+        "error_px": 0.6739653655286028,
         "visible": true,
         "reference_xy": [
-          194.8049545288086,
+          320.0,
           232.6666009426117
         ]
       }
@@ -131,7 +199,7 @@
     {
       "index": 4,
       "file": "04.png",
-      "sha256": "044f4f1d57f1a934de80462341818774b73c9e7c40447b0ca2ef0161890b34cb",
+      "sha256": "393c5e04bad59963586fec4cb7b63eb39d9597cb5a5177461626a9e32da6516e",
       "action": "PICK",
       "slot": null,
       "carried_or_pick_color": 6,
@@ -139,37 +207,37 @@
       "feature": "pick_top",
       "expected_observed_color": 6,
       "capture_window_xyxy": [
-        145,
-        174,
-        245,
-        268
+        271,
+        183,
+        369,
+        282
       ],
       "detections_in_window": [
         {
           "color": 6,
-          "score": 0.9935612678527832,
+          "score": 0.9888874888420105,
           "center": [
-            195.59707641601562,
-            232.57728576660156
+            320.28912353515625,
+            233.19775390625
           ]
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        195.59707641601562,
-        232.57728576660156
+        320.28912353515625,
+        233.19775390625
       ],
       "offset_from_image_center_px": [
-        -124.40292358398438,
-        52.57728576660156
+        0.28912353515625,
+        53.19775390625
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 0.7971413205060628,
+        "error_px": 0.6047444827057148,
         "visible": true,
         "reference_xy": [
-          194.8049545288086,
+          320.0,
           232.6666009426117
         ]
       }
@@ -177,7 +245,7 @@
     {
       "index": 6,
       "file": "06.png",
-      "sha256": "ac0c3dea698ee2fa922c53bd4316c6170618b234b201a6d6458b0d9ca8b6c7d1",
+      "sha256": "9928c5e7bb5d33b513417f74b45ede76fb3e366e28669e2d611e15ffe493e6ab",
       "action": "PLACE",
       "slot": 1,
       "carried_or_pick_color": 1,
@@ -185,17 +253,17 @@
       "feature": "empty_rings",
       "expected_observed_color": null,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        288,
+        165,
+        352,
+        230
       ],
       "detections_in_window": [],
       "rings_in_window": [
         {
           "center": [
-            238.4099884033203,
-            196.96194458007812
+            319.48448181152344,
+            197.00836181640625
           ],
           "stroke_radii_px": [
             27,
@@ -204,26 +272,26 @@
             39
           ],
           "read_slot": 1,
-          "interior_paper_fraction": 0.9698600645855759,
+          "interior_paper_fraction": 0.968682505399568,
           "appears_empty": true
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        238.4099884033203,
-        196.96194458007812
+        319.48448181152344,
+        197.00836181640625
       ],
       "offset_from_image_center_px": [
-        -81.59001159667969,
-        16.961944580078125
+        -0.5155181884765625,
+        17.00836181640625
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 0.6802542436052836,
+        "error_px": 0.7033527794538279,
         "visible": true,
         "reference_xy": [
-          238.84265899658203,
+          319.9999809265137,
           197.4868655204773
         ]
       }
@@ -231,7 +299,7 @@
     {
       "index": 7,
       "file": "07.png",
-      "sha256": "720fcb8d417f4c3eb96795dc9b405fbd9bb661ac874d251a820250d0f957b998",
+      "sha256": "078b9def5f5c90df90c3653b652c4ec5a12775906499614576d9f782ed547be5",
       "action": "PLACE",
       "slot": 2,
       "carried_or_pick_color": 5,
@@ -239,17 +307,17 @@
       "feature": "empty_rings",
       "expected_observed_color": null,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        288,
+        165,
+        352,
+        230
       ],
       "detections_in_window": [],
       "rings_in_window": [
         {
           "center": [
-            238.41641235351562,
-            196.98244094848633
+            319.48876190185547,
+            197.01671600341797
           ],
           "stroke_radii_px": [
             27,
@@ -258,26 +326,26 @@
             39
           ],
           "read_slot": 2,
-          "interior_paper_fraction": 0.9353448275862069,
+          "interior_paper_fraction": 0.9296536796536796,
           "appears_empty": true
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        238.41641235351562,
-        196.98244094848633
+        319.48876190185547,
+        197.01671600341797
       ],
       "offset_from_image_center_px": [
-        -81.58358764648438,
-        16.982440948486328
+        -0.5112380981445312,
+        17.01671600341797
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 0.6603934629383332,
+        "error_px": 0.6945324840239843,
         "visible": true,
         "reference_xy": [
-          238.84265899658203,
+          319.9999809265137,
           197.48685479164124
         ]
       }
@@ -285,7 +353,7 @@
     {
       "index": 8,
       "file": "08.png",
-      "sha256": "147355d9a3658e50d1f13c7550b2b3c31d1baee20b52146428cb7be71a1ead1d",
+      "sha256": "00b529bfb82947cbbef2c5b584a326b672ec40bd7c440ec2a56573b778870ee9",
       "action": "PLACE",
       "slot": 3,
       "carried_or_pick_color": 6,
@@ -293,17 +361,17 @@
       "feature": "empty_rings",
       "expected_observed_color": null,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        288,
+        165,
+        352,
+        230
       ],
       "detections_in_window": [],
       "rings_in_window": [
         {
           "center": [
-            238.4202423095703,
-            196.98003768920898
+            319.4981880187988,
+            197.01338577270508
           ],
           "stroke_radii_px": [
             27,
@@ -312,26 +380,26 @@
             39
           ],
           "read_slot": 3,
-          "interior_paper_fraction": 0.9321120689655172,
+          "interior_paper_fraction": 0.933982683982684,
           "appears_empty": true
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        238.4202423095703,
-        196.98003768920898
+        319.4981880187988,
+        197.01338577270508
       ],
       "offset_from_image_center_px": [
-        -81.57975769042969,
-        16.980037689208984
+        -0.5018119812011719,
+        17.013385772705078
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 0.6597762287816117,
+        "error_px": 0.6898977277085538,
         "visible": true,
         "reference_xy": [
-          238.84267807006836,
+          319.9999809265137,
           197.48684406280518
         ]
       }
@@ -339,7 +407,7 @@
     {
       "index": 9,
       "file": "09.png",
-      "sha256": "deba63c5a40333ca89ce9a0ac750689373a7c14f36be4e8f9470dbdec4493c19",
+      "sha256": "d7c8f4b48070822341e09325ac55a494284fa5b084805a2794580631bd568e26",
       "action": "PICK",
       "slot": 1,
       "carried_or_pick_color": 1,
@@ -347,37 +415,37 @@
       "feature": "pick_top",
       "expected_observed_color": 1,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        282,
+        163,
+        358,
+        238
       ],
       "detections_in_window": [
         {
           "color": 1,
-          "score": 0.9743151664733887,
+          "score": 0.9492485523223877,
           "center": [
-            223.356689453125,
-            201.54031372070312
+            318.58453369140625,
+            201.5685577392578
           ]
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        223.356689453125,
-        201.54031372070312
+        318.58453369140625,
+        201.5685577392578
       ],
       "offset_from_image_center_px": [
-        -96.643310546875,
-        21.540313720703125
+        -1.41546630859375,
+        21.568557739257812
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 1.399375853191717,
+        "error_px": 1.7149634575781987,
         "visible": true,
         "reference_xy": [
-          224.39329147338867,
+          319.9999809265137,
           200.60025572776794
         ]
       }
@@ -385,7 +453,7 @@
     {
       "index": 10,
       "file": "10.png",
-      "sha256": "07d8d978ef3c1953562316a5cff7569b6c85a7e301be5cbb21b166a230b81541",
+      "sha256": "af19620b333e5fbe4c0e66b689e89a79b46e85eaaccc543ecfc8db4f163f1cd6",
       "action": "PICK",
       "slot": 2,
       "carried_or_pick_color": 5,
@@ -393,37 +461,37 @@
       "feature": "pick_top",
       "expected_observed_color": 5,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        282,
+        163,
+        358,
+        238
       ],
       "detections_in_window": [
         {
           "color": 5,
-          "score": 0.6746936440467834,
+          "score": 0.5883740782737732,
           "center": [
-            223.86940002441406,
-            203.10763549804688
+            320.81085205078125,
+            197.04074096679688
           ]
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        223.86940002441406,
-        203.10763549804688
+        320.81085205078125,
+        197.04074096679688
       ],
       "offset_from_image_center_px": [
-        -96.13059997558594,
-        23.107635498046875
+        0.81085205078125,
+        17.040740966796875
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 2.5615365243074,
+        "error_px": 3.6506959521379425,
         "visible": true,
         "reference_xy": [
-          224.39329147338867,
+          319.9999809265137,
           200.60024499893188
         ]
       }
@@ -431,7 +499,7 @@
     {
       "index": 11,
       "file": "11.png",
-      "sha256": "c2c498e4857c9c1de614577f110a0b1d1e1b44b869fb7b1c4bf757e8ec24b24f",
+      "sha256": "3fdea7190ea02d1c31fd9b9ccfdf15895270c0db6fe9d02efdf4dbdc894a0fc3",
       "action": "PICK",
       "slot": 3,
       "carried_or_pick_color": 6,
@@ -439,37 +507,37 @@
       "feature": "pick_top",
       "expected_observed_color": 6,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        282,
+        163,
+        358,
+        238
       ],
       "detections_in_window": [
         {
           "color": 6,
-          "score": 0.975685715675354,
+          "score": 0.928666889667511,
           "center": [
-            223.02999877929688,
-            201.6670684814453
+            318.1469421386719,
+            200.73971557617188
           ]
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        223.02999877929688,
-        201.6670684814453
+        318.1469421386719,
+        200.73971557617188
       ],
       "offset_from_image_center_px": [
-        -96.97000122070312,
-        21.667068481445312
+        -1.853057861328125,
+        20.739715576171875
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 1.7311201870512904,
+        "error_px": 1.8582816732266714,
         "visible": true,
         "reference_xy": [
-          224.393310546875,
+          319.9999809265137,
           200.60022354125977
         ]
       }
@@ -477,7 +545,7 @@
     {
       "index": 13,
       "file": "13.png",
-      "sha256": "d543af93e8a3ced03d61a3bdd781e4e604a81c8ed4517071020816de2acbb989",
+      "sha256": "753dadcbd372ac4c3db91e81ceda1e657c49e0d9847ca4ea77677396cee09cfc",
       "action": "PLACE",
       "slot": 1,
       "carried_or_pick_color": 1,
@@ -485,17 +553,17 @@
       "feature": "empty_rings",
       "expected_observed_color": null,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        288,
+        165,
+        352,
+        230
       ],
       "detections_in_window": [],
       "rings_in_window": [
         {
           "center": [
-            238.42913055419922,
-            196.9746322631836
+            319.4914741516113,
+            197.02086639404297
           ],
           "stroke_radii_px": [
             27,
@@ -504,26 +572,26 @@
             39
           ],
           "read_slot": 1,
-          "interior_paper_fraction": 0.9676724137931034,
+          "interior_paper_fraction": 0.9686147186147186,
           "appears_empty": true
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        238.42913055419922,
-        196.9746322631836
+        319.4914741516113,
+        197.02086639404297
       ],
       "offset_from_image_center_px": [
-        -81.57086944580078,
-        16.974632263183594
+        -0.5085258483886719,
+        17.02086639404297
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 0.6583189952380801,
+        "error_px": 0.6897422165785626,
         "visible": true,
         "reference_xy": [
-          238.8426399230957,
+          319.9999809265137,
           197.48687624931335
         ]
       }
@@ -531,7 +599,7 @@
     {
       "index": 14,
       "file": "14.png",
-      "sha256": "b85c992ebe4795ce457e4e1ae1e2bf5a1ca884ca1f4444a2c6d1d1fe1d45ac07",
+      "sha256": "ca903b6cffff7e91dcbe93cd5cfd10eeb358ba1d7e720dc5eba5e4960358d1fa",
       "action": "PLACE",
       "slot": 2,
       "carried_or_pick_color": 5,
@@ -539,17 +607,17 @@
       "feature": "empty_rings",
       "expected_observed_color": null,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        288,
+        165,
+        352,
+        230
       ],
       "detections_in_window": [],
       "rings_in_window": [
         {
           "center": [
-            238.40695190429688,
-            196.97097778320312
+            319.48294830322266,
+            197.01880645751953
           ],
           "stroke_radii_px": [
             27,
@@ -558,26 +626,26 @@
             39
           ],
           "read_slot": 2,
-          "interior_paper_fraction": 0.9310344827586207,
+          "interior_paper_fraction": 0.9296536796536796,
           "appears_empty": true
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        238.40695190429688,
-        196.97097778320312
+        319.48294830322266,
+        197.01880645751953
       ],
       "offset_from_image_center_px": [
-        -81.59304809570312,
-        16.970977783203125
+        -0.5170516967773438,
+        17.01880645751953
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 0.6752553280816375,
+        "error_px": 0.6974180787886787,
         "visible": true,
         "reference_xy": [
-          238.84265899658203,
+          319.9999809265137,
           197.48685479164124
         ]
       }
@@ -585,7 +653,7 @@
     {
       "index": 15,
       "file": "15.png",
-      "sha256": "4ff26fbc114ffb2b28d06a180e65a85c4090b7b52c9ecf729843be9fc5c66345",
+      "sha256": "7d8d291df350ff762c924834e88be952ad1c595b04abb85c42601378529914a9",
       "action": "PLACE",
       "slot": 3,
       "carried_or_pick_color": 6,
@@ -593,17 +661,17 @@
       "feature": "empty_rings",
       "expected_observed_color": null,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        288,
+        165,
+        352,
+        230
       ],
       "detections_in_window": [],
       "rings_in_window": [
         {
           "center": [
-            238.33555603027344,
-            196.92583847045898
+            319.3784828186035,
+            196.62548828125
           ],
           "stroke_radii_px": [
             27,
@@ -612,26 +680,26 @@
             39
           ],
           "read_slot": 3,
-          "interior_paper_fraction": 0.9354144241119483,
+          "interior_paper_fraction": 0.9357601713062098,
           "appears_empty": true
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        238.33555603027344,
-        196.92583847045898
+        319.3784828186035,
+        196.62548828125
       ],
       "offset_from_image_center_px": [
-        -81.66444396972656,
-        16.925838470458984
+        -0.6215171813964844,
+        16.62548828125
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 0.7562199781305213,
+        "error_px": 1.062155919806316,
         "visible": true,
         "reference_xy": [
-          238.84265899658203,
+          319.9999809265137,
           197.48683333396912
         ]
       }
@@ -639,7 +707,7 @@
     {
       "index": 17,
       "file": "17.png",
-      "sha256": "1f8e54aa66e93a793fce615d7f6d8e8cdf82fb806d8c830d09f830c68f4f1056",
+      "sha256": "10ecab2417f94b412e601d8bf4113c020cb24489755b6f984fce4c2935e9867b",
       "action": "PICK",
       "slot": null,
       "carried_or_pick_color": 5,
@@ -647,37 +715,37 @@
       "feature": "pick_top",
       "expected_observed_color": 5,
       "capture_window_xyxy": [
-        145,
-        174,
-        245,
-        268
+        271,
+        183,
+        369,
+        282
       ],
       "detections_in_window": [
         {
           "color": 5,
-          "score": 0.9838100671768188,
+          "score": 0.984017550945282,
           "center": [
-            195.04879760742188,
-            233.03147888183594
+            319.943359375,
+            233.26487731933594
           ]
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        195.04879760742188,
-        233.03147888183594
+        319.943359375,
+        233.26487731933594
       ],
       "offset_from_image_center_px": [
-        -124.95120239257812,
-        53.03147888183594
+        -0.056640625,
+        53.26487731933594
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 0.4388674740273919,
+        "error_px": 0.6009497674865212,
         "visible": true,
         "reference_xy": [
-          194.80493545532227,
+          319.9999809265137,
           232.6666009426117
         ]
       }
@@ -685,7 +753,7 @@
     {
       "index": 18,
       "file": "18.png",
-      "sha256": "17791a574f53a5ec98a089997eb7b42db4046356810ed16053adb3fadb66090c",
+      "sha256": "eb6b0da7bc52c53b79b5b0d1fd86f420b07c80e23a7cc87f6445e25e9db80d11",
       "action": "PICK",
       "slot": null,
       "carried_or_pick_color": 1,
@@ -693,37 +761,37 @@
       "feature": "pick_top",
       "expected_observed_color": 1,
       "capture_window_xyxy": [
-        145,
-        174,
-        245,
-        268
+        271,
+        183,
+        369,
+        282
       ],
       "detections_in_window": [
         {
           "color": 1,
-          "score": 0.9884599447250366,
+          "score": 0.9836296439170837,
           "center": [
-            194.37640380859375,
-            232.8709716796875
+            320.4117431640625,
+            233.26991271972656
           ]
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        194.37640380859375,
-        232.8709716796875
+        320.4117431640625,
+        233.26991271972656
       ],
       "offset_from_image_center_px": [
-        -125.62359619140625,
-        52.8709716796875
+        0.4117431640625,
+        53.26991271972656
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 0.47477022908009026,
+        "error_px": 0.7304335977189973,
         "visible": true,
         "reference_xy": [
-          194.80493545532227,
+          319.9999809265137,
           232.6666009426117
         ]
       }
@@ -731,7 +799,7 @@
     {
       "index": 19,
       "file": "19.png",
-      "sha256": "6109bee0e50d6c5dc505e825fb5f4c0133f84e6f2f4ce13bf4ac262f7a7f0c58",
+      "sha256": "aa9fc1d529399af6291cfd13e0ac5c74dfb3a3a3af55260f473ad55e316e619d",
       "action": "PICK",
       "slot": null,
       "carried_or_pick_color": 6,
@@ -739,37 +807,37 @@
       "feature": "pick_top",
       "expected_observed_color": 6,
       "capture_window_xyxy": [
-        145,
-        174,
-        245,
-        268
+        271,
+        183,
+        369,
+        282
       ],
       "detections_in_window": [
         {
           "color": 6,
-          "score": 0.993550181388855,
+          "score": 0.9888520836830139,
           "center": [
-            195.59814453125,
-            232.5769500732422
+            320.2827453613281,
+            233.20791625976562
           ]
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        195.59814453125,
-        232.5769500732422
+        320.2827453613281,
+        233.20791625976562
       ],
       "offset_from_image_center_px": [
-        -124.40185546875,
-        52.57695007324219
+        0.282745361328125,
+        53.207916259765625
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 0.7982593040565444,
+        "error_px": 0.6107192466112376,
         "visible": true,
         "reference_xy": [
-          194.80493545532227,
+          319.9999809265137,
           232.6666009426117
         ]
       }
@@ -777,7 +845,7 @@
     {
       "index": 21,
       "file": "21.png",
-      "sha256": "42d9ad1ff58883054590e180a3099402a1f2083769662eb19cb7672c84a175d4",
+      "sha256": "83138ac8054f3ce2e975ffe339274770398aea157c062f016092b6616bd68b2c",
       "action": "PLACE",
       "slot": 2,
       "carried_or_pick_color": 5,
@@ -785,17 +853,17 @@
       "feature": "empty_rings",
       "expected_observed_color": null,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        288,
+        165,
+        352,
+        230
       ],
       "detections_in_window": [],
       "rings_in_window": [
         {
           "center": [
-            238.43239974975586,
-            197.04934692382812
+            319.48876190185547,
+            197.01671600341797
           ],
           "stroke_radii_px": [
             27,
@@ -804,26 +872,26 @@
             39
           ],
           "read_slot": 2,
-          "interior_paper_fraction": 0.9352051835853131,
+          "interior_paper_fraction": 0.9296536796536796,
           "appears_empty": true
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        238.43239974975586,
-        197.04934692382812
+        319.48876190185547,
+        197.01671600341797
       ],
       "offset_from_image_center_px": [
-        -81.56760025024414,
-        17.049346923828125
+        -0.5112380981445312,
+        17.01671600341797
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 0.5997975373044513,
+        "error_px": 0.6945746029140224,
         "visible": true,
         "reference_xy": [
-          238.8426971435547,
+          320.00003814697266,
           197.48685479164124
         ]
       }
@@ -831,7 +899,7 @@
     {
       "index": 22,
       "file": "22.png",
-      "sha256": "2482cc40b52cfe7ba9e3184a9a9236021e22c595a250cd8465e91e001aafcad4",
+      "sha256": "521ebe49a33594b5f18c5d49cff19c2be1d8c7040b23a06d00387d92057201f9",
       "action": "PLACE",
       "slot": 3,
       "carried_or_pick_color": 1,
@@ -839,17 +907,17 @@
       "feature": "empty_rings",
       "expected_observed_color": null,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        288,
+        165,
+        352,
+        230
       ],
       "detections_in_window": [],
       "rings_in_window": [
         {
           "center": [
-            238.4202423095703,
-            196.98003768920898
+            319.4981880187988,
+            197.01338577270508
           ],
           "stroke_radii_px": [
             27,
@@ -858,26 +926,26 @@
             39
           ],
           "read_slot": 3,
-          "interior_paper_fraction": 0.9321120689655172,
+          "interior_paper_fraction": 0.933982683982684,
           "appears_empty": true
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        238.4202423095703,
-        196.98003768920898
+        319.4981880187988,
+        197.01338577270508
       ],
       "offset_from_image_center_px": [
-        -81.57975769042969,
-        16.980037689208984
+        -0.5018119812011719,
+        17.013385772705078
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 0.6598049236743425,
+        "error_px": 0.6899540728907466,
         "visible": true,
         "reference_xy": [
-          238.8426971435547,
+          320.00003814697266,
           197.4868655204773
         ]
       }
@@ -885,7 +953,7 @@
     {
       "index": 23,
       "file": "23.png",
-      "sha256": "c2b52081985b8d46a88eefbb7668264781f810453fa965a67c4353339b6abb61",
+      "sha256": "368620bf1e9e77a75503fa5770b8a6a4b2a1b4d288c3a554abd44490f749ae60",
       "action": "PLACE",
       "slot": 1,
       "carried_or_pick_color": 6,
@@ -893,17 +961,17 @@
       "feature": "empty_rings",
       "expected_observed_color": null,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        288,
+        165,
+        352,
+        230
       ],
       "detections_in_window": [],
       "rings_in_window": [
         {
           "center": [
-            238.4099884033203,
-            196.96194458007812
+            319.48448181152344,
+            197.00836181640625
           ],
           "stroke_radii_px": [
             27,
@@ -912,26 +980,26 @@
             39
           ],
           "read_slot": 1,
-          "interior_paper_fraction": 0.9698600645855759,
+          "interior_paper_fraction": 0.968682505399568,
           "appears_empty": true
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        238.4099884033203,
-        196.96194458007812
+        319.48448181152344,
+        197.00836181640625
       ],
       "offset_from_image_center_px": [
-        -81.59001159667969,
-        16.961944580078125
+        -0.5155181884765625,
+        17.00836181640625
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 0.6802619501650414,
+        "error_px": 0.7033801213716447,
         "visible": true,
         "reference_xy": [
-          238.8426971435547,
+          320.00003814697266,
           197.48684406280518
         ]
       }
@@ -939,7 +1007,7 @@
     {
       "index": 24,
       "file": "24.png",
-      "sha256": "d5d2e4b1429f8b8f0ac7e72de4d7e4970ca484ca854526be09ff14a3873835c5",
+      "sha256": "8b5e8af0ab7d2517c44108f2ad06e57adbd8a061bc4db1fe38b4ef2c08dbbf35",
       "action": "PICK",
       "slot": 2,
       "carried_or_pick_color": 5,
@@ -947,37 +1015,37 @@
       "feature": "pick_top",
       "expected_observed_color": 5,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        282,
+        163,
+        358,
+        238
       ],
       "detections_in_window": [
         {
           "color": 5,
-          "score": 0.7927964925765991,
+          "score": 0.6727767586708069,
           "center": [
-            223.47982788085938,
-            203.3667755126953
+            320.727294921875,
+            197.05567932128906
           ]
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        223.47982788085938,
-        203.3667755126953
+        320.727294921875,
+        197.05567932128906
       ],
       "offset_from_image_center_px": [
-        -96.52017211914062,
-        23.366775512695312
+        0.727294921875,
+        17.055679321289062
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 2.913447530273581,
+        "error_px": 3.618404103989061,
         "visible": true,
         "reference_xy": [
-          224.39332962036133,
+          320.00003814697266,
           200.60024499893188
         ]
       }
@@ -985,7 +1053,7 @@
     {
       "index": 25,
       "file": "25.png",
-      "sha256": "ebd6b8d3d860a0866d15e1e31163f85d398fce651294fa591c9622f6f82534e9",
+      "sha256": "187d883baf1eb5370e5427bf4cb5f6fa728c48642166fc4c3d89a9d874d7a4dd",
       "action": "PICK",
       "slot": 3,
       "carried_or_pick_color": 1,
@@ -993,37 +1061,37 @@
       "feature": "pick_top",
       "expected_observed_color": 1,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        282,
+        163,
+        358,
+        238
       ],
       "detections_in_window": [
         {
           "color": 1,
-          "score": 0.9626409411430359,
+          "score": 0.9357808232307434,
           "center": [
-            223.2379608154297,
-            201.63690185546875
+            318.0971984863281,
+            201.22604370117188
           ]
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        223.2379608154297,
-        201.63690185546875
+        318.0971984863281,
+        201.22604370117188
       ],
       "offset_from_image_center_px": [
-        -96.76203918457031,
-        21.63690185546875
+        -1.902801513671875,
+        21.226043701171875
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 1.5522603742562788,
+        "error_px": 2.003099938040734,
         "visible": true,
         "reference_xy": [
-          224.39332962036133,
+          320.00003814697266,
           200.60025572776794
         ]
       }
@@ -1031,7 +1099,7 @@
     {
       "index": 26,
       "file": "26.png",
-      "sha256": "ce6a522989ac4e682306876b4e593462d2065503b2bb6003b34b74b22a1708e8",
+      "sha256": "355d9cd7c4da8d7f92dd4c03998cb357bcb329f93f2d0d7e19c833f8360f4db7",
       "action": "PICK",
       "slot": 1,
       "carried_or_pick_color": 6,
@@ -1039,37 +1107,37 @@
       "feature": "pick_top",
       "expected_observed_color": 6,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        282,
+        163,
+        358,
+        238
       ],
       "detections_in_window": [
         {
           "color": 6,
-          "score": 0.9743378162384033,
+          "score": 0.7604572772979736,
           "center": [
-            222.97726440429688,
-            201.63661193847656
+            318.5135192871094,
+            201.08468627929688
           ]
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        222.97726440429688,
-        201.63661193847656
+        318.5135192871094,
+        201.08468627929688
       ],
       "offset_from_image_center_px": [
-        -97.02273559570312,
-        21.636611938476562
+        -1.486480712890625,
+        21.084686279296875
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 1.7548052900630506,
+        "error_px": 1.5634712870007055,
         "visible": true,
         "reference_xy": [
-          224.39332962036133,
+          320.00003814697266,
           200.60022354125977
         ]
       }
@@ -1077,7 +1145,7 @@
     {
       "index": 28,
       "file": "28.png",
-      "sha256": "7d99364ae59335b29a163e1d6494492c2dc88d9a041018953b0be198a095e66a",
+      "sha256": "83535c18665a1b138442618698a33a1ee33cac8a93b3fd93456b4170c10a8ffc",
       "action": "PLACE",
       "slot": 2,
       "carried_or_pick_color": 5,
@@ -1085,58 +1153,37 @@
       "feature": "support_top",
       "expected_observed_color": 5,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        282,
+        163,
+        358,
+        238
       ],
       "detections_in_window": [
         {
           "color": 5,
-          "score": 0.40177595615386963,
+          "score": 0.6854840517044067,
           "center": [
-            236.4829559326172,
-            198.1416015625
+            320.3022766113281,
+            197.79592895507812
           ]
         }
       ],
-      "status": "HOLD",
-      "reason": "INSUFFICIENT_TOP_CONFIDENCE",
-      "center_xy": null,
-      "offset_from_image_center_px": null,
-      "retry": {
-        "file": "mission_retry/28.png",
-        "sha256": "e934ce3e435d0352ee296b56943a2e5976d006754a6a8cb121f76ed5b920ee53",
-        "station": "BUFFER",
-        "feature": "support_top",
-        "expected_observed_color": 5,
-        "capture_window_xyxy": [
-          185,
-          162,
-          279,
-          236
-        ],
-        "detections_in_window": [],
-        "status": "HOLD",
-        "reason": "REQUIRE_UNIQUE_COLOR_TOP",
-        "center_xy": null,
-        "offset_from_image_center_px": null,
-        "offline_score": {
-          "result": "HOLD",
-          "error_px": null,
-          "visible": true,
-          "reference_xy": [
-            224.393310546875,
-            200.60024499893188
-          ]
-        }
-      },
+      "status": "ACQUIRED",
+      "reason": "UNIQUE_IMAGE_FEATURE",
+      "center_xy": [
+        320.3022766113281,
+        197.79592895507812
+      ],
+      "offset_from_image_center_px": [
+        0.302276611328125,
+        17.795928955078125
+      ],
       "offline_score": {
-        "result": "HOLD",
-        "error_px": null,
+        "result": "ON_TARGET",
+        "error_px": 2.820562205460649,
         "visible": true,
         "reference_xy": [
-          224.393310546875,
+          319.9999809265137,
           200.60024499893188
         ]
       }
@@ -1144,7 +1191,7 @@
     {
       "index": 29,
       "file": "29.png",
-      "sha256": "a23a031a99aa3bef2f467a4d34739f5046e39d8810ab1f14203ea9ded479b6f3",
+      "sha256": "a902d865249c295834eecfee11a438f1f47a36f1a04db4c2b3311971eb401189",
       "action": "PLACE",
       "slot": 1,
       "carried_or_pick_color": 1,
@@ -1152,37 +1199,37 @@
       "feature": "support_top",
       "expected_observed_color": 1,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        282,
+        163,
+        358,
+        238
       ],
       "detections_in_window": [
         {
           "color": 1,
-          "score": 0.9620267748832703,
+          "score": 0.9563888311386108,
           "center": [
-            223.75494384765625,
-            201.93252563476562
+            319.1154479980469,
+            201.64109802246094
           ]
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        223.75494384765625,
-        201.93252563476562
+        319.1154479980469,
+        201.64109802246094
       ],
       "offset_from_image_center_px": [
-        -96.24505615234375,
-        21.932525634765625
+        -0.884552001953125,
+        21.641098022460938
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 1.477323165488512,
+        "error_px": 1.3659332041251573,
         "visible": true,
         "reference_xy": [
-          224.393310546875,
+          319.9999809265137,
           200.60024499893188
         ]
       }
@@ -1190,7 +1237,7 @@
     {
       "index": 30,
       "file": "30.png",
-      "sha256": "56066771cb849091e500509225f3e3c8c3066420b5708dcea633150cbb58ce99",
+      "sha256": "f184cc067df25416b278658ccede406f4bdbb9d2b8bef605ffeaff9f439162cf",
       "action": "PLACE",
       "slot": 3,
       "carried_or_pick_color": 6,
@@ -1198,37 +1245,37 @@
       "feature": "support_top",
       "expected_observed_color": 6,
       "capture_window_xyxy": [
-        185,
-        162,
-        279,
-        236
+        282,
+        163,
+        358,
+        238
       ],
       "detections_in_window": [
         {
           "color": 6,
-          "score": 0.9744840264320374,
+          "score": 0.8937262892723083,
           "center": [
-            223.6221466064453,
-            202.0277099609375
+            318.7223815917969,
+            201.83856201171875
           ]
         }
       ],
       "status": "ACQUIRED",
       "reason": "UNIQUE_IMAGE_FEATURE",
       "center_xy": [
-        223.6221466064453,
-        202.0277099609375
+        318.7223815917969,
+        201.83856201171875
       ],
       "offset_from_image_center_px": [
-        -96.37785339355469,
-        22.0277099609375
+        -1.277618408203125,
+        21.83856201171875
       ],
       "offline_score": {
         "result": "ON_TARGET",
-        "error_px": 1.6224613002974706,
+        "error_px": 1.7792458109383693,
         "visible": true,
         "reference_xy": [
-          224.393310546875,
+          319.9999809265137,
           200.60023427009583
         ]
       }

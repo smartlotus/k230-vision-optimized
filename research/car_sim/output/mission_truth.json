@@ -4,7 +4,7 @@
       "station": "RAW",
       "support_color_id": null,
       "target_center_xy": [
-        194.8049545288086,
+        320.0,
         232.6666009426117
       ],
       "visible_target": true
@@ -13,7 +13,7 @@
       "station": "RAW",
       "support_color_id": null,
       "target_center_xy": [
-        194.8049545288086,
+        320.0,
         232.6666009426117
       ],
       "visible_target": true
@@ -22,7 +22,7 @@
       "station": "RAW",
       "support_color_id": null,
       "target_center_xy": [
-        194.8049545288086,
+        320.0,
         232.6666009426117
       ],
       "visible_target": true
@@ -31,7 +31,7 @@
       "station": "PROCESS",
       "support_color_id": null,
       "target_center_xy": [
-        238.84265899658203,
+        319.9999809265137,
         197.4868655204773
       ],
       "visible_target": true
@@ -40,7 +40,7 @@
       "station": "PROCESS",
       "support_color_id": null,
       "target_center_xy": [
-        238.84265899658203,
+        319.9999809265137,
         197.48685479164124
       ],
       "visible_target": true
@@ -49,7 +49,7 @@
       "station": "PROCESS",
       "support_color_id": null,
       "target_center_xy": [
-        238.84267807006836,
+        319.9999809265137,
         197.48684406280518
       ],
       "visible_target": true
@@ -58,7 +58,7 @@
       "station": "PROCESS",
       "support_color_id": null,
       "target_center_xy": [
-        224.39329147338867,
+        319.9999809265137,
         200.60025572776794
       ],
       "visible_target": true
@@ -67,7 +67,7 @@
       "station": "PROCESS",
       "support_color_id": null,
       "target_center_xy": [
-        224.39329147338867,
+        319.9999809265137,
         200.60024499893188
       ],
       "visible_target": true
@@ -76,7 +76,7 @@
       "station": "PROCESS",
       "support_color_id": null,
       "target_center_xy": [
-        224.393310546875,
+        319.9999809265137,
         200.60022354125977
       ],
       "visible_target": true
@@ -85,7 +85,7 @@
       "station": "BUFFER",
       "support_color_id": null,
       "target_center_xy": [
-        238.8426399230957,
+        319.9999809265137,
         197.48687624931335
       ],
       "visible_target": true
@@ -94,7 +94,7 @@
       "station": "BUFFER",
       "support_color_id": null,
       "target_center_xy": [
-        238.84265899658203,
+        319.9999809265137,
         197.48685479164124
       ],
       "visible_target": true
@@ -103,7 +103,7 @@
       "station": "BUFFER",
       "support_color_id": null,
       "target_center_xy": [
-        238.84265899658203,
+        319.9999809265137,
         197.48683333396912
       ],
       "visible_target": true
@@ -112,7 +112,7 @@
       "station": "RAW",
       "support_color_id": null,
       "target_center_xy": [
-        194.80493545532227,
+        319.9999809265137,
         232.6666009426117
       ],
       "visible_target": true
@@ -121,7 +121,7 @@
       "station": "RAW",
       "support_color_id": null,
       "target_center_xy": [
-        194.80493545532227,
+        319.9999809265137,
         232.6666009426117
       ],
       "visible_target": true
@@ -130,7 +130,7 @@
       "station": "RAW",
       "support_color_id": null,
       "target_center_xy": [
-        194.80493545532227,
+        319.9999809265137,
         232.6666009426117
       ],
       "visible_target": true
@@ -139,7 +139,7 @@
       "station": "PROCESS",
       "support_color_id": null,
       "target_center_xy": [
-        238.8426971435547,
+        320.00003814697266,
         197.48685479164124
       ],
       "visible_target": true
@@ -148,7 +148,7 @@
       "station": "PROCESS",
       "support_color_id": null,
       "target_center_xy": [
-        238.8426971435547,
+        320.00003814697266,
         197.4868655204773
       ],
       "visible_target": true
@@ -157,7 +157,7 @@
       "station": "PROCESS",
       "support_color_id": null,
       "target_center_xy": [
-        238.8426971435547,
+        320.00003814697266,
         197.48684406280518
       ],
       "visible_target": true
@@ -166,7 +166,7 @@
       "station": "PROCESS",
       "support_color_id": null,
       "target_center_xy": [
-        224.39332962036133,
+        320.00003814697266,
         200.60024499893188
       ],
       "visible_target": true
@@ -175,7 +175,7 @@
       "station": "PROCESS",
       "support_color_id": null,
       "target_center_xy": [
-        224.39332962036133,
+        320.00003814697266,
         200.60025572776794
       ],
       "visible_target": true
@@ -184,7 +184,7 @@
       "station": "PROCESS",
       "support_color_id": null,
       "target_center_xy": [
-        224.39332962036133,
+        320.00003814697266,
         200.60022354125977
       ],
       "visible_target": true
@@ -193,7 +193,7 @@
       "station": "BUFFER",
       "support_color_id": 5,
       "target_center_xy": [
-        224.393310546875,
+        319.9999809265137,
         200.60024499893188
       ],
       "visible_target": true
@@ -202,7 +202,7 @@
       "station": "BUFFER",
       "support_color_id": 1,
       "target_center_xy": [
-        224.393310546875,
+        319.9999809265137,
         200.60024499893188
       ],
       "visible_target": true
@@ -211,7 +211,7 @@
       "station": "BUFFER",
       "support_color_id": 6,
       "target_center_xy": [
-        224.393310546875,
+        319.9999809265137,
         200.60023427009583
       ],
       "visible_target": true

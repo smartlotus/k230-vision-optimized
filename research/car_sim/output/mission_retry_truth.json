@@ -1,15 +1,3 @@
 {
-  "frames": {
-    "28.png": {
-      "station": "BUFFER",
-      "support_color_id": 5,
-      "target_center_xy": [
-        224.393310546875,
-        200.60024499893188
-      ],
-      "visible_target": true,
-      "primary_sha256": "7d99364ae59335b29a163e1d6494492c2dc88d9a041018953b0be198a095e66a",
-      "exposure_delta_ev": 0.9
-    }
-  }
+  "frames": {}
 }

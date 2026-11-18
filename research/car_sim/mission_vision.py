@@ -17,12 +17,49 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parents[1] / "k230_transport_mvp"))
 from vision.ring_native import group_concentric
 
-# At the prescribed slot-specific dock the lens is forward-offset relative to
-# the work point. The next ground ring is about 125 px away along the image X
-# axis at the nominal height. Keep the window narrower than one slot spacing.
-# The elevated turntable top has a different plane and projected work point.
-WINDOWS = {"RAW": (145, 174, 245, 268), "PAPER": (185, 162, 279, 236)}
 MATCH_RADIUS = 8.0  # reporting threshold only, measured in 640x360 source pixels
+# Body coordinates of the nominal point beside a correctly docked vehicle,
+# derived from the field and prescribed stops. The 82.646 mm tray height is
+# the top of the Turntable mesh in field_gray_v1.blend. CAD blocks are 60 mm.
+DOCK_POINTS_MM = {"raw_top": (215, 0, 82.646+60), "station_top": (235, 0, 3+60),
+                  "empty_rings": (235, 0, 3)}
+DOCK_HALF_WIDTH_MM = 38  # covers ±35 mm centering travel, below half the 150 mm pitch
+
+
+@lru_cache(maxsize=1)
+def dock_projection():
+    dims = json.loads((HERE / "vehicle_dimensions.json").read_text(encoding="utf-8"))
+    drawing, rig, known = dims["drawing_mm"], dims["assumed"], dims["confirmed"]
+    if known["camera_tilt_from_down_deg"] != 0 or known["driving_centerline"] != "right wheel longitudinal midpoint":
+        raise ValueError("Dock projection requires the declared downward camera on the right wheel midpoint line")
+    width, height = 640, 360
+    if width/height != rig["sensor_image_aspect"][0]/rig["sensor_image_aspect"][1]:
+        raise ValueError("Evaluation image aspect differs from the camera")
+    focal = math.hypot(width,height)/(2*math.tan(math.radians(rig["camera_diagonal_fov_deg"])/2))
+    lens_x = drawing["chassis_width"]/2 + rig["driving_overhang_mm"]
+    lens_y = 0.0  # right wheel centres lie at +/- half the wheelbase
+    lens_z = known["driving_optical_height_mm"]
+    yaw = math.radians(rig["deploy_yaw_deg"])
+    c, s = math.cos(yaw), math.sin(yaw)
+    windows = {}
+    centers = {}
+    for name, (x, y, z) in DOCK_POINTS_MM.items():
+        if lens_z <= z:
+            raise ValueError("Work surface must be below the optical centre")
+        scale = focal/(lens_z-z)
+        # Camera local +X projects right, +Y up. Inverse yaw maps the
+        # body-space horizontal displacement into the deployed camera axes.
+        dx, dy = x-lens_x, y-lens_y
+        u = width/2 + scale*(c*dx+s*dy)
+        v = height/2 - scale*(-s*dx+c*dy)
+        centers[name] = [u,v]
+        half_width = scale*DOCK_HALF_WIDTH_MM
+        windows[name] = (max(0,math.floor(u-half_width)), max(0,math.floor(v-half_width)),
+                         min(width-1,math.ceil(u+half_width)), min(height-1,math.ceil(v+half_width)))
+    return {"source": "Body-frame work points and deployed rig dimensions", "body_optical_center_mm": [lens_x,lens_y,lens_z],
+            "camera_yaw_deg": rig["deploy_yaw_deg"], "focal_px": focal,
+            "work_points_body_mm": DOCK_POINTS_MM, "candidate_half_width_mm": DOCK_HALF_WIDTH_MM,
+            "projected_centers_xy_px": centers, "windows_xyxy": windows}
 
 
 def read_png(path):
@@ -151,7 +188,8 @@ def ring_candidates(image, window):
 
 def acquisition(description, image, decoded, slot=None, window=None):
     station, kind, expected = description
-    window = window or WINDOWS["RAW" if station == "RAW" else "PAPER"]
+    plane = "raw_top" if station == "RAW" else "empty_rings" if kind == "empty_rings" else "station_top"
+    window = window or dock_projection()["windows_xyxy"][plane]
     detections = decoded["detections"]
     in_window = [d for d in detections if inside(d["center_xy_projected_3d"], window)]
     details = {"station": station, "feature": kind, "expected_observed_color": expected,
@@ -276,7 +314,8 @@ def run(hub, folder):
                      "serial command, scene feedback, or closed-loop mission success evaluated.",
             "decoded_qr": qr, "input_wh": [640, 360], "topface_onnx_sha256": TOP_SHA,
             "source_origin": "upper left, +u right, +v down", "steps_evaluated": len(observations),
-            "capture_windows_xyxy": WINDOWS, "offline_match_radius_px": MATCH_RADIUS,
+            "capture_windows_xyxy": dock_projection()["windows_xyxy"], "geometry": dock_projection(),
+            "offline_match_radius_px": MATCH_RADIUS,
             "scores": primary_counts, "scores_after_retry": final_counts, "reobserved": len(retry_images),
             "observations": observations}
 
