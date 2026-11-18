@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "id": "vision-sim-plan-1118",
+  "title": "Execution plan for vision and virtual controller iterations",
+  "paths": [
+    "docs/plans/k230-vision-sim-iterations.md"
+  ],
+  "lane": "parallel",
+  "resources": [],
+  "depends": [],
+  "acceptance": [
+    "Local executable handoff plan checked against R2 artifacts, ports and workflow"
+  ],
+  "branch": "ops/vision-sim-plan-1118",
+  "state": "ready",
+  "claimed": true,
+  "agent": "codex",
+  "session": "vision-plan-1118-a",
+  "revision": 3,
+  "handoff": ".ops/handoffs/vision-sim-plan-1118/20261118T144700-a2b928bd.json",
+  "updated_at": "2026-11-18T14:47:00+00:00"
+}

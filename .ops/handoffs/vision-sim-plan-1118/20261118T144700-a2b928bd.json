@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "task": "vision-sim-plan-1118",
+  "created_at": "2026-11-18T14:47:00+00:00",
+  "agent": "codex",
+  "session": "vision-plan-1118-a",
+  "branch": "ops/vision-sim-plan-1118",
+  "head": "6066759eaaf4182d925e3fb02723bb7cec1e264f",
+  "state": "ready",
+  "files": {
+    "docs/plans/k230-vision-sim-iterations.md": "251b097df3eab26c4fc719f72524c1f9ebe7a94a49dd7ab89e8eae59b6e80c22"
+  },
+  "git_blob_oids": {
+    "docs/plans/k230-vision-sim-iterations.md": "a245c18fdc2da2d1a74425677bd951dd6bdb2b95"
+  },
+  "scope_git_blob_oids": {
+    "docs/plans/k230-vision-sim-iterations.md": "a245c18fdc2da2d1a74425677bd951dd6bdb2b95"
+  },
+  "scope_fingerprints": {
+    "docs/plans/k230-vision-sim-iterations.md": "251b097df3eab26c4fc719f72524c1f9ebe7a94a49dd7ab89e8eae59b6e80c22"
+  },
+  "report": {
+    "completed": [
+      "Delivered a standalone Chinese execution plan mapping R2 assets and separating host vision, simulated controller and physical acceptance. The plan stages R3.0 to R3.4 and includes ready-to-copy instructions."
+    ],
+    "remaining": [
+      "R3 implementation and training are planned future work. Physical acceptance remains paused."
+    ],
+    "decisions": [
+      "Keep R2 frozen. Begin with a second task and QR, replayable observations and a virtual lower controller. Proposed sample sizes and gates are initial engineering targets."
+    ],
+    "risks": [
+      "Assumed plant timing, camera geometry and synthetic grasp feedback cannot establish physical performance."
+    ],
+    "next_steps": [
+      "Follow section 3 of the plan; implement R3.0 and the R3.1 six-scenario smoke upon execution."
+    ],
+    "verification": [
+      {
+        "command": "Verify R2 task; replay mission_vision.run; run test_workflow_session.py; verify R2 ZIP hash and asset paths; test alternate task in logical workflow; compare plan hashes",
+        "exit_code": 0,
+        "summary": "R2 24/24, 12 workflow tests OK, alternate task resolves to DONE in the logical simulator, R2 SHA and the delivered plan copy match.",
+        "evidence": [
+          "docs/plans/k230-vision-sim-iterations.md"
+        ]
+      }
+    ]
+  }
+}
