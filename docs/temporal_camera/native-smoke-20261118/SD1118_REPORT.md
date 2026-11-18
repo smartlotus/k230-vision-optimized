@@ -26,3 +26,12 @@ python -B -X utf8 research/temporal_camera/native_smoke.py fetch --remote /data/
 ```
 
 当前失败收据 `sd1118_10a` 保留，不覆盖。
+
+重新插拔 USB 摄像头后，`UVC.probe()` 返回 `openaicam#openaicam`，并重新出现 1280×720 MJPEG 30 FPS 模式。新卡上的正式短测已经完成：
+
+- `sd1118_10b` 完成 10/10 帧，0 丢帧，5.88 FPS。
+- `sd1118_60c` 完成 60/60 帧，0 丢帧，6.58 FPS，9.116 秒。
+- 两次报告均为 `MEASURED`，清理错误为空，MMZ 最终占用为 0。
+- `position_valid=false`、正确率和道路测试保持 `NOT RUN`。
+
+新卡上的滤波定位工程链路已经跑通。汇总见 [SD1118_NATIVE_SUMMARY.json](SD1118_NATIVE_SUMMARY.json)，结束状态见 [SD1118_POSTFLIGHT.json](SD1118_POSTFLIGHT.json)。

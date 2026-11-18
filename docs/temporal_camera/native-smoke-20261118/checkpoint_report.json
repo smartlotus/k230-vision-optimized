@@ -6,11 +6,10 @@
     "Extended isolated CameraXY smoke entry to accept /data paths and passed 28 host tests",
     "Uploaded 9 CNN1 filter test files to /data/k230_temporal_v1_sd1118 with full file SHA readback",
     "Read and verified model and deployment files on the new card",
-    "Preserved failed sd1118_10a report showing no inference started"
+    "Preserved failed sd1118_10a report showing no inference started",
+    "After USB replug, completed sd1118_10b and sd1118_60c with 70/70 native frames and zero drops"
   ],
   "remaining": [
-    "Current UVC.probe returns false and list_video_mode is empty across five retries",
-    "Need physical USB camera replug and fresh probe before running another inference report",
     "Current new-card firmware is v1.8-0, while previous successful UVC evidence used v1.8-36",
     "No accuracy, road test, or long soak started"
   ],
@@ -40,10 +39,16 @@
       "evidence": ["docs/temporal_camera/native-smoke-20261118/install-cnn1-data.json"]
     },
     {
-      "command": "SD1118_USB_REPROBE_20261118",
+      "command": "SD1118_UVC_RECHECK_20261118",
       "exit_code": 0,
-      "summary": "5 probe samples all false with zero video modes",
+      "summary": "UVC probe true as openaicam#openaicam with 1280x720 MJPEG30",
       "evidence": ["docs/temporal_camera/native-smoke-20261118/SD1118_STORAGE_AND_UVC.json"]
+    },
+    {
+      "command": "native sd1118_10b and sd1118_60c then fetch",
+      "exit_code": 0,
+      "summary": "70/70 frames, zero drops, cleanup errors empty, position_valid false",
+      "evidence": ["docs/temporal_camera/native-smoke-20261118/SD1118_NATIVE_SUMMARY.json", "docs/temporal_camera/native-smoke-20261118/sd1118-60c-readback.json"]
     },
     {
       "command": "python -B -X utf8 -m unittest discover -s research/temporal_camera -p test_*.py -q",
@@ -54,10 +59,10 @@
   ],
   "risks": [
     "Current firmware v1.8-0 differs from the previous v1.8-36 UVC evidence",
-    "UVC is currently unenumerated, so the new-card native inference run is not complete"
+    "Physical accuracy, road testing, TCN/GRU and long soak remain outside this smoke"
   ],
   "next_steps": [
-    "Replug the USB camera into the K230 USB-A HOST port and rerun UVC probe",
-    "If UVC remains absent, align the board firmware with the previously verified v1.8-36 image before rerunning inference"
+    "Keep the replacement SD deployment as the current engineering baseline",
+    "Proceed to a separately authorized accuracy or road test when the test scene and labels are ready"
   ]
 }

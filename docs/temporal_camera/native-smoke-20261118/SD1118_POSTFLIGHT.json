@@ -1,0 +1,23 @@
+{
+  "nonce": "SD1118_POSTFLIGHT_20261118",
+  "runtime": "2.11.0",
+  "data": {
+    "free_bytes": 61451796480,
+    "statvfs": [512, 512, 120033024, 120023040, 120023040, 0, 0, 0, 0, 255]
+  },
+  "sdcard": {
+    "/sdcard/main.py": {"exists": false},
+    "/sdcard/boot.py": {"exists": false}
+  },
+  "files": {
+    "camera_xy.kmodel": {"bytes": 2646600, "sha256": "ac86c72a648df1c9f484c920180b0bcb9ae877f26d20c2cea364969d0d921fbc"},
+    "KMODEL_REPORT.json": {"bytes": 12269, "sha256": "faa72c66564181372e245dd6e4d051ebad80f1637457aae3e98b6997b28561a9"},
+    "board_helpers.py": {"bytes": 2556, "sha256": "0fdb8b81c7a988bd8d39bc1f5fbbfb8aa7699905f6c85fe5a1aaeaf0fe01fd9f"},
+    "board_multiroute.py": {"bytes": 10449, "sha256": "d09927292fc166b4a8d600ea30ce05269697d3dc2a3ba9eb68c3fb9ea90392ae"},
+    "board_temporal.py": {"bytes": 4187, "sha256": "7b2245f4712fd13a3f8ea39861a2d896e87e8ead1da704da1f4434046dad7cd9"},
+    "competition_paths.py": {"bytes": 4575, "sha256": "cb42cd555d452c6781caa43d5ae9084c0dadbe14d6741aa985edca42c8eb5a06"},
+    "embedded_filter.py": {"bytes": 8523, "sha256": "e6fb4fa6fb3961fc5aca91228152d32097973094ecd0d8d17ae16bb597b5e858"},
+    "localization_runtime.py": {"bytes": 3790, "sha256": "1ddc278e480cd96905cf8916a58e43d15cd852d4ae69140ede1e0a0f02f6fcce"},
+    "deployment.json": {"bytes": 100016, "sha256": "641eab171629e6b44f43f6222409ca093801132af692a436810d16258fd26326"}
+  }
+}

@@ -31,11 +31,13 @@
   },
   "uvc": {
     "expected_previous_device": "openaicam#openaicam",
-    "current_probe": [false, null],
-    "current_modes": [],
+    "initial_probe": [false, null],
+    "initial_modes": [],
     "reprobe_samples": 5,
     "reprobe_all_false": true,
-    "meaning": "K230 currently sees no USB video device"
+    "final_recheck_probe": [true, "openaicam#openaicam"],
+    "final_recheck_mode": "1280x720 MJPEG 30 FPS",
+    "meaning": "USB camera became visible after physical replug"
   },
   "run": {
     "run_id": "sd1118_10a",
@@ -43,6 +45,10 @@
     "frames": 0,
     "error": "Selected UVC source differs from the verified OV2735",
     "model_and_data_readable": true,
-    "inference_started": false
+    "inference_started": false,
+    "followup_runs": {
+      "sd1118_10b": {"status": "MEASURED", "frames": 10, "dropped": 0},
+      "sd1118_60c": {"status": "MEASURED", "frames": 60, "dropped": 0}
+    }
   }
 }

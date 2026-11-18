@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "project_id": "ad1a138f8f774cbf9b9c02ae74b98dab",
+  "task": "temporal-native-sd1118-20261118",
+  "created_at": "2026-11-18T04:32:06+00:00",
+  "agent": "coordinator",
+  "session": "temporal-native-sd1118-20261118-b",
+  "branch": "ops/temporal-camera-v1-20261117",
+  "head": "8d112fbe09e003c625806762a63d0ab1023ec260",
+  "state": "ready",
+  "files": {
+    "docs/temporal_camera/native-smoke-20261118/SD1118_NATIVE_SUMMARY.json": "ff5c90fe5130d5aae6994cca8d17e46b57f240cd6a870584e71ea31b6664af26",
+    "docs/temporal_camera/native-smoke-20261118/SD1118_POSTFLIGHT.json": "9a9f9c2d8dd5ee78294a7ba383588db0c2cf94c54b6be05728d5c553d0098910",
+    "docs/temporal_camera/native-smoke-20261118/SD1118_REPORT.md": "be1be4b4bd8f3d598c8affde6fbef1ffa353cc5a8ead594ee094c5d89a4d93f9",
+    "docs/temporal_camera/native-smoke-20261118/SD1118_STORAGE_AND_UVC.json": "9a01548b3debece38a12c024d6e987dc2c4a9ed51057a6e7d1199459de12ab42",
+    "docs/temporal_camera/native-smoke-20261118/checkpoint_report.json": "1e714a023bae9e54892e37c55382df2363791ec9c5212f016f2c4bceee84d9af",
+    "docs/temporal_camera/native-smoke-20261118/install-cnn1-data.json": "384825926b42292d71ae29f87af56adcacafb424320ae771b24afafa6d03906b",
+    "docs/temporal_camera/native-smoke-20261118/install-cnn1-data.log": "eb3c25c1f8b943ac66ba9063d4eaed8f45daf0b6594be887bd34d9af05bc8f31",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10a-intent.json": "7424375ae2b80d847c231d2fc5dfc11bfed89f532890932fe0f30acecc20e5cf",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10a-intent.runner.py": "a8579e295d22368a7a42d13155765a357fdb21d42cc069637baeb17f162392db",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10a-readback.json": "94224286f1c18532188bdab95b3b7aa2f83a28a4c285c2ba10564f0602959633",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10a-readback.log": "9f6812d63fac570530ef8bd0a15056d2af8dcef0cdf6cec65fff27f000fe0216",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10b-intent.json": "fe6ec19d10e402ab6b4693c60478593e272934175c90536cb99c60e053034872",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10b-intent.runner.py": "1ba3dc701c3e1aebde31babedbb5c033b5fdca63ec11b06459e107779c0ca88a",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10b-readback.json": "c513376e5a5a4cc7752c088165f699ae3ff4ad5bf666aedd284b402966697958",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10b-readback.log": "a1c4718a6eda8c44e6def4568b9182f0b5843ff232aebbc75ae39dd2f62d3144",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-60c-intent.json": "f6f874549f69ebaf1ffe644584bad8ba31d083c130fd8aa903680639e0bef5e8",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-60c-intent.runner.py": "32e5c7f16e96d43d8c1f8f43cca3c03c2228aebad22c93fa98169a449e5123df",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-60c-readback.json": "1a85e1eb7834cca00d19d1403bba8ce4dfe1fd0c9c6f59aa7f006298ffade2b0",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-60c-readback.log": "c74e8546994cff4a8b1dce517411421baa48ae84275a28bbce997c3cece9e43d",
+    "research/temporal_camera/board_multiroute.py": "d09927292fc166b4a8d600ea30ce05269697d3dc2a3ba9eb68c3fb9ea90392ae",
+    "research/temporal_camera/native_smoke.py": "aa562863e190a248a0b8d75ae908e2ed13280b79353782d3738fc20b38661ed1",
+    "research/temporal_camera/test_native_smoke.py": "94be58ec4c2988fd5c7b5471fcd9d47db9e324ad531b758dfcbb0f34275871d3"
+  },
+  "git_blob_oids": {
+    "docs/temporal_camera/native-smoke-20261118/SD1118_NATIVE_SUMMARY.json": "d262b9647df48adf0a1c9451ac5f652719228ab8",
+    "docs/temporal_camera/native-smoke-20261118/SD1118_POSTFLIGHT.json": "8013a23e54446eae599511841dc226b752379055",
+    "docs/temporal_camera/native-smoke-20261118/SD1118_REPORT.md": "687021d150ae064ebfc24a66b8776ebf6247f9d5",
+    "docs/temporal_camera/native-smoke-20261118/SD1118_STORAGE_AND_UVC.json": "a73567d3534c3d3a89572dec8367bb86116aa67a",
+    "docs/temporal_camera/native-smoke-20261118/checkpoint_report.json": "c919a0c7a6d0fdb5b2f29fd81efa0190d93e2d81",
+    "docs/temporal_camera/native-smoke-20261118/install-cnn1-data.json": "72a5720f7b7d4d02dfd8e738bd5228853fa83332",
+    "docs/temporal_camera/native-smoke-20261118/install-cnn1-data.log": "cfd1bddc44a382a5a1ced54ea7e1ced6627543a8",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10a-intent.json": "428f4895f1d5e4623aa326831a1289a6c298f913",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10a-intent.runner.py": "34286382dbe10b82012407ba63d6efe426371aec",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10a-readback.json": "c881e49c7c2cb9a92cd51a4f8373df4ca8414743",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10a-readback.log": "bd476e6fc931c6075ebd5c95bdba4f48ad8ea046",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10b-intent.json": "344bc83cd40c4bd70ae06ce55f1d4e75c2fdf20b",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10b-intent.runner.py": "8f67f9c4a001fff218c4129378ba087b883bda17",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10b-readback.json": "e77599be43fefe0c8866ec3a62ec620538dff634",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10b-readback.log": "8a768dfb560f3550ab010e561904b591ab44c404",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-60c-intent.json": "8c5254880820bbc1d772461317cef0a0b7015b1b",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-60c-intent.runner.py": "89656838c54a9a6f47eb6c3a5a1408a2dfd5ad0b",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-60c-readback.json": "942528b51564d5bca22432d29720e45d118af714",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-60c-readback.log": "f9986dd87f6355ffabe349e31b3eefb4fbe9e27d",
+    "research/temporal_camera/board_multiroute.py": "04437761a01e4f365f76262d39d2eb9df06c962f",
+    "research/temporal_camera/native_smoke.py": "0d8642b06f7a4aa38cebcf55614c20607a786180",
+    "research/temporal_camera/test_native_smoke.py": "3960c7674590ddb7d4fee701de2faea2f63d99f4"
+  },
+  "scope_git_blob_oids": {
+    "docs/temporal_camera/native-smoke-20261118/SD1118_NATIVE_SUMMARY.json": "d262b9647df48adf0a1c9451ac5f652719228ab8",
+    "docs/temporal_camera/native-smoke-20261118/SD1118_POSTFLIGHT.json": "8013a23e54446eae599511841dc226b752379055",
+    "docs/temporal_camera/native-smoke-20261118/SD1118_REPORT.md": "687021d150ae064ebfc24a66b8776ebf6247f9d5",
+    "docs/temporal_camera/native-smoke-20261118/SD1118_STORAGE_AND_UVC.json": "a73567d3534c3d3a89572dec8367bb86116aa67a",
+    "docs/temporal_camera/native-smoke-20261118/checkpoint_report.json": "c919a0c7a6d0fdb5b2f29fd81efa0190d93e2d81",
+    "docs/temporal_camera/native-smoke-20261118/install-cnn1-data.json": "72a5720f7b7d4d02dfd8e738bd5228853fa83332",
+    "docs/temporal_camera/native-smoke-20261118/install-cnn1-data.log": "cfd1bddc44a382a5a1ced54ea7e1ced6627543a8",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10a-intent.json": "428f4895f1d5e4623aa326831a1289a6c298f913",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10a-intent.runner.py": "34286382dbe10b82012407ba63d6efe426371aec",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10a-readback.json": "c881e49c7c2cb9a92cd51a4f8373df4ca8414743",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10a-readback.log": "bd476e6fc931c6075ebd5c95bdba4f48ad8ea046",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10b-intent.json": "344bc83cd40c4bd70ae06ce55f1d4e75c2fdf20b",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10b-intent.runner.py": "8f67f9c4a001fff218c4129378ba087b883bda17",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10b-readback.json": "e77599be43fefe0c8866ec3a62ec620538dff634",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10b-readback.log": "8a768dfb560f3550ab010e561904b591ab44c404",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-60c-intent.json": "8c5254880820bbc1d772461317cef0a0b7015b1b",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-60c-intent.runner.py": "89656838c54a9a6f47eb6c3a5a1408a2dfd5ad0b",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-60c-readback.json": "942528b51564d5bca22432d29720e45d118af714",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-60c-readback.log": "f9986dd87f6355ffabe349e31b3eefb4fbe9e27d",
+    "research/temporal_camera/board_multiroute.py": "04437761a01e4f365f76262d39d2eb9df06c962f",
+    "research/temporal_camera/native_smoke.py": "0d8642b06f7a4aa38cebcf55614c20607a786180",
+    "research/temporal_camera/test_native_smoke.py": "3960c7674590ddb7d4fee701de2faea2f63d99f4"
+  },
+  "scope_fingerprints": {
+    "docs/temporal_camera/native-smoke-20261118/SD1118_NATIVE_SUMMARY.json": "ff5c90fe5130d5aae6994cca8d17e46b57f240cd6a870584e71ea31b6664af26",
+    "docs/temporal_camera/native-smoke-20261118/SD1118_POSTFLIGHT.json": "9a9f9c2d8dd5ee78294a7ba383588db0c2cf94c54b6be05728d5c553d0098910",
+    "docs/temporal_camera/native-smoke-20261118/SD1118_REPORT.md": "be1be4b4bd8f3d598c8affde6fbef1ffa353cc5a8ead594ee094c5d89a4d93f9",
+    "docs/temporal_camera/native-smoke-20261118/SD1118_STORAGE_AND_UVC.json": "9a01548b3debece38a12c024d6e987dc2c4a9ed51057a6e7d1199459de12ab42",
+    "docs/temporal_camera/native-smoke-20261118/checkpoint_report.json": "1e714a023bae9e54892e37c55382df2363791ec9c5212f016f2c4bceee84d9af",
+    "docs/temporal_camera/native-smoke-20261118/install-cnn1-data.json": "384825926b42292d71ae29f87af56adcacafb424320ae771b24afafa6d03906b",
+    "docs/temporal_camera/native-smoke-20261118/install-cnn1-data.log": "eb3c25c1f8b943ac66ba9063d4eaed8f45daf0b6594be887bd34d9af05bc8f31",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10a-intent.json": "7424375ae2b80d847c231d2fc5dfc11bfed89f532890932fe0f30acecc20e5cf",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10a-intent.runner.py": "a8579e295d22368a7a42d13155765a357fdb21d42cc069637baeb17f162392db",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10a-readback.json": "94224286f1c18532188bdab95b3b7aa2f83a28a4c285c2ba10564f0602959633",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10a-readback.log": "9f6812d63fac570530ef8bd0a15056d2af8dcef0cdf6cec65fff27f000fe0216",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10b-intent.json": "fe6ec19d10e402ab6b4693c60478593e272934175c90536cb99c60e053034872",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10b-intent.runner.py": "1ba3dc701c3e1aebde31babedbb5c033b5fdca63ec11b06459e107779c0ca88a",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10b-readback.json": "c513376e5a5a4cc7752c088165f699ae3ff4ad5bf666aedd284b402966697958",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-10b-readback.log": "a1c4718a6eda8c44e6def4568b9182f0b5843ff232aebbc75ae39dd2f62d3144",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-60c-intent.json": "f6f874549f69ebaf1ffe644584bad8ba31d083c130fd8aa903680639e0bef5e8",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-60c-intent.runner.py": "32e5c7f16e96d43d8c1f8f43cca3c03c2228aebad22c93fa98169a449e5123df",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-60c-readback.json": "1a85e1eb7834cca00d19d1403bba8ce4dfe1fd0c9c6f59aa7f006298ffade2b0",
+    "docs/temporal_camera/native-smoke-20261118/sd1118-60c-readback.log": "c74e8546994cff4a8b1dce517411421baa48ae84275a28bbce997c3cece9e43d",
+    "research/temporal_camera/board_multiroute.py": "d09927292fc166b4a8d600ea30ce05269697d3dc2a3ba9eb68c3fb9ea90392ae",
+    "research/temporal_camera/native_smoke.py": "aa562863e190a248a0b8d75ae908e2ed13280b79353782d3738fc20b38661ed1",
+    "research/temporal_camera/test_native_smoke.py": "94be58ec4c2988fd5c7b5471fcd9d47db9e324ad531b758dfcbb0f34275871d3"
+  },
+  "report": {
+    "completed": [
+      "Confirmed new SD main data filesystem /data is 61456908288 bytes with 61456515072 bytes free",
+      "Confirmed /sdcard is a separate 524156928-byte boot and compatibility partition",
+      "Completed write, readback and cleanup probe on /data",
+      "Extended isolated CameraXY smoke entry to accept /data paths and passed 28 host tests",
+      "Uploaded 9 CNN1 filter test files to /data/k230_temporal_v1_sd1118 with full file SHA readback",
+      "Read and verified model and deployment files on the new card",
+      "Preserved failed sd1118_10a report showing no inference started",
+      "After USB replug, completed sd1118_10b and sd1118_60c with 70/70 native frames and zero drops"
+    ],
+    "remaining": [
+      "Current new-card firmware is v1.8-0, while previous successful UVC evidence used v1.8-36",
+      "No accuracy, road test, or long soak started"
+    ],
+    "decisions": [
+      "Use /data for persistent test files on the new card",
+      "Keep /sdcard startup partition and main.py untouched",
+      "Keep sd1118_10a as a closed entry failure and use a new report ID after UVC recovery",
+      "Do not flash firmware automatically before confirming the camera replug result"
+    ],
+    "verification": [
+      {
+        "command": "SD_CAPACITY_CHECK_20261118",
+        "exit_code": 0,
+        "summary": "Separate /sdcard and /data capacities read from the board",
+        "evidence": [
+          "docs/temporal_camera/native-smoke-20261118/SD1118_STORAGE_AND_UVC.json"
+        ]
+      },
+      {
+        "command": "SD_WRITE_PROBE_20261118",
+        "exit_code": 0,
+        "summary": "256-byte write/readback/cleanup PASS on /data",
+        "evidence": [
+          "docs/temporal_camera/native-smoke-20261118/SD1118_STORAGE_AND_UVC.json"
+        ]
+      },
+      {
+        "command": "native_smoke.py install --runtime-upload --remote /data/k230_temporal_v1_sd1118",
+        "exit_code": 0,
+        "summary": "9 files verified with model SHA ac86c72a...d921fbc",
+        "evidence": [
+          "docs/temporal_camera/native-smoke-20261118/install-cnn1-data.json"
+        ]
+      },
+      {
+        "command": "SD1118_UVC_RECHECK_20261118",
+        "exit_code": 0,
+        "summary": "UVC probe true as openaicam#openaicam with 1280x720 MJPEG30",
+        "evidence": [
+          "docs/temporal_camera/native-smoke-20261118/SD1118_STORAGE_AND_UVC.json"
+        ]
+      },
+      {
+        "command": "native sd1118_10b and sd1118_60c then fetch",
+        "exit_code": 0,
+        "summary": "70/70 frames, zero drops, cleanup errors empty, position_valid false",
+        "evidence": [
+          "docs/temporal_camera/native-smoke-20261118/SD1118_NATIVE_SUMMARY.json",
+          "docs/temporal_camera/native-smoke-20261118/sd1118-60c-readback.json"
+        ]
+      },
+      {
+        "command": "python -B -X utf8 -m unittest discover -s research/temporal_camera -p test_*.py -q",
+        "exit_code": 0,
+        "summary": "28 host tests passed",
+        "evidence": [
+          "research/temporal_camera/test_native_smoke.py"
+        ]
+      }
+    ],
+    "risks": [
+      "Current firmware v1.8-0 differs from the previous v1.8-36 UVC evidence",
+      "Physical accuracy, road testing, TCN/GRU and long soak remain outside this smoke"
+    ],
+    "next_steps": [
+      "Keep the replacement SD deployment as the current engineering baseline",
+      "Proceed to a separately authorized accuracy or road test when the test scene and labels are ready"
+    ]
+  }
+}
