@@ -405,7 +405,7 @@ def labels(scene, cam, blocks, path):
     return visible
 
 
-def prepare_round(hub, task=TASK, start_id="START_1", orders=RAW_ORDERS, qr_texture=None):
+def prepare_round(hub, task=TASK, start_id="START_1", orders=RAW_ORDERS, qr_texture=None, gripper=None):
     from core.task_parser import parse_task
 
     parsed = parse_task(task)
@@ -428,7 +428,7 @@ def prepare_round(hub, task=TASK, start_id="START_1", orders=RAW_ORDERS, qr_text
             obj.hide_viewport=True
     print_slot_numbers()
     add_qr_board(qr_texture or HERE.parents[1]/"k230_transport_mvp/data/task_qr.png")
-    rig=build_vehicle()
+    rig=build_vehicle(gripper)
     front=camera("QR camera / assumed mount",(0,.062,.155),(0,.30,.155),parent=rig["root"])
     front.data.lens=26
     overhead=scene.objects["Camera"]

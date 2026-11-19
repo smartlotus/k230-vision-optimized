@@ -15,7 +15,7 @@ import sys
 import time
 
 from campaign_ledger import Ledger, TERMINAL, digest, identity, read_json, supervisor_lock, write_json
-from scenario_catalog import qr_cases
+from scenario_catalog import drive_cases, qr_cases
 
 
 SIM = Path(__file__).resolve().parent
@@ -39,9 +39,16 @@ REQUIRED = {
     "scenarios": ["qr.png", "texture.png", "render_state.json", "observations.json", "workflow.json"],
     "physics_sweep": ["stack_contact.json"],
     "recovery_probe": ["recovery-tests.log"],
+    "rig": ["rig.json", "rig-r3.blend", "blender.log"],
+    "road_observe": ["road_observations.json", "metrics.json", "blender.log"],
+    "drive": ["road_drive.json", "metrics.json", "blender.log"],
     "delivery": ["comparison.json", "report.md"],
 }
 R30_JOBS = {"baseline", "protocol", "scenarios", "recovery_probe", "delivery"}
+R31_JOBS = R30_JOBS | {"rig", "road_observe", "drive"}
+PROFILES = {"r30": R30_JOBS, "r31": R31_JOBS}
+BRANCH_CASES = {"scenarios": qr_cases, "drive": drive_cases}
+BLENDER_JOBS = {"scenarios", "rig", "road_observe", "drive"}
 
 
 def expand(definition, profile):
@@ -49,16 +56,16 @@ def expand(definition, profile):
     added = {"id": "recovery_probe", "after": ["baseline"], "suites": ["T00"]}
     for job in [*definition["jobs"][:-1], added, definition["jobs"][-1]]:
         name = job["id"]
-        if profile == "r30" and name not in R30_JOBS:
+        if profile in PROFILES and name not in PROFILES[profile]:
             continue
-        cases = qr_cases() if name == "scenarios" else [{"key": name, "seed": 0}]
+        cases = BRANCH_CASES[name]() if name in BRANCH_CASES else [{"key": name, "seed": 0}]
         for case in cases:
             key = case["key"]
             artifacts = ["result.json", *REQUIRED.get(name, [])]
             specs[key] = {
                 "key": key, "worker": name, "case": case, "suites": job["suites"],
                 "depends": job["after"], "artifacts": artifacts,
-                "timeout_seconds": 120 if name == "scenarios" else 60,
+                "timeout_seconds": 180 if name == "drive" else 120 if name in BLENDER_JOBS else 60,
             }
     translations = {}
     for spec in specs.values():
@@ -86,7 +93,7 @@ def probe(args, definition, specs):
     assets = {key: file_id(args.hub / rel) for key, rel in ASSETS.items()}
     baseline = SIM / "output"
     sources = inventory(
-        [*SIM.glob("*.py"), *SIM.glob("*.json"), *SIM.glob("campaigns/*.json"),
+        [*SIM.glob("*.py"), *SIM.glob("*.json"), *SIM.glob("campaigns/*.json"), *SIM.glob("workcell/*.py"),
          *ROOT.glob("k230_transport_mvp/core/*.py"), *ROOT.glob("k230_transport_mvp/ports/*.py"),
          *ROOT.glob("k230_transport_mvp/sim/*.py"), *ROOT.glob("k230_transport_mvp/vision/*.py"),
          *ROOT.glob("k230_transport_mvp/stm32/*.[ch]"), *ROOT.glob("k230_transport_mvp/tests/*.py"),
@@ -217,7 +224,7 @@ def unavailable(spec, args, manifest):
     if name not in REQUIRED:
         return f"{name} has no campaign worker yet"
     runtime = manifest["contract"]["runtime"]
-    if name == "scenarios" and (not args.blender or not args.blender.is_file()):
+    if name in BLENDER_JOBS and (not args.blender or not args.blender.is_file()):
         return "Blender executable unavailable"
     if name == "protocol" and not (runtime["gcc"] or runtime["wsl"]):
         return "Host C compiler unavailable"
@@ -275,7 +282,7 @@ def main():
     parser.add_argument("--hub", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--campaign", required=True)
-    parser.add_argument("--profile", choices=("r30", "full"), default="full")
+    parser.add_argument("--profile", choices=("r30", "r31", "full"), default="full")
     parser.add_argument("--blender", type=Path)
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--status", action="store_true")

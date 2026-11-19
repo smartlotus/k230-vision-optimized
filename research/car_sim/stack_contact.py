@@ -19,7 +19,7 @@ CHECK_WINDOW_S = 0.15
 DENSITY = 900
 
 
-def scene(dimensions, friction):
+def scene(dimensions, friction, fixtures=""):
     geo = dimensions["geometry"]
     lower, upper, slope = (geo[name] for name in
                            ("bottom_cylinder", "top_cylinder", "middle_frustum"))
@@ -59,6 +59,7 @@ def scene(dimensions, friction):
       <asset><mesh name="frustum" vertex="{frustum}"/></asset>
       <worldbody><geom name="floor" type="plane" size="1 1 0.1"/>
         {block("lower")}{block("upper")}
+        {fixtures}
       </worldbody></mujoco>"""
     return mujoco.MjModel.from_xml_string(xml), height
 

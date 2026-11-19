@@ -524,8 +524,8 @@ class VehicleBuilder:
         return turret, lift, camera, upright
 
 
-def build_vehicle():
-    """Create one rigid chassis with a two-axis rig. No scene reset or animation."""
+def build_vehicle(gripper=None):
+    """Create the chassis and camera rig, with an optional R3 gripper."""
     parameters = read_dimensions()
     drawing, assumed = parameters["drawing_mm"], parameters["assumed"]
     builder = VehicleBuilder()
@@ -557,6 +557,12 @@ def build_vehicle():
         nominal_optical_z_mm=nominal,
     )
     set_vehicle_pose(rig, 0)
+    if gripper is not None:
+        from gripper_rig import JointPose, add_gripper, set_joint_pose
+
+        rig.update(add_gripper(builder, lift, camera, gripper))
+        set_joint_pose(rig, JointPose(assumed["stow_yaw_deg"], nominal, gripper.slide_min_mm,
+                                     gripper.open_gap_mm))
     return rig
 
 

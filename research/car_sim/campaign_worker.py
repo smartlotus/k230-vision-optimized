@@ -50,6 +50,13 @@ def verdict(passed, reason):
     return {"status": "PASS" if passed else "FAIL", "reason": None if passed else reason}
 
 
+def blender_case(blender, script, hub, out, extra=()):
+    command = [str(blender), "-b", "--factory-startup", "--python-exit-code", "1",
+               "--python", str(SIM / script), "--", "--hub", str(hub), "--out", str(out), *extra]
+    if run_command(command, out, "blender"):
+        raise RuntimeError(f"Blender {script} failed. Read the case's blender.log.")
+
+
 def scenario(case, hub, out, blender):
     import cv2
     import numpy as np
@@ -65,11 +72,7 @@ def scenario(case, hub, out, blender):
     else:
         image = np.full((512, 512), 255, dtype=np.uint8)
     (out / "texture.png").write_bytes(cv2.imencode(".png", image)[1].tobytes())
-    command = [str(blender), "-b", "--factory-startup", "--python-exit-code", "1",
-               "--python", str(SIM / "render_scenario_qr.py"),
-               "--", "--hub", str(hub), "--case", str(out / "case.json"), "--out", str(out)]
-    if run_command(command, out, "blender"):
-        raise RuntimeError("Blender QR render failed")
+    blender_case(blender, "render_scenario_qr.py", hub, out, ("--case", str(out / "case.json")))
     pixels = cv2.imdecode(np.fromfile(out / "qr.png", dtype=np.uint8), cv2.IMREAD_COLOR)
     if pixels is None:
         raise ValueError("QR render did not decode as a PNG")
@@ -125,6 +128,31 @@ def recovery_probe(_case, _hub, out, _blender):
     return verdict(code == 0, "Recovery probe failed")
 
 
+def rig_trial(_case, hub, out, blender):
+    blender_case(blender, "rig_trial.py", hub, out)
+    result = read_json(out / "rig.json")
+    return verdict(result["gate_pass"], "Gripper transform, clearance, or occlusion check failed")
+
+
+def road_observe(_case, hub, out, blender):
+    from road_metrics import observation_report
+
+    blender_case(blender, "road_trial.py", hub, out, ("--python", sys.executable, "--mode", "observe"))
+    result = observation_report(hub, out / "road_observations.json")
+    write_json(out / "metrics.json", result)
+    return verdict(result["gate_pass"], "A right-boundary observation missed its expected result")
+
+
+def drive_trial(_case, hub, out, blender):
+    from road_metrics import drive_report
+
+    blender_case(blender, "road_trial.py", hub, out,
+                 ("--python", sys.executable, "--mode", "drive", "--case", str(out / "case.json")))
+    result = drive_report(hub, out / "road_drive.json")
+    write_json(out / "metrics.json", result)
+    return verdict(result["gate_pass"], "The paired road-control case missed a development gate")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--spec", type=Path, required=True)
@@ -140,7 +168,8 @@ def main():
         result = replay(args.out, TRANSPORT, run_command)
     else:
         handler = {"baseline": baseline, "scenarios": scenario, "physics_sweep": physics_sweep,
-                   "recovery_probe": recovery_probe}[worker]
+                   "recovery_probe": recovery_probe, "rig": rig_trial, "road_observe": road_observe,
+                   "drive": drive_trial}[worker]
         case = spec["case"]
         write_json(args.out / "case.json", case)
         result = handler(case, args.hub, args.out, args.blender)

@@ -32,3 +32,19 @@ def qr_cases():
             "layout_family": "r2-gray-v1",
         })
     return cases
+
+
+def drive_cases():
+    perturbations = [
+        {"offset_mm": -20, "yaw_deg": 0},
+        {"offset_mm": 20, "yaw_deg": 0},
+        {"offset_mm": -40, "yaw_deg": 0},
+        {"offset_mm": 40, "yaw_deg": 0},
+        {"offset_mm": 0, "yaw_deg": -5},
+        {"offset_mm": 0, "yaw_deg": 5},
+        {"offset_mm": 20, "yaw_deg": 0, "lateral_slip_mm_per_s": 6, "lateral_response": .68},
+        {"offset_mm": -40, "yaw_deg": 0, "delay_frames": 1, "drop_frames": [5]},
+    ]
+    return [{"key": f"drive-{seed}", "seed": seed, "split": "development",
+             "layout_family": "r2-gray-v1", **case}
+            for seed, case in enumerate(perturbations, 3201)]
