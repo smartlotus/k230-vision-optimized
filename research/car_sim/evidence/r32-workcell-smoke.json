@@ -1,0 +1,237 @@
+{
+  "scope": "R3.2 integrated alignment and grasp probes; geometry-only rack sweep as separate development evidence",
+  "local_campaign": "experiments/continuous-sim/r32-smoke-a01",
+  "manifest_id": "7eb1b5813e2354d7a6a9aed58011366ea7163e06c5a9f8db9cb7fc28c28b3232",
+  "verdicts": {
+    "PASS": 26
+  },
+  "same_receipts_after_resume": 26,
+  "align": [
+    {
+      "case": {
+        "name": "slide-out",
+        "mode": "exact",
+        "offset_mm": [
+          8,
+          0
+        ],
+        "color": 1,
+        "expected": "ALIGNED"
+      },
+      "status": "ALIGNED",
+      "gate_pass": true,
+      "final_truth_error_mm": 0.007033348092189234
+    },
+    {
+      "case": {
+        "name": "slide-in",
+        "mode": "exact",
+        "offset_mm": [
+          -7,
+          0
+        ],
+        "color": 1,
+        "expected": "ALIGNED"
+      },
+      "status": "ALIGNED",
+      "gate_pass": true,
+      "final_truth_error_mm": 0.7696151733399046
+    },
+    {
+      "case": {
+        "name": "cross-rail",
+        "mode": "exact",
+        "offset_mm": [
+          0,
+          7
+        ],
+        "color": 1,
+        "expected": "ALIGNED"
+      },
+      "status": "ALIGNED",
+      "gate_pass": true,
+      "final_truth_error_mm": 0.9570324265478993
+    },
+    {
+      "case": {
+        "name": "preset",
+        "mode": "preset",
+        "offset_mm": [
+          -6,
+          -4
+        ],
+        "color": 1,
+        "expected": "ALIGNED"
+      },
+      "status": "ALIGNED",
+      "gate_pass": true,
+      "final_truth_error_mm": 0.3168684428042239
+    },
+    {
+      "case": {
+        "name": "wrong-color",
+        "mode": "exact",
+        "offset_mm": [
+          1,
+          0
+        ],
+        "color": 6,
+        "expected": "HOLD"
+      },
+      "status": "HOLD",
+      "gate_pass": true,
+      "final_truth_error_mm": 1.0000467300415048
+    },
+    {
+      "case": {
+        "name": "same-color-neighbor",
+        "mode": "exact",
+        "offset_mm": [
+          3,
+          0
+        ],
+        "color": 1,
+        "neighbor": true,
+        "expected": "HOLD"
+      },
+      "status": "HOLD",
+      "gate_pass": true,
+      "final_truth_error_mm": 3.000020980834964
+    },
+    {
+      "case": {
+        "name": "out-of-reach",
+        "mode": "exact",
+        "offset_mm": [
+          38,
+          0
+        ],
+        "color": 1,
+        "expected": "HOLD",
+        "expected_reason": "BOUNDED_REPARK_REQUIRED"
+      },
+      "status": "HOLD",
+      "gate_pass": true,
+      "final_truth_error_mm": 26.9999504089356
+    }
+  ],
+  "grasp": [
+    {
+      "case": "trial-lift",
+      "expected": "HELD_AFTER_TRIAL_LIFT",
+      "reason": "HELD_AFTER_TRIAL_LIFT",
+      "gate_pass": true,
+      "holding_after_trial": true,
+      "carrier_picks": 0
+    },
+    {
+      "case": "wrong-color",
+      "expected": "REJECT_HIGH_OBSERVATION",
+      "reason": "REJECT_HIGH_OBSERVATION",
+      "gate_pass": true,
+      "holding_after_trial": false,
+      "carrier_picks": 0
+    },
+    {
+      "case": "empty-after-observation",
+      "expected": "EMPTY_CONTACT",
+      "reason": "EMPTY_CONTACT",
+      "gate_pass": true,
+      "holding_after_trial": false,
+      "carrier_picks": 0
+    },
+    {
+      "case": "slip",
+      "expected": "SLIPPED_DURING_TRIAL_LIFT",
+      "reason": "SLIPPED_DURING_TRIAL_LIFT",
+      "gate_pass": true,
+      "holding_after_trial": false,
+      "carrier_picks": 0
+    },
+    {
+      "case": "stale-low-observation",
+      "expected": "REJECT_LOW_OBSERVATION",
+      "reason": "REJECT_LOW_OBSERVATION",
+      "gate_pass": true,
+      "holding_after_trial": false,
+      "carrier_picks": 0
+    },
+    {
+      "case": "lift-not-in-position",
+      "expected": "LIFT_POSITION_UNCONFIRMED",
+      "reason": "LIFT_POSITION_UNCONFIRMED",
+      "gate_pass": true,
+      "holding_after_trial": false,
+      "carrier_picks": 0
+    }
+  ],
+  "independent_reference_releases": 52,
+  "moving_finger_releases": [
+    {
+      "offset_mm": 0.0,
+      "stable": true
+    },
+    {
+      "offset_mm": 6.0,
+      "stable": true
+    },
+    {
+      "offset_mm": 25.0,
+      "stable": false
+    }
+  ],
+  "carrier_geometry_development": {
+    "r2_accessibility": [
+      false,
+      false,
+      false
+    ],
+    "prototype_yaw_limits_deg": [
+      -90,
+      145.0
+    ],
+    "prototype_bays": [
+      {
+        "slot": 1,
+        "pose": {
+          "theta_deg": 90.32015877102035,
+          "optical_height_mm": 223.4,
+          "slide_mm": -13.079895248151615,
+          "gap_mm": 60
+        },
+        "inverse_error_mm": 2.212135472414969e-05
+      },
+      {
+        "slot": 2,
+        "pose": {
+          "theta_deg": 113.82787340848546,
+          "optical_height_mm": 223.4,
+          "slide_mm": -10.788419384031272,
+          "gap_mm": 60
+        },
+        "inverse_error_mm": 2.5058135770740794e-05
+      },
+      {
+        "slot": 3,
+        "pose": {
+          "theta_deg": 132.23861204725299,
+          "optical_height_mm": 223.4,
+          "slide_mm": 19.933389653426275,
+          "gap_mm": 60
+        },
+        "inverse_error_mm": 1.693663647658623e-05
+      }
+    ]
+  },
+  "artifact_sha256": {
+    "experiments/continuous-sim/r32-smoke-a01/episodes/align/alignment.json": "2a12edd698a43959baa55ec8074394c1b29247c4e3e151df35c8fd537f666ebf",
+    "experiments/continuous-sim/r32-smoke-a01/episodes/grasp/grasp.json": "b01dabb0ad8608267c21d76be6e0ca524faa5115fc762bfcec3ba9a6b3bd0dae",
+    "experiments/continuous-sim/r32-smoke-a01/episodes/physics_gripper/stack_contact.json": "5417be1fbda077e9f004f12b51120e865ab6fdc21e15479c828d70dede5c8263",
+    "experiments/continuous-sim/r32-smoke-a01/episodes/physics_sweep/stack_contact.json": "c35b17aa4687a45d01219cf13028a9a00920e53c6ee14cf030028e34f54af22d",
+    "experiments/r32-carrier-reach-a02/carrier_reach.json": "fa3e28a6c7c450d1942643feb1f8d6b073b005fa2513f6d276691488771afb7b"
+  },
+  "remaining": [
+    "T07 timed turntable, store and reconcile inventory; T08 and T09 release through workflow",
+    "Integrated navigation, sealed matrices, soak and delivery"
+  ]
+}

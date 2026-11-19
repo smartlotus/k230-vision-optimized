@@ -42,13 +42,16 @@ REQUIRED = {
     "rig": ["rig.json", "rig-r3.blend", "blender.log"],
     "road_observe": ["road_observations.json", "metrics.json", "blender.log"],
     "drive": ["road_drive.json", "metrics.json", "blender.log"],
+    "align": ["alignment.json", "vision.log", "blender.log"],
+    "grasp": ["grasp.json", "vision.log", "blender.log"],
     "delivery": ["comparison.json", "report.md"],
 }
 R30_JOBS = {"baseline", "protocol", "scenarios", "recovery_probe", "delivery"}
 R31_JOBS = R30_JOBS | {"rig", "road_observe", "drive"}
-PROFILES = {"r30": R30_JOBS, "r31": R31_JOBS}
+R32_JOBS = R31_JOBS | {"align", "grasp", "physics_sweep"}
+PROFILES = {"r30": R30_JOBS, "r31": R31_JOBS, "r32": R32_JOBS}
 BRANCH_CASES = {"scenarios": qr_cases, "drive": drive_cases}
-BLENDER_JOBS = {"scenarios", "rig", "road_observe", "drive"}
+BLENDER_JOBS = {"scenarios", "rig", "road_observe", "drive", "align", "grasp"}
 
 
 def expand(definition, profile):
@@ -58,7 +61,11 @@ def expand(definition, profile):
         name = job["id"]
         if profile in PROFILES and name not in PROFILES[profile]:
             continue
-        cases = BRANCH_CASES[name]() if name in BRANCH_CASES else [{"key": name, "seed": 0}]
+        if name == "physics_sweep":
+            cases = [{"key": name, "seed": 0, "probe": "ideal_r2"},
+                     {"key": "physics_gripper", "seed": 0, "probe": "moving_fingers"}]
+        else:
+            cases = BRANCH_CASES[name]() if name in BRANCH_CASES else [{"key": name, "seed": 0}]
         for case in cases:
             key = case["key"]
             artifacts = ["result.json", *REQUIRED.get(name, [])]
@@ -282,7 +289,7 @@ def main():
     parser.add_argument("--hub", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--campaign", required=True)
-    parser.add_argument("--profile", choices=("r30", "r31", "full"), default="full")
+    parser.add_argument("--profile", choices=(*PROFILES, "full"), default="full")
     parser.add_argument("--blender", type=Path)
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--status", action="store_true")

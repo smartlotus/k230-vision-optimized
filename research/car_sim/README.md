@@ -14,6 +14,7 @@ python -B research/car_sim/run_campaign.py --hub $hub --out $out --campaign r30-
 
 `r30` 跑冻结 R2 工位观测、6 个合法任务、2 个扫码负例、主机 C/V/A 回放和队列恢复探针。扫码从 Blender 前视机位的 PNG 解码，随后使用现有离散工作流。计划中的视觉行驶和抓放闭环由后续套件验收。
 `r31` 增加夹爪台架、右侧道路观测和匹配扰动的直道闭环。直道用新的本地二进制校验帧传递底盘速度，积分后从新位姿重新渲染。裁判从独立场地掩码检查底盘足迹。直道通过后仍需跑转弯、路口、工位停靠和返航。
+`r32` 增加找料对齐、下探并用新帧确认、闭爪与试提，以及独立 MuJoCo 释放对照。整轮还要完成转盘和车载仓、平面及二层放置。
 `full` 会报告当前实现可执行的用例和因缺失实现或依赖而受阻的用例。报告按套件记录范围。
 
 运行目录包含 `manifest.json`、`queue.sqlite`、`status.json`、`attempts/` 和 `episodes/`。在该目录下创建 `STOP` 文件会在一致断点退出。移除 STOP 后用同一条 `--resume` 命令接续。输入或源码改变后使用新的 campaign ID。报告在 `episodes/delivery/report.md`。

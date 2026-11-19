@@ -110,9 +110,16 @@ def scenario(case, hub, out, blender):
     return verdict(state == case["expected"] and decoded == payload, "Unexpected QR or task result")
 
 
-def physics_sweep(_case, hub, out, _blender):
+def physics_sweep(case, hub, out, _blender):
     cad = hub / ("webhelp/camera_xy_v2_audit_20261117/k230_material_block_model_bundle/"
                  "k230_material_block_model/model_validation.json")
+    if case.get("probe") == "moving_fingers":
+        command = [sys.executable, "-B", str(SIM / "workcell" / "physical_release.py"),
+                   "--cad-receipt", str(cad), "--out", str(out / "stack_contact.json")]
+        if run_command(command, out, "mujoco"):
+            raise RuntimeError("Moving-finger contact trial failed to run")
+        actual = read_json(out / "stack_contact.json")
+        return verdict(actual["gate_pass"], "Moving-finger stability controls missed their expected outcomes")
     command = [sys.executable, "-B", str(SIM / "stack_contact.py"), "--cad-receipt", str(cad),
                "--output", str(out / "stack_contact.json")]
     if run_command(command, out, "mujoco"):
@@ -153,6 +160,18 @@ def drive_trial(_case, hub, out, blender):
     return verdict(result["gate_pass"], "The paired road-control case missed a development gate")
 
 
+def alignment_trial(_case, hub, out, blender):
+    blender_case(blender, "workcell/blender_align.py", hub, out, ("--python", sys.executable))
+    result = read_json(out / "alignment.json")
+    return verdict(result["gate_pass"], "An alignment case missed its workcell gate")
+
+
+def grasp_trial(_case, hub, out, blender):
+    blender_case(blender, "workcell/grasp_trial.py", hub, out, ("--python", sys.executable))
+    result = read_json(out / "grasp.json")
+    return verdict(result["gate_pass"], "A fresh-observation grip or trial-lift case missed its gate")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--spec", type=Path, required=True)
@@ -169,7 +188,7 @@ def main():
     else:
         handler = {"baseline": baseline, "scenarios": scenario, "physics_sweep": physics_sweep,
                    "recovery_probe": recovery_probe, "rig": rig_trial, "road_observe": road_observe,
-                   "drive": drive_trial}[worker]
+                   "drive": drive_trial, "align": alignment_trial, "grasp": grasp_trial}[worker]
         case = spec["case"]
         write_json(args.out / "case.json", case)
         result = handler(case, args.hub, args.out, args.blender)
